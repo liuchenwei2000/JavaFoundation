@@ -1,0 +1,42 @@
+                            JVM 与 泛 型 
+
+擦除
+
+虚拟机没有泛型类型对象，所有对象都属于普通类
+
+无论何时定义一个泛型类型，相应的原生类型(raw type)都会被自动提供。
+原生类型的名字就是删去了类型参数的泛型类型的名字。
+类型参数被擦除(erased)，并用其限定类型(无限定的变量用Object)替换。
+原生类型用限定类型列表的第一个类型变量替换，如果没有给定限定则用Object替换。
+
+比如：
+public class Pair<T>{}
+它的原生类型是：
+public class Pair<Object>{}
+
+又比如：
+public <T extends Comparable & Number> void genericMethod(T t){}
+它的原生类型是：
+public Comparable void genericMethod(Comparable t){}
+
+在程序中可以包含不同类型的Pair，如Pair<String>或Pair<Double>，但是，擦除类型后它们就成为原始的Pair类型了。
+
+
+
+翻译泛型表达式
+
+当程序调用泛型方法时，如果返回类型被擦除，编译器插入强制类型转换。
+
+例如：
+Pair<String> s = ...;
+String ss = s.getFirst();
+
+getFirst()的擦除将返回Object类型。编译器会自动插入String的强制类型转换。
+也就是说，编译器把这个方法调用翻译成两条虚拟机指令：
+1，对原始方法Pair.getFirst()的调用。
+2，将返回的Object类型强制转换为String类型。
+
+同理当存取一个泛型字段时编译器也要插入强制类型转换。
+
+
+虚拟机中没有泛型，只有普通的类和方法。所有的类型参数都被它们的限定类型替换。

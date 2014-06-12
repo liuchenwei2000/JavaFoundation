@@ -1,0 +1,27 @@
+                               Java 基本类型
+               
+         类型                          存储要求
+   byte           1字节
+   short          2字节
+   int            4字节
+   long           8字节
+   char           2字节
+   float          4字节
+   double         8字节
+               
+1，long类型的数值有一个后缀L，十六进制数值有一个前缀0x
+2，八进制有一个前缀0，但是易混淆，最好不用
+3，float型浮点数有效位数7，有一个后缀是F
+4，double型浮点数有效位数15
+5，所有的浮点数值计算都遵循IEEE 754规范，下面是三个特殊的浮点数值：
+   正无穷大：Double.POSITIVE_INFINITY
+   负无穷大：Double.NEGATIVE_INFINITY
+ NaN(Not a Number)：Double.NaN
+6，浮点数值不适用于禁止出现舍入误差的金融计算中
+7，如果在数值计算中不含有任何舍入误差，就应该使用BigDecimal类
+
+特殊字符的转义序列符
+\b 退格
+\t 制表
+\n 换行
+\r 回车

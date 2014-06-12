@@ -1,0 +1,63 @@
+Eclipse Java编写的，开源的开发平台，可以进行多种程序语言的开发，Java开发只是其中的一个功能
+使用了其JDT外挂程序(如果进行C开发，则需要CDT外挂程序)。最大的优点是可扩展性。
+
+Ctrl + H ：搜索快捷键
+
+Eclipse中的Navigator视图：
+1，两个文档间的比较功能(Compare With)
+2，本地历史功能(Local History)
+
+Eclipse的Scrapbook Page(*.jpage)可以直接执行Java代码而不必另写一个类.
+File->new->other->Java->Java Run/Debug->Scrapbook Page(*.jpage)
+
+程序代码产生模板
+Window -> Preferences -> Java -> Editor -> Templates
+可以为程序代码定义一个缩写结构：比如System.out.println();
+定义为sop，则当在代码中输入sop时将自动转换成System.out.println();
+
+
+Eclipse常用快捷键：
+
+Alt+/:语句提示
+Ctrl+Shift+T: 打开类型（Open type）
+Ctrl+Shift+R: 打开资源（不只是用来寻找Java文件）
+F3: 打开申明（Open declaration）
+
+Ctrl+Alt+↓ 复制当前行到下一行(复制增加) 
+Ctrl+Alt+↑ 复制当前行到上一行(复制增加) 
+
+Alt + ↓ 当前行和下面一行交互位置(可以省去先剪切,再粘贴) 
+Alt + ↑ 当前行和上面一行交互位置(同上) 
+Alt + <- : 在导航历史记录中后退
+Alt + -> : 在导航历史记录中前进
+
+Ctrl+Shift+G: 在workspace中搜索引用（reference）。在方法的栈中，找出一个方法的所有调用者。
+Ctrl+Shift+F: 根据代码风格设定重新格式化代码。
+Ctrl+O: 快速概要(quick outline)。可以迅速的跳到一个方法或者属性，只需要输入名字的头几个字母。
+Ctrl+Shift+L：看到所有快捷键的列表
+Ctrl+F：查找并替换
+Ctrl+Z：撤销
+Ctrl+1：快速修正 
+Alt+/：内容辅助
+Ctrl+Shift+K： 查找上一个选中串
+Ctrl+K:查找下一个选中串
+F2: 显示类，方法，字段，变量等提示描述
+F4：打开类型继承层次结构
+Ctrl+Shift+P：转至匹配的括号
+Ctrl+L:转至行
+Ctrl+H: 打开搜索对话框
+Ctrl+G: 工作区中的声明的位置
+Ctrl+Shift+S:全部保存
+Ctrl+N:新建
+Ctrl+/: 注释//(取消注释)
+Ctrl+Shift+/: 注释/**/
+Ctrl+Shift+\:取消注释/**/
+Alt+Shift+R:重命名 
+
+debug期间
+
+F6:单行执行 
+F5:单步跳入(方法)
+F8:继续执行完 
+F11:debug运行程序
+Ctrl+F11:run运行程序
