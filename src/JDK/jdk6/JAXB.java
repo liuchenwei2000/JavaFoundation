@@ -15,7 +15,7 @@ import jdk6.bean.Person;
 import jdk6.bean.Sex;
 
 /**
- * JAXB API示例
+ * 2，JAXB API示例
  * <p>
  * JAXB（Java Architecture for XML Binding）是一种特殊的序列化/反序列化工具。
  * 它可以使XML数据以Java Objects的形式直接应用于Java程序之中，使Java Objects与XML数据之间的转换成为可能。

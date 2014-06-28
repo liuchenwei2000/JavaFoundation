@@ -19,7 +19,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * Desktop和SystemTray类示例
+ * 1，Desktop和SystemTray类示例
  * 
  * @author 刘晨伟
  * 

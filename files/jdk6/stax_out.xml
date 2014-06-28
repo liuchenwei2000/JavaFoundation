@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<!--testing comment-->
+<catalogs xmlns:mine="http://www.oracle.com.cn" owner="oracle">
+<mine:catalog id="001">Book</mine:catalog>
+<mine:catalog id="002">Video</mine:catalog>
+</catalogs>
