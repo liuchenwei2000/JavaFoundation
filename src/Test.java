@@ -1,3 +1,6 @@
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 /**
  * 
  */
@@ -17,7 +20,5 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(Integer.parseInt("-1000 0000 0000 0000 0000 0000 0000 0000", 2));
 	}
-
 }
