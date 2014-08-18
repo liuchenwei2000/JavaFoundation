@@ -3,9 +3,11 @@
  */
 package object;
 
-import java.util.*;
-
-import util.Printer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 为类创建一个好的hashCode()方法
@@ -75,6 +77,6 @@ public class GoodHashCode {
 			ghc[i] = new GoodHashCode("hi");
 			map.put(ghc[i], new Integer(i));
 		}
-		Printer.printAll(map);
+		System.out.println(map);
 	}
 }

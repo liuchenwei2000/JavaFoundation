@@ -3,7 +3,7 @@
  */
 package object;
 
-import util.Printer;
+import java.util.Arrays;
 
 /**
  * 方法的参数传递
@@ -51,17 +51,17 @@ public class PassingParaDemo {
 
 		int[] array = { 2, 6, 4, 9, 8 };
 		System.out.print("before changing : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 		changeArray(array);
 		System.out.print("after changing : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 		System.out.println();
 
 		System.out.print("before changing : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 		changeArrayElement(array);
 		System.out.print("after changing : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class PassingParaDemo {
 		array[1] = 0;
 		array[2] = 0;
 		System.out.print("inside changeArray : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class PassingParaDemo {
 			array[i] = i;
 		}
 		System.out.print("inside changeArrayElement : array = ");
-		Printer.print(array);
+		System.out.println(Arrays.toString(array));
 	}
 }
 

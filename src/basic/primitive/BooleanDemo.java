@@ -6,8 +6,6 @@ package primitive;
 import java.util.HashMap;
 import java.util.Map;
 
-import util.Printer;
-
 /**
  * boolean包装类的演示
  * <p>
@@ -31,6 +29,6 @@ public class BooleanDemo {
 		map.put("C", Boolean.TRUE);
 		map.put("D", Boolean.FALSE);
 		map.put("E", Boolean.TRUE);
-		Printer.printAll(map);
+		System.out.println(map);
 	}
 }

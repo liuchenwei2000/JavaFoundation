@@ -3,9 +3,9 @@
  */
 package io.file;
 
-import java.io.*;
-
-import util.Printer;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Arrays;
 
 /**
  * 文件名过滤器接口演示
@@ -23,7 +23,7 @@ public class FilenameFilterDemo {
 		File path = new File("files/io.file"); 
 		// 返回由此抽象路径名所表示的目录中的文件和子目录的名称所组成字符串数组
 		String[] list = path.list();
-		Printer.print(list);
+		System.out.println(Arrays.toString(list));
 		/*
 		 * list()方法会为此目录对象下的每个文件名调用accept()来判断该文件是否包含在内，判断结果由accept()返回的值表示。
 		 * 创建这个匿名内部类的目的在于把accept()方法提供给list()使用，使list()可以回调accept()，这种结构称为"回调"。
@@ -43,6 +43,6 @@ public class FilenameFilterDemo {
 				return name.endsWith(".txt");
 			}
 		});
-		Printer.print(list);
+		System.out.println(Arrays.toString(list));
 	}
 }

@@ -3,7 +3,7 @@
  */
 package lang;
 
-import util.Printer;
+import java.util.Arrays;
 
 /**
  * System类的基本方法
@@ -25,7 +25,7 @@ public class SystemDemo {
 		// 从指定源数组中复制一个数组。参数列表：
 		// (源数组,源数组开始复制的位置,目标数组,目标数组开始复制的位置,复制长度)
 		System.arraycopy(a, 0, b, 0, b.length);
-		Printer.print(b);
+		System.out.println(Arrays.toString(b));
 		
 		// 返回当前的系统属性
 		String properties = System.getProperties().toString();
