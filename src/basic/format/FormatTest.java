@@ -24,5 +24,13 @@ public class FormatTest {
 		String formattedString = String.format("This is a %s", "book");
 		// 可以使用String的静态方法创建一个格式化的字符串。
 		System.out.println(formattedString);
+
+		// 左对齐打印表格的示例，%-12s中 - 表示左对齐（默认右对齐）12表示字符串长度
+		String format = "%-12s %-8s %4s %12s%n";
+		System.out.printf(format, "Code", "Name", "Age", "Meesage");
+		for (int i = 1; i < 10; i++) {
+			System.out.printf(format, "Code" + i, "Name" + i, i + 20, "Meesage"
+					+ i);
+		}
 	}
 }
