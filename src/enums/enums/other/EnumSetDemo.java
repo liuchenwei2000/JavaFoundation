@@ -35,8 +35,7 @@ public class EnumSetDemo {
 		System.out.println(set);
 		set.removeAll(EnumSet.of(ONE, ZERO));
 		System.out.println(set);
-		// 创建一个其元素类型与指定枚举set相同的枚举set
-		// 最初包含指定 set 中所不包含的此类型的所有元素(补集)
+		// 创建一个其元素类型与指定枚举set相同的枚举set，最初包含指定 set 中所不包含的此类型的所有元素(补集)
 		set = EnumSet.complementOf(set);
 		System.out.println(set);
 	}

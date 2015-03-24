@@ -8,7 +8,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
-
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -31,13 +30,17 @@ public class ZipOutputDemo {
 		// 待压缩文件所在文件夹
 		String dirPath = "files/io.stream.zip";
 		// 压缩后的zip文件名
-		String zipfile = dirPath + "/out.zip";
+		String zipFilePath = dirPath + "/out.zip";
 		// 删除上次程序运行创建的zip文件
-		File zip = new File(zipfile);
-		if (zip.exists()) {
-			zip.delete();
+		File zipFile = new File(zipFilePath);
+		if (zipFile.exists()) {
+			zipFile.delete();
 		}
 
+		zip(dirPath, zipFilePath);
+	}
+	
+	private static void zip(String dirPath, String zipFilePath){
 		File dir = new File(dirPath);
 		String[] files = dir.list(new FilenameFilter() {
 
@@ -46,10 +49,11 @@ public class ZipOutputDemo {
 			}
 
 		});
-
+		// 执行压缩操作
+		ZipOutputStream out = null;
 		try {
 			// 当向一个zip文件内写入时，需要打开一个构造器中包含FileOutputStream的ZipOutputStream文件流
-			ZipOutputStream out = new ZipOutputStream(new FileOutputStream(zipfile));
+			out = new ZipOutputStream(new FileOutputStream(zipFilePath));
 			for (String file : files) {
 				// 对于每一条希望置入zip文件的条目，都要创建一个ZipEntry对象
 				// 只要把文件名传给ZipEntry构造器，它将会自动设置其他参数，诸如文件日期和解压方法等
@@ -57,8 +61,7 @@ public class ZipOutputDemo {
 				// 可以调用putNextEntry方法来开始写入一个新文件
 				out.putNextEntry(entry);
 				// 将文件数据传递给zip流，真正执行向zip文件的写入操作
-				FileInputStream in = new FileInputStream(dirPath
-						+ File.separator + file);
+				FileInputStream in = new FileInputStream(dirPath + File.separator + file);
 				int b;
 				while ((b = in.read()) != -1) {
 					out.write(b);
@@ -67,9 +70,16 @@ public class ZipOutputDemo {
 				// 完成后调用closeEntry
 				out.closeEntry();
 			}
-			out.close();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			if(out != null) {
+				try {
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 }

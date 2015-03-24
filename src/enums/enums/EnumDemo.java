@@ -28,8 +28,7 @@ public class EnumDemo {
 			println(day + ".name() = " + day.name());
 			println("-----------------------------------------------");
 		}
-		// 静态方法valueOf(Class<T> enumType, String name)
-		// 返回带指定名称的指定枚举类型的枚举常量
+		// 静态方法valueOf(Class<T> enumType, String name)返回带指定名称和指定枚举类型的枚举常量
 		// 名称必须与在此类型中声明枚举常量所用的标识符完全匹配
 		println(Enum.valueOf(Day.class, "TUESDAY"));
 		// 该方法的逆方法toString()能够返回枚举对象的常量名

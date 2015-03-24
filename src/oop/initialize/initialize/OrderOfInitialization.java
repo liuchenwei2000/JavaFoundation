@@ -50,6 +50,7 @@ class Card {
 
 	Tag t3 = new Tag(3);
 }
+
 /**
  * TagÀà
  */

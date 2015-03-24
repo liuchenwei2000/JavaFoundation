@@ -7,7 +7,7 @@ package object.clone.inherit;
  * Object.clone()继承的细节
  * <p>
  * SonInt 继承自 Int，并添加了新的基本类型成员：int j。
- * 也许需要重载clone()方法，以确保 j 也被复制，但事情并非如此。
+ * 也许需要覆盖clone()方法，以确保 j 也被复制，但事情并非如此。
  * 当 Int 的clone()因 SonInt 的 clone()而被调用时，它又调用了Object.clone()。
  * 后者会判断它操作的是 SonInt，并且复制 SonInt 对象的所有位(bit)。
  * 只要没有向子类中添加需要克隆的对象，那么无论clone()定义于继承层次中多深的位置。

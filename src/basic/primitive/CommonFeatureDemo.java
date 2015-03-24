@@ -27,12 +27,11 @@ public class CommonFeatureDemo {
 		i = new Integer("1");		
 		/*
 		 * 各包装类的valueOf方法返回一个新建的实例或者缓存中的已存在的实例
-		 * 此方法比构造方法效率要高(尤其对于经常使用的实例)，应优先使用它
-		 * 除非确实需要一个包含相同数值的不同的实例
+		 * 此方法比构造方法效率要高(尤其对于经常使用的实例)，应优先使用它，除非确实需要一个包含相同数值的不同的实例。
 		 * Character类中没有valueOf(String)这个方法
 		 */
 		Integer ii = Integer.valueOf(1);
-		ii = Integer.valueOf("1");	
+		ii = Integer.valueOf("1");
 		/*
 		 * 各包装类的compareTo(Type other)方法用来比较两个基本类型的大小
 		 * 如果该Type在数值上等于other，则返回 0 值；

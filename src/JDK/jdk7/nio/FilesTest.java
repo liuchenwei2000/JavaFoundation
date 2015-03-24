@@ -84,7 +84,7 @@ public class FilesTest {
 		/*
 		 * 返回文件内容的类型
 		 * 
-		 * 常情况下文件内容类型可以通过扩展名来获得。例如txt文件是文本文件，exe文件则是Windows下的可执行文件。
+		 * 通常情况下文件内容类型可以通过扩展名来获得。例如txt文件是文本文件，exe文件则是Windows下的可执行文件。
 		 * 但可以将一个txt文件重命名成exe文件，这并不能改变文件内容的类型。因此通过文件的扩展名来获得其类型有一定的误导性。
 		 * Files类的probeContentType就是用来获得文件内容类型的。
 		 */
@@ -99,6 +99,7 @@ public class FilesTest {
 		 * 获得指定的某种属性，即调用一次方法获得一个文件属性
 		 * 
 		 * getAttribute方法的第二参数指定了具体需要返回哪种文件信息。可使用的参数值如下：
+		 * 
 		 *    	参数值	     	返回值类型
 		 * lastModifiedTime		FileTime
 		 * lastAccessTime		FileTime

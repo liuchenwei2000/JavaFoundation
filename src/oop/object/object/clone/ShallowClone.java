@@ -9,6 +9,8 @@ import java.util.Iterator;
 /**
  * 浅克隆演示
  * <p>
+ * 浅克隆：按比特的对象克隆，新创建的对象精确的复制了原来对象的值，如果对象的某个属性是其他对象的引用，那么只复制这个引用。
+ * <p>
  * 使用Java标准库的ArrayList作为例子。
  * 
  * @author 刘晨伟
@@ -21,40 +23,20 @@ public class ShallowClone {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ArrayList<Int> v = new ArrayList<Int>();
+		ArrayList<Int> oldList = new ArrayList<Int>();
 		for (int i = 0; i < 10; i++) {
-			v.add(new Int(i));
+			oldList.add(new Int(i));
 		}
-		System.out.println("v: " + v);
+		System.out.println("oldList: " + oldList);
+		
 		/*
-		 * ArrayList的clone()方法，它并不自动克隆 ArrayList中包含的每个对象，
-		 * 克隆的ArrayList只是将原ArrayList中的对象别名化，这通常称为浅层拷贝(shallow copy)。
-		 * 因为它只复制对象"表面"的部分。实际的对象由以下几部分组成：
-		 * 对象的"表面"，由对象包含的所有引用指向的对象，再加上这些对象又指向的对象，等等。
-		 * 通常称之为"对象网"。将这些全部复制即为深层拷贝(deep copy)。
+		 * ArrayList的clone()方法并不自动克隆它包含的每个对象，克隆的ArrayList只是将原ArrayList中的对象别名化。
 		 */
-		ArrayList<?> v2 = (ArrayList<?>) v.clone();
-		Iterator<?> e = v2.iterator();
+		ArrayList<?> newList = (ArrayList<?>) oldList.clone();
+		Iterator<?> e = newList.iterator();
 		while (e.hasNext()) {
 			((Int) e.next()).increment();
 		}
-		System.out.println("v: " + v);
-	}
-}
-
-class Int {
-	
-	private int i;
-
-	public Int(int i) {
-		this.i = i;
-	}
-
-	public void increment() {
-		i++;
-	}
-
-	public String toString() {
-		return Integer.toString(i);
+		System.out.println("oldList: " + oldList);
 	}
 }

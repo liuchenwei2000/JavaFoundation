@@ -6,10 +6,9 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * 构造Interface对象(私有内部类实现)的工厂类
+ * 构造Interface对象（私有内部类实现）的工厂类
  * <p>
- * 使用了实现接口Interface的PrivateInnerImpl类，
- * PrivateInnerImpl类是私有内部类，对外类型信息被屏蔽。
+ * 使用了实现接口Interface的PrivateInnerImpl类，PrivateInnerImpl类是私有内部类，对外类型信息被屏蔽。
  * 
  * @author 刘晨伟
  * @see rtti.itf.demo.PrivateInnerImplDemo

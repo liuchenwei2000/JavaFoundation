@@ -31,8 +31,7 @@ public class ReturnInTryBlock {
 	 * 而整个try-finally语句意外结束的原因将与finally语句块意外结束的原因相同。
 	 * 
 	 * 总之，每一个finally语句块都应该正常结束，除非抛出的是不受查的异常。
-	 * 也就是不要用return、break、continue或throw来退出一个finally语句块，
-	 * 也不要将一个受查异常传到finally语句块之外去。 
+	 * 也就是不要用return、break、continue或throw来退出一个finally语句块，也不要将一个受查异常传到finally语句块之外去。 
 	 * 
 	 * 可以这样理解： 程序尝试着(try)返回(return)true 但是最终(finally)返回(return)false
 	 */

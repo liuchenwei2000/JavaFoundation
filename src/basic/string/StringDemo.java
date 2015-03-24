@@ -8,15 +8,8 @@ package string;
  * <p>
  * String类是非可变类(对象一旦创建了就不能够改变其内在状态了)。
  * <p>
- * String s1 = new String("kill"); 
- * 不管怎么样都要在堆中创建一个对象。
- * <p>
- * String s2 = "kill"; 
- * 首先在String Pool池(栈)中找(通过equal)有没有"kill"这个对象，
- * 如果有则直接把引用指向这个"kill"对象；如果没有则在堆中创建一个对象。
- * 并且把该引用添加到String Pool中，而对第一种情况JVM是不会主动添加到String Pool中去的。
- * <p>
- * String类中的每一个看起来会修改String值的方法， 实际上都是创建了一个全新的String对象以包含修改后的字符串， 而最初的String对象则丝毫未动。
+ * String类中的每一个看起来会修改String值的方法， 实际上都是创建了一个全新的String对象
+ * 以包含修改后的字符串， 而最初的String对象则丝毫未动。
  * 
  * @author 刘晨伟
  * 
@@ -147,9 +140,9 @@ public class StringDemo {
 		/*
 		 * intern()方法返回一个字符串，内容与调用该方法的字符串相同，但它保证来自字符串池中
 		 * 
-		 * String类有一个初始时为空的字符串池，它由类String私有地维护
-		 * 当调用intern方法时，如果池已经包含一个等于此String对象的字符串(该对象由equals(Object)方法确定)
-		 * 则返回池中的字符串。否则，将此 String 对象添加到池中，并且返回此 String 对象的引用 
+		 * String类有一个初始时为空的字符串池，它由类String私有地维护。
+		 * 当调用intern方法时，如果池内已经包含一个等于此String对象的字符串(该对象由equals(Object)方法确定)，则返回池中的字符串。
+		 * 否则，将此 String 对象添加到池中，并且返回此 String 对象的引用。
 		 * 它遵循对于任何两个字符串s和t，当且仅当s.equals(t)为true时，s.intern() == t.intern()才为true
 		 */
 		s = "test intern";

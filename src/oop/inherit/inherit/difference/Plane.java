@@ -45,21 +45,11 @@ public class Plane extends Vehicle implements IShowInfo {
 		return capacity;
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.Vehicle#speedUp()
-	 */
 	@Override
 	protected void speedUp() {
 		System.out.println("Now speed up : 600mph!");
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.IShowInfo#showInfo()
-	 */
 	public void showInfo() {
 		System.out.println("This is plane : ");
 		System.out.println("name : " + this.getName());

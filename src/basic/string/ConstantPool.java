@@ -24,10 +24,9 @@ public class ConstantPool {
 	public static void main(String[] args) {
 		/*
 		 * String可以用下面两种形式来创建：
-		 * 第一种形式是用new()来新建对象的，它会被存放于堆中。每调用一次就会创建一个新的对象。 
+		 * 第一种形式是用new()来新建对象的，它会被存放于堆中，每调用一次就会创建一个新的对象。 
 		 * 第二种形式是先在栈中创建一个对String类对象的引用变量，然后去字符串常量池里找有没有"abc"，
-		 * 如果没有，则将"abc"存放进字符串常量池，并另str2指向"abc"；
-		 * 如果已经有"abc"则直接令str2指向"abc"。
+		 * 如果没有，则将"abc"存放进字符串常量池，并令str2指向"abc"；如果已经有"abc"则直接令str2指向"abc"。
 		 */
 		String str1 = new String("abc");
 		String str2 = "abc";

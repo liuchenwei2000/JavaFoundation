@@ -6,7 +6,7 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * 构造Interface对象(匿名内部类实现)的工厂类
+ * 构造Interface对象（匿名内部类实现）的工厂类
  * 
  * @author 刘晨伟
  * @see rtti.itf.demo.AnonymousInnerImplDemo

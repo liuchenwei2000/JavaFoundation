@@ -19,11 +19,7 @@ package initialize;
 public class InitSequence {
 	
 	/**
-	 * 初始化的实际过程： </br>
-	 * <li>1，在其他任何事物发生之前，将分配给对象的存储空间初始化成二进制的零 。
-	 * <li>2，如Sandwich类中所述的那样进行初始化 。
-	 * 注：</br>
-	 * 在父类的构造方法中调用的方法是动态绑定的，但是在构造方法中尽量不调用其他方法(要避免)。
+	 * @param args
 	 */
 	public static void main(String[] args) {
 		new Son();

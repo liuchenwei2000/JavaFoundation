@@ -59,6 +59,7 @@ class NewGoods2 {
 		static int x = 2;
 
 		static class AnotherLevel {
+			
 			static int x = 1;
 
 			public static void f() {

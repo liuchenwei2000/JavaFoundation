@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * Date类的基本方法 
  * <p>
- * Date类的很多方法现在都已经被 Calendar类和DateFormat类的方法取代。
+ * Date类的很多方法现在都已经被 Calendar 类和 DateFormat 类的方法取代。
  * 
  * @author 刘晨伟
  * 

@@ -18,9 +18,6 @@ public class FileInfoUtil {
 
 	/**
 	 * 打印文件的信息(如路径、名称等等)
-	 * 
-	 * @param file
-	 *            待分析文件
 	 */
 	public static void printFileInfo(File file) {
 		if (file == null || (!file.exists()))

@@ -19,26 +19,44 @@ public class FileIODemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ∂¡»°
 		String filePath = "files/io.file/file.txt";
+		
+		// ∂¡»°
+		BufferedReader br = null;
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(filePath));
+			br = new BufferedReader(new FileReader(filePath));
 			String s = null;
 			while ((s = br.readLine()) != null) {
 				System.out.println(s);
 			}
-			br.close();
 		} catch (IOException e) {
 			System.out.println("Exception:" + e.getMessage());
+		} finally {
+			if(br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
+		
 		// –¥»Î
+		BufferedWriter bw = null;
 		String content = new Date().toString();
 		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
+			bw = new BufferedWriter(new FileWriter(filePath));
 			bw.write(content);
-			bw.close();
 		} catch (IOException e) {
 			System.out.println("Exception:" + e.getMessage());
+		} finally {
+			if(bw != null) {
+				try {
+					bw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 }

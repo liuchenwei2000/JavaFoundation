@@ -63,6 +63,8 @@ public class TryWithResourcesInJDBC {
 				Statement stat = con.createStatement();
 				ResultSet rs = stat.executeQuery("select * from user")) {
 			// do with ResultSet
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	

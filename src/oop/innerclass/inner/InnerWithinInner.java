@@ -30,11 +30,13 @@ class A {
 	}
 
 	public class AA {
+		
 		private void showAA() {
 			System.out.println("Inside AA");
 		}
 
 		class AAA {
+			
 			void showAAA() {
 				showA();
 				showAA();

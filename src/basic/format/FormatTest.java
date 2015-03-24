@@ -29,8 +29,7 @@ public class FormatTest {
 		String format = "%-12s %-8s %4s %12s%n";
 		System.out.printf(format, "Code", "Name", "Age", "Meesage");
 		for (int i = 1; i < 10; i++) {
-			System.out.printf(format, "Code" + i, "Name" + i, i + 20, "Meesage"
-					+ i);
+			System.out.printf(format, "Code" + i, "Name" + i, i + 20, "Meesage" + i);
 		}
 	}
 }

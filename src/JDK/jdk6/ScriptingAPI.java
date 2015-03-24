@@ -13,9 +13,9 @@ import javax.script.ScriptException;
 /**
  * 12，脚本语言支持(Scripting)示例
  * <p>
- * JDK6增加了对脚本语言的支持(JSR 223)，原理上是将脚本语言编译成bytecode。
+ * JDK6增加了对脚本语言的支持(JSR 223)，原理上是将脚本语言编译成 bytecode。
  * 这样脚本语言也能享用Java平台的诸多优势，包括可移植性，安全等。
- * 另外，由于现在是编译成bytecode后再执行，所以比原来边解释边执行效率要高很多。
+ * 另外，由于现在是编译成 bytecode 后再执行，所以比原来边解释边执行效率要高很多。
  * <p>
  * 加入对脚本语言的支持后，对Java语言也提供了以下好处：
  * 1、许多脚本语言都有动态特性。
@@ -30,7 +30,7 @@ import javax.script.ScriptException;
  * <p>
  * Scripting Tool
  * <p>
- * SUN提供的JDK6中有一个命令行工具———— jrunscript，可以在<JDK6_Home>/bin下面找到这个工具。
+ * SUN提供的JDK6中有一个命令行工具 ———— jrunscript，可以在<JDK6_Home>/bin下面找到这个工具。
  * jrunscript是一个脚本语言的解释程序，它独立于脚本语言，但默认是用JavaScript。
  * 可以用jrunscript来测试自己写的脚本语言是否正确。
  * 

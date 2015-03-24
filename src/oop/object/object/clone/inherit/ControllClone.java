@@ -64,8 +64,7 @@ class Ordinary {
 }
 
 /**
- * WrongClone类演示了实现克隆机制的错误方式。
- * 它以 public 方式重载了Object.clone()，但是没有实现Cloneable。
+ * WrongClone类演示了实现克隆机制的错误方式。它以 public 方式重载了Object.clone()，但是没有实现Cloneable。
  * 因此调用 super.clone()时(最终会调用Object.clone())会抛出 CloneNotSupportException，所以无法克隆。
  */
 class WrongClone extends Ordinary {
@@ -112,8 +111,7 @@ class IsCloneable extends Ordinary implements Cloneable {
  * 只有此类的所有子类，都在各自的clone()中调用 super.clone()，这种阻止克隆的方法才起作用。
  * <p>
  * NoMore 类尝试"关闭"克隆能力，采用了 Java 设计者建议的方式：
- * 在子类的 clone()中抛出CloneNotSupportedException。
- * 当子类的 clone()调用 super.clone()时，会抛出异常，阻止克隆。
+ * 在类的 clone()中抛出CloneNotSupportedException。这样其子类的 clone()调用 super.clone()时，会抛出异常，阻止克隆。
  */
 class NoMore extends IsCloneable {
 	
@@ -150,8 +148,8 @@ class BackOn extends NoMore {
 /**
  * 6.将你的类声明为final以阻止克隆。
  * <p>
- * 如果它的任何父类(祖先类)都没有重载clone()，那么此方法就行不通了。
- * 如果父类重载了clone()，那么让你的类再次重载clone()，并抛出CloneNotSupportedException。
+ * 如果它的任何父类(祖先类)都没有覆盖clone()，那么此方法就行不通了。
+ * 如果父类覆盖了clone()，那么让你的类再次覆盖clone()，并抛出CloneNotSupportedException。
  * 将类声明为final，是唯一有保证的防止克隆的方法。
  * <p>
  * ReallyNoMore 示范了唯一不会有问题的解决方案。类声明为final，就不可以被继承了。

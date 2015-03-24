@@ -5,8 +5,7 @@ package polymorphism;
 
 /**
  * 只有普通的方法调用(不包括域调用)可以是多态的。
- * 如果直接访问某个域，这个访问将在编译期进行解析。
- * 多态是动态绑定、后期绑定、运行时绑定。
+ * 如果直接访问某个域，这个访问将在编译期进行解析，多态是动态绑定、后期绑定、运行时绑定。
  * 
  * @author 刘晨伟
  * 
@@ -32,6 +31,7 @@ public class FieldAccess {
 }
 
 class Super {
+	
 	public String field = "super field";
 
 	public String getField() {
@@ -40,6 +40,7 @@ class Super {
 }
 
 class Sub extends Super {
+	
 	public String field = "sub field";
 
 	public String getField() {

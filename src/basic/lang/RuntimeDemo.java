@@ -61,7 +61,6 @@ public class RuntimeDemo {
 		 * 在安全的环境中，可以在多任务操作系统中使用Java去执行其他特别大的进程(也就是程序)
 		 * exec()方法有几种形式命名想要运行的程序和它的输入参数
 		 * exec()方法返回一个Process对象，可以使用这个对象控制Java程序与新运行的进程进行交互
-		 * exec()方法本质是依赖于环境
 		 */
 		Process p = null;
 		try {

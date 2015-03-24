@@ -23,8 +23,9 @@ public class StaticAndInstanceMethodDemo {
 		 */
 		EchoUtil.echo("hello word.");
 		new Echo("hello word.").echo();
+		
 		/*
-		 * 对于大量的调用，明显的使用静态方法的方式更好
+		 * 对于大量的调用，明显使用静态方法的方式更好
 		 * 在内存占用和效率上都要比实例方法的方式要优
 		 */
 		for (int i = 0; i < 100; i++) {
@@ -33,7 +34,7 @@ public class StaticAndInstanceMethodDemo {
 		for (int i = 0; i < 100; i++) {
 			new Echo("this is number " + i).echo();
 		}
-		/*--------------------------------------------*/
+
 		/*
 		 * 对于这种方式，过长的参数列表会使人迷惑，并且难以阅读和维护
 		 * 当然也可以将所以参数都封装到一个对象中(如下面的Info对象)

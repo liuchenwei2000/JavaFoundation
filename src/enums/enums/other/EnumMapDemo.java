@@ -23,8 +23,8 @@ public class EnumMapDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		EnumMap<SignalNumber, Command> map = new EnumMap<SignalNumber, Command>(
-				SignalNumber.class);
+		EnumMap<SignalNumber, Command> map = new EnumMap<SignalNumber, Command>(SignalNumber.class);
+		
 		map.put(SignalNumber.ONE, new Command() {
 
 			public void action() {
@@ -32,6 +32,7 @@ public class EnumMapDemo {
 			}
 
 		});
+		
 		map.put(SignalNumber.ZERO, new Command() {
 
 			public void action() {
@@ -39,10 +40,12 @@ public class EnumMapDemo {
 			}
 
 		});
+		
 		for (Map.Entry<SignalNumber, Command> e : map.entrySet()) {
 			System.out.print(e.getKey() + " : ");
 			e.getValue().action();
 		}
+		
 		try {
 			// 如果不存在就会抛空指针异常
 			map.get(SignalNumber.NEGATIVEONE).action();
@@ -52,9 +55,6 @@ public class EnumMapDemo {
 	}
 }
 
-/**
- * 命令模式的用法
- */
 interface Command {
 	public void action();
 }

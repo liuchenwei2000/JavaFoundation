@@ -23,10 +23,8 @@ public class IntegerDemo {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * Integer.parseInt方法使用第二个参数指定的基数(默认为10)
-		 * 将字符串参数解析为有符号的整数(原始类型)
-		 * 参数字符串的第一个字符只能是数字或者是'-'(负号)
-		 * 其他必须是指定基数的数字(如2为基数时只能用0和1)
+		 * Integer.parseInt方法使用第二个参数指定的基数(默认为10)，将字符串参数解析为有符号的整数(原始类型)
+		 * 参数字符串的第一个字符只能是数字或者是'-'(负号)，其他必须是指定基数的数字(如2为基数时只能用0和1)
 		 * 否则会有NumberFormatException
 		 */
 		int i = Integer.parseInt("-101");
@@ -34,8 +32,7 @@ public class IntegerDemo {
 		i = Integer.parseInt("-101", 2);
 		System.out.print(i + " ");
 		/*
-		 * Integer.valueOf方法使用和perseInt方法相似
-		 * 只不过返回的类型是一个包装类对象(即Integer)
+		 * Integer.valueOf方法使用和perseInt方法相似，只不过返回的类型是一个包装类对象(即Integer)。
 		 */
 		Integer in = Integer.valueOf("-101");
 		System.out.print(in + " ");

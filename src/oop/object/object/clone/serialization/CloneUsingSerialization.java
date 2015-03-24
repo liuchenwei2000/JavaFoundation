@@ -14,7 +14,8 @@ import java.io.Serializable;
  * <p>
  * 编写Serializable类很容易，但要复制它们则要花费更多的工作。
  * 克隆类在编写时要多做些工作，但实际复制对象时则相当简单。
- * 通过序列化进行克隆所需要的时间比clone()要多。
+ * <p>
+ * 结论：通过序列化进行克隆所需要的时间比clone()要多。
  * 
  * @author 刘晨伟
  *
@@ -29,13 +30,14 @@ public class CloneUsingSerialization {
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception {
-		Thing2[] a = new Thing2[SIZE];
+		Thing4[] a = new Thing4[SIZE];
 		Thing4[] b = new Thing4[SIZE];
+		
 		for (int i = 0; i < a.length; i++){
-			a[i] = new Thing2();
+			a[i] = new Thing4();
 			b[i] = new Thing4();
 		}
-		
+		// 通过序列化克隆对象
 		ByteArrayOutputStream buf = new ByteArrayOutputStream();
 		ObjectOutputStream o = new ObjectOutputStream(buf);
 		long start = System.currentTimeMillis();
@@ -45,14 +47,15 @@ public class CloneUsingSerialization {
 		
 		ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(
 				buf.toByteArray()));
-		Thing2[] c = new Thing2[SIZE];
+		Thing4[] c = new Thing4[SIZE];
 		for (int i = 0; i < c.length; i++){
-			c[i] = (Thing2) in.readObject();
+			c[i] = (Thing4) in.readObject();
 		}
 		long end = System.currentTimeMillis();
-		
 		System.out.println("Clone via serialization: " + (end - start)
 				+ " Milliseconds");
+		
+		// 通过 clone 方法克隆对象
 		start = System.currentTimeMillis();
 		Thing4[] d = new Thing4[SIZE];
 		for (int i = 0; i < d.length; i++) {
@@ -73,8 +76,10 @@ class Thing2 implements Serializable {
 	Thing1 o1 = new Thing1();
 }
 
-class Thing3 implements Cloneable {
+class Thing3 implements Cloneable,Serializable {
 	
+	private static final long serialVersionUID = -31531948352923012L;
+
 	public Object clone() {
 		Object o = null;
 		try {
@@ -86,7 +91,9 @@ class Thing3 implements Cloneable {
 	}
 }
 
-class Thing4 implements Cloneable {
+class Thing4 implements Cloneable,Serializable {
+	
+	private static final long serialVersionUID = 506274341027159899L;
 	
 	private Thing3 o3 = new Thing3();
 

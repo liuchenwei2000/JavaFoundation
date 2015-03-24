@@ -75,11 +75,12 @@ class Callee2 extends MyIncrement {
 	}
 
 	/**
-	 * 内部类Closure实现了Incremnetable以提供一个返回Callee2的钩子。
+	 * 内部类 Closure 实现了Incremnetable 以提供一个返回 Incremnetable 的钩子。
 	 * 这是一个安全的钩子，无论谁获得了此Incrementable的引用，都只能调用increment，除此之外没有其他功能。
-	 * 回调的价值在于它的灵活性：可以在运行时动态地决定需要调用什么方法
+	 * 回调的价值在于它的灵活性：可以在运行时动态地决定需要调用什么方法。
 	 */
 	private class Closure implements Incremnetable {
+		
 		public void increment() {
 			incr();
 		}

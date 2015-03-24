@@ -10,7 +10,7 @@ import java.io.Console;
  * <p>
  * JDK6中提供了java.io.Console类专用来访问基于字符的控制台设备。
  * <p>
- * 你的程序如果要与Windows下的cmd或者Linux下的Terminal交互，就可以用Console类代劳。
+ * 你的程序如果要与 Windows 下的 cmd 或者 Linux 下的 Terminal 交互，就可以用 Console 类代劳。
  * 但不总是能得到可用的Console, 一个JVM是否有可用的Console依赖于底层平台和JVM如何被调用。
  * 
  * @author 刘晨伟
@@ -30,8 +30,7 @@ public class ConsoleTest {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * 如果JVM是在交互式命令行(比如Windows的cmd)中启动的，并且输入输出没有重定向到另外的地方。
-		 * 那么就可以得到一个可用的Console实例。
+		 * 如果JVM是在交互式命令行(比如Windows的cmd)中启动的，并且输入输出没有重定向到另外的地方。那么就可以得到一个可用的Console实例。
 		 * 如果虚拟机是自动启动的（例如，由后台作业调度程序启动），那么它通常没有控制台。 
 		 */
 		Console console = System.console();

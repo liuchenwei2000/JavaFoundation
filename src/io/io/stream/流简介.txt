@@ -4,8 +4,8 @@ I/OÀà¿âÖÐ³£Ê¹ÓÃ"Á÷"Õâ¸ö³éÏó¸ÅÄî£¬Ëü´ú±íÈÎºÎÓÐÄÜÁ¦²úÉúÊý¾ÝµÄÊý¾ÝÔ´¶ÔÏó»òÕßÊÇÓÐÄÜÁ
 ºÜÉÙÊ¹ÓÃµ¥Ò»µÄÀàÀ´´´½¨Á÷¶ÔÏó£¬¶øÊÇÍ¨¹ýµþºÏ¶à¸ö¶ÔÏóÀ´Ìá¹©ËùÆÚÍûµÄ¹¦ÄÜ¡£JavaÖÐµÄ"Á÷"Àà¿âÈÃÈËÃÔ»óµÄÖ÷ÒªÔ­Òò¾ÍÔÚÓÚ£º´´½¨µ¥Ò»µÄ½á¹ûÁ÷È´ÐèÒª´´½¨¶à¸ö¶ÔÏó¡£
 
 
-JavaÖÐÓÐÁ½ÖÖÀàÐÍµÄÁ÷£º×Ö½ÚÁ÷(byte stream)ºÍ×Ö·ûÁ÷(character stream)¡£
-×Ö½ÚÁ÷Îª´¦Àí×Ö½ÚµÄÊäÈëÊä³öÌá¹©ÁË·½±ãµÄ·½·¨£¬ÀýÈç¶ÁÈ¡»òÕßÊéÐ´¶þ½øÖÆÊý¾Ý¡£
+JavaÖÐÓÐÁ½ÖÖÀàÐÍµÄÁ÷£º×Ö½ÚÁ÷(byte stream)ºÍ×Ö·ûÁ÷(character stream):
+×Ö½ÚÁ÷Îª´¦Àí×Ö½ÚµÄÊäÈëÊä³öÌá¹©ÁË·½±ãµÄ·½·¨£¬ÀýÈç¶ÁÈ¡»òÕßÊéÐ´¶þ½øÖÆÊý¾Ý£»
 ×Ö·ûÁ÷Îª×Ö·ûµÄÊäÈëºÍÊä³ö´¦ÀíÌá¹©ÁË·½±ã£¬ÔÚ×îµ×²ã£¬ËùÓÐµÄÊäÈëÊä³ö¶¼ÊÇ×Ö½ÚÐÎÊ½µÄ¡£
 ×Ö·ûÁ÷Ïà¹ØÀàµÄºó×º¶¼ÊÇStream£¬×Ö½ÚÁ÷Ïà¹ØÀàµÄºó×º¶¼ÊÇReader/Writer¡£
 
@@ -23,11 +23,10 @@ OutputStream¾ö¶¨ÁËÊä³öËùÒªÈ¥ÍùµÄÄ¿±ê£º
 Java1.1Ö®ºóÌí¼ÓÁËReaderºÍWriterÌá¹©¼æÈÝUnicodeÓëÃæÏò×Ö·ûµÄI/O¹¦ÄÜ£¬ÕâÐ©Àà¼Ì³ÐÓÚReaderºÍWriter¡£ËüÃÇµÄ¶ÁÐ´²Ù×÷¶¼ÊÇ»ùÓÚË«×Ö½ÚµÄUnicode´úÂëµ¥Ôª£¬¶ø²»ÊÇµ¥×Ö½Ú¡£
 
 ¼¸ºõËùÓÐÔ­Ê¼µÄJava I/O"Á÷"Àà¶¼ÓÐÏàÓ¦µÄ Reader ºÍ Writer ÀàÀ´Ìá¹©ÌìÈ»µÄUnicode ²Ù×÷£¬È»¶øÔÚÄ³Ð©³¡ºÏÃæÏò×Ö½ÚµÄ InputStreams ºÍ OutputStream ²ÅÊÇÕýÈ·µÄ½â¾ö·½°¸¡£
-ÌØ±ðÊÇjava.util.zipÀà¿â¾ÍÊÇÃæÏò×Ö½ÚµÄ¶ø²»ÊÇÃæÏò×Ö·ûµÄ¡£Òò´Ë£¬×îÃ÷ÖÇµÄ×ö·¨ÊÇ¾¡Á¿³¢ÊÔÊ¹ÓÃReader ºÍ Writer£¬Ò»µ©³ÌÐò´úÂëÎÞ·¨³É¹¦±àÒë¾Í»á·¢ÏÖ²»µÃ²»Ê¹ÓÃÃæÏò×Ö½ÚµÄÀà¿â¡£
+ÌØ±ðÊÇjava.util.zipÀà¿â¾ÍÊÇÃæÏò×Ö½ÚµÄ¶ø²»ÊÇÃæÏò×Ö·ûµÄ¡£Òò´Ë£¬×îÃ÷ÖÇµÄ×ö·¨ÊÇ¾¡Á¿³¢ÊÔÊ¹ÓÃReaderºÍ Writer£¬Ò»µ©³ÌÐò´úÂëÎÞ·¨³É¹¦±àÒë¾Í»á·¢ÏÖ²»µÃ²»Ê¹ÓÃÃæÏò×Ö½ÚµÄÀà¿â¡£
 
 
 Ê¹ÓÃIOÁ÷µÄ×¢ÒâÊÂÏî£º
-
 µ±Íê³ÉÁË¶ÔÒ»¸öÁ÷µÄ¶ÁÈ¡»òÕßÐ´Èëºó£¬¾ÍÓ¦¸Ãµ÷ÓÃclose·½·¨½«Ëü¹Ø±Õ£¬ÕâÑù¾Í¿ÉÒÔÊÍ·ÅÁ÷ËùÕ¼ÓÃµÄ²Ù×÷ÏµÍ³×ÊÔ´¡£
 ¹Ø±ÕÒ»¸öÊä³öÁ÷Ò²¿ÉÒÔË¢ÐÂ(flush)Êä³öÁ÷Õ¼ÓÃµÄ»º´æÇø£¬¼´ÁÙÊ±´æ´¢ÔÚ»º³åÇøÖÐµÈ´ýÐÎ³É½Ï´óµÄÊý¾Ý°üºóÔÙ·¢ËÍµÄÄÇÐ©×Ö·û£¬´ËÊ±½«ËüÃÇ·¢ËÍ³öÈ¥¡£
 Èç¹û²»¹Ø±ÕÎÄ¼þ£¬×îºóÒ»¸ö×Ö½Ú°ü¿ÉÄÜÓÀÔ¶Ò²²»»á±»·¢ËÍ£¬µ±È»¿ÉÒÔÓÃflush·½·¨ÊÖ¹¤Ë¢ÐÂÊä³ö¡£

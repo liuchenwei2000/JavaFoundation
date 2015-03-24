@@ -35,12 +35,21 @@ public class CompilerAPI {
 	private static String JAVA_CLASS_FILE = "files/jdk6/DynamicClass.class";
 	private static String JAVA_CLASS_NAME = "DynamicClass";
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		generateJavaSourceFile();// 先生成Java源文件
+		try {
+			generateJavaSourceFile();// 先生成Java源文件
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		// 获取此平台提供的 Java 语言编译器
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 		// 获取一个标准文件管理器实现的新实例
 		StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, null);
+		
 		try {
 			// 获取表示给定文件的文件对象
 			Iterable<? extends JavaFileObject> sourcefiles = fileManager.getJavaFileObjects(JAVA_SOURCE_FILE);
@@ -64,18 +73,23 @@ public class CompilerAPI {
 	/**
 	 * 生成Java类源文件
 	 */
-	private static void generateJavaSourceFile() {
+	private static void generateJavaSourceFile() throws IOException {
+		BufferedWriter bw = null;
 		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(JAVA_SOURCE_FILE));
+			bw = new BufferedWriter(new FileWriter(JAVA_SOURCE_FILE));
 			bw.write("public class " + JAVA_CLASS_NAME + "{");
 			bw.newLine();
 			bw.write("public "
 					+ JAVA_CLASS_NAME
 					+ "(){System.out.println(\"In the constructor of DynamicClass\");}}");
 			bw.flush();
-			bw.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
+			throw ex;
+		} finally {
+			if (bw != null) {
+				bw.close();
+			}
 		}
 	}
 }

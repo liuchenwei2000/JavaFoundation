@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -23,52 +24,114 @@ import java.io.Serializable;
 public class SerializeDemo {
 
 	/**
-	 * 序列化一个对象的步骤：
-     * 首先要创建某些OutputStream对象，然后将其封装在一个ObjectOutputStream对象内，
-     * 然后只需调用writeObject()即可将对象序列化，并将其发送给OutputStream。
-     * <p>
-     * 要将一个序列还原为一个对象：
-     * 需要将一个InputStream封装在ObjectInputStream内，然后调用readObject()，
-     * 最后获得的是一个向上转型为Object的引用，所以必须向下转型为具体类型。
-     * <p>
-     * 注意在对一个Serializable对象进行还原的过程中，没有调用任何构造器，包括缺省的构造器。
-     * 整个对象都是通过从InputStream中取得数据恢复而来的对象序列化是面向字节的，因此采用InputStream和OutputStream层次结构。
-     *  
 	 * @param args
-	 * @throws Exception
 	 */
-	public static void main(String[] args) throws Exception {
-		String fileName = "files/io.serialize/car.out";
-		// 创建对象并打印信息
+	public static void main(String[] args) {
+		String filePath = "files/io.serialize/car.out";
 		Car car = new Car("Benz", 4);
 		System.out.println("car \n" + car);
-		// 序列化对象到文件(将两个对象序列化到同一个文件)
-		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(
-				fileName));
-		out.writeObject("Car storage\n");// 序列化字符串
-		out.writeObject(car);// 序列化Car对象
-		out.close();
-		// 从文件中反序列化对象
-		// 读取对象时，必须要小心的跟踪存储的对象的数量、它们的顺序以及它们的类型
-		// 对于readObject的每一次调用都会读取类型为Object的另一个对象
-		ObjectInputStream in = new ObjectInputStream(new FileInputStream(
-				fileName));
-		String s = (String) in.readObject();// 反序列化对象并向下转型
-		Car car2 = (Car) in.readObject();
-		in.close();
-		System.out.println(s + "car from file \n" + car2);
-		// 序列化对象到内存
+		
+		try {
+			System.out.println("******************writeObjectToDisk*****************");
+			writeObjectToDisk(car, filePath);
+			
+			System.out.println("******************readObjectFromDisk*****************");
+			readObjectFromDisk(filePath);
+			
+			System.out.println("******************writeObjectToMemory*****************");
+			byte[] result = writeObjectToMemory(car);
+			
+			System.out.println("******************readObjectFromMemory*****************");
+			readObjectFromMemory(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 序列化对象到磁盘文件（可以将多个对象序列化到同一个文件）
+	 * <p>
+	 * 序列化一个对象的步骤：
+     * 首先要创建某些 OutputStream 对象，然后将其封装在一个 ObjectOutputStream 对象内，
+     * 然后只需调用 writeObject(object) 即可将对象序列化，并将其发送给 OutputStream 。
+	 */
+	private static void writeObjectToDisk(Object object,String filePath) throws IOException{
+		ObjectOutputStream out = null;
+		try {
+			out = new ObjectOutputStream(new FileOutputStream(filePath));
+			out.writeObject("Object storage\n");// 序列化字符串
+			out.writeObject(object);// 序列化参数对象
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			if (out != null) {
+				out.close();
+			}
+		}
+	}
+	
+	/**
+	 * 从文件中反序列化对象
+	 * <p>
+	 * 要将一个序列还原为一个对象：
+     * 需要将一个 InputStream 封装在 ObjectInputStream 内，然后调用 readObject()，
+     * 最后获得的是一个向上转型为 Object 的引用，所以必须向下转型为具体类型。
+     * <p>
+     * 注意在对一个Serializable对象进行还原的过程中，没有调用任何构造器，包括缺省的构造器。
+     * 对象序列化是面向字节的，因此采用 InputStream 和 OutputStream 层次结构。
+	 */
+	private static void readObjectFromDisk(String filePath) throws Exception{
+		ObjectInputStream in = null;
+		try {
+			in = new ObjectInputStream(new FileInputStream(filePath));
+			// 读取对象时，必须要小心的跟踪存储对象的数量、顺序以及类型
+			// 对于readObject的每一次调用都会读取类型为Object的下一个对象
+			String s = (String) in.readObject();// 反序列化对象并向下转型
+			Car car = (Car) in.readObject();
+			System.out.println(s + "object from file \n" + car);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			if(in != null) {
+				in.close();
+			}
+		}
+	}
+	
+	/**
+	 * 序列化对象到内存
+	 */
+	private static byte[] writeObjectToMemory(Object object) throws IOException{
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
-		ObjectOutputStream out2 = new ObjectOutputStream(bout);
-		out2.writeObject("Car storage\n");
-		out2.writeObject(car);
-		out2.flush();
-		// 从内存中反序列化对象
-		ObjectInputStream in2 = new ObjectInputStream(new ByteArrayInputStream(
-				bout.toByteArray()));
-		s = (String) in2.readObject();
-		Car car3 = (Car) in2.readObject();
-		System.out.println(s + "car from byte array \n" + car3);
+		
+		ObjectOutputStream out = new ObjectOutputStream(bout);
+		out.writeObject("Object storage\n");
+		out.writeObject(object);
+		out.flush();
+		
+		return bout.toByteArray();
+	}
+	
+	/**
+	 * 从内存中反序列化对象
+	 */
+	private static void readObjectFromMemory(byte[] bytes) throws Exception {
+		ObjectInputStream in = null;
+		try {
+			in = new ObjectInputStream(new ByteArrayInputStream(bytes));
+			String s = (String) in.readObject();
+			Car car3 = (Car) in.readObject();
+			System.out.println(s + "car from byte array \n" + car3);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		} finally {
+			if (in != null) {
+				in.close();
+			}
+		}
 	}
 }
 

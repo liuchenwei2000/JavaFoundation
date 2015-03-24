@@ -24,9 +24,5 @@ public interface InnerClassInInterface {
 		public void print() {
 			System.out.println("Inside InnerImpl");
 		}
-
-		public static void main(String[] args) {
-			new InnerImpl().print();
-		}
 	}
 }

@@ -18,12 +18,12 @@ public class CloneInObjectClass {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		IntObject io = new IntObject(1);
-		IntObject copy = (IntObject) io.clone();
-		io.increment();
-		System.out.println("io : " + io);
+		IntObject old = new IntObject(1);
+		IntObject copy = (IntObject) old.clone();
+		old.increment();
+		System.out.println("old : " + old);
 		System.out.println("copy : " + copy);
-		System.out.println("io == copy : " + (io == copy));
+		System.out.println("old == copy : " + (old == copy));
 	}
 }
 

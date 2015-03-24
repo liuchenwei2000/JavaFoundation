@@ -25,16 +25,18 @@ public class PrivateFieldModifyingDemo {
 		try {
 			// 根据域名称返回对应的域对象
 			Field field = wpfc.getClass().getDeclaredField("i");
-			field.setAccessible(true);
+			field.setAccessible(true);// 这样就可以访问 private域了
 			System.out.println("f.getInt(wpfc)：" + field.getInt(wpfc));
 			field.setInt(wpfc, 47);
 			System.out.println(wpfc);
-
+			System.out.println();
+			
 			field = wpfc.getClass().getDeclaredField("s");
-			field.setAccessible(true);
+			field.setAccessible(true);// final 域还是不可以再被赋值的
 			System.out.println("f.get(wpfc)：" + field.get(wpfc));
 			field.set(wpfc, "No,you're not!");
 			System.out.println(wpfc);
+			System.out.println();
 
 			field = wpfc.getClass().getDeclaredField("s2");
 			field.setAccessible(true);

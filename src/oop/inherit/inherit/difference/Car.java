@@ -34,21 +34,12 @@ public class Car extends Vehicle implements IShowInfo, IRunnable {
 		return capacity;
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.Vehicle#speedUp()
-	 */
 	@Override
 	protected void speedUp() {
 		System.out.println("Now speed up : 80mph!");
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.IShowInfo#showInfo()
-	 */
+	@Override
 	public void showInfo() {
 		System.out.println("This is car : ");
 		System.out.println("name : " + this.getName());
@@ -56,20 +47,12 @@ public class Car extends Vehicle implements IShowInfo, IRunnable {
 		System.out.println("capacity : " + this.getCapacity());
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.IRunning#backOff()
-	 */
+	@Override
 	public void backOff() {
 		System.out.println("Be careful ! Back off now.");
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.IRunning#goAhead()
-	 */
+	@Override
 	public void goAhead() {
 		System.out.println("Go ahead now ! 100mph!");
 	}

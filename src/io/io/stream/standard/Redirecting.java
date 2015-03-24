@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.util.Date;
 
 /**
  * 标准IO重定向
@@ -39,8 +40,7 @@ public class Redirecting {
 		String infile = "files/io.stream.standard/infile.txt";
 		String outfile = "files/io.stream.standard/outfile.txt";
 		
-		BufferedInputStream in = new BufferedInputStream(new FileInputStream(
-				infile));
+		BufferedInputStream in = new BufferedInputStream(new FileInputStream(infile));
 		PrintStream out = new PrintStream(new BufferedOutputStream(
 				new FileOutputStream(outfile)));
 		System.setIn(in);
@@ -54,6 +54,7 @@ public class Redirecting {
 			// 此时System.out将把string输入到outfile.txt中
 			System.out.println(s);
 		}
+		System.out.println("\n" + new Date());
 		out.close();
 		// 重新设定标准输出流控制台
 		System.setOut(System.out);

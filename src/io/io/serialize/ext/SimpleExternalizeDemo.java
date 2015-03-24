@@ -31,36 +31,53 @@ public class SimpleExternalizeDemo {
 
 	/**
 	 * @param args
-	 * @throws Exception
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		String fileName = "files/io.serialize.ext/object.out";
 		System.out.println("Constructing objects:");
+		
 		ObjectA oa = new ObjectA();
 		ObjectB ob = new ObjectB();
-		/** 序列化这两个对象 */
-		ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream(
-				fileName));
-		System.out.println("Saving objects:");
-		o.writeObject(oa);
-		o.writeObject(ob);
-		o.close();
-		/** 反序列化这两个对象 */
-		ObjectInputStream in = new ObjectInputStream(new FileInputStream(
-				fileName));
-		System.out.println("Recovering objects:");
-		System.out.println("ObjectA");
-		/*
-		 * 恢复oa后，会调用ObjectA缺省构造器，这与恢复一个Serializable对象不同
-		 * 对于后者，对象完全以它存储的二进制位为基础来构造，而不调用构造器
-		 * 而对一个Externalizable对象，所有普通的缺省构造器都会被调用
-		 * (包括在域定义时的初始化)然后调用readExternal()
-		 * 所有缺省的构造器都会被调用，才能使Externalizable对象产生正确地行为
-		 */
-		oa = (ObjectA) in.readObject();
-		System.out.println("ObjectB");
-		// 下面这句会抛出异常，因为它的构造器是非public的
-		ob = (ObjectB)in.readObject(); 
+		
+		ObjectOutputStream out = null;
+		ObjectInputStream in = null;
+		try {
+			/** 序列化这两个对象 */
+			out = new ObjectOutputStream(new FileOutputStream(
+					fileName));
+			System.out.println("Saving objects:");
+			out.writeObject(oa);
+			out.writeObject(ob);
+			out.flush();
+			
+			/** 反序列化这两个对象 */
+			in = new ObjectInputStream(new FileInputStream(fileName));
+			System.out.println("Recovering objects:");
+			System.out.println("ObjectA");
+			
+			/*
+			 * 恢复oa后，会调用ObjectA缺省构造器，这与恢复一个Serializable对象不同，对于后者，对象完全以它存储的二进制位为基础来构造，而不调用构造器。
+			 * 而对一个Externalizable对象，所有普通的缺省构造器都会被调用（包括在域定义时的初始化）然后调用readExternal()
+			 * 所有缺省的构造器都会被调用，才能使Externalizable对象产生正确地行为。
+			 */
+			oa = (ObjectA) in.readObject();
+			System.out.println("ObjectB");
+			// 下面这句会抛出异常，因为它的构造器是非public的
+			ob = (ObjectB)in.readObject(); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (out != null) {
+					out.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
 	}
 }
 
@@ -88,6 +105,7 @@ class ObjectA implements Externalizable {
 		System.out.println("ObjectA.readExternal");
 	}
 }
+
 /**
  * 本类的构造器是包级私有的
  */

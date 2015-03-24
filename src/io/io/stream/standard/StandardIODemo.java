@@ -39,6 +39,7 @@ public class StandardIODemo {
 			System.out.println("Echo：" + s);
 			System.out.print("Enter:");
 		}
+		
 		/** 标准输出流System.out */
 		/*
 		 * System.out是一个PrintStream，而PrintStream是一个 OutputStream

@@ -16,9 +16,6 @@ public class Circle implements IFigure {
 	
 	private double r;// °ë¾¶
 
-	/**
-	 * @param r
-	 */
 	public Circle(double r) {
 		this.r = r;
 	}
@@ -31,14 +28,17 @@ public class Circle implements IFigure {
 		this.r = r;
 	}
 
+	@Override
 	public void draw() {
 		System.out.println("This is circle!");
 	}
 
+	@Override
 	public double getArea() {
 		return r * r * Math.PI;
 	}
 
+	@Override
 	public double getGirth() {
 		return 2 * r * Math.PI;
 	}

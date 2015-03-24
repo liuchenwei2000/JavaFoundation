@@ -54,7 +54,7 @@ class GenericType<T> {
 
 	/*
 	 * public static void print(T[] t){
-	 * 	// T不能和非泛型静态方法一起使用(因为它是和实例相关的)
+	 * 	// T 不能和非泛型静态方法一起使用(因为它是和实例相关的)
 	 * 	}
 	 */
 	
@@ -81,15 +81,14 @@ class GenericType<T> {
 	/**
 	 * 可以设定泛型绑定某一类型(接口)使得其只接受该类型或者其子类。</br>
 	 * 也可以在类声明的时候进行类型绑定如：</br>
-	 * public class GenericsType<T extends String>
+	 * public class GenericsType<T extends Date>
 	 */
 	public <U extends Number> void testNumber(U u) {
 		System.out.println("U extends Number : " + u.getClass().getSimpleName());
 	}
 	
 	/**
-	 * 实现某个接口也要用关键字extends而不是implements</br>
-	 * 同样也可以在类声明的时候进行类型绑定到接口。
+	 * 实现某个接口也要用关键字extends而不是implements，同样也可以在类声明的时候进行类型绑定到接口。
 	 */
 	public <U extends Comparable<?>> void testComparable(U u) {
 		System.out.println("U extends Comparable : " + u.getClass().getSimpleName());

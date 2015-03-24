@@ -15,8 +15,9 @@ import java.util.List;
 /**
  * static字段的序列化
  * <p>
- * 本例在某次运行时只能执行 序列化或者反序列化代码段中的一个，
- * 未被执行的要注释掉，否则程序运行的效果会有问题。
+ * 本例在某次运行时只能执行 序列化或者反序列化代码段中的一个，未被执行的要注释掉，否则程序运行的效果会有问题。
+ * <p>
+ * 结论：static字段不会被自动序列化，除非手动的调用方法将其序列化和反序列化。
  * 
  * @author 刘晨伟
  * 
@@ -45,16 +46,19 @@ public class StaticFieldSerialize {
 		shapeTypes.add(Circle.class);
 		shapeTypes.add(Square.class);
 		shapeTypes.add(Line.class);
+		
 		// 存储Shape对象
 		List<Shape> shapes = new ArrayList<Shape>();
 		shapes.add(new Circle());
 		shapes.add(new Square());
 		shapes.add(new Line());
+		
 		// 将每个对象的 static 字段 color 都设为 Shape.GREEN
 		for (Shape shape : shapes) {
 			shape.setColor(Shape.GREEN);
 		}
 		System.out.println(shapes);
+		
 		// 序列化List
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(
 				fileName));
@@ -62,6 +66,7 @@ public class StaticFieldSerialize {
 		Line.serializeStatic(oos);
 		oos.writeObject(shapes);
 		oos.close();
+		
 		/*
 		 * 反序列化代码段
 		 * 
@@ -72,18 +77,17 @@ public class StaticFieldSerialize {
 		 * ]
 		 * 可见Circle和Square的color字段的值都不是3
 		 * 
-		 * 对static字段信息的读取出现了问题，预期所有读回的颜色都应是3
-		 * 但是真实情况却并非如此：
+		 * 对static字段信息的读取出现了问题，预期所有读回的颜色都应是3，但是真实情况却并非如此：
 		 * Circle的值为 1(定义为RED)，而Square的值为0(它的color字段是在构造器中被初始化的)
-		 * 看上去似乎static字段根本没有被序列化，实际上确实如此
+		 * 看上去似乎static字段根本没有被序列化，实际上确实如此。
 		 * 
-		 * 所以假如想序列化static字段值，就必须手工去实现
-		 * 这正是Line中的serializeStatic()和deserializeStatic()两个static方法的用途
-		 * 可以看到，它们是作为存储和读取过程的一部分被显式地调用的
+		 * 所以假如想序列化static字段值，就必须手工去实现。
+		 * 这正是Line中的serializeStatic()和deserializeStatic()两个static方法的用途。
+		 * 可以看到，它们是作为存储和读取过程的一部分被显式地调用的。
 		 */
+		
 		// 反序列化List
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(
-				fileName));
+		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
 		ois.readObject();
 		Line.deserializeStatic(ois);
 		List<?> shapes2 = (List<?>) ois.readObject();

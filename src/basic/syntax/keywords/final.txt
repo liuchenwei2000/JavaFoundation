@@ -4,12 +4,10 @@
 
 1£¬final Êý¾Ý
 
-Ò»¸ö¼ÈÊÇstaticÓÖÊÇfinalµÄÊý¾ÝÖ»Õ¼¾ÝÒ»¶Î²»ÄÜ¸Ä±äµÄ´æ´¢¿Õ¼ä(±àÒëÆÚ³£Á¿)¡£
-¶ÔÓÚ»ù±¾ÀàÐÍfinalÊ¹ÊýÖµºã¶¨²»±ä£»¶øÓÃÓÚ¶ÔÏóÒýÓÃ£¬finalÊ¹ÒýÓÃºã¶¨²»±ä¡£
+Ò»¸ö¼ÈÊÇstaticÓÖÊÇfinalµÄÊý¾ÝÖ»Õ¼¾ÝÒ»¶Î²»ÄÜ¸Ä±äµÄ´æ´¢¿Õ¼ä(±àÒëÆÚ³£Á¿)¡£¶ÔÓÚ»ù±¾ÀàÐÍfinalÊ¹ÊýÖµºã¶¨²»±ä£»¶øÓÃÓÚ¶ÔÏóÒýÓÃ£¬finalÊ¹ÒýÓÃºã¶¨²»±ä¡£
 Ò»µ©ÒýÓÃ±»³õÊ¼»¯Ö¸ÏòÒ»¸ö¶ÔÏó£¬¾ÍÎÞ·¨ÔÙ°ÑËü¸ÄÎªÖ¸Ïò±ðµÄ¶ÔÏó£¬µ«ÊÇ¶ÔÏó±¾ÉíÈ´ÊÇ¿ÉÒÔÐÞ¸ÄµÄ£¬Java²¢Î´Ìá¹©Ê¹ÈÎºÎ¶ÔÏóºã¶¨²»±äµÄÍ¾¾¶
 
-finalÐÞÊÎ·û´ó¶¼Ó¦ÓÃÓÚ»ù±¾ÀàÐÍ(primitive)Óò£¬»ò²»¿É±ä(immutable)ÀàµÄÓò¡£
-¶ÔÓÚ¿É±äµÄÀà£¬Ê¹ÓÃfinalÐÞÊÎ·û¿ÉÄÜ»áÔì³É»ìÂÒ£º
+finalÐÞÊÎ·û´ó¶¼Ó¦ÓÃÓÚ»ù±¾ÀàÐÍ(primitive)Óò£¬»ò²»¿É±ä(immutable)ÀàµÄÓò¡£¶ÔÓÚ¿É±äµÄÀà£¬Ê¹ÓÃfinalÐÞÊÎ·û¿ÉÄÜ»áÔì³É»ìÂÒ£º
 private final Date date;
 ½ö½öÒâÎ¶×Å´æ´¢ÔÚdate±äÁ¿ÖÐµÄ¶ÔÏóÒýÓÃÔÚ¶ÔÏó¹¹ÔìÖ®ºó²»ÄÜ±»¸Ä±ä£¬¶ø²¢²»ÒâÎ¶×Ådate¶ÔÏóÊÇÒ»¸ö³£Á¿£¬ÒòÎª¶Ôdate¶ÔÏóµ÷ÓÃÈÎºÎDateÀàµÄ·½·¨¶¼ÓÐ¿ÉÄÜ¸Ä±äÕâ¸ö¶ÔÏó¡£
 
@@ -31,10 +29,7 @@ JavaÔÊÐíÔÚ²ÎÊýÁÐ±íÖÐÒÔÉùÃ÷µÄ·½Ê½½«²ÎÊýÖ¸Ã÷Îªfinal£¬ÕâÒâÎ¶×ÅÔÚ·½·¨ÖÐÎÞ·¨¸Ä±ä²ÎÊýÒ
 
 2£¬final ·½·¨
 
-Ê¹ÓÃfinalÐÞÊÎ·½·¨µÄÔ­ÒòÓÐÁ½¸ö£º
-1£¬½«·½·¨Ëø¶¨£¬ÒÔ·ÀÈÎºÎ¼Ì³ÐÀàÐÞ¸ÄËüµÄº¬Òå
-ÕâÊÇ³öÓÚÉè¼ÆµÄ¿¼ÂÇ£¬ÏëÒªÈ·±£ÔÚ¼Ì³ÐÖÐÊ¹ÓÃ·½·¨ÐÐÎª±£³Ö²»±ä£¬²»ÇÒ²»»á±»¸²¸Ç¡£
-2£¬³öÓÚÐ§ÂÊµÄ¿¼ÂÇ£¬ºÜÉÙÊ¹ÓÃÁË
+ÎªÁË½«·½·¨Ëø¶¨£¬ÒÔ·ÀÈÎºÎ¼Ì³ÐÀàÐÞ¸ÄËüµÄº¬Òå¡£ÕâÊÇ³öÓÚÉè¼ÆµÄ¿¼ÂÇ£¬ÏëÒªÈ·±£ÔÚ¼Ì³ÐÖÐÊ¹ÓÃ·½·¨ÐÐÎª±£³Ö²»±ä£¬²¢ÇÒ²»»á±»¸²¸Ç¡£
 
 ÀàÖÐËùÓÐµÄprivate·½·¨¶¼ÒþÊ½µØÖ¸¶¨Îªfinal£¬ÓÉÓÚÎÞ·¨È¡ÓÃprivate·½·¨Ò²¾ÍÎÞ·¨¸²¸ÇËü¡£
 "¸²¸Ç"Ö»ÓÐÔÚÄ³·½·¨ÊÇ»ùÀàµÄ½Ó¿ÚµÄÒ»²¿·ÖÊ±²Å»á³öÏÖ£¬¼´±ØÐëÄÜ½«Ò»¸ö¶ÔÏóÏòÉÏ×ªÐÍÎªËüµÄ»ù±¾ÀàÐÍ²¢µ÷ÓÃÏàÍ¬µÄ·½·¨¡£

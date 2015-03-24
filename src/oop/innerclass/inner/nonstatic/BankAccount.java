@@ -22,15 +22,14 @@ public class BankAccount {
 		private long amount;
 
 		private Action(String act, long amount) {
-			// 这里的this是指内部类自己
+			// 这里的this是指内部类Action自己
 			this.act = act;
 			this.amount = amount;
 		}
 
 		public String toString() {
 			// 内部类中对外部类对象的引用是BankAccount.this
-			// 如果需要调用外部类的父类的某个方法可以用
-			// BankAccount.super.method()
+			// 如果需要调用外部类的父类的某个方法可以用 BankAccount.super.method()
 			return number + ": " + act + " " + amount; // 相当于BankAccount.this.number
 		}
 	}
@@ -50,6 +49,10 @@ public class BankAccount {
 		deposit(amount);
 		lastAct = this.new Action("transfer", amount);
 		other.lastAct = other.new Action("transfer", amount);
+	}
+	
+	public long getBalance() {
+		return balance;
 	}
 
 	public Action getLastAct() {

@@ -4,7 +4,7 @@
 package object.readonly;
 
 /**
- * 恒常对象演示类
+ * 不可变对象演示类
  * 
  * @author 刘晨伟
  * 
@@ -30,7 +30,7 @@ public class ImmutableObjectDemo1 {
 }
 
 /** 
- * 恒常对象 
+ * 不可变对象 
  */
 class ImmutableObject {
 

@@ -8,11 +8,11 @@ package inner.other;
  * <p>
  * 可以在代码块中创建内部类，典型的方式是在一个方法体的里面创建。
  * 局部内部类不能有访问修饰符，它不是外部类的一部分。
- * 但是它可以访问当前代码块的常量，以及次外部类的所有成员。
+ * 但是它可以访问当前代码块的常量，以及外部类的所有成员。
  * <p>
  * 使用局部内部类而不使用匿名内部类的原因有：</br>
- * <li>1，需要一个命名的构造器，或者需要重载构造器
- * <li>2，需要不止一个该内部类的对象
+ * <li>1，需要一个命名的构造器，或者需要重载构造器；
+ * <li>2，需要不止一个该内部类的对象。
  * 
  * @author 刘晨伟
  * 
@@ -25,7 +25,7 @@ public class LocalInnerClass {
 	/**
 	 * 局部内部类展示
 	 */
-	Counter getLocalCounter(final String name) {
+	public Counter getLocalCounter(final String name) {
 		
 		class LocalCounter implements Counter {
 			
@@ -47,7 +47,7 @@ public class LocalInnerClass {
 	/**
 	 * 匿名内部类展示
 	 */
-	Counter getCounter(final String name) {
+	public Counter getCounter(final String name) {
 		
 		return new Counter() {
 			/**
@@ -66,5 +66,6 @@ public class LocalInnerClass {
 }
 
 interface Counter{
+	
 	int next();
 }

@@ -58,8 +58,7 @@ public class AnonymousInnerClass {
 		 */
 		return new Base(i) {
 			{
-				// 实例初始化的效果就是构造器
-				// 但是不能重载实例初始化方法，因此只有这样的构造器
+				// 实例初始化的效果就是构造器，但是不能重载实例初始化方法。
 				System.out.println("Inside instance initializer");
 			}
 

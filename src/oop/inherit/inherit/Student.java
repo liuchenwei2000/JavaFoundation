@@ -16,6 +16,11 @@ public class Student extends Person {
 	private String grade;
 	private String id;
 
+	/**
+	 * 当创建一个子类的对象时，该对象包含了一个基类的子对象，Java会自动在子类的每一个构造方法中插入对基类无参构造方法的调用。
+	 * 除非它已经调用了基类其他有参数的构造方法，调用一个带参数的基类构造器就必须用super关键字显式调用并配以适当的参数列表。
+	 * 调用基类构造方法必须是在子类的构造方法中要做的第一件事，并且子类的每个构造方法中有且只能有一个super关键字。
+	 */
 	public Student() {
 		super();
 		this.school = "无名学校";

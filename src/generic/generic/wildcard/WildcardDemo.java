@@ -23,10 +23,11 @@ public class WildcardDemo {
 		System.out.println("has null:" + hasNull(pair));
 		System.out.println("has null2:" + hasNull2(pair));
 		/*
-		 * 无限定通配符 ? ，可以这样使用：Pair<?> 
-		 * 这好像与原始的Pair类型一样，实际上有很大的不同： 
-		 * 类型Pair<?>有方法如：
-		 * ? getFirst(); void setFirst(?);
+		 * 无限定通配符 ? ，可以这样使用：Pair<?>。
+		 * 
+		 * 这好像与原始的Pair类型一样，实际上有很大的不同，类型Pair<?>有方法如：
+		 * ? getFirst(); 
+		 * void setFirst(?);
 		 */
 		// getFirst的返回值只能赋给一个Object
 		Object object = pair.getFirst();

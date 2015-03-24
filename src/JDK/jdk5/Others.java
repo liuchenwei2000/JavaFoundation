@@ -48,8 +48,9 @@ public class Others {
 		System.out.println();
 
 		// for-each输出集合元素
-		for (String item : c)
+		for (String item : c) {
 			System.out.print(item + " ");
+		}
 		System.out.println();
 
 		// 传统输出集合元素

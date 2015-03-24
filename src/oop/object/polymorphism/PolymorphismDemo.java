@@ -37,12 +37,14 @@ public class PolymorphismDemo {
 }
 
 interface Animal {
+	
 	void sayHi();
 
 	String getName();
 }
 
 class Dog implements Animal {
+	
 	public String getName() {
 		return "Bob";
 	}

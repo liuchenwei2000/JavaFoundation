@@ -6,7 +6,7 @@ package object.dispatch;
 /**
  * 动态分派演示
  * <p>
- * Java通过方法覆盖(override)支持静态分派。
+ * Java通过方法覆盖(override)支持动态分派。
  * 
  * @author 刘晨伟
  * 
@@ -21,6 +21,6 @@ public class DynamicDispatchDemo {
 		String s = "abc";
 		Object o = "abc";
 		// 尽管o的静态类型是Object，但是调用equals()方法时它还是调用了其真实类型String的equals()方法
-		System.out.println("o.equals(s)? " + s.equals(o));
+		System.out.println("o.equals(s)? " + o.equals(s));
 	}
 }

@@ -27,11 +27,9 @@ public class InfiniteRecurion {
 	}
 
 	/**
-	 * 这里发生了自动类型转换，由InfiniteRecurion类型转换成了String类型
-	 * 因为编译器看到一个String对象后面跟着一个"+"，而后面的对象不是String
-	 * 于是编译器试着将this转换成一个String，于是调用了它的toString方法
-	 * 如果真的想打印对象的内存地址应该调用Object类中的toString方法
-	 * 即是不使用this而是使用super来调用父类的toString方法
+	 * 这里发生了自动类型转换，由InfiniteRecurion类型转换成了String类型。
+	 * 因为编译器看到一个String对象后面跟着一个"+"，而后面的对象不是String，编译器试着将this转换成一个String，于是调用了它的toString方法。
+	 * 如果真的想打印对象的内存地址应该调用Object类中的toString方法，即不使用this而使用super来调用父类的toString方法。
 	 *
 	 * @see java.lang.Object#toString()
 	 */

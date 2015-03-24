@@ -7,7 +7,8 @@ package syntax.keywords;
  * static成员和方法的访问控制
  * <p>
  * non-static方法中可以调用static成员和方法，也可以调用non-static成员和方法。
- * static方法中也可以调用static成员和方法，但是不可以调用non-static成员和方法，除非在它的方法体中创建一个对象后通过对象进行调用。
+ * static方法中也可以调用static成员和方法，但是不可以调用non-static成员和方法，
+ * 除非在它的方法体中创建一个对象后通过对象进行调用。
  * 
  * @author 刘晨伟
  *

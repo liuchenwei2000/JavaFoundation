@@ -24,12 +24,9 @@ import java.util.Random;
  */
 public class ClassInitialization {
 
-	public static Random rand = new Random();
-
 	/**
-	 * 初始化有效地实现了尽可能地"惰性"
-	 * 使用 .class 语法来获取对类的引用不会引发初始化
-	 * 使用 Class.forName() 立即就进行了初始化
+	 * 初始化有效地实现了尽可能地"惰性"：
+	 * 使用 .class 语法来获取对类的引用不会引发初始化，而  Class.forName() 立即就进行了初始化。
 	 */
 	@SuppressWarnings( { "unused" })
 	public static void main(String[] args) throws Exception {
@@ -60,7 +57,7 @@ public class ClassInitialization {
 class Initable{
 	
 	static final int staticFinal = 47;
-	static final int staticFinal2 = ClassInitialization.rand.nextInt(1000);
+	static final int staticFinal2 = new Random().nextInt(1000);
 	
 	static {
 		System.out.println("Initializing Initable");

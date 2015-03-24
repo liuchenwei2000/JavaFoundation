@@ -1,8 +1,9 @@
-1: ON HALLOWEEN
-2: 
-3: The witches fly
-4: Across the sky,
-5: The owls go, "Who? Who? Who?"
-6: The black cats yowl
-7: And green ghosts howl,
-8: "Scary Halloween to you!"
+ON HALLOWEEN
+
+The witches fly
+Across the sky,
+The owls go, "Who? Who? Who?"
+The black cats yowl
+And green ghosts howl,
+"Scary Halloween to you!"
+

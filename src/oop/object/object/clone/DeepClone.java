@@ -4,12 +4,13 @@
 package object.clone;
 
 /**
- * 对象实现深克隆演示
+ * 深克隆演示
  * <p>
- * 在对组合对象做深克隆时，必须假设成员对象的clone()。
- * 方法会在其引用上依次执行深克隆，并依此类推。
- * 它实际上表示，要想让深克隆起作用，就必须控制所有类的代码，
- * 或者至少对深克隆涉及的类要足够了解，才能知道它们是否正确执行了各自的深克隆。
+ * 深克隆：对象的完全复制，如果对象有对其它对象的引用，那些对象也被完全复制。
+ * <p>
+ * 在对组合对象做深克隆时，必须假设成员对象的clone()方法会在其引用上依次执行深克隆，并依此类推。
+ * 它实际上表示，要想让深克隆起作用，就必须控制所有类的代码，或者至少
+ * 对深克隆涉及的类要足够了解，才能知道它们是否正确执行了各自的深克隆。
  * 
  * @author 刘晨伟
  *
@@ -23,12 +24,14 @@ public class DeepClone {
 	public static void main(String[] args) {
 		Ocean ocean = new Ocean(33.9, 100.5);
 		Ocean clone = (Ocean) ocean.clone();
+		
 		Temperature tr = clone.getTemperature();
 		tr.setTemperature(tr.getTemperature() + 1);
 		clone.setTemperature(tr);
 		Depth dr = clone.getDepth();
 		dr.setDepth(dr.getDepth() + 1);
 		clone.setDepth(dr);
+		
 		System.out.println("ocean \n" + ocean);
 		System.out.println("clone \n" + clone);
 	}
@@ -43,6 +46,11 @@ class Depth implements Cloneable {
 		this.depth = depth;
 	}
 
+	/**
+	 * 实现自身clone方法
+	 * 
+	 * @see java.lang.Object#clone()
+	 */
 	public Object clone() {
 		Object o = null;
 		try {
@@ -75,6 +83,11 @@ class Temperature implements Cloneable {
 		this.temperature = temperature;
 	}
 
+	/**
+	 * 实现自身clone方法
+	 * 
+	 * @see java.lang.Object#clone()
+	 */
 	public Object clone() {
 		Object o = null;
 		try {
@@ -110,7 +123,7 @@ class Ocean implements Cloneable {
 	}
 
 	/**
-	 * Ocean对象实现深克隆的时候必须对其成员对象也进行克隆操作，
+	 * Ocean 对象实现深克隆的时候必须对其成员对象也进行克隆操作，
 	 * 然后将克隆后的成员对象副本设给Ocean的克隆对象。
 	 */
 	public Object clone() {

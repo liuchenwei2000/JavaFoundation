@@ -28,24 +28,28 @@ public class CovariantReturn {
 }
 
 class Father {
+	
 	public String toString() {
 		return "Father";
 	}
 }
 
 class Son extends Father {
+	
 	public String toString() {
 		return "Son";
 	}
 }
 
 class ReturnFather {
+	
 	public Father get() {
 		return new Father();
 	}
 }
 
 class ReturnSon extends ReturnFather {
+	
 	public Son get() {
 		return new Son();
 	}

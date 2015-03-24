@@ -25,6 +25,7 @@ public class CloneUsingConstructor {
 		cloneByFruitConstructor(tomato);
 		cloneByReflectionTomato(tomato);
 		cloneByReflectionFruit(tomato);
+		
 		GreenZebra g = new GreenZebra();
 		cloneByTomatoConstructor(g);
 		cloneByFruitConstructor(g);

@@ -11,9 +11,9 @@ import access.inherit.c.Son;
  * <p>
  * 演示protected真正的访问控制含义：</br>
  * 当祖父类、父类、子类和子孙类不同包时，
- * <li>若在父类中有祖父类的对象，则该对象不可访问它的protected成员
- * <li>若在父类中有子孙类的对象，则该对象可以访问它的protected成员
- * <li>如果是protected static成员则都可以访问
+ * <li>若在父类中有祖父类的对象，则该对象不可访问它的protected成员。
+ * <li>若在父类中有子孙类的对象，则该对象可以访问它的protected成员。
+ * <li>如果是protected static成员则都可以访问。
  * 
  * @author 刘晨伟
  *

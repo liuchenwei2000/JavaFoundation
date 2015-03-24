@@ -20,6 +20,7 @@ public class SuccessfulClone {
 		MyObject b = incrementPara(a);
 		System.out.println("a == b: " + (a == b));
 		System.out.println("a = " + a + ", b = " + b);
+		
 		MyObject c = new MyObject(47);
 		MyObject d = incrementClonedPara(c);
 		System.out.println("c == d: " + (c == d));

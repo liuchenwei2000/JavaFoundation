@@ -44,27 +44,36 @@ public class HTTPServerAPI {
 	}
 
 	/**
-	 * 程序员必须自己实现HttpHandler接口，HttpServer会调用HttpHandler实现类的回调方法来处理客户端请求
+	 * 程序员必须自己实现 HttpHandler 接口，HttpServer 会调用 HttpHandler 实现类的回调方法来处理客户端请求。
 	 */
 	private static class HelloHandler implements HttpHandler {
 		
 		/**
 		 * 一个Http请求和它的响应称为一个交换，包装成HttpExchange类。
-		 * HttpServer负责将HttpExchange传给HttpHandler实现类的回调方法。
+		 * HttpServer 负责将 HttpExchange 传给 HttpHandler 实现类的回调方法。
 		 * 
 		 * @see com.sun.net.httpserver.HttpHandler#handle(com.sun.net.httpserver.HttpExchange)
 		 */
 		public void handle(HttpExchange exchange) throws IOException {
 			// HttpExchange可以获取到request和response的相关信息
 			System.out.println(exchange.getRequestMethod());
-			
+
 			String response = "<html><body><h3>Hello World!</h3></body></html>";
 			exchange.sendResponseHeaders(200, response.length());
 			// 将信息写入到响应流中
-			OutputStream os = exchange.getResponseBody();
-			os.write(response.getBytes());
-			os.flush();
-			os.close();
+			OutputStream os = null;
+			try {
+				os = exchange.getResponseBody();
+				os.write(response.getBytes());
+				os.flush();
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw e;
+			} finally {
+				if (os != null) {
+					os.close();
+				}
+			}
 		}
 	}
 }

@@ -37,9 +37,9 @@ public class ClassDemo {
 			e.printStackTrace();
 		}
 		// 3,使用类字面常量,即 T.class 就是相符的类对象
-		// 这样做不仅更简单，而且更安全，因为它在编译时就会受到检查
-		// 并且它根除了对forName()方法的调用，所以也更高效
-		// 类字面常量不仅可以应用于普通的类，也可以应用于借口、数组以及基本数据类型
+		// 这样做不仅更简单，而且更安全，因为它在编译时就会受到检查。
+		// 并且它根除了对forName()方法的调用，所以也更高效。
+		// 类字面常量不仅可以应用于普通的类，也可以应用于借口、数组以及基本数据类型。
 		cl = int[].class;
 		System.out.println(cl.getName());
 		// JVM为每个类型管理一个Class对象，可以利用  == 实现两个类对象比较的操作
@@ -54,6 +54,7 @@ public class ClassDemo {
 		try {
 			/*
 			 * 一般将forName和newInstance配合使用
+			 * 
 			 * 根据字符串代表的类名来创建一个对象，它调用的是默认的构造器(没有参数的构造器)。
 			 * 如果类没有无参构造器则会抛出InstantiationException；
 			 * 如果类有无参构造器但是private的则会抛出 IllegalAccessException，这表示违反了Java安全机制。
@@ -69,10 +70,10 @@ public class ClassDemo {
 			Class<? super Human> supers = clazz.getSuperclass();
 			Object base = supers.newInstance();// 只能使用Object来引用
 			System.out.println(base);
+			
 			/*
 			 * 如果想向被调用的类的构造器提供参数，就要使用Constructor类中的newInstance方法了
 			 */
-			
 			// class.getInterfaces()方法返回的是Class对象直接实现的接口，不含其父类实现的接口
 			Class<?>[] itfs = Human.class.getInterfaces();
 			for (Class<?> itf : itfs) {

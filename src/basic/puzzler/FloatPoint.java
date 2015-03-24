@@ -32,8 +32,8 @@ public class FloatPoint {
 		/** 解决方法 */
 		/*
 		 * 输出：2.0 - 1.1 = 0.9
-		 * 解决方法就是用BigDecimal来描述浮点数，并且构造浮点数对象的时候
-		 * 只用BigDecimal(String)这个构造方法而不是用BigDecimal(double)
+		 * 解决方法就是用BigDecimal来描述浮点数，并且构造浮点数对象的时候。
+		 * 只用BigDecimal(String)这个构造方法而不是用BigDecimal(double)。
 		 */
 		BigDecimal aa = new BigDecimal(a + "");
 		BigDecimal bb = new BigDecimal(b + "");

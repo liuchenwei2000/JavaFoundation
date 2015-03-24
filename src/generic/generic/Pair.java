@@ -73,8 +73,10 @@ public class Pair<T> {
 		String min = array[0];
 		String max = array[0];
 		for (String s : array) {
-			if(s.compareTo(min)<0) min = s;
-			if(s.compareTo(max)>0) max = s;
+			if (s.compareTo(min) < 0)
+				min = s;
+			if (s.compareTo(max) > 0)
+				max = s;
 		}
 		/*
 		 * 用具体的类型替换类型变量就可以实例化泛型类型

@@ -85,7 +85,8 @@ public class CatchingMultipleExceptionTypes {
 	}
 	
 	/**
-	 * 与以前版本相比，Java SE 7 的编译器能够对再次抛出的异常(rethrown exception)做出更精确的分析。这使得你可以在一个方法声明的throws从句中指定更具体的异常类型。
+	 * 与以前版本相比，Java SE 7 的编译器能够对再次抛出的异常(rethrown exception)做出更精确的分析。
+	 * 这使得你可以在一个方法声明的throws从句中指定更具体的异常类型。
 	 */
 	public static void rethrowExceptionAfterJDK1_7(String exceptionName)
 			throws FirstException, SecondException {

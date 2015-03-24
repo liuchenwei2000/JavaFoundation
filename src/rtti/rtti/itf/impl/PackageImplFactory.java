@@ -6,10 +6,9 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * 构造Interface对象(包级类实现)的工厂类
+ * 构造Interface对象（包级类实现）的工厂类
  * <p>
- * 使用了实现接口Interface的PackageImpl类，
- * PackageImpl类是包访问权限这样包外部的客户端就不能看到它
+ * 使用了实现接口Interface的PackageImpl类，PackageImpl类是包访问权限，这样包外部的客户端就不能看到它。
  * 
  * @author 刘晨伟
  * @see rtti.itf.demo.PackageImplDemo

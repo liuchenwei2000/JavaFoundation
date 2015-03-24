@@ -34,21 +34,12 @@ public class Plant extends Biology implements IShowInfo {
 		return type;
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.Biology#deathInfo()
-	 */
 	@Override
 	protected String getDeathInfo() {
 		return "光合作用停止！";
 	}
 
-	/**
-	 * (non-Javadoc)
-	 * 
-	 * @see aboutInheritance.difference.IShowInfo#showInfo()
-	 */
+	@Override
 	public void showInfo() {
 		System.out.println("This is plant : ");
 		System.out.println("name : " + this.getName());

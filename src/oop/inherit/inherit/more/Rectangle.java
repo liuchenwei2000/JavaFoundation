@@ -36,14 +36,17 @@ public class Rectangle implements IFigure {
 		this.width = width;
 	}
 
+	@Override
 	public void draw() {
 		System.out.println("This is rectangle!");
 	}
 
+	@Override
 	public double getArea() {
 		return length * width;
 	}
 
+	@Override
 	public double getGirth() {
 		return 2 * (length + width);
 	}

@@ -34,21 +34,12 @@ public class Animal extends Biology implements IShowInfo, IRunnable {
 		return type;
 	}
 
-	/**
-	 * (non-Java doc)
-	 * 
-	 * @see aboutInheritance.difference.Biology#deathInfo()
-	 */
 	@Override
 	protected String getDeathInfo() {
 		return "ÐÂ³Â´úÐ»Í£Ö¹£¡";
 	}
 
-	/**
-	 * (non-Java doc)
-	 * 
-	 * @see aboutInheritance.difference.IShowInfo#showInfo()
-	 */
+	@Override
 	public void showInfo() {
 		System.out.println("This is animal : ");
 		System.out.println("name : " + this.getName());
@@ -56,20 +47,12 @@ public class Animal extends Biology implements IShowInfo, IRunnable {
 		System.out.println("type : " + this.getType());
 	}
 
-	/**
-	 * (non-Java doc)
-	 * 
-	 * @see aboutInheritance.difference.IRunning#backOff()
-	 */
+	@Override
 	public void backOff() {
 		System.out.println("I will back off!");
 	}
 
-	/**
-	 * (non-Java doc)
-	 * 
-	 * @see aboutInheritance.difference.IRunning#goAhead()
-	 */
+	@Override
 	public void goAhead() {
 		System.out.println("I will go ahead!");
 	}

@@ -58,8 +58,7 @@ public class GenericMethodDemo {
 	/**
 	 *  一个类型变量或通配符可以有多个限定，如下面的方法：
 	 *  <p>
-	 *  限定类型间用"&"分隔，这是因为逗号用来分隔类型变量，
-	 *  绑定类型列表中最多有一个类，可以有多个接口。
+	 *  限定类型间用"&"分隔，绑定类型列表中最多有一个类，可以有多个接口。
 	 *  如果类在绑定类型列表中，它必须是第一个。
 	 */
 	public static <T extends Comparable<T> & Serializable> void genericMethod(T t) {

@@ -13,8 +13,7 @@ package enums;
 public enum Direction {
 	
 	// enum中的首行必须是其实例的定义
-	EAST("This is east!"), WEST("This is west!"), SOUTH("This is south!"), NORTH(
-			"This is north!");
+	EAST("This is east!"), WEST("This is west!"), SOUTH("This is south!"), NORTH("This is north!");
 
 	// 如果想要添加方法(或属性)，则必须在enum实例序列的最后添加一个分号
 	private String description;

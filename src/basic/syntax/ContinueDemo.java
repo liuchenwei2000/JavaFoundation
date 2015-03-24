@@ -11,8 +11,7 @@ package syntax;
  * 有标签的continue：
  * 直接跳到标签代表的循环的起始位置
  * <p>
- * continue也可以和总会被执行的finally语句一起配合使用
- * 这样Java里就没有必要使用goto语句了
+ * continue也可以和总会被执行的finally语句一起配合使用，这样Java里就没有必要使用goto语句了
  * 
  * @author 刘晨伟
  *
@@ -36,7 +35,7 @@ public class ContinueDemo {
 			int k = 0;
 			while (n-- != 0) {
 				if (searchMe.charAt(j++) != substring.charAt(k++)) {
-					// 若是continue则跳到while循环开始处
+					// 若是continue;则跳到while循环开始处
 					continue test;
 				}
 			}

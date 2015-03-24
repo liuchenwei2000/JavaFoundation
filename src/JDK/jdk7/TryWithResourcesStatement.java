@@ -36,8 +36,9 @@ public class TryWithResourcesStatement {
 	 * 在Java SE 7之前，为了确保资源被关闭，可能会编写如下代码：
 	 */
 	private static String doBeforeJDK1_7(String path) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(path));
+		BufferedReader br = null;
 		try {
+			br = new BufferedReader(new FileReader(path));
 			return br.readLine();
 		} finally {
 			if (br != null) {

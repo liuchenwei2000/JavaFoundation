@@ -48,8 +48,7 @@ public class ConstraintsInGeneric {
 	/**
 	 * 2，运行时类型查询
 	 * <p>
-	 * JVM中的对象总有一个特定的非泛型类型，因此所有的运行时类型查询RTTI。
-	 * (如 instanceof 或 getClass())只产生原生类型(即Pair.class)。
+	 * JVM中的对象总有一个特定的非泛型类型，因此所有的运行时类型查询RTTI(如 instanceof 或 getClass())只产生原生类型(即Pair.class)。
 	 */
 	private static void testRTTI() {
 		Pair<String> pair = new Pair<String>();
