@@ -13,7 +13,7 @@ public　enum　Color
 
 Color　myColor　=　Color.RED;
 
-因为enum继承自java.lang.Enum所以不可再继承其他类。
+因为enum继承自java.lang.Enum所以不可再继承其他类。编译器会自动提供equals()和hashCode()方法，并且实现了Complarable和Serializable接口。
 
 一个enum是定义一组值的对象，它可以包括零个或多个值成员。它是属于enum类型的，一个enum对象中不可有两个或多个相同的属性或值。
 enum对象的值都会自动获得一个数字值，从0开始，依次递增。

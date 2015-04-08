@@ -17,8 +17,9 @@ public class EnumDemo {
 	 */
 	public static void main(String[] args) {
 		// values()返回这个枚举所等同的数组，并且数组中的元素严格保持其在enum中声明的顺序
+		// values()方法是由编译器添加的static方法，并不是 Enum 类源码中定义的方法。
 		for (Day day : Day.values()) {
-			// 返回枚举常量的序数(它在枚举声明中的位置，其中初始常量序数为零)
+			// 返回一个int值，这是每个enum实例在声明时的次序。
 			println(day + " ordinal: " + day.ordinal());
 			// 枚举实现了Comparable接口，可以进行比较
 			println(day + ".compareTo(Day.THURSDAY) = " + day.compareTo(Day.THURSDAY));
