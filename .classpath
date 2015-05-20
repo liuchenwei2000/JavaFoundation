@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="generic/|enums/|rtti/|nio/|io/|oop/access/|oop/initialize/|JDK/|oop/innerclass/|oop/inherit/|oop/object/|basic/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/basic"/>
+	<classpathentry kind="src" path="src/oop/access"/>
+	<classpathentry kind="src" path="src/oop/inherit"/>
+	<classpathentry kind="src" path="src/oop/initialize"/>
+	<classpathentry kind="src" path="src/oop/innerclass"/>
+	<classpathentry kind="src" path="src/oop/object"/>
+	<classpathentry kind="src" path="src/rtti"/>
+	<classpathentry kind="src" path="src/io"/>
+	<classpathentry kind="src" path="src/nio"/>
+	<classpathentry kind="src" path="src/JDK"/>
+	<classpathentry kind="src" path="src/enums"/>
+	<classpathentry kind="src" path="src/generic"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/bookws.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
