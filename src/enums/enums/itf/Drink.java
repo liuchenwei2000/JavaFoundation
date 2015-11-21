@@ -4,27 +4,27 @@
 package enums.itf;
 
 /**
- * ÒûÁÏ½Ó¿Ú
+ * é¥®æ–™æ¥å£
  * <p>
- * Èç¹ûÏëÊ¹ÓÃ×ÓÀà½«Ò»¸öenumÖĞµÄÔªËØ½øĞĞ·Ö×é£¬ÒòÎª²»ÄÜÊ¹ÓÃ¼Ì³Ğ¡£
- * ËùÒÔÖ»ÄÜ²ÉÓÃÕâ¸ö·½·¨À´´ïµ½Ä¿µÄ£º
- * ´´½¨Ò»¸ö½Ó¿Ú£¬È»ºó´´½¨ÊµÏÖ¸Ã½Ó¿ÚµÄÃ¶¾Ù£¬ÒÔ´Ë½«ÔªËØ½øĞĞ·Ö×é¡£
- * ¶ÔÓÚenum¶øÑÔ£¬ÊµÏÖ½Ó¿ÚÊÇÊ¹Æä×ÓÀà»¯µÄÎ¨Ò»·½·¨¡£
+ * å¦‚æœæƒ³ä½¿ç”¨å­ç±»å°†ä¸€ä¸ªenumä¸­çš„å…ƒç´ è¿›è¡Œåˆ†ç»„ï¼Œå› ä¸ºä¸èƒ½ä½¿ç”¨ç»§æ‰¿ã€‚
+ * æ‰€ä»¥åªèƒ½é‡‡ç”¨è¿™ä¸ªæ–¹æ³•æ¥è¾¾åˆ°ç›®çš„ï¼š
+ * åˆ›å»ºä¸€ä¸ªæ¥å£ï¼Œç„¶ååˆ›å»ºå®ç°è¯¥æ¥å£çš„æšä¸¾ï¼Œä»¥æ­¤å°†å…ƒç´ è¿›è¡Œåˆ†ç»„ã€‚
+ * å¯¹äºenumè€Œè¨€ï¼Œå®ç°æ¥å£æ˜¯ä½¿å…¶å­ç±»åŒ–çš„å”¯ä¸€æ–¹æ³•ã€‚
  * <p>
- * ½Ó¿ÚµÄ×÷ÓÃÊÇ½«ÆäËù°üº¬µÄenum×éºÏ³ÉÒ»¸ö¹«¹²ÀàĞÍ¡£
+ * æ¥å£çš„ä½œç”¨æ˜¯å°†å…¶æ‰€åŒ…å«çš„enumç»„åˆæˆä¸€ä¸ªå…¬å…±ç±»å‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public interface Drink {
 
 	/**
-	 * Ë®
+	 * æ°´
 	 */
 	public enum Water implements Drink {
 
-		HOTWATER("°×¿ªË®"), CLEANWATER("´¿¾»Ë®");
+		HOTWATER("ç™½å¼€æ°´"), CLEANWATER("çº¯å‡€æ°´");
 
 		private String name;
 
@@ -38,16 +38,16 @@ public interface Drink {
 		}
 
 		public static String getType() {
-			return "Ë®";
+			return "æ°´";
 		}
 	}
 
 	/**
-	 * ¿§·È
+	 * å’–å•¡
 	 */
 	public enum Coffee implements Drink {
 
-		NEST("È¸³²"), G7("Ô½ÄÏG7"), BLUE("À¶É½¿§·È");
+		NEST("é›€å·¢"), G7("è¶Šå—G7"), BLUE("è“å±±å’–å•¡");
 
 		private String name;
 
@@ -61,16 +61,16 @@ public interface Drink {
 		}
 
 		public static String getType() {
-			return "¿§·È";
+			return "å’–å•¡";
 		}
 	}
 
 	/**
-	 * ²è
+	 * èŒ¶
 	 */
 	public enum Tea implements Drink {
 
-		GREENTEA("ÂÌ²è"), BLACKTEA("ºì²è"), OOLONGTEA("ÎÚÁú²è"), JASMINETEA("ÜÔÀò»¨²è");
+		GREENTEA("ç»¿èŒ¶"), BLACKTEA("çº¢èŒ¶"), OOLONGTEA("ä¹Œé¾™èŒ¶"), JASMINETEA("èŒ‰è‰èŠ±èŒ¶");
 
 		private String name;
 
@@ -84,16 +84,16 @@ public interface Drink {
 		}
 
 		public static String getType() {
-			return "²è";
+			return "èŒ¶";
 		}
 	}
 
 	/**
-	 * ¹ûÖ­
+	 * æœæ±
 	 */
 	public enum Juice implements Drink {
 
-		APPLE("Æ»¹ûÖ­"), PEACH("ÌÒÖ­"), GRAPE("ÆÏÌÑÖ­");
+		APPLE("è‹¹æœæ±"), PEACH("æ¡ƒæ±"), GRAPE("è‘¡è„æ±");
 
 		private String name;
 
@@ -107,7 +107,7 @@ public interface Drink {
 		}
 
 		public static String getType() {
-			return "¹ûÖ­";
+			return "æœæ±";
 		}
 	}
 }

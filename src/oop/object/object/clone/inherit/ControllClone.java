@@ -4,17 +4,17 @@
 package object.clone.inherit;
 
 /**
- * ¿ØÖÆ¿ËÂ¡ÄÜÁ¦ÑÝÊ¾
+ * æŽ§åˆ¶å…‹éš†èƒ½åŠ›æ¼”ç¤º
  * <p>
- * Èç¹ûÏ£ÍûÒ»¸öÀà¿ÉÒÔ±»¿ËÂ¡£º</br>
- * <li>1.ÊµÏÖ Cloneable ½Ó¿Ú¡£
- * <li>2.¸²¸Ç clone()¡£
- * <li>3.ÔÚÀàµÄ clone()ÖÐµ÷ÓÃ super.clone()¡£
- * <li>4.ÔÚÀàµÄ clone()ÖÐ²¶»ñÒì³£¡£
+ * å¦‚æžœå¸Œæœ›ä¸€ä¸ªç±»å¯ä»¥è¢«å…‹éš†ï¼š</br>
+ * <li>1.å®žçŽ° Cloneable æŽ¥å£ã€‚
+ * <li>2.è¦†ç›– clone()ã€‚
+ * <li>3.åœ¨ç±»çš„ clone()ä¸­è°ƒç”¨ super.clone()ã€‚
+ * <li>4.åœ¨ç±»çš„ clone()ä¸­æ•èŽ·å¼‚å¸¸ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-8
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-8
  */
 public class ControllClone {
 
@@ -52,20 +52,20 @@ public class ControllClone {
 }
 
 /**
- * 1.²»¹ØÐÄ¡£
+ * 1.ä¸å…³å¿ƒã€‚
  * <p>
- * ²¢²»×öÈÎºÎ¿ËÂ¡²Ù×÷£¬¼´Ê¹Àà²»¿É¿ËÂ¡£¬µ«ÊÇÖ»ÒªÔ¸Òâ£¬¾ÍÄÜÏòÆä×ÓÀàÌí¼Ó¿ËÂ¡ÄÜÁ¦¡£
- * ÕâÖ»ÓÐÔÚÈ±Ê¡µÄObject.clone()ÄÜ¹»ºÏÀíµØ´¦ÀíÀàÖÐËùÓÐÊôÐÔÊ±²ÅÆð×÷ÓÃ¡£
+ * å¹¶ä¸åšä»»ä½•å…‹éš†æ“ä½œï¼Œå³ä½¿ç±»ä¸å¯å…‹éš†ï¼Œä½†æ˜¯åªè¦æ„¿æ„ï¼Œå°±èƒ½å‘å…¶å­ç±»æ·»åŠ å…‹éš†èƒ½åŠ›ã€‚
+ * è¿™åªæœ‰åœ¨ç¼ºçœçš„Object.clone()èƒ½å¤Ÿåˆç†åœ°å¤„ç†ç±»ä¸­æ‰€æœ‰å±žæ€§æ—¶æ‰èµ·ä½œç”¨ã€‚
  * <p>
- * OrdinaryÀà´ú±í³£¼ûµÄÀàÐÍ£ºËü²»ÊÇ"¹Ø±Õ"¿ËÂ¡ÄÜÁ¦£¬¶øÊÇ²»Ö§³ÖÒ²²»×èÖ¹¿ËÂ¡¡£
- * µ«ÊÇÈç¹ûÓÐÒ»¸öOrdinary×ÓÀàµÄ¶ÔÏó£¬ÆäÒýÓÃÏòÉÏ×ªÐÍÎªOrdinaryºó£¬¾ÍÎÞ·¨·Ö±æËüÊÇ·ñ¿É¿ËÂ¡¡£
+ * Ordinaryç±»ä»£è¡¨å¸¸è§çš„ç±»åž‹ï¼šå®ƒä¸æ˜¯"å…³é—­"å…‹éš†èƒ½åŠ›ï¼Œè€Œæ˜¯ä¸æ”¯æŒä¹Ÿä¸é˜»æ­¢å…‹éš†ã€‚
+ * ä½†æ˜¯å¦‚æžœæœ‰ä¸€ä¸ªOrdinaryå­ç±»çš„å¯¹è±¡ï¼Œå…¶å¼•ç”¨å‘ä¸Šè½¬åž‹ä¸ºOrdinaryåŽï¼Œå°±æ— æ³•åˆ†è¾¨å®ƒæ˜¯å¦å¯å…‹éš†ã€‚
  */
 class Ordinary {
 }
 
 /**
- * WrongCloneÀàÑÝÊ¾ÁËÊµÏÖ¿ËÂ¡»úÖÆµÄ´íÎó·½Ê½¡£ËüÒÔ public ·½Ê½ÖØÔØÁËObject.clone()£¬µ«ÊÇÃ»ÓÐÊµÏÖCloneable¡£
- * Òò´Ëµ÷ÓÃ super.clone()Ê±(×îÖÕ»áµ÷ÓÃObject.clone())»áÅ×³ö CloneNotSupportException£¬ËùÒÔÎÞ·¨¿ËÂ¡¡£
+ * WrongCloneç±»æ¼”ç¤ºäº†å®žçŽ°å…‹éš†æœºåˆ¶çš„é”™è¯¯æ–¹å¼ã€‚å®ƒä»¥ public æ–¹å¼é‡è½½äº†Object.clone()ï¼Œä½†æ˜¯æ²¡æœ‰å®žçŽ°Cloneableã€‚
+ * å› æ­¤è°ƒç”¨ super.clone()æ—¶(æœ€ç»ˆä¼šè°ƒç”¨Object.clone())ä¼šæŠ›å‡º CloneNotSupportExceptionï¼Œæ‰€ä»¥æ— æ³•å…‹éš†ã€‚
  */
 class WrongClone extends Ordinary {
 	
@@ -75,13 +75,13 @@ class WrongClone extends Ordinary {
 }
 
 /**
- * 2.Ö§³Öclone()¡£
+ * 2.æ”¯æŒclone()ã€‚
  * <p>
- * °´ÕÕ±ê×¼µÄ¹ßÀý£ºÊµÏÖ Cloneable ½Ó¿Ú¡¢ÖØÔØ clone()·½·¨¡£
- * ÔÚÖØÔØµÄclone()ÖÐ£¬µ÷ÓÃ super.clone()£¬²¢²¶»ñËùÓÐÒì³£¡£
+ * æŒ‰ç…§æ ‡å‡†çš„æƒ¯ä¾‹ï¼šå®žçŽ° Cloneable æŽ¥å£ã€é‡è½½ clone()æ–¹æ³•ã€‚
+ * åœ¨é‡è½½çš„clone()ä¸­ï¼Œè°ƒç”¨ super.clone()ï¼Œå¹¶æ•èŽ·æ‰€æœ‰å¼‚å¸¸ã€‚
  * <p>
- * IsCloneable Ö´ÐÐÁËËùÓÐÕýÈ·µÄ²Ù×÷£ºÖØÔØ clone()·½·¨¡¢ÊµÏÖ Cloneable ½Ó¿Ú¡£
- * Ö»ÊÇÒì³£Å×¸øµ÷ÓÃÕß½øÐÐ´¦Àí¡£
+ * IsCloneable æ‰§è¡Œäº†æ‰€æœ‰æ­£ç¡®çš„æ“ä½œï¼šé‡è½½ clone()æ–¹æ³•ã€å®žçŽ° Cloneable æŽ¥å£ã€‚
+ * åªæ˜¯å¼‚å¸¸æŠ›ç»™è°ƒç”¨è€…è¿›è¡Œå¤„ç†ã€‚
  */
 class IsCloneable extends Ordinary implements Cloneable {
 	
@@ -91,27 +91,27 @@ class IsCloneable extends Ordinary implements Cloneable {
 }
 
 /**
- * 3.ÓÐÌõ¼þµØÖ§³Ö¿ËÂ¡¡£
+ * 3.æœ‰æ¡ä»¶åœ°æ”¯æŒå…‹éš†ã€‚
  * <p>
- * Èç¹ûÀà°üº¬ÆäËû¶ÔÏóµÄÒýÓÃ£¬ËüÃÇ²»Ò»¶¨ÊÇ¿É¿ËÂ¡µÄ£¬µ«ÀàµÄclone()·½·¨Ó¦¸ÃÊÔ×Å¿ËÂ¡ËüÃÇ¡£
- * Èç¹ûÅ×³öÒì³££¬Ö»Ðè½«Òì³£´«¸ø³ÌÐòÔ±¡£
+ * å¦‚æžœç±»åŒ…å«å…¶ä»–å¯¹è±¡çš„å¼•ç”¨ï¼Œå®ƒä»¬ä¸ä¸€å®šæ˜¯å¯å…‹éš†çš„ï¼Œä½†ç±»çš„clone()æ–¹æ³•åº”è¯¥è¯•ç€å…‹éš†å®ƒä»¬ã€‚
+ * å¦‚æžœæŠ›å‡ºå¼‚å¸¸ï¼Œåªéœ€å°†å¼‚å¸¸ä¼ ç»™ç¨‹åºå‘˜ã€‚
  */
 
 /**
- * 4.²»ÊµÏÖ Cloneable ½Ó¿Ú£¬µ«ÊÇÒÔ protected ·½Ê½ÖØÔØ clone()·½·¨£¬ÎªËùÓÐÊôÐÔ´´½¨ÕýÈ·µÄ¸´ÖÆÐÐÎª¡£
+ * 4.ä¸å®žçŽ° Cloneable æŽ¥å£ï¼Œä½†æ˜¯ä»¥ protected æ–¹å¼é‡è½½ clone()æ–¹æ³•ï¼Œä¸ºæ‰€æœ‰å±žæ€§åˆ›å»ºæ­£ç¡®çš„å¤åˆ¶è¡Œä¸ºã€‚
  * <p>
- * ÓÚÊÇ¸ÃÀàµÄÈÎºÎ×ÓÀà£¬¶¼¿ÉÒÔÖØÔØclone()²¢µ÷ÓÃsuper.clone()²úÉúÕýÈ·µÄ¸´ÖÆÐÐÎª¡£
- * ÄãµÄ clone()¿ÉÒÔ(²¢ÇÒÓ¦¸Ã)µ÷ÓÃsuper.clone()£¬¼´Ê¹ super.clone()Ô¤ÆÚµÄÊÇ¸ö Cloneable ¶ÔÏó¡£
- * Ã»ÈË»áÖ±½Ó¶ÔÄãµÄÀàµÄ¶ÔÏóµ÷ÓÃclone()£¬Ö»ÄÜÍ¨¹ýÆä×ÓÀà²ÅÐÐ£¬¶øÒªÏëÈÃËüÕý³£¹¤×÷£¬Æä×ÓÀà±ØÐëÊµÏÖCloneable ½Ó¿Ú¡£
+ * äºŽæ˜¯è¯¥ç±»çš„ä»»ä½•å­ç±»ï¼Œéƒ½å¯ä»¥é‡è½½clone()å¹¶è°ƒç”¨super.clone()äº§ç”Ÿæ­£ç¡®çš„å¤åˆ¶è¡Œä¸ºã€‚
+ * ä½ çš„ clone()å¯ä»¥(å¹¶ä¸”åº”è¯¥)è°ƒç”¨super.clone()ï¼Œå³ä½¿ super.clone()é¢„æœŸçš„æ˜¯ä¸ª Cloneable å¯¹è±¡ã€‚
+ * æ²¡äººä¼šç›´æŽ¥å¯¹ä½ çš„ç±»çš„å¯¹è±¡è°ƒç”¨clone()ï¼Œåªèƒ½é€šè¿‡å…¶å­ç±»æ‰è¡Œï¼Œè€Œè¦æƒ³è®©å®ƒæ­£å¸¸å·¥ä½œï¼Œå…¶å­ç±»å¿…é¡»å®žçŽ°Cloneable æŽ¥å£ã€‚
  */
 
 /**
- * 5.²»ÊµÏÖ Cloneable ½Ó¿Ú£¬ÖØÔØ clone()Ê¹Ö®Å×³öÒì³££¬ÒÔ×èÖ¹¿ËÂ¡²Ù×÷¡£
+ * 5.ä¸å®žçŽ° Cloneable æŽ¥å£ï¼Œé‡è½½ clone()ä½¿ä¹‹æŠ›å‡ºå¼‚å¸¸ï¼Œä»¥é˜»æ­¢å…‹éš†æ“ä½œã€‚
  * <p>
- * Ö»ÓÐ´ËÀàµÄËùÓÐ×ÓÀà£¬¶¼ÔÚ¸÷×ÔµÄclone()ÖÐµ÷ÓÃ super.clone()£¬ÕâÖÖ×èÖ¹¿ËÂ¡µÄ·½·¨²ÅÆð×÷ÓÃ¡£
+ * åªæœ‰æ­¤ç±»çš„æ‰€æœ‰å­ç±»ï¼Œéƒ½åœ¨å„è‡ªçš„clone()ä¸­è°ƒç”¨ super.clone()ï¼Œè¿™ç§é˜»æ­¢å…‹éš†çš„æ–¹æ³•æ‰èµ·ä½œç”¨ã€‚
  * <p>
- * NoMore Àà³¢ÊÔ"¹Ø±Õ"¿ËÂ¡ÄÜÁ¦£¬²ÉÓÃÁË Java Éè¼ÆÕß½¨ÒéµÄ·½Ê½£º
- * ÔÚÀàµÄ clone()ÖÐÅ×³öCloneNotSupportedException¡£ÕâÑùÆä×ÓÀàµÄ clone()µ÷ÓÃ super.clone()Ê±£¬»áÅ×³öÒì³££¬×èÖ¹¿ËÂ¡¡£
+ * NoMore ç±»å°è¯•"å…³é—­"å…‹éš†èƒ½åŠ›ï¼Œé‡‡ç”¨äº† Java è®¾è®¡è€…å»ºè®®çš„æ–¹å¼ï¼š
+ * åœ¨ç±»çš„ clone()ä¸­æŠ›å‡ºCloneNotSupportedExceptionã€‚è¿™æ ·å…¶å­ç±»çš„ clone()è°ƒç”¨ super.clone()æ—¶ï¼Œä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œé˜»æ­¢å…‹éš†ã€‚
  */
 class NoMore extends IsCloneable {
 	
@@ -121,7 +121,7 @@ class NoMore extends IsCloneable {
 }
 
 /**
- * TryMore ÀàµÄ clone()µ÷ÓÃ super.clone()Ê±£¬»áÅ×³öÒì³££¬×èÖ¹¿ËÂ¡¡£
+ * TryMore ç±»çš„ clone()è°ƒç”¨ super.clone()æ—¶ï¼Œä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œé˜»æ­¢å…‹éš†ã€‚
  */
 class TryMore extends NoMore {
 	
@@ -131,8 +131,8 @@ class TryMore extends NoMore {
 }
 
 /**
- * BackOn Ê¹ÓÃ¶ÀÁ¢µÄ duplication()¸´ÖÆµ±Ç°¶ÔÏó£¬ÔÚclone()ÖÐËüÈ¡´úÁË super.clone()¡£
- * Õâ²»»áÅ×³öÒì³££¬¶øÇÒÐÂµÄÀàÒ²ÊÇ¿É¿ËÂ¡µÄ¡£Òò´Ë£¬ÎÞ·¨ÒÀÀµÅ×³öÒì³£À´·ÀÖ¹¿ËÂ¡ÄÜÁ¦¡£
+ * BackOn ä½¿ç”¨ç‹¬ç«‹çš„ duplication()å¤åˆ¶å½“å‰å¯¹è±¡ï¼Œåœ¨clone()ä¸­å®ƒå–ä»£äº† super.clone()ã€‚
+ * è¿™ä¸ä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œè€Œä¸”æ–°çš„ç±»ä¹Ÿæ˜¯å¯å…‹éš†çš„ã€‚å› æ­¤ï¼Œæ— æ³•ä¾èµ–æŠ›å‡ºå¼‚å¸¸æ¥é˜²æ­¢å…‹éš†èƒ½åŠ›ã€‚
  */
 class BackOn extends NoMore {
 	
@@ -146,14 +146,14 @@ class BackOn extends NoMore {
 }
 
 /**
- * 6.½«ÄãµÄÀàÉùÃ÷ÎªfinalÒÔ×èÖ¹¿ËÂ¡¡£
+ * 6.å°†ä½ çš„ç±»å£°æ˜Žä¸ºfinalä»¥é˜»æ­¢å…‹éš†ã€‚
  * <p>
- * Èç¹ûËüµÄÈÎºÎ¸¸Àà(×æÏÈÀà)¶¼Ã»ÓÐ¸²¸Çclone()£¬ÄÇÃ´´Ë·½·¨¾ÍÐÐ²»Í¨ÁË¡£
- * Èç¹û¸¸Àà¸²¸ÇÁËclone()£¬ÄÇÃ´ÈÃÄãµÄÀàÔÙ´Î¸²¸Çclone()£¬²¢Å×³öCloneNotSupportedException¡£
- * ½«ÀàÉùÃ÷Îªfinal£¬ÊÇÎ¨Ò»ÓÐ±£Ö¤µÄ·ÀÖ¹¿ËÂ¡µÄ·½·¨¡£
+ * å¦‚æžœå®ƒçš„ä»»ä½•çˆ¶ç±»(ç¥–å…ˆç±»)éƒ½æ²¡æœ‰è¦†ç›–clone()ï¼Œé‚£ä¹ˆæ­¤æ–¹æ³•å°±è¡Œä¸é€šäº†ã€‚
+ * å¦‚æžœçˆ¶ç±»è¦†ç›–äº†clone()ï¼Œé‚£ä¹ˆè®©ä½ çš„ç±»å†æ¬¡è¦†ç›–clone()ï¼Œå¹¶æŠ›å‡ºCloneNotSupportedExceptionã€‚
+ * å°†ç±»å£°æ˜Žä¸ºfinalï¼Œæ˜¯å”¯ä¸€æœ‰ä¿è¯çš„é˜²æ­¢å…‹éš†çš„æ–¹æ³•ã€‚
  * <p>
- * ReallyNoMore Ê¾·¶ÁËÎ¨Ò»²»»áÓÐÎÊÌâµÄ½â¾ö·½°¸¡£ÀàÉùÃ÷Îªfinal£¬¾Í²»¿ÉÒÔ±»¼Ì³ÐÁË¡£
- * ÕâÒâÎ¶×Å£¬Èç¹ûÔÚ final µÄÀàÖÐ£¬clone()·½·¨Å×³öÒì³££¬ÓÉÓÚËü²»»á±»×ÓÀàÐÞ¸Ä£¬ËùÒÔ¿Ï¶¨ÄÜ×èÖ¹¿ËÂ¡¡£
+ * ReallyNoMore ç¤ºèŒƒäº†å”¯ä¸€ä¸ä¼šæœ‰é—®é¢˜çš„è§£å†³æ–¹æ¡ˆã€‚ç±»å£°æ˜Žä¸ºfinalï¼Œå°±ä¸å¯ä»¥è¢«ç»§æ‰¿äº†ã€‚
+ * è¿™æ„å‘³ç€ï¼Œå¦‚æžœåœ¨ final çš„ç±»ä¸­ï¼Œclone()æ–¹æ³•æŠ›å‡ºå¼‚å¸¸ï¼Œç”±äºŽå®ƒä¸ä¼šè¢«å­ç±»ä¿®æ”¹ï¼Œæ‰€ä»¥è‚¯å®šèƒ½é˜»æ­¢å…‹éš†ã€‚
  */
 final class ReallyNoMore extends NoMore {
 }

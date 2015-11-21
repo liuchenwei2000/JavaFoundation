@@ -13,15 +13,15 @@ import java.util.Queue;
 import java.util.Set;
 
 /**
- * ¼¯ºÏÀà¹¤³§Àà
+ * é›†åˆç±»å·¥å‚ç±»
  * <p>
- * Ê¹ÓÃÁËÀàĞÍ²ÎÊıÍÆ¶Ï±ÜÃâÁËÖØ¸´µÄ·ºĞÍ²ÎÊıÁĞ±í£¬ÀàĞÍÍÆ¶ÏÖ»¶Ô¸³Öµ²Ù×÷ÓĞĞ§£¬ÆäËûÊ±ºò²¢²»Æğ×÷ÓÃ¡£
- * Èç¹û½«Ò»¸ö·ºĞÍ·½·¨µ÷ÓÃµÄ½á¹û×÷Îª²ÎÊı´«µİ¸øÁíÒ»¸ö·½·¨±àÒëÆ÷¾Í²»»áÖ´ĞĞÀàĞÍÍÆ¶Ï¡£
- * ÒòÎª±àÒëÆ÷ÈÏÎª£ºµ÷ÓÃ·ºĞÍ·½·¨ºó£¬Æä·µ»ØÖµ±»¸³Öµ¸øÒ»¸öObjectÀàĞÍµÄ±äÁ¿¡£
+ * ä½¿ç”¨äº†ç±»å‹å‚æ•°æ¨æ–­é¿å…äº†é‡å¤çš„æ³›å‹å‚æ•°åˆ—è¡¨ï¼Œç±»å‹æ¨æ–­åªå¯¹èµ‹å€¼æ“ä½œæœ‰æ•ˆï¼Œå…¶ä»–æ—¶å€™å¹¶ä¸èµ·ä½œç”¨ã€‚
+ * å¦‚æœå°†ä¸€ä¸ªæ³›å‹æ–¹æ³•è°ƒç”¨çš„ç»“æœä½œä¸ºå‚æ•°ä¼ é€’ç»™å¦ä¸€ä¸ªæ–¹æ³•ç¼–è¯‘å™¨å°±ä¸ä¼šæ‰§è¡Œç±»å‹æ¨æ–­ã€‚
+ * å› ä¸ºç¼–è¯‘å™¨è®¤ä¸ºï¼šè°ƒç”¨æ³›å‹æ–¹æ³•åï¼Œå…¶è¿”å›å€¼è¢«èµ‹å€¼ç»™ä¸€ä¸ªObjectç±»å‹çš„å˜é‡ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-15
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-15
  */
 public class CollectionFactory {
 	
@@ -30,15 +30,15 @@ public class CollectionFactory {
 	 */
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-		// ¸³ÖµÊ±±àÒëÆ÷»á×Ô¶¯½øĞĞÀàĞÍÍÆ¶Ï£¬ËùÒÔ·µ»ØºÍ±äÁ¿ÀàĞÍÒ»ÑùµÄmap
+		// èµ‹å€¼æ—¶ç¼–è¯‘å™¨ä¼šè‡ªåŠ¨è¿›è¡Œç±»å‹æ¨æ–­ï¼Œæ‰€ä»¥è¿”å›å’Œå˜é‡ç±»å‹ä¸€æ ·çš„map
 		Map<String, String> map = CollectionFactory.map();
-		// ´«Í³·½Ê½´´½¨Ò»¸öMap
+		// ä¼ ç»Ÿæ–¹å¼åˆ›å»ºä¸€ä¸ªMap
 		map = new HashMap<String, String>();
 		List<String> list = CollectionFactory.list();
 		list = new ArrayList<String>();
 		Set<String> set = CollectionFactory.set();
 		Queue<String> queue = CollectionFactory.queue();
-		// ÒÔÏÂµÄ´úÂë±àÒëÆ÷»á±¨´í£ºÒòÎªµ÷ÓÃ·ºĞÍ·½·¨Ö®ºó·µ»ØÖµ±»¸³¸øObjectÀàĞÍµÄ±äÁ¿
+		// ä»¥ä¸‹çš„ä»£ç ç¼–è¯‘å™¨ä¼šæŠ¥é”™ï¼šå› ä¸ºè°ƒç”¨æ³›å‹æ–¹æ³•ä¹‹åè¿”å›å€¼è¢«èµ‹ç»™Objectç±»å‹çš„å˜é‡
 //		method(CollectionFactory.map());
 	}
 	
@@ -48,28 +48,28 @@ public class CollectionFactory {
 	}
 	
 	/**
-	 * ·µ»ØÒ»¸öMap
+	 * è¿”å›ä¸€ä¸ªMap
 	 */
 	public static <K, V> Map<K, V> map() {
 		return new HashMap<K, V>();
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öList
+	 * è¿”å›ä¸€ä¸ªList
 	 */
 	public static <T> List<T> list() {
 		return new ArrayList<T>();
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öSet
+	 * è¿”å›ä¸€ä¸ªSet
 	 */
 	public static <T> Set<T> set() {
 		return new HashSet<T>();
 	}
 
 	/**
-	 * ·µ»ØÒ»¸öQueue
+	 * è¿”å›ä¸€ä¸ªQueue
 	 */
 	public static <T> Queue<T> queue() {
 		return new LinkedList<T>();

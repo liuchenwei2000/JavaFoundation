@@ -6,27 +6,27 @@ package io.file;
 import java.io.File;
 
 /**
- * ÎÄ¼şĞÅÏ¢¹¤¾ßÀà
+ * æ–‡ä»¶ä¿¡æ¯å·¥å…·ç±»
  * <p>
- * ÑİÊ¾FileÀàµÄ»ñÈ¡ÎÄ¼şĞÅÏ¢µÄ·½·¨¡£
+ * æ¼”ç¤ºFileç±»çš„è·å–æ–‡ä»¶ä¿¡æ¯çš„æ–¹æ³•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2008-2-1
+ * åˆ›å»ºæ—¥æœŸï¼š2008-2-1
  */
 public class FileInfoUtil {
 
 	/**
-	 * ´òÓ¡ÎÄ¼şµÄĞÅÏ¢(ÈçÂ·¾¶¡¢Ãû³ÆµÈµÈ)
+	 * æ‰“å°æ–‡ä»¶çš„ä¿¡æ¯(å¦‚è·¯å¾„ã€åç§°ç­‰ç­‰)
 	 */
 	public static void printFileInfo(File file) {
 		if (file == null || (!file.exists()))
-			throw new RuntimeException("ÎÄ¼ş²»´æÔÚ");
-		// File ¶ÔÏóÊÇÄ¿Â¼
+			throw new RuntimeException("æ–‡ä»¶ä¸å­˜åœ¨");
+		// File å¯¹è±¡æ˜¯ç›®å½•
 		if (file.isDirectory()) {
 			System.out.println("It is a directory.");
 		} 
-		// File ¶ÔÏóÊÇ±ê×¼ÎÄ¼ş
+		// File å¯¹è±¡æ˜¯æ ‡å‡†æ–‡ä»¶
 		else if (file.isFile()) {
 			System.out.println("It is a file.");
 		}
@@ -34,33 +34,33 @@ public class FileInfoUtil {
 	}
 
 	/**
-	 * ·µ»ØÎÄ¼şµÄĞÅÏ¢(ÈçÂ·¾¶¡¢Ãû³ÆµÈµÈ)
+	 * è¿”å›æ–‡ä»¶çš„ä¿¡æ¯(å¦‚è·¯å¾„ã€åç§°ç­‰ç­‰)
 	 */
 	private static String getFileInfo(File file) {
 		StringBuilder info = new StringBuilder();
-		info.append("Absolute path£º");
-		// ·µ»Ø³éÏóÂ·¾¶ÃûµÄ¾ø¶ÔÂ·¾¶Ãû×Ö·û´®
+		info.append("Absolute pathï¼š");
+		// è¿”å›æŠ½è±¡è·¯å¾„åçš„ç»å¯¹è·¯å¾„åå­—ç¬¦ä¸²
 		info.append(file.getAbsolutePath());
-		info.append("\n Can read£º");
-		// Ó¦ÓÃ³ÌĞòÊÇ·ñ¿ÉÒÔ¶ÁÈ¡´Ë³éÏóÂ·¾¶Ãû±íÊ¾µÄÎÄ¼ş
+		info.append("\n Can readï¼š");
+		// åº”ç”¨ç¨‹åºæ˜¯å¦å¯ä»¥è¯»å–æ­¤æŠ½è±¡è·¯å¾„åè¡¨ç¤ºçš„æ–‡ä»¶
 		info.append(file.canRead());
-		info.append("\n Can write£º");
-		// Ó¦ÓÃ³ÌĞòÊÇ·ñ¿ÉÒÔĞŞ¸Ä´Ë³éÏóÂ·¾¶Ãû±íÊ¾µÄÎÄ¼ş
+		info.append("\n Can writeï¼š");
+		// åº”ç”¨ç¨‹åºæ˜¯å¦å¯ä»¥ä¿®æ”¹æ­¤æŠ½è±¡è·¯å¾„åè¡¨ç¤ºçš„æ–‡ä»¶
 		info.append(file.canWrite());
-		info.append("\n getName£º");
-		// ·µ»ØÓÉ´Ë³éÏóÂ·¾¶Ãû±íÊ¾µÄÎÄ¼ş»òÄ¿Â¼µÄÃû³Æ
+		info.append("\n getNameï¼š");
+		// è¿”å›ç”±æ­¤æŠ½è±¡è·¯å¾„åè¡¨ç¤ºçš„æ–‡ä»¶æˆ–ç›®å½•çš„åç§°
 		info.append(file.getName());
-		info.append("\n getPath£º");
-		// ½«´Ë³éÏóÂ·¾¶Ãû×ª»»ÎªÒ»¸öÂ·¾¶Ãû×Ö·û´®
+		info.append("\n getPathï¼š");
+		// å°†æ­¤æŠ½è±¡è·¯å¾„åè½¬æ¢ä¸ºä¸€ä¸ªè·¯å¾„åå­—ç¬¦ä¸²
 		info.append(file.getPath());
-		info.append("\n getParent£º");
-		// ·µ»Ø´Ë³éÏóÂ·¾¶ÃûµÄ¸¸Â·¾¶ÃûµÄÂ·¾¶Ãû×Ö·û´®
+		info.append("\n getParentï¼š");
+		// è¿”å›æ­¤æŠ½è±¡è·¯å¾„åçš„çˆ¶è·¯å¾„åçš„è·¯å¾„åå­—ç¬¦ä¸²
 		info.append(file.getParent());
-		info.append("\n length£º£º");
-		// ·µ»ØÓÉ´Ë³éÏóÂ·¾¶Ãû±íÊ¾µÄÎÄ¼şµÄ´óĞ¡(µ¥Î» ×Ö½Ú)£¬Èç¹û´ËÂ·¾¶Ãû±íÊ¾Ò»¸öÄ¿Â¼£¬Ôò·µ»ØÖµÊÇ²»È·¶¨µÄ¡£
+		info.append("\n lengthï¼šï¼š");
+		// è¿”å›ç”±æ­¤æŠ½è±¡è·¯å¾„åè¡¨ç¤ºçš„æ–‡ä»¶çš„å¤§å°(å•ä½ å­—èŠ‚)ï¼Œå¦‚æœæ­¤è·¯å¾„åè¡¨ç¤ºä¸€ä¸ªç›®å½•ï¼Œåˆ™è¿”å›å€¼æ˜¯ä¸ç¡®å®šçš„ã€‚
 		info.append(file.length());
-		info.append("\n lastModified£º");
-		// ·µ»Ø´Ë³éÏóÂ·¾¶Ãû±íÊ¾µÄÎÄ¼ş×îºóÒ»´Î±»ĞŞ¸ÄµÄÊ±¼ä
+		info.append("\n lastModifiedï¼š");
+		// è¿”å›æ­¤æŠ½è±¡è·¯å¾„åè¡¨ç¤ºçš„æ–‡ä»¶æœ€åä¸€æ¬¡è¢«ä¿®æ”¹çš„æ—¶é—´
 		info.append(file.lastModified());
 		return info.toString();
 	}

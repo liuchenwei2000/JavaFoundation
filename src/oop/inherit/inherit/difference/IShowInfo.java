@@ -4,16 +4,16 @@
 package inherit.difference;
 
 /**
- * Êä³öĞÅÏ¢½Ó¿Ú
+ * è¾“å‡ºä¿¡æ¯æ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public interface IShowInfo {
 	
 	/**
-	 * Êä³öĞÅÏ¢
+	 * è¾“å‡ºä¿¡æ¯
 	 */
 	public void showInfo();
 }

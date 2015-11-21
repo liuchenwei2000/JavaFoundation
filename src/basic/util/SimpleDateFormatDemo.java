@@ -7,13 +7,13 @@ import java.text.*;
 import java.util.*;
 
 /**
- * SimpleDateFormatÀàµÄ»ù±¾·½·¨
+ * SimpleDateFormatç±»çš„åŸºæœ¬æ–¹æ³•
  * <p>
- * ¿ÉÒÔÑ¡ÔñÈÎºÎÓÃ»§¶¨ÒåµÄÈÕÆÚ-Ê±¼ä¸ñÊ½µÄÄ£Ê½£¬¸¸ÀàÊÇDateFormat¡£
+ * å¯ä»¥é€‰æ‹©ä»»ä½•ç”¨æˆ·å®šä¹‰çš„æ—¥æœŸ-æ—¶é—´æ ¼å¼çš„æ¨¡å¼ï¼Œçˆ¶ç±»æ˜¯DateFormatã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class SimpleDateFormatDemo {
 	
@@ -23,13 +23,13 @@ public class SimpleDateFormatDemo {
 	public static void main(String[] args) {
 		Date date = new Date();
 		SimpleDateFormat sdf;
-		sdf = new SimpleDateFormat("hh:mm:ss");// ×Ô¶¨ÒåÏÔÊ¾Ê±¼äÄ£Ê½
+		sdf = new SimpleDateFormat("hh:mm:ss");// è‡ªå®šä¹‰æ˜¾ç¤ºæ—¶é—´æ¨¡å¼
 		System.out.println(sdf.format(date));
-		sdf = new SimpleDateFormat("dd MM yyyy hh:mm:ss zzz");// ×Ô¶¨ÒåÏÔÊ¾Ä£Ê½
+		sdf = new SimpleDateFormat("dd MM yyyy hh:mm:ss zzz");// è‡ªå®šä¹‰æ˜¾ç¤ºæ¨¡å¼
 		System.out.println(sdf.format(date));
-		sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSSS");// ×Ô¶¨ÒåÏÔÊ¾Ä£Ê½
+		sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSSS");// è‡ªå®šä¹‰æ˜¾ç¤ºæ¨¡å¼
 		System.out.println(sdf.format(date));
-		sdf = new SimpleDateFormat("E MM dd yyyy");// ×Ô¶¨ÒåÏÔÊ¾Ä£Ê½
+		sdf = new SimpleDateFormat("E MM dd yyyy");// è‡ªå®šä¹‰æ˜¾ç¤ºæ¨¡å¼
 		System.out.println(sdf.format(date));
 	}
 }

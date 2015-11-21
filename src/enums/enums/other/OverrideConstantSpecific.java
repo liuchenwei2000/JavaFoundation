@@ -4,17 +4,17 @@
 package enums.other;
 
 /**
- * ¸²¸Ç³£Á¿·½·¨
+ * è¦†ç›–å¸¸é‡æ–¹æ³•
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-7
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-7
  */
 public enum OverrideConstantSpecific {
 
 	YES {
 		/** 
-		 * ¸²¸ÇÁËenum±¾ÉíµÄ¸Ã·½·¨
+		 * è¦†ç›–äº†enumæœ¬èº«çš„è¯¥æ–¹æ³•
 		 *
 		 * @see enums.other.OverrideConstantSpecific#say()
 		 */

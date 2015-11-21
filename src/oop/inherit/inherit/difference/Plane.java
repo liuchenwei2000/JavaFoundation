@@ -4,16 +4,16 @@
 package inherit.difference;
 
 /**
- * ·É»úÀà
+ * é£æœºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Plane extends Vehicle implements IShowInfo {
 	
-	private String id;// ±àºÅ
-	private int capacity;// ÔØÈËÁ¿
+	private String id;// ç¼–å·
+	private int capacity;// è½½äººé‡
 
 	public Plane() {
 		this.name = "";

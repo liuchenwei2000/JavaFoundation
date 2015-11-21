@@ -20,13 +20,13 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 /**
- * 13£¬JTableµÄÅÅĞòºÍ¹ıÂË¹¦ÄÜÊ¾Àı
+ * 13ï¼ŒJTableçš„æ’åºå’Œè¿‡æ»¤åŠŸèƒ½ç¤ºä¾‹
  * <p>
- * Ô­À´µÄJTable»ù±¾ÉÏÊÇÖ»ÄÜÏÔÊ¾Êı¾İ£¬ÔÚJDK6ĞÂÔöÁË¶ÔJTableµÄÅÅĞòºÍ¹ıÂË¹¦ÄÜ¡£
+ * åŸæ¥çš„JTableåŸºæœ¬ä¸Šæ˜¯åªèƒ½æ˜¾ç¤ºæ•°æ®ï¼Œåœ¨JDK6æ–°å¢äº†å¯¹JTableçš„æ’åºå’Œè¿‡æ»¤åŠŸèƒ½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-3
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-3
  */
 public class SortAndFilterJTable {
 
@@ -45,9 +45,9 @@ public class SortAndFilterJTable {
 	public static void main(String[] args) {
 		DefaultTableModel tableModel = new DefaultTableModel(data, titles);
 		JTable table = new JTable(tableModel);
-		// RowSorter µÄÒ»¸öÊµÏÖ£¬ËüÊ¹ÓÃ TableModel Ìá¹©ÅÅĞòºÍ¹ıÂË²Ù×÷¡£
+		// RowSorter çš„ä¸€ä¸ªå®ç°ï¼Œå®ƒä½¿ç”¨ TableModel æä¾›æ’åºå’Œè¿‡æ»¤æ“ä½œã€‚
 		final TableRowSorter<DefaultTableModel> tableRowSorter = new TableRowSorter<DefaultTableModel>(tableModel);
-		table.setRowSorter(tableRowSorter); // ÎªJTableÉèÖÃÅÅĞòÆ÷
+		table.setRowSorter(tableRowSorter); // ä¸ºJTableè®¾ç½®æ’åºå™¨
 
 		JScrollPane srollPane = new JScrollPane();
 		srollPane.setViewportView(table);
@@ -60,7 +60,7 @@ public class SortAndFilterJTable {
 				if (textField.getText().length() == 0) {
 					tableRowSorter.setRowFilter(null);
 				} else {
-					// ÎªJTableÉèÖÃ»ùÓÚÕıÔò±í´ïÊ½µÄ¹ıÂËÌõ¼ş
+					// ä¸ºJTableè®¾ç½®åŸºäºæ­£åˆ™è¡¨è¾¾å¼çš„è¿‡æ»¤æ¡ä»¶
 					tableRowSorter.setRowFilter(RowFilter.regexFilter(textField.getText()));
 				}
 			}

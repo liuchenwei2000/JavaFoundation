@@ -13,50 +13,50 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * �ˣ�JavaBean
+ * 人，JavaBean
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2014-6-27
+ * 创建日期：2014-6-27
  */
 /*
  * @XmlRootElement 
  * 
- * ���ڱ�ע���ö�����ͣ�������ע������ӳ���� schema �л���һ��ȫ��Ԫ�ص���ʽ���֡�
- * ����ͨ�� @XmlRootElement ע��� name ����������ӳ��� schema ȫ��Ԫ�ص����ƣ�
- * һ����˵�� @XmlRootElement ��ע��������Ӧ�� XML �ĵ��л�����������ڵ���ʽ���֡�
+ * 用于标注类或枚举类型，用它标注的类在映射后的 schema 中会以一个全局元素的形式出现。
+ * 可以通过 @XmlRootElement 注解的 name 属性来定制映射的 schema 全局元素的名称，
+ * 一般来说以 @XmlRootElement 标注的类在相应的 XML 文档中会以最外层或根节点形式出现。
  */
-@XmlRootElement // ��ʾPerson��һ����Ԫ��
-@XmlAccessorType(XmlAccessType.FIELD) // ����Ĭ��������Ƿ�ֻ�ֶν���ϵ�л� 
+@XmlRootElement // 表示Person是一个根元素
+@XmlAccessorType(XmlAccessType.FIELD) // 控制默认情况下是否只字段进行系列化 
 public class Person {
 
 	/*
 	 * @XmlAttribute 
 	 * 
-	 * ���ڱ�ע Javabean ���ԣ�������ע��������ӳ���� schema ����Ԫ��������ʽ(<person name="tom" />)���֡�
-	 * ����ͨ�� @XmlAttribute ע��� name ����������ӳ�������ƣ��� required ������ָ���Ƿ�ӳ��������Ϊ������ֵġ�
+	 * 用于标注 Javabean 属性，用它标注的属性在映射后的 schema 中以元素属性形式(<person name="tom" />)表现。
+	 * 可以通过 @XmlAttribute 注解的 name 属性来定制映射后的名称，用 required 属性来指定是否映射后的属性为必须出现的。
 	 */
-	@XmlAttribute // name����ΪPerson�ĵ�һ������
+	@XmlAttribute // name将作为Person的的一个属性
 	private String name;
 	
 	/*
 	 * @XmlElement 
 	 * 
-	 * ���ڱ�ע Javabean �����ԣ�������ע��������ӳ���� schema ����Ԫ����ʽ(<person><sex>MALE</sex></person>)���֡�
-	 * ����ͨ�� @XmlElement ע��� name ���Զ���ӳ���� XML Ԫ�ص����ƣ��� required ������ָ����Ԫ���Ƿ������֣�
-	 * �� nullable ������ָ����Ԫ���Ƿ�������ֵ��
+	 * 用于标注 Javabean 的属性，用它标注的属性在映射后的 schema 中以元素形式(<person><sex>MALE</sex></person>)出现。
+	 * 可以通过 @XmlElement 注解的 name 属性定制映射后的 XML 元素的名称，用 required 属性来指定该元素是否必须出现，
+	 * 用 nullable 属性来指明该元素是否允许空值。
 	 */
-	@XmlElement // sex����ΪPerson�ĵ�һ��Ԫ��
+	@XmlElement // sex将作为Person的的一个元素
 	private Sex sex;
 	
-	@XmlAttribute // age����ΪPerson�ĵ�һ������
+	@XmlAttribute // age将作为Person的的一个属性
 	private int age;
 	
-	@XmlElement // address����ΪPerson�ĵ�һ��Ԫ��
+	@XmlElement // address将作为Person的的一个元素
 	private Address address;
 	
 	/*
-	 * ��Ԫ����Ҫ��������һ����װ���ϵİ�װ�� XML Ԫ�أ������Ա�����һ���������ԡ�
+	 * 此元素主要用于生成一个包装集合的包装器 XML 元素，该属性必须是一个集合属性。
 	 */
 	@XmlElementWrapper(name = "books")
 	@XmlElement(name = "book")

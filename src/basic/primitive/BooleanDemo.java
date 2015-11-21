@@ -7,16 +7,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * boolean°ü×°ÀàµÄÑÝÊ¾
+ * booleanåŒ…è£…ç±»çš„æ¼”ç¤º
  * <p>
- * BooleanÀàÖÐÃ»ÓÐÌ«¶àÊµÓÃµÄ·½·¨£¬µ«ÊÇÓÃÁ½¸ö³£Á¿»á¾­³£±»ÓÃµ½£º
- * Boolean.TRUE ºÍ Boolean.FALSE¡£
+ * Booleanç±»ä¸­æ²¡æœ‰å¤ªå¤šå®žç”¨çš„æ–¹æ³•ï¼Œä½†æ˜¯ç”¨ä¸¤ä¸ªå¸¸é‡ä¼šç»å¸¸è¢«ç”¨åˆ°ï¼š
+ * Boolean.TRUE å’Œ Boolean.FALSEã€‚
  * 
- * µ±ÐèÒª´´½¨Boolean¶ÔÏóÊ±Ê¹ÓÃÕâÁ½¸ö³£Á¿»áÌá¸ßÐ§ÂÊ¡£
+ * å½“éœ€è¦åˆ›å»ºBooleanå¯¹è±¡æ—¶ä½¿ç”¨è¿™ä¸¤ä¸ªå¸¸é‡ä¼šæé«˜æ•ˆçŽ‡ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-13
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-13
  */
 public class BooleanDemo {
 

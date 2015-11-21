@@ -4,11 +4,11 @@
 package polymorphism;
 
 /**
- * ¾²Ì¬·½·¨ÊÇÓëÀà¶ø²»ÊÇµ¥¸ö¶ÔÏóÏà¹ØÁªµÄ£¬ËùÒÔ¾²Ì¬·½·¨µÄÐÐÎª²»¾ßÓÐ¶àÌ¬ÐÔ¡£
+ * é™æ€æ–¹æ³•æ˜¯ä¸Žç±»è€Œä¸æ˜¯å•ä¸ªå¯¹è±¡ç›¸å…³è”çš„ï¼Œæ‰€ä»¥é™æ€æ–¹æ³•çš„è¡Œä¸ºä¸å…·æœ‰å¤šæ€æ€§ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2008-4-8
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-8
  */
 public class StaticPolymorphism {
 

@@ -10,13 +10,13 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 /**
- * Externalizable¸ß¼¶ÑİÊ¾Àà
+ * Externalizableé«˜çº§æ¼”ç¤ºç±»
  * <p>
- * Externalizable¶ÔÏóµÄÈ±Ê¡ĞĞÎª²»»áĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯ÈÎºÎ³ÉÔ±ĞÅÏ¢¡£
+ * Externalizableå¯¹è±¡çš„ç¼ºçœè¡Œä¸ºä¸ä¼šåºåˆ—åŒ–å’Œååºåˆ—åŒ–ä»»ä½•æˆå‘˜ä¿¡æ¯ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class AdvExternalizeDemo {
 
@@ -34,13 +34,13 @@ public class AdvExternalizeDemo {
 		ObjectInputStream in = null;
 		
 		try {
-			/** ĞòÁĞ»¯¶ÔÏóObjectC */
+			/** åºåˆ—åŒ–å¯¹è±¡ObjectC */
 			System.out.println("\nSaving object:");
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
 			out.writeObject(oc);
 			out.flush();
 			
-			/** ·´ĞòÁĞ»¯¶ÔÏóObjectC */
+			/** ååºåˆ—åŒ–å¯¹è±¡ObjectC */
 			System.out.println("\nRecovering object:");
 			in = new ObjectInputStream(new FileInputStream(fileName));
 			oc = (ObjectC) in.readObject();
@@ -63,22 +63,22 @@ public class AdvExternalizeDemo {
 }
 
 /**
- * ±¾ÀàÖĞÓĞÁ½¸ö³ÉÔ± s ºÍ i
+ * æœ¬ç±»ä¸­æœ‰ä¸¤ä¸ªæˆå‘˜ s å’Œ i
  * <p>
- * ³ÉÔ± s ºÍ i Ö»ÔÚµÚ¶ş¸ö¹¹ÔìÆ÷ÖĞ±»³õÊ¼»¯£¬¶ø²»ÊÇÔÚÈ±Ê¡µÄ¹¹ÔìÆ÷ÖĞ±»³õÊ¼»¯¡£
- * ÕâÒâÎ¶×Å¼ÙÈç²»ÔÚreadExternal()ÖĞ³õÊ¼»¯ s ºÍ i£¬s ¾Í»áÎª null£¬¶ø i ¾Í»áÎªÁã¡£
- * ÒòÎªÔÚ´´½¨¶ÔÏóµÄµÚÒ»²½ÖĞ½«¶ÔÏóµÄ´æ´¢¿Õ¼äÇå³ıÎª0¡£
+ * æˆå‘˜ s å’Œ i åªåœ¨ç¬¬äºŒä¸ªæ„é€ å™¨ä¸­è¢«åˆå§‹åŒ–ï¼Œè€Œä¸æ˜¯åœ¨ç¼ºçœçš„æ„é€ å™¨ä¸­è¢«åˆå§‹åŒ–ã€‚
+ * è¿™æ„å‘³ç€å‡å¦‚ä¸åœ¨readExternal()ä¸­åˆå§‹åŒ– s å’Œ iï¼Œs å°±ä¼šä¸º nullï¼Œè€Œ i å°±ä¼šä¸ºé›¶ã€‚
+ * å› ä¸ºåœ¨åˆ›å»ºå¯¹è±¡çš„ç¬¬ä¸€æ­¥ä¸­å°†å¯¹è±¡çš„å­˜å‚¨ç©ºé—´æ¸…é™¤ä¸º0ã€‚
  * <p>
- * Èç¹ûÀà¼Ì³Ğ×ÔÄ³¸öExternalizableÀà£¬Í¨³£ĞèÒªµ÷ÓÃÆä»ùÀàµÄwriteExternal()ºÍreadExternal()À´Îª»ùÀà×Ö¶ÎÌá¹©Ç¡µ±µÄ´æ´¢ºÍ»Ö¸´¹¦ÄÜ¡£
+ * å¦‚æœç±»ç»§æ‰¿è‡ªæŸä¸ªExternalizableç±»ï¼Œé€šå¸¸éœ€è¦è°ƒç”¨å…¶åŸºç±»çš„writeExternal()å’ŒreadExternal()æ¥ä¸ºåŸºç±»å­—æ®µæä¾›æ°å½“çš„å­˜å‚¨å’Œæ¢å¤åŠŸèƒ½ã€‚
  */
 class ObjectC implements Externalizable {
 
-	// ×Ö¶Î¶¼Ã»ÓĞ³õÊ¼»¯
+	// å­—æ®µéƒ½æ²¡æœ‰åˆå§‹åŒ–
 	private String s;
 	private int i;
 
 	/**
-	 * Ä¬ÈÏ¹¹ÔìÆ÷ÖĞÃ»ÓĞ³õÊ¼»¯¸÷¸ö×Ö¶Î
+	 * é»˜è®¤æ„é€ å™¨ä¸­æ²¡æœ‰åˆå§‹åŒ–å„ä¸ªå­—æ®µ
 	 */
 	public ObjectC() {
 		System.out.println("ObjectC Constructor");
@@ -91,8 +91,8 @@ class ObjectC implements Externalizable {
 	}
 
 	/**
-	 * ĞèÒªÔÚwriteExternal()·½·¨ÖĞ½«À´×Ô¶ÔÏóµÄÖØÒªĞÅÏ¢ÊÖ¹¤Ğ´Èë£¬
-	 * Ã»ÓĞÈÎºÎÈ±Ê¡ĞĞÎªÀ´ÎªExternalizable¶ÔÏóĞ´ÈëÈÎºÎ³ÉÔ±ĞÅÏ¢¡£
+	 * éœ€è¦åœ¨writeExternal()æ–¹æ³•ä¸­å°†æ¥è‡ªå¯¹è±¡çš„é‡è¦ä¿¡æ¯æ‰‹å·¥å†™å…¥ï¼Œ
+	 * æ²¡æœ‰ä»»ä½•ç¼ºçœè¡Œä¸ºæ¥ä¸ºExternalizableå¯¹è±¡å†™å…¥ä»»ä½•æˆå‘˜ä¿¡æ¯ã€‚
 	 */
 	public void writeExternal(ObjectOutput out) throws IOException {
 		out.writeObject(this.s);
@@ -101,11 +101,11 @@ class ObjectC implements Externalizable {
 	}
 
 	/**
-	 * ±ØĞëÔÚreadExternal()·½·¨ÖĞÊÖ¹¤»Ö¸´³ÉÔ±ĞÅÏ¢
+	 * å¿…é¡»åœ¨readExternal()æ–¹æ³•ä¸­æ‰‹å·¥æ¢å¤æˆå‘˜ä¿¡æ¯
 	 */
 	public void readExternal(ObjectInput in) throws IOException,
 			ClassNotFoundException {
-		// Èç¹ûÃ»ÓĞÏÂÃæÁ½ĞĞ£¬ÄÇÃ´ s ºÍ i ¶¼»áÊÇÄ¬ÈÏÖµ(null ºÍ 0)
+		// å¦‚æœæ²¡æœ‰ä¸‹é¢ä¸¤è¡Œï¼Œé‚£ä¹ˆ s å’Œ i éƒ½ä¼šæ˜¯é»˜è®¤å€¼(null å’Œ 0)
 		this.s = (String) in.readObject();
 		this.i = in.readInt();
 		System.out.println("ObjectC.readExternal");

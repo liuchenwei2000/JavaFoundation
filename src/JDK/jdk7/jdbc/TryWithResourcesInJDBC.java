@@ -8,14 +8,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 /**
- * JDBC4.1ĞÂÌØĞÔ
+ * JDBC4.1æ–°ç‰¹æ€§
  * <p>
- * Java SE 7ÖĞConnection¡¢ResultSetºÍStatement¶¼ÊµÏÖÁËCloseable½Ó¿Ú£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃ  
- * try-with-resources Óï¾äµ÷ÓÃJDBC resources£¬´Ó¶ø¿ÉÒÔ×Ô¶¯¹Ø±ÕÏà¹Ø×ÊÔ´¡£
+ * Java SE 7ä¸­Connectionã€ResultSetå’ŒStatementéƒ½å®ç°äº†Closeableæ¥å£ï¼Œæ‰€ä»¥å¯ä»¥ä½¿ç”¨  
+ * try-with-resources è¯­å¥è°ƒç”¨JDBC resourcesï¼Œä»è€Œå¯ä»¥è‡ªåŠ¨å…³é—­ç›¸å…³èµ„æºã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ22æ—¥
  */
 public class TryWithResourcesInJDBC {
 
@@ -28,7 +28,7 @@ public class TryWithResourcesInJDBC {
 	}
 
 	/**
-	 * ÔÚJava SE 7Ö®Ç°£¬ÎªÁËÈ·±£×ÊÔ´±»¹Ø±Õ£¬¿ÉÄÜ»á±àĞ´ÈçÏÂ´úÂë£º
+	 * åœ¨Java SE 7ä¹‹å‰ï¼Œä¸ºäº†ç¡®ä¿èµ„æºè¢«å…³é—­ï¼Œå¯èƒ½ä¼šç¼–å†™å¦‚ä¸‹ä»£ç ï¼š
 	 */
 	private static void doBeforeJDK1_7() throws Exception {
 		Connection con = null;
@@ -56,7 +56,7 @@ public class TryWithResourcesInJDBC {
 	}
 	
 	/**
-	 * ÔÚJava SE 7ÖĞ£¬¿ÉÒÔÓÃÏÂÃæµÄ´úÂëÀ´Ìæ»»ÉÏÃæµÄ´úÂëÁË£º
+	 * åœ¨Java SE 7ä¸­ï¼Œå¯ä»¥ç”¨ä¸‹é¢çš„ä»£ç æ¥æ›¿æ¢ä¸Šé¢çš„ä»£ç äº†ï¼š
 	 */
 	private static void doAfterJDK1_7() throws Exception {
 		try (Connection con = getConnection();
@@ -69,6 +69,6 @@ public class TryWithResourcesInJDBC {
 	}
 	
 	private static Connection getConnection() {
-		return null;// Ä£Äâ·µ»ØÊı¾İ¿âÁ¬½Ó
+		return null;// æ¨¡æ‹Ÿè¿”å›æ•°æ®åº“è¿æ¥
 	}
 }

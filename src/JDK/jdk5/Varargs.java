@@ -4,11 +4,11 @@
 package jdk5;
 
 /**
- * ·½·¨µÄ¿É±ä²ÎÊýÁÐÊ¹µÃËü¿ÉÒÔ½ÓÊÜ¿É±äÊýÄ¿µÄ²ÎÊý
+ * æ–¹æ³•çš„å¯å˜å‚æ•°åˆ—ä½¿å¾—å®ƒå¯ä»¥æŽ¥å—å¯å˜æ•°ç›®çš„å‚æ•°
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-9-11
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-11
  */
 public class Varargs {
 
@@ -23,20 +23,20 @@ public class Varargs {
 	}
 	
 	/**
-	 * ¸ñÊ½£ºmethod(type... param)
+	 * æ ¼å¼ï¼šmethod(type... param)
 	 * <p>
-	 * ¿É±ä²ÎÊý±ØÐëÊÇº¯ÊýÉùÃ÷ÖÐµÄ×îºóÒ»¸ö²ÎÊý£¬¸Ã·½·¨¿ÉÒÔ½ÓÊÜÈÎÒâÊýÄ¿(º¬0)µÄtypeÀàÐÍ²ÎÊý£¬²¢ÇÒÒ²¿ÉÒÔ½ÓÊÜtypeÀàÐÍµÄÊý×é×÷Îª²ÎÊý¡£
+	 * å¯å˜å‚æ•°å¿…é¡»æ˜¯å‡½æ•°å£°æ˜Žä¸­çš„æœ€åŽä¸€ä¸ªå‚æ•°ï¼Œè¯¥æ–¹æ³•å¯ä»¥æŽ¥å—ä»»æ„æ•°ç›®(å«0)çš„typeç±»åž‹å‚æ•°ï¼Œå¹¶ä¸”ä¹Ÿå¯ä»¥æŽ¥å—typeç±»åž‹çš„æ•°ç»„ä½œä¸ºå‚æ•°ã€‚
 	 */
 	@SuppressWarnings("unchecked")
 	private static <T> void print(T... objects) {
-		// Êµ¼ÊÉÏÐÎ²Îobjects´ú±íµÄÊÇÒ»¸öÊý×é
+		// å®žé™…ä¸Šå½¢å‚objectsä»£è¡¨çš„æ˜¯ä¸€ä¸ªæ•°ç»„
 		for (int i = 0; i < objects.length; i++) {
 			System.out.print(objects[i] + " ");
 		}
 		System.out.println();
 	}
 	
-	// ÔÚ·½·¨ÖØÔØ¹ý³ÌÖÐ£¬±àÒëÆ÷¶Ô´ý²ÎÊýÁÐµÄT...ºÍT[]ÊÇÒ»ÑùµÄ
+	// åœ¨æ–¹æ³•é‡è½½è¿‡ç¨‹ä¸­ï¼Œç¼–è¯‘å™¨å¯¹å¾…å‚æ•°åˆ—çš„T...å’ŒT[]æ˜¯ä¸€æ ·çš„
 //	private void print(T[] objects) {
 //		// ...
 //	}

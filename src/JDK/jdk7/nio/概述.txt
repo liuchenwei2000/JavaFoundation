@@ -1,15 +1,15 @@
 
-Java7�ж��ļ������ṩ�˴�������API����Щ�µĽӿڿ���ʹ���ǲ����ļ��Լ��ļ��и��ӷ��㡣���Ǵ��λ��java.nio.file���¡� 
+Java7中对文件管理提供了大量的新API，这些新的接口可以使我们操纵文件以及文件夹更加方便。它们大多位于java.nio.file包下。 
 
 java.nio.file.Paths
-���������ڴ���Path����ľ�̬������
+包含了用于创建Path对象的静态方法。
 java.nio.file.Path 
-�����˴������ڲ����ļ�·���ķ�����
+包含了大量用于操纵文件路径的方法。
 java.nio.file.FileSystems 
-���ڷ����ļ�ϵͳ���ࡣ
+用于访问文件系统的类。
 java.nio.file.FileSystem 
-������һ���ļ�ϵͳ������Unix�µĸ�Ŀ¼Ϊ / ����Windows����ΪC�̡�
+代表了一种文件系统，例如Unix下的根目录为 / ，而Windows下则为C盘。
 java.nio.file.FileStore 
-�����������Ĵ洢�豸����Ӳ�̣����ṩ���豸���꾡��Ϣ��
+代表了真正的存储设备（如硬盘），提供了设备的详尽信息。
 java.nio.file.attribute.FileStoreAttributeView 
-�ṩ�˷����ļ�����Ϣ��
+提供了访问文件的信息。

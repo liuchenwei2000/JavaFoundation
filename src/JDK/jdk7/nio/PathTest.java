@@ -15,14 +15,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * PathÊ¾Àı
+ * Pathç¤ºä¾‹
  * <p>
- * Ò»¸öPath£¨Â·¾¶£©¿ÉÒÔÈ·¶¨Ò»¸öÎÄ¼ş»òÕßÎÄ¼ş¼ĞµÄ¾ßÌåÎ»ÖÃ¡£
- * Java7ÖĞÓÃPath¶ÔÏóÀ´ÊµÏÖ¶ÔÎÄ¼ş»òÕßÎÄ¼ş¼ĞµÄ²Ù×÷¡£
+ * ä¸€ä¸ªPathï¼ˆè·¯å¾„ï¼‰å¯ä»¥ç¡®å®šä¸€ä¸ªæ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹çš„å…·ä½“ä½ç½®ã€‚
+ * Java7ä¸­ç”¨Pathå¯¹è±¡æ¥å®ç°å¯¹æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹çš„æ“ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ22æ—¥
  */
 public class PathTest {
 	
@@ -38,9 +38,9 @@ public class PathTest {
 	}
     
     /**
-     * »ñµÃÒ»¸öPath¶ÔÏóµÄ·½·¨ÓĞºÜ¶à£¬Ö÷ÒªÓĞÒÔÏÂÁ½ÖÖ£º 
-     * 1£¬Ê¹ÓÃFileSystem¶ÔÏóµÄgetPath·½·¨¡£
-     * 2£¬Ê¹ÓÃPath¶ÔÏóµÄget·½·¨¡££¨Êµ¼ÊÉÏÆäÄÚ²¿ÊµÏÖÒ²ÊÇÓÃµÄµÚÒ»ÖÖ·½Ê½£©
+     * è·å¾—ä¸€ä¸ªPathå¯¹è±¡çš„æ–¹æ³•æœ‰å¾ˆå¤šï¼Œä¸»è¦æœ‰ä»¥ä¸‹ä¸¤ç§ï¼š 
+     * 1ï¼Œä½¿ç”¨FileSystemå¯¹è±¡çš„getPathæ–¹æ³•ã€‚
+     * 2ï¼Œä½¿ç”¨Pathå¯¹è±¡çš„getæ–¹æ³•ã€‚ï¼ˆå®é™…ä¸Šå…¶å†…éƒ¨å®ç°ä¹Ÿæ˜¯ç”¨çš„ç¬¬ä¸€ç§æ–¹å¼ï¼‰
      */
     private static void testPathAPI_Basic(){
 		Path path = FileSystems.getDefault().getPath(filePath);
@@ -54,14 +54,14 @@ public class PathTest {
 			System.out.printf("getName(%d): %s%n", i, path.getName(i));
 		}
 
-		// Ò»¸öPath¿ÉÒÔÓÉ¶à¸ö×ÓPath×é³É£¬×ÓPath¿ÉÒÔ¿ÉÍ¨ÓÃ¹ısubpath·½·¨À´»ñµÃ¡£
+		// ä¸€ä¸ªPathå¯ä»¥ç”±å¤šä¸ªå­Pathç»„æˆï¼Œå­Pathå¯ä»¥å¯é€šç”¨è¿‡subpathæ–¹æ³•æ¥è·å¾—ã€‚
 		System.out.printf("subpath(0,2): %s%n", path.subpath(0, 2));
 		System.out.printf("getParent: %s%n", path.getParent());
 		System.out.println("path.isAbsolute()=" + path.isAbsolute());
 
 		try {
 			path = Paths.get("C:", "Java", "jdk1.7.0_60", "README.html");
-			// PathÀàµÄtoAbsolutePath·½·¨¿ÉÒÔ½«Ïà¶ÔÂ·¾¶×ª»»Îª¾ø¶ÔÂ·¾¶
+			// Pathç±»çš„toAbsolutePathæ–¹æ³•å¯ä»¥å°†ç›¸å¯¹è·¯å¾„è½¬æ¢ä¸ºç»å¯¹è·¯å¾„
 			System.out.printf("Absolute path: %s%n", path.toAbsolutePath());
 		} catch (InvalidPathException ex) {
 			System.out.printf("Bad path: [%s] at position %s", ex.getInput(), ex.getIndex());
@@ -71,8 +71,8 @@ public class PathTest {
     
     private static void testPathAPI_Adv(){
     	/*
-		 * µ±Â·¾¶ÃèÊö·ûÖĞÓĞ"."»òÕß".."×Ö·ûÊ±£¬¿ÉÒÔÍ¨¹ıµ÷ÓÃPathµÄnormalize·½·¨½«ÕâĞ©ÃèÊö·û×ª»»³ÉÕæÕıµÄÂ·¾¶¡£
-		 * ÔËĞĞÏÂÃæµÄ´úÂë£¬»á·¢ÏÖ"."¶¼±»É¾³ıµôÁË£¬ÒòÎªËü´ú±íµ±Ç°Â·¾¶£»¶ø".."»áÓÃÉÏÒ»²ãÂ·¾¶´úÌæ¡£ 
+		 * å½“è·¯å¾„æè¿°ç¬¦ä¸­æœ‰"."æˆ–è€…".."å­—ç¬¦æ—¶ï¼Œå¯ä»¥é€šè¿‡è°ƒç”¨Pathçš„normalizeæ–¹æ³•å°†è¿™äº›æè¿°ç¬¦è½¬æ¢æˆçœŸæ­£çš„è·¯å¾„ã€‚
+		 * è¿è¡Œä¸‹é¢çš„ä»£ç ï¼Œä¼šå‘ç°"."éƒ½è¢«åˆ é™¤æ‰äº†ï¼Œå› ä¸ºå®ƒä»£è¡¨å½“å‰è·¯å¾„ï¼›è€Œ".."ä¼šç”¨ä¸Šä¸€å±‚è·¯å¾„ä»£æ›¿ã€‚ 
 		 */
     	Path path = Paths.get("C:/Java/test/../jdk1.7.0_60/README.html");
 		System.out.println("Absolute path: " + path.toAbsolutePath());
@@ -88,11 +88,11 @@ public class PathTest {
 		System.out.println("*******************************************");
 		
 		/*
-		 * PathµÄtoRealPath»á·µ»ØÒ»¸öÕæÊµ´ú±íÒ»¸öÎÄ¼şµÄÂ·¾¶£¬Èç¹ûËùÖ¸¶¨µÄÎÄ¼ş²»´æÔÚÔòÅ×³öNoSuchFileExceptionÒì³£¡£
+		 * Pathçš„toRealPathä¼šè¿”å›ä¸€ä¸ªçœŸå®ä»£è¡¨ä¸€ä¸ªæ–‡ä»¶çš„è·¯å¾„ï¼Œå¦‚æœæ‰€æŒ‡å®šçš„æ–‡ä»¶ä¸å­˜åœ¨åˆ™æŠ›å‡ºNoSuchFileExceptionå¼‚å¸¸ã€‚
 		 */
 		try {
 			path = Paths.get("C:/Java/jdk1.7.0_60/shortcut6.lnk");
-			System.out.println("isSymbolicLink()£º" + Files.isSymbolicLink(path));
+			System.out.println("isSymbolicLink()ï¼š" + Files.isSymbolicLink(path));
 			System.out.println("toRealPath (Do not follow links): " + path.toRealPath(LinkOption.NOFOLLOW_LINKS));  
 			System.out.println("toRealPath: " + path.toRealPath());  
 		} catch (IOException e) {
@@ -101,7 +101,7 @@ public class PathTest {
     }
     
 	/**
-	 * FileºÍPathµÄÏà»¥×ª»»
+	 * Fileå’ŒPathçš„ç›¸äº’è½¬æ¢
 	 */
 	private static void testPathAndFile() {
 		try {
@@ -110,7 +110,7 @@ public class PathTest {
 			Path toPath = file.toPath();
 			System.out.println(toPath.equals(fPath));
 		} catch (URISyntaxException e) {
-			System.out.println("Bad URI£º" + e.getInput());
+			System.out.println("Bad URIï¼š" + e.getInput());
 		}
 	}
 }

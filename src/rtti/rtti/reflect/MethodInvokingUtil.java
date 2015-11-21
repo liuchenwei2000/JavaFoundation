@@ -6,26 +6,26 @@ package rtti.reflect;
 import java.lang.reflect.Method;
 
 /**
- * ·½·¨µ÷ÓÃ¹¤¾ß
+ * æ–¹æ³•è°ƒç”¨å·¥å…·
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class MethodInvokingUtil {
 
 	/**
-	 * Í¨¹ı·´Éä»úÖÆµ÷ÓÃÒş²ØµÄ(Èçprivate)·½·¨
+	 * é€šè¿‡åå°„æœºåˆ¶è°ƒç”¨éšè—çš„(å¦‚private)æ–¹æ³•
 	 * 
 	 * @param obj
-	 *            µ÷ÓÃ·½·¨µÄ¶ÔÏó
+	 *            è°ƒç”¨æ–¹æ³•çš„å¯¹è±¡
 	 * @param methodName
-	 *            ·½·¨Ãû
+	 *            æ–¹æ³•å
 	 */
 	public static void callHiddenMethod(Object obj, String methodName)
 			throws Exception {
 		Method method = obj.getClass().getDeclaredMethod(methodName);
-		// Í¨¹ıÕâ¸ö·½·¨ÉõÖÁ¿ÉÒÔµ÷ÓÃË½ÓĞ·½·¨
+		// é€šè¿‡è¿™ä¸ªæ–¹æ³•ç”šè‡³å¯ä»¥è°ƒç”¨ç§æœ‰æ–¹æ³•
 		method.setAccessible(true);
 		method.invoke(obj);
 	}

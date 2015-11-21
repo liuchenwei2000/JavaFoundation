@@ -6,13 +6,13 @@ package io.stream;
 import java.util.Scanner;
 
 /**
- * Scanner ÀàÊ¾Àı
+ * Scanner ç±»ç¤ºä¾‹
  * <p>
- * JavaSE5ĞÂÔöÁË Scanner Àà£¬¿ÉÒÔ´ó´ó¼õÇáÉ¨ÃèÊäÈëµÄ¹¤×÷¸ºµ£¡£
+ * JavaSE5æ–°å¢äº† Scanner ç±»ï¼Œå¯ä»¥å¤§å¤§å‡è½»æ‰«æè¾“å…¥çš„å·¥ä½œè´Ÿæ‹…ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê4ÔÂ6ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´4æœˆ6æ—¥
  */
 public class ScannerTest {
 
@@ -20,13 +20,13 @@ public class ScannerTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Scanner ¹¹ÔìÆ÷¿ÉÒÔ½ÓÊÜÈÎºÎÀàĞÍµÄÊäÈë¶ÔÏó£¬±ÈÈçFile¡¢InputStream¡¢StringµÈ¡£
+		// Scanner æ„é€ å™¨å¯ä»¥æ¥å—ä»»ä½•ç±»å‹çš„è¾“å…¥å¯¹è±¡ï¼Œæ¯”å¦‚Fileã€InputStreamã€Stringç­‰ã€‚
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter your name:");
 		/*
-		 * ËùÓĞµÄÊäÈë¡¢·Ö´ÊÒÔ¼°·­ÒëµÄ²Ù×÷¶¼Òş²ØÔÚ²»Í¬ÀàĞÍµÄnext·½·¨ÖĞ¡£
-		 * ËùÓĞµÄ»ù±¾ÀàĞÍ¶¼ÓĞ¶ÔÓ¦µÄnext·½·¨£¬°üÀ¨BigIntegerºÍBigDecimal¡£
-		 * ËùÓĞµÄnext·½·¨£¬Ö»ÓĞÔÚÕÒµ½Ò»¸öÍêÕûµÄ·Ö´ÊÖ®ºó²Å»á·µ»Ø¡£ 
+		 * æ‰€æœ‰çš„è¾“å…¥ã€åˆ†è¯ä»¥åŠç¿»è¯‘çš„æ“ä½œéƒ½éšè—åœ¨ä¸åŒç±»å‹çš„nextæ–¹æ³•ä¸­ã€‚
+		 * æ‰€æœ‰çš„åŸºæœ¬ç±»å‹éƒ½æœ‰å¯¹åº”çš„nextæ–¹æ³•ï¼ŒåŒ…æ‹¬BigIntegerå’ŒBigDecimalã€‚
+		 * æ‰€æœ‰çš„nextæ–¹æ³•ï¼Œåªæœ‰åœ¨æ‰¾åˆ°ä¸€ä¸ªå®Œæ•´çš„åˆ†è¯ä¹‹åæ‰ä¼šè¿”å›ã€‚ 
 		 */
 		String name = scanner.next();
 		System.out.printf("Hello %s! %n", name);

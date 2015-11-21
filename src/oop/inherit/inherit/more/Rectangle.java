@@ -4,16 +4,16 @@
 package inherit.more;
 
 /**
- * ¾ØÐÎÀà
+ * çŸ©å½¢ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-2
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-2
  */
 public class Rectangle implements IFigure {
 	
-	private double length;// ³¤
-	private double width;// ¿í
+	private double length;// é•¿
+	private double width;// å®½
 
 	public Rectangle(double length, double width) {
 		this.length = length;

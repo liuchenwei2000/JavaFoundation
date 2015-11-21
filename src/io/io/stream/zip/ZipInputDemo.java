@@ -10,15 +10,15 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * ¶ÁÈ¡zipÎÄ¼şÑİÊ¾Àà
+ * è¯»å–zipæ–‡ä»¶æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-20
  */
 public class ZipInputDemo {
 	
-	/** zipÊäÈëÎÄ¼şÂ·¾¶ */
+	/** zipè¾“å…¥æ–‡ä»¶è·¯å¾„ */
 	private static final String ZIP_FILE = "files/io.stream.zip/in.zip";
 
 	/**
@@ -36,7 +36,7 @@ public class ZipInputDemo {
 	}
 	
 	/**
-	 * ¶ÁÈ¡zipÎÄ¼ş²¢·µ»ØÆäÄÚÎÄ¼şÁĞ±í
+	 * è¯»å–zipæ–‡ä»¶å¹¶è¿”å›å…¶å†…æ–‡ä»¶åˆ—è¡¨
 	 */
 	private static List<String> readZipFiles(String zipFilePath) throws IOException{
 		List<String> files = new ArrayList<String>();
@@ -44,19 +44,19 @@ public class ZipInputDemo {
 		ZipInputStream zin = null;
 		try {
 			/*
-			 * Í¨¹ı½«Ò»¸öFileInputStream´«¸øZipInputStream¹¹ÔìÆ÷
-			 * ¿ÉÒÔÓÃZipInputStreamÀà¶ÁÈ¡Ò»¸özipÎÄ¼ş£¬È»ºó¿ÉÒÔ±éÀúÕû¸özipÎÄ¼şÈ¥²é¿´ÆäÖĞµÄÃ¿¸ö¶ÀÁ¢ÌõÄ¿¡£
-			 * getNextEntry·½·¨·µ»ØÒ»¸öÃèÊö¸ÃÌõÄ¿µÄZipEntry¶ÔÏó£¬×îºó±ØĞëµ÷ÓÃcloseEntryÒÔ±ãÓÚ¶ÁÈ¡ÏÂÒ»ÌõÄ¿¡£
+			 * é€šè¿‡å°†ä¸€ä¸ªFileInputStreamä¼ ç»™ZipInputStreamæ„é€ å™¨
+			 * å¯ä»¥ç”¨ZipInputStreamç±»è¯»å–ä¸€ä¸ªzipæ–‡ä»¶ï¼Œç„¶åå¯ä»¥éå†æ•´ä¸ªzipæ–‡ä»¶å»æŸ¥çœ‹å…¶ä¸­çš„æ¯ä¸ªç‹¬ç«‹æ¡ç›®ã€‚
+			 * getNextEntryæ–¹æ³•è¿”å›ä¸€ä¸ªæè¿°è¯¥æ¡ç›®çš„ZipEntryå¯¹è±¡ï¼Œæœ€åå¿…é¡»è°ƒç”¨closeEntryä»¥ä¾¿äºè¯»å–ä¸‹ä¸€æ¡ç›®ã€‚
 			 */
 			zin = new ZipInputStream(new FileInputStream(zipFilePath));
 			ZipEntry entry;
-			// ·µ»ØÏÂÒ»ÌõÄ¿µÄZipEntry¶ÔÏó£¬Èç¹ûÃ»ÓĞÔò·µ»Ønull
+			// è¿”å›ä¸‹ä¸€æ¡ç›®çš„ZipEntryå¯¹è±¡ï¼Œå¦‚æœæ²¡æœ‰åˆ™è¿”å›null
 			while ((entry = zin.getNextEntry()) != null) {
-				// ZipEntry°üº¬ÁËÃèÊözipÌõÄ¿µÄĞÅÏ¢
+				// ZipEntryåŒ…å«äº†æè¿°zipæ¡ç›®çš„ä¿¡æ¯
 				if (!entry.isDirectory()) {
 					files.add(entry.getName());
 				}
-				// ¹Ø±ÕzipÎÄ¼şÖĞµ±Ç°´ò¿ªµÄZipEntry£¬È»ºó¾Í¿ÉÒÔÔÙµ÷ÓÃgetNextEntryÁË
+				// å…³é—­zipæ–‡ä»¶ä¸­å½“å‰æ‰“å¼€çš„ZipEntryï¼Œç„¶åå°±å¯ä»¥å†è°ƒç”¨getNextEntryäº†
 				zin.closeEntry();
 			}
 			return files;
@@ -71,7 +71,7 @@ public class ZipInputDemo {
 	}
 	
 	/**
-	 * ¶ÁÈ¡zipÎÄ¼şÄÚÖ¸¶¨ÎÄ¼şµÄÄÚÈİ
+	 * è¯»å–zipæ–‡ä»¶å†…æŒ‡å®šæ–‡ä»¶çš„å†…å®¹
 	 */
 	private static String readZipFileContent(String zipFilePath, String fileName) throws IOException{
 		StringBuilder content = new StringBuilder();
@@ -81,8 +81,8 @@ public class ZipInputDemo {
 			ZipEntry entry;
 			while ((entry = zin.getNextEntry()) != null) {
 				if (entry.getName().equals(fileName)) {
-					// Òª¶ÁÈ¡zipÌõÄ¿µÄÄÚÈİ£¬ºÜ¿ÉÄÜ²»Ì«Ô¸ÒâÊ¹ÓÃÔ­Ê¼µÄread·½·¨
-					// Í¨³£»áÊ¹ÓÃ¸üÊÊÒËµÄÁ÷¹ıÂËÆ÷µÄ·½·¨£¬±ÈÈç»º³åÁ÷
+					// è¦è¯»å–zipæ¡ç›®çš„å†…å®¹ï¼Œå¾ˆå¯èƒ½ä¸å¤ªæ„¿æ„ä½¿ç”¨åŸå§‹çš„readæ–¹æ³•
+					// é€šå¸¸ä¼šä½¿ç”¨æ›´é€‚å®œçš„æµè¿‡æ»¤å™¨çš„æ–¹æ³•ï¼Œæ¯”å¦‚ç¼“å†²æµ
 					BufferedReader in = new BufferedReader(new InputStreamReader(zin));
 					String s;
 					while ((s = in.readLine()) != null) {

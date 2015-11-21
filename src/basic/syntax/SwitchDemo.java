@@ -4,13 +4,13 @@
 package syntax;
 
 /**
- * switchÓï¾äµÄ¿ØÖÆÁ÷³Ì
+ * switchè¯­å¥çš„æ§åˆ¶æµç¨‹
  * <p>
- * switchºóµÄ²ÎÊıÖ»ÄÜÊÇbyte,short,char,intºÍÏà¹Ø°ü×°Àà(IntegerµÈ)ÒÔ¼°Ã¶¾ÙÀàĞÍ¡£
+ * switchåçš„å‚æ•°åªèƒ½æ˜¯byte,short,char,intå’Œç›¸å…³åŒ…è£…ç±»(Integerç­‰)ä»¥åŠæšä¸¾ç±»å‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-9-10
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-10
  */
 public class SwitchDemo {
 	
@@ -23,8 +23,8 @@ public class SwitchDemo {
 		int numDays = 0;
 
 		switch (month) {
-		// switchÓï¾ä½«´ÓÆ¥ÅäÖµµÄcase±êÇ©¿ªÊ¼Ö´ĞĞÖ±µ½Óöµ½breakÓï¾ä£¬»òÕßÖ´ĞĞµ½switchÓï¾äµÄ½áÊø´¦ÎªÖ¹
-		// Èç¹ûÃ»ÓĞÆ¥ÅäµÄcase±êÇ©£¬¶øÓĞdefault×Ó¾äµÄ»°£¬¾ÍÖ´ĞĞÕâ¸ö×Ó¾ä
+		// switchè¯­å¥å°†ä»åŒ¹é…å€¼çš„caseæ ‡ç­¾å¼€å§‹æ‰§è¡Œç›´åˆ°é‡åˆ°breakè¯­å¥ï¼Œæˆ–è€…æ‰§è¡Œåˆ°switchè¯­å¥çš„ç»“æŸå¤„ä¸ºæ­¢
+		// å¦‚æœæ²¡æœ‰åŒ¹é…çš„caseæ ‡ç­¾ï¼Œè€Œæœ‰defaultå­å¥çš„è¯ï¼Œå°±æ‰§è¡Œè¿™ä¸ªå­å¥
 		case 1:
 		case 3:
 		case 5:
@@ -43,20 +43,20 @@ public class SwitchDemo {
 		case 2:
 			numDays = isLeapYear(year) ? 29 : 28;
 			break;
-		// µ±ËùÓĞµÄcase¶¼²»Æ¥ÅäÊ±Ö´ĞĞdefault
+		// å½“æ‰€æœ‰çš„caseéƒ½ä¸åŒ¹é…æ—¶æ‰§è¡Œdefault
 		default:
 			System.out.println("Invalid month.");
-			// ÏÂÃæµÄbreak¿ÉÒÔÊ¡ÂÔ£¬ÒòÎª³ÌĞòÖ´ĞĞµ½´Ë¾ÍÌø³öswitch¿éÁË
+			// ä¸‹é¢çš„breakå¯ä»¥çœç•¥ï¼Œå› ä¸ºç¨‹åºæ‰§è¡Œåˆ°æ­¤å°±è·³å‡ºswitchå—äº†
 			break;
 		}
 		System.out.println("Number of Days = " + numDays);
 	}
 	
 	/**
-	 * ÅĞ¶Ï²ÎÊıÄê·İÊÇ·ñÊÇÈòÄê
+	 * åˆ¤æ–­å‚æ•°å¹´ä»½æ˜¯å¦æ˜¯é—°å¹´
 	 * 
 	 * @param year
-	 *            Äê·İ
+	 *            å¹´ä»½
 	 */
 	private static boolean isLeapYear(int year) {
 		return ((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0);

@@ -1,20 +1,20 @@
-                                                                                           ¹ý ÂË Á÷ ºÍ »º ³å Á÷
+                                                                                           è¿‡ æ»¤ æµ å’Œ ç¼“ å†² æµ
 
-ÔÚJavaÖÐ£¬Ò»Ð©Á÷¿ÉÒÔ´ÓÎÄ¼þÒÔ¼°ÆäËûµØ·½½ÓÊÕ×Ö½Ú£¬ÁíÒ»Ð©Á÷¿ÉÒÔ½«×Ö½Ú×éºÏ³É¸ü¼ÓÓÐÓÃµÄÊý¾ÝÀàÐÍ¡£
-Java²ÉÓÃ½«Ò»¸öÒÑ¾­´æÔÚµÄÁ÷´«µÝ¸øÁíÒ»¸öÁ÷µÄ¹¹ÔìÆ÷·½·¨£¬½«ÕâÁ½ÖÖÁ÷½áºÏÆðÀ´£¬½áºÏºóµÄÁ÷±»³ÆÎª¹ýÂËÁ÷(filtered stream)¡£
-ÀýÈç£¬ÎªÁËÄÜ¹»´ÓÎÄ¼þÖÐ¶ÁÈ¡ÊýÖµ£¬Ê×ÏÈ´´½¨Ò»¸öFileInputStream£¬È»ºó½«Ëü´«µÝ¸øÒ»¸öDataInputStreamµÄ¹¹ÔìÆ÷£º
+åœ¨Javaä¸­ï¼Œä¸€äº›æµå¯ä»¥ä»Žæ–‡ä»¶ä»¥åŠå…¶ä»–åœ°æ–¹æŽ¥æ”¶å­—èŠ‚ï¼Œå¦ä¸€äº›æµå¯ä»¥å°†å­—èŠ‚ç»„åˆæˆæ›´åŠ æœ‰ç”¨çš„æ•°æ®ç±»åž‹ã€‚
+Javaé‡‡ç”¨å°†ä¸€ä¸ªå·²ç»å­˜åœ¨çš„æµä¼ é€’ç»™å¦ä¸€ä¸ªæµçš„æž„é€ å™¨æ–¹æ³•ï¼Œå°†è¿™ä¸¤ç§æµç»“åˆèµ·æ¥ï¼Œç»“åˆåŽçš„æµè¢«ç§°ä¸ºè¿‡æ»¤æµ(filtered stream)ã€‚
+ä¾‹å¦‚ï¼Œä¸ºäº†èƒ½å¤Ÿä»Žæ–‡ä»¶ä¸­è¯»å–æ•°å€¼ï¼Œé¦–å…ˆåˆ›å»ºä¸€ä¸ªFileInputStreamï¼Œç„¶åŽå°†å®ƒä¼ é€’ç»™ä¸€ä¸ªDataInputStreamçš„æž„é€ å™¨ï¼š
 FileInputStream fin = new FileInputStream("file");
 DataInputStream din = new DataInputStream(fin);
 double d = din.readDouble();
 
-·Ç³£ÖØÒªµÄÒ»µãÊÇ£º
-ÀûÓÃÉÏÃæµÄ´úÂë½¨Á¢µÄÊý¾ÝÊäÈëÁ÷²¢Ã»ÓÐÓëÒ»¸öÐÂµÄ´ÅÅÌÎÄ¼þ¶ÔÓ¦£¬ÐÂ´´½¨µÄÁ÷ÒÀÈ»Í¨¹ý·ÃÎÊÓëÎÄ¼þÊäÈëÁ÷ÏàÁªÏµµÄÎÄ¼þ»ñÈ¡Êý¾Ý£¬µ«ÊÇÏÖÔÚ¿ÉÒÔÊ¹ÓÃÒ»ÖÖ¹¦ÄÜ¸ü¶àµÄ½Ó¿ÚÁË¡£
+éžå¸¸é‡è¦çš„ä¸€ç‚¹æ˜¯ï¼š
+åˆ©ç”¨ä¸Šé¢çš„ä»£ç å»ºç«‹çš„æ•°æ®è¾“å…¥æµå¹¶æ²¡æœ‰ä¸Žä¸€ä¸ªæ–°çš„ç£ç›˜æ–‡ä»¶å¯¹åº”ï¼Œæ–°åˆ›å»ºçš„æµä¾ç„¶é€šè¿‡è®¿é—®ä¸Žæ–‡ä»¶è¾“å…¥æµç›¸è”ç³»çš„æ–‡ä»¶èŽ·å–æ•°æ®ï¼Œä½†æ˜¯çŽ°åœ¨å¯ä»¥ä½¿ç”¨ä¸€ç§åŠŸèƒ½æ›´å¤šçš„æŽ¥å£äº†ã€‚
 
 
-»º³åÁ÷
+ç¼“å†²æµ
 
-»º³åÊäÈëÁ÷´ÓÄÚ´æ»º³åÇø¶ÁÈ¡Êý¾Ý£¬Ö»ÓÐµ±»º³åÎª¿ÕÊ±²Åµ÷ÓÃOS±¾µØµÄÊäÈëÁ÷´ÓÊý¾ÝÔ´¶ÁÈ¡Êý¾Ý¡£
-»º³åÊä³öÁ÷½«Êý¾Ý´ÓÊý¾ÝÔ´Êä³öµ½ÄÚ´æ»º³åÇø£¬Ö»ÓÐµ±»º³åÇøÂúµÄÊ±ºò²Åµ÷ÓÃOS±¾µØµÄÊä³öÁ÷Êä³öµ½Ä¿µÄµØ¡£
-ÒòÎªÃ¿´Îµ÷ÓÃOS±¾µØµÄÊäÈëÊä³öÁ÷´ú¼ÛÊÇ°º¹óµÄ£¬²¢ÇÒÆµ·±µ÷ÓÃ¶Ô³ÌÐò¶øÑÔÊÇµÍÐ§µÄ£¬Òò´Ëµ±Ã¿´ÎÏòÁ÷¶ÁÐ´Ê±£¬
-²»±ØÃ¿´Î¶¼½øÐÐÊµ¼ÊµÄÎïÀí¶ÁÐ´¶¯×÷£¬ËùÒÔÔÚ½øÐÐ¶ÁÐ´Ê±¸ü¾­³£ÓÃµ½»º³åÁ÷¡£¿ÉÒÔÊ¹ÓÃ»º³åÁ÷°ü×°Àà½«·Ç»º³åÁ÷×ª»»³É»º³åÁ÷£¬
-ÆäÖÐBufferedInputStreamºÍBufferedOutputStream¿ÉÒÔ»º³å×Ö½ÚÁ÷£¬BufferedReaderºÍBufferedWriter¿ÉÒÔ»º³å×Ö·ûÁ÷¡£
+ç¼“å†²è¾“å…¥æµä»Žå†…å­˜ç¼“å†²åŒºè¯»å–æ•°æ®ï¼Œåªæœ‰å½“ç¼“å†²ä¸ºç©ºæ—¶æ‰è°ƒç”¨OSæœ¬åœ°çš„è¾“å…¥æµä»Žæ•°æ®æºè¯»å–æ•°æ®ã€‚
+ç¼“å†²è¾“å‡ºæµå°†æ•°æ®ä»Žæ•°æ®æºè¾“å‡ºåˆ°å†…å­˜ç¼“å†²åŒºï¼Œåªæœ‰å½“ç¼“å†²åŒºæ»¡çš„æ—¶å€™æ‰è°ƒç”¨OSæœ¬åœ°çš„è¾“å‡ºæµè¾“å‡ºåˆ°ç›®çš„åœ°ã€‚
+å› ä¸ºæ¯æ¬¡è°ƒç”¨OSæœ¬åœ°çš„è¾“å…¥è¾“å‡ºæµä»£ä»·æ˜¯æ˜‚è´µçš„ï¼Œå¹¶ä¸”é¢‘ç¹è°ƒç”¨å¯¹ç¨‹åºè€Œè¨€æ˜¯ä½Žæ•ˆçš„ï¼Œå› æ­¤å½“æ¯æ¬¡å‘æµè¯»å†™æ—¶ï¼Œ
+ä¸å¿…æ¯æ¬¡éƒ½è¿›è¡Œå®žé™…çš„ç‰©ç†è¯»å†™åŠ¨ä½œï¼Œæ‰€ä»¥åœ¨è¿›è¡Œè¯»å†™æ—¶æ›´ç»å¸¸ç”¨åˆ°ç¼“å†²æµã€‚å¯ä»¥ä½¿ç”¨ç¼“å†²æµåŒ…è£…ç±»å°†éžç¼“å†²æµè½¬æ¢æˆç¼“å†²æµï¼Œ
+å…¶ä¸­BufferedInputStreamå’ŒBufferedOutputStreamå¯ä»¥ç¼“å†²å­—èŠ‚æµï¼ŒBufferedReaderå’ŒBufferedWriterå¯ä»¥ç¼“å†²å­—ç¬¦æµã€‚

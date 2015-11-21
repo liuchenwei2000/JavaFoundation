@@ -7,13 +7,13 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * ±ê×¼ÑôÀúÀàµÄ»ù±¾·½·¨
+ * æ ‡å‡†é˜³å†ç±»çš„åŸºæœ¬æ–¹æ³•
  * <p>
- * GregorianCalendarÊÇCalendarµÄÒ»¸ö¾ßÌå×ÓÀà£¬Ìá¹©ÁËÊÀ½çÉÏ´ó¶àÊı¹ú¼ÒÊ¹ÓÃµÄ±ê×¼ÈÕÀúÏµÍ³¡£
+ * GregorianCalendaræ˜¯Calendarçš„ä¸€ä¸ªå…·ä½“å­ç±»ï¼Œæä¾›äº†ä¸–ç•Œä¸Šå¤§å¤šæ•°å›½å®¶ä½¿ç”¨çš„æ ‡å‡†æ—¥å†ç³»ç»Ÿã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class GregorianCalendarDemo {
 	
@@ -25,19 +25,19 @@ public class GregorianCalendarDemo {
 				"Aug", "Sep", "Oct", "Nov", "Dec" };
 		GregorianCalendar gcalendar = new GregorianCalendar();
 		int year = gcalendar.get(Calendar.YEAR);
-		// Êä³öÈÕÆÚ
+		// è¾“å‡ºæ—¥æœŸ
 		System.out.print("Date : ");
 		System.out.print(months[gcalendar.get(Calendar.MONTH)]);
 		System.out.print("  " + gcalendar.get(Calendar.DATE));
 		System.out.print("  " + year);
 		System.out.println();
-		// Êä³öÊ±¼ä
+		// è¾“å‡ºæ—¶é—´
 		System.out.print("Time : ");
 		System.out.print(gcalendar.get(Calendar.HOUR) + ":");
 		System.out.print(gcalendar.get(Calendar.MINUTE) + ":");
 		System.out.print(gcalendar.get(Calendar.SECOND));
 		System.out.println();
-		// ÅĞ¶ÏÊÇ·ñÊÇÈòÄê
+		// åˆ¤æ–­æ˜¯å¦æ˜¯é—°å¹´
 		if (gcalendar.isLeapYear(year))
 			System.out.println(year + " is a leap year.");
 		else

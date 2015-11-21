@@ -13,22 +13,22 @@ import generic.app.coffee.Latte;
 import generic.app.coffee.Mocha;
 
 /**
- * Coffee¶ÔÏóÉú³ÉÆ÷
+ * Coffeeå¯¹è±¡ç”Ÿæˆå™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class CoffeeGenerator implements Generator<Coffee> {
 	
-	// ËùÓĞCoffeeÀàµÄ×ÓÀà×ÖÃæ³£Á¿Êı×é
+	// æ‰€æœ‰Coffeeç±»çš„å­ç±»å­—é¢å¸¸é‡æ•°ç»„
 	private Class<?>[] types = { Latte.class, Mocha.class, Cappuccino.class,
 			Americano.class, Breve.class };
 	
 	private static Random random = new Random();
 	
 	/**
-	 * Éú³ÉÒ»¸öCoffee¶ÔÏó
+	 * ç”Ÿæˆä¸€ä¸ªCoffeeå¯¹è±¡
 	 *
 	 * @see generic.app.Generator#generate()
 	 */

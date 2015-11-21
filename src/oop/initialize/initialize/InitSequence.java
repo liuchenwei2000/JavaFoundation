@@ -4,17 +4,17 @@
 package initialize;
 
 /**
- * �̳��еĳ�ʼ��˳��
+ * 继承中的初始化顺序
  * <p>
- * <li>1���Զ����ø���Ĺ��췽��</br>
- * (����super�����superָ���Ĺ��췽������û�����Զ����ø����޲ι��캯��)
- * <li>2����ʼ��ÿһ���ֶ�(û����ʽ��ʼ���ľ���Ĭ��ֵ��ʼ��)�ͳ�ʼ������</br>
- * (��ֵ�͵�Ĭ��ֵΪ0��boolean��Ĭ��ֵΪfalse��char��Ĭ��ֵΪ'\u0000'��ObjectĬ��ֵΪnull)
- * <li>3����˳��ִ�й��췽�����������
+ * <li>1，自动调用父类的构造方法</br>
+ * (若有super则调用super指明的构造方法，若没有则自动调用父类无参构造函数)
+ * <li>2，初始化每一个字段(没有显式初始化的就用默认值初始化)和初始化语句块</br>
+ * (数值型的默认值为0，boolean型默认值为false，char型默认值为'\u0000'，Object默认值为null)
+ * <li>3，按顺序执行构造方法的其他语句
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2007-8-1
+ * 创建日期：2007-8-1
  */
 public class InitSequence {
 	
@@ -24,7 +24,7 @@ public class InitSequence {
 	public static void main(String[] args) {
 		new Son();
 		new Son(20);
-		// ����Ϊ��
+		// 输入为：
 //		Father() before show()
 //		Son.show(),age = 0
 //		Father() after show()

@@ -13,23 +13,23 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * transient¹Ø¼ü×ÖÑİÊ¾Àà
+ * transientå…³é”®å­—æ¼”ç¤ºç±»
  * <p>
- * µ±¶ÔĞòÁĞ»¯½øĞĞ¿ØÖÆÊ±£¬¿ÉÄÜ´æÔÚÄ³¸öÌØ¶¨×Ö¶Î²»ÏëÈÃJavaµÄĞòÁĞ»¯»úÖÆ×Ô¶¯±£´æÓë»Ö¸´¡£
- * Èç¹û×Ö¶Î±íÊ¾µÄÊÇ²»Ï£Íû½«ÆäĞòÁĞ»¯µÄÃô¸ĞĞÅÏ¢(ÈçÃÜÂë)£¬Í¨³£¾Í»áÃæÁÙÕâÖÖÇé¿ö£¬
- * ¼´Ê¹¶ÔÏóÖĞµÄÕâĞ©ĞÅÏ¢ÊÇprivateÊôĞÔ£¬Ò»¾­ĞòÁĞ»¯´¦Àí¾Í¿ÉÒÔÍ¨¹ı¶ÁÈ¡ÎÄ¼ş»òÕßÀ¹½ØÍøÂç´«ÊäµÄ·½Ê½À´·ÃÎÊµ½Ëü¡£
+ * å½“å¯¹åºåˆ—åŒ–è¿›è¡Œæ§åˆ¶æ—¶ï¼Œå¯èƒ½å­˜åœ¨æŸä¸ªç‰¹å®šå­—æ®µä¸æƒ³è®©Javaçš„åºåˆ—åŒ–æœºåˆ¶è‡ªåŠ¨ä¿å­˜ä¸æ¢å¤ã€‚
+ * å¦‚æœå­—æ®µè¡¨ç¤ºçš„æ˜¯ä¸å¸Œæœ›å°†å…¶åºåˆ—åŒ–çš„æ•æ„Ÿä¿¡æ¯(å¦‚å¯†ç )ï¼Œé€šå¸¸å°±ä¼šé¢ä¸´è¿™ç§æƒ…å†µï¼Œ
+ * å³ä½¿å¯¹è±¡ä¸­çš„è¿™äº›ä¿¡æ¯æ˜¯privateå±æ€§ï¼Œä¸€ç»åºåˆ—åŒ–å¤„ç†å°±å¯ä»¥é€šè¿‡è¯»å–æ–‡ä»¶æˆ–è€…æ‹¦æˆªç½‘ç»œä¼ è¾“çš„æ–¹å¼æ¥è®¿é—®åˆ°å®ƒã€‚
  * <p>
- * ÓĞÒ»ÖÖ·ÀÖ¹¶ÔÏóµÄÃô¸Ğ²¿·Ö±»ĞòÁĞ»¯µÄ°ì·¨£¬¾ÍÊÇ½«ÀàÊµÏÖÎªExternalizable¡£
- * ÕâÑù¾ÍÃ»ÓĞÈÎºÎ¶«Î÷¿ÉÒÔ×Ô¶¯ĞòÁĞ»¯£¬²¢ÇÒ¿ÉÒÔÔÚwriteExternal()ÄÚ²¿Ö»¶ÔËùĞè²¿·Ö½øĞĞÏÔÊ½µÄĞòÁĞ»¯¡£
+ * æœ‰ä¸€ç§é˜²æ­¢å¯¹è±¡çš„æ•æ„Ÿéƒ¨åˆ†è¢«åºåˆ—åŒ–çš„åŠæ³•ï¼Œå°±æ˜¯å°†ç±»å®ç°ä¸ºExternalizableã€‚
+ * è¿™æ ·å°±æ²¡æœ‰ä»»ä½•ä¸œè¥¿å¯ä»¥è‡ªåŠ¨åºåˆ—åŒ–ï¼Œå¹¶ä¸”å¯ä»¥åœ¨writeExternal()å†…éƒ¨åªå¯¹æ‰€éœ€éƒ¨åˆ†è¿›è¡Œæ˜¾å¼çš„åºåˆ—åŒ–ã€‚
  * <p>
- * È»¶øÈç¹ûÕıÔÚ²Ù×÷µÄÊÇÒ»¸öSerializable¶ÔÏó£¬ÄÇÃ´ËùÓĞĞòÁĞ»¯²Ù×÷¶¼»á×Ô¶¯½øĞĞ¡£
- * ÎªÁËÄÜ¹»ÓèÒÔ¿ØÖÆ£¬¿ÉÒÔÓÃ transient (Ë²Ì¬)¹Ø¼ü×ÖÖğ¸ö×Ö¶ÎµØ¹Ø±ÕĞòÁĞ»¯¡£
+ * ç„¶è€Œå¦‚æœæ­£åœ¨æ“ä½œçš„æ˜¯ä¸€ä¸ªSerializableå¯¹è±¡ï¼Œé‚£ä¹ˆæ‰€æœ‰åºåˆ—åŒ–æ“ä½œéƒ½ä¼šè‡ªåŠ¨è¿›è¡Œã€‚
+ * ä¸ºäº†èƒ½å¤Ÿäºˆä»¥æ§åˆ¶ï¼Œå¯ä»¥ç”¨ transient (ç¬æ€)å…³é”®å­—é€ä¸ªå­—æ®µåœ°å…³é—­åºåˆ—åŒ–ã€‚
  * <p>
- * ÓÉÓÚExternalizable¶ÔÏóÔÚÈ±Ê¡Çé¿öÏÂ²»±£´æËüÃÇµÄÈÎºÎ×Ö¶Î£¬ËùÒÔtransient¹Ø¼ü×ÖÖ»ÄÜºÍSerializable¶ÔÏóÒ»ÆğÊ¹ÓÃ¡£
+ * ç”±äºExternalizableå¯¹è±¡åœ¨ç¼ºçœæƒ…å†µä¸‹ä¸ä¿å­˜å®ƒä»¬çš„ä»»ä½•å­—æ®µï¼Œæ‰€ä»¥transientå…³é”®å­—åªèƒ½å’ŒSerializableå¯¹è±¡ä¸€èµ·ä½¿ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-30
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-30
  */
 public class TransientDemo {
 
@@ -39,11 +39,11 @@ public class TransientDemo {
 	public static void main(String[] args) {
 		String fileName = "files/io.serialize/LoginInfo.obj";
 		
-		// ´´½¨Ò»¸ö¶ÔÏó²¢ĞòÁĞ»¯±£´æµ½Ó²ÅÌ
+		// åˆ›å»ºä¸€ä¸ªå¯¹è±¡å¹¶åºåˆ—åŒ–ä¿å­˜åˆ°ç¡¬ç›˜
 		LoginInfo logInfo = new LoginInfo("MIKE", "HelloWord");
-		System.out.println("Ô­Ê¼¶ÔÏó£º" + logInfo.toString());
+		System.out.println("åŸå§‹å¯¹è±¡ï¼š" + logInfo.toString());
 		
-		/** ĞòÁĞ»¯¶ÔÏó */
+		/** åºåˆ—åŒ–å¯¹è±¡ */
 		ObjectOutputStream out = null;
 		try {
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
@@ -66,12 +66,12 @@ public class TransientDemo {
 			e1.printStackTrace();
 		}
 		
-		/** ·´ĞòÁĞ»¯¶ÔÏó */
+		/** ååºåˆ—åŒ–å¯¹è±¡ */
 		ObjectInputStream in = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(fileName));
 			logInfo = (LoginInfo) in.readObject();
-			System.out.println("¶ÁÈ¡´æ´¢ĞòÁĞ»¯¶ÔÏóÎÄ¼şÉú³ÉµÄ¶ÔÏó£º"+logInfo.toString());
+			System.out.println("è¯»å–å­˜å‚¨åºåˆ—åŒ–å¯¹è±¡æ–‡ä»¶ç”Ÿæˆçš„å¯¹è±¡ï¼š"+logInfo.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -87,16 +87,16 @@ public class TransientDemo {
 }
 
 /**
- * µÇÂ¼ĞÅÏ¢Àà
+ * ç™»å½•ä¿¡æ¯ç±»
  */
 class LoginInfo implements Serializable {
 
 	private static final long serialVersionUID = -4354200758987066819L;
 	
-	private Date loginDate = new Date();// µÇÂ¼ÈÕÆÚ
-	private String userID;// µÇÂ¼Ãû
-	// ¶ÔÏóÖĞ±»transientĞŞÊÎµÄÓò²»»á±»ĞòÁĞ»¯
-	private transient String password;// ÃÜÂë
+	private Date loginDate = new Date();// ç™»å½•æ—¥æœŸ
+	private String userID;// ç™»å½•å
+	// å¯¹è±¡ä¸­è¢«transientä¿®é¥°çš„åŸŸä¸ä¼šè¢«åºåˆ—åŒ–
+	private transient String password;// å¯†ç 
 
 	public LoginInfo(String userID, String password) {
 		this.userID = userID;

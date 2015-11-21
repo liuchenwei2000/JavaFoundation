@@ -4,11 +4,11 @@
 package exception;
 
 /**
- * JavaÈ±Ïİ£ºÒì³£¶ªÊ§
+ * Javaç¼ºé™·ï¼šå¼‚å¸¸ä¸¢å¤±
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-5
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-5
  */
 public class ExceptionLost {
 
@@ -24,14 +24,14 @@ public class ExceptionLost {
 				el.dispose();
 			}
 		} catch (Exception e) {
-			// Êä³öÊÇ a simple exception£¬¶øVeryImportantException²»¼ûÁË
+			// è¾“å‡ºæ˜¯ a simple exceptionï¼Œè€ŒVeryImportantExceptionä¸è§äº†
 			System.out.println(e);
 		}
-		// ¸ü¼òµ¥µÄÒ»ÖÖÒì³£¶ªÊ§µÄÇéĞÎ
+		// æ›´ç®€å•çš„ä¸€ç§å¼‚å¸¸ä¸¢å¤±çš„æƒ…å½¢
 //		try {
 //			throw new RuntimeException();
 //		} finally {
-//			// return·ÅÔÚfinally¿éÖĞµÄ»°²»»áÔÙÓĞÈÎºÎÒì³£±»Å×³ö
+//			// returnæ”¾åœ¨finallyå—ä¸­çš„è¯ä¸ä¼šå†æœ‰ä»»ä½•å¼‚å¸¸è¢«æŠ›å‡º
 //			return;
 //		}
 	}

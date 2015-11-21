@@ -10,20 +10,20 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * Í¨¹ıĞòÁĞ»¯ÊµÏÖ(Éî)¿ËÂ¡
+ * é€šè¿‡åºåˆ—åŒ–å®ç°(æ·±)å…‹éš†
  * <p>
- * ±àĞ´SerializableÀàºÜÈİÒ×£¬µ«Òª¸´ÖÆËüÃÇÔòÒª»¨·Ñ¸ü¶àµÄ¹¤×÷¡£
- * ¿ËÂ¡ÀàÔÚ±àĞ´Ê±Òª¶à×öĞ©¹¤×÷£¬µ«Êµ¼Ê¸´ÖÆ¶ÔÏóÊ±ÔòÏàµ±¼òµ¥¡£
+ * ç¼–å†™Serializableç±»å¾ˆå®¹æ˜“ï¼Œä½†è¦å¤åˆ¶å®ƒä»¬åˆ™è¦èŠ±è´¹æ›´å¤šçš„å·¥ä½œã€‚
+ * å…‹éš†ç±»åœ¨ç¼–å†™æ—¶è¦å¤šåšäº›å·¥ä½œï¼Œä½†å®é™…å¤åˆ¶å¯¹è±¡æ—¶åˆ™ç›¸å½“ç®€å•ã€‚
  * <p>
- * ½áÂÛ£ºÍ¨¹ıĞòÁĞ»¯½øĞĞ¿ËÂ¡ËùĞèÒªµÄÊ±¼ä±Èclone()Òª¶à¡£
+ * ç»“è®ºï¼šé€šè¿‡åºåˆ—åŒ–è¿›è¡Œå…‹éš†æ‰€éœ€è¦çš„æ—¶é—´æ¯”clone()è¦å¤šã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-6
  */
 public class CloneUsingSerialization {
 	
-	/** ´ı¿ËÂ¡¶ÔÏóÊı */
+	/** å¾…å…‹éš†å¯¹è±¡æ•° */
 	public static final int SIZE = 25000;
 
 	/**
@@ -37,7 +37,7 @@ public class CloneUsingSerialization {
 			a[i] = new Thing4();
 			b[i] = new Thing4();
 		}
-		// Í¨¹ıĞòÁĞ»¯¿ËÂ¡¶ÔÏó
+		// é€šè¿‡åºåˆ—åŒ–å…‹éš†å¯¹è±¡
 		ByteArrayOutputStream buf = new ByteArrayOutputStream();
 		ObjectOutputStream o = new ObjectOutputStream(buf);
 		long start = System.currentTimeMillis();
@@ -55,7 +55,7 @@ public class CloneUsingSerialization {
 		System.out.println("Clone via serialization: " + (end - start)
 				+ " Milliseconds");
 		
-		// Í¨¹ı clone ·½·¨¿ËÂ¡¶ÔÏó
+		// é€šè¿‡ clone æ–¹æ³•å…‹éš†å¯¹è±¡
 		start = System.currentTimeMillis();
 		Thing4[] d = new Thing4[SIZE];
 		for (int i = 0; i < d.length; i++) {

@@ -6,11 +6,11 @@ package access.inner.a;
 import access.inner.Outer;
 
 /**
- * ÄÚ²¿ÀàÒì°ü×ÓÀàµÄ·ÃÎÊ¿ØÖÆÑİÊ¾
+ * å†…éƒ¨ç±»å¼‚åŒ…å­ç±»çš„è®¿é—®æ§åˆ¶æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class OuterSubclassInDifferentPackage extends Outer {
 
@@ -19,11 +19,11 @@ public class OuterSubclassInDifferentPackage extends Outer {
 	 */
 	public static void main(String[] args) {
 		Outer extend = new OuterSubclassInDifferentPackage();
-		// Outer.ProtectedInner¶ÔÓÚ×ÓÀàÊÇ¿É¼ûµÄ
-		// protectedÄÚ²¿ÀàÉùÃ÷²ÎÓëÍâ²¿ÀàµÄ¼Ì³Ğ
+		// Outer.ProtectedInnerå¯¹äºå­ç±»æ˜¯å¯è§çš„
+		// protectedå†…éƒ¨ç±»å£°æ˜å‚ä¸å¤–éƒ¨ç±»çš„ç»§æ‰¿
 		Outer.ProtectedInner protectedIn = extend.getProtectedInner();
-		// Ö»ÄÜ·ÃÎÊOuter.ProtectedInnerµÄpublic³ÉÔ±ºÍ·½·¨
-		// protectedÄÚ²¿ÀàµÄ·½·¨²»²ÎÓëÍâ²¿ÀàµÄ¼Ì³Ğ
+		// åªèƒ½è®¿é—®Outer.ProtectedInnerçš„publicæˆå‘˜å’Œæ–¹æ³•
+		// protectedå†…éƒ¨ç±»çš„æ–¹æ³•ä¸å‚ä¸å¤–éƒ¨ç±»çš„ç»§æ‰¿
 		protectedIn.publicField = 0;
 		protectedIn.publicMethod();
 	}

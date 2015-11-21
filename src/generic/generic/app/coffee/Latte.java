@@ -4,11 +4,11 @@
 package generic.app.coffee;
 
 /**
- * LatteÀà
+ * Latteç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class Latte extends Coffee {
 	

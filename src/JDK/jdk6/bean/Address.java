@@ -10,23 +10,23 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- * µØÖ·
+ * åœ°å€
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-27
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-27
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
 
-	@XmlAttribute(name="nation") // country×÷ÎªAddressµÄÒ»¸öÊôĞÔ
+	@XmlAttribute(name="nation") // countryä½œä¸ºAddressçš„ä¸€ä¸ªå±æ€§
 	private String country;
-	@XmlElement(name="privince") // state×÷ÎªAddressµÄÒ»¸öÔªËØ
+	@XmlElement(name="privince") // stateä½œä¸ºAddressçš„ä¸€ä¸ªå…ƒç´ 
 	private String state;
 	@XmlElement
 	private String city;
 
-	@XmlTransient // postcodeÔªËØ²»»á³öÏÖÔÚÊä³öµÄxmlÖĞ
+	@XmlTransient // postcodeå…ƒç´ ä¸ä¼šå‡ºç°åœ¨è¾“å‡ºçš„xmlä¸­
 	private String postcode;
 
 	public Address() {

@@ -4,18 +4,18 @@
 package enums;
 
 /**
- * ö����
+ * 枚举类
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2007-9-13
+ * 创建日期：2007-9-13
  */
 public enum Day {
 	
-	// ö�ٵĵ�һ��һ��Ҫ�����ĳ�Աȫ���г�
+	// 枚举的第一行一定要把它的成员全部列出
 	SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
 
-	// �����Ҫ���巽��������Ҫ��ö�ٳ�Ա�����һ���������;��
+	// 如果需要定义方法，则需要把枚举成员的最后一个后面加上;号
 	public static int getSize() {
 		return 7;
 	}

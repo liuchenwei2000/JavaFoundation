@@ -4,17 +4,17 @@
 package string;
 
 /**
- * ³£Á¿³Ø
+ * å¸¸é‡æ± 
  * <p>
- * Ö¸µÄÊÇÔÚ±àÒëÆÚ±»È·¶¨£¬²¢±»±£´æÔÚÒÑ±àÒëµÄ.classÎÄ¼þÖÐµÄÒ»Ð©Êý¾Ý£¬
- * Ëü°üÀ¨ÁË¹ØÓÚÀà¡¢·½·¨¡¢½Ó¿ÚµÈÖÐµÄ³£Á¿£¬Ò²°üÀ¨×Ö·û´®³£Á¿¡£
+ * æŒ‡çš„æ˜¯åœ¨ç¼–è¯‘æœŸè¢«ç¡®å®šï¼Œå¹¶è¢«ä¿å­˜åœ¨å·²ç¼–è¯‘çš„.classæ–‡ä»¶ä¸­çš„ä¸€äº›æ•°æ®ï¼Œ
+ * å®ƒåŒ…æ‹¬äº†å…³äºŽç±»ã€æ–¹æ³•ã€æŽ¥å£ç­‰ä¸­çš„å¸¸é‡ï¼Œä¹ŸåŒ…æ‹¬å­—ç¬¦ä¸²å¸¸é‡ã€‚
  * <p>
- * StringÊÇÒ»¸öÌØÊâ°ü×°Àà£¬ÆäÒýÓÃÊÇ´æ·ÅÔÚÕ»ÀïµÄ£¬¶ø¶ÔÏóÄÚÈÝ±ØÐë¸ù¾Ý´´½¨·½Ê½²»Í¬À´¶¨(³£Á¿³ØºÍ¶Ñ)¡£
- * ÓÐµÄÊÇ±àÒëÆÚ¾ÍÒÑ¾­´´½¨ºÃ£¬´æ·ÅÔÚ×Ö·û´®³£Á¿³ØÖÐ£¬¶øÓÐµÄÊÇÔËÐÐÊ±²Å±»´´½¨£¬Ê¹ÓÃnew¹Ø¼ü×Ö£¬´æ·ÅÔÚ¶ÑÖÐ¡£
+ * Stringæ˜¯ä¸€ä¸ªç‰¹æ®ŠåŒ…è£…ç±»ï¼Œå…¶å¼•ç”¨æ˜¯å­˜æ”¾åœ¨æ ˆé‡Œçš„ï¼Œè€Œå¯¹è±¡å†…å®¹å¿…é¡»æ ¹æ®åˆ›å»ºæ–¹å¼ä¸åŒæ¥å®š(å¸¸é‡æ± å’Œå †)ã€‚
+ * æœ‰çš„æ˜¯ç¼–è¯‘æœŸå°±å·²ç»åˆ›å»ºå¥½ï¼Œå­˜æ”¾åœ¨å­—ç¬¦ä¸²å¸¸é‡æ± ä¸­ï¼Œè€Œæœ‰çš„æ˜¯è¿è¡Œæ—¶æ‰è¢«åˆ›å»ºï¼Œä½¿ç”¨newå…³é”®å­—ï¼Œå­˜æ”¾åœ¨å †ä¸­ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-2
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-2
  */
 public class ConstantPool {
 
@@ -23,30 +23,30 @@ public class ConstantPool {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * String¿ÉÒÔÓÃÏÂÃæÁ½ÖÖÐÎÊ½À´´´½¨£º
-		 * µÚÒ»ÖÖÐÎÊ½ÊÇÓÃnew()À´ÐÂ½¨¶ÔÏóµÄ£¬Ëü»á±»´æ·ÅÓÚ¶ÑÖÐ£¬Ã¿µ÷ÓÃÒ»´Î¾Í»á´´½¨Ò»¸öÐÂµÄ¶ÔÏó¡£ 
-		 * µÚ¶þÖÖÐÎÊ½ÊÇÏÈÔÚÕ»ÖÐ´´½¨Ò»¸ö¶ÔStringÀà¶ÔÏóµÄÒýÓÃ±äÁ¿£¬È»ºóÈ¥×Ö·û´®³£Á¿³ØÀïÕÒÓÐÃ»ÓÐ"abc"£¬
-		 * Èç¹ûÃ»ÓÐ£¬Ôò½«"abc"´æ·Å½ø×Ö·û´®³£Á¿³Ø£¬²¢Áîstr2Ö¸Ïò"abc"£»Èç¹ûÒÑ¾­ÓÐ"abc"ÔòÖ±½ÓÁîstr2Ö¸Ïò"abc"¡£
+		 * Stringå¯ä»¥ç”¨ä¸‹é¢ä¸¤ç§å½¢å¼æ¥åˆ›å»ºï¼š
+		 * ç¬¬ä¸€ç§å½¢å¼æ˜¯ç”¨new()æ¥æ–°å»ºå¯¹è±¡çš„ï¼Œå®ƒä¼šè¢«å­˜æ”¾äºŽå †ä¸­ï¼Œæ¯è°ƒç”¨ä¸€æ¬¡å°±ä¼šåˆ›å»ºä¸€ä¸ªæ–°çš„å¯¹è±¡ã€‚ 
+		 * ç¬¬äºŒç§å½¢å¼æ˜¯å…ˆåœ¨æ ˆä¸­åˆ›å»ºä¸€ä¸ªå¯¹Stringç±»å¯¹è±¡çš„å¼•ç”¨å˜é‡ï¼Œç„¶åŽåŽ»å­—ç¬¦ä¸²å¸¸é‡æ± é‡Œæ‰¾æœ‰æ²¡æœ‰"abc"ï¼Œ
+		 * å¦‚æžœæ²¡æœ‰ï¼Œåˆ™å°†"abc"å­˜æ”¾è¿›å­—ç¬¦ä¸²å¸¸é‡æ± ï¼Œå¹¶ä»¤str2æŒ‡å‘"abc"ï¼›å¦‚æžœå·²ç»æœ‰"abc"åˆ™ç›´æŽ¥ä»¤str2æŒ‡å‘"abc"ã€‚
 		 */
 		String str1 = new String("abc");
 		String str2 = "abc";
 		/*
-		 * ÏÂÃæÕâÖÖ·½Ê½´´½¨2¸ö"abc"×Ö·û´®£¬ÔÚÄÚ´æÖÐÆäÊµÖ»´æÔÚÒ»¸ö¶ÔÏó¶øÒÑ£¬ÕâÖÖÐ´·¨ÓÐÀûÓÚ½ÚÊ¡ÄÚ´æ¿Õ¼ä¡£ 
-		 * Í¬Ê±»¹¿ÉÒÔÔÚÒ»¶¨³Ì¶ÈÉÏÌá¸ß³ÌÐòµÄÔËÐÐËÙ¶È£¬ÒòÎªJVM»á×Ô¶¯¸ù¾ÝÕ»ÖÐÊý¾ÝµÄÊµ¼ÊÇé¿öÀ´¾ö¶¨ÊÇ·ñÓÐ±ØÒª´´½¨ÐÂ¶ÔÏó¡£
-		 * µ«ÊÇÕâÖÖ·½Ê½²¢²»ÄÜ±£Ö¤Ò»¶¨»á´´½¨¶ÔÏó£¬Ò²¿ÉÄÜÖ»ÊÇÖ¸ÏòÒ»¸öÏÈÇ°ÒÑ¾­´´½¨µÄ¶ÔÏó¡£
+		 * ä¸‹é¢è¿™ç§æ–¹å¼åˆ›å»º2ä¸ª"abc"å­—ç¬¦ä¸²ï¼Œåœ¨å†…å­˜ä¸­å…¶å®žåªå­˜åœ¨ä¸€ä¸ªå¯¹è±¡è€Œå·²ï¼Œè¿™ç§å†™æ³•æœ‰åˆ©äºŽèŠ‚çœå†…å­˜ç©ºé—´ã€‚ 
+		 * åŒæ—¶è¿˜å¯ä»¥åœ¨ä¸€å®šç¨‹åº¦ä¸Šæé«˜ç¨‹åºçš„è¿è¡Œé€Ÿåº¦ï¼Œå› ä¸ºJVMä¼šè‡ªåŠ¨æ ¹æ®æ ˆä¸­æ•°æ®çš„å®žé™…æƒ…å†µæ¥å†³å®šæ˜¯å¦æœ‰å¿…è¦åˆ›å»ºæ–°å¯¹è±¡ã€‚
+		 * ä½†æ˜¯è¿™ç§æ–¹å¼å¹¶ä¸èƒ½ä¿è¯ä¸€å®šä¼šåˆ›å»ºå¯¹è±¡ï¼Œä¹Ÿå¯èƒ½åªæ˜¯æŒ‡å‘ä¸€ä¸ªå…ˆå‰å·²ç»åˆ›å»ºçš„å¯¹è±¡ã€‚
 		 */
 		str1 = "abc";
 		str2 = "abc";
 		System.out.println(str1 == str2);// true
 		/*
-		 * ÏÂÃæÕâÖÖ·½Ê½»áÒ»¸ÅÔÚ¶ÑÖÐ´´½¨ÐÂ¶ÔÏó£¬¶ø²»¹Ü×Ö·û´®ÖµÊÇ·ñÏàµÈ£¬ÊÇ·ñÓÐ±ØÒª´´½¨ÐÂ¶ÔÏó£¬´Ó¶ø¼ÓÖØÁË³ÌÐòµÄ¸ºµ£¡£
+		 * ä¸‹é¢è¿™ç§æ–¹å¼ä¼šä¸€æ¦‚åœ¨å †ä¸­åˆ›å»ºæ–°å¯¹è±¡ï¼Œè€Œä¸ç®¡å­—ç¬¦ä¸²å€¼æ˜¯å¦ç›¸ç­‰ï¼Œæ˜¯å¦æœ‰å¿…è¦åˆ›å»ºæ–°å¯¹è±¡ï¼Œä»Žè€ŒåŠ é‡äº†ç¨‹åºçš„è´Ÿæ‹…ã€‚
 		 */
 		str1 = new String("abc");
 		str2 = new String("abc");
 		System.out.println(str1 == str2);// false
 		/*
-		 * JVM¶ÔÓÚ×Ö·û´®³£Á¿µÄ"+"ºÅÁ¬½Ó£¬ÔÚ±àÒëÆ÷¾Í½«³£Á¿×Ö·û´®µÄ"+"ÓÅ»¯ÎªÁ¬½ÓºóµÄÖµ¡£
-		 * ±ÈÈçÏÂÃæµÄÀý×Ó"a" + 1£¬¾­±àÒëÆ÷ÓÅ»¯ºóÔÚclassÎÄ¼þÖÐ¾ÍÒÑ¾­ÊÇa1¡£
+		 * JVMå¯¹äºŽå­—ç¬¦ä¸²å¸¸é‡çš„"+"å·è¿žæŽ¥ï¼Œåœ¨ç¼–è¯‘å™¨å°±å°†å¸¸é‡å­—ç¬¦ä¸²çš„"+"ä¼˜åŒ–ä¸ºè¿žæŽ¥åŽçš„å€¼ã€‚
+		 * æ¯”å¦‚ä¸‹é¢çš„ä¾‹å­"a" + 1ï¼Œç»ç¼–è¯‘å™¨ä¼˜åŒ–åŽåœ¨classæ–‡ä»¶ä¸­å°±å·²ç»æ˜¯a1ã€‚
 		 */
 		String a = "a1";
 		String b = "a" + 1;
@@ -64,47 +64,47 @@ public class ConstantPool {
 		b = "a" + "b";
 		System.out.println(a == b);// true
 		/*
-		 * ÓÉÓÚÔÚ×Ö·û´®µÄ"+"Á¬½ÓÖÐ£¬ÓÐ×Ö·û´®ÒýÓÃ´æÔÚ£¬¶øÒýÓÃµÄÖµÔÚ³ÌÐò±àÒëÆÚÊÇÎÞ·¨È·¶¨µÄ£¬
-		 * ¼´"a" + bb ÎÞ·¨±»±àÒëÆ÷ÓÅ»¯£¬Ö»ÓÐÔÚ³ÌÐòÔËÐÐÆÚÀ´¶¯Ì¬·ÖÅä²¢½«Á¬½ÓºóµÄÐÂµØÖ·¸³¸øb¡£ 
+		 * ç”±äºŽåœ¨å­—ç¬¦ä¸²çš„"+"è¿žæŽ¥ä¸­ï¼Œæœ‰å­—ç¬¦ä¸²å¼•ç”¨å­˜åœ¨ï¼Œè€Œå¼•ç”¨çš„å€¼åœ¨ç¨‹åºç¼–è¯‘æœŸæ˜¯æ— æ³•ç¡®å®šçš„ï¼Œ
+		 * å³"a" + bb æ— æ³•è¢«ç¼–è¯‘å™¨ä¼˜åŒ–ï¼Œåªæœ‰åœ¨ç¨‹åºè¿è¡ŒæœŸæ¥åŠ¨æ€åˆ†é…å¹¶å°†è¿žæŽ¥åŽçš„æ–°åœ°å€èµ‹ç»™bã€‚ 
 		 */
 		String bb = "b";
 		a = "ab";
 		b = "a" + bb;
 		System.out.println(a == b);// false
 		/*
-		 * ºÍÉÏÀý²»Í¬µÄÊÇ±äÁ¿bbb¼ÓÁËfinalÐÞÊÎ£¬¶ÔÓÚfinalÐÞÊÎµÄ±äÁ¿£¬
-		 * ËüÔÚ±àÒëÊ±±»½âÎöÎª³£Á¿ÖµµÄÒ»¸ö±¾µØ¿½±´´æ´¢µ½×Ô¼ºµÄ³£Á¿³ØÖÐ£¬
-		 * ËùÒÔ´ËÊ±µÄ"a" + bbbºÍ"a" + "b"Ð§¹ûÊÇÒ»ÑùµÄ¡£
+		 * å’Œä¸Šä¾‹ä¸åŒçš„æ˜¯å˜é‡bbbåŠ äº†finalä¿®é¥°ï¼Œå¯¹äºŽfinalä¿®é¥°çš„å˜é‡ï¼Œ
+		 * å®ƒåœ¨ç¼–è¯‘æ—¶è¢«è§£æžä¸ºå¸¸é‡å€¼çš„ä¸€ä¸ªæœ¬åœ°æ‹·è´å­˜å‚¨åˆ°è‡ªå·±çš„å¸¸é‡æ± ä¸­ï¼Œ
+		 * æ‰€ä»¥æ­¤æ—¶çš„"a" + bbbå’Œ"a" + "b"æ•ˆæžœæ˜¯ä¸€æ ·çš„ã€‚
 		 */
 		final String bbb = "b";
 		a = "ab";
 		b = "a" + bbb;
 		System.out.println(a == b);// true
 		/*
-		 * JVM¶ÔÓÚ×Ö·û´®ÒýÓÃbb£¬ËüµÄÖµÔÚ±àÒëÆ÷ÎÞ·¨È·¶¨£¬
-		 * Ö»ÓÐÔÚÔËÐÐÊ±µ÷ÓÃ·½·¨ºó£¬½«·½·¨µÄ·µ»ØÖµºÍ"a"À´¶¯Ì¬Á¬½Ó²¢·ÖÅäµØÖ·¸øb¡£
+		 * JVMå¯¹äºŽå­—ç¬¦ä¸²å¼•ç”¨bbï¼Œå®ƒçš„å€¼åœ¨ç¼–è¯‘å™¨æ— æ³•ç¡®å®šï¼Œ
+		 * åªæœ‰åœ¨è¿è¡Œæ—¶è°ƒç”¨æ–¹æ³•åŽï¼Œå°†æ–¹æ³•çš„è¿”å›žå€¼å’Œ"a"æ¥åŠ¨æ€è¿žæŽ¥å¹¶åˆ†é…åœ°å€ç»™bã€‚
 		 */
 		final String bbbb = getBBBB();
 		a = "ab";
 		b = "a" + bbbb;
 		System.out.println(a == b);// false
 		/*
-		 * ÏÂÃæµÄs1/s2ÕâÁ½ÖÖÐ´·¨ÊÇµÈ¼ÛµÄ 
+		 * ä¸‹é¢çš„s1/s2è¿™ä¸¤ç§å†™æ³•æ˜¯ç­‰ä»·çš„ 
 		 */
 		String s1 = "a" + "b" + "c";
 		String s2 = "abc";
 		/*
-		 * ÏÂÃæµÄs1/s2ÕâÁ½ÖÖÐ´·¨ÊÇµÈ¼ÛµÄ
+		 * ä¸‹é¢çš„s1/s2è¿™ä¸¤ç§å†™æ³•æ˜¯ç­‰ä»·çš„
 		 */
 		String sa = "a";
 		String sb = "b";
 		String sc = "c";
-		s1 = sa + sb + sc;// ÈçÏÂËùÊ¾£º»á²úÉú´óÁ¿µÄStringBuffer¶ÔÏó
+		s1 = sa + sb + sc;// å¦‚ä¸‹æ‰€ç¤ºï¼šä¼šäº§ç”Ÿå¤§é‡çš„StringBufferå¯¹è±¡
 		s2 = new StringBuffer().append(sa).append(sb).append(sc).toString();
 		/*
-		 * ×Ö·û´®Ã¿×öÒ»´Î"+"¾Í»á²úÉú¸öStringBuffer¶ÔÏó£¬È»ºóappendºó¾ÍÈÓµô¡£
-		 * ËùÒÔÏÂÃæÕâ¸öÇé¿ö»á²úÉú´óÁ¿µÄÁÙÊ±StringBuffer¶ÔÏó£¬Ð§ÂÊµÍÏÂ¡£
-		 * ÔÚÑ­»·ÖÐ£¬¶¼Ó¦¸ÃÖ±½ÓÊ¹ÓÃStringBuffer»òStringBuilder½øÐÐappend²Ù×÷¡£
+		 * å­—ç¬¦ä¸²æ¯åšä¸€æ¬¡"+"å°±ä¼šäº§ç”Ÿä¸ªStringBufferå¯¹è±¡ï¼Œç„¶åŽappendåŽå°±æ‰”æŽ‰ã€‚
+		 * æ‰€ä»¥ä¸‹é¢è¿™ä¸ªæƒ…å†µä¼šäº§ç”Ÿå¤§é‡çš„ä¸´æ—¶StringBufferå¯¹è±¡ï¼Œæ•ˆçŽ‡ä½Žä¸‹ã€‚
+		 * åœ¨å¾ªçŽ¯ä¸­ï¼Œéƒ½åº”è¯¥ç›´æŽ¥ä½¿ç”¨StringBufferæˆ–StringBuilderè¿›è¡Œappendæ“ä½œã€‚
 		 */
 		@SuppressWarnings("unused")
 		String s = "";
@@ -112,11 +112,11 @@ public class ConstantPool {
 			s += "a";
 		}
 		/*
-		 * Java»áÈ·±£Ò»¸ö×Ö·û´®³£Á¿Ö»ÓÐÒ»¸ö¿½±´ ¡£
+		 * Javaä¼šç¡®ä¿ä¸€ä¸ªå­—ç¬¦ä¸²å¸¸é‡åªæœ‰ä¸€ä¸ªæ‹·è´ ã€‚
 		 * 
-		 * ÒòÎªÀý×ÓÖÐµÄs0ºÍs1ÖÐµÄ"kvill"¶¼ÊÇ×Ö·û´®³£Á¿£¬ËüÃÇÔÚ±àÒëÆÚ¾Í±»È·¶¨ÁË£¬ËùÒÔs0==s1Îªtrue¡£
-		 * ¶ø"kv"ºÍ"ill"Ò²¶¼ÊÇ×Ö·û´®³£Á¿£¬µ±Ò»¸ö×Ö·û´®ÓÉ¶à¸ö×Ö·û´®³£Á¿Á¬½Ó¶ø³ÉÊ±£¬Ëü×Ô¼º¿Ï¶¨Ò²ÊÇ×Ö·û´®³£Á¿¡£
-		 * ËùÒÔs2Ò²Í¬ÑùÔÚ±àÒëÆÚ¾Í±»½âÎöÎªÒ»¸ö×Ö·û´®³£Á¿Ò²ÊÇ³£Á¿³ØÖÐ"kvill"µÄÒ»¸öÒýÓÃ¡£ 
+		 * å› ä¸ºä¾‹å­ä¸­çš„s0å’Œs1ä¸­çš„"kvill"éƒ½æ˜¯å­—ç¬¦ä¸²å¸¸é‡ï¼Œå®ƒä»¬åœ¨ç¼–è¯‘æœŸå°±è¢«ç¡®å®šäº†ï¼Œæ‰€ä»¥s0==s1ä¸ºtrueã€‚
+		 * è€Œ"kv"å’Œ"ill"ä¹Ÿéƒ½æ˜¯å­—ç¬¦ä¸²å¸¸é‡ï¼Œå½“ä¸€ä¸ªå­—ç¬¦ä¸²ç”±å¤šä¸ªå­—ç¬¦ä¸²å¸¸é‡è¿žæŽ¥è€Œæˆæ—¶ï¼Œå®ƒè‡ªå·±è‚¯å®šä¹Ÿæ˜¯å­—ç¬¦ä¸²å¸¸é‡ã€‚
+		 * æ‰€ä»¥s2ä¹ŸåŒæ ·åœ¨ç¼–è¯‘æœŸå°±è¢«è§£æžä¸ºä¸€ä¸ªå­—ç¬¦ä¸²å¸¸é‡ä¹Ÿæ˜¯å¸¸é‡æ± ä¸­"kvill"çš„ä¸€ä¸ªå¼•ç”¨ã€‚ 
 		 */
 		String s0 = "kvill";
 		s1 = "kvill";
@@ -125,8 +125,8 @@ public class ConstantPool {
 		System.out.println(s0 == s2);// true
 		
 		/*
-		 * ÓÃnew String()´´½¨µÄ×Ö·û´®²»ÊÇ³£Á¿£¬²»ÄÜÔÚ±àÒëÆÚ¾ÍÈ·¶¨£¬
-		 * ËùÒÔnew String()´´½¨µÄ×Ö·û´®²»·ÅÈë³£Á¿³ØÖÐ£¬ËüÃÇÓÐ×Ô¼ºµÄµØÖ·¿Õ¼ä¡£
+		 * ç”¨new String()åˆ›å»ºçš„å­—ç¬¦ä¸²ä¸æ˜¯å¸¸é‡ï¼Œä¸èƒ½åœ¨ç¼–è¯‘æœŸå°±ç¡®å®šï¼Œ
+		 * æ‰€ä»¥new String()åˆ›å»ºçš„å­—ç¬¦ä¸²ä¸æ”¾å…¥å¸¸é‡æ± ä¸­ï¼Œå®ƒä»¬æœ‰è‡ªå·±çš„åœ°å€ç©ºé—´ã€‚
 		 */
 		String s3 = "string";
 		String s4 = new String("string");
@@ -135,17 +135,17 @@ public class ConstantPool {
 		System.out.println(s3 == s5);// false
 		System.out.println(s4 == s5);// false
 		/*
-		 * ´æÔÚÓÚ.classÎÄ¼þÖÐµÄ³£Á¿³Ø£¬ÔÚÔËÐÐÆÚ±»JVM×°ÔØ£¬²¢ÇÒ¿ÉÒÔÀ©³ä¡£
-		 * StringµÄintern()·½·¨¾ÍÊÇÀ©³ä³£Á¿³ØµÄÒ»¸ö·½·¨£º
-		 * µ±Ò»¸öStringÊµÀýµ÷ÓÃintern()·½·¨Ê±£¬JVM²éÕÒ³£Á¿³ØÖÐÊÇ·ñÓÐÏàÍ¬UnicodeµÄ×Ö·û´®³£Á¿£¬
-		 * Èç¹ûÓÐÔò·µ»ØÆäÒýÓÃ£¬Èç¹ûÃ»ÓÐÔòÔÚ³£Á¿³ØÖÐÔö¼ÓÒ»¸öUnicodeµÈÓÚ¸ÃÊµÀýµÄ×Ö·û´®²¢·µ»ØËüµÄÒýÓÃ¡£ 
+		 * å­˜åœ¨äºŽ.classæ–‡ä»¶ä¸­çš„å¸¸é‡æ± ï¼Œåœ¨è¿è¡ŒæœŸè¢«JVMè£…è½½ï¼Œå¹¶ä¸”å¯ä»¥æ‰©å……ã€‚
+		 * Stringçš„intern()æ–¹æ³•å°±æ˜¯æ‰©å……å¸¸é‡æ± çš„ä¸€ä¸ªæ–¹æ³•ï¼š
+		 * å½“ä¸€ä¸ªStringå®žä¾‹è°ƒç”¨intern()æ–¹æ³•æ—¶ï¼ŒJVMæŸ¥æ‰¾å¸¸é‡æ± ä¸­æ˜¯å¦æœ‰ç›¸åŒUnicodeçš„å­—ç¬¦ä¸²å¸¸é‡ï¼Œ
+		 * å¦‚æžœæœ‰åˆ™è¿”å›žå…¶å¼•ç”¨ï¼Œå¦‚æžœæ²¡æœ‰åˆ™åœ¨å¸¸é‡æ± ä¸­å¢žåŠ ä¸€ä¸ªUnicodeç­‰äºŽè¯¥å®žä¾‹çš„å­—ç¬¦ä¸²å¹¶è¿”å›žå®ƒçš„å¼•ç”¨ã€‚ 
 		 */
 		String str = "sss";
 		String stra = new String("sss");
 		String strb = new String("sss");
 		System.out.println(str == stra);// false
 		stra.intern();
-		strb = strb.intern();// °Ñ³£Á¿³ØÖÐ"sss"µÄÒýÓÃ¸³¸østrb
+		strb = strb.intern();// æŠŠå¸¸é‡æ± ä¸­"sss"çš„å¼•ç”¨èµ‹ç»™strb
 		System.out.println(str == stra);// false
 		System.out.println(str == stra.intern());// true
 		System.out.println(str == strb);// true

@@ -6,11 +6,11 @@ package enums.itf;
 import enums.itf.Drink.*;
 
 /**
- * Drink½Ó¿ÚÑİÊ¾
+ * Drinkæ¥å£æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public class DrinkDemo {
 

@@ -4,16 +4,16 @@
 package inherit.difference;
 
 /**
- * ½»Í¨¹¤¾ßÀà
+ * äº¤é€šå·¥å…·ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public abstract class Vehicle {
 	
-	protected String name;// Ãû×Ö
-	protected double load;// ÔØÖØ
+	protected String name;// åå­—
+	protected double load;// è½½é‡
 
 	protected void setName(String newName) {
 		name = newName;
@@ -32,7 +32,7 @@ public abstract class Vehicle {
 	}
 
 	/**
-	 * ¼ÓËÙ¶¯×÷
+	 * åŠ é€ŸåŠ¨ä½œ
 	 */
 	protected abstract void speedUp();
 }

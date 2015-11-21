@@ -4,11 +4,11 @@
 package lang;
 
 /**
- * MathÀàµÄÒ»°ã·½·¨
+ * Mathç±»çš„ä¸€èˆ¬æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class MathDemo {
 
@@ -17,19 +17,19 @@ public class MathDemo {
 	 */
 	public static void main(String[] args) {
 		double a = -5.8;
-		System.out.println(a + "µÄ¾ø¶ÔÖµ£º " + Math.abs(a));
+		System.out.println(a + "çš„ç»å¯¹å€¼ï¼š " + Math.abs(a));
 		double b = 2.5;
-		System.out.println(b + "µÄËÄÉáÎåÈë£º " + Math.round(b));
-		System.out.println(b + "µÄ¶¥ÕûÊı£º " + Math.ceil(b));
-		System.out.println(b + "µÄµ×ÕûÊı£º " + Math.floor(b));
-		System.out.println(b + "µÄÆ½·½¸ù£º " + Math.sqrt(b));
-		System.out.println(b + "µÄÁ¢·½¸ù£º " + Math.cbrt(b));
-		System.out.println(b + "µÄ×î½Ó½üµÄÕûÊıµÄdoubleÖµ£º " + Math.rint(b));
+		System.out.println(b + "çš„å››èˆäº”å…¥ï¼š " + Math.round(b));
+		System.out.println(b + "çš„é¡¶æ•´æ•°ï¼š " + Math.ceil(b));
+		System.out.println(b + "çš„åº•æ•´æ•°ï¼š " + Math.floor(b));
+		System.out.println(b + "çš„å¹³æ–¹æ ¹ï¼š " + Math.sqrt(b));
+		System.out.println(b + "çš„ç«‹æ–¹æ ¹ï¼š " + Math.cbrt(b));
+		System.out.println(b + "çš„æœ€æ¥è¿‘çš„æ•´æ•°çš„doubleå€¼ï¼š " + Math.rint(b));
 		a = -1;
 		b = 2;
-		System.out.println(a + "ºÍ" + b + "ÖĞ½Ï´óµÄÊÇ£º" + Math.max(a, b));
-		System.out.println(a + "ºÍ" + b + "ÖĞ½ÏĞ¡µÄÊÇ£º" + Math.min(a, b));
-		System.out.println(b + "µÄ" + a + "´Î·½£º " + Math.pow(b, a));
-		System.out.println("²úÉúµÄ0µ½1Ëæ»úÊıÊÇ£º " + Math.random());
+		System.out.println(a + "å’Œ" + b + "ä¸­è¾ƒå¤§çš„æ˜¯ï¼š" + Math.max(a, b));
+		System.out.println(a + "å’Œ" + b + "ä¸­è¾ƒå°çš„æ˜¯ï¼š" + Math.min(a, b));
+		System.out.println(b + "çš„" + a + "æ¬¡æ–¹ï¼š " + Math.pow(b, a));
+		System.out.println("äº§ç”Ÿçš„0åˆ°1éšæœºæ•°æ˜¯ï¼š " + Math.random());
 	}
 }

@@ -10,16 +10,16 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * ¶ÔÏóĞòÁĞ»¯ÑİÊ¾Àà
+ * å¯¹è±¡åºåˆ—åŒ–æ¼”ç¤ºç±»
  * <p>
- * ¶ÔÏóĞòÁĞ»¯ÌØ±ğ"´ÏÃ÷"µÄÒ»¸öµØ·½ÊÇËü²»½ö±£´æÁË¶ÔÏóµÄ"È«¾°Í¼"£¬¶øÇÒÄÜ×·×Ù¶ÔÏóÄÚ°üº¬µÄËùÓĞÒıÓÃ²¢±£´æÄÇĞ©¶ÔÏó¡£
- * ½Ó×ÅÓÖÄÜ¶ÔÃ¿¸öÕâÑùµÄ¶ÔÏóÄÚ°üº¬µÄÒıÓÃ½øĞĞ×·×Ù£»ÒÔ´ËÀàÍÆ¡£ÕâÖÖÇé¿ö±»³ÆÎª"¶ÔÏóÍø"¡£
+ * å¯¹è±¡åºåˆ—åŒ–ç‰¹åˆ«"èªæ˜"çš„ä¸€ä¸ªåœ°æ–¹æ˜¯å®ƒä¸ä»…ä¿å­˜äº†å¯¹è±¡çš„"å…¨æ™¯å›¾"ï¼Œè€Œä¸”èƒ½è¿½è¸ªå¯¹è±¡å†…åŒ…å«çš„æ‰€æœ‰å¼•ç”¨å¹¶ä¿å­˜é‚£äº›å¯¹è±¡ã€‚
+ * æ¥ç€åˆèƒ½å¯¹æ¯ä¸ªè¿™æ ·çš„å¯¹è±¡å†…åŒ…å«çš„å¼•ç”¨è¿›è¡Œè¿½è¸ªï¼›ä»¥æ­¤ç±»æ¨ã€‚è¿™ç§æƒ…å†µè¢«ç§°ä¸º"å¯¹è±¡ç½‘"ã€‚
  * <p>
- * Èç¹ûÒ»¸öÀà¿ÉÒÔ±»ĞòÁĞ»¯£¬ËüµÄËùÓĞ×ÓÀà¶¼¿ÉÒÔĞòÁĞ»¯¡£
+ * å¦‚æœä¸€ä¸ªç±»å¯ä»¥è¢«åºåˆ—åŒ–ï¼Œå®ƒçš„æ‰€æœ‰å­ç±»éƒ½å¯ä»¥åºåˆ—åŒ–ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class SerializeDemo {
 
@@ -49,18 +49,18 @@ public class SerializeDemo {
 	}
 	
 	/**
-	 * ĞòÁĞ»¯¶ÔÏóµ½´ÅÅÌÎÄ¼ş£¨¿ÉÒÔ½«¶à¸ö¶ÔÏóĞòÁĞ»¯µ½Í¬Ò»¸öÎÄ¼ş£©
+	 * åºåˆ—åŒ–å¯¹è±¡åˆ°ç£ç›˜æ–‡ä»¶ï¼ˆå¯ä»¥å°†å¤šä¸ªå¯¹è±¡åºåˆ—åŒ–åˆ°åŒä¸€ä¸ªæ–‡ä»¶ï¼‰
 	 * <p>
-	 * ĞòÁĞ»¯Ò»¸ö¶ÔÏóµÄ²½Öè£º
-     * Ê×ÏÈÒª´´½¨Ä³Ğ© OutputStream ¶ÔÏó£¬È»ºó½«Æä·â×°ÔÚÒ»¸ö ObjectOutputStream ¶ÔÏóÄÚ£¬
-     * È»ºóÖ»Ğèµ÷ÓÃ writeObject(object) ¼´¿É½«¶ÔÏóĞòÁĞ»¯£¬²¢½«Æä·¢ËÍ¸ø OutputStream ¡£
+	 * åºåˆ—åŒ–ä¸€ä¸ªå¯¹è±¡çš„æ­¥éª¤ï¼š
+     * é¦–å…ˆè¦åˆ›å»ºæŸäº› OutputStream å¯¹è±¡ï¼Œç„¶åå°†å…¶å°è£…åœ¨ä¸€ä¸ª ObjectOutputStream å¯¹è±¡å†…ï¼Œ
+     * ç„¶ååªéœ€è°ƒç”¨ writeObject(object) å³å¯å°†å¯¹è±¡åºåˆ—åŒ–ï¼Œå¹¶å°†å…¶å‘é€ç»™ OutputStream ã€‚
 	 */
 	private static void writeObjectToDisk(Object object,String filePath) throws IOException{
 		ObjectOutputStream out = null;
 		try {
 			out = new ObjectOutputStream(new FileOutputStream(filePath));
-			out.writeObject("Object storage\n");// ĞòÁĞ»¯×Ö·û´®
-			out.writeObject(object);// ĞòÁĞ»¯²ÎÊı¶ÔÏó
+			out.writeObject("Object storage\n");// åºåˆ—åŒ–å­—ç¬¦ä¸²
+			out.writeObject(object);// åºåˆ—åŒ–å‚æ•°å¯¹è±¡
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -72,22 +72,22 @@ public class SerializeDemo {
 	}
 	
 	/**
-	 * ´ÓÎÄ¼şÖĞ·´ĞòÁĞ»¯¶ÔÏó
+	 * ä»æ–‡ä»¶ä¸­ååºåˆ—åŒ–å¯¹è±¡
 	 * <p>
-	 * Òª½«Ò»¸öĞòÁĞ»¹Ô­ÎªÒ»¸ö¶ÔÏó£º
-     * ĞèÒª½«Ò»¸ö InputStream ·â×°ÔÚ ObjectInputStream ÄÚ£¬È»ºóµ÷ÓÃ readObject()£¬
-     * ×îºó»ñµÃµÄÊÇÒ»¸öÏòÉÏ×ªĞÍÎª Object µÄÒıÓÃ£¬ËùÒÔ±ØĞëÏòÏÂ×ªĞÍÎª¾ßÌåÀàĞÍ¡£
+	 * è¦å°†ä¸€ä¸ªåºåˆ—è¿˜åŸä¸ºä¸€ä¸ªå¯¹è±¡ï¼š
+     * éœ€è¦å°†ä¸€ä¸ª InputStream å°è£…åœ¨ ObjectInputStream å†…ï¼Œç„¶åè°ƒç”¨ readObject()ï¼Œ
+     * æœ€åè·å¾—çš„æ˜¯ä¸€ä¸ªå‘ä¸Šè½¬å‹ä¸º Object çš„å¼•ç”¨ï¼Œæ‰€ä»¥å¿…é¡»å‘ä¸‹è½¬å‹ä¸ºå…·ä½“ç±»å‹ã€‚
      * <p>
-     * ×¢ÒâÔÚ¶ÔÒ»¸öSerializable¶ÔÏó½øĞĞ»¹Ô­µÄ¹ı³ÌÖĞ£¬Ã»ÓĞµ÷ÓÃÈÎºÎ¹¹ÔìÆ÷£¬°üÀ¨È±Ê¡µÄ¹¹ÔìÆ÷¡£
-     * ¶ÔÏóĞòÁĞ»¯ÊÇÃæÏò×Ö½ÚµÄ£¬Òò´Ë²ÉÓÃ InputStream ºÍ OutputStream ²ã´Î½á¹¹¡£
+     * æ³¨æ„åœ¨å¯¹ä¸€ä¸ªSerializableå¯¹è±¡è¿›è¡Œè¿˜åŸçš„è¿‡ç¨‹ä¸­ï¼Œæ²¡æœ‰è°ƒç”¨ä»»ä½•æ„é€ å™¨ï¼ŒåŒ…æ‹¬ç¼ºçœçš„æ„é€ å™¨ã€‚
+     * å¯¹è±¡åºåˆ—åŒ–æ˜¯é¢å‘å­—èŠ‚çš„ï¼Œå› æ­¤é‡‡ç”¨ InputStream å’Œ OutputStream å±‚æ¬¡ç»“æ„ã€‚
 	 */
 	private static void readObjectFromDisk(String filePath) throws Exception{
 		ObjectInputStream in = null;
 		try {
 			in = new ObjectInputStream(new FileInputStream(filePath));
-			// ¶ÁÈ¡¶ÔÏóÊ±£¬±ØĞëÒªĞ¡ĞÄµÄ¸ú×Ù´æ´¢¶ÔÏóµÄÊıÁ¿¡¢Ë³ĞòÒÔ¼°ÀàĞÍ
-			// ¶ÔÓÚreadObjectµÄÃ¿Ò»´Îµ÷ÓÃ¶¼»á¶ÁÈ¡ÀàĞÍÎªObjectµÄÏÂÒ»¸ö¶ÔÏó
-			String s = (String) in.readObject();// ·´ĞòÁĞ»¯¶ÔÏó²¢ÏòÏÂ×ªĞÍ
+			// è¯»å–å¯¹è±¡æ—¶ï¼Œå¿…é¡»è¦å°å¿ƒçš„è·Ÿè¸ªå­˜å‚¨å¯¹è±¡çš„æ•°é‡ã€é¡ºåºä»¥åŠç±»å‹
+			// å¯¹äºreadObjectçš„æ¯ä¸€æ¬¡è°ƒç”¨éƒ½ä¼šè¯»å–ç±»å‹ä¸ºObjectçš„ä¸‹ä¸€ä¸ªå¯¹è±¡
+			String s = (String) in.readObject();// ååºåˆ—åŒ–å¯¹è±¡å¹¶å‘ä¸‹è½¬å‹
 			Car car = (Car) in.readObject();
 			System.out.println(s + "object from file \n" + car);
 		} catch (IOException e) {
@@ -101,7 +101,7 @@ public class SerializeDemo {
 	}
 	
 	/**
-	 * ĞòÁĞ»¯¶ÔÏóµ½ÄÚ´æ
+	 * åºåˆ—åŒ–å¯¹è±¡åˆ°å†…å­˜
 	 */
 	private static byte[] writeObjectToMemory(Object object) throws IOException{
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
@@ -115,7 +115,7 @@ public class SerializeDemo {
 	}
 	
 	/**
-	 * ´ÓÄÚ´æÖĞ·´ĞòÁĞ»¯¶ÔÏó
+	 * ä»å†…å­˜ä¸­ååºåˆ—åŒ–å¯¹è±¡
 	 */
 	private static void readObjectFromMemory(byte[] bytes) throws Exception {
 		ObjectInputStream in = null;
@@ -136,15 +136,15 @@ public class SerializeDemo {
 }
 
 /**
- * Æû³µÀà
+ * æ±½è½¦ç±»
  */
 class Car implements Serializable {
 	
 	private static final long serialVersionUID = 126606150199829302L;
 
-	private String name;// Ãû³Æ
-	private int wheelsNumber;// ³µÂÖÊı
-	private Wheel[] wheels;// ³µÂÖÊı×é
+	private String name;// åç§°
+	private int wheelsNumber;// è½¦è½®æ•°
+	private Wheel[] wheels;// è½¦è½®æ•°ç»„
 
 	public Car() {
 		System.out.println("Default constructor");
@@ -171,13 +171,13 @@ class Car implements Serializable {
 }
 
 /**
- * ³µÂÖÀà
+ * è½¦è½®ç±»
  */
 class Wheel implements Serializable {
 	
 	private static final long serialVersionUID = -1088116744911728192L;
 
-	private int position;// ÂÖ×ÓµÄÎ»ÖÃ
+	private int position;// è½®å­çš„ä½ç½®
 
 	public Wheel(int position) {
 		this.position = position;

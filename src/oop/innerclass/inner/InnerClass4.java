@@ -4,16 +4,16 @@
 package inner;
 
 /**
- * ÄÚ²¿ÀàÑÝÊ¾4
+ * å†…éƒ¨ç±»æ¼”ç¤º4
  * <p>
- * ÓÃÍ¾4£º</br>
- * ¿ÉÒÔÔÚÒ»¸ö·½·¨ÀïÃæ»òÕßÈÎÒâµÄ×÷ÓÃÓòÄÚ¶¨ÒåÄÚ²¿Àà£¬ÕâÑù×öµÄÀíÓÉÊÇ£º
- * <li>1£¬ÊµÏÖÁËÄ³ÀàÐÍµÄ½Ó¿Ú£¬¿ÉÒÔ´´½¨²¢·µ»Ø¶ÔÆäµÄÒýÓÃ¡£
- * <li>2£¬µ±Òª½â¾öÒ»¸ö¸´ÔÓµÄÎÊÌâÏëÒª´´½¨Ò»¸öÀàÀ´¸¨Öú½â¾ö·½°¸£¬ µ«ÊÇÓÖ²»Ï£ÍûÕâ¸öÀàÊÇ¹«¹²¿ÉÓÃµÄ¡£
+ * ç”¨é€”4ï¼š</br>
+ * å¯ä»¥åœ¨ä¸€ä¸ªæ–¹æ³•é‡Œé¢æˆ–è€…ä»»æ„çš„ä½œç”¨åŸŸå†…å®šä¹‰å†…éƒ¨ç±»ï¼Œè¿™æ ·åšçš„ç†ç”±æ˜¯ï¼š
+ * <li>1ï¼Œå®žçŽ°äº†æŸç±»åž‹çš„æŽ¥å£ï¼Œå¯ä»¥åˆ›å»ºå¹¶è¿”å›žå¯¹å…¶çš„å¼•ç”¨ã€‚
+ * <li>2ï¼Œå½“è¦è§£å†³ä¸€ä¸ªå¤æ‚çš„é—®é¢˜æƒ³è¦åˆ›å»ºä¸€ä¸ªç±»æ¥è¾…åŠ©è§£å†³æ–¹æ¡ˆï¼Œ ä½†æ˜¯åˆä¸å¸Œæœ›è¿™ä¸ªç±»æ˜¯å…¬å…±å¯ç”¨çš„ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-4-13
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-13
  */
 public class InnerClass4 {
 
@@ -27,9 +27,9 @@ public class InnerClass4 {
 
 	private void internalTracking(boolean b) {
 		/*
-		 * ËäÈ»ÄÚ²¿ÀàÊÇ±»Ç¶ÈëÁËifÓï¾äµÄ×÷ÓÃÓòÄÚ£¬Õâ²¢²»ÊÇËµ¸ÃÀàµÄ´´½¨ÊÇÓÐÌõ¼þµÄ¡£
-		 * ËüÆäÊµÓë±ðµÄÀàÒ»Æð±àÒë¹ýÁË£¬µ«ÊÇÔÚ¶¨Òå¸ÃÀàµÄ×÷ÓÃÓòÍâËüÊÇ²»¿ÉÓÃµÄ¡£
-		 * ³ý´ËÖ®ÍâºÍ±ðµÄÆÕÍ¨ÀàÊÇÒ»ÑùµÄ¡£
+		 * è™½ç„¶å†…éƒ¨ç±»æ˜¯è¢«åµŒå…¥äº†ifè¯­å¥çš„ä½œç”¨åŸŸå†…ï¼Œè¿™å¹¶ä¸æ˜¯è¯´è¯¥ç±»çš„åˆ›å»ºæ˜¯æœ‰æ¡ä»¶çš„ã€‚
+		 * å®ƒå…¶å®žä¸Žåˆ«çš„ç±»ä¸€èµ·ç¼–è¯‘è¿‡äº†ï¼Œä½†æ˜¯åœ¨å®šä¹‰è¯¥ç±»çš„ä½œç”¨åŸŸå¤–å®ƒæ˜¯ä¸å¯ç”¨çš„ã€‚
+		 * é™¤æ­¤ä¹‹å¤–å’Œåˆ«çš„æ™®é€šç±»æ˜¯ä¸€æ ·çš„ã€‚
 		 */
 		if (b) {
 			class TrackingSlip {
@@ -47,7 +47,7 @@ public class InnerClass4 {
 			TrackingSlip ts = new TrackingSlip("slip");
 			ts.getSlip();
 		}
-		// ³¬³öÁË×÷ÓÃÓòTrackingSlip¾Í²»¿ÉÓÃÁË
+		// è¶…å‡ºäº†ä½œç”¨åŸŸTrackingSlipå°±ä¸å¯ç”¨äº†
 		// TrackingSlip ts = new TrackingSlip("cannot use");
 	}
 

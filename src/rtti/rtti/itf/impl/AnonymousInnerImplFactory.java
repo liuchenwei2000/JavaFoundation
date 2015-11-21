@@ -6,12 +6,12 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * ¹¹ÔìInterface¶ÔÏó£¨ÄäÃûÄÚ²¿ÀàÊµÏÖ£©µÄ¹¤³§Àà
+ * æ„é€ Interfaceå¯¹è±¡ï¼ˆåŒ¿åå†…éƒ¨ç±»å®ç°ï¼‰çš„å·¥å‚ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * @see rtti.itf.demo.AnonymousInnerImplDemo
  * 
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class AnonymousInnerImplFactory {
 

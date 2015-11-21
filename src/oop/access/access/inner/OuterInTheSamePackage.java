@@ -4,11 +4,11 @@
 package access.inner;
 
 /**
- * ÄÚ²¿ÀàÍ¬°üÆäËûÀàµÄ·ÃÎÊ¿ØÖÆÑİÊ¾
+ * å†…éƒ¨ç±»åŒåŒ…å…¶ä»–ç±»çš„è®¿é—®æ§åˆ¶æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class OuterInTheSamePackage {
 
@@ -17,25 +17,25 @@ public class OuterInTheSamePackage {
 	 */
 	public static void main(String[] args) {
 	       Outer out = new Outer();
-	       // Ê¹ÓÃ new µÄ·½Ê½µÃ²»µ½ Outer.PrivateInner µÄÊµÀı
-	       // ÒòÎªOuter.PrivateInner¶ÔÓÚ±¾ÀàÊÇ²»¿É¼ûµÄ
+	       // ä½¿ç”¨ new çš„æ–¹å¼å¾—ä¸åˆ° Outer.PrivateInner çš„å®ä¾‹
+	       // å› ä¸ºOuter.PrivateInnerå¯¹äºæœ¬ç±»æ˜¯ä¸å¯è§çš„
 	       // Outer.PrivateInner privateInner = out.new PrivateInner();
 	       
-	       // Ê¹ÓÃ new µÄ·½Ê½µÃµ½ Outer.DefaultInner µÄÊµÀı
+	       // ä½¿ç”¨ new çš„æ–¹å¼å¾—åˆ° Outer.DefaultInner çš„å®ä¾‹
 	       Outer.DefaultInner defaultInner = out.new DefaultInner();
-	       // µ«ÊÇ²»ÄÜ¹»·ÃÎÊDefaultInnerµÄprivate³ÉÔ±ºÍprivate·½·¨
+	       // ä½†æ˜¯ä¸èƒ½å¤Ÿè®¿é—®DefaultInnerçš„privateæˆå‘˜å’Œprivateæ–¹æ³•
 	       // defaultInner.privateField = 0;
 	       // defaultInner.privateMethod();
-	       // Ö»¿ÉÒÔ·ÃÎÊDefaultInnerµÄ·ÇprivateĞŞÊÎµÄ³ÉÔ±ºÍ·½·¨£¬ÕâºÍ»ù±¾·ÃÎÊÈ¨ÏŞ¿ØÖÆÊÇÒ»ÖÂµÄ
+	       // åªå¯ä»¥è®¿é—®DefaultInnerçš„éprivateä¿®é¥°çš„æˆå‘˜å’Œæ–¹æ³•ï¼Œè¿™å’ŒåŸºæœ¬è®¿é—®æƒé™æ§åˆ¶æ˜¯ä¸€è‡´çš„
 	       defaultInner.defaultField = 0;
 	       defaultInner.defaultMethod();
 	 
-	       // Ê¹ÓÃÍâ²¿Àà·½·¨getInnerInstance()Ò²ÎŞ·¨µÃµ½Outer.PrivateInner µÄÊµÀı
-	       // ËäÈ»¿ÉÒÔµ÷ÓÃpublic getPrivateInner()·½·¨£¬µ«ÊÇÎŞ·¨µÃµ½Outer.PrivateInnerÒıÓÃ
+	       // ä½¿ç”¨å¤–éƒ¨ç±»æ–¹æ³•getInnerInstance()ä¹Ÿæ— æ³•å¾—åˆ°Outer.PrivateInner çš„å®ä¾‹
+	       // è™½ç„¶å¯ä»¥è°ƒç”¨public getPrivateInner()æ–¹æ³•ï¼Œä½†æ˜¯æ— æ³•å¾—åˆ°Outer.PrivateInnerå¼•ç”¨
 	       // Outer.PrivateInner privateInner2 = out.getPrivateInner();
 	       
-	       // ¿ÉÒÔÍ¨¹ı½Ó¿ÚµÄÒıÓÃ·ÃÎÊµ½privateÄÚ²¿ÀàµÄpublic·½·¨
-	       // Í¬ÑùÊ¹ÓÃdefault¡¢protectedºÍpublicµÄÄÚ²¿Àà¶ÔÏó¶¼¿ÉÒÔ·ÃÎÊÕâ¸öpublic·½·¨
+	       // å¯ä»¥é€šè¿‡æ¥å£çš„å¼•ç”¨è®¿é—®åˆ°privateå†…éƒ¨ç±»çš„publicæ–¹æ³•
+	       // åŒæ ·ä½¿ç”¨defaultã€protectedå’Œpublicçš„å†…éƒ¨ç±»å¯¹è±¡éƒ½å¯ä»¥è®¿é—®è¿™ä¸ªpublicæ–¹æ³•
 	       IAccessable privateInner = out.getPrivateInner();
 	       privateInner.publicMethod();
 	}

@@ -7,18 +7,18 @@ import java.lang.reflect.*;
 import java.util.regex.Pattern;
 
 /**
- * java.lang.reflect°üµÄ»ù±¾ÀàºÍ½Ó¿Ú 
+ * java.lang.reflectåŒ…çš„åŸºæœ¬ç±»å’Œæ¥å£ 
  * <p>
- * reflect°ü£º </br>
- * Ìá¹©ÀàºÍ½Ó¿Ú£¬ÒÔ»ñÈ¡¹ØÓÚÀàºÍ¶ÔÏóµÄ·´ÉäĞÅÏ¢£¬ÈçMethodÀà¡¢FieldÀà¡¢ConstructorÀà¡£
+ * reflectåŒ…ï¼š </br>
+ * æä¾›ç±»å’Œæ¥å£ï¼Œä»¥è·å–å…³äºç±»å’Œå¯¹è±¡çš„åå°„ä¿¡æ¯ï¼Œå¦‚Methodç±»ã€Fieldç±»ã€Constructorç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class ReflectionDemo {
 	
-	// ¸ø¶¨µÄÕıÔò±í´ïÊ½±àÒëµ½Ä£Ê½ÖĞ
+	// ç»™å®šçš„æ­£åˆ™è¡¨è¾¾å¼ç¼–è¯‘åˆ°æ¨¡å¼ä¸­
     private static Pattern p = Pattern.compile("\\w+\\.");
     
 	/**
@@ -26,46 +26,46 @@ public class ReflectionDemo {
 	 */
 	public static void main(String[] args) {
 		try {
-			// ·µ»ØÓë´øÓĞ¸ø¶¨×Ö·û´®ÃûµÄÀà»ò½Ó¿ÚÏà¹ØÁªµÄClass¶ÔÏó
+			// è¿”å›ä¸å¸¦æœ‰ç»™å®šå­—ç¬¦ä¸²åçš„ç±»æˆ–æ¥å£ç›¸å…³è”çš„Classå¯¹è±¡
 			Class<?> c = Class.forName("inherit.differ.Human");
 			System.out.println("Package : ");
-			System.out.println("  " + c.getPackage());// ·µ»ØÀàµÄ°üÃû
+			System.out.println("  " + c.getPackage());// è¿”å›ç±»çš„åŒ…å
 			System.out.println("Class name : ");
-			System.out.print("  " + c.getName());// ·µ»ØÀàµÄÀàÃû
-			System.out.println("  " + c.getSimpleName());// ·µ»ØÀàµÄ¼òµ¥ÀàÃû(Ã»ÓĞ°üÃû)
+			System.out.print("  " + c.getName());// è¿”å›ç±»çš„ç±»å
+			System.out.println("  " + c.getSimpleName());// è¿”å›ç±»çš„ç®€å•ç±»å(æ²¡æœ‰åŒ…å)
 			System.out.println("Superclass name : ");
-			System.out.println("  " + c.getSuperclass().getName());// ·µ»ØÀàµÄÖ±½Ó³¬ÀàÃû
+			System.out.println("  " + c.getSuperclass().getName());// è¿”å›ç±»çš„ç›´æ¥è¶…ç±»å
 			System.out.println("Interfaces name : ");
-			// ·µ»Ø±íÊ¾Ä³Ğ©½Ó¿ÚµÄType£¬ÕâĞ©½Ó¿ÚÓÉ´Ë¶ÔÏóËù±íÊ¾µÄÀà»ò½Ó¿ÚÖ±½ÓÊµÏÖ(²»°üÀ¨Æä¸¸ÀàÊµÏÖµÄ½Ó¿Ú)
+			// è¿”å›è¡¨ç¤ºæŸäº›æ¥å£çš„Typeï¼Œè¿™äº›æ¥å£ç”±æ­¤å¯¹è±¡æ‰€è¡¨ç¤ºçš„ç±»æˆ–æ¥å£ç›´æ¥å®ç°(ä¸åŒ…æ‹¬å…¶çˆ¶ç±»å®ç°çš„æ¥å£)
 			showAll(c.getInterfaces());
 			System.out.println("Constructors : ");
 			/*
-			 * ·µ»ØÒ»¸ö°üº¬Ä³Ğ©Constructor¶ÔÏóµÄÊı×é 
-			 * ÕâĞ©¶ÔÏó·´Ó³´ËClass¶ÔÏóËù±íÊ¾µÄÀàµÄËùÓĞ¹«¹²¹¹Ôì·½·¨
+			 * è¿”å›ä¸€ä¸ªåŒ…å«æŸäº›Constructorå¯¹è±¡çš„æ•°ç»„ 
+			 * è¿™äº›å¯¹è±¡åæ˜ æ­¤Classå¯¹è±¡æ‰€è¡¨ç¤ºçš„ç±»çš„æ‰€æœ‰å…¬å…±æ„é€ æ–¹æ³•
 			 */
 			Constructor<?> constructors[] = c.getConstructors();
 			show(constructors);
 
 			System.out.println("Fields : ");
 			/*
-			 * ·µ»ØÒ»¸ö°üº¬Ä³Ğ©Field¶ÔÏóµÄÊı×é(°üÀ¨¼Ì³ĞµÄ) 
-			 * ÕâĞ©¶ÔÏó·´Ó³´ËClass¶ÔÏóËù±íÊ¾µÄÀà»ò½Ó¿ÚµÄËùÓĞ¿É·ÃÎÊ¹«¹²×Ö¶Î
+			 * è¿”å›ä¸€ä¸ªåŒ…å«æŸäº›Fieldå¯¹è±¡çš„æ•°ç»„(åŒ…æ‹¬ç»§æ‰¿çš„) 
+			 * è¿™äº›å¯¹è±¡åæ˜ æ­¤Classå¯¹è±¡æ‰€è¡¨ç¤ºçš„ç±»æˆ–æ¥å£çš„æ‰€æœ‰å¯è®¿é—®å…¬å…±å­—æ®µ
 			 */
 			Field fields[] = c.getFields();
 			showAll(fields);
 
 			System.out.println("Methods : ");
 			/*
-			 * ·µ»ØÒ»¸ö°üº¬Ä³Ğ©Method¶ÔÏóµÄÊı×é(°üÀ¨¼Ì³ĞµÄ) 
-			 * ÕâĞ©¶ÔÏó·´Ó³´ËClass¶ÔÏóËù±íÊ¾µÄÀà»ò½Ó¿ÚµÄ¹«¹²·½·¨
+			 * è¿”å›ä¸€ä¸ªåŒ…å«æŸäº›Methodå¯¹è±¡çš„æ•°ç»„(åŒ…æ‹¬ç»§æ‰¿çš„) 
+			 * è¿™äº›å¯¹è±¡åæ˜ æ­¤Classå¯¹è±¡æ‰€è¡¨ç¤ºçš„ç±»æˆ–æ¥å£çš„å…¬å…±æ–¹æ³•
 			 */
 			Method methods[] = c.getMethods();
 			show(methods);
 			System.out.println("public static methods : ");
 			for (Method method : methods) {
-				// »ñÈ¡·½·¨ĞŞÊÎ·û
+				// è·å–æ–¹æ³•ä¿®é¥°ç¬¦
 				int modifier = method.getModifiers();
-				// Í¨¹ıModifierÀàµÄ¾²Ì¬·½·¨¿ÉÒÔÅĞ¶Ï·½·¨µÄĞŞÊÎÊôĞÔ
+				// é€šè¿‡Modifierç±»çš„é™æ€æ–¹æ³•å¯ä»¥åˆ¤æ–­æ–¹æ³•çš„ä¿®é¥°å±æ€§
 				if (Modifier.isPublic(modifier) && Modifier.isStatic(modifier))
 					System.out.println(p.matcher(method.toString())
 							.replaceAll(""));
@@ -84,9 +84,9 @@ public class ReflectionDemo {
 	private static void show(Object obj[]) {
 		for (int i = 0; i < obj.length; i++) {
 			/*
-			 * ´´½¨Æ¥Åä¸ø¶¨ÊäÈëÓë´ËÄ£Ê½µÄÆ¥ÅäÆ÷ 
-			 * °´ÕıÔò±í´ïÊ½Æ¥Åä¹æÔòÈ¥µôÁË·½·¨ºÍ×Ö¶ÎµÄÇ°×ºĞŞÊÎ
-			 * Èçjava.lang.String±äÎªÁËString
+			 * åˆ›å»ºåŒ¹é…ç»™å®šè¾“å…¥ä¸æ­¤æ¨¡å¼çš„åŒ¹é…å™¨ 
+			 * æŒ‰æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…è§„åˆ™å»æ‰äº†æ–¹æ³•å’Œå­—æ®µçš„å‰ç¼€ä¿®é¥°
+			 * å¦‚java.lang.Stringå˜ä¸ºäº†String
 			 */
 			System.out.println(p.matcher(obj[i].toString()).replaceAll(""));
 		}

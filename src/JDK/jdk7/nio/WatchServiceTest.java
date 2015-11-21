@@ -14,15 +14,15 @@ import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 
 /**
- * WatchServiceÊ¾Àı
+ * WatchServiceç¤ºä¾‹
  * <p>
- * ÓÃIDE£¨ÀıÈçEclipse£©±à³ÌÊ±£¬Íâ²¿ĞŞ¸ÄÁË´úÂëÎÄ¼ş£¬IDE»áÂíÉÏÌáÊ¾"ÎÄ¼şÓĞ¸ü¸Ä"¡£
- * Java7µÄNIO2.0Ò²Ìá¹©ÁËÕâ¸ö¹¦ÄÜ£¨Watch Service API£©£¬ÓÃÓÚ¼àÌıÎÄ¼şÏµÍ³µÄ¸ü¸Ä¡£
- * Ëü²ÉÓÃÀàËÆ¹Û²ìÕßµÄÄ£Ê½£¬×¢²áÏà¹ØµÄÎÄ¼ş¸ü¸ÄÊÂ¼ş£¨ĞÂ½¨¡¢É¾³ı¡¢ĞŞ¸Ä£©£¬µ±ÊÂ¼ş·¢ÉúµÄÍ¨ÖªÏà¹ØµÄ¼àÌıÕß¡£
+ * ç”¨IDEï¼ˆä¾‹å¦‚Eclipseï¼‰ç¼–ç¨‹æ—¶ï¼Œå¤–éƒ¨ä¿®æ”¹äº†ä»£ç æ–‡ä»¶ï¼ŒIDEä¼šé©¬ä¸Šæç¤º"æ–‡ä»¶æœ‰æ›´æ”¹"ã€‚
+ * Java7çš„NIO2.0ä¹Ÿæä¾›äº†è¿™ä¸ªåŠŸèƒ½ï¼ˆWatch Service APIï¼‰ï¼Œç”¨äºç›‘å¬æ–‡ä»¶ç³»ç»Ÿçš„æ›´æ”¹ã€‚
+ * å®ƒé‡‡ç”¨ç±»ä¼¼è§‚å¯Ÿè€…çš„æ¨¡å¼ï¼Œæ³¨å†Œç›¸å…³çš„æ–‡ä»¶æ›´æ”¹äº‹ä»¶ï¼ˆæ–°å»ºã€åˆ é™¤ã€ä¿®æ”¹ï¼‰ï¼Œå½“äº‹ä»¶å‘ç”Ÿçš„é€šçŸ¥ç›¸å…³çš„ç›‘å¬è€…ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ24ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ24æ—¥
  */
 public class WatchServiceTest {
 
@@ -32,34 +32,34 @@ public class WatchServiceTest {
 	public static void main(String[] args) {
 		try {
 			FileSystem fileSystem = FileSystems.getDefault();
-			// 1£¬ÎªÎÄ¼şÏµÍ³´´½¨Ò»¸öWatchService ÊµÀı
+			// 1ï¼Œä¸ºæ–‡ä»¶ç³»ç»Ÿåˆ›å»ºä¸€ä¸ªWatchService å®ä¾‹
 			WatchService watchService = fileSystem.newWatchService();
 
 			Path dir = Paths.get("D:/files");
 			
-			// 2£¬ÎªÏë¼àÌıµÄÄ¿Â¼×¢²á watchService¡£×¢²áÊ±£¬Òª×¢Ã÷¼àÌıÄÇĞ©ÊÂ¼ş¡£
-			dir.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, // ĞÂ½¨
-					StandardWatchEventKinds.ENTRY_MODIFY, // ĞŞ¸Ä
-					StandardWatchEventKinds.ENTRY_DELETE // É¾³ı
+			// 2ï¼Œä¸ºæƒ³ç›‘å¬çš„ç›®å½•æ³¨å†Œ watchServiceã€‚æ³¨å†Œæ—¶ï¼Œè¦æ³¨æ˜ç›‘å¬é‚£äº›äº‹ä»¶ã€‚
+			dir.register(watchService, StandardWatchEventKinds.ENTRY_CREATE, // æ–°å»º
+					StandardWatchEventKinds.ENTRY_MODIFY, // ä¿®æ”¹
+					StandardWatchEventKinds.ENTRY_DELETE // åˆ é™¤
 					);
 
-			// 3£¬ÔÚÎŞÏŞÑ­»·ÀïÃæµÈ´ıÊÂ¼şµÄ´¥·¢¡£µ±Ò»¸öÊÂ¼ş·¢ÉúÊ±£¬key·¢³öĞÅºÅ²¢ÇÒ¼ÓÈëµ½ watchService µÄqueue¡£
+			// 3ï¼Œåœ¨æ— é™å¾ªç¯é‡Œé¢ç­‰å¾…äº‹ä»¶çš„è§¦å‘ã€‚å½“ä¸€ä¸ªäº‹ä»¶å‘ç”Ÿæ—¶ï¼Œkeyå‘å‡ºä¿¡å·å¹¶ä¸”åŠ å…¥åˆ° watchService çš„queueã€‚
 			while (true) {
 				System.out.println("Waiting for a watch event");
-				// take·½·¨»á×èÈûµ±Ç°Ïß³Ì£¬Ö±µ½Ò»¸öÎÄ¼ş±ä»¯µÄÊÂ¼ş·¢Éú¡£´ËÊ±£¬Ò»¸öWatchKey¶ÔÏó»á±»·µ»Ø¡£WatchKey¶ÔÏó°üº¬ÁËËù·¢ÉúÊÂ¼şµÄÏà¹ØĞÅÏ¢¡£
+				// takeæ–¹æ³•ä¼šé˜»å¡å½“å‰çº¿ç¨‹ï¼Œç›´åˆ°ä¸€ä¸ªæ–‡ä»¶å˜åŒ–çš„äº‹ä»¶å‘ç”Ÿã€‚æ­¤æ—¶ï¼Œä¸€ä¸ªWatchKeyå¯¹è±¡ä¼šè¢«è¿”å›ã€‚WatchKeyå¯¹è±¡åŒ…å«äº†æ‰€å‘ç”Ÿäº‹ä»¶çš„ç›¸å…³ä¿¡æ¯ã€‚
 				WatchKey watchKey = watchService.take();
 				System.out.println("Path being watched: " + watchKey.watchable());
 				System.out.println();
 
 				if (watchKey.isValid()) {
-					// 5£¬±éÀúkeyµÄ¸÷ÖÖÊÂ¼ş
-					for (WatchEvent<?> event : watchKey.pollEvents()) {// pollEvents·½·¨·µ»ØÁËÒ»¸öËùÓĞÒª±»Ö´ĞĞµÄÊÂ¼şÁĞ±í¡£
+					// 5ï¼Œéå†keyçš„å„ç§äº‹ä»¶
+					for (WatchEvent<?> event : watchKey.pollEvents()) {// pollEventsæ–¹æ³•è¿”å›äº†ä¸€ä¸ªæ‰€æœ‰è¦è¢«æ‰§è¡Œçš„äº‹ä»¶åˆ—è¡¨ã€‚
 						System.out.println("Kinds: " + event.kind());
 						System.out.println("Contnet: " + event.context());
 						System.out.println("Count: " + event.count());
 						System.out.println();
 					}
-					// 6£¬ÖØÖÃ key£¬ÖØĞÂµÈ´ı¸ÃÀàĞÍÊÂ¼ş¡£
+					// 6ï¼Œé‡ç½® keyï¼Œé‡æ–°ç­‰å¾…è¯¥ç±»å‹äº‹ä»¶ã€‚
 					boolean valid = watchKey.reset();
 
 					if (!valid) {

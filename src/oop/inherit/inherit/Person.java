@@ -4,11 +4,11 @@
 package inherit;
 
 /**
- * ÈËÀà
+ * äººç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Person {
 	
@@ -18,8 +18,8 @@ public class Person {
 	int pack;
 
 	public Person() {
-		// µ÷ÓÃ×ÔÉíµÄÆäËû¹¹Ôì·½·¨
-		this("ÎŞÃûÊÏ", 0, 'ÎŞ');
+		// è°ƒç”¨è‡ªèº«çš„å…¶ä»–æ„é€ æ–¹æ³•
+		this("æ— åæ°", 0, 'æ— ');
 	}
 
 	public Person(String name, int age, char sex) {

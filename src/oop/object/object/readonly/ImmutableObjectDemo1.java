@@ -4,11 +4,11 @@
 package object.readonly;
 
 /**
- * ²»¿É±ä¶ÔÏóÑİÊ¾Àà
+ * ä¸å¯å˜å¯¹è±¡æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-8
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-8
  */
 public class ImmutableObjectDemo1 {
 	
@@ -17,9 +17,9 @@ public class ImmutableObjectDemo1 {
 	 */
 	public static void main(String[] args) {
 		ImmutableObject x = new ImmutableObject(47);
-		System.out.println("before println(x)£ºx = " + x.read());
+		System.out.println("before println(x)ï¼šx = " + x.read());
 		println(x);
-		System.out.println("after println(x)£ºx = " + x.read());
+		System.out.println("after println(x)ï¼šx = " + x.read());
 	}
 	
 	private static void println(ImmutableObject io) {
@@ -30,18 +30,18 @@ public class ImmutableObjectDemo1 {
 }
 
 /** 
- * ²»¿É±ä¶ÔÏó 
+ * ä¸å¯å˜å¯¹è±¡ 
  */
 class ImmutableObject {
 
-	/* ËùÓĞÊı¾İ¶¼ÊÇprivateµÄ£¬ÉõÖÁÊÇfinalµÄ */
+	/* æ‰€æœ‰æ•°æ®éƒ½æ˜¯privateçš„ï¼Œç”šè‡³æ˜¯finalçš„ */
 	private int value;
 
 	public ImmutableObject(int value) {
 		this.value = value;
 	}
 
-	/* Ã»ÓĞĞŞ¸ÄprivateÊı¾İµÄ·½·¨ */
+	/* æ²¡æœ‰ä¿®æ”¹privateæ•°æ®çš„æ–¹æ³• */
 	public int read() {
 		return value;
 	}
@@ -51,7 +51,7 @@ class ImmutableObject {
 	}
 
 	/**
-	 * ´´½¨ÁËÒ»¸öĞÂµÄ¶ÔÏó·µ»Ø£¬²¢Ã»ÓĞĞŞ¸ÄÔ­¶ÔÏó
+	 * åˆ›å»ºäº†ä¸€ä¸ªæ–°çš„å¯¹è±¡è¿”å›ï¼Œå¹¶æ²¡æœ‰ä¿®æ”¹åŸå¯¹è±¡
 	 */
 	public ImmutableObject multiply(int multiplier) {
 		return new ImmutableObject(value * multiplier);

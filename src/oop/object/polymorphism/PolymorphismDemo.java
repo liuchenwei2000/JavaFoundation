@@ -4,11 +4,11 @@
 package polymorphism;
 
 /**
- * ¶àÌ¬ÑİÊ¾
+ * å¤šæ€æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class PolymorphismDemo {
 	
@@ -17,11 +17,11 @@ public class PolymorphismDemo {
 	 */
 	public static void main(String[] args) {
 		Animal a = new Dog();
-		a.sayHi();// aÊµ¼ÊÊÇÒ»¸öDog
+		a.sayHi();// aå®é™…æ˜¯ä¸€ä¸ªDog
 		Animal b = new Bulldog();
-		b.sayHi();// bÊµ¼ÊÊÇÒ»¸öBulldog
+		b.sayHi();// bå®é™…æ˜¯ä¸€ä¸ªBulldog
 		Dog dog = (Dog) b;
-		dog.sayHi();// dogÊµ¼ÊÉÏÊÇÒ»¸öBulldog
+		dog.sayHi();// dogå®é™…ä¸Šæ˜¯ä¸€ä¸ªBulldog
 		check(dog);
 		Bulldog bulldog = (Bulldog) b;
 		check(bulldog);
@@ -50,7 +50,7 @@ class Dog implements Animal {
 	}
 
 	/**
-	 * ´Ë´¦·½·¨ÊÇË½ÓĞµÄ
+	 * æ­¤å¤„æ–¹æ³•æ˜¯ç§æœ‰çš„
 	 */
 	private String bark() {
 		return "wang-wang";
@@ -69,7 +69,7 @@ class Bulldog extends Dog {
 	}
 
 	/**
-	 * ÆäÊµÕâ¸ö·½·¨Ã»ÓĞOverride¸¸Àà¸Ã·½·¨£¬ÒòÎª×ÓÀà¸ù±¾¾Í¼Ì³Ğ²»µ½¸¸ÀàµÄË½ÓĞ³ÉÔ±¡£
+	 * å…¶å®è¿™ä¸ªæ–¹æ³•æ²¡æœ‰Overrideçˆ¶ç±»è¯¥æ–¹æ³•ï¼Œå› ä¸ºå­ç±»æ ¹æœ¬å°±ç»§æ‰¿ä¸åˆ°çˆ¶ç±»çš„ç§æœ‰æˆå‘˜ã€‚
 	 */
 	@SuppressWarnings("unused")
 	private String bark() {
@@ -77,7 +77,7 @@ class Bulldog extends Dog {
 	}
 	
 	/*
-	 * // ¼´Ê¹¶ÔÕâ¸ö·½·¨½øĞĞµÄ¸²¸ÇÒ²²»»áÓ°ÏìÊä³ö 
+	 * // å³ä½¿å¯¹è¿™ä¸ªæ–¹æ³•è¿›è¡Œçš„è¦†ç›–ä¹Ÿä¸ä¼šå½±å“è¾“å‡º 
 	 * public void sayHi() 
 	 * { 
 	 * super.sayHi(); 

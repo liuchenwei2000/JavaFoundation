@@ -4,11 +4,11 @@
 package generic;
 
 /**
- * ·ºĞÍµÄ¼Ì³Ğ
+ * æ³›å‹çš„ç»§æ‰¿
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-8-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-3
  */
 public class InheritInGeneric {
 
@@ -16,19 +16,19 @@ public class InheritInGeneric {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Car<Father>¡¢Car<Son>¶¼ÊÇCarÔ­ÉúÀàĞÍµÄ×ÓÀà£¬µ«ÊÇCar<Father>¡¢Car<Son>Ö®¼äÃ»ÓĞÈÎºÎ¹ØÏµ
-		// ÕâºÍFatherºÍSonµÄ¼Ì³Ğ²ã´ÎÃ»ÓĞÈÎºÎ¹ØÏµ
+		// Car<Father>ã€Car<Son>éƒ½æ˜¯CaråŸç”Ÿç±»å‹çš„å­ç±»ï¼Œä½†æ˜¯Car<Father>ã€Car<Son>ä¹‹é—´æ²¡æœ‰ä»»ä½•å…³ç³»
+		// è¿™å’ŒFatherå’ŒSonçš„ç»§æ‰¿å±‚æ¬¡æ²¡æœ‰ä»»ä½•å…³ç³»
 		Car<Father> c1 = new Car<Father>();
 		System.out.println(c1.getClass());
 		Car<Son> c2 = new Car<Son>();
 		System.out.println(c2.getClass());
 		
-		// SmallCar<Father>¡¢SmallCar<Son>¶¼ÊÇSmallCarÔ­ÉúÀàĞÍµÄ×ÓÀà
+		// SmallCar<Father>ã€SmallCar<Son>éƒ½æ˜¯SmallCaråŸç”Ÿç±»å‹çš„å­ç±»
 		SmallCar<Father> sc1 = new SmallCar<Father>();
 		SmallCar<Son> sc2 = new SmallCar<Son>();
-		// Ö¤Ã÷SmallCar<Father>ÊÇCar<Father>µÄ×ÓÀà
+		// è¯æ˜SmallCar<Father>æ˜¯Car<Father>çš„å­ç±»
 		c1 = sc1;
-		// Ö¤Ã÷SmallCar<Son>ÊÇCar<Son>µÄ×ÓÀà
+		// è¯æ˜SmallCar<Son>æ˜¯Car<Son>çš„å­ç±»
 		c2 = sc2;
 	}
 }

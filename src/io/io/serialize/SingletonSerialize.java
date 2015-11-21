@@ -11,15 +11,15 @@ import java.io.ObjectStreamException;
 import java.io.Serializable;
 
 /**
- * µ¥Àý¶ÔÏóµÄÐòÁÐ»¯
+ * å•ä¾‹å¯¹è±¡çš„åºåˆ—åŒ–
  * <p>
- * ½«Ò»¸öµ¥Àý¶ÔÏó(»ò¼¸¸öÌØ¶¨µÄ¶ÔÏó)ÐòÁÐ»¯ºó£¬È»ºóÔÙ·´ÐòÁÐ»¯»ØÀ´ºó£¬µÃµ½µÄ¶ÔÏóÊÇÒ»¸öÐÂµÄ¶ÔÏó²¢²»ÊÇÔ­À´µÄµ¥Àý¶ÔÏó¡£
- * ¾¡¹Ü¶ÔÏóËùÊôÀàµÄ¹¹ÔìÆ÷ÊÇË½ÓÐµÄ£¬µ«ÊÇÐòÁÐ»¯»úÖÆ»¹ÊÇ¿ÉÒÔ´´½¨ÐÂµÄ¶ÔÏó¡£
- * Òª½â¾öÕâ¸öÎÊÌâ£¬ÐèÒª¶¨ÒåÒ»¸öÌØÊâµÄÐòÁÐ»¯·½·¨ readResolve()¡£
+ * å°†ä¸€ä¸ªå•ä¾‹å¯¹è±¡(æˆ–å‡ ä¸ªç‰¹å®šçš„å¯¹è±¡)åºåˆ—åŒ–åŽï¼Œç„¶åŽå†ååºåˆ—åŒ–å›žæ¥åŽï¼Œå¾—åˆ°çš„å¯¹è±¡æ˜¯ä¸€ä¸ªæ–°çš„å¯¹è±¡å¹¶ä¸æ˜¯åŽŸæ¥çš„å•ä¾‹å¯¹è±¡ã€‚
+ * å°½ç®¡å¯¹è±¡æ‰€å±žç±»çš„æž„é€ å™¨æ˜¯ç§æœ‰çš„ï¼Œä½†æ˜¯åºåˆ—åŒ–æœºåˆ¶è¿˜æ˜¯å¯ä»¥åˆ›å»ºæ–°çš„å¯¹è±¡ã€‚
+ * è¦è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œéœ€è¦å®šä¹‰ä¸€ä¸ªç‰¹æ®Šçš„åºåˆ—åŒ–æ–¹æ³• readResolve()ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-27
  */
 public class SingletonSerialize {
 
@@ -39,7 +39,7 @@ public class SingletonSerialize {
 	}
 
 	/**
-	 * ²âÊÔ²ÎÊý¶ÔÏóÐòÁÐ»¯µ½ÎÄ¼þÖÐºóÔÙ·´ÐòÁÐ»¯»ØÀ´µÄ¶ÔÏóÊÇ·ñºÍÔ­¶ÔÏóÊÇÍ¬Ò»¸ö(==)
+	 * æµ‹è¯•å‚æ•°å¯¹è±¡åºåˆ—åŒ–åˆ°æ–‡ä»¶ä¸­åŽå†ååºåˆ—åŒ–å›žæ¥çš„å¯¹è±¡æ˜¯å¦å’ŒåŽŸå¯¹è±¡æ˜¯åŒä¸€ä¸ª(==)
 	 */
 	private static void test(Object object, String fileName) throws Exception {
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName));
@@ -55,7 +55,7 @@ public class SingletonSerialize {
 }
 
 /**
- * ±¾Ààµ¥Àý²¢ÇÒÃ»ÓÐ¶¨ÒåÈÎºÎºÍÐòÁÐ»¯ÓÐ¹ØµÄ·½·¨
+ * æœ¬ç±»å•ä¾‹å¹¶ä¸”æ²¡æœ‰å®šä¹‰ä»»ä½•å’Œåºåˆ—åŒ–æœ‰å…³çš„æ–¹æ³•
  */
 class Earth implements Serializable {
 
@@ -69,7 +69,7 @@ class Earth implements Serializable {
 }
 
 /**
- * ±¾Ààµ¥Àý²¢ÇÒ¶¨ÒåÁË×Ô¼ºµÄreadResolve·½·¨
+ * æœ¬ç±»å•ä¾‹å¹¶ä¸”å®šä¹‰äº†è‡ªå·±çš„readResolveæ–¹æ³•
  */
 class Moon implements Serializable {
 
@@ -82,11 +82,11 @@ class Moon implements Serializable {
 	}
 
 	/**
-	 * Èç¹ûreadResolve·½·¨±»¶¨ÒåÁË£¬Ëü½«ÔÚ¶ÔÏó·´ÐòÁÐ»¯ºó±»µ÷ÓÃ¡£
-	 * Ëü±ØÐë·µ»ØÒ»¸ö¶ÔÏó£¬Ò²¾ÍÊÇreadObject·½·¨·µ»ØµÄÀàÐÍ¡£
+	 * å¦‚æžœreadResolveæ–¹æ³•è¢«å®šä¹‰äº†ï¼Œå®ƒå°†åœ¨å¯¹è±¡ååºåˆ—åŒ–åŽè¢«è°ƒç”¨ã€‚
+	 * å®ƒå¿…é¡»è¿”å›žä¸€ä¸ªå¯¹è±¡ï¼Œä¹Ÿå°±æ˜¯readObjectæ–¹æ³•è¿”å›žçš„ç±»åž‹ã€‚
 	 */
 	protected Object readResolve() throws ObjectStreamException {
-		// ÕâÀï·µ»Ø±¾ÀàµÄµ¥Àý¶ÔÏó¡£
+		// è¿™é‡Œè¿”å›žæœ¬ç±»çš„å•ä¾‹å¯¹è±¡ã€‚
 		return MOON;
 	}
 }

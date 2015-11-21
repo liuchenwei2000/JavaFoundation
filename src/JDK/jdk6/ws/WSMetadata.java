@@ -6,11 +6,11 @@ package jdk6.ws;
 import javax.xml.ws.Endpoint;
 
 /**
- * 10£¬Web Services ÔªÊı¾İ(metadata)
+ * 10ï¼ŒWeb Services å…ƒæ•°æ®(metadata)
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-30
  */
 public class WSMetadata {
 
@@ -18,16 +18,16 @@ public class WSMetadata {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ÔÚä¯ÀÀÆ÷ÖĞÊäÈëhttp://localhost:8888/ws/WSProvider?wsdl¾Í¿ÉÒÔ¿´µ½Éú³ÉµÄWSDLÎÄ¼ş
+		// åœ¨æµè§ˆå™¨ä¸­è¾“å…¥http://localhost:8888/ws/WSProvider?wsdlå°±å¯ä»¥çœ‹åˆ°ç”Ÿæˆçš„WSDLæ–‡ä»¶
 		new Thread(new WSPublisher()).start();
 	}
 }
 
 /**
- * ·¢²¼WSProviderµ½http://localhost:8888/ws/WSProviderÕâ¸öµØÖ·Ö®Ç°±ØĞëµ÷ÓÃwsgenÃüÁî
- * Éú³É·şÎñÀàWSProviderµÄÖ§³ÖÀà£¬ÃüÁîÈçÏÂ£º
+ * å‘å¸ƒWSProvideråˆ°http://localhost:8888/ws/WSProviderè¿™ä¸ªåœ°å€ä¹‹å‰å¿…é¡»è°ƒç”¨wsgenå‘½ä»¤
+ * ç”ŸæˆæœåŠ¡ç±»WSProviderçš„æ”¯æŒç±»ï¼Œå‘½ä»¤å¦‚ä¸‹ï¼š
  * wsgen -cp . jdk6.WSProvider
- * ĞèÒªÔÚ WSProvider.class ÎÄ¼şËùÔÚµÄbinÄ¿Â¼ÀïÖ´ĞĞÉÏÊöÃüÁî
+ * éœ€è¦åœ¨ WSProvider.class æ–‡ä»¶æ‰€åœ¨çš„binç›®å½•é‡Œæ‰§è¡Œä¸Šè¿°å‘½ä»¤
  */
 class WSPublisher implements Runnable {
 	

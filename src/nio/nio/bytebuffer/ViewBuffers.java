@@ -12,16 +12,16 @@ import java.nio.LongBuffer;
 import java.nio.ShortBuffer;
 
 /**
- * 4��ByteBuffer���е���ͼ��������ʾ
+ * 4，ByteBuffer所有的视图缓冲器演示
  * <p>
- * һ���ײ�� ByteBuffer ͨ����ͼ����������������ʱ���Ϳ���ֱ�ӱ�д��ͨ���У������ͨ���ж�ȡ�������ס�
- * Ȼ��ʹ����ͼ���������԰��κ����ݶ�ת����ĳһ�ض��Ļ������͡�
+ * 一旦底层的 ByteBuffer 通过视图缓冲器被填满数据时，就可以直接被写到通道中，正像从通道中读取那样容易。
+ * 然后使用视图缓冲器可以把任何数据都转换成某一特定的基本类型。
  * <p>
- * �ڱ����У�ͨ����ͬһ��ByteBuffer�Ͻ�����ͬ����ͼ����������ͬһ�ֽ�����ת������short,int,float,long,��double���͵����ݡ�
+ * 在本例中，通过在同一个ByteBuffer上建立不同的视图缓冲器，将同一字节序列转换成了short,int,float,long,和double类型的数据。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2009-7-23
+ * 创建日期：2009-7-23
  */
 public class ViewBuffers {
 
@@ -33,8 +33,8 @@ public class ViewBuffers {
 		byteBuffer.rewind();
 		
 		/*
-		 * ByteBuffer ��һ����"��װ"����8�ֽ����飬Ȼ��ͨ�����ֲ�ͬ�Ļ������͵���ͼ������������ʾ�˳�����
-		 * ������п��Կ��������Ӳ�ͬ���͵Ļ�������ȡʱ��������ʾ�ķ�ʽҲ��ͬ��
+		 * ByteBuffer 是一个被"包装"过的8字节数组，然后通过各种不同的基本类型的视图缓冲器把它显示了出来。
+		 * 在输出中可以看到，当从不同类型的缓冲器读取时，数据显示的方式也不同。
 		 */
 		System.out.println("Byte Buffer");
 		while (byteBuffer.hasRemaining()) {

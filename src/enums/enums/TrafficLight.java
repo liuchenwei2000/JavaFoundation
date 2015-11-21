@@ -4,11 +4,11 @@
 package enums;
 
 /**
- * switchÓï¾äÖĞµÄenum
+ * switchè¯­å¥ä¸­çš„enum
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public class TrafficLight {
 
@@ -16,7 +16,7 @@ public class TrafficLight {
 	
 	public void change(){
 		switch(color){
-		// ÕâÀï²»±ØĞ´³ÉColor.RED
+		// è¿™é‡Œä¸å¿…å†™æˆColor.RED
 		case RED:
 			color = Color.YELLOW;
 			break;

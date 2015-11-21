@@ -4,13 +4,13 @@
 package inner.use;
 
 /**
- * ĞòÁĞÀà
+ * åºåˆ—ç±»
  * <p>
- * ÓÃÀ´ÑİÊ¾ÔÚÒ»¸öÀàÖĞÓÃÄÚ²¿ÀàÊµÏÖÁ½¸ö½Ó¿ÚµÄÁé»îĞÔ¡£
+ * ç”¨æ¥æ¼”ç¤ºåœ¨ä¸€ä¸ªç±»ä¸­ç”¨å†…éƒ¨ç±»å®ç°ä¸¤ä¸ªæ¥å£çš„çµæ´»æ€§ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-4-16
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-16
  */
 public class Sequence {
 
@@ -31,7 +31,7 @@ public class Sequence {
 	}
 
 	/**
-	 * ÓÃÄÚ²¿ÀàÊµÏÖÁËË³Ğò±éÀúÆ÷
+	 * ç”¨å†…éƒ¨ç±»å®ç°äº†é¡ºåºéå†å™¨
 	 */
 	private class SequenceIterator implements Iterator {
 		
@@ -56,7 +56,7 @@ public class Sequence {
 	}
 
 	/**
-	 * ÓÃÄÚ²¿ÀàÊµÏÖÁËµ¹Ğò±éÀúÆ÷
+	 * ç”¨å†…éƒ¨ç±»å®ç°äº†å€’åºéå†å™¨
 	 */
 	private class SequenceReverseIterator implements Iterator {
 		
@@ -77,7 +77,7 @@ public class Sequence {
 	}
 
 	/**
-	 * ¸ù¾İ±éÀúÆ÷´òÓ¡ÔªËØ
+	 * æ ¹æ®éå†å™¨æ‰“å°å…ƒç´ 
 	 */
 	private static void print(Iterator it) {
 		while (!it.end()) {
@@ -103,7 +103,7 @@ public class Sequence {
 }
 
 /**
- * ±éÀúÆ÷½Ó¿Ú
+ * éå†å™¨æ¥å£
  */
 interface Iterator {
 	

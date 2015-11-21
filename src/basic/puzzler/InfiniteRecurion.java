@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ÎÞÒâÊ¶µÄÎÞÏÞµÝ¹é
+ * æ— æ„è¯†çš„æ— é™é€’å½’
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-7
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-7
  */
 public class InfiniteRecurion {
 
@@ -27,9 +27,9 @@ public class InfiniteRecurion {
 	}
 
 	/**
-	 * ÕâÀï·¢ÉúÁË×Ô¶¯ÀàÐÍ×ª»»£¬ÓÉInfiniteRecurionÀàÐÍ×ª»»³ÉÁËStringÀàÐÍ¡£
-	 * ÒòÎª±àÒëÆ÷¿´µ½Ò»¸öString¶ÔÏóºóÃæ¸ú×ÅÒ»¸ö"+"£¬¶øºóÃæµÄ¶ÔÏó²»ÊÇString£¬±àÒëÆ÷ÊÔ×Å½«this×ª»»³ÉÒ»¸öString£¬ÓÚÊÇµ÷ÓÃÁËËüµÄtoString·½·¨¡£
-	 * Èç¹ûÕæµÄÏë´òÓ¡¶ÔÏóµÄÄÚ´æµØÖ·Ó¦¸Ãµ÷ÓÃObjectÀàÖÐµÄtoString·½·¨£¬¼´²»Ê¹ÓÃthis¶øÊ¹ÓÃsuperÀ´µ÷ÓÃ¸¸ÀàµÄtoString·½·¨¡£
+	 * è¿™é‡Œå‘ç”Ÿäº†è‡ªåŠ¨ç±»åž‹è½¬æ¢ï¼Œç”±InfiniteRecurionç±»åž‹è½¬æ¢æˆäº†Stringç±»åž‹ã€‚
+	 * å› ä¸ºç¼–è¯‘å™¨çœ‹åˆ°ä¸€ä¸ªStringå¯¹è±¡åŽé¢è·Ÿç€ä¸€ä¸ª"+"ï¼Œè€ŒåŽé¢çš„å¯¹è±¡ä¸æ˜¯Stringï¼Œç¼–è¯‘å™¨è¯•ç€å°†thisè½¬æ¢æˆä¸€ä¸ªStringï¼ŒäºŽæ˜¯è°ƒç”¨äº†å®ƒçš„toStringæ–¹æ³•ã€‚
+	 * å¦‚æžœçœŸçš„æƒ³æ‰“å°å¯¹è±¡çš„å†…å­˜åœ°å€åº”è¯¥è°ƒç”¨Objectç±»ä¸­çš„toStringæ–¹æ³•ï¼Œå³ä¸ä½¿ç”¨thisè€Œä½¿ç”¨superæ¥è°ƒç”¨çˆ¶ç±»çš„toStringæ–¹æ³•ã€‚
 	 *
 	 * @see java.lang.Object#toString()
 	 */

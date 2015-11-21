@@ -9,19 +9,19 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
- * ±ê×¼IOÑİÊ¾Àà
+ * æ ‡å‡†IOæ¼”ç¤ºç±»
  * <p>
- * "±ê×¼I/O"Õâ¸öÊõÓï²Î¿¼µÄÊÇUnixÖĞ"³ÌĞòËùÊ¹ÓÃµÄµ¥Ò»ĞÅÏ¢Á÷"Õâ¸ö¸ÅÄî¡£(ÔÚWindowsºÍÆäËûĞí¶à²Ù×÷ÏµÍ³ÖĞ£¬Ò²ÓĞÏàËÆĞÎÊ½µÄÊµÏÖ)
- * ³ÌĞòµÄËùÓĞÊäÈë¶¼¿ÉÒÔÀ´×ÔÓÚ"±ê×¼ÊäÈë"£¬ËüµÄËùÓĞÊä³ö¶¼¿ÉÒÔ·¢ËÍµ½"±ê×¼Êä³ö"£¬ÒÔ¼°ËùÓĞµÄ´íÎóĞÅÏ¢¶¼¿ÉÒÔ·¢ËÍµ½"±ê×¼´íÎó"¡£
+ * "æ ‡å‡†I/O"è¿™ä¸ªæœ¯è¯­å‚è€ƒçš„æ˜¯Unixä¸­"ç¨‹åºæ‰€ä½¿ç”¨çš„å•ä¸€ä¿¡æ¯æµ"è¿™ä¸ªæ¦‚å¿µã€‚(åœ¨Windowså’Œå…¶ä»–è®¸å¤šæ“ä½œç³»ç»Ÿä¸­ï¼Œä¹Ÿæœ‰ç›¸ä¼¼å½¢å¼çš„å®ç°)
+ * ç¨‹åºçš„æ‰€æœ‰è¾“å…¥éƒ½å¯ä»¥æ¥è‡ªäº"æ ‡å‡†è¾“å…¥"ï¼Œå®ƒçš„æ‰€æœ‰è¾“å‡ºéƒ½å¯ä»¥å‘é€åˆ°"æ ‡å‡†è¾“å‡º"ï¼Œä»¥åŠæ‰€æœ‰çš„é”™è¯¯ä¿¡æ¯éƒ½å¯ä»¥å‘é€åˆ°"æ ‡å‡†é”™è¯¯"ã€‚
  * <p> 
- * ±ê×¼I/OµÄÒâÒåÔÚÓÚ£º
- * ¿ÉÒÔºÜÈİÒ×µØ°Ñ³ÌĞò´®ÁªÆğÀ´£¬Ò»¸ö³ÌĞòµÄ±ê×¼Êä³ö¿ÉÒÔ³ÉÎªÁíÒ»³ÌĞòµÄ±ê×¼ÊäÈë
+ * æ ‡å‡†I/Oçš„æ„ä¹‰åœ¨äºï¼š
+ * å¯ä»¥å¾ˆå®¹æ˜“åœ°æŠŠç¨‹åºä¸²è”èµ·æ¥ï¼Œä¸€ä¸ªç¨‹åºçš„æ ‡å‡†è¾“å‡ºå¯ä»¥æˆä¸ºå¦ä¸€ç¨‹åºçš„æ ‡å‡†è¾“å…¥
  *  <p>
- * °´ÕÕ±ê×¼I/OÄ£ĞÍ£¬JavaÌá¹©ÁËSystem.in£¬System.out ºÍ System.err£¬ËüÃÇÄ¬ÈÏ¶ÔÓ¦ÓÚ¿ØÖÆÌ¨ÊäÈë¡¢¿ØÖÆÌ¨Êä³öºÍ¿ØÖÆÌ¨´íÎó¡£
+ * æŒ‰ç…§æ ‡å‡†I/Oæ¨¡å‹ï¼ŒJavaæä¾›äº†System.inï¼ŒSystem.out å’Œ System.errï¼Œå®ƒä»¬é»˜è®¤å¯¹åº”äºæ§åˆ¶å°è¾“å…¥ã€æ§åˆ¶å°è¾“å‡ºå’Œæ§åˆ¶å°é”™è¯¯ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-19
  */
 public class StandardIODemo {
 
@@ -30,21 +30,21 @@ public class StandardIODemo {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		/** ±ê×¼ÊäÈëÁ÷System.in */
+		/** æ ‡å‡†è¾“å…¥æµSystem.in */
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				System.in));
-		System.out.print("Enter£º");
+		System.out.print("Enterï¼š");
 		String s;
 		while ((s = reader.readLine()) != null && s.length() != 0) {
-			System.out.println("Echo£º" + s);
+			System.out.println("Echoï¼š" + s);
 			System.out.print("Enter:");
 		}
 		
-		/** ±ê×¼Êä³öÁ÷System.out */
+		/** æ ‡å‡†è¾“å‡ºæµSystem.out */
 		/*
-		 * System.outÊÇÒ»¸öPrintStream£¬¶øPrintStreamÊÇÒ»¸ö OutputStream
-		 * PrintWriterÓĞÒ»¸ö¿ÉÒÔ½ÓÊÜOutputStreamSystem×÷Îª²ÎÊıµÄ¹¹ÔìÆ÷
-		 * Òò´Ë£¬Ö»ÒªĞèÒª£¬¾Í¿ÉÒÔÊ¹ÓÃÄÇ¸ö¹¹ÔìÆ÷°ÑSystem.out×ª»»³ÉPrintWriter
+		 * System.outæ˜¯ä¸€ä¸ªPrintStreamï¼Œè€ŒPrintStreamæ˜¯ä¸€ä¸ª OutputStream
+		 * PrintWriteræœ‰ä¸€ä¸ªå¯ä»¥æ¥å—OutputStreamSystemä½œä¸ºå‚æ•°çš„æ„é€ å™¨
+		 * å› æ­¤ï¼Œåªè¦éœ€è¦ï¼Œå°±å¯ä»¥ä½¿ç”¨é‚£ä¸ªæ„é€ å™¨æŠŠSystem.outè½¬æ¢æˆPrintWriter
 		 */
 		PrintWriter writer = new PrintWriter(System.out, true);
 		writer.println("Hello world!");

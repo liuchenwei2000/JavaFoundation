@@ -4,18 +4,18 @@
 package syntax;
 
 /**
- * break��ʾ��
+ * break演示类
  * <p>
- * �ޱ�ǩ��break:
- * ֻ����ֹ���ڲ��switch��for��while��do-while��</br>
- * �б�ǩ��break:
- * ������ֹ��ǩ���������顣
+ * 无标签的break:
+ * 只能中止最内层的switch、for、while和do-while。</br>
+ * 有标签的break:
+ * 可以中止标签代表的语句块。
  * <p>
- * breakҲ���Ժ��ܻᱻִ�е�finally���һ�����ʹ�ã�����Java���û�б�Ҫʹ��goto����ˡ�
+ * break也可以和总会被执行的finally语句一起配合使用，这样Java里就没有必要使用goto语句了。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2007-9-11
+ * 创建日期：2007-9-11
  */
 public class BreakDemo {
 
@@ -35,7 +35,7 @@ public class BreakDemo {
 			for (j = 0; j < array[i].length; j++) {
 				if (array[i][j] == searchfor) {
 					foundIt = true;
-					// ���� break; ��ֻ��ֹjѭ��
+					// 若是 break; 则只中止j循环
 					break search;
 				}
 			}

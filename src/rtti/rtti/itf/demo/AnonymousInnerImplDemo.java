@@ -8,11 +8,11 @@ import rtti.itf.impl.AnonymousInnerImplFactory;
 import rtti.reflect.MethodInvokingUtil;
 
 /**
- * AnonymousInnerImplFactoryÀàÑİÊ¾
+ * AnonymousInnerImplFactoryç±»æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class AnonymousInnerImplDemo {
 
@@ -24,7 +24,7 @@ public class AnonymousInnerImplDemo {
 		a.f();
 		System.out.println(a.getClass().getSimpleName());
 		try {
-			// Í¨¹ı·´ÉäÈÔÈ»¿ÉÒÔµ÷ÓÃg()£¬ÉõÖÁË½ÓĞ·½·¨
+			// é€šè¿‡åå°„ä»ç„¶å¯ä»¥è°ƒç”¨g()ï¼Œç”šè‡³ç§æœ‰æ–¹æ³•
 			MethodInvokingUtil.callHiddenMethod(a, "g");
 			MethodInvokingUtil.callHiddenMethod(a, "u");
 			MethodInvokingUtil.callHiddenMethod(a, "v");

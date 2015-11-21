@@ -4,13 +4,13 @@
 package object.dispatch;
 
 /**
- * ¾²Ì¬·ÖÅÉÑÝÊ¾
+ * é™æ€åˆ†æ´¾æ¼”ç¤º
  * <p>
- * JavaÍ¨¹ý·½·¨ÖØÔØ(overload)Ö§³Ö¾²Ì¬·ÖÅÉ¡£
+ * Javaé€šè¿‡æ–¹æ³•é‡è½½(overload)æ”¯æŒé™æ€åˆ†æ´¾ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-6-11
+ * åˆ›å»ºæ—¥æœŸï¼š2010-6-11
  */
 public class StaticDispatchDemo {
 
@@ -22,19 +22,19 @@ public class StaticDispatchDemo {
 		Horse wh = new WhiteHorse();
 		Horse bh = new BlackHorse();
 		/*
-		 * ´òÓ¡½á¹ûÈçÏÂ£º
+		 * æ‰“å°ç»“æžœå¦‚ä¸‹ï¼š
 		 * ride a horse.
 		 * ride a horse.
 		 * 
-		 * Á½´Î¶Ôride()·½·¨µÄµ÷ÓÃ´«ÈëµÄÊÇ²»Í¬µÄ²ÎÁ¿£¬Ò²¾ÍÊÇwhºÍbh¡£
-		 * ËüÃÇËäÈ»¾ßÓÐ²»Í¬µÄÕæÊµÀàÐÍ£¬µ«ÊÇËüÃÇµÄ¾²Ì¬ÀàÐÍ¶¼ÊÇÒ»ÑùµÄ(Horse)¡£
-		 * ÖØÔØµÄ·½·¨µÄ·ÖÅÉÊÇ¸ù¾Ý¾²Ì¬ÀàÐÍ½øÐÐµÄ£¬Õâ¸ö·ÖÅÉ¹ý³ÌÊÇÔÚ±àÒëÊ±ÆÚ¾ÍÍê³ÉÁË¡£
+		 * ä¸¤æ¬¡å¯¹ride()æ–¹æ³•çš„è°ƒç”¨ä¼ å…¥çš„æ˜¯ä¸åŒçš„å‚é‡ï¼Œä¹Ÿå°±æ˜¯whå’Œbhã€‚
+		 * å®ƒä»¬è™½ç„¶å…·æœ‰ä¸åŒçš„çœŸå®žç±»åž‹ï¼Œä½†æ˜¯å®ƒä»¬çš„é™æ€ç±»åž‹éƒ½æ˜¯ä¸€æ ·çš„(Horse)ã€‚
+		 * é‡è½½çš„æ–¹æ³•çš„åˆ†æ´¾æ˜¯æ ¹æ®é™æ€ç±»åž‹è¿›è¡Œçš„ï¼Œè¿™ä¸ªåˆ†æ´¾è¿‡ç¨‹æ˜¯åœ¨ç¼–è¯‘æ—¶æœŸå°±å®Œæˆäº†ã€‚
 		 */
 		demo.ride(wh);
 		demo.ride(bh);
 	}
 
-	/** ride()·½·¨ÓÉÏÂÃæÈý¸ö·½·¨ÖØÔØ¶ø³É **/
+	/** ride()æ–¹æ³•ç”±ä¸‹é¢ä¸‰ä¸ªæ–¹æ³•é‡è½½è€Œæˆ **/
 	
 	public void ride(Horse horse) {
 		System.out.println("ride a horse.");

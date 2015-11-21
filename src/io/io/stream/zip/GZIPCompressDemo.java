@@ -14,16 +14,16 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
- * GZIPÑ¹ËõÑİÊ¾Àà
+ * GZIPå‹ç¼©æ¼”ç¤ºç±»
  * <p>
- * GZIPÊÊºÏÓÚµ¥¸öÊı¾İÁ÷(¶ø²»ÊÇÒ»ÏµÁĞ»¥ÒìÊı¾İ)½øĞĞÑ¹Ëõ¡£
+ * GZIPé€‚åˆäºå•ä¸ªæ•°æ®æµ(è€Œä¸æ˜¯ä¸€ç³»åˆ—äº’å¼‚æ•°æ®)è¿›è¡Œå‹ç¼©ã€‚
  * <p>
- * Ñ¹ËõÀàµÄÊ¹ÓÃ·Ç³£Ö±¹Û£ºÖ±½Ó½«Êä³öÁ÷·â×°³ÉGZIPOutputStream»òZipOutputStream£¬
- * ²¢½«ÊäÈëÁ÷·â×°³ÉGZIPInputStream»òZipInputStream¼´¿É¡£
+ * å‹ç¼©ç±»çš„ä½¿ç”¨éå¸¸ç›´è§‚ï¼šç›´æ¥å°†è¾“å‡ºæµå°è£…æˆGZIPOutputStreamæˆ–ZipOutputStreamï¼Œ
+ * å¹¶å°†è¾“å…¥æµå°è£…æˆGZIPInputStreamæˆ–ZipInputStreamå³å¯ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class GZIPCompressDemo {
 
@@ -32,22 +32,22 @@ public class GZIPCompressDemo {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		// ´ıÑ¹ËõÎÄ¼şÂ·¾¶
+		// å¾…å‹ç¼©æ–‡ä»¶è·¯å¾„
 		String infileName = "files/io.stream.zip/infile.txt";
-		// Ñ¹ËõºóµÄgzÎÄ¼şÂ·¾¶
+		// å‹ç¼©åçš„gzæ–‡ä»¶è·¯å¾„
 		String outfileName = "files/io.stream.zip/out.gz";
 		
-		/** Ñ¹ËõÎÄ¼ş */
+		/** å‹ç¼©æ–‡ä»¶ */
 		System.out.println("Writing file");
 		gzipFile(infileName, outfileName);
 		
-		/** ¶ÁÈ¡Ñ¹ËõÎÄ¼ş */
+		/** è¯»å–å‹ç¼©æ–‡ä»¶ */
 		System.out.println("Reading file");
 		readGzipFile(outfileName);
 	}
 	
 	/**
-	 * ½«Ö¸¶¨ÎÄ¼şfilePathÍ¨¹ıGZipµÄ·½Ê½Ñ¹Ëõµ½zipFilePathÖĞ
+	 * å°†æŒ‡å®šæ–‡ä»¶filePathé€šè¿‡GZipçš„æ–¹å¼å‹ç¼©åˆ°zipFilePathä¸­
 	 */
 	private static void gzipFile(String filePath, String zipFilePath) throws IOException {
 		BufferedReader reader = null;
@@ -55,7 +55,7 @@ public class GZIPCompressDemo {
 
 		try {
 			reader = new BufferedReader(new FileReader(filePath));
-			// Êä³öµÄÊ±ºòÊ¹ÓÃ GZIPOutputStream
+			// è¾“å‡ºçš„æ—¶å€™ä½¿ç”¨ GZIPOutputStream
 			out = new BufferedOutputStream(new GZIPOutputStream(
 					new FileOutputStream(zipFilePath)));
 
@@ -77,12 +77,12 @@ public class GZIPCompressDemo {
 	}
 	
 	/**
-	 * ½«Ö¸¶¨ÎÄ¼şfilePathÍ¨¹ıGZipµÄ·½Ê½Ñ¹Ëõµ½zipFilePathÖĞ
+	 * å°†æŒ‡å®šæ–‡ä»¶filePathé€šè¿‡GZipçš„æ–¹å¼å‹ç¼©åˆ°zipFilePathä¸­
 	 */
 	private static void readGzipFile(String zipFilePath) throws IOException {
 		BufferedReader reader = null;
 		try {
-			// ¶ÁÈ¡µÄÊ±ºòÊ¹ÓÃ GZIPInputStream
+			// è¯»å–çš„æ—¶å€™ä½¿ç”¨ GZIPInputStream
 			reader = new BufferedReader(new InputStreamReader(
 					new GZIPInputStream(new FileInputStream(zipFilePath))));
 			String s;

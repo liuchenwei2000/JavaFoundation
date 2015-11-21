@@ -10,21 +10,21 @@ import java.nio.channels.FileChannel;
 import nio.IConst;
 
 /**
- * MappedByteBuffer¼òµ¥ÑİÊ¾Àà
+ * MappedByteBufferç®€å•æ¼”ç¤ºç±»
  * <p>
- * ´æ´¢Æ÷Ó³ÉäÎÄ¼şÔÊĞí´´½¨ºÍĞŞ¸ÄÄÇĞ©ÒòÎªÌ«´ó¶ø²»ÄÜ·ÅÈëÄÚ´æµÄÎÄ¼ş£¬ÓĞÁË´æ´¢Æ÷Ó³ÉäÎÄ¼ş£¬
- * ¾Í¿ÉÒÔ¼Ù¶¨Õû¸öÎÄ¼ş¶¼ÔÚÄÚ´æÖĞ(ĞéÄâÄÚ´æ)£¬¶øÇÒ¿ÉÒÔÍêÈ«°ÑËüµ±×÷·Ç³£´óµÄÊı×éÀ´·ÃÎÊ¡£
- * ÕâÖÖ·½·¨¼«´óµØ¼ò»¯ÁËÓÃÓÚĞŞ¸ÄÎÄ¼şµÄ´úÂë¡£
- * <strong>»á²úÉúÒ»¸ö32MµÄÎÄ¼ş£¬ÒªÊÖ¹¤É¾³ıÕâ¸öÎÄ¼ş</strong>
+ * å­˜å‚¨å™¨æ˜ å°„æ–‡ä»¶å…è®¸åˆ›å»ºå’Œä¿®æ”¹é‚£äº›å› ä¸ºå¤ªå¤§è€Œä¸èƒ½æ”¾å…¥å†…å­˜çš„æ–‡ä»¶ï¼Œæœ‰äº†å­˜å‚¨å™¨æ˜ å°„æ–‡ä»¶ï¼Œ
+ * å°±å¯ä»¥å‡å®šæ•´ä¸ªæ–‡ä»¶éƒ½åœ¨å†…å­˜ä¸­(è™šæ‹Ÿå†…å­˜)ï¼Œè€Œä¸”å¯ä»¥å®Œå…¨æŠŠå®ƒå½“ä½œéå¸¸å¤§çš„æ•°ç»„æ¥è®¿é—®ã€‚
+ * è¿™ç§æ–¹æ³•æå¤§åœ°ç®€åŒ–äº†ç”¨äºä¿®æ”¹æ–‡ä»¶çš„ä»£ç ã€‚
+ * <strong>ä¼šäº§ç”Ÿä¸€ä¸ª32Mçš„æ–‡ä»¶ï¼Œè¦æ‰‹å·¥åˆ é™¤è¿™ä¸ªæ–‡ä»¶</strong>
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-25
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-25
  */
 public class SimpleMappedByteBufferDemo {
 	
 	private static final String FILE_NAME = "files/nio.bytebuffer.mapped/test.dat";
-	/** ÎÄ¼ş´óĞ¡ 32M */
+	/** æ–‡ä»¶å¤§å° 32M */
 	private static final int FILE_SIZE = 32 * IConst.M;
 	
 	/**
@@ -33,23 +33,23 @@ public class SimpleMappedByteBufferDemo {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws Exception {
 		/*
-		 * Í¨¹ıFileChannelµ÷ÓÃmap·½·¨²úÉúÒ»¸öMappedByteBuffer£¬ÕâÊÇÌØÊâµÄÖ±½Ó»º³åÆ÷£¬
-		 * ±ØĞëÖ¸¶¨Ó³ÉäÎÄ¼şµÄ³õÊ¼Î»ÖÃºÍÓ³ÉäÇøÓòµÄ³¤¶È¡£ÕâÒâÎ¶×Å¿ÉÒÔÓ³ÉäÄ³¸ö´óÎÄ¼şµÄÒ»¸ö½ÏĞ¡µÄ²¿·Ö¡£
+		 * é€šè¿‡FileChannelè°ƒç”¨mapæ–¹æ³•äº§ç”Ÿä¸€ä¸ªMappedByteBufferï¼Œè¿™æ˜¯ç‰¹æ®Šçš„ç›´æ¥ç¼“å†²å™¨ï¼Œ
+		 * å¿…é¡»æŒ‡å®šæ˜ å°„æ–‡ä»¶çš„åˆå§‹ä½ç½®å’Œæ˜ å°„åŒºåŸŸçš„é•¿åº¦ã€‚è¿™æ„å‘³ç€å¯ä»¥æ˜ å°„æŸä¸ªå¤§æ–‡ä»¶çš„ä¸€ä¸ªè¾ƒå°çš„éƒ¨åˆ†ã€‚
 		 * 
-		 * MappedByteBuffer ¼Ì³Ğ×Ô ByteBuffer£¬Òò´ËËü¾ßÓĞ ByteBuffer µÄËùÓĞ·½·¨¡£
-		 * ±¾Àı½ö½öÕ¹Ê¾ÁË·Ç³£¼òµ¥µÄput()ºÍget()£¬µ«ÊÇÍ¬Ñù¿ÉÒÔÊ¹ÓÃÏñ asCharBuffer() µÈÕâÑùµÄÓÃ·¨¡£
+		 * MappedByteBuffer ç»§æ‰¿è‡ª ByteBufferï¼Œå› æ­¤å®ƒå…·æœ‰ ByteBuffer çš„æ‰€æœ‰æ–¹æ³•ã€‚
+		 * æœ¬ä¾‹ä»…ä»…å±•ç¤ºäº†éå¸¸ç®€å•çš„put()å’Œget()ï¼Œä½†æ˜¯åŒæ ·å¯ä»¥ä½¿ç”¨åƒ asCharBuffer() ç­‰è¿™æ ·çš„ç”¨æ³•ã€‚
 		 */
 		FileChannel channel = new RandomAccessFile(FILE_NAME, "rw").getChannel();
 		MappedByteBuffer out = channel.map(FileChannel.MapMode.READ_WRITE, 0, FILE_SIZE);
 		
-		// ÏòÎÄ¼şÖĞĞ´Èë32MµÄ×Ö·û'x'
+		// å‘æ–‡ä»¶ä¸­å†™å…¥32Mçš„å­—ç¬¦'x'
 		for (int i = 0; i < FILE_SIZE; i++) {
 			out.put((byte) 'x');
 		}
 		
 		System.out.println("Finished writing");
 		
-		// ¶ÁÈ¡ÎÄ¼şÖĞ6¸ö×Ö½ÚµÄÄÚÈİ
+		// è¯»å–æ–‡ä»¶ä¸­6ä¸ªå­—èŠ‚çš„å†…å®¹
 		for (int i = FILE_SIZE / 2; i < FILE_SIZE / 2 + 6; i++) {
 			System.out.print((char) out.get(i));
 		}

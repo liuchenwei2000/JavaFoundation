@@ -4,16 +4,16 @@
 package inner.use;
 
 /**
- * �ڲ��������ؼ̳�(�ӿ�)��ʾ
+ * 内部类解决多重继承(接口)演示
  * <p>
- * ������⣺</br>
- * ������һ��������ĳ�ַ�ʽʵ�������ӿڡ�
- * <li>�������1��ʹ�õ�һ��
- * <li>�������2��ʹ���ڲ���
+ * 解决问题：</br>
+ * 必须在一个类中以某种方式实现两个接口。
+ * <li>解决方案1：使用单一类
+ * <li>解决方案2：使用内部类
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2008-4-16
+ * 创建日期：2008-4-16
  */
 public class InheritMultiInterfaces {
 
@@ -43,18 +43,18 @@ interface B {
 }
 
 /**
- * ʹ�õ�һ����ʵ�������ӿ�
+ * 使用单一类来实现两个接口
  */
 class X implements A, B {
 }
 
 /**
- * ʹ���ڲ������ﵽһ����ʵ�������ӿڵ�Ŀ��
+ * 使用内部类来达到一个类实现两个接口的目的
  */
 class Y implements A {
 	
 	B makeB() {
-		// �����ڲ���ʵ����B�ӿ�
+		// 匿名内部类实现了B接口
 		return new B() {
 		};
 	}

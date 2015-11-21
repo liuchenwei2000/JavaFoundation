@@ -8,11 +8,11 @@ import generic.Pair;
 import java.io.Serializable;
 
 /**
- * ·ºÐÍ·½·¨ÑÝÊ¾
+ * æ³›åž‹æ–¹æ³•æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-8-2
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-2
  */
 public class GenericMethodDemo {
 
@@ -27,22 +27,22 @@ public class GenericMethodDemo {
 	}
 	
 	/**
-	 * ·ºÐÍ·½·¨¿ÉÒÔÔÚÆÕÍ¨ÀàÖÐ¶¨Òå£¬¶ø²»Ö»ÊÇÔÚ·ºÐÍÀàÖÐ¶¨Òå¡£
-	 * ÀàÐÍ±äÁ¿·ÅÔÚÐÞÊÎ·û(public¡¢staticµÈ)µÄºóÃæ£¬·µ»ØÀàÐÍ(ObjectÀàÐÍ¼°Æä×ÓÀà»òÕßvoid)µÄÇ°Ãæ£¬
-	 * ²¢ÇÒÊ¹ÓÃÒ»¶Ô¼âÀ¨ºÅ(<>)À¨×¡ÀàÐÍ±äÁ¿¡£
+	 * æ³›åž‹æ–¹æ³•å¯ä»¥åœ¨æ™®é€šç±»ä¸­å®šä¹‰ï¼Œè€Œä¸åªæ˜¯åœ¨æ³›åž‹ç±»ä¸­å®šä¹‰ã€‚
+	 * ç±»åž‹å˜é‡æ”¾åœ¨ä¿®é¥°ç¬¦(publicã€staticç­‰)çš„åŽé¢ï¼Œè¿”å›žç±»åž‹(Objectç±»åž‹åŠå…¶å­ç±»æˆ–è€…void)çš„å‰é¢ï¼Œ
+	 * å¹¶ä¸”ä½¿ç”¨ä¸€å¯¹å°–æ‹¬å·(<>)æ‹¬ä½ç±»åž‹å˜é‡ã€‚
 	 */
 	public static <T> void genericMethod(T t) {
 		// ...
 	}
 	
 	/**
-	 * ÀàÐÍ±äÁ¿µÄÏÞ¶¨
+	 * ç±»åž‹å˜é‡çš„é™å®š
 	 * <p>
-	 * Èç¹û·ºÐÍÀàÐÍ±ØÐëÏÞ¶¨ÎªÄ³ÖÖÌØ¶¨ÀàÐÍ£¬ÈçÏÂÃæµÄ·½·¨£¬¾Í±ØÐëÖ¸¶¨Æä°ó¶¨ÀàÐÍ¡£
+	 * å¦‚æžœæ³›åž‹ç±»åž‹å¿…é¡»é™å®šä¸ºæŸç§ç‰¹å®šç±»åž‹ï¼Œå¦‚ä¸‹é¢çš„æ–¹æ³•ï¼Œå°±å¿…é¡»æŒ‡å®šå…¶ç»‘å®šç±»åž‹ã€‚
 	 * <p>
-	 * <T extends BoundingType>±íÊ¾TÓ¦¸ÃÊÇ°ó¶¨ÀàÐÍµÄ×ÓÀàÐÍ(subtype)¡£
-	 * °ó¶¨ÀàÐÍ¿ÉÒÔÊÇÀà£¬Ò²¿ÉÒÔÊÇ½Ó¿Ú¡£Ñ¡ÓÃ¹Ø¼ü×ÖextendsÊÇÒòÎªËü¸ü½Ó½ü×ÓÀàµÄ¸ÅÄî¡£
-	 * ËùÒÔ¼´Ê¹ÊÇÊµÏÖ½Ó¿ÚÒ²ÊÇÊ¹ÓÃextends¶øÃ»ÓÐÓÃimplements¡£
+	 * <T extends BoundingType>è¡¨ç¤ºTåº”è¯¥æ˜¯ç»‘å®šç±»åž‹çš„å­ç±»åž‹(subtype)ã€‚
+	 * ç»‘å®šç±»åž‹å¯ä»¥æ˜¯ç±»ï¼Œä¹Ÿå¯ä»¥æ˜¯æŽ¥å£ã€‚é€‰ç”¨å…³é”®å­—extendsæ˜¯å› ä¸ºå®ƒæ›´æŽ¥è¿‘å­ç±»çš„æ¦‚å¿µã€‚
+	 * æ‰€ä»¥å³ä½¿æ˜¯å®žçŽ°æŽ¥å£ä¹Ÿæ˜¯ä½¿ç”¨extendsè€Œæ²¡æœ‰ç”¨implementsã€‚
 	 */
 	public static <T extends Comparable<T>> Pair<T> minmax(T[] array){
 		if(array == null || array.length == 0) return null;
@@ -56,10 +56,10 @@ public class GenericMethodDemo {
 	}
 	
 	/**
-	 *  Ò»¸öÀàÐÍ±äÁ¿»òÍ¨Åä·û¿ÉÒÔÓÐ¶à¸öÏÞ¶¨£¬ÈçÏÂÃæµÄ·½·¨£º
+	 *  ä¸€ä¸ªç±»åž‹å˜é‡æˆ–é€šé…ç¬¦å¯ä»¥æœ‰å¤šä¸ªé™å®šï¼Œå¦‚ä¸‹é¢çš„æ–¹æ³•ï¼š
 	 *  <p>
-	 *  ÏÞ¶¨ÀàÐÍ¼äÓÃ"&"·Ö¸ô£¬°ó¶¨ÀàÐÍÁÐ±íÖÐ×î¶àÓÐÒ»¸öÀà£¬¿ÉÒÔÓÐ¶à¸ö½Ó¿Ú¡£
-	 *  Èç¹ûÀàÔÚ°ó¶¨ÀàÐÍÁÐ±íÖÐ£¬Ëü±ØÐëÊÇµÚÒ»¸ö¡£
+	 *  é™å®šç±»åž‹é—´ç”¨"&"åˆ†éš”ï¼Œç»‘å®šç±»åž‹åˆ—è¡¨ä¸­æœ€å¤šæœ‰ä¸€ä¸ªç±»ï¼Œå¯ä»¥æœ‰å¤šä¸ªæŽ¥å£ã€‚
+	 *  å¦‚æžœç±»åœ¨ç»‘å®šç±»åž‹åˆ—è¡¨ä¸­ï¼Œå®ƒå¿…é¡»æ˜¯ç¬¬ä¸€ä¸ªã€‚
 	 */
 	public static <T extends Comparable<T> & Serializable> void genericMethod(T t) {
 		// ...

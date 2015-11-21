@@ -4,15 +4,15 @@
 package rtti;
 
 /**
- * instanceofÔËËã·ûºÍClass.isInstance()·½·¨ 
+ * instanceofè¿ç®—ç¬¦å’ŒClass.isInstance()æ–¹æ³• 
  * <p>
- * ¹Ø¼ü×Öinstanceof·µ»ØÒ»¸öbooleanÖµ£¬ÅĞ¶Ï¶ÔÏóÊÇ²»ÊÇÄ³¸öÀà»ò½Ó¿ÚµÄÊµÀı£¬
- * Class.isInstance·½·¨Ìá¹©ÁËÒ»ÖÖ¶¯Ì¬µ÷ÓÃinstanceofÔËËã·ûµÄÍ¾¾¶¡£
- * µ±¶ÔÄ³¸ö¶ÔÏó½øĞĞÇ¿ÖÆÀàĞÍ×ª»»µÄÊ±ºò£¬¿ÉÒÔÏÈÓÃinstanceofÅĞ¶ÏÕıÈ·ĞÔ¡£
+ * å…³é”®å­—instanceofè¿”å›ä¸€ä¸ªbooleanå€¼ï¼Œåˆ¤æ–­å¯¹è±¡æ˜¯ä¸æ˜¯æŸä¸ªç±»æˆ–æ¥å£çš„å®ä¾‹ï¼Œ
+ * Class.isInstanceæ–¹æ³•æä¾›äº†ä¸€ç§åŠ¨æ€è°ƒç”¨instanceofè¿ç®—ç¬¦çš„é€”å¾„ã€‚
+ * å½“å¯¹æŸä¸ªå¯¹è±¡è¿›è¡Œå¼ºåˆ¶ç±»å‹è½¬æ¢çš„æ—¶å€™ï¼Œå¯ä»¥å…ˆç”¨instanceofåˆ¤æ–­æ­£ç¡®æ€§ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-6
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-6
  */
 public class Instance {
 	
@@ -26,7 +26,7 @@ public class Instance {
 	
 	static void test(Object x) {
 		/*
-		 * instanceofºÍisInstance()Éú³É½á¹ûÍêÈ«ÏàÍ¬
+		 * instanceofå’ŒisInstance()ç”Ÿæˆç»“æœå®Œå…¨ç›¸åŒ
 		 */
 		System.out.println("Testing x is type " + x.getClass());
 		System.out.println("x instance of Base " + (x instanceof Base));

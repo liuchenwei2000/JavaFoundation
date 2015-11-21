@@ -7,16 +7,16 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 
 /**
- * ĞŞÊÎ·û´òÓ¡¹¤¾ß
+ * ä¿®é¥°ç¬¦æ‰“å°å·¥å…·
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class ModifierPrinter {
 
 	/**
-	 * ´òÓ¡²ÎÊıÀàµÄ·ÃÎÊĞŞÊÎ·ûºÍÆä¹¹ÔìÆ÷µÄ·ÃÎÊĞŞÊÎ·û
+	 * æ‰“å°å‚æ•°ç±»çš„è®¿é—®ä¿®é¥°ç¬¦å’Œå…¶æ„é€ å™¨çš„è®¿é—®ä¿®é¥°ç¬¦
 	 */
 	public static void printModifier(Class<?> clazz) {
 		try {

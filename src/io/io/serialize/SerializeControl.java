@@ -11,18 +11,18 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * ĞòÁĞ»¯¿ØÖÆ
+ * åºåˆ—åŒ–æ§åˆ¶
  * <p>
- * Ìá¹©ÁËExternalizable(Ëü²¢²»¹»×Ô¶¯»¯)µÄÌæ´ú½â¾ö·½°¸ ¡£
+ * æä¾›äº†Externalizable(å®ƒå¹¶ä¸å¤Ÿè‡ªåŠ¨åŒ–)çš„æ›¿ä»£è§£å†³æ–¹æ¡ˆ ã€‚
  * <p>
- * Èç¹û²»ÊÇÌØ±ğÏëÒªÊµÏÖExternalizable½Ó¿Ú£¬ÄÇÃ´»¹ÓĞÁíÒ»ÖÖ·½·¨¿ÉÒÔÊµÏÖSerializable½Ó¿Ú£¬
- * ²¢Ìí¼Ó(×¢ÒâÊÇ"Ìí¼Ó"£¬¶ø·Ç"ÖØÔØ"»òÕß"ÊµÏÖ")ÃûÎªwriteObject()ºÍ readObject()µÄ·½·¨¡£
- * ÕâÑùÒ»µ©¶ÔÏó±»ĞòÁĞ»¯»òÕß±»·´ĞòÁĞ»¯£¬¾Í»á×Ô¶¯µØ·Ö±ğµ÷ÓÃÕâÁ½¸ö·½·¨¡£
- * Ò²¾ÍÊÇËµ£¬Ö»ÒªÌá¹©ÁËÕâÁ½¸ö·½·¨£¬¾Í»áÊ¹ÓÃËüÃÇ¶ø²»ÊÇÈ±Ê¡µÄĞòÁĞ»¯»úÖÆ ¡£
+ * å¦‚æœä¸æ˜¯ç‰¹åˆ«æƒ³è¦å®ç°Externalizableæ¥å£ï¼Œé‚£ä¹ˆè¿˜æœ‰å¦ä¸€ç§æ–¹æ³•å¯ä»¥å®ç°Serializableæ¥å£ï¼Œ
+ * å¹¶æ·»åŠ (æ³¨æ„æ˜¯"æ·»åŠ "ï¼Œè€Œé"é‡è½½"æˆ–è€…"å®ç°")åä¸ºwriteObject()å’Œ readObject()çš„æ–¹æ³•ã€‚
+ * è¿™æ ·ä¸€æ—¦å¯¹è±¡è¢«åºåˆ—åŒ–æˆ–è€…è¢«ååºåˆ—åŒ–ï¼Œå°±ä¼šè‡ªåŠ¨åœ°åˆ†åˆ«è°ƒç”¨è¿™ä¸¤ä¸ªæ–¹æ³•ã€‚
+ * ä¹Ÿå°±æ˜¯è¯´ï¼Œåªè¦æä¾›äº†è¿™ä¸¤ä¸ªæ–¹æ³•ï¼Œå°±ä¼šä½¿ç”¨å®ƒä»¬è€Œä¸æ˜¯ç¼ºçœçš„åºåˆ—åŒ–æœºåˆ¶ ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class SerializeControl {
 
@@ -34,18 +34,18 @@ public class SerializeControl {
 		ObjectX ox = new ObjectX("Test1", "Test2");
 		System.out.println("Serialize:\n" + ox);
 		
-		/** ĞòÁĞ»¯¶ÔÏóµ½ÄÚ´æ */
+		/** åºåˆ—åŒ–å¯¹è±¡åˆ°å†…å­˜ */
 		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		ObjectOutputStream oos = new ObjectOutputStream(buffer);
 		/*
-		 * µ±ObjectOutputStreamµ÷ÓÃwriteObject()Ê±±ØĞë¼ì²é²ÎÊı¶ÔÏó£¬ÅĞ¶ÏËüÊÇ·ñÓµÓĞ×Ô¼ºµÄwriteObject()·½·¨
-		 * (²»ÊÇ¼ì²é½Ó¿Ú£¬ÕâÀï¸ù±¾¾ÍÃ»ÓĞ½Ó¿Ú£¬Ò²²»ÊÇ¼ì²éÀàµÄÀàĞÍ£¬¶øÊÇÀûÓÃ·´ÉäÀ´ÕæÕıµØËÑË÷·½·¨)¡£
-		 * Èç¹ûÓĞ£¬ÄÇÃ´¾Í»áÊ¹ÓÃËü¡£¶ÔreadObject()Ò²²ÉÓÃÁËÀàËÆµÄ·½·¨¡£
-		 * »òĞíÕâÊÇ½â¾öÕâ¸öÎÊÌâÎ¨Ò»ÇĞÊµ¿ÉĞĞµÄ·½·¨£¬µ«ËüÈ·ÊµÓĞµã¹Å¹Ö¡£
+		 * å½“ObjectOutputStreamè°ƒç”¨writeObject()æ—¶å¿…é¡»æ£€æŸ¥å‚æ•°å¯¹è±¡ï¼Œåˆ¤æ–­å®ƒæ˜¯å¦æ‹¥æœ‰è‡ªå·±çš„writeObject()æ–¹æ³•
+		 * (ä¸æ˜¯æ£€æŸ¥æ¥å£ï¼Œè¿™é‡Œæ ¹æœ¬å°±æ²¡æœ‰æ¥å£ï¼Œä¹Ÿä¸æ˜¯æ£€æŸ¥ç±»çš„ç±»å‹ï¼Œè€Œæ˜¯åˆ©ç”¨åå°„æ¥çœŸæ­£åœ°æœç´¢æ–¹æ³•)ã€‚
+		 * å¦‚æœæœ‰ï¼Œé‚£ä¹ˆå°±ä¼šä½¿ç”¨å®ƒã€‚å¯¹readObject()ä¹Ÿé‡‡ç”¨äº†ç±»ä¼¼çš„æ–¹æ³•ã€‚
+		 * æˆ–è®¸è¿™æ˜¯è§£å†³è¿™ä¸ªé—®é¢˜å”¯ä¸€åˆ‡å®å¯è¡Œçš„æ–¹æ³•ï¼Œä½†å®ƒç¡®å®æœ‰ç‚¹å¤æ€ªã€‚
 		 */
 		oos.writeObject(ox);
 		
-		/** ·´ĞòÁĞ»¯ÄÚ´æÖĞµÄ¶ÔÏó */
+		/** ååºåˆ—åŒ–å†…å­˜ä¸­çš„å¯¹è±¡ */
 		ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(
 				buffer.toByteArray()));
 		ox = (ObjectX) ois.readObject();
@@ -54,9 +54,9 @@ public class SerializeControl {
 }
 
 /**
- * ÔÚ±¾ÀıÖĞ£¬ÓĞÒ»¸öString×Ö¶ÎÊÇÆÕÍ¨×Ö¶Î£¬¶øÁíÒ»¸öÊÇtransient×Ö¶Î£¬ÓÃÀ´Ö¤Ã÷£º
- * ·Çtransient×Ö¶ÎÓÉdefaultWriteObject()·½·¨±£´æ£¬¶øtransient×Ö¶Î±ØĞëÔÚ³ÌĞòÖĞÃ÷È·±£´æºÍ»Ö¸´¡£
- * ×Ö¶ÎÊÇÔÚ¹¹ÔìÆ÷ÄÚ²¿¶ø²»ÊÇÔÚ¶¨Òå´¦½øĞĞ³õÊ¼»¯µÄ£¬ÒÔ´Ë¿ÉÒÔÖ¤ÊµËüÃÇÔÚ·´ĞòÁĞ»¯»¹Ô­ÆÚ¼äÃ»ÓĞ±»Ò»Ğ©×Ô¶¯»úÖÆ³õÊ¼»¯
+ * åœ¨æœ¬ä¾‹ä¸­ï¼Œæœ‰ä¸€ä¸ªStringå­—æ®µæ˜¯æ™®é€šå­—æ®µï¼Œè€Œå¦ä¸€ä¸ªæ˜¯transientå­—æ®µï¼Œç”¨æ¥è¯æ˜ï¼š
+ * étransientå­—æ®µç”±defaultWriteObject()æ–¹æ³•ä¿å­˜ï¼Œè€Œtransientå­—æ®µå¿…é¡»åœ¨ç¨‹åºä¸­æ˜ç¡®ä¿å­˜å’Œæ¢å¤ã€‚
+ * å­—æ®µæ˜¯åœ¨æ„é€ å™¨å†…éƒ¨è€Œä¸æ˜¯åœ¨å®šä¹‰å¤„è¿›è¡Œåˆå§‹åŒ–çš„ï¼Œä»¥æ­¤å¯ä»¥è¯å®å®ƒä»¬åœ¨ååºåˆ—åŒ–è¿˜åŸæœŸé—´æ²¡æœ‰è¢«ä¸€äº›è‡ªåŠ¨æœºåˆ¶åˆå§‹åŒ–
  */
 class ObjectX implements Serializable {
 
@@ -75,25 +75,25 @@ class ObjectX implements Serializable {
 	}
 
 	/***
-	 * ·½·¨±ØĞë¾ßÓĞ×¼È·µÄ·½·¨Ç©Ãû£º 
+	 * æ–¹æ³•å¿…é¡»å…·æœ‰å‡†ç¡®çš„æ–¹æ³•ç­¾åï¼š 
 	 * private void writeObject(ObjectOutputStream stream) 
 	 * throws IOException 
 	 * 
 	 * private void readObject(ObjectInputStream stream) 
 	 * throws IOException, ClassNotFoundException 
 	 * 
-	 * ¸Ã»úÖÆµÄÖ´ĞĞÏ¸½Ú£º
-	 * ÔÚµ÷ÓÃObjectOutputStream.writeObject()Ê±£¬»á¼ì²éËù´«µİµÄSerializable¶ÔÏó£¬¿´¿´ÊÇ·ñÊµÏÖÁËËü×Ô¼ºµÄwriteObject()¡£
-	 * Èç¹ûÊÇÕâÑù£¬¾ÍÌø¹ıÕı³£µÄĞòÁĞ»¯¹ı³Ì²¢µ÷ÓÃËüµÄwriteObject()¡£readObject()µÄÇéĞÎÓë´ËÏàÍ¬¡£
+	 * è¯¥æœºåˆ¶çš„æ‰§è¡Œç»†èŠ‚ï¼š
+	 * åœ¨è°ƒç”¨ObjectOutputStream.writeObject()æ—¶ï¼Œä¼šæ£€æŸ¥æ‰€ä¼ é€’çš„Serializableå¯¹è±¡ï¼Œçœ‹çœ‹æ˜¯å¦å®ç°äº†å®ƒè‡ªå·±çš„writeObject()ã€‚
+	 * å¦‚æœæ˜¯è¿™æ ·ï¼Œå°±è·³è¿‡æ­£å¸¸çš„åºåˆ—åŒ–è¿‡ç¨‹å¹¶è°ƒç”¨å®ƒçš„writeObject()ã€‚readObject()çš„æƒ…å½¢ä¸æ­¤ç›¸åŒã€‚
 	 * 
-	 * ÕâÀïÓĞ¸ö¼¼ÇÉ£º
-	 * ÔÚwriteObject()ÄÚ²¿£¬¿ÉÒÔµ÷ÓÃObjectOutputStream.defaultWriteObject()À´Ñ¡ÔñÖ´ĞĞÈ±Ê¡µÄwriteObject()¡£
-	 * ÀàËÆµØ£¬ÔÚreadObject()ÄÚ²¿£¬Ò²¿ÉÒÔµ÷ÓÃ ObjectOutputStream.defaultReadObject()¡£
+	 * è¿™é‡Œæœ‰ä¸ªæŠ€å·§ï¼š
+	 * åœ¨writeObject()å†…éƒ¨ï¼Œå¯ä»¥è°ƒç”¨ObjectOutputStream.defaultWriteObject()æ¥é€‰æ‹©æ‰§è¡Œç¼ºçœçš„writeObject()ã€‚
+	 * ç±»ä¼¼åœ°ï¼Œåœ¨readObject()å†…éƒ¨ï¼Œä¹Ÿå¯ä»¥è°ƒç”¨ ObjectOutputStream.defaultReadObject()ã€‚
 	 */
 	private void writeObject(ObjectOutputStream stream) throws IOException {
 		/*
-		 * Èç¹û´òËãÊ¹ÓÃÈ±Ê¡»úÖÆĞ´Èë¶ÔÏóµÄ·Çtransient²¿·Ö£¬ÄÇÃ´±ØĞëµ÷ÓÃdefaultWriteObject()
-		 * ×÷ÎªwriteObject()ÖĞµÄµÚÒ»¸ö²Ù×÷£¬²¢ÈÃdefaultReadObject()×÷ÎªreadObject()ÖĞµÄµÚÒ»¸ö²Ù×÷¡£
+		 * å¦‚æœæ‰“ç®—ä½¿ç”¨ç¼ºçœæœºåˆ¶å†™å…¥å¯¹è±¡çš„étransientéƒ¨åˆ†ï¼Œé‚£ä¹ˆå¿…é¡»è°ƒç”¨defaultWriteObject()
+		 * ä½œä¸ºwriteObject()ä¸­çš„ç¬¬ä¸€ä¸ªæ“ä½œï¼Œå¹¶è®©defaultReadObject()ä½œä¸ºreadObject()ä¸­çš„ç¬¬ä¸€ä¸ªæ“ä½œã€‚
 		 */
 		stream.defaultWriteObject();
 		stream.writeObject(this.b);

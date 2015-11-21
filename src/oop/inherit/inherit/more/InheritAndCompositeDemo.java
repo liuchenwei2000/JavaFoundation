@@ -4,14 +4,14 @@
 package inherit.more;
 
 /**
- * ʹ�ü̳к���Ͻ�����Ƶ���ʾ
+ * 使用继承和组合进行设计的演示
  * <p>
- * ��ϲ���ǿ�Ƴ�����ƽ���̳еĲ�νṹ��������ϸ�������Ϊ�����Զ�̬ѡ�����ͣ�Ҳ��ѡ������Ϊ����
- * �෴���̳��ڱ���ʱ����Ҫ֪��ȷ�����͡�
+ * 组合不会强制程序设计进入继承的层次结构，而且组合更加灵活，因为它可以动态选择类型（也就选择了行为）；
+ * 相反，继承在编译时就需要知道确切类型。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2008-4-10
+ * 创建日期：2008-4-10
  */
 public class InheritAndCompositeDemo {
 
@@ -44,14 +44,14 @@ class SadActor extends Actor {
 }
 
 /**
- * ����г�ʼ���������õ�λ����������</br>
- * <li>1���ڶ������ĵط�������ζ�����������ܹ��ڹ�����������֮ǰ����ʼ����
- * <li>2������Ĺ������С�
- * <li>3��������Ҫʹ����Щ����֮ǰ(������)��
+ * 组合中初始化对象引用的位置有三个：</br>
+ * <li>1，在定义对象的地方，这意味着他们总是能够在构造器被调用之前被初始化。
+ * <li>2，在类的构造器中。
+ * <li>3，就在正要使用这些对象之前(懒加载)。
  */
 class Stage {
 	
-	// ��һ�ֳ�ʼ����ʽ
+	// 第一种初始化方式
 	private Actor actor1 = new HappyActor();
 	
 	@SuppressWarnings("unused")
@@ -59,12 +59,12 @@ class Stage {
 	private Actor actor3;
 
 	public Stage(){
-		// �ڶ��ֳ�ʼ����ʽ
+		// 第二种初始化方式
 		actor2 = new HappyActor();
 	}
 	
 	/**
-	 * �����ֳ�ʼ����ʽ
+	 * 第三种初始化方式
 	 */
 	public Actor getActor3() {
 		if (actor3 == null) {

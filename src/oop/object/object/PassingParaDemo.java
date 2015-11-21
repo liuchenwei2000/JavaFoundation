@@ -6,19 +6,19 @@ package object;
 import java.util.Arrays;
 
 /**
- * ·½·¨µÄ²ÎÊý´«µÝ
+ * æ–¹æ³•çš„å‚æ•°ä¼ é€’
  * <p>
- * ¶ÔÏóµÄ´«µÝºÍ·µ»Ø£º</br>
- * <li>1£¬²»ÒªÔÚÏàÍ¬×÷ÓÃÓòÄÚÉú³ÉÍ¬Ò»¸ö¶ÔÏóµÄ¶à¸öÒýÓÃ</br>
- * µ±Ò»¸öÒýÓÃ´«ÈëÄ³¸ö·½·¨Ö®ºó£¬ËüÈÔÈ»Ö¸ÏòÔ­À´µÄ¶ÔÏó¡£
- * <li>2£¬Ò»°ã¶øÑÔ£¬µ÷ÓÃ·½·¨ÊÇÎªÁË²úÉú·µ»ØÖµ£¬»òÕßÊÇÎªÁË¸Ä±ä±»µ÷ÓÃÕß(Ä³¶ÔÏó)µÄ×´Ì¬</br>
- * Í¨³£²»»áÎªÁË´¦ÀíÆä²ÎÊý¶øµ÷ÓÃ·½·¨£¬×îºÃ±ÜÃâÐÞ¸Ä²ÎÊý¡£
- * <li>3£¬Èç¹ûÈ·ÊµÒªÔÚ·½·¨µ÷ÓÃÖÐÐÞ¸Ä²ÎÊý£¬µ«ÊÇÓÖ²»Ï£ÍûÐÞ¸ÄÍâ²¿²ÎÊý£¬
- * ÄÇ¾ÍÓ¦¸ÃÔÚ·½·¨ÄÚ²¿ÖÆ×÷Ò»·Ý²ÎÊýµÄ¸±±¾£¬ÒÔ±£»¤Ô­²ÎÊý¡£
+ * å¯¹è±¡çš„ä¼ é€’å’Œè¿”å›žï¼š</br>
+ * <li>1ï¼Œä¸è¦åœ¨ç›¸åŒä½œç”¨åŸŸå†…ç”ŸæˆåŒä¸€ä¸ªå¯¹è±¡çš„å¤šä¸ªå¼•ç”¨</br>
+ * å½“ä¸€ä¸ªå¼•ç”¨ä¼ å…¥æŸä¸ªæ–¹æ³•ä¹‹åŽï¼Œå®ƒä»ç„¶æŒ‡å‘åŽŸæ¥çš„å¯¹è±¡ã€‚
+ * <li>2ï¼Œä¸€èˆ¬è€Œè¨€ï¼Œè°ƒç”¨æ–¹æ³•æ˜¯ä¸ºäº†äº§ç”Ÿè¿”å›žå€¼ï¼Œæˆ–è€…æ˜¯ä¸ºäº†æ”¹å˜è¢«è°ƒç”¨è€…(æŸå¯¹è±¡)çš„çŠ¶æ€</br>
+ * é€šå¸¸ä¸ä¼šä¸ºäº†å¤„ç†å…¶å‚æ•°è€Œè°ƒç”¨æ–¹æ³•ï¼Œæœ€å¥½é¿å…ä¿®æ”¹å‚æ•°ã€‚
+ * <li>3ï¼Œå¦‚æžœç¡®å®žè¦åœ¨æ–¹æ³•è°ƒç”¨ä¸­ä¿®æ”¹å‚æ•°ï¼Œä½†æ˜¯åˆä¸å¸Œæœ›ä¿®æ”¹å¤–éƒ¨å‚æ•°ï¼Œ
+ * é‚£å°±åº”è¯¥åœ¨æ–¹æ³•å†…éƒ¨åˆ¶ä½œä¸€ä»½å‚æ•°çš„å‰¯æœ¬ï¼Œä»¥ä¿æŠ¤åŽŸå‚æ•°ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-10-8
+ * åˆ›å»ºæ—¥æœŸï¼š2007-10-8
  */
 public class PassingParaDemo {
 
@@ -65,25 +65,25 @@ public class PassingParaDemo {
 	}
 
 	/**
-	 * ¶ÔÓÚ»ù±¾ÀàÐÍµÄ²ÎÊý£¬·½·¨´«µÝµÄ¶¼ÊÇÒ»¸ö¿½±´£¬Õâ½âÊÍÁËJavaÎªÊ²Ã´²»ÄÜ¹»ÊµÏÖ¾­µäswap(int a,int b)·½·¨¡£
+	 * å¯¹äºŽåŸºæœ¬ç±»åž‹çš„å‚æ•°ï¼Œæ–¹æ³•ä¼ é€’çš„éƒ½æ˜¯ä¸€ä¸ªæ‹·è´ï¼Œè¿™è§£é‡Šäº†Javaä¸ºä»€ä¹ˆä¸èƒ½å¤Ÿå®žçŽ°ç»å…¸swap(int a,int b)æ–¹æ³•ã€‚
 	 */
 	private static void changeInt(int a) {
-		// ÕâÀïµÄaÖ»ÊÇ²ÎÊýaµÄÒ»¸ö¿½±´£¬ÕæÕýµÄ²ÎÊý²¢Ã»ÓÐ¸Ä±ä
+		// è¿™é‡Œçš„aåªæ˜¯å‚æ•°açš„ä¸€ä¸ªæ‹·è´ï¼ŒçœŸæ­£çš„å‚æ•°å¹¶æ²¡æœ‰æ”¹å˜
 		a = 0;
 		System.out.println("inside changeInt : a = " + a);
 	}
 
 	/**
-	 * µ±Ò»¸öÒýÓÃ´«ÈëÄ³¸ö·½·¨Ö®ºó£¬ËüÈÔÈ»Ö¸ÏòÔ­À´µÄ¶ÔÏó
+	 * å½“ä¸€ä¸ªå¼•ç”¨ä¼ å…¥æŸä¸ªæ–¹æ³•ä¹‹åŽï¼Œå®ƒä»ç„¶æŒ‡å‘åŽŸæ¥çš„å¯¹è±¡
 	 */
 	private static void changeString(String s) {
-		// ÕâÀïµÄÒýÓÃÒ²ÊÇÒ»¸ö²ÎÊýµÄ¿½±´
+		// è¿™é‡Œçš„å¼•ç”¨ä¹Ÿæ˜¯ä¸€ä¸ªå‚æ•°çš„æ‹·è´
 		s = "changed";
 		System.out.println("inside changeString : s = " + s);
 	}
 
 	/**
-	 * µ±Ò»¸öÒýÓÃ´«ÈëÄ³¸ö·½·¨Ö®ºó£¬ËüÈÔÈ»Ö¸ÏòÔ­À´µÄ¶ÔÏó
+	 * å½“ä¸€ä¸ªå¼•ç”¨ä¼ å…¥æŸä¸ªæ–¹æ³•ä¹‹åŽï¼Œå®ƒä»ç„¶æŒ‡å‘åŽŸæ¥çš„å¯¹è±¡
 	 */
 	private static void changeObject(Person p) {
 		p = new Person("new");
@@ -91,7 +91,7 @@ public class PassingParaDemo {
 	}
 
 	/**
-	 * ËäÈ»²»¿ÉÒÔ¸Ä±äÒýÓÃ£¬µ«ÊÇ¿ÉÒÔ¸Ä±äËüËùÒýÓÃµÄ¶ÔÏóµÄÊôÐÔ
+	 * è™½ç„¶ä¸å¯ä»¥æ”¹å˜å¼•ç”¨ï¼Œä½†æ˜¯å¯ä»¥æ”¹å˜å®ƒæ‰€å¼•ç”¨çš„å¯¹è±¡çš„å±žæ€§
 	 */
 	private static void changeObjectAttribute(Person p) {
 		p.setName("changed");
@@ -100,7 +100,7 @@ public class PassingParaDemo {
 	}
 
 	/**
-	 * Èç¹û´«µÝµÄ²ÎÊýÊÇÊý×é£¬·½·¨¸Ä±ä²»ÁËÊý×éÒýÓÃËù´ú±íµÄ¶ÔÏó
+	 * å¦‚æžœä¼ é€’çš„å‚æ•°æ˜¯æ•°ç»„ï¼Œæ–¹æ³•æ”¹å˜ä¸äº†æ•°ç»„å¼•ç”¨æ‰€ä»£è¡¨çš„å¯¹è±¡
 	 */
 	private static void changeArray(int[] array) {
 		array = new int[3];
@@ -112,7 +112,7 @@ public class PassingParaDemo {
 	}
 
 	/**
-	 * Èç¹û´«µÝµÄ²ÎÊýÊÇÊý×é,¿ÉÒÔ¸Ä±äÊý×éÖÐÔªËØµÄÖµ
+	 * å¦‚æžœä¼ é€’çš„å‚æ•°æ˜¯æ•°ç»„,å¯ä»¥æ”¹å˜æ•°ç»„ä¸­å…ƒç´ çš„å€¼
 	 */
 	private static void changeArrayElement(int[] array) {
 		for (int i = 0; i < array.length; i++) {

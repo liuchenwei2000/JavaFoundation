@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ÎªÀà´´½¨Ò»¸öºÃµÄhashCode()·½·¨
+ * ä¸ºç±»åˆ›å»ºä¸€ä¸ªå¥½çš„hashCode()æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-8
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-8
  */
 public class GoodHashCode {
 	
@@ -24,7 +24,7 @@ public class GoodHashCode {
 
 	public GoodHashCode(String s) {
 		this.s = s;
-		// id´ú±í°üº¬ÏàÍ¬StringµÄ¶ÔÏóµÄ±àºÅ
+		// idä»£è¡¨åŒ…å«ç›¸åŒStringçš„å¯¹è±¡çš„ç¼–å·
 		created.add(s);
 		Iterator<String> it = created.iterator();
 		while (it.hasNext()) {
@@ -34,7 +34,7 @@ public class GoodHashCode {
 	}
 
 	/**
-	 * ¶ÔÏóµÄ¸÷ÊôĞÔÏàÍ¬ÔòÈÏÎªequals
+	 * å¯¹è±¡çš„å„å±æ€§ç›¸åŒåˆ™è®¤ä¸ºequals
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -45,7 +45,7 @@ public class GoodHashCode {
 	}
 
 	/**
-	 * »ùÓÚsºÍidÕâÁ½¸ö×Ö¶Î²úÉúhashCode
+	 * åŸºäºså’Œidè¿™ä¸¤ä¸ªå­—æ®µäº§ç”ŸhashCode
 	 *
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -58,7 +58,7 @@ public class GoodHashCode {
 	}
 
 	/**
-	 * ĞÎÊ½Îª£ºString:hi  id:2  hashCode():146448 = 1
+	 * å½¢å¼ä¸ºï¼šString:hi  id:2  hashCode():146448 = 1
 	 *
 	 * @see java.lang.Object#toString()
 	 */

@@ -5,18 +5,18 @@ package generic.app;
 
 
 /**
- * FibonacciÊıÉú³ÉÆ÷
+ * Fibonacciæ•°ç”Ÿæˆå™¨
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class FibonacciGenerator implements Generator<Integer> {
 	
 	private int count = 0;
 
 	/**
-	 * Éú³ÉÒ»¸öFibonacciÊı¶ÔÏó
+	 * ç”Ÿæˆä¸€ä¸ªFibonacciæ•°å¯¹è±¡
 	 * 
 	 * @see generic.app.Generator#generate()
 	 */
@@ -25,7 +25,7 @@ public class FibonacciGenerator implements Generator<Integer> {
 	}
 
 	/**
-	 * ·µ»ØµÚn¸öFibonacciÊı
+	 * è¿”å›ç¬¬nä¸ªFibonacciæ•°
 	 */
 	private Integer getFibonacci(int n) {
 		if (n < 2)

@@ -4,16 +4,16 @@
 package syntax.keywords;
 
 /**
- * ��̬��Ա��ʾ��
+ * 静态成员简单示例
  * <p>
- * static������ĳ���ֶ�ʱ��ı����ݴ����ķ�ʽ����Ϊһ��static�ֶζ�ÿ������˵
- * ��ֻ��һ�ݴ洢�ռ䣬����static�ֶ����Ƕ�ÿ��������һ���洢�ռ䡣
+ * static作用于某个字段时会改变数据创建的方式，因为一个static字段对每个类来说
+ * 都只有一份存储空间，而非static字段则是对每个对象都有一个存储空间。
  * </br>
- * ���static������ĳ������������Ϊ���ڲ����������ǰ���µ���������������κζ�����ø÷�����Ч��һ����
+ * 如果static作用于某个方法，这是为了在不创建对象的前提下调用它，即该类的任何对象调用该方法的效果一样。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2007-11-8
+ * 创建日期：2007-11-8
  */
 public class StaticSimpleDemo {
 
@@ -33,7 +33,7 @@ public class StaticSimpleDemo {
 
 class Share {
 	
-	static int a = 0;// ���еĶ�������һ��
+	static int a = 0;// 所有的对象共享此一份
 
 	public void add() {
 		a++;

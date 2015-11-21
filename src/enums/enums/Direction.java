@@ -4,23 +4,23 @@
 package enums;
 
 /**
- * ÔÚenumÖÐÌí¼Ó·½·¨
+ * åœ¨enumä¸­æ·»åŠ æ–¹æ³•
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public enum Direction {
 	
-	// enumÖÐµÄÊ×ÐÐ±ØÐëÊÇÆäÊµÀýµÄ¶¨Òå
+	// enumä¸­çš„é¦–è¡Œå¿…é¡»æ˜¯å…¶å®žä¾‹çš„å®šä¹‰
 	EAST("This is east!"), WEST("This is west!"), SOUTH("This is south!"), NORTH("This is north!");
 
-	// Èç¹ûÏëÒªÌí¼Ó·½·¨(»òÊôÐÔ)£¬Ôò±ØÐëÔÚenumÊµÀýÐòÁÐµÄ×îºóÌí¼ÓÒ»¸ö·ÖºÅ
+	// å¦‚æžœæƒ³è¦æ·»åŠ æ–¹æ³•(æˆ–å±žæ€§)ï¼Œåˆ™å¿…é¡»åœ¨enumå®žä¾‹åºåˆ—çš„æœ€åŽæ·»åŠ ä¸€ä¸ªåˆ†å·
 	private String description;
 
 	/**
-	 * Õâ¸ö¹¹ÔìÆ÷¹æ¶¨ÁËenumÊµÀýµÄ¹¹ÔìÐÎÊ½(±ØÐëÌá¹©Ò»¸öString²ÎÊý)¡£
-	 * ¼´Ê¹Ëü²»ÊÇprivateµÄ£¬Ò»µ©enumÊµÀýµÄ¶¨Òå½áÊø£¬±àÒëÆ÷¾Í²»ÔÊÐíÔÙÊ¹ÓÃÆä¹¹ÔìÆ÷À´´´½¨ÈÎºÎÊµÀýÁË¡£
+	 * è¿™ä¸ªæž„é€ å™¨è§„å®šäº†enumå®žä¾‹çš„æž„é€ å½¢å¼(å¿…é¡»æä¾›ä¸€ä¸ªStringå‚æ•°)ã€‚
+	 * å³ä½¿å®ƒä¸æ˜¯privateçš„ï¼Œä¸€æ—¦enumå®žä¾‹çš„å®šä¹‰ç»“æŸï¼Œç¼–è¯‘å™¨å°±ä¸å…è®¸å†ä½¿ç”¨å…¶æž„é€ å™¨æ¥åˆ›å»ºä»»ä½•å®žä¾‹äº†ã€‚
 	 */
 	private Direction(String description) {
 		this.description = description;

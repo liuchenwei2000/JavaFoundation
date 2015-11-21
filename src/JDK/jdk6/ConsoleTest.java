@@ -6,40 +6,40 @@ package jdk6;
 import java.io.Console;
 
 /**
- * 7£¬ConsoleÀàÊ¾Àý
+ * 7ï¼ŒConsoleç±»ç¤ºä¾‹
  * <p>
- * JDK6ÖÐÌá¹©ÁËjava.io.ConsoleÀà×¨ÓÃÀ´·ÃÎÊ»ùÓÚ×Ö·ûµÄ¿ØÖÆÌ¨Éè±¸¡£
+ * JDK6ä¸­æä¾›äº†java.io.Consoleç±»ä¸“ç”¨æ¥è®¿é—®åŸºäºŽå­—ç¬¦çš„æŽ§åˆ¶å°è®¾å¤‡ã€‚
  * <p>
- * ÄãµÄ³ÌÐòÈç¹ûÒªÓë Windows ÏÂµÄ cmd »òÕß Linux ÏÂµÄ Terminal ½»»¥£¬¾Í¿ÉÒÔÓÃ Console Àà´úÀÍ¡£
- * µ«²»×ÜÊÇÄÜµÃµ½¿ÉÓÃµÄConsole, Ò»¸öJVMÊÇ·ñÓÐ¿ÉÓÃµÄConsoleÒÀÀµÓÚµ×²ãÆ½Ì¨ºÍJVMÈçºÎ±»µ÷ÓÃ¡£
+ * ä½ çš„ç¨‹åºå¦‚æžœè¦ä¸Ž Windows ä¸‹çš„ cmd æˆ–è€… Linux ä¸‹çš„ Terminal äº¤äº’ï¼Œå°±å¯ä»¥ç”¨ Console ç±»ä»£åŠ³ã€‚
+ * ä½†ä¸æ€»æ˜¯èƒ½å¾—åˆ°å¯ç”¨çš„Console, ä¸€ä¸ªJVMæ˜¯å¦æœ‰å¯ç”¨çš„Consoleä¾èµ–äºŽåº•å±‚å¹³å°å’ŒJVMå¦‚ä½•è¢«è°ƒç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-30
  */
 public class ConsoleTest {
 
 	/**
-	 * ×¢£º
+	 * æ³¨ï¼š
 	 * <p>
-	 * Èç¹ûÔÚIDEÀïÃæÔËÐÐÏÂÃæ³ÌÐò,»áÊä³ö Console is unavailable.
-	 * ±íÊ¾Console²»¿É»ñµÃ£¬ÄÇÊÇÒòÎªJVM²»ÊÇÔÚÃüÁîÐÐÖÐ±»µ÷ÓÃµÄ»òÕßÊäÈëÊä³ö±»ÖØ¶¨ÏòÁË¡£
-	 * ÔÚÃüÁîÐÐÄ£Ê½ÀïÔËÐÐ³ÌÐò¾Í¿ÉÓÃConsoleÊµÀýÁË¡£
+	 * å¦‚æžœåœ¨IDEé‡Œé¢è¿è¡Œä¸‹é¢ç¨‹åº,ä¼šè¾“å‡º Console is unavailable.
+	 * è¡¨ç¤ºConsoleä¸å¯èŽ·å¾—ï¼Œé‚£æ˜¯å› ä¸ºJVMä¸æ˜¯åœ¨å‘½ä»¤è¡Œä¸­è¢«è°ƒç”¨çš„æˆ–è€…è¾“å…¥è¾“å‡ºè¢«é‡å®šå‘äº†ã€‚
+	 * åœ¨å‘½ä»¤è¡Œæ¨¡å¼é‡Œè¿è¡Œç¨‹åºå°±å¯ç”¨Consoleå®žä¾‹äº†ã€‚
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		/*
-		 * Èç¹ûJVMÊÇÔÚ½»»¥Ê½ÃüÁîÐÐ(±ÈÈçWindowsµÄcmd)ÖÐÆô¶¯µÄ£¬²¢ÇÒÊäÈëÊä³öÃ»ÓÐÖØ¶¨Ïòµ½ÁíÍâµÄµØ·½¡£ÄÇÃ´¾Í¿ÉÒÔµÃµ½Ò»¸ö¿ÉÓÃµÄConsoleÊµÀý¡£
-		 * Èç¹ûÐéÄâ»úÊÇ×Ô¶¯Æô¶¯µÄ£¨ÀýÈç£¬ÓÉºóÌ¨×÷Òµµ÷¶È³ÌÐòÆô¶¯£©£¬ÄÇÃ´ËüÍ¨³£Ã»ÓÐ¿ØÖÆÌ¨¡£ 
+		 * å¦‚æžœJVMæ˜¯åœ¨äº¤äº’å¼å‘½ä»¤è¡Œ(æ¯”å¦‚Windowsçš„cmd)ä¸­å¯åŠ¨çš„ï¼Œå¹¶ä¸”è¾“å…¥è¾“å‡ºæ²¡æœ‰é‡å®šå‘åˆ°å¦å¤–çš„åœ°æ–¹ã€‚é‚£ä¹ˆå°±å¯ä»¥å¾—åˆ°ä¸€ä¸ªå¯ç”¨çš„Consoleå®žä¾‹ã€‚
+		 * å¦‚æžœè™šæ‹Ÿæœºæ˜¯è‡ªåŠ¨å¯åŠ¨çš„ï¼ˆä¾‹å¦‚ï¼Œç”±åŽå°ä½œä¸šè°ƒåº¦ç¨‹åºå¯åŠ¨ï¼‰ï¼Œé‚£ä¹ˆå®ƒé€šå¸¸æ²¡æœ‰æŽ§åˆ¶å°ã€‚ 
 		 */
 		Console console = System.console();
-		if (console != null) {// ÅÐ¶ÏconsoleÊÇ·ñ¿ÉÓÃ
-			// ´Ó¿ØÖÆÌ¨¶ÁÈ¡µ¥ÐÐÎÄ±¾
+		if (console != null) {// åˆ¤æ–­consoleæ˜¯å¦å¯ç”¨
+			// ä»ŽæŽ§åˆ¶å°è¯»å–å•è¡Œæ–‡æœ¬
 			String user = new String(console.readLine("Enter user:"));
-			// ´Ó¿ØÖÆÌ¨¶ÁÈ¡ÃÜÂë£¬½ûÓÃ»ØÏÔ¡£
+			// ä»ŽæŽ§åˆ¶å°è¯»å–å¯†ç ï¼Œç¦ç”¨å›žæ˜¾ã€‚
 			String pwd = new String(console.readPassword("Enter passowrd:"));
-			// Ê¹ÓÃÖ¸¶¨¸ñÊ½×Ö·û´®ºÍ²ÎÊý½«¸ñÊ½»¯×Ö·û´®Ð´Èë´Ë¿ØÖÆÌ¨Êä³öÁ÷µÄ±ã½Ý·½·¨
+			// ä½¿ç”¨æŒ‡å®šæ ¼å¼å­—ç¬¦ä¸²å’Œå‚æ•°å°†æ ¼å¼åŒ–å­—ç¬¦ä¸²å†™å…¥æ­¤æŽ§åˆ¶å°è¾“å‡ºæµçš„ä¾¿æ·æ–¹æ³•
 			console.printf("User is:" + user + "\n");
 			console.printf("Password is:" + pwd + "\n");
 		} else {

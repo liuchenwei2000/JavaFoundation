@@ -4,11 +4,11 @@
 package initialize.staticmbers;
 
 /**
- * ÑİÊ¾Àà
+ * æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class CupsDemo {
 	
@@ -20,13 +20,13 @@ public class CupsDemo {
 	public static void main(String[] args) {
 		System.out.println("Inside main()");
 		Cups.c1.f(99);
-		// ÒòÎªÔÚ³õÊ¼»¯¹ı³ÌÖĞ´´½¨ÁËÁ½¸öCup¶ÔÏó
-		System.out.println("µ±Ç°´´½¨Cup¶ÔÏóÊı£º " + Cup.getCounter());
-		// Êä³öÎª£º
+		// å› ä¸ºåœ¨åˆå§‹åŒ–è¿‡ç¨‹ä¸­åˆ›å»ºäº†ä¸¤ä¸ªCupå¯¹è±¡
+		System.out.println("å½“å‰åˆ›å»ºCupå¯¹è±¡æ•°ï¼š " + Cup.getCounter());
+		// è¾“å‡ºä¸ºï¼š
 		// Inside main()
 		// Cup(1)
 		// Cup(2)
 		// f(99)
-		// µ±Ç°´´½¨Cup¶ÔÏóÊı£º 2
+		// å½“å‰åˆ›å»ºCupå¯¹è±¡æ•°ï¼š 2
 	}
 }

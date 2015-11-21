@@ -7,11 +7,11 @@ import access.inner.IAccessable;
 import access.inner.Outer;
 
 /**
- * ÄÚ²¿ÀàÒì°üÆäËûÀàµÄ·ÃÎÊ¿ØÖÆÑİÊ¾
+ * å†…éƒ¨ç±»å¼‚åŒ…å…¶ä»–ç±»çš„è®¿é—®æ§åˆ¶æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class OuterInDifferentPackage {
 
@@ -20,9 +20,9 @@ public class OuterInDifferentPackage {
 	 */
 	public static void main(String[] args) {
 		Outer out = new Outer();
-		// Ö»ÄÜ·ÃÎÊpublicÄÚ²¿Àà
+		// åªèƒ½è®¿é—®publicå†…éƒ¨ç±»
 		Outer.PublicInner publicInner = out.new PublicInner();
-		// Ö»ÄÜ·ÃÎÊpublic³ÉÔ±ºÍpublic·½·¨
+		// åªèƒ½è®¿é—®publicæˆå‘˜å’Œpublicæ–¹æ³•
 		publicInner.publicField = 0;
 		publicInner.publicMethod();
 
@@ -30,7 +30,7 @@ public class OuterInDifferentPackage {
 		publicInner2.publicField = 0;
 		publicInner2.publicMethod();
 
-		// Ê¹ÓÃ½Ó¿ÚÒıÓÃÔò¿ÉÒÔ·ÃÎÊËùÓĞËÄ¸öÄÚ²¿ÀàµÄpublic·½·¨
+		// ä½¿ç”¨æ¥å£å¼•ç”¨åˆ™å¯ä»¥è®¿é—®æ‰€æœ‰å››ä¸ªå†…éƒ¨ç±»çš„publicæ–¹æ³•
 		IAccessable accessable;
 		accessable = out.getPrivateInner();
 		accessable.publicMethod();

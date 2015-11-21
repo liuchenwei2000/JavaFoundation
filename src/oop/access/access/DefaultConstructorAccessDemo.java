@@ -4,18 +4,18 @@
 package access;
 
 /**
- * Ä¬ÈÏ(ÎÞ²Î)¹¹ÔìÆ÷·ÃÎÊÑÝÊ¾
+ * é»˜è®¤(æ— å‚)æž„é€ å™¨è®¿é—®æ¼”ç¤º
  * <p>
- * ÓÃÓÚÑÝÊ¾±àÒëÆ÷×Ô¶¯Éú³ÉµÄÄ¬ÈÏ¹¹ÔìÆ÷µÄ·ÃÎÊ¿ØÖÆ·û¸úÀàÃû·ÃÎÊ¿ØÖÆ·ûµÄ¹ØÏµ¡£
+ * ç”¨äºŽæ¼”ç¤ºç¼–è¯‘å™¨è‡ªåŠ¨ç”Ÿæˆçš„é»˜è®¤æž„é€ å™¨çš„è®¿é—®æŽ§åˆ¶ç¬¦è·Ÿç±»åè®¿é—®æŽ§åˆ¶ç¬¦çš„å…³ç³»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class DefaultConstructorAccessDemo {
 
 	/**
-	 * ´òÓ¡ÈçÏÂ£º 
+	 * æ‰“å°å¦‚ä¸‹ï¼š 
 	 * Class PrivateClass is : private 
 	 * Constructor PrivateClass() is : private
 	 * 

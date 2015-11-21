@@ -4,11 +4,11 @@
 package object.dispatch;
 
 /**
- * ¾²Ì¬¶à·ÖÅÉºÍ¶¯Ì¬µ¥·ÖÅÉÑİÊ¾
+ * é™æ€å¤šåˆ†æ´¾å’ŒåŠ¨æ€å•åˆ†æ´¾æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-6-11
+ * åˆ›å»ºæ—¥æœŸï¼š2010-6-11
  */
 public class DispatchDemo {
 
@@ -18,12 +18,12 @@ public class DispatchDemo {
 	public static void main(String[] args) {
 		Father father = new Father();
 		Father son = new Son();
-		// ¾²Ì¬¶à·ÖÅÉ
-		father.operation(1);// µ÷ÓÃ½ÓÊÕintÀàĞÍ²ÎÊıµÄ°æ±¾
-		father.operation("1");// µ÷ÓÃ½ÓÊÕStringÀàĞÍ²ÎÊıµÄ°æ±¾
-		// ¶¯Ì¬µ¥·ÖÅÉ
-		father.action();// µ÷ÓÃFather.action()
-		son.action();// µ÷ÓÃSon.action()
+		// é™æ€å¤šåˆ†æ´¾
+		father.operation(1);// è°ƒç”¨æ¥æ”¶intç±»å‹å‚æ•°çš„ç‰ˆæœ¬
+		father.operation("1");// è°ƒç”¨æ¥æ”¶Stringç±»å‹å‚æ•°çš„ç‰ˆæœ¬
+		// åŠ¨æ€å•åˆ†æ´¾
+		father.action();// è°ƒç”¨Father.action()
+		son.action();// è°ƒç”¨Son.action()
 	}
 }
 

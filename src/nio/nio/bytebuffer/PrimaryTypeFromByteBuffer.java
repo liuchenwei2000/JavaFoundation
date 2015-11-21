@@ -8,17 +8,17 @@ import java.nio.ByteBuffer;
 import nio.IConst;
 
 /**
- * 1£¬´ÓByteBufferÖÐ»ñÈ¡»ù±¾ÀàÐÍ
+ * 1ï¼Œä»ŽByteBufferä¸­èŽ·å–åŸºæœ¬ç±»åž‹
  * <p>
- * ¾¡¹ÜByteBufferÖ»ÄÜ±£´æ×Ö½ÚÀàÐÍµÄÊý¾Ý£¬µ«ÊÇËü¾ßÓÐ¿ÉÒÔ´ÓËüËùÈÝÄÉµÄ×Ö½ÚÖÐ²úÉú³ö¸÷ÖÖ²»Í¬»ù±¾ÀàÐÍÖµµÄ·½·¨¡£
+ * å°½ç®¡ByteBufferåªèƒ½ä¿å­˜å­—èŠ‚ç±»åž‹çš„æ•°æ®ï¼Œä½†æ˜¯å®ƒå…·æœ‰å¯ä»¥ä»Žå®ƒæ‰€å®¹çº³çš„å­—èŠ‚ä¸­äº§ç”Ÿå‡ºå„ç§ä¸åŒåŸºæœ¬ç±»åž‹å€¼çš„æ–¹æ³•ã€‚
  * <p>
- * ÏòByteBuffer²åÈë»ù±¾ÀàÐÍÊý¾ÝµÄ×î¼òµ¥µÄ·½·¨ÊÇ£º
- * ÀûÓÃasCharBuffer()µÈ»ñµÃ¸Ã»º³åÆ÷ÉÏµÄÊÓÍ¼È»ºóÊ¹ÓÃÊÓÍ¼µÄput()·½·¨¡£´Ë·½·¨ÊÊÓÃÓÚËùÓÐ»ù±¾Êý¾ÝÀàÐÍ£¬
- * ½öÓÐÔÚÊ¹ÓÃShortBufferµÄput()·½·¨Ê±ÐèÒª½øÐÐÀàÐÍ×ª»»(×¢ÒâÀàÐÍ×ª»¯»á½ØÈ¡»ò¸Ä±ä½á¹û)¡£
+ * å‘ByteBufferæ’å…¥åŸºæœ¬ç±»åž‹æ•°æ®çš„æœ€ç®€å•çš„æ–¹æ³•æ˜¯ï¼š
+ * åˆ©ç”¨asCharBuffer()ç­‰èŽ·å¾—è¯¥ç¼“å†²å™¨ä¸Šçš„è§†å›¾ç„¶åŽä½¿ç”¨è§†å›¾çš„put()æ–¹æ³•ã€‚æ­¤æ–¹æ³•é€‚ç”¨äºŽæ‰€æœ‰åŸºæœ¬æ•°æ®ç±»åž‹ï¼Œ
+ * ä»…æœ‰åœ¨ä½¿ç”¨ShortBufferçš„put()æ–¹æ³•æ—¶éœ€è¦è¿›è¡Œç±»åž‹è½¬æ¢(æ³¨æ„ç±»åž‹è½¬åŒ–ä¼šæˆªå–æˆ–æ”¹å˜ç»“æžœ)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-23
  */
 public class PrimaryTypeFromByteBuffer {
 
@@ -27,7 +27,7 @@ public class PrimaryTypeFromByteBuffer {
 	 */
 	public static void main(String[] args) {
 		ByteBuffer buffer = ByteBuffer.allocate(IConst.K);
-		// ·ÖÅäÒ»¸öByteBufferÖ®ºó£¬Ëü»á½«ÆäÄÚÈÝ×Ô¶¯ÖÃÁã
+		// åˆ†é…ä¸€ä¸ªByteBufferä¹‹åŽï¼Œå®ƒä¼šå°†å…¶å†…å®¹è‡ªåŠ¨ç½®é›¶
 		int i = 0;
 		while (i++ < buffer.limit()) {
 			if (buffer.get() != 0) {
@@ -35,10 +35,10 @@ public class PrimaryTypeFromByteBuffer {
 			}
 		}
 		
-		// ÖØÈÆ´Ë»º³åÇø£¬½«Î»ÖÃÉèÖÃÎª 0 ²¢¶ªÆú±ê¼Ç¡£ 
+		// é‡ç»•æ­¤ç¼“å†²åŒºï¼Œå°†ä½ç½®è®¾ç½®ä¸º 0 å¹¶ä¸¢å¼ƒæ ‡è®°ã€‚ 
 		buffer.rewind();
 		
-		/** ÏòByteBufferÖÐ´æÈëchar */
+		/** å‘ByteBufferä¸­å­˜å…¥char */
 		buffer.asCharBuffer().put("Hello World!");
 		char c;
 		while ((c = buffer.getChar()) != 0) {
@@ -46,27 +46,27 @@ public class PrimaryTypeFromByteBuffer {
 		}
 		System.out.println();
 		
-		/** ÏòByteBufferÖÐ´æÈëshort */
+		/** å‘ByteBufferä¸­å­˜å…¥short */
 		buffer.rewind();
 		buffer.asShortBuffer().put((short) 471142);
 		System.out.println(buffer.getShort());
 		
-		/** ÏòByteBufferÖÐ´æÈëint */
+		/** å‘ByteBufferä¸­å­˜å…¥int */
 		buffer.rewind();
 		buffer.asIntBuffer().put(99471142);
 		System.out.println(buffer.getInt());
 		
-		/** ÏòByteBufferÖÐ´æÈëlong */
+		/** å‘ByteBufferä¸­å­˜å…¥long */
 		buffer.rewind();
 		buffer.asLongBuffer().put(99471142L);
 		System.out.println(buffer.getLong());
 		
-		/** ÏòByteBufferÖÐ´æÈëfloat */
+		/** å‘ByteBufferä¸­å­˜å…¥float */
 		buffer.rewind();
 		buffer.asFloatBuffer().put(99471142f);
 		System.out.println(buffer.getFloat());
 		
-		/** ÏòByteBufferÖÐ´æÈëdouble */
+		/** å‘ByteBufferä¸­å­˜å…¥double */
 		buffer.rewind();
 		buffer.asDoubleBuffer().put(99471142);
 		System.out.println(buffer.getDouble());

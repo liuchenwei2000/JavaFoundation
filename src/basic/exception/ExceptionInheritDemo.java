@@ -4,11 +4,11 @@
 package exception;
 
 /**
- * Òì³£Óë¼Ì³ÐÑÝÊ¾
+ * å¼‚å¸¸ä¸Žç»§æ‰¿æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-9
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-9
  */
 public class ExceptionInheritDemo {
 
@@ -28,7 +28,7 @@ public class ExceptionInheritDemo {
 }
 
 /**
- * ¸¸Àà
+ * çˆ¶ç±»
  */
 class Father {
 	
@@ -41,21 +41,21 @@ class Father {
 }
 
 /**
- * ×ÓÀà
+ * å­ç±»
  */
 class Son extends Father {
 	
 	/**
-	 * Òì³£ÏÞÖÆ¶Ô¹¹ÔìÆ÷²»Æð×÷ÓÃ£¬SonµÄ¹¹ÔìÆ÷»áÅ×³öÈÎºÎÒì³£¡£ 
-	 * ÒòÎª»ùÀàµÄ¹¹ÔìÆ÷±ØÐëÒÔÄ³ÖÖ·½Ê½±»µ÷ÓÃ £¬ËùÒÔ×ÓÀà¹¹ÔìÆ÷µÄÒì³£ËµÃ÷±ØÐë°üº¬»ùÀà¹¹ÔìÆ÷µÄÒì³£ËµÃ÷£¬µ«ÊÇ²»ÄÜ²¶»ñ»ùÀà¹¹ÔìÆ÷Å×³öµÄÒì³£¡£
+	 * å¼‚å¸¸é™åˆ¶å¯¹æž„é€ å™¨ä¸èµ·ä½œç”¨ï¼ŒSonçš„æž„é€ å™¨ä¼šæŠ›å‡ºä»»ä½•å¼‚å¸¸ã€‚ 
+	 * å› ä¸ºåŸºç±»çš„æž„é€ å™¨å¿…é¡»ä»¥æŸç§æ–¹å¼è¢«è°ƒç”¨ ï¼Œæ‰€ä»¥å­ç±»æž„é€ å™¨çš„å¼‚å¸¸è¯´æ˜Žå¿…é¡»åŒ…å«åŸºç±»æž„é€ å™¨çš„å¼‚å¸¸è¯´æ˜Žï¼Œä½†æ˜¯ä¸èƒ½æ•èŽ·åŸºç±»æž„é€ å™¨æŠ›å‡ºçš„å¼‚å¸¸ã€‚
 	 */
 	public Son() throws Exception {
 	}
 
 	/**
-	 * µ±¸²¸Ç·½·¨µÄÊ±ºò£¬Ö»ÄÜÅ×³öÔÚ»ùÀà·½·¨µÄÒì³£ËµÃ÷ÀïÁÐ³öµÄÒì³£ £¬»òÕßÊÇÕâÐ©Òì³£µÄ×ÓÀàÒì³££¬
-	 * Ò²¿ÉÒÔ²»Å×³öÈÎºÎÒì³££¨Ä¬ÈÏÅ×³ö¸¸Àà¸Ã·½·¨ÉùÃ÷µÄÒì³££©¡£
-	 * ÕâÑù¿ÉÒÔÊ¹µÃµ±»ùÀàÊ¹ÓÃµÄ´úÂëÓ¦ÓÃµ½Æä×ÓÀà¶ÔÏóµÄÊ±ºòÒ»ÑùÄÜ¹»¹¤×÷¡£
+	 * å½“è¦†ç›–æ–¹æ³•çš„æ—¶å€™ï¼Œåªèƒ½æŠ›å‡ºåœ¨åŸºç±»æ–¹æ³•çš„å¼‚å¸¸è¯´æ˜Žé‡Œåˆ—å‡ºçš„å¼‚å¸¸ ï¼Œæˆ–è€…æ˜¯è¿™äº›å¼‚å¸¸çš„å­ç±»å¼‚å¸¸ï¼Œ
+	 * ä¹Ÿå¯ä»¥ä¸æŠ›å‡ºä»»ä½•å¼‚å¸¸ï¼ˆé»˜è®¤æŠ›å‡ºçˆ¶ç±»è¯¥æ–¹æ³•å£°æ˜Žçš„å¼‚å¸¸ï¼‰ã€‚
+	 * è¿™æ ·å¯ä»¥ä½¿å¾—å½“åŸºç±»ä½¿ç”¨çš„ä»£ç åº”ç”¨åˆ°å…¶å­ç±»å¯¹è±¡çš„æ—¶å€™ä¸€æ ·èƒ½å¤Ÿå·¥ä½œã€‚
 	 */
 	public void test() {
 		System.out.println("Exception!");

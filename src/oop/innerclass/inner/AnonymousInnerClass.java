@@ -4,14 +4,14 @@
 package inner;
 
 /**
- * ÄäÃûÄÚ²¿ÀàÑÝÊ¾
+ * åŒ¿åå†…éƒ¨ç±»æ¼”ç¤º
  * <p>
- * ÄäÃûÄÚ²¿ÀàÓëÕý³£µÄ¼Ì³ÐÏà±ÈÓÐÐ©ÊÜÏÞ£º</br>
- * ÒòÎªÄäÃûÄÚ²¿Àà¼È¿ÉÒÔÀ©Õ¹Àà£¬Ò²¿ÉÒÔÊµÏÖ½Ó¿Ú£¬µ«ÊÇ²»ÄÜÁ½Õß¼æ±¸£¬Èç¹ûÊµÏÖ½Ó¿ÚÖ»ÄÜÊµÏÖÒ»¸ö¡£
+ * åŒ¿åå†…éƒ¨ç±»ä¸Žæ­£å¸¸çš„ç»§æ‰¿ç›¸æ¯”æœ‰äº›å—é™ï¼š</br>
+ * å› ä¸ºåŒ¿åå†…éƒ¨ç±»æ—¢å¯ä»¥æ‰©å±•ç±»ï¼Œä¹Ÿå¯ä»¥å®žçŽ°æŽ¥å£ï¼Œä½†æ˜¯ä¸èƒ½ä¸¤è€…å…¼å¤‡ï¼Œå¦‚æžœå®žçŽ°æŽ¥å£åªèƒ½å®žçŽ°ä¸€ä¸ªã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-4-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-14
  */
 public class AnonymousInnerClass {
 
@@ -27,22 +27,22 @@ public class AnonymousInnerClass {
 	
 	public Song getSong(){
 		/*
-		 * ¸ÃÀàÊÇÄäÃûµÄ£¬ËüÃ»ÓÐÃû×Ö£¬Õâ¿´ÆðÀ´ËÆºõÊÇÕýÒª´´½¨Ò»¸öGame¶ÔÏó¡£
-		 * µ«ÊÇÔÚµ½´ïÓï¾ä½áÊøµÄ·ÖºÅÖ®Ç°È´ÓÐ£ºµÈÒ»µÈ£¬ÒªÔÚÕâÀï²åÈëÒ»¸öÀàµÄ¶¨Òå¡£
-		 * ËüÊÇÖ¸£º´´½¨Ò»¸ö¼Ì³Ð×ÔGameµÄÄäÃûÀàµÄ¶ÔÏó¡£
+		 * è¯¥ç±»æ˜¯åŒ¿åçš„ï¼Œå®ƒæ²¡æœ‰åå­—ï¼Œè¿™çœ‹èµ·æ¥ä¼¼ä¹Žæ˜¯æ­£è¦åˆ›å»ºä¸€ä¸ªGameå¯¹è±¡ã€‚
+		 * ä½†æ˜¯åœ¨åˆ°è¾¾è¯­å¥ç»“æŸçš„åˆ†å·ä¹‹å‰å´æœ‰ï¼šç­‰ä¸€ç­‰ï¼Œè¦åœ¨è¿™é‡Œæ’å…¥ä¸€ä¸ªç±»çš„å®šä¹‰ã€‚
+		 * å®ƒæ˜¯æŒ‡ï¼šåˆ›å»ºä¸€ä¸ªç»§æ‰¿è‡ªGameçš„åŒ¿åç±»çš„å¯¹è±¡ã€‚
 		 */
 		return new Song(){
 			@Override
 			public String getSongName() {
-				return "¹ú¸è";
+				return "å›½æ­Œ";
 			}
 		};
 	}
 	
 	public Game getGame(final String name) {
 		/*
-		 * µ±¼Ì³ÐµÄ¸¸ÀàµÄ¹¹ÔìÆ÷ÐèÒª²ÎÊýÊ±£¬±ØÐëÒª´«µÝºÏÊÊµÄ²ÎÊý¸ø»ùÀàµÄ¹¹ÔìÆ÷¡£
-		 * Èç¹ûÄäÃûÄÚ²¿ÀàÊ¹ÓÃÁËÒ»¸öÔÚÆäÍâ²¿¶¨ÒåµÄ¶ÔÏó£¬ÄÇÃ´±àÒëÆ÷ÒªÇóÆä²ÎÊýÒýÓÃÊÇfinalµÄ¡£
+		 * å½“ç»§æ‰¿çš„çˆ¶ç±»çš„æž„é€ å™¨éœ€è¦å‚æ•°æ—¶ï¼Œå¿…é¡»è¦ä¼ é€’åˆé€‚çš„å‚æ•°ç»™åŸºç±»çš„æž„é€ å™¨ã€‚
+		 * å¦‚æžœåŒ¿åå†…éƒ¨ç±»ä½¿ç”¨äº†ä¸€ä¸ªåœ¨å…¶å¤–éƒ¨å®šä¹‰çš„å¯¹è±¡ï¼Œé‚£ä¹ˆç¼–è¯‘å™¨è¦æ±‚å…¶å‚æ•°å¼•ç”¨æ˜¯finalçš„ã€‚
 		 */
 		return new Game(name) {
 			public void play() {
@@ -53,12 +53,12 @@ public class AnonymousInnerClass {
 	
 	public static Base getBase(int i) {
 		/*
-		 * ÒòÎªÔÚÄäÃûÄÚ²¿ÀàÖÐÃ»ÓÐÃüÃû¹¹ÔìÆ÷£¬Èç¹ûÏë×öÒ»Ð©ÀàËÆ¹¹ÔìÆ÷µÄÐÐÎª¿ÉÒÔÍ¨¹ý ÊµÀý³õÊ¼»¯£º
-		 * (²»ÒªÇóiÒ»¶¨ÊÇfinalµÄ£¬ÒòÎªiÊÇ±»´«µÝ¸øÄäÃûÀàµÄ»ùÀàµÄ¹¹ÔìÆ÷²¢²»»áÔÚÄäÃûÀàÄÚ²¿±»Ö±½ÓÊ¹ÓÃ)
+		 * å› ä¸ºåœ¨åŒ¿åå†…éƒ¨ç±»ä¸­æ²¡æœ‰å‘½åæž„é€ å™¨ï¼Œå¦‚æžœæƒ³åšä¸€äº›ç±»ä¼¼æž„é€ å™¨çš„è¡Œä¸ºå¯ä»¥é€šè¿‡ å®žä¾‹åˆå§‹åŒ–ï¼š
+		 * (ä¸è¦æ±‚iä¸€å®šæ˜¯finalçš„ï¼Œå› ä¸ºiæ˜¯è¢«ä¼ é€’ç»™åŒ¿åç±»çš„åŸºç±»çš„æž„é€ å™¨å¹¶ä¸ä¼šåœ¨åŒ¿åç±»å†…éƒ¨è¢«ç›´æŽ¥ä½¿ç”¨)
 		 */
 		return new Base(i) {
 			{
-				// ÊµÀý³õÊ¼»¯µÄÐ§¹û¾ÍÊÇ¹¹ÔìÆ÷£¬µ«ÊÇ²»ÄÜÖØÔØÊµÀý³õÊ¼»¯·½·¨¡£
+				// å®žä¾‹åˆå§‹åŒ–çš„æ•ˆæžœå°±æ˜¯æž„é€ å™¨ï¼Œä½†æ˜¯ä¸èƒ½é‡è½½å®žä¾‹åˆå§‹åŒ–æ–¹æ³•ã€‚
 				System.out.println("Inside instance initializer");
 			}
 

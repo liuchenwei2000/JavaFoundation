@@ -1,31 +1,31 @@
-                                                                                                                  Ã¶¾ÙÀàÐÍ
+                                                                                                                  æžšä¸¾ç±»åž‹
 
 
-ÐÂ¹Ø¼ü×Öenum£¬¿ÉÒÔÕâÑùÀ´¶¨ÒåÒ»¸öÃ¶¾ÙÀàÐÍ£º
-public¡¡enum¡¡Color
+æ–°å…³é”®å­—enumï¼Œå¯ä»¥è¿™æ ·æ¥å®šä¹‰ä¸€ä¸ªæžšä¸¾ç±»åž‹ï¼š
+publicã€€enumã€€Color
 {
-¡¡¡¡¡¡RED£¬
-¡¡¡¡¡¡WHITE£¬
-¡¡¡¡¡¡BLUE
+ã€€ã€€ã€€REDï¼Œ
+ã€€ã€€ã€€WHITEï¼Œ
+ã€€ã€€ã€€BLUE
 }
 
-ËüÀïÃæµÄÃ¿Ò»¸öÔªËØ¶¼ÊÇstatic³£Á¿£¬¶¼Ó¦¸Ã´óÐ´¡£È»ºó¿ÉÒÔÕâÑùÀ´Ê¹ÓÃ£º
+å®ƒé‡Œé¢çš„æ¯ä¸€ä¸ªå…ƒç´ éƒ½æ˜¯staticå¸¸é‡ï¼Œéƒ½åº”è¯¥å¤§å†™ã€‚ç„¶åŽå¯ä»¥è¿™æ ·æ¥ä½¿ç”¨ï¼š
 
-Color¡¡myColor¡¡=¡¡Color.RED;
+Colorã€€myColorã€€=ã€€Color.RED;
 
-ÒòÎªenum¼Ì³Ð×Ôjava.lang.EnumËùÒÔ²»¿ÉÔÙ¼Ì³ÐÆäËûÀà¡£±àÒëÆ÷»á×Ô¶¯Ìá¹©equals()ºÍhashCode()·½·¨£¬²¢ÇÒÊµÏÖÁËComplarableºÍSerializable½Ó¿Ú¡£
+å› ä¸ºenumç»§æ‰¿è‡ªjava.lang.Enumæ‰€ä»¥ä¸å¯å†ç»§æ‰¿å…¶ä»–ç±»ã€‚ç¼–è¯‘å™¨ä¼šè‡ªåŠ¨æä¾›equals()å’ŒhashCode()æ–¹æ³•ï¼Œå¹¶ä¸”å®žçŽ°äº†Complarableå’ŒSerializableæŽ¥å£ã€‚
 
-Ò»¸öenumÊÇ¶¨ÒåÒ»×éÖµµÄ¶ÔÏó£¬Ëü¿ÉÒÔ°üÀ¨Áã¸ö»ò¶à¸öÖµ³ÉÔ±¡£ËüÊÇÊôÓÚenumÀàÐÍµÄ£¬Ò»¸öenum¶ÔÏóÖÐ²»¿ÉÓÐÁ½¸ö»ò¶à¸öÏàÍ¬µÄÊôÐÔ»òÖµ¡£
-enum¶ÔÏóµÄÖµ¶¼»á×Ô¶¯»ñµÃÒ»¸öÊý×ÖÖµ£¬´Ó0¿ªÊ¼£¬ÒÀ´ÎµÝÔö¡£
+ä¸€ä¸ªenumæ˜¯å®šä¹‰ä¸€ç»„å€¼çš„å¯¹è±¡ï¼Œå®ƒå¯ä»¥åŒ…æ‹¬é›¶ä¸ªæˆ–å¤šä¸ªå€¼æˆå‘˜ã€‚å®ƒæ˜¯å±žäºŽenumç±»åž‹çš„ï¼Œä¸€ä¸ªenumå¯¹è±¡ä¸­ä¸å¯æœ‰ä¸¤ä¸ªæˆ–å¤šä¸ªç›¸åŒçš„å±žæ€§æˆ–å€¼ã€‚
+enumå¯¹è±¡çš„å€¼éƒ½ä¼šè‡ªåŠ¨èŽ·å¾—ä¸€ä¸ªæ•°å­—å€¼ï¼Œä»Ž0å¼€å§‹ï¼Œä¾æ¬¡é€’å¢žã€‚
 
-Ã¶¾ÙÀàÐÍ»¹Ìá¹©ÁËÓÐÓÃµÄ¾²Ì¬·½·¨values()¿ÉÒÔºÜ·½±ãµØÊ¹ÓÃËüÃÇ£¬ÀýÈç
-for¡¡(Color¡¡c¡¡:¡¡Color.values())
+æžšä¸¾ç±»åž‹è¿˜æä¾›äº†æœ‰ç”¨çš„é™æ€æ–¹æ³•values()å¯ä»¥å¾ˆæ–¹ä¾¿åœ°ä½¿ç”¨å®ƒä»¬ï¼Œä¾‹å¦‚
+forã€€(Colorã€€cã€€:ã€€Color.values())
 {
 	System.out.println(c);
 }
 
-¾²Ì¬·½·¨values()·µ»ØÕâ¸öÃ¶¾ÙËùµÈÍ¬µÄÊý×é£¬²¢ÇÒÊý×éÖÐµÄÔªËØÑÏ¸ñ±£³ÖÆäÔÚenumÖÐÉùÃ÷µÄË³Ðò¡£
+é™æ€æ–¹æ³•values()è¿”å›žè¿™ä¸ªæžšä¸¾æ‰€ç­‰åŒçš„æ•°ç»„ï¼Œå¹¶ä¸”æ•°ç»„ä¸­çš„å…ƒç´ ä¸¥æ ¼ä¿æŒå…¶åœ¨enumä¸­å£°æ˜Žçš„é¡ºåºã€‚
 
-Ò»ÌõÆÕ±é¹æÔòÊÇ£¬ÈÎºÎÊ¹ÓÃ³£Á¿µÄµØ·½£¬ÀýÈçÄ¿Ç°ÓÃ switch ´úÂëÇÐ»»³£Á¿µÄµØ·½¡£
-Èç¹ûÖ»ÓÐµ¥¶ÀÒ»¸öÖµ(ÀýÈç£¬Ð¬µÄ×î´ó³ß´ç£¬»òÕßÁý×ÓÖÐÄÜ×°ºï×ÓµÄ×î´óÊýÄ¿)£¬Ôò»¹ÊÇ°ÑÕâ¸öÈÎÎñÁô¸ø³£Á¿¡£
-µ«ÊÇ£¬Èç¹û¶¨ÒåÁËÒ»×éÖµ£¬¶øÕâÐ©ÖµÖÐµÄÈÎºÎÒ»¸ö¶¼¿ÉÒÔÓÃÓÚÌØ¶¨µÄÊý¾ÝÀàÐÍ£¬ÄÇÃ´½«Ã¶¾ÙÓÃÔÚÕâ¸öµØ·½×îÊÊºÏ²»¹ý¡£
+ä¸€æ¡æ™®éè§„åˆ™æ˜¯ï¼Œä»»ä½•ä½¿ç”¨å¸¸é‡çš„åœ°æ–¹ï¼Œä¾‹å¦‚ç›®å‰ç”¨ switch ä»£ç åˆ‡æ¢å¸¸é‡çš„åœ°æ–¹ã€‚
+å¦‚æžœåªæœ‰å•ç‹¬ä¸€ä¸ªå€¼(ä¾‹å¦‚ï¼Œéž‹çš„æœ€å¤§å°ºå¯¸ï¼Œæˆ–è€…ç¬¼å­ä¸­èƒ½è£…çŒ´å­çš„æœ€å¤§æ•°ç›®)ï¼Œåˆ™è¿˜æ˜¯æŠŠè¿™ä¸ªä»»åŠ¡ç•™ç»™å¸¸é‡ã€‚
+ä½†æ˜¯ï¼Œå¦‚æžœå®šä¹‰äº†ä¸€ç»„å€¼ï¼Œè€Œè¿™äº›å€¼ä¸­çš„ä»»ä½•ä¸€ä¸ªéƒ½å¯ä»¥ç”¨äºŽç‰¹å®šçš„æ•°æ®ç±»åž‹ï¼Œé‚£ä¹ˆå°†æžšä¸¾ç”¨åœ¨è¿™ä¸ªåœ°æ–¹æœ€é€‚åˆä¸è¿‡ã€‚

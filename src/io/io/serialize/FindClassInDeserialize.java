@@ -9,27 +9,27 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 /**
- * ·´ÐòÁÐ»¯¹ý³ÌÊ±Ñ°ÕÒÀàÑÝÊ¾
+ * ååºåˆ—åŒ–è¿‡ç¨‹æ—¶å¯»æ‰¾ç±»æ¼”ç¤º
  * <p>
- * ½«Ò»¸ö¶ÔÏó´ÓËüµÄÐòÁÐ»¯×´Ì¬ÖÐ»Ö¸´³öÀ´ÓÐÄÄÐ©¹¤×÷ÊÇ±ØÐëµÄÄØ£¿¼ÙÈç½«Ò»¸ö¶ÔÏóÐòÁÐ»¯£¬²¢Í¨¹ýÍøÂç½«Æä×÷ÎªÎÄ¼þ
- * ´«ËÍ¸øÁíÒ»Ì¨¼ÆËã»ú£¬ÄÇÃ´ÁíÒ»Ì¨¼ÆËã»úÉÏµÄ³ÌÐò¿ÉÒÔÖ»ÀûÓÃ¸ÃÎÄ¼þÄÚÈÝÀ´ÖØ×éÕâ¸ö¶ÔÏóÂð£¿
+ * å°†ä¸€ä¸ªå¯¹è±¡ä»Žå®ƒçš„åºåˆ—åŒ–çŠ¶æ€ä¸­æ¢å¤å‡ºæ¥æœ‰å“ªäº›å·¥ä½œæ˜¯å¿…é¡»çš„å‘¢ï¼Ÿå‡å¦‚å°†ä¸€ä¸ªå¯¹è±¡åºåˆ—åŒ–ï¼Œå¹¶é€šè¿‡ç½‘ç»œå°†å…¶ä½œä¸ºæ–‡ä»¶
+ * ä¼ é€ç»™å¦ä¸€å°è®¡ç®—æœºï¼Œé‚£ä¹ˆå¦ä¸€å°è®¡ç®—æœºä¸Šçš„ç¨‹åºå¯ä»¥åªåˆ©ç”¨è¯¥æ–‡ä»¶å†…å®¹æ¥é‡ç»„è¿™ä¸ªå¯¹è±¡å—ï¼Ÿ
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class FindClassInDeserialize {
 
 	/**
-	 * ±¾ÀýÖÐ¶ÔÏó¶ÔÓ¦µÄÀàÎÄ¼þÒÑ¾­±»É¾³ýÁË£¬ÕâÑù¿ÉÒÔÄ£ÄâÔÚÁ½¸ö¼ÆËã»ú¼ä´«µÝÒ»¸öÐòÁÐ»¯¶ÔÏóÊ±»Ö¸´¶ÔÏóµÄÇéÐÎ¡£
+	 * æœ¬ä¾‹ä¸­å¯¹è±¡å¯¹åº”çš„ç±»æ–‡ä»¶å·²ç»è¢«åˆ é™¤äº†ï¼Œè¿™æ ·å¯ä»¥æ¨¡æ‹Ÿåœ¨ä¸¤ä¸ªè®¡ç®—æœºé—´ä¼ é€’ä¸€ä¸ªåºåˆ—åŒ–å¯¹è±¡æ—¶æ¢å¤å¯¹è±¡çš„æƒ…å½¢ã€‚
 	 * 
-	 * ´ò¿ªÎÄ¼þºÍ¶ÁÈ¡¶ÔÏóÖÐµÄÄÚÈÝ¶¼ÐèÒªLostµÄClass¶ÔÏó£¬¶øJVMÕÒ²»µ½Lost.class£¨³ý·ÇËüÕýºÃÔÚclasspathÄÚ£¬¶ø±¾ÀýÈ´²»ÔÚÀàÂ·¾¶Ö®ÄÚ£©
-	 * ÕâÑù¾Í»áµÃµ½Ò»¸öClassNotFoundException µÄÒì³££¬³ý·ÇÄÜ¹»ÑéÖ¤Lost´æÔÚ£¬·ñÔòËüµÈÓÚÏûÊ§£¬±ØÐë±£Ö¤JVMÄÜÕÒµ½Ïà¹ØµÄ.classÎÄ¼þ¡£
+	 * æ‰“å¼€æ–‡ä»¶å’Œè¯»å–å¯¹è±¡ä¸­çš„å†…å®¹éƒ½éœ€è¦Lostçš„Classå¯¹è±¡ï¼Œè€ŒJVMæ‰¾ä¸åˆ°Lost.classï¼ˆé™¤éžå®ƒæ­£å¥½åœ¨classpathå†…ï¼Œè€Œæœ¬ä¾‹å´ä¸åœ¨ç±»è·¯å¾„ä¹‹å†…ï¼‰
+	 * è¿™æ ·å°±ä¼šå¾—åˆ°ä¸€ä¸ªClassNotFoundException çš„å¼‚å¸¸ï¼Œé™¤éžèƒ½å¤ŸéªŒè¯Lostå­˜åœ¨ï¼Œå¦åˆ™å®ƒç­‰äºŽæ¶ˆå¤±ï¼Œå¿…é¡»ä¿è¯JVMèƒ½æ‰¾åˆ°ç›¸å…³çš„.classæ–‡ä»¶ã€‚
 	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ¶ÔÏóÐòÁÐ»¯ÎÄ¼þÂ·¾¶
+		// å¯¹è±¡åºåˆ—åŒ–æ–‡ä»¶è·¯å¾„
 		String fileName = "files/io.serialize/Lost.out";
 		ObjectInputStream in = null;
 		

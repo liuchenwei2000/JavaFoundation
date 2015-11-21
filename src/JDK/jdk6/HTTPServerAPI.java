@@ -12,14 +12,14 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 /**
- * 5£¬Http Server APIÊ¾Àı
+ * 5ï¼ŒHttp Server APIç¤ºä¾‹
  * <p>
- * JDK6Ìá¹©ÁËÒ»¸ö¼òµ¥µÄHttp Server API£¬¾İ´Ë¿ÉÒÔ¹¹½¨×Ô¼ºµÄÇ¶ÈëÊ½Http Server¡£
- * ËüÖ§³ÖHttpºÍHttpsĞ­Òé£¬Ìá¹©ÁËHTTP1.1µÄ²¿·ÖÊµÏÖ£¬Ã»ÓĞ±»ÊµÏÖµÄÄÇ²¿·Ö¿ÉÒÔÍ¨¹ıÀ©Õ¹ÒÑÓĞµÄHttp Server APIÀ´ÊµÏÖ¡£
+ * JDK6æä¾›äº†ä¸€ä¸ªç®€å•çš„Http Server APIï¼Œæ®æ­¤å¯ä»¥æ„å»ºè‡ªå·±çš„åµŒå…¥å¼Http Serverã€‚
+ * å®ƒæ”¯æŒHttpå’ŒHttpsåè®®ï¼Œæä¾›äº†HTTP1.1çš„éƒ¨åˆ†å®ç°ï¼Œæ²¡æœ‰è¢«å®ç°çš„é‚£éƒ¨åˆ†å¯ä»¥é€šè¿‡æ‰©å±•å·²æœ‰çš„Http Server APIæ¥å®ç°ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-30
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-30
  */
 public class HTTPServerAPI {
 
@@ -28,15 +28,15 @@ public class HTTPServerAPI {
 	 */
 	public static void main(String[] args) {
 		try {
-			// HttpServerÊÇÒ»¸ö¼òµ¥µÄHttp·şÎñÆ÷ÊµÏÖ
-			// ÉèÖÃ¶Ë¿ÚÎª 8888£¬×î´óÁ¬½ÓÊıÎª 10
+			// HttpServeræ˜¯ä¸€ä¸ªç®€å•çš„HttpæœåŠ¡å™¨å®ç°
+			// è®¾ç½®ç«¯å£ä¸º 8888ï¼Œæœ€å¤§è¿æ¥æ•°ä¸º 10
 			HttpServer server = HttpServer.create(new InetSocketAddress(8888), 10);
-			// ´´½¨Ò»¸öHttpContext¡ª¡ª¡ª¡ªËüÊÇURL pattern µ½ HttpHandler µÄÓ³Éä
-			// ¼´ÓÃHelloHandlerÀàÊµÀı´¦Àí /hello ÇëÇó
+			// åˆ›å»ºä¸€ä¸ªHttpContextâ€”â€”â€”â€”å®ƒæ˜¯URL pattern åˆ° HttpHandler çš„æ˜ å°„
+			// å³ç”¨HelloHandlerç±»å®ä¾‹å¤„ç† /hello è¯·æ±‚
 			server.createContext("/hello", new HelloHandler());
-			// ÎªHttpServerÉèÖÃÒ»¸öExecutor£¬ÍùÍùÊÇÏß³Ì³ØµÄÊµÏÖ£¬±ØĞëÔÚserver.start()·½·¨Ç°µ÷ÓÃ
+			// ä¸ºHttpServerè®¾ç½®ä¸€ä¸ªExecutorï¼Œå¾€å¾€æ˜¯çº¿ç¨‹æ± çš„å®ç°ï¼Œå¿…é¡»åœ¨server.start()æ–¹æ³•å‰è°ƒç”¨
 			server.setExecutor(null);
-			// Æô¶¯HttpServer
+			// å¯åŠ¨HttpServer
 			server.start();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -44,23 +44,23 @@ public class HTTPServerAPI {
 	}
 
 	/**
-	 * ³ÌĞòÔ±±ØĞë×Ô¼ºÊµÏÖ HttpHandler ½Ó¿Ú£¬HttpServer »áµ÷ÓÃ HttpHandler ÊµÏÖÀàµÄ»Øµ÷·½·¨À´´¦Àí¿Í»§¶ËÇëÇó¡£
+	 * ç¨‹åºå‘˜å¿…é¡»è‡ªå·±å®ç° HttpHandler æ¥å£ï¼ŒHttpServer ä¼šè°ƒç”¨ HttpHandler å®ç°ç±»çš„å›è°ƒæ–¹æ³•æ¥å¤„ç†å®¢æˆ·ç«¯è¯·æ±‚ã€‚
 	 */
 	private static class HelloHandler implements HttpHandler {
 		
 		/**
-		 * Ò»¸öHttpÇëÇóºÍËüµÄÏìÓ¦³ÆÎªÒ»¸ö½»»»£¬°ü×°³ÉHttpExchangeÀà¡£
-		 * HttpServer ¸ºÔğ½« HttpExchange ´«¸ø HttpHandler ÊµÏÖÀàµÄ»Øµ÷·½·¨¡£
+		 * ä¸€ä¸ªHttpè¯·æ±‚å’Œå®ƒçš„å“åº”ç§°ä¸ºä¸€ä¸ªäº¤æ¢ï¼ŒåŒ…è£…æˆHttpExchangeç±»ã€‚
+		 * HttpServer è´Ÿè´£å°† HttpExchange ä¼ ç»™ HttpHandler å®ç°ç±»çš„å›è°ƒæ–¹æ³•ã€‚
 		 * 
 		 * @see com.sun.net.httpserver.HttpHandler#handle(com.sun.net.httpserver.HttpExchange)
 		 */
 		public void handle(HttpExchange exchange) throws IOException {
-			// HttpExchange¿ÉÒÔ»ñÈ¡µ½requestºÍresponseµÄÏà¹ØĞÅÏ¢
+			// HttpExchangeå¯ä»¥è·å–åˆ°requestå’Œresponseçš„ç›¸å…³ä¿¡æ¯
 			System.out.println(exchange.getRequestMethod());
 
 			String response = "<html><body><h3>Hello World!</h3></body></html>";
 			exchange.sendResponseHeaders(200, response.length());
-			// ½«ĞÅÏ¢Ğ´Èëµ½ÏìÓ¦Á÷ÖĞ
+			// å°†ä¿¡æ¯å†™å…¥åˆ°å“åº”æµä¸­
 			OutputStream os = null;
 			try {
 				os = exchange.getResponseBody();

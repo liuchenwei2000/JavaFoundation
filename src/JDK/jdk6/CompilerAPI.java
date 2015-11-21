@@ -14,20 +14,20 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 
 /**
- * 4£¬´Ó³ÌĞòÖĞµ÷ÓÃ Java±àÒëÆ÷Ê¾Àı
+ * 4ï¼Œä»ç¨‹åºä¸­è°ƒç”¨ Javaç¼–è¯‘å™¨ç¤ºä¾‹
  * <p>
- * ¿ÉÒÔÓÃJDK6µÄCompiler API(JSR 199)È¥¶¯Ì¬±àÒëJavaÔ´ÎÄ¼ş¡£
+ * å¯ä»¥ç”¨JDK6çš„Compiler API(JSR 199)å»åŠ¨æ€ç¼–è¯‘Javaæºæ–‡ä»¶ã€‚
  * <p>
- * Compiler API½áºÏ·´Éä¹¦ÄÜ¾Í¿ÉÒÔÊµÏÖ¶¯Ì¬µÄ²úÉúJava´úÂë²¢±àÒëÖ´ĞĞÕâĞ©´úÂë£¬ÓĞµã¶¯Ì¬ÓïÑÔµÄÌØÕ÷¡£
- * Õâ¸öÌØĞÔ¶ÔÓÚÄ³Ğ©ĞèÒªÓÃµ½¶¯Ì¬±àÒëµÄÓ¦ÓÃ³ÌĞòÏàµ±ÓĞÓÃ£¬ ±ÈÈçJSP Web Server¡£
- * µ±ÊÖ¶¯ĞŞ¸ÄJSPºó£¬ÊÇ²»Ï£ÍûÖØÆôWeb Server²Å¿ÉÒÔ¿´µ½Ğ§¹ûµÄ£¬ÕâÊ±ºò¾Í¿ÉÒÔÓÃCompiler APIÀ´ÊµÏÖ¶¯Ì¬±àÒëJSPÎÄ¼ş¡£
- * µ±È»£¬ÏÖÔÚµÄJSP Web ServerÒ²ÊÇÖ§³ÖJSPÈÈ²¿ÊğµÄ£¬µ«ËüÊÇÔÚÔËĞĞÆÚ¼äÍ¨¹ı  Runtime.exec»ò ProcessBuilder µ÷ÓÃjavacÀ´±àÒë´úÂë£¬
- * ÕâÖÖ·½Ê½ĞèÒª²úÉúÁíÒ»¸ö½ø³ÌÈ¥×ö±àÒë¹¤×÷£¬²»¹»ÓÅÑÅ¶øÇÒÈİÒ×Ê¹´úÂëÒÀÀµÓÚÌØ¶¨µÄ²Ù×÷ÏµÍ³¡£
- * Compiler APIÍ¨¹ıÒ»Ì×Ò×ÓÃµÄ±ê×¼µÄAPIÌá¹©ÁË¸ü¼Ó·á¸»µÄ·½Ê½È¥×ö¶¯Ì¬±àÒë£¬¶øÇÒÊÇ¿çÆ½Ì¨µÄ¡£
+ * Compiler APIç»“åˆåå°„åŠŸèƒ½å°±å¯ä»¥å®ç°åŠ¨æ€çš„äº§ç”ŸJavaä»£ç å¹¶ç¼–è¯‘æ‰§è¡Œè¿™äº›ä»£ç ï¼Œæœ‰ç‚¹åŠ¨æ€è¯­è¨€çš„ç‰¹å¾ã€‚
+ * è¿™ä¸ªç‰¹æ€§å¯¹äºæŸäº›éœ€è¦ç”¨åˆ°åŠ¨æ€ç¼–è¯‘çš„åº”ç”¨ç¨‹åºç›¸å½“æœ‰ç”¨ï¼Œ æ¯”å¦‚JSP Web Serverã€‚
+ * å½“æ‰‹åŠ¨ä¿®æ”¹JSPåï¼Œæ˜¯ä¸å¸Œæœ›é‡å¯Web Serveræ‰å¯ä»¥çœ‹åˆ°æ•ˆæœçš„ï¼Œè¿™æ—¶å€™å°±å¯ä»¥ç”¨Compiler APIæ¥å®ç°åŠ¨æ€ç¼–è¯‘JSPæ–‡ä»¶ã€‚
+ * å½“ç„¶ï¼Œç°åœ¨çš„JSP Web Serverä¹Ÿæ˜¯æ”¯æŒJSPçƒ­éƒ¨ç½²çš„ï¼Œä½†å®ƒæ˜¯åœ¨è¿è¡ŒæœŸé—´é€šè¿‡  Runtime.execæˆ– ProcessBuilder è°ƒç”¨javacæ¥ç¼–è¯‘ä»£ç ï¼Œ
+ * è¿™ç§æ–¹å¼éœ€è¦äº§ç”Ÿå¦ä¸€ä¸ªè¿›ç¨‹å»åšç¼–è¯‘å·¥ä½œï¼Œä¸å¤Ÿä¼˜é›…è€Œä¸”å®¹æ˜“ä½¿ä»£ç ä¾èµ–äºç‰¹å®šçš„æ“ä½œç³»ç»Ÿã€‚
+ * Compiler APIé€šè¿‡ä¸€å¥—æ˜“ç”¨çš„æ ‡å‡†çš„APIæä¾›äº†æ›´åŠ ä¸°å¯Œçš„æ–¹å¼å»åšåŠ¨æ€ç¼–è¯‘ï¼Œè€Œä¸”æ˜¯è·¨å¹³å°çš„ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-29
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-29
  */
 public class CompilerAPI {
 
@@ -40,30 +40,30 @@ public class CompilerAPI {
 	 */
 	public static void main(String[] args) {
 		try {
-			generateJavaSourceFile();// ÏÈÉú³ÉJavaÔ´ÎÄ¼ş
+			generateJavaSourceFile();// å…ˆç”ŸæˆJavaæºæ–‡ä»¶
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		// »ñÈ¡´ËÆ½Ì¨Ìá¹©µÄ Java ÓïÑÔ±àÒëÆ÷
+		// è·å–æ­¤å¹³å°æä¾›çš„ Java è¯­è¨€ç¼–è¯‘å™¨
 		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-		// »ñÈ¡Ò»¸ö±ê×¼ÎÄ¼ş¹ÜÀíÆ÷ÊµÏÖµÄĞÂÊµÀı
+		// è·å–ä¸€ä¸ªæ ‡å‡†æ–‡ä»¶ç®¡ç†å™¨å®ç°çš„æ–°å®ä¾‹
 		StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, null);
 		
 		try {
-			// »ñÈ¡±íÊ¾¸ø¶¨ÎÄ¼şµÄÎÄ¼ş¶ÔÏó
+			// è·å–è¡¨ç¤ºç»™å®šæ–‡ä»¶çš„æ–‡ä»¶å¯¹è±¡
 			Iterable<? extends JavaFileObject> sourcefiles = fileManager.getJavaFileObjects(JAVA_SOURCE_FILE);
-			// Ê¹ÓÃ¸ø¶¨×é¼şºÍ²ÎÊı´´½¨±àÒëÈÎÎñµÄ future £¬²¢Ö´ĞĞ´Ë±àÒëÈÎÎñ£¨call·½·¨£©¡£
+			// ä½¿ç”¨ç»™å®šç»„ä»¶å’Œå‚æ•°åˆ›å»ºç¼–è¯‘ä»»åŠ¡çš„ future ï¼Œå¹¶æ‰§è¡Œæ­¤ç¼–è¯‘ä»»åŠ¡ï¼ˆcallæ–¹æ³•ï¼‰ã€‚
 			compiler.getTask(null, fileManager, null, null, null, sourcefiles).call();
-			fileManager.close();// ±àÒëÍê³É
+			fileManager.close();// ç¼–è¯‘å®Œæˆ
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		
-		// ½«±àÒëºóµÄclassÎÄ¼şÅ²µ½classpathÂ·¾¶ÏÂ
+		// å°†ç¼–è¯‘åçš„classæ–‡ä»¶æŒªåˆ°classpathè·¯å¾„ä¸‹
 		new File(JAVA_CLASS_FILE).renameTo(new File("bin/DynamicClass.class"));
 		try {
-			// ´´½¨¶¯Ì¬±àÒëµÃµ½µÄDynamicClassÀàµÄÊµÀı
+			// åˆ›å»ºåŠ¨æ€ç¼–è¯‘å¾—åˆ°çš„DynamicClassç±»çš„å®ä¾‹
 			Class.forName(JAVA_CLASS_NAME).newInstance();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -71,7 +71,7 @@ public class CompilerAPI {
 	}
 
 	/**
-	 * Éú³ÉJavaÀàÔ´ÎÄ¼ş
+	 * ç”ŸæˆJavaç±»æºæ–‡ä»¶
 	 */
 	private static void generateJavaSourceFile() throws IOException {
 		BufferedWriter bw = null;

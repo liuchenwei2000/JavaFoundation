@@ -6,14 +6,14 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * ¹¹ÔìInterface¶ÔÏó£¨Ë½ÓĞÄÚ²¿ÀàÊµÏÖ£©µÄ¹¤³§Àà
+ * æ„é€ Interfaceå¯¹è±¡ï¼ˆç§æœ‰å†…éƒ¨ç±»å®ç°ï¼‰çš„å·¥å‚ç±»
  * <p>
- * Ê¹ÓÃÁËÊµÏÖ½Ó¿ÚInterfaceµÄPrivateInnerImplÀà£¬PrivateInnerImplÀàÊÇË½ÓĞÄÚ²¿Àà£¬¶ÔÍâÀàĞÍĞÅÏ¢±»ÆÁ±Î¡£
+ * ä½¿ç”¨äº†å®ç°æ¥å£Interfaceçš„PrivateInnerImplç±»ï¼ŒPrivateInnerImplç±»æ˜¯ç§æœ‰å†…éƒ¨ç±»ï¼Œå¯¹å¤–ç±»å‹ä¿¡æ¯è¢«å±è”½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * @see rtti.itf.demo.PrivateInnerImplDemo
  * 
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class PrivateInnerImplFactory {
 

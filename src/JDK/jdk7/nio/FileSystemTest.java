@@ -11,15 +11,15 @@ import java.nio.file.Path;
 import java.text.NumberFormat;
 
 /**
- * ÎÄ¼şÏµÍ³Ê¾Àı
+ * æ–‡ä»¶ç³»ç»Ÿç¤ºä¾‹
  * <p>
- * Ò»¸öÎÄ¼şÏµÍ³Í¨³£Ö¸µÄÊÇÒ»¸ö»ò¶à¸ö¸ùÄ¿Â¼£¬ÆäÏÂÃæ°üº¬Ò»¶¨µÄÎÄ¼şºÍ×ÓÄ¿Â¼£¬²¢ÓÉ´Ë×é³ÉµÄÄ¿Â¼½á¹¹¡£
- * Ã¿Ò»¸öÎÄ¼şÏµÍ³¶¼Ö§³ÖÒ»ÖÖÎÄ¼ş´æ´¢»úÖÆ¡£ÕâÖÖ»úÖÆÓĞ¿ÉÄÜÊÇÒ»¸öÉè±¸£¬ÀıÈçCÅÌ»òÒ»¸ö´ÅÅÌ·ÖÇø£¬»òÕßÊÇÆäËüµÄÄ³ÖÖ×éÖ¯ÎÄ¼şÏµÍ³¿Õ¼äµÄ·½Ê½¡£
- * Java7ÖĞµÄjava.nio.file.FileStore¾Í´ú±íÁËÒ»ÖÖÎÄ¼ş´æ´¢»úÖÆ¡£
+ * ä¸€ä¸ªæ–‡ä»¶ç³»ç»Ÿé€šå¸¸æŒ‡çš„æ˜¯ä¸€ä¸ªæˆ–å¤šä¸ªæ ¹ç›®å½•ï¼Œå…¶ä¸‹é¢åŒ…å«ä¸€å®šçš„æ–‡ä»¶å’Œå­ç›®å½•ï¼Œå¹¶ç”±æ­¤ç»„æˆçš„ç›®å½•ç»“æ„ã€‚
+ * æ¯ä¸€ä¸ªæ–‡ä»¶ç³»ç»Ÿéƒ½æ”¯æŒä¸€ç§æ–‡ä»¶å­˜å‚¨æœºåˆ¶ã€‚è¿™ç§æœºåˆ¶æœ‰å¯èƒ½æ˜¯ä¸€ä¸ªè®¾å¤‡ï¼Œä¾‹å¦‚Cç›˜æˆ–ä¸€ä¸ªç£ç›˜åˆ†åŒºï¼Œæˆ–è€…æ˜¯å…¶å®ƒçš„æŸç§ç»„ç»‡æ–‡ä»¶ç³»ç»Ÿç©ºé—´çš„æ–¹å¼ã€‚
+ * Java7ä¸­çš„java.nio.file.FileStoreå°±ä»£è¡¨äº†ä¸€ç§æ–‡ä»¶å­˜å‚¨æœºåˆ¶ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ22æ—¥
  */
 public class FileSystemTest {
 	  
@@ -32,15 +32,15 @@ public class FileSystemTest {
 	}
 	
 	/**
-	 * ÎÄ¼şÏµÍ³ĞÅÏ¢
+	 * æ–‡ä»¶ç³»ç»Ÿä¿¡æ¯
 	 */
 	private static void testFileSystem() {
-		// ÓÉJVM·µ»ØÒ»¸ö´ú±íÁËµ±Ç°ÎÄ¼şÏµÍ³µÄFileSystem¶ÔÏó
+		// ç”±JVMè¿”å›ä¸€ä¸ªä»£è¡¨äº†å½“å‰æ–‡ä»¶ç³»ç»Ÿçš„FileSystemå¯¹è±¡
 		FileSystem fileSystem = FileSystems.getDefault();
-		// Èç¹ûÏëÒª»ñµÃÏµÍ³µÄÂ·¾¶·Ö¸ô·û£¬FileSystemÒ²Ìá¹©ÁËgetSeparator·½·¨¡£
-		System.out.println("separator£º" + fileSystem.getSeparator());
+		// å¦‚æœæƒ³è¦è·å¾—ç³»ç»Ÿçš„è·¯å¾„åˆ†éš”ç¬¦ï¼ŒFileSystemä¹Ÿæä¾›äº†getSeparatoræ–¹æ³•ã€‚
+		System.out.println("separatorï¼š" + fileSystem.getSeparator());
 		
-	    // »ñµÃ´ÅÅÌµÄ¸÷¸ö¸ùÄ¿Â¼(LinuxÖĞÍ¨³£Ö»ÓĞÒ»¸ö¸ùÄ¿Â¼/£¬µ«WindowsÖĞÍ¨³£ÓĞ¶à¸ö¸ùÄ¿Â¼C: D: E:)¡£
+	    // è·å¾—ç£ç›˜çš„å„ä¸ªæ ¹ç›®å½•(Linuxä¸­é€šå¸¸åªæœ‰ä¸€ä¸ªæ ¹ç›®å½•/ï¼Œä½†Windowsä¸­é€šå¸¸æœ‰å¤šä¸ªæ ¹ç›®å½•C: D: E:)ã€‚
 	    Iterable<Path> rootDirectories = fileSystem.getRootDirectories();  
 	    System.out.println("Root Directories");  
 	    for (Path path : rootDirectories) {  
@@ -49,7 +49,7 @@ public class FileSystemTest {
 	}
 	
 	/**
-	 * ÎÄ¼ş´æ´¢ĞÅÏ¢
+	 * æ–‡ä»¶å­˜å‚¨ä¿¡æ¯
 	 */
 	private static void testFileStore() {
 		long MB = 1024 * 1024;
@@ -61,12 +61,12 @@ public class FileSystemTest {
 		FileSystem fs = FileSystems.getDefault();
 		try {
 			for (FileStore fileStore : fs.getFileStores()) {
-				// »ñÈ¡FileStoreµÄ×Ü¿Õ¼ä¡¢ÒÑÓÃ¿Õ¼ä¡¢¿ÉÓÃ¿Õ¼ä
+				// è·å–FileStoreçš„æ€»ç©ºé—´ã€å·²ç”¨ç©ºé—´ã€å¯ç”¨ç©ºé—´
 				long totalSpace = fileStore.getTotalSpace() / MB;
 				long usedSpace = (fileStore.getTotalSpace() - fileStore
 						.getUnallocatedSpace()) / MB;
 				long usableSpace = fileStore.getUsableSpace() / MB;
-				// »ñÈ¡FileStoreµÄÃû³ÆºÍÀàĞÍ
+				// è·å–FileStoreçš„åç§°å’Œç±»å‹
 				String name = fileStore.name();
 				String type = fileStore.type();
 

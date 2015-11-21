@@ -7,11 +7,11 @@ import java.io.*;
 import java.util.Date;
 
 /**
- * ÎÄ¼ş¶ÁĞ´ÑİÊ¾Àà
+ * æ–‡ä»¶è¯»å†™æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class FileIODemo {
 	
@@ -21,7 +21,7 @@ public class FileIODemo {
 	public static void main(String[] args) {
 		String filePath = "files/io.file/file.txt";
 		
-		// ¶ÁÈ¡
+		// è¯»å–
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(filePath));
@@ -41,7 +41,7 @@ public class FileIODemo {
 			}
 		}
 		
-		// Ğ´Èë
+		// å†™å…¥
 		BufferedWriter bw = null;
 		String content = new Date().toString();
 		try {

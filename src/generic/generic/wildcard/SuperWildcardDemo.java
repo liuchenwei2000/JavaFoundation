@@ -6,11 +6,11 @@ package generic.wildcard;
 import generic.Pair;
 
 /**
- * Í¨Åä·û³¬ÀàÐÍÏÞ¶¨ÑÝÊ¾Àà
+ * é€šé…ç¬¦è¶…ç±»åž‹é™å®šæ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-8-4
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-4
  */
 public class SuperWildcardDemo {
 
@@ -21,9 +21,9 @@ public class SuperWildcardDemo {
 		Son[] sons = { new Son("A", 1), new Son("B", 2), new Son("C", 3),
 				new Son("D", 4), new Son("E", 5) };
 		minmax(sons, new Pair<Son>());
-		// ¿ÉÒÔ½«Pair<Father>×÷Îª²ÎÊý£¬ÔÚÕâÀïÔÙ¿´minmaxÖÐset·½·¨µÄÐÐÎª¾ÍºÃÀí½âÁË
-		// ¶ÔÓÚminmax·½·¨À´Ëµ£¬²»¹Ü´«ÈëµÄPairÊÇÊ²Ã´ÀàÐÍ(Ö»ÒªÊÇSonµÄ³¬Àà)
-		// ¶¼¿ÉÒÔ½«Son·Å½øÈ¥£¬ÒòÎªÕâÊÇ°²È«µÄ£¬ËùÒÔset·½·¨µÄ²ÎÊýÊÇSonÀàÐÍ
+		// å¯ä»¥å°†Pair<Father>ä½œä¸ºå‚æ•°ï¼Œåœ¨è¿™é‡Œå†çœ‹minmaxä¸­setæ–¹æ³•çš„è¡Œä¸ºå°±å¥½ç†è§£äº†
+		// å¯¹äºŽminmaxæ–¹æ³•æ¥è¯´ï¼Œä¸ç®¡ä¼ å…¥çš„Pairæ˜¯ä»€ä¹ˆç±»åž‹(åªè¦æ˜¯Sonçš„è¶…ç±»)
+		// éƒ½å¯ä»¥å°†Sonæ”¾è¿›åŽ»ï¼Œå› ä¸ºè¿™æ˜¯å®‰å…¨çš„ï¼Œæ‰€ä»¥setæ–¹æ³•çš„å‚æ•°æ˜¯Sonç±»åž‹
 		minmax(sons, new Pair<Father>());
 		minmax(sons, new Pair<Object>());
 	}
@@ -37,9 +37,9 @@ public class SuperWildcardDemo {
 			if(son.getAge() > max.getAge()) max = son;
 		}
 		/*
-		 * ±àÒëÆ÷²»ÖªµÀset·½·¨²ÎÊýµÄÈ·ÇÐÀàÐÍ£¬µ«ÊÇ¿ÉÒÔÓÃÈÎÒâSon¶ÔÏó(»òÆä×Ó¶ÔÏó)
-		 * ×÷Îª²ÎÊýµ÷ÓÃËü£¬¶ø²»ÄÜÓÃFather¶ÔÏó×÷Îª²ÎÊý¡£
-		 * È»¶øÈç¹ûµ÷ÓÃget·½·¨£¬·µ»ØµÄ¶ÔÏóÀàÐÍµÃ²»µ½±£Ö¤£¬Ö»ÄÜ½«Ëü¸³¸øÒ»¸öObject¡£
+		 * ç¼–è¯‘å™¨ä¸çŸ¥é“setæ–¹æ³•å‚æ•°çš„ç¡®åˆ‡ç±»åž‹ï¼Œä½†æ˜¯å¯ä»¥ç”¨ä»»æ„Sonå¯¹è±¡(æˆ–å…¶å­å¯¹è±¡)
+		 * ä½œä¸ºå‚æ•°è°ƒç”¨å®ƒï¼Œè€Œä¸èƒ½ç”¨Fatherå¯¹è±¡ä½œä¸ºå‚æ•°ã€‚
+		 * ç„¶è€Œå¦‚æžœè°ƒç”¨getæ–¹æ³•ï¼Œè¿”å›žçš„å¯¹è±¡ç±»åž‹å¾—ä¸åˆ°ä¿è¯ï¼Œåªèƒ½å°†å®ƒèµ‹ç»™ä¸€ä¸ªObjectã€‚
 		 */
 		pair.setFirst(min);
 		pair.setSecond(max);

@@ -12,17 +12,17 @@ import java.nio.charset.Charset;
 import nio.IConst;
 
 /**
- * 2£¬CharBufferµÄ×Ö½Ú/×Ö·û×ª»»µÄ±àÂë/½âÂëÑİÊ¾
+ * 2ï¼ŒCharBufferçš„å­—èŠ‚/å­—ç¬¦è½¬æ¢çš„ç¼–ç /è§£ç æ¼”ç¤º
  * <p>
- * »º³åÆ÷ÈİÄÉµÄÊÇÆÕÍ¨µÄ×Ö½Ú£¬ÎªÁË°ÑËüÃÇ×ª»»³É×Ö·û£º
- * <li>1£¬ÒªÃ´ÔÚÊäÈëËüÃÇµÄÊ±ºò¶ÔÆä½øĞĞ±àÂë£¨ÕâÑùËüÃÇÊä³öÊ±²Å¾ßÓĞÒâÒå£©
- * <li>2£¬ÒªÃ´ÔÚ½«Æä´Ó»º³åÆ÷Êä³öÊ±¶ÔËüÃÇ½øĞĞ½âÂë¡£
+ * ç¼“å†²å™¨å®¹çº³çš„æ˜¯æ™®é€šçš„å­—èŠ‚ï¼Œä¸ºäº†æŠŠå®ƒä»¬è½¬æ¢æˆå­—ç¬¦ï¼š
+ * <li>1ï¼Œè¦ä¹ˆåœ¨è¾“å…¥å®ƒä»¬çš„æ—¶å€™å¯¹å…¶è¿›è¡Œç¼–ç ï¼ˆè¿™æ ·å®ƒä»¬è¾“å‡ºæ—¶æ‰å…·æœ‰æ„ä¹‰ï¼‰
+ * <li>2ï¼Œè¦ä¹ˆåœ¨å°†å…¶ä»ç¼“å†²å™¨è¾“å‡ºæ—¶å¯¹å®ƒä»¬è¿›è¡Œè§£ç ã€‚
  * <p>
- * ¿ÉÒÔÊ¹ÓÃjava.nio.charset.CharsetÀàÊµÏÖÕâĞ©¹¦ÄÜ£¬¸ÃÀàÌá¹©ÁË°ÑÊı¾İ±àÂë³É¶àÖÖ²»Í¬ÀàĞÍµÄ×Ö·û¼¯µÄ¹¤¾ß¡£
+ * å¯ä»¥ä½¿ç”¨java.nio.charset.Charsetç±»å®ç°è¿™äº›åŠŸèƒ½ï¼Œè¯¥ç±»æä¾›äº†æŠŠæ•°æ®ç¼–ç æˆå¤šç§ä¸åŒç±»å‹çš„å­—ç¬¦é›†çš„å·¥å…·ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-23
  */
 public class CharBufferEnDecodeDemo {
 
@@ -41,41 +41,41 @@ public class CharBufferEnDecodeDemo {
 			channel = new FileInputStream(fileName).getChannel();
 			ByteBuffer buff = ByteBuffer.allocate(IConst.K);
 			channel.read(buff);
-			// ·´×ª´Ë»º³åÇø¡£Ê×ÏÈ½«ÏŞÖÆÉèÖÃÎªµ±Ç°Î»ÖÃ£¬È»ºó½«Î»ÖÃÉèÖÃÎª 0¡£
+			// åè½¬æ­¤ç¼“å†²åŒºã€‚é¦–å…ˆå°†é™åˆ¶è®¾ç½®ä¸ºå½“å‰ä½ç½®ï¼Œç„¶åå°†ä½ç½®è®¾ç½®ä¸º 0ã€‚
 			buff.flip();
-			// CharBufferµÄtoStringÊÇÕâÑù¶¨ÒåµÄ£º·µ»ØÒ»¸ö°üº¬»º³åÆÚÖĞËùÓĞ×Ö·ûµÄ×Ö·û´®¡£
-			// µ«ÊÇÕâÀïµÄµ÷ÓÃÈ´´òÓ¡³öÀ´ÁËÒ»¶ÑÂÒÂë
+			// CharBufferçš„toStringæ˜¯è¿™æ ·å®šä¹‰çš„ï¼šè¿”å›ä¸€ä¸ªåŒ…å«ç¼“å†²æœŸä¸­æ‰€æœ‰å­—ç¬¦çš„å­—ç¬¦ä¸²ã€‚
+			// ä½†æ˜¯è¿™é‡Œçš„è°ƒç”¨å´æ‰“å°å‡ºæ¥äº†ä¸€å †ä¹±ç 
 			System.out.println(buff.asCharBuffer());
 			
-			/** Ê¹ÓÃÏµÍ³Ä¬ÈÏ×Ö·û¼¯½øĞĞ½âÂë(¶ÔÓ¦µÚ2ÖÖ·½Ê½) */
-			// rewind()·½·¨ÊÇÎªÁËÈÃ»º³åÆ÷»Øµ½Êı¾İ¿ªÊ¼µÄµØ·½
+			/** ä½¿ç”¨ç³»ç»Ÿé»˜è®¤å­—ç¬¦é›†è¿›è¡Œè§£ç (å¯¹åº”ç¬¬2ç§æ–¹å¼) */
+			// rewind()æ–¹æ³•æ˜¯ä¸ºäº†è®©ç¼“å†²å™¨å›åˆ°æ•°æ®å¼€å§‹çš„åœ°æ–¹
 			buff.rewind();
-			// ·µ»ØÏµÍ³Ä¬ÈÏ×Ö·û¼¯×Ö·û´®
+			// è¿”å›ç³»ç»Ÿé»˜è®¤å­—ç¬¦é›†å­—ç¬¦ä¸²
 			String encoding = System.getProperty("file.encoding");
-			// Charset.forName()ÓÃÒÔ²úÉúCharset¶ÔÏó£¬¿ÉÒÔÓÃËü¶Ô×Ö·û´®½øĞĞ½âÂë
+			// Charset.forName()ç”¨ä»¥äº§ç”ŸCharsetå¯¹è±¡ï¼Œå¯ä»¥ç”¨å®ƒå¯¹å­—ç¬¦ä¸²è¿›è¡Œè§£ç 
 			System.out.println("Decoded using " + encoding + ": " + Charset.forName(encoding).decode(buff));
 			
-			/** Ê¹ÓÃÖ¸¶¨µÄ×Ö·û¼¯(UTF-16BE)¶ÔÊä³öµÄ×Ö½Ú½øĞĞ±àÂë(¶ÔÓ¦µÚ1ÖÖ·½Ê½) */
+			/** ä½¿ç”¨æŒ‡å®šçš„å­—ç¬¦é›†(UTF-16BE)å¯¹è¾“å‡ºçš„å­—èŠ‚è¿›è¡Œç¼–ç (å¯¹åº”ç¬¬1ç§æ–¹å¼) */
 			channel = new FileOutputStream(fileName).getChannel();
 			channel.write(ByteBuffer.wrap("Some text".getBytes("UTF-16BE")));
 			channel.close();
 			
-			// ÏÖÔÚÊÔ×ÅÒÔCharBuffer¶Á»ØÕâĞ©×Ö½Ú£¬¾ÍÊÇËùÆÚÍûµÄÎÄ±¾
+			// ç°åœ¨è¯•ç€ä»¥CharBufferè¯»å›è¿™äº›å­—èŠ‚ï¼Œå°±æ˜¯æ‰€æœŸæœ›çš„æ–‡æœ¬
 			channel = new FileInputStream(fileName).getChannel();
 			buff.clear();
 			channel.read(buff);
 			buff.flip();
 			System.out.println(buff.asCharBuffer());
 			
-			/** Ê¹ÓÃCharBufferÏòByteBufferĞ´Èë */ 
+			/** ä½¿ç”¨CharBufferå‘ByteBufferå†™å…¥ */ 
 			channel = new FileOutputStream(fileName).getChannel();
 			buff = ByteBuffer.allocate(24); // more than "Some text" 
 			buff.asCharBuffer().put("Some text");
 			channel.write(buff);
 			channel.close();
 			
-			// Í¨¹ı CharBuffer¶Á»ØÕâĞ©×Ö·û²¢´òÓ¡³öÀ´
-			// »º³åÆ÷»¹ÓĞ3¸ö×Ö·û¿Õ¼ä£¬¶¼»áÒÔ\0ĞÎÊ½Ìî³ä£¬´òÓ¡³öÀ´¿É¼ûĞ§¹û
+			// é€šè¿‡ CharBufferè¯»å›è¿™äº›å­—ç¬¦å¹¶æ‰“å°å‡ºæ¥
+			// ç¼“å†²å™¨è¿˜æœ‰3ä¸ªå­—ç¬¦ç©ºé—´ï¼Œéƒ½ä¼šä»¥\0å½¢å¼å¡«å……ï¼Œæ‰“å°å‡ºæ¥å¯è§æ•ˆæœ
 			channel = new FileInputStream(fileName).getChannel();
 			buff.clear();
 			channel.read(buff);

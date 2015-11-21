@@ -4,11 +4,11 @@
 package inherit.difference;
 
 /**
- * ÑİÊ¾Àà
+ * æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Demo {
 	
@@ -16,10 +16,10 @@ public class Demo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Plane plane = new Plane("²¨Òô747", 30.0, "CA-10048", 400);
-		Car car = new Car("±¼³Û999", 3.0, 6);
-		Animal animal = new Animal("ÀÏ»¢", 2000, "Ê³Èâ¶¯Îï");
-		Plant plant = new Plant("ÁøÊ÷", 3000, "Ä¾±¾Ö²Îï");
+		Plane plane = new Plane("æ³¢éŸ³747", 30.0, "CA-10048", 400);
+		Car car = new Car("å¥”é©°999", 3.0, 6);
+		Animal animal = new Animal("è€è™", 2000, "é£Ÿè‚‰åŠ¨ç‰©");
+		Plant plant = new Plant("æŸ³æ ‘", 3000, "æœ¨æœ¬æ¤ç‰©");
 		show(plane);
 		plane.speedUp();
 		System.out.println();

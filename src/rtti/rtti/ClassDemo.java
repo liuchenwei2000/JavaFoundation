@@ -7,14 +7,14 @@ import inherit.difference.Animal;
 import inherit.difference.IRunnable;
 
 /**
- * ClassÀàÑİÊ¾
+ * Classç±»æ¼”ç¤º
  * <p>
- * ClassÒıÓÃ×ÜÊÇÖ¸ÏòÄ³¸öClass¶ÔÏó£¬Ëü¿ÉÒÔÖÆÔìÀàµÄÊµÀı£¬²¢°üº¬¿É×÷ÓÃÓÚÕâĞ©ÊµÀıµÄËùÓĞ·½·¨´úÂë£¬»¹°üº¬¸ÃÀàµÄ¾²Ì¬³ÉÔ±¡£
- * ClassÀà×î³£ÓÃ·½·¨ÊÇgetClass()ºÍnewInstance()¡£
+ * Classå¼•ç”¨æ€»æ˜¯æŒ‡å‘æŸä¸ªClasså¯¹è±¡ï¼Œå®ƒå¯ä»¥åˆ¶é€ ç±»çš„å®ä¾‹ï¼Œå¹¶åŒ…å«å¯ä½œç”¨äºè¿™äº›å®ä¾‹çš„æ‰€æœ‰æ–¹æ³•ä»£ç ï¼Œè¿˜åŒ…å«è¯¥ç±»çš„é™æ€æˆå‘˜ã€‚
+ * Classç±»æœ€å¸¸ç”¨æ–¹æ³•æ˜¯getClass()å’ŒnewInstance()ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-5
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-5
  */
 public class ClassDemo {
 	
@@ -23,64 +23,64 @@ public class ClassDemo {
 	 */
 	public static void main(String[] args) {
 		Human human = new Human();
-		// »ñµÃÒ»¸öClass¶ÔÏóµÄ·½·¨ÓĞÈı¸ö
-		// 1,ÇëÇóÒ»¸ö¶ÔÏóÌá¹©ÓëËü¶ÔÓ¦µÄÀà¶ÔÏó
+		// è·å¾—ä¸€ä¸ªClasså¯¹è±¡çš„æ–¹æ³•æœ‰ä¸‰ä¸ª
+		// 1,è¯·æ±‚ä¸€ä¸ªå¯¹è±¡æä¾›ä¸å®ƒå¯¹åº”çš„ç±»å¯¹è±¡
 		Class<?> cl = human.getClass();
 		System.out.println(cl.getName());
-		// 2,Ê¹ÓÃ¾²Ì¬forName()·½·¨ÇëÇóÓëÒ»¸ö×Ö·û´®¶ÔÓ¦µÄÀà¶ÔÏó
+		// 2,ä½¿ç”¨é™æ€forName()æ–¹æ³•è¯·æ±‚ä¸ä¸€ä¸ªå­—ç¬¦ä¸²å¯¹åº”çš„ç±»å¯¹è±¡
 		String className = "rtti.Human";
 		try {
-			// ÈôÀàclassNameÃ»ÓĞ¼ÓÔØÕâ¸ö·½·¨»á¼ÓÔØËü
+			// è‹¥ç±»classNameæ²¡æœ‰åŠ è½½è¿™ä¸ªæ–¹æ³•ä¼šåŠ è½½å®ƒ
 			cl = Class.forName(className);
 			System.out.println(cl.getName());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// 3,Ê¹ÓÃÀà×ÖÃæ³£Á¿,¼´ T.class ¾ÍÊÇÏà·ûµÄÀà¶ÔÏó
-		// ÕâÑù×ö²»½ö¸ü¼òµ¥£¬¶øÇÒ¸ü°²È«£¬ÒòÎªËüÔÚ±àÒëÊ±¾Í»áÊÜµ½¼ì²é¡£
-		// ²¢ÇÒËü¸ù³ıÁË¶ÔforName()·½·¨µÄµ÷ÓÃ£¬ËùÒÔÒ²¸ü¸ßĞ§¡£
-		// Àà×ÖÃæ³£Á¿²»½ö¿ÉÒÔÓ¦ÓÃÓÚÆÕÍ¨µÄÀà£¬Ò²¿ÉÒÔÓ¦ÓÃÓÚ½è¿Ú¡¢Êı×éÒÔ¼°»ù±¾Êı¾İÀàĞÍ¡£
+		// 3,ä½¿ç”¨ç±»å­—é¢å¸¸é‡,å³ T.class å°±æ˜¯ç›¸ç¬¦çš„ç±»å¯¹è±¡
+		// è¿™æ ·åšä¸ä»…æ›´ç®€å•ï¼Œè€Œä¸”æ›´å®‰å…¨ï¼Œå› ä¸ºå®ƒåœ¨ç¼–è¯‘æ—¶å°±ä¼šå—åˆ°æ£€æŸ¥ã€‚
+		// å¹¶ä¸”å®ƒæ ¹é™¤äº†å¯¹forName()æ–¹æ³•çš„è°ƒç”¨ï¼Œæ‰€ä»¥ä¹Ÿæ›´é«˜æ•ˆã€‚
+		// ç±»å­—é¢å¸¸é‡ä¸ä»…å¯ä»¥åº”ç”¨äºæ™®é€šçš„ç±»ï¼Œä¹Ÿå¯ä»¥åº”ç”¨äºå€Ÿå£ã€æ•°ç»„ä»¥åŠåŸºæœ¬æ•°æ®ç±»å‹ã€‚
 		cl = int[].class;
 		System.out.println(cl.getName());
-		// JVMÎªÃ¿¸öÀàĞÍ¹ÜÀíÒ»¸öClass¶ÔÏó£¬¿ÉÒÔÀûÓÃ  == ÊµÏÖÁ½¸öÀà¶ÔÏó±È½ÏµÄ²Ù×÷
+		// JVMä¸ºæ¯ä¸ªç±»å‹ç®¡ç†ä¸€ä¸ªClasså¯¹è±¡ï¼Œå¯ä»¥åˆ©ç”¨  == å®ç°ä¸¤ä¸ªç±»å¯¹è±¡æ¯”è¾ƒçš„æ“ä½œ
 		if (cl == int[].class)
 			System.out.println("cl is int[].class");
 
 		/*
-		 * ¶¯Ì¬´´½¨ÀàµÄÒ»¸öÊµÀıµÄ·½·¨ 
+		 * åŠ¨æ€åˆ›å»ºç±»çš„ä¸€ä¸ªå®ä¾‹çš„æ–¹æ³• 
 		 * 
-		 * Õâ¸ö·½·¨½«»á´´½¨Ò»¸öÖ¸¶¨ÀàµÄĞÂÊµÀı £¬µ÷ÓÃµÄÊÇÎŞ²Î¹¹Ôì·½·¨,²¢³õÊ¼»¯ĞÂ½¨¶ÔÏó¡£
+		 * è¿™ä¸ªæ–¹æ³•å°†ä¼šåˆ›å»ºä¸€ä¸ªæŒ‡å®šç±»çš„æ–°å®ä¾‹ ï¼Œè°ƒç”¨çš„æ˜¯æ— å‚æ„é€ æ–¹æ³•,å¹¶åˆå§‹åŒ–æ–°å»ºå¯¹è±¡ã€‚
 		 */
 		try {
 			/*
-			 * Ò»°ã½«forNameºÍnewInstanceÅäºÏÊ¹ÓÃ
+			 * ä¸€èˆ¬å°†forNameå’ŒnewInstanceé…åˆä½¿ç”¨
 			 * 
-			 * ¸ù¾İ×Ö·û´®´ú±íµÄÀàÃûÀ´´´½¨Ò»¸ö¶ÔÏó£¬Ëüµ÷ÓÃµÄÊÇÄ¬ÈÏµÄ¹¹ÔìÆ÷(Ã»ÓĞ²ÎÊıµÄ¹¹ÔìÆ÷)¡£
-			 * Èç¹ûÀàÃ»ÓĞÎŞ²Î¹¹ÔìÆ÷Ôò»áÅ×³öInstantiationException£»
-			 * Èç¹ûÀàÓĞÎŞ²Î¹¹ÔìÆ÷µ«ÊÇprivateµÄÔò»áÅ×³ö IllegalAccessException£¬Õâ±íÊ¾Î¥·´ÁËJava°²È«»úÖÆ¡£
+			 * æ ¹æ®å­—ç¬¦ä¸²ä»£è¡¨çš„ç±»åæ¥åˆ›å»ºä¸€ä¸ªå¯¹è±¡ï¼Œå®ƒè°ƒç”¨çš„æ˜¯é»˜è®¤çš„æ„é€ å™¨(æ²¡æœ‰å‚æ•°çš„æ„é€ å™¨)ã€‚
+			 * å¦‚æœç±»æ²¡æœ‰æ— å‚æ„é€ å™¨åˆ™ä¼šæŠ›å‡ºInstantiationExceptionï¼›
+			 * å¦‚æœç±»æœ‰æ— å‚æ„é€ å™¨ä½†æ˜¯privateçš„åˆ™ä¼šæŠ›å‡º IllegalAccessExceptionï¼Œè¿™è¡¨ç¤ºè¿åäº†Javaå®‰å…¨æœºåˆ¶ã€‚
 			 */
-			// ÕâÖÖ·½Ê½Ö»ÄÜÊ¹ÓÃObjectÀ´ÒıÓÃ¶ÔÏó
+			// è¿™ç§æ–¹å¼åªèƒ½ä½¿ç”¨Objectæ¥å¼•ç”¨å¯¹è±¡
 			Object obj = Class.forName(className).newInstance();
 			System.out.println(obj);
-			// Ê¹ÓÃÁË·ºĞÍµÄ·½Ê½¿ÉÒÔÖ±½ÓÊ¹ÓÃ¾«È·ÀàĞÍÒıÓÃ¶ÔÏó
+			// ä½¿ç”¨äº†æ³›å‹çš„æ–¹å¼å¯ä»¥ç›´æ¥ä½¿ç”¨ç²¾ç¡®ç±»å‹å¼•ç”¨å¯¹è±¡
 			Class<Human> clazz = Human.class;
 			Human hm = clazz.newInstance();
 			System.out.println(hm);
-			// ²»ÄÜÊ¹ÓÃClass<Animal>À´ÒıÓÃclazz.getSuperclass()
+			// ä¸èƒ½ä½¿ç”¨Class<Animal>æ¥å¼•ç”¨clazz.getSuperclass()
 			Class<? super Human> supers = clazz.getSuperclass();
-			Object base = supers.newInstance();// Ö»ÄÜÊ¹ÓÃObjectÀ´ÒıÓÃ
+			Object base = supers.newInstance();// åªèƒ½ä½¿ç”¨Objectæ¥å¼•ç”¨
 			System.out.println(base);
 			
 			/*
-			 * Èç¹ûÏëÏò±»µ÷ÓÃµÄÀàµÄ¹¹ÔìÆ÷Ìá¹©²ÎÊı£¬¾ÍÒªÊ¹ÓÃConstructorÀàÖĞµÄnewInstance·½·¨ÁË
+			 * å¦‚æœæƒ³å‘è¢«è°ƒç”¨çš„ç±»çš„æ„é€ å™¨æä¾›å‚æ•°ï¼Œå°±è¦ä½¿ç”¨Constructorç±»ä¸­çš„newInstanceæ–¹æ³•äº†
 			 */
-			// class.getInterfaces()·½·¨·µ»ØµÄÊÇClass¶ÔÏóÖ±½ÓÊµÏÖµÄ½Ó¿Ú£¬²»º¬Æä¸¸ÀàÊµÏÖµÄ½Ó¿Ú
+			// class.getInterfaces()æ–¹æ³•è¿”å›çš„æ˜¯Classå¯¹è±¡ç›´æ¥å®ç°çš„æ¥å£ï¼Œä¸å«å…¶çˆ¶ç±»å®ç°çš„æ¥å£
 			Class<?>[] itfs = Human.class.getInterfaces();
 			for (Class<?> itf : itfs) {
 				System.out.println("Human.class directly implements " + itf.getName());
 			}
-			// ÅĞ¶¨Class¶ÔÏóËù±íÊ¾µÄÀà(½Ó¿Ú)ÓëÖ¸¶¨µÄClass²ÎÊıËù±íÊ¾µÄÀà(½Ó¿Ú)ÊÇ·ñÏàÍ¬
-			// (»òÊÇ·ñÊÇClass²ÎÊıµÄ³¬Àà(³¬½Ó¿Ú))
+			// åˆ¤å®šClasså¯¹è±¡æ‰€è¡¨ç¤ºçš„ç±»(æ¥å£)ä¸æŒ‡å®šçš„Classå‚æ•°æ‰€è¡¨ç¤ºçš„ç±»(æ¥å£)æ˜¯å¦ç›¸åŒ
+			// (æˆ–æ˜¯å¦æ˜¯Classå‚æ•°çš„è¶…ç±»(è¶…æ¥å£))
 			boolean isRunnable = IRunnable.class.isAssignableFrom(Human.class);
 			if (isRunnable) {
 				System.out.println("Human.class implements "
@@ -95,14 +95,14 @@ public class ClassDemo {
 	}
 	
 	public String toString(){
-		return "ClassDemo ¶ÔÏó£º" + super.toString();
+		return "ClassDemo å¯¹è±¡ï¼š" + super.toString();
 	}
 }
 
 interface Sexable {
 
-	public static final int MALE = 0;// ĞÛĞÔ
-	public static final int FEMALE = 1;// ´ÆĞÔ
+	public static final int MALE = 0;// é›„æ€§
+	public static final int FEMALE = 1;// é›Œæ€§
 }
 
 class Human extends Animal implements Sexable {

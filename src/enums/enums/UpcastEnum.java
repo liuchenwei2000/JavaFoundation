@@ -4,14 +4,14 @@
 package enums;
 
 /**
- * ÏòÉÏ×ªĞÍÃ¶¾Ù
+ * å‘ä¸Šè½¬å‹æšä¸¾
  * <p>
- * Êµ¼ÊÉÏvalues()·½·¨ÊÇÓÉ±àÒëÆÚ²åÈëµ½enum¶¨ÒåÖĞµÄstatic·½·¨£¬ ËùÒÔÈç¹û½«enumÊµÀıÏòÉÏ×ªĞÍÎªEnum£¬Ôòvalues()·½·¨¾Í²»·ÃÎÊÁË¡£
- * µ«ÊÇÔÚClassÖĞÓĞÒ»¸ögetEnumConstants()·½·¨¿ÉÒÔ´ïµ½ÏàÍ¬Ğ§¹û£¬ ËùÒÔ¼´Ê¹Enum½Ó¿ÚÖĞÃ»ÓĞvalues·½·¨£¬ÈÔÈ»¿ÉÒÔ»ñµÃËùÓĞµÄenumÊµÀı¡£
+ * å®é™…ä¸Švalues()æ–¹æ³•æ˜¯ç”±ç¼–è¯‘æœŸæ’å…¥åˆ°enumå®šä¹‰ä¸­çš„staticæ–¹æ³•ï¼Œ æ‰€ä»¥å¦‚æœå°†enumå®ä¾‹å‘ä¸Šè½¬å‹ä¸ºEnumï¼Œåˆ™values()æ–¹æ³•å°±ä¸è®¿é—®äº†ã€‚
+ * ä½†æ˜¯åœ¨Classä¸­æœ‰ä¸€ä¸ªgetEnumConstants()æ–¹æ³•å¯ä»¥è¾¾åˆ°ç›¸åŒæ•ˆæœï¼Œ æ‰€ä»¥å³ä½¿Enumæ¥å£ä¸­æ²¡æœ‰valuesæ–¹æ³•ï¼Œä»ç„¶å¯ä»¥è·å¾—æ‰€æœ‰çš„enumå®ä¾‹ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public class UpcastEnum {
 
@@ -20,7 +20,7 @@ public class UpcastEnum {
 	 */
 	public static void main(String[] args) {
 		Enum<?> e = Season.SPRING;
-		// e.values();EnumÖĞ²¢Ã»ÓĞ¶¨Òå¸Ã·½·¨
+		// e.values();Enumä¸­å¹¶æ²¡æœ‰å®šä¹‰è¯¥æ–¹æ³•
 		for (Enum<?> en : e.getClass().getEnumConstants()) {
 			System.out.println(en);
 		}

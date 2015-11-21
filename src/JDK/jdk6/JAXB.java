@@ -15,18 +15,18 @@ import jdk6.bean.Person;
 import jdk6.bean.Sex;
 
 /**
- * 2£¬JAXB APIÊ¾Àı
+ * 2ï¼ŒJAXB APIç¤ºä¾‹
  * <p>
- * JAXB£¨Java Architecture for XML Binding£©ÊÇÒ»ÖÖÌØÊâµÄĞòÁĞ»¯/·´ĞòÁĞ»¯¹¤¾ß¡£
- * Ëü¿ÉÒÔÊ¹XMLÊı¾İÒÔJava ObjectsµÄĞÎÊ½Ö±½ÓÓ¦ÓÃÓÚJava³ÌĞòÖ®ÖĞ£¬Ê¹Java ObjectsÓëXMLÊı¾İÖ®¼äµÄ×ª»»³ÉÎª¿ÉÄÜ¡£
- * ÔÚJAXBÖĞ½«Java Objectsµ½XMLÊı¾İµÄ×ª»»³ÆÎªmarshal£»XMLÊı¾İµ½Java ObjectsµÄ×ª»»³ÆÎªunmarshal¡£
+ * JAXBï¼ˆJava Architecture for XML Bindingï¼‰æ˜¯ä¸€ç§ç‰¹æ®Šçš„åºåˆ—åŒ–/ååºåˆ—åŒ–å·¥å…·ã€‚
+ * å®ƒå¯ä»¥ä½¿XMLæ•°æ®ä»¥Java Objectsçš„å½¢å¼ç›´æ¥åº”ç”¨äºJavaç¨‹åºä¹‹ä¸­ï¼Œä½¿Java Objectsä¸XMLæ•°æ®ä¹‹é—´çš„è½¬æ¢æˆä¸ºå¯èƒ½ã€‚
+ * åœ¨JAXBä¸­å°†Java Objectsåˆ°XMLæ•°æ®çš„è½¬æ¢ç§°ä¸ºmarshalï¼›XMLæ•°æ®åˆ°Java Objectsçš„è½¬æ¢ç§°ä¸ºunmarshalã€‚
  * <p>
- * Ô­À´JAXBÊÇJavaEEµÄÒ»²¿·Ö£¬ÔÚJDK6ÖĞ£¬SUN½«Æä·Åµ½ÁËJavaSEÖĞ£¬ÕâÒ²ÊÇSUNµÄÒ»¹á×ö·¨¡£
- * JDK6ÖĞ×Ô´øµÄÕâ¸öJAXB°æ±¾ÊÇ2.0, JAXB2(JSR 222)ÓÃJDK5µÄĞÂÌØĞÔAnnotationÀ´±êÊ¶Òª×÷°ó¶¨µÄÀàºÍÊôĞÔµÈ£¬¼«´ó¼ò»¯ÁË¿ª·¢µÄ¹¤×÷Á¿¡£
+ * åŸæ¥JAXBæ˜¯JavaEEçš„ä¸€éƒ¨åˆ†ï¼Œåœ¨JDK6ä¸­ï¼ŒSUNå°†å…¶æ”¾åˆ°äº†JavaSEä¸­ï¼Œè¿™ä¹Ÿæ˜¯SUNçš„ä¸€è´¯åšæ³•ã€‚
+ * JDK6ä¸­è‡ªå¸¦çš„è¿™ä¸ªJAXBç‰ˆæœ¬æ˜¯2.0, JAXB2(JSR 222)ç”¨JDK5çš„æ–°ç‰¹æ€§Annotationæ¥æ ‡è¯†è¦ä½œç»‘å®šçš„ç±»å’Œå±æ€§ç­‰ï¼Œæå¤§ç®€åŒ–äº†å¼€å‘çš„å·¥ä½œé‡ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-27
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-27
  */
 public class JAXB {
 
@@ -40,19 +40,19 @@ public class JAXB {
 	}
 	
 	/**
-	 * ½«JavaBeanĞ´µ½XMLÎÄ¼ş
+	 * å°†JavaBeanå†™åˆ°XMLæ–‡ä»¶
 	 */
 	private static void write2XML(String filePath) {
 		try {
 			/*
-			 * JAXBContext ÀàÌá¹©µ½ JAXB API µÄ¿Í»§¶ËÈë¿Úµã¡£
-			 * ËüÌá¹©ÁË¹ÜÀíÊµÏÖ JAXB °ó¶¨¿ò¼Ü²Ù×÷ËùĞèµÄ XML/Java °ó¶¨ĞÅÏ¢µÄ³éÏó£¬ÕâĞ©²Ù×÷°üÀ¨£º½â×é¡¢±à×éºÍÑéÖ¤¡£ 
+			 * JAXBContext ç±»æä¾›åˆ° JAXB API çš„å®¢æˆ·ç«¯å…¥å£ç‚¹ã€‚
+			 * å®ƒæä¾›äº†ç®¡ç†å®ç° JAXB ç»‘å®šæ¡†æ¶æ“ä½œæ‰€éœ€çš„ XML/Java ç»‘å®šä¿¡æ¯çš„æŠ½è±¡ï¼Œè¿™äº›æ“ä½œåŒ…æ‹¬ï¼šè§£ç»„ã€ç¼–ç»„å’ŒéªŒè¯ã€‚ 
 			 */
-			// JAXBContext ÊµÀıÊÇÊ¹ÓÃ×÷Îª²ÎÊı´«µİµÄÀàÒÔ¼°¿É´ÓÕâĞ©Àà¾²Ì¬»ñµÃµÄÀàÀ´ÊµÏÖ³õÊ¼»¯µÄ
+			// JAXBContext å®ä¾‹æ˜¯ä½¿ç”¨ä½œä¸ºå‚æ•°ä¼ é€’çš„ç±»ä»¥åŠå¯ä»è¿™äº›ç±»é™æ€è·å¾—çš„ç±»æ¥å®ç°åˆå§‹åŒ–çš„
 			JAXBContext context = JAXBContext.newInstance(Person.class);
-			// Marshaller ÀàÊ¹¿Í»§¶ËÓ¦ÓÃ³ÌĞòÄÜ¹»½« Java ÄÚÈİÊ÷×ª»»»Ø XML Êı¾İ¡£
+			// Marshaller ç±»ä½¿å®¢æˆ·ç«¯åº”ç”¨ç¨‹åºèƒ½å¤Ÿå°† Java å†…å®¹æ ‘è½¬æ¢å› XML æ•°æ®ã€‚
 			Marshaller marshaller = context.createMarshaller();
-			// ½«ÒÔ jaxbElement Îª¸ùµÄÄÚÈİÊ÷±à×éµ½ File ÖĞ
+			// å°†ä»¥ jaxbElement ä¸ºæ ¹çš„å†…å®¹æ ‘ç¼–ç»„åˆ° File ä¸­
 			marshaller.marshal(createPerson(), new File(filePath));
 			System.out.println("write to XML complete.");
 		} catch (Exception e) {
@@ -61,14 +61,14 @@ public class JAXB {
 	}
 
 	/**
-	 * ´ÓXMLÎÄ¼şÖĞ¶ÁÈ¡JavaBean
+	 * ä»XMLæ–‡ä»¶ä¸­è¯»å–JavaBean
 	 */
 	private static void readFromXML(String filePath) {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Person.class);
-			// Unmarshaller Àà¹ÜÀí½« XML Êı¾İ·´ĞòÁĞ»¯ÎªĞÂ´´½¨µÄ Java ÄÚÈİÊ÷µÄ¹ı³Ì£¬²¢¿ÉÔÚ½â×éÊ±ÓĞÑ¡ÔñµØÑéÖ¤ XML Êı¾İ¡£ 
+			// Unmarshaller ç±»ç®¡ç†å°† XML æ•°æ®ååºåˆ—åŒ–ä¸ºæ–°åˆ›å»ºçš„ Java å†…å®¹æ ‘çš„è¿‡ç¨‹ï¼Œå¹¶å¯åœ¨è§£ç»„æ—¶æœ‰é€‰æ‹©åœ°éªŒè¯ XML æ•°æ®ã€‚ 
 			Unmarshaller unmarshaller = context.createUnmarshaller();
-			// ´ÓÖ¸¶¨µÄÎÄ¼ş½â×é XML Êı¾İ²¢·µ»ØµÃµ½µÄÄÚÈİÊ÷¡£
+			// ä»æŒ‡å®šçš„æ–‡ä»¶è§£ç»„ XML æ•°æ®å¹¶è¿”å›å¾—åˆ°çš„å†…å®¹æ ‘ã€‚
 			Person person = (Person) unmarshaller.unmarshal(new File(filePath));
 			System.out.println(person);
 		} catch (Exception e) {

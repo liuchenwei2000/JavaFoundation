@@ -1,39 +1,39 @@
-                            JVM Óë ·º ÐÍ 
+                            JVM ä¸Ž æ³› åž‹ 
 
-²Á³ý
+æ“¦é™¤
 
-ÐéÄâ»úÃ»ÓÐ·ºÐÍÀàÐÍ¶ÔÏó£¬ËùÓÐ¶ÔÏó¶¼ÊôÓÚÆÕÍ¨Àà
+è™šæ‹Ÿæœºæ²¡æœ‰æ³›åž‹ç±»åž‹å¯¹è±¡ï¼Œæ‰€æœ‰å¯¹è±¡éƒ½å±žäºŽæ™®é€šç±»
 
-ÎÞÂÛºÎÊ±¶¨ÒåÒ»¸ö·ºÐÍÀàÐÍ£¬ÏàÓ¦µÄÔ­ÉúÀàÐÍ(raw type)¶¼»á±»×Ô¶¯Ìá¹©¡£Ô­ÉúÀàÐÍµÄÃû×Ö¾ÍÊÇÉ¾È¥ÁËÀàÐÍ²ÎÊýµÄ·ºÐÍÀàÐÍµÄÃû×Ö¡£
-ÀàÐÍ²ÎÊý±»²Á³ý(erased)£¬Ô­ÉúÀàÐÍÓÃÏÞ¶¨ÀàÐÍÁÐ±íµÄµÚÒ»¸öÀàÐÍ±äÁ¿Ìæ»»£¬Èç¹ûÃ»ÓÐÏÞ¶¨ÔòÓÃObjectÌæ»»¡£
+æ— è®ºä½•æ—¶å®šä¹‰ä¸€ä¸ªæ³›åž‹ç±»åž‹ï¼Œç›¸åº”çš„åŽŸç”Ÿç±»åž‹(raw type)éƒ½ä¼šè¢«è‡ªåŠ¨æä¾›ã€‚åŽŸç”Ÿç±»åž‹çš„åå­—å°±æ˜¯åˆ åŽ»äº†ç±»åž‹å‚æ•°çš„æ³›åž‹ç±»åž‹çš„åå­—ã€‚
+ç±»åž‹å‚æ•°è¢«æ“¦é™¤(erased)ï¼ŒåŽŸç”Ÿç±»åž‹ç”¨é™å®šç±»åž‹åˆ—è¡¨çš„ç¬¬ä¸€ä¸ªç±»åž‹å˜é‡æ›¿æ¢ï¼Œå¦‚æžœæ²¡æœ‰é™å®šåˆ™ç”¨Objectæ›¿æ¢ã€‚
 
-±ÈÈç£º
+æ¯”å¦‚ï¼š
 public class Pair<T>{}
-ÊôÓÚÎÞÏÞ¶¨£¬ËüµÄÔ­ÉúÀàÐÍÊÇ£º
+å±žäºŽæ— é™å®šï¼Œå®ƒçš„åŽŸç”Ÿç±»åž‹æ˜¯ï¼š
 public class Pair<Object>{}
 
-ÓÖ±ÈÈç£º
+åˆæ¯”å¦‚ï¼š
 public <T extends Comparable & Number> void genericMethod(T t){}
-ÊôÓÚÓÐÏÞ¶¨£¬ËüµÄÔ­ÉúÀàÐÍÊÇ£º
+å±žäºŽæœ‰é™å®šï¼Œå®ƒçš„åŽŸç”Ÿç±»åž‹æ˜¯ï¼š
 public Comparable void genericMethod(Comparable t){}
 
-ÔÚ³ÌÐòÖÐ¿ÉÒÔ°üº¬²»Í¬ÀàÐÍµÄPair£¬ÈçPair<String>»òPair<Double>£¬µ«ÊÇ²Á³ýÀàÐÍºóËüÃÇ¾Í³ÉÎªÔ­Ê¼µÄPairÀàÐÍÁË¡£
+åœ¨ç¨‹åºä¸­å¯ä»¥åŒ…å«ä¸åŒç±»åž‹çš„Pairï¼Œå¦‚Pair<String>æˆ–Pair<Double>ï¼Œä½†æ˜¯æ“¦é™¤ç±»åž‹åŽå®ƒä»¬å°±æˆä¸ºåŽŸå§‹çš„Pairç±»åž‹äº†ã€‚
 
 
-·­Òë·ºÐÍ±í´ïÊ½
+ç¿»è¯‘æ³›åž‹è¡¨è¾¾å¼
 
-µ±³ÌÐòµ÷ÓÃ·ºÐÍ·½·¨Ê±£¬Èç¹û·µ»ØÀàÐÍ±»²Á³ý£¬±àÒëÆ÷²åÈëÇ¿ÖÆÀàÐÍ×ª»»¡£
+å½“ç¨‹åºè°ƒç”¨æ³›åž‹æ–¹æ³•æ—¶ï¼Œå¦‚æžœè¿”å›žç±»åž‹è¢«æ“¦é™¤ï¼Œç¼–è¯‘å™¨æ’å…¥å¼ºåˆ¶ç±»åž‹è½¬æ¢ã€‚
 
-ÀýÈç£º
+ä¾‹å¦‚ï¼š
 Pair<String> s = ...;
 String ss = s.getFirst();
 
-getFirst()µÄ²Á³ý½«·µ»ØObjectÀàÐÍ¡£±àÒëÆ÷»á×Ô¶¯²åÈëStringµÄÇ¿ÖÆÀàÐÍ×ª»»¡£
-Ò²¾ÍÊÇËµ£¬±àÒëÆ÷°ÑÕâ¸ö·½·¨µ÷ÓÃ·­Òë³ÉÁ½ÌõÐéÄâ»úÖ¸Áî£º
-1£¬¶ÔÔ­Ê¼·½·¨Pair.getFirst()µÄµ÷ÓÃ¡£
-2£¬½«·µ»ØµÄObjectÀàÐÍÇ¿ÖÆ×ª»»ÎªStringÀàÐÍ¡£
+getFirst()çš„æ“¦é™¤å°†è¿”å›žObjectç±»åž‹ã€‚ç¼–è¯‘å™¨ä¼šè‡ªåŠ¨æ’å…¥Stringçš„å¼ºåˆ¶ç±»åž‹è½¬æ¢ã€‚
+ä¹Ÿå°±æ˜¯è¯´ï¼Œç¼–è¯‘å™¨æŠŠè¿™ä¸ªæ–¹æ³•è°ƒç”¨ç¿»è¯‘æˆä¸¤æ¡è™šæ‹ŸæœºæŒ‡ä»¤ï¼š
+1ï¼Œå¯¹åŽŸå§‹æ–¹æ³•Pair.getFirst()çš„è°ƒç”¨ã€‚
+2ï¼Œå°†è¿”å›žçš„Objectç±»åž‹å¼ºåˆ¶è½¬æ¢ä¸ºStringç±»åž‹ã€‚
 
-Í¬Àíµ±´æÈ¡Ò»¸ö·ºÐÍ×Ö¶ÎÊ±±àÒëÆ÷Ò²Òª²åÈëÇ¿ÖÆÀàÐÍ×ª»»¡£
+åŒç†å½“å­˜å–ä¸€ä¸ªæ³›åž‹å­—æ®µæ—¶ç¼–è¯‘å™¨ä¹Ÿè¦æ’å…¥å¼ºåˆ¶ç±»åž‹è½¬æ¢ã€‚
 
 
-ÐéÄâ»úÖÐÃ»ÓÐ·ºÐÍ£¬Ö»ÓÐÆÕÍ¨µÄÀàºÍ·½·¨¡£ËùÓÐµÄÀàÐÍ²ÎÊý¶¼±»ËüÃÇµÄÏÞ¶¨ÀàÐÍÌæ»»¡£
+è™šæ‹Ÿæœºä¸­æ²¡æœ‰æ³›åž‹ï¼Œåªæœ‰æ™®é€šçš„ç±»å’Œæ–¹æ³•ã€‚æ‰€æœ‰çš„ç±»åž‹å‚æ•°éƒ½è¢«å®ƒä»¬çš„é™å®šç±»åž‹æ›¿æ¢ã€‚

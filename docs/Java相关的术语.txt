@@ -1,29 +1,29 @@
 
-JavaÓëInternet
+Javaä¸ŽInternet
 
-»ù±¾Ë¼Ïë£ºÓÃ»§½«´ÓInternetÉÏÏÂÔØJava×Ö½ÚÂë£¬²¢ÔÚ×Ô¼ºµÄ»úÆ÷ÉÏÔËÐÐ¡£ÔÚÍøÒ³ÖÐÔËÐÐµÄJava³ÌÐò³ÆÎªapplet¡£
-ÓÉÓÚä¯ÀÀÆ÷Ïà»¥²»¼æÈÝ£¬¶øÇÒÔÚµÍËÙÁ¬½ÓÍøÂçÉÏÏÂÔØapplet´úÂëµÄ²»±ãÐÔ£¬ËùÒÔËüÔÚInternetÉÏ²¢Ã»ÓÐ»ñµÃ¾Þ´óµÄ³É¹¦¡£
-µ«ÊÇÔÚÆóÒµÄÚ²¿ÍøÉÏ£¬Çé¿öÔòÍêÈ«²»Í¬£¬ÕâÀï¸ù±¾²»´æÔÚ´ø¿íÎÊÌâ£¬¿ÉÒÔ¿ØÖÆä¯ÀÀÆ÷µÄÀàÐÍ¡£
-Java¿ª·¢µÄÖÐÐÄÒÑ¾­´Ó¿Í»§¶Ë¿ª·¢×ªÒÆµ½·þÎñÆ÷¶Ë¿ª·¢¡£ÌØ±ðÊÇ£¬
-Ó¦ÓÃ·þÎñÆ÷¿ÉÒÔÊ¹ÓÃJVMµÄ¼à²âÄÜÁ¦À´Ö´ÐÐ×Ô¶¯¸ºÔØÆ½ºâ¡¢Êý¾Ý¿âÁ¬½Ó³Ø¡¢¶ÔÏóÍ¬²½¡¢°²È«¹Ø»úÓëÖØÐÂÆô¶¯ÒÔ¼°ÆäËûµÄ·þÎñ¡£
-ÕâÑù¿ÉÒÔÌá¸ß³ÌÐòÔ±µÄ±à³ÌÐ§ÂÊ£¬ÊÇ³ÌÐòÔ±µÄ×¢ÒâÁ¦¼¯ÖÐµ½ºËÐÄ¹¦ÄÜºÍ³ÌÐòµÄÒµÎñÂß¼­ÉÏ£¬¶ø²»±ØÎª·þÎñÆ÷µÄÐÔÄÜ²ÙÐÄ¡£
+åŸºæœ¬æ€æƒ³ï¼šç”¨æˆ·å°†ä»ŽInternetä¸Šä¸‹è½½Javaå­—èŠ‚ç ï¼Œå¹¶åœ¨è‡ªå·±çš„æœºå™¨ä¸Šè¿è¡Œã€‚åœ¨ç½‘é¡µä¸­è¿è¡Œçš„Javaç¨‹åºç§°ä¸ºappletã€‚
+ç”±äºŽæµè§ˆå™¨ç›¸äº’ä¸å…¼å®¹ï¼Œè€Œä¸”åœ¨ä½Žé€Ÿè¿žæŽ¥ç½‘ç»œä¸Šä¸‹è½½appletä»£ç çš„ä¸ä¾¿æ€§ï¼Œæ‰€ä»¥å®ƒåœ¨Internetä¸Šå¹¶æ²¡æœ‰èŽ·å¾—å·¨å¤§çš„æˆåŠŸã€‚
+ä½†æ˜¯åœ¨ä¼ä¸šå†…éƒ¨ç½‘ä¸Šï¼Œæƒ…å†µåˆ™å®Œå…¨ä¸åŒï¼Œè¿™é‡Œæ ¹æœ¬ä¸å­˜åœ¨å¸¦å®½é—®é¢˜ï¼Œå¯ä»¥æŽ§åˆ¶æµè§ˆå™¨çš„ç±»åž‹ã€‚
+Javaå¼€å‘çš„ä¸­å¿ƒå·²ç»ä»Žå®¢æˆ·ç«¯å¼€å‘è½¬ç§»åˆ°æœåŠ¡å™¨ç«¯å¼€å‘ã€‚ç‰¹åˆ«æ˜¯ï¼Œ
+åº”ç”¨æœåŠ¡å™¨å¯ä»¥ä½¿ç”¨JVMçš„ç›‘æµ‹èƒ½åŠ›æ¥æ‰§è¡Œè‡ªåŠ¨è´Ÿè½½å¹³è¡¡ã€æ•°æ®åº“è¿žæŽ¥æ± ã€å¯¹è±¡åŒæ­¥ã€å®‰å…¨å…³æœºä¸Žé‡æ–°å¯åŠ¨ä»¥åŠå…¶ä»–çš„æœåŠ¡ã€‚
+è¿™æ ·å¯ä»¥æé«˜ç¨‹åºå‘˜çš„ç¼–ç¨‹æ•ˆçŽ‡ï¼Œæ˜¯ç¨‹åºå‘˜çš„æ³¨æ„åŠ›é›†ä¸­åˆ°æ ¸å¿ƒåŠŸèƒ½å’Œç¨‹åºçš„ä¸šåŠ¡é€»è¾‘ä¸Šï¼Œè€Œä¸å¿…ä¸ºæœåŠ¡å™¨çš„æ€§èƒ½æ“å¿ƒã€‚
 
 
-JavaÔ´´úÂë -> Java±àÒëÆ÷ -> Java×Ö½ÚÂë -> Java½âÊÍÆ÷ -> CPU£¬ºóÁ½¸ö¹¹³ÉÁËJVM¡£
+Javaæºä»£ç  -> Javaç¼–è¯‘å™¨ -> Javaå­—èŠ‚ç  -> Javaè§£é‡Šå™¨ -> CPUï¼ŒåŽä¸¤ä¸ªæž„æˆäº†JVMã€‚
 
-JRE£¨Java Runtime Environment£¬JavaÔËÐÐ»·¾³£©
-JREÌá¹©ÁËÀà¿â¡¢JVMÓëÆäËû×é¼þÀ´Ö§³ÖappletºÍJavaÓ¦ÓÃ³ÌÐòµÄÔËÐÐ¡£
-ÁíÍâ£¬JREÓµÓÐÁ½¸ö¹Ø¼üµÄ·¢²¼¼¼Êõ£ºJava Plug-inÓëJava Web Start£º
-Java Plug-in Ö§³ÖappletÔËÐÐÔÚ´ó²¿·Öä¯ÀÀÆ÷ÉÏ
-Java Web Start Ôò¿ÉÒÔ½«Ò»¸ö¶ÀÁ¢µÄÓ¦ÓÃ³ÌÐò·¢²¼µ½ÍøÂçÉÏ¡£
-JREÍ¬Ê±»¹ÊÇJ2EEÆ½Ì¨ÆóÒµ¼¶Ó¦ÓÃ¿ª·¢Óë²¿ÊðµÄÖ§³Å¼¼Êõ£¬µ«ÊÇ²»°üÀ¨±àÒëÆ÷Óëµ÷ÊÔÆ÷µÈ¸÷ÖÖ¹¤¾ßÈ¥Ö§³ÖappletºÍÓ¦ÓÃ³ÌÐòµÄ¿ª·¢¡£
+JREï¼ˆJava Runtime Environmentï¼ŒJavaè¿è¡ŒçŽ¯å¢ƒï¼‰
+JREæä¾›äº†ç±»åº“ã€JVMä¸Žå…¶ä»–ç»„ä»¶æ¥æ”¯æŒappletå’ŒJavaåº”ç”¨ç¨‹åºçš„è¿è¡Œã€‚
+å¦å¤–ï¼ŒJREæ‹¥æœ‰ä¸¤ä¸ªå…³é”®çš„å‘å¸ƒæŠ€æœ¯ï¼šJava Plug-inä¸ŽJava Web Startï¼š
+Java Plug-in æ”¯æŒappletè¿è¡Œåœ¨å¤§éƒ¨åˆ†æµè§ˆå™¨ä¸Š
+Java Web Start åˆ™å¯ä»¥å°†ä¸€ä¸ªç‹¬ç«‹çš„åº”ç”¨ç¨‹åºå‘å¸ƒåˆ°ç½‘ç»œä¸Šã€‚
+JREåŒæ—¶è¿˜æ˜¯J2EEå¹³å°ä¼ä¸šçº§åº”ç”¨å¼€å‘ä¸Žéƒ¨ç½²çš„æ”¯æ’‘æŠ€æœ¯ï¼Œä½†æ˜¯ä¸åŒ…æ‹¬ç¼–è¯‘å™¨ä¸Žè°ƒè¯•å™¨ç­‰å„ç§å·¥å…·åŽ»æ”¯æŒappletå’Œåº”ç”¨ç¨‹åºçš„å¼€å‘ã€‚
 
 Java Plug-in
-Õâ¸ö¼¼ÊõÊÇJREµÄÒ»²¿·Ö£¬ÓÃÓÚÁ¬½Óä¯ÀÀÆ÷ÓëJavaÆ½Ì¨¡£Õâ¸öÁ¬½ÓÊ¹µÃWEBÕ¾µãµÄappletsÔËÐÐÔÚ¿Í»§¶ËµÄä¯ÀÀÆ÷ÖÐ¡£
+è¿™ä¸ªæŠ€æœ¯æ˜¯JREçš„ä¸€éƒ¨åˆ†ï¼Œç”¨äºŽè¿žæŽ¥æµè§ˆå™¨ä¸ŽJavaå¹³å°ã€‚è¿™ä¸ªè¿žæŽ¥ä½¿å¾—WEBç«™ç‚¹çš„appletsè¿è¡Œåœ¨å®¢æˆ·ç«¯çš„æµè§ˆå™¨ä¸­ã€‚
 
 Java Web Start
-Ö»ÒªÓµÓÐÏàÍ¬°æ±¾µÄJRE£¬¶ÀÁ¢µÄJavaÓ¦ÓÃ³ÌÐò¾Í¿ÉÒÔÍ¨¹ýÕâ¸ö¼¼Êõ·¢²¼µ½ÍøÂçÉÏ¡£
+åªè¦æ‹¥æœ‰ç›¸åŒç‰ˆæœ¬çš„JREï¼Œç‹¬ç«‹çš„Javaåº”ç”¨ç¨‹åºå°±å¯ä»¥é€šè¿‡è¿™ä¸ªæŠ€æœ¯å‘å¸ƒåˆ°ç½‘ç»œä¸Šã€‚
 
-JDK£¨Java Development Kit£¬Java¿ª·¢¹¤¾ß£©
-°üÀ¨ÁËJRE£¬Ò»¶ÑJava¹¤¾ßºÍJava»ù´¡µÄÀà¿â(rt.jar)
+JDKï¼ˆJava Development Kitï¼ŒJavaå¼€å‘å·¥å…·ï¼‰
+åŒ…æ‹¬äº†JREï¼Œä¸€å †Javaå·¥å…·å’ŒJavaåŸºç¡€çš„ç±»åº“(rt.jar)
 

@@ -6,11 +6,11 @@ package util;
 import java.util.Random;
 
 /**
- * RandomÀàµÄ»ù±¾·½·¨
+ * Randomç±»çš„åŸºæœ¬æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class RandomDemo {
 
@@ -19,9 +19,9 @@ public class RandomDemo {
 	 */
 	public static void main(String[] args) {
 		Random r = new Random();
-		int number = r.nextInt(100);//·µ»Ø0-Ö¸¶¨Öµ100(²»º¬)Ö®¼äµÄËæ»úÊı
+		int number = r.nextInt(100);//è¿”å›0-æŒ‡å®šå€¼100(ä¸å«)ä¹‹é—´çš„éšæœºæ•°
 		System.out.println("Random integer : " + number);
-		double d = r.nextDouble();//·µ»Ø0.0-1.0(²»º¬)Ö®¼äµÄËæ»úÊı
+		double d = r.nextDouble();//è¿”å›0.0-1.0(ä¸å«)ä¹‹é—´çš„éšæœºæ•°
 		System.out.println("Random double : " + d);
 		System.out.println("Random boolean : " + r.nextBoolean());
 	}

@@ -4,16 +4,16 @@
 package inherit.difference;
 
 /**
- * ÉúÎïÀà
+ * ç”Ÿç‰©ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public abstract class Biology {
 	
-	protected String name;// Ãû×Ö
-	protected int age;// ÎïÖÖÄêÁä
+	protected String name;// åå­—
+	protected int age;// ç‰©ç§å¹´é¾„
 
 	protected void setName(String newName) {
 		name = newName;
@@ -32,7 +32,7 @@ public abstract class Biology {
 	}
 
 	/**
-	 * ·µ»ØËÀÍöĞÅÏ¢
+	 * è¿”å›æ­»äº¡ä¿¡æ¯
 	 */
 	protected abstract String getDeathInfo();
 }

@@ -4,21 +4,21 @@
 package generic.app.coffee;
 
 /**
- * CoffeeÀà
+ * Coffeeç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class Coffee {
 	
-	// ÓÃÀ´Í³¼ÆCoffee¶ÔÏóµÄÊıÄ¿
+	// ç”¨æ¥ç»Ÿè®¡Coffeeå¯¹è±¡çš„æ•°ç›®
 	private static int counter = 0;
-	// Ã¿Ò»¸öCoffee¶ÔÏó¶¼ÓĞÎ¨Ò»µÄ²»¿É±äµÄid
+	// æ¯ä¸€ä¸ªCoffeeå¯¹è±¡éƒ½æœ‰å”¯ä¸€çš„ä¸å¯å˜çš„id
 	private final int id = counter++;
 	
 	/**
-	 * ·µ»ØĞÎÊ½£º¶ÔÏóµÄÊµ¼ÊÀàÃû id
+	 * è¿”å›å½¢å¼ï¼šå¯¹è±¡çš„å®é™…ç±»å id
 	 *
 	 * @see java.lang.Object#toString()
 	 */

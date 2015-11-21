@@ -4,13 +4,13 @@
 package object.clone;
 
 /**
- * Object.clone()·½·¨µÄĞ§¹ûÑİÊ¾
+ * Object.clone()æ–¹æ³•çš„æ•ˆæœæ¼”ç¤º
  * <p>
- * ÓÃÓÚÖ¤Ã÷Object.clone()ÊÇÇ³¿ËÂ¡¡£
+ * ç”¨äºè¯æ˜Object.clone()æ˜¯æµ…å…‹éš†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-6
  */
 public class CloneInObjectClass {
 	

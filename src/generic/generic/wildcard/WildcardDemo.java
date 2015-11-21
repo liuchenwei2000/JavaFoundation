@@ -6,11 +6,11 @@ package generic.wildcard;
 import generic.Pair;
 
 /**
- * Í¨Åä·ûÑİÊ¾Àà
+ * é€šé…ç¬¦æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-8-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-3
  */
 public class WildcardDemo {
 
@@ -23,35 +23,35 @@ public class WildcardDemo {
 		System.out.println("has null:" + hasNull(pair));
 		System.out.println("has null2:" + hasNull2(pair));
 		/*
-		 * ÎŞÏŞ¶¨Í¨Åä·û ? £¬¿ÉÒÔÕâÑùÊ¹ÓÃ£ºPair<?>¡£
+		 * æ— é™å®šé€šé…ç¬¦ ? ï¼Œå¯ä»¥è¿™æ ·ä½¿ç”¨ï¼šPair<?>ã€‚
 		 * 
-		 * ÕâºÃÏñÓëÔ­Ê¼µÄPairÀàĞÍÒ»Ñù£¬Êµ¼ÊÉÏÓĞºÜ´óµÄ²»Í¬£¬ÀàĞÍPair<?>ÓĞ·½·¨Èç£º
+		 * è¿™å¥½åƒä¸åŸå§‹çš„Pairç±»å‹ä¸€æ ·ï¼Œå®é™…ä¸Šæœ‰å¾ˆå¤§çš„ä¸åŒï¼Œç±»å‹Pair<?>æœ‰æ–¹æ³•å¦‚ï¼š
 		 * ? getFirst(); 
 		 * void setFirst(?);
 		 */
-		// getFirstµÄ·µ»ØÖµÖ»ÄÜ¸³¸øÒ»¸öObject
+		// getFirstçš„è¿”å›å€¼åªèƒ½èµ‹ç»™ä¸€ä¸ªObject
 		Object object = pair.getFirst();
 		System.out.println(object);
-		// setFirst·½·¨²»ÄÜ±»µ÷ÓÃ£¬Ê¹ÓÃObject×÷Îª²ÎÊıÒ²²»ĞĞ
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// setFirstæ–¹æ³•ä¸èƒ½è¢«è°ƒç”¨ï¼Œä½¿ç”¨Objectä½œä¸ºå‚æ•°ä¹Ÿä¸è¡Œ
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 //		pair.setFirst(first);
-		// Pair<?>ºÍPairµÄ±¾ÖÊ²»Í¬ÔÚÓÚ£º 
-		// Pair¿ÉÒÔÒÔÈÎÒâObject¶ÔÏóÎª²ÎÊıµ÷ÓÃsetFirst·½·¨
+		// Pair<?>å’ŒPairçš„æœ¬è´¨ä¸åŒåœ¨äºï¼š 
+		// Pairå¯ä»¥ä»¥ä»»æ„Objectå¯¹è±¡ä¸ºå‚æ•°è°ƒç”¨setFirstæ–¹æ³•
 		Pair pair2 = new Pair<String>("first", "second");
 		pair2.setFirst(new String());
 	}
 
 	/**
-	 * ÎªÊ²Ã´ÒªÊ¹ÓÃ ? ÕâÑù´àÈõµÄÀàĞÍ£¿Ëü¶ÔÓÚĞí¶à¼òµ¥µÄ²Ù×÷·Ç³£ÓĞÓÃ¡£</br>
-	 * Èç£º</br>
-	 * ÎªÁË²âÊÔÒ»¸öPairÊÇ·ñ°üº¬ÁËÖ¸¶¨µÄ¶ÔÏó£¬Ëü²»ĞèÒªÊµ¼ÊµÄ¶ÔÏó¡£
+	 * ä¸ºä»€ä¹ˆè¦ä½¿ç”¨ ? è¿™æ ·è„†å¼±çš„ç±»å‹ï¼Ÿå®ƒå¯¹äºè®¸å¤šç®€å•çš„æ“ä½œéå¸¸æœ‰ç”¨ã€‚</br>
+	 * å¦‚ï¼š</br>
+	 * ä¸ºäº†æµ‹è¯•ä¸€ä¸ªPairæ˜¯å¦åŒ…å«äº†æŒ‡å®šçš„å¯¹è±¡ï¼Œå®ƒä¸éœ€è¦å®é™…çš„å¯¹è±¡ã€‚
 	 */
 	private static boolean hasNull(Pair<?> pair) {
 		return pair.getFirst() == null || pair.getSecond() == null;
 	}
 
 	/**
-	 * Í¨¹ı½« ? ×ª»»³É·ºĞÍ·½·¨£¬¿ÉÒÔ±ÜÃâÊ¹ÓÃÍ¨Åä·ûÀàĞÍ£¬µ«ÊÇ´øÓĞÍ¨Åä·ûÀàĞÍµÄ°æ±¾¿É¶ÁĞÔ¸üÇ¿¡£
+	 * é€šè¿‡å°† ? è½¬æ¢æˆæ³›å‹æ–¹æ³•ï¼Œå¯ä»¥é¿å…ä½¿ç”¨é€šé…ç¬¦ç±»å‹ï¼Œä½†æ˜¯å¸¦æœ‰é€šé…ç¬¦ç±»å‹çš„ç‰ˆæœ¬å¯è¯»æ€§æ›´å¼ºã€‚
 	 */
 	private static <T> boolean hasNull2(Pair<T> pair) {
 		return pair.getFirst() == null || pair.getSecond() == null;

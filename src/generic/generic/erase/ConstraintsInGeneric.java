@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ·ºĞÍµÄÔ¼ÊøÓë¾ÖÏŞĞÔÑİÊ¾
+ * æ³›å‹çš„çº¦æŸä¸å±€é™æ€§æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-8-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-3
  */
 public class ConstraintsInGeneric {
 
@@ -31,14 +31,14 @@ public class ConstraintsInGeneric {
 	}
 
 	/**
-	 * 1£¬»ù±¾ÀàĞÍ
+	 * 1ï¼ŒåŸºæœ¬ç±»å‹
 	 * <p>
-	 * ²»ÄÜÓÃÀàĞÍ²ÎÊıÌæ»»»ù±¾ÀàĞÍ£¬Ã»ÓĞPair<double>£¬Ö»ÓĞPair<Double>£¬ÆäÔ­ÒòÊÇÀàĞÍ²Á³ı¡£
-	 * ²Á³ıÖ®ºóPairÀà¾ßÓĞObjectÀàĞÍµÄ×Ö¶Î£¬¶øObject²»ÄÜ´æ´¢double(»ù±¾ÀàĞÍ)Öµ¡£
-	 * ¿ÉÒÔÓÃ»ù±¾ÀàĞÍµÄ°ü×°Æ÷Àà½â¾öÕâ¸öÎÊÌâ¡£
+	 * ä¸èƒ½ç”¨ç±»å‹å‚æ•°æ›¿æ¢åŸºæœ¬ç±»å‹ï¼Œæ²¡æœ‰Pair<double>ï¼Œåªæœ‰Pair<Double>ï¼Œå…¶åŸå› æ˜¯ç±»å‹æ“¦é™¤ã€‚
+	 * æ“¦é™¤ä¹‹åPairç±»å…·æœ‰Objectç±»å‹çš„å­—æ®µï¼Œè€ŒObjectä¸èƒ½å­˜å‚¨double(åŸºæœ¬ç±»å‹)å€¼ã€‚
+	 * å¯ä»¥ç”¨åŸºæœ¬ç±»å‹çš„åŒ…è£…å™¨ç±»è§£å†³è¿™ä¸ªé—®é¢˜ã€‚
 	 */
 	private static void testPrimitiveType() {
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 		// Pair<double> pair = new Pair<double>();
 		Pair<Double> pair = new Pair<Double>();
 		pair.setFirst(0.1);
@@ -46,16 +46,16 @@ public class ConstraintsInGeneric {
 	}
 	
 	/**
-	 * 2£¬ÔËĞĞÊ±ÀàĞÍ²éÑ¯
+	 * 2ï¼Œè¿è¡Œæ—¶ç±»å‹æŸ¥è¯¢
 	 * <p>
-	 * JVMÖĞµÄ¶ÔÏó×ÜÓĞÒ»¸öÌØ¶¨µÄ·Ç·ºĞÍÀàĞÍ£¬Òò´ËËùÓĞµÄÔËĞĞÊ±ÀàĞÍ²éÑ¯RTTI(Èç instanceof »ò getClass())Ö»²úÉúÔ­ÉúÀàĞÍ(¼´Pair.class)¡£
+	 * JVMä¸­çš„å¯¹è±¡æ€»æœ‰ä¸€ä¸ªç‰¹å®šçš„éæ³›å‹ç±»å‹ï¼Œå› æ­¤æ‰€æœ‰çš„è¿è¡Œæ—¶ç±»å‹æŸ¥è¯¢RTTI(å¦‚ instanceof æˆ– getClass())åªäº§ç”ŸåŸç”Ÿç±»å‹(å³Pair.class)ã€‚
 	 */
 	private static void testRTTI() {
 		Pair<String> pair = new Pair<String>();
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 		// boolean b = pair instanceof Pair<String>;
 		boolean b = pair instanceof Pair;
-		// Ç¿ÖÆÀàĞÍ×ª»»
+		// å¼ºåˆ¶ç±»å‹è½¬æ¢
 		Pair<String> p = (Pair<String>) pair;
 		Pair<Double> pair2 = new Pair<Double>();
 		b = p.getClass() == pair2.getClass();
@@ -65,30 +65,30 @@ public class ConstraintsInGeneric {
 	}
 	
 	/**
-	 * 3£¬Òì³£
+	 * 3ï¼Œå¼‚å¸¸
 	 * <p>
-	 * ²»ÄÜÅ×³öÒ²²»ÄÜ²¶»ñ·ºĞÍÀàµÄ¶ÔÏó£¬Êµ¼ÊÉÏ·ºĞÍÀà²»ÄÜ¼Ì³ĞThrowable¡£
-	 * Ö»¿ÉÒÔÔÚ·½·¨µÄÒì³£ÉùÃ÷ÖĞÊ¹ÓÃ·ºĞÍ¡£
+	 * ä¸èƒ½æŠ›å‡ºä¹Ÿä¸èƒ½æ•è·æ³›å‹ç±»çš„å¯¹è±¡ï¼Œå®é™…ä¸Šæ³›å‹ç±»ä¸èƒ½ç»§æ‰¿Throwableã€‚
+	 * åªå¯ä»¥åœ¨æ–¹æ³•çš„å¼‚å¸¸å£°æ˜ä¸­ä½¿ç”¨æ³›å‹ã€‚
 	 */
 	private static void testException() {
-		// ·ºĞÍÀàÀ©Õ¹ThrowableÊÇ²»ºÏ·¨µÄ
+		// æ³›å‹ç±»æ‰©å±•Throwableæ˜¯ä¸åˆæ³•çš„
 		// public class Problem<T> extends Exception{}
 		class InnerClass {
 			
-			/** ²»ÄÜÔÚcatch×Ó¾äÖĞÊ¹ÓÃÀàĞÍ±äÁ¿(·ºĞÍ) */
+			/** ä¸èƒ½åœ¨catchå­å¥ä¸­ä½¿ç”¨ç±»å‹å˜é‡(æ³›å‹) */
 //			public <T extends Throwable> void doWork(Class<T> t) {
 //				try {
 //					// ...
-//				} catch (T e)// ÕâÀï»á±¨´í
+//				} catch (T e)// è¿™é‡Œä¼šæŠ¥é”™
 //				{
 //					// ...
 //				}
 //			}
 
 			/**
-			 * ÔÚ·½·¨µÄÒì³£ÉùÃ÷(throws)ÖĞ¿ÉÒÔÊ¹ÓÃÀàĞÍ±äÁ¿(·ºĞÍ)
+			 * åœ¨æ–¹æ³•çš„å¼‚å¸¸å£°æ˜(throws)ä¸­å¯ä»¥ä½¿ç”¨ç±»å‹å˜é‡(æ³›å‹)
 			 */
-			public <T extends Throwable> void doWork(T t) throws T // ÕâÊÇ¿ÉÒÔµÄ
+			public <T extends Throwable> void doWork(T t) throws T // è¿™æ˜¯å¯ä»¥çš„
 			{
 				try {
 					throw new RuntimeException("exception in InnerClass.doWork(T t)");
@@ -99,7 +99,7 @@ public class ConstraintsInGeneric {
 			}
 		}
 		try {
-			// µ÷ÓÃ·½Ê½
+			// è°ƒç”¨æ–¹å¼
 			new InnerClass().doWork(new RuntimeException());
 		} catch (Exception e) {
 			System.out.println("catch exception in InnerClass.doWork(T):");
@@ -108,38 +108,38 @@ public class ConstraintsInGeneric {
 	}
 	
 	/**
-	 * 4£¬Êı×é
+	 * 4ï¼Œæ•°ç»„
 	 * <p>
-	 * ²»ÄÜÉùÃ÷²ÎÊı»¯ÀàĞÍµÄÊı×é£¬Èç¹ûÒªÊÕ¼¯²ÎÊı»¯ÀàĞÍ¶ÔÏó£¬Ê¹ÓÃArrayList<Pair<String>>×î°²È«ÓĞĞ§¡£
+	 * ä¸èƒ½å£°æ˜å‚æ•°åŒ–ç±»å‹çš„æ•°ç»„ï¼Œå¦‚æœè¦æ”¶é›†å‚æ•°åŒ–ç±»å‹å¯¹è±¡ï¼Œä½¿ç”¨ArrayList<Pair<String>>æœ€å®‰å…¨æœ‰æ•ˆã€‚
 	 */
 	private static void testArray() {
 		/* 
-		 * ²»ÄÜÉùÃ÷²ÎÊı»¯ÀàĞÍµÄÊı×é£¬Èç£º
+		 * ä¸èƒ½å£°æ˜å‚æ•°åŒ–ç±»å‹çš„æ•°ç»„ï¼Œå¦‚ï¼š
 		 * 
 		 * Pair<String>[] table = new Pair<String>[10];
 		 * 
-		 * ÒòÎªÔÚÀàĞÍ²Á³ıÖ®ºó£¬tableµÄÀàĞÍÎªPair[]£¬¿ÉÒÔ½«Æä×ª»»ÎªObject[]:
+		 * å› ä¸ºåœ¨ç±»å‹æ“¦é™¤ä¹‹åï¼Œtableçš„ç±»å‹ä¸ºPair[]ï¼Œå¯ä»¥å°†å…¶è½¬æ¢ä¸ºObject[]:
 		 * 
 		 * Object[] objs = table;
 		 * 
-		 * Êı×éÄÜ¹»¼Ç×¡ËüµÄÔªËØÀàĞÍ£¬Èç¹ûÊÔÍ¼´æÈëÒ»¸ö´íÎóÀàĞÍµÄÔªËØ£¬¾Í»áÅ×³öArrayStoreExceptionÒì³£¡£
+		 * æ•°ç»„èƒ½å¤Ÿè®°ä½å®ƒçš„å…ƒç´ ç±»å‹ï¼Œå¦‚æœè¯•å›¾å­˜å…¥ä¸€ä¸ªé”™è¯¯ç±»å‹çš„å…ƒç´ ï¼Œå°±ä¼šæŠ›å‡ºArrayStoreExceptionå¼‚å¸¸ã€‚
 		 * 
-		 * objs[0] = "hello"; ºÍ objs[0] = new Pair<Double>();
+		 * objs[0] = "hello"; å’Œ objs[0] = new Pair<Double>();
 		 * 
-		 * ÊÇÄÜ¹»Í¨¹ı±àÒëµÄ£¬¿ÉÒÔÍ¨¹ıÊı×é´æ´¢µÄ¼ì²â£¬µ«ÈÔÈ»»áµ¼ÖÂÀàĞÍ´íÎó£¬Òò´Ë½ûÖ¹Ê¹ÓÃ²ÎÊı»¯ÀàĞÍµÄÊı×é¡£
+		 * æ˜¯èƒ½å¤Ÿé€šè¿‡ç¼–è¯‘çš„ï¼Œå¯ä»¥é€šè¿‡æ•°ç»„å­˜å‚¨çš„æ£€æµ‹ï¼Œä½†ä»ç„¶ä¼šå¯¼è‡´ç±»å‹é”™è¯¯ï¼Œå› æ­¤ç¦æ­¢ä½¿ç”¨å‚æ•°åŒ–ç±»å‹çš„æ•°ç»„ã€‚
 		 */
 		List<Pair<String>> list = new ArrayList<Pair<String>>();
 		list.add(new Pair<String>());
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 		// list.add("string");
 		// list.add(new Pair<Double>());
 	}
 	
 	/**
-	 * 5£¬·ºĞÍÀàĞÍµÄÊµÀı»¯
+	 * 5ï¼Œæ³›å‹ç±»å‹çš„å®ä¾‹åŒ–
 	 * <p>
-	 * ²»ÄÜÊµÀı»¯·ºĞÍÀàĞÍ(¼´ÓÃnew T()¹¹Ôì·½Ê½)£¬µ«ÊÇÍ¨¹ıµ÷ÓÃClass.newInstanceºÍ
-	 * Array.newInstance·½·¨£¬¿ÉÒÔÀûÓÃ·´Éä¹¹Ôì·ºĞÍ¶ÔÏóºÍ·ºĞÍÊı×é¡£
+	 * ä¸èƒ½å®ä¾‹åŒ–æ³›å‹ç±»å‹(å³ç”¨new T()æ„é€ æ–¹å¼)ï¼Œä½†æ˜¯é€šè¿‡è°ƒç”¨Class.newInstanceå’Œ
+	 * Array.newInstanceæ–¹æ³•ï¼Œå¯ä»¥åˆ©ç”¨åå°„æ„é€ æ³›å‹å¯¹è±¡å’Œæ³›å‹æ•°ç»„ã€‚
 	 */
 	private static void testGenericInstance() {
 		
@@ -151,16 +151,16 @@ public class ConstraintsInGeneric {
 			@SuppressWarnings("unchecked")
 			public Pair2(T t) {
 				/*
-				 * ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+				 * ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 				 * 
-				 * ÀàĞÍ²Á³ı½«T¸Ä±ä³ÉObject£¬¶øÇÒ±¾Òâ¿Ï¶¨²»Ï£Íûµ÷ÓÃnew Object(); 
-				 * ÀàËÆµÄ£¬²»ÄÜ½¨Á¢Ò»¸ö·ºĞÍÊı×é£ºT[] second = new T[2]; 
-				 * ÀàĞÍ²Á³ı»áÈÃ·½·¨×ÜÊÇ¹¹ÔìÒ»¸öObject[2]Êı×é¡£
+				 * ç±»å‹æ“¦é™¤å°†Tæ”¹å˜æˆObjectï¼Œè€Œä¸”æœ¬æ„è‚¯å®šä¸å¸Œæœ›è°ƒç”¨new Object(); 
+				 * ç±»ä¼¼çš„ï¼Œä¸èƒ½å»ºç«‹ä¸€ä¸ªæ³›å‹æ•°ç»„ï¼šT[] second = new T[2]; 
+				 * ç±»å‹æ“¦é™¤ä¼šè®©æ–¹æ³•æ€»æ˜¯æ„é€ ä¸€ä¸ªObject[2]æ•°ç»„ã€‚
 				 */
 				// first = new T();
 				// second[] = new T[2];
 				try {
-					// Í¨¹ıµ÷ÓÃClass.newInstanceºÍArray.newInstance·½·¨
+					// é€šè¿‡è°ƒç”¨Class.newInstanceå’ŒArray.newInstanceæ–¹æ³•
 					first = (T) (t.getClass().newInstance());
 					second = (T[]) Array.newInstance(t.getClass(), 2);
 					System.out.println("Pair2<T>.first class = "
@@ -178,16 +178,16 @@ public class ConstraintsInGeneric {
 	}
 	
 	/**
-	 * 6£¬¾²Ì¬ÉÏÏÂÎÄ
+	 * 6ï¼Œé™æ€ä¸Šä¸‹æ–‡
 	 * <p>
-	 * ²»ÄÜÔÚ¾²Ì¬×Ö¶Î»ò·½·¨ÖĞÒıÓÃÀàĞÍ±äÁ¿(·ºĞÍ)¡£
+	 * ä¸èƒ½åœ¨é™æ€å­—æ®µæˆ–æ–¹æ³•ä¸­å¼•ç”¨ç±»å‹å˜é‡(æ³›å‹)ã€‚
 	 */
 	private static void testStatic() {
 		
 		class Singleton<T> {
-			// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+			// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 //			private static T instance;
-			// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+			// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 //			public static T getInstance() {
 //				return instance;
 //			}

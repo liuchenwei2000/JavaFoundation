@@ -6,13 +6,13 @@ package util;
 import java.util.Date;
 
 /**
- * DateÀàµÄ»ù±¾·½·¨ 
+ * Dateç±»çš„åŸºæœ¬æ–¹æ³• 
  * <p>
- * DateÀàµÄºÜ¶à·½·¨ÏÖÔÚ¶¼ÒÑ¾­±» Calendar ÀàºÍ DateFormat ÀàµÄ·½·¨È¡´ú¡£
+ * Dateç±»çš„å¾ˆå¤šæ–¹æ³•ç°åœ¨éƒ½å·²ç»è¢« Calendar ç±»å’Œ DateFormat ç±»çš„æ–¹æ³•å–ä»£ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class DateDemo {
 	
@@ -20,10 +20,10 @@ public class DateDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ·ÖÅäDate¶ÔÏó²¢³õÊ¼»¯´Ë¶ÔÏó£¬ÒÔ±íÊ¾·ÖÅäËüµÄÊ±¼ä(¾«È·µ½ºÁÃë) date
+		// åˆ†é…Dateå¯¹è±¡å¹¶åˆå§‹åŒ–æ­¤å¯¹è±¡ï¼Œä»¥è¡¨ç¤ºåˆ†é…å®ƒçš„æ—¶é—´(ç²¾ç¡®åˆ°æ¯«ç§’) date
 		Date date = new Date();
 		System.out.println(date);
-		// ·µ»Ø×Ô1970Äê1ÔÂ1ÈÕ00:00:00GMTÒÔÀ´´ËDate¶ÔÏó±íÊ¾µÄºÁÃëÊı
+		// è¿”å›è‡ª1970å¹´1æœˆ1æ—¥00:00:00GMTä»¥æ¥æ­¤Dateå¯¹è±¡è¡¨ç¤ºçš„æ¯«ç§’æ•°
 		long msed = date.getTime();
 		System.out.println("Milliseconds since Jan.1,1970 GMT = " + msed);
 	}

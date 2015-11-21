@@ -4,15 +4,15 @@
 package inner;
 
 /**
- * ÄÚ²¿ÀàÑÝÊ¾1
+ * å†…éƒ¨ç±»æ¼”ç¤º1
  * <p>
- * ÓÃÍ¾1£ºÄÚ²¿ÀàÊÇÒ»ÖÖÃû×ÖÒþ²ØºÍ×éÖ¯´úÂëµÄÄ£Ê½¡£
+ * ç”¨é€”1ï¼šå†…éƒ¨ç±»æ˜¯ä¸€ç§åå­—éšè—å’Œç»„ç»‡ä»£ç çš„æ¨¡å¼ã€‚
  * <p>
- * µäÐÍµÄÇé¿öÊÇ£ºÍâ²¿ÀàÓÐÒ»¸ö·½·¨£¬¸Ã·½·¨·µ»ØÒ»¸öÖ¸ÏòÄÚ²¿ÀàµÄÒýÓÃ¡£
+ * å…¸åž‹çš„æƒ…å†µæ˜¯ï¼šå¤–éƒ¨ç±»æœ‰ä¸€ä¸ªæ–¹æ³•ï¼Œè¯¥æ–¹æ³•è¿”å›žä¸€ä¸ªæŒ‡å‘å†…éƒ¨ç±»çš„å¼•ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2008-4-13
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-13
  */
 public class InnerClass1 {
 
@@ -23,8 +23,8 @@ public class InnerClass1 {
 		Goods goods1 = new Goods();
 		goods1.ship("China");
 		Goods goods2 = new Goods();
-		// ¶¨Òå¶ÔÄÚ²¿ÀàµÄÒýÓÃ
-		// Èç¹ûÏëÔÚÍâ²¿ÀàµÄ·Çstatic·½·¨Ö®ÍâµÄµØ·½´´½¨ÄÚ²¿Àà¶ÔÏó£¬¾Í±ØÐë¾ßÌåµÄÖ¸Ã÷Õâ¸ö¶ÔÏóµÄÀàÐÍ£ºOutClass.InnerClass
+		// å®šä¹‰å¯¹å†…éƒ¨ç±»çš„å¼•ç”¨
+		// å¦‚æžœæƒ³åœ¨å¤–éƒ¨ç±»çš„éžstaticæ–¹æ³•ä¹‹å¤–çš„åœ°æ–¹åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡ï¼Œå°±å¿…é¡»å…·ä½“çš„æŒ‡æ˜Žè¿™ä¸ªå¯¹è±¡çš„ç±»åž‹ï¼šOutClass.InnerClass
 		@SuppressWarnings("unused")
 		Goods.Contents c = goods2.getContents();
 		@SuppressWarnings("unused")

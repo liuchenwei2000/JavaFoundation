@@ -1,56 +1,56 @@
 /**
- * °æ±¾ĞÅÏ¢£º
+ * ç‰ˆæœ¬ä¿¡æ¯ï¼š
  * Copyright 2007 Beijing LCW Co.Ltd.
  * All right reserved.
  */
 
-package syntax;// °üÃû
+package syntax;// åŒ…å
 
-import java.util.ArrayList;// µ¼ÈëÇø
+import java.util.ArrayList;// å¯¼å…¥åŒº
 
-// Àà×¢ÊÍ
+// ç±»æ³¨é‡Š
 /**
- * Ô´ÎÄ¼ş¸ñÊ½»¯Ê¾ÀıÀà
+ * æºæ–‡ä»¶æ ¼å¼åŒ–ç¤ºä¾‹ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-11-6
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-6
  */
-// Ô´´úÂëµÄÎÄ¼şÃû±ØĞëÓë¹«ÓĞÀà(public)µÄÃû×ÖÏàÍ¬
+// æºä»£ç çš„æ–‡ä»¶åå¿…é¡»ä¸å…¬æœ‰ç±»(public)çš„åå­—ç›¸åŒ
 public class SourceFileFormatDemo {
 
-	private int field;// ×Ö¶Î
+	private int field;// å­—æ®µ
 	
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 */
 	public SourceFileFormatDemo() {
 		
 	}
 
 	/**
-	 * clone·½·¨(½ô·ÅÔÚ¹¹Ôì·½·¨ÏÂÃæ)
+	 * cloneæ–¹æ³•(ç´§æ”¾åœ¨æ„é€ æ–¹æ³•ä¸‹é¢)
 	 */
 	public SourceFileFormatDemo clone() {
 		return this;
 	}
 	
 	/**
-	 * toString·½·¨(Ã¿¸öÀà¶¼Ó¦¾¡Á¿ÖØĞ´´Ë·½·¨)
+	 * toStringæ–¹æ³•(æ¯ä¸ªç±»éƒ½åº”å°½é‡é‡å†™æ­¤æ–¹æ³•)
 	 */
 	public String toString() {
 		return super.toString();
 	}
 	
 	/**
-	 * ÊµÀı·½·¨
+	 * å®ä¾‹æ–¹æ³•
 	 */
 	public void test() {
 		System.out.println(field);
 	}
 	
 	/**
-	 * main·½·¨(·ÅÔÚ×îÏÂÃæ)
+	 * mainæ–¹æ³•(æ”¾åœ¨æœ€ä¸‹é¢)
 	 */
 	public static void main(String[] args) {
 		ArrayList<Integer> al = new ArrayList<Integer>();

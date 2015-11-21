@@ -6,11 +6,11 @@ package access.inherit.c;
 import access.inherit.b.Father;
 
 /**
- * ×ÓÀà
+ * å­ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-9
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-9
  */
 public class Son extends Father{
 

@@ -4,18 +4,18 @@
 package syntax;
 
 /**
- * return¹Ø¼ü×ÖÊ¾Àı
+ * returnå…³é”®å­—ç¤ºä¾‹
  * <p>
- * returnµÄÁ½¸ö×÷ÓÃ£º
- * <li>1£¬Ö¸¶¨Ò»¸ö·½·¨·µ»ØÊ²Ã´Öµ(voidºÍ·Çvoid)
- * <li>2£¬µ¼ÖÂµ±Ç°·½·¨ÍË³ö²¢·µ»ØÄÇ¸öÖµ</br>
+ * returnçš„ä¸¤ä¸ªä½œç”¨ï¼š
+ * <li>1ï¼ŒæŒ‡å®šä¸€ä¸ªæ–¹æ³•è¿”å›ä»€ä¹ˆå€¼(voidå’Œévoid)
+ * <li>2ï¼Œå¯¼è‡´å½“å‰æ–¹æ³•é€€å‡ºå¹¶è¿”å›é‚£ä¸ªå€¼</br>
  * 
- * Èç¹ûÔÚvoid·½·¨ÖĞÃ»ÓĞreturnÓï¾äÔòÔÚ¸Ã·½·¨µÄ½áÎ²´¦»áÓĞÒ»¸öÒşÊ½µÄreturn£¬
- * ÈôÏëÌáÇ°ÍË³öÄ³¸övoid·½·¨¿ÉÒÔÊ¹ÓÃreturn¡£
+ * å¦‚æœåœ¨voidæ–¹æ³•ä¸­æ²¡æœ‰returnè¯­å¥åˆ™åœ¨è¯¥æ–¹æ³•çš„ç»“å°¾å¤„ä¼šæœ‰ä¸€ä¸ªéšå¼çš„returnï¼Œ
+ * è‹¥æƒ³æå‰é€€å‡ºæŸä¸ªvoidæ–¹æ³•å¯ä»¥ä½¿ç”¨returnã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-9-11
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-11
  */
 public class ReturnDemo {
 
@@ -28,7 +28,7 @@ public class ReturnDemo {
 	}
 
 	/**
-	 * µ÷ÓÃsearch·½·¨
+	 * è°ƒç”¨searchæ–¹æ³•
 	 */
 	private static void invokeSearch(int a[], int n) {
 		System.out.println("before invoking search()");

@@ -13,19 +13,19 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 /**
- * Externalizable¼òµ¥ÑİÊ¾Àà
+ * Externalizableç®€å•æ¼”ç¤ºç±»
  * <p>
- * ¶ÔÏóĞòÁĞ»¯Ê±ÓĞÌØÊâµÄĞèÒª¸ÃÔõÃ´°ìÄØ£¿
- * ÀıÈç£¬Òª¿¼ÂÇÌØÊâµÄ°²È«ÎÊÌâ£¬¶øÇÒ²»Ï£Íû¶ÔÏóµÄÄ³Ò»²¿·Ö±»ĞòÁĞ»¯£»
- * »òÕßÒ»¸ö¶ÔÏó±»»¹Ô­ÒÔºó£¬Ä³×Ó¶ÔÏóĞèÒªÖØĞÂ´´½¨£¬´Ó¶ø²»±Ø½«¸Ã×Ó¶ÔÏóĞòÁĞ»¯¡£
- * ÔÚÕâĞ©ÌØÊâÇé¿öÏÂ£¬¿ÉÍ¨¹ıÊµÏÖExternalizable½Ó¿Ú´úÌæÊµÏÖSerializable½Ó¿Ú£¬
- * À´¶ÔĞòÁĞ»¯¹ı³Ì½øĞĞ¿ØÖÆ£¬Õâ¸öExternalizable½Ó¿Ú¼Ì³ĞÁËSerializable½Ó¿Ú¡£
- * Í¬Ê±ÔöÌíÁËÁ½¸ö·½·¨£ºwriteExternal()ºÍreadExternal()¡£
- * ÕâÁ½¸ö·½·¨»áÔÚĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯µÄ¹ı³ÌÖĞ±»×Ô¶¯µ÷ÓÃ£¬ÒÔ±ãÖ´ĞĞÒ»Ğ©ÌØÊâ²Ù×÷¡£
+ * å¯¹è±¡åºåˆ—åŒ–æ—¶æœ‰ç‰¹æ®Šçš„éœ€è¦è¯¥æ€ä¹ˆåŠå‘¢ï¼Ÿ
+ * ä¾‹å¦‚ï¼Œè¦è€ƒè™‘ç‰¹æ®Šçš„å®‰å…¨é—®é¢˜ï¼Œè€Œä¸”ä¸å¸Œæœ›å¯¹è±¡çš„æŸä¸€éƒ¨åˆ†è¢«åºåˆ—åŒ–ï¼›
+ * æˆ–è€…ä¸€ä¸ªå¯¹è±¡è¢«è¿˜åŸä»¥åï¼ŒæŸå­å¯¹è±¡éœ€è¦é‡æ–°åˆ›å»ºï¼Œä»è€Œä¸å¿…å°†è¯¥å­å¯¹è±¡åºåˆ—åŒ–ã€‚
+ * åœ¨è¿™äº›ç‰¹æ®Šæƒ…å†µä¸‹ï¼Œå¯é€šè¿‡å®ç°Externalizableæ¥å£ä»£æ›¿å®ç°Serializableæ¥å£ï¼Œ
+ * æ¥å¯¹åºåˆ—åŒ–è¿‡ç¨‹è¿›è¡Œæ§åˆ¶ï¼Œè¿™ä¸ªExternalizableæ¥å£ç»§æ‰¿äº†Serializableæ¥å£ã€‚
+ * åŒæ—¶å¢æ·»äº†ä¸¤ä¸ªæ–¹æ³•ï¼šwriteExternal()å’ŒreadExternal()ã€‚
+ * è¿™ä¸¤ä¸ªæ–¹æ³•ä¼šåœ¨åºåˆ—åŒ–å’Œååºåˆ—åŒ–çš„è¿‡ç¨‹ä¸­è¢«è‡ªåŠ¨è°ƒç”¨ï¼Œä»¥ä¾¿æ‰§è¡Œä¸€äº›ç‰¹æ®Šæ“ä½œã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class SimpleExternalizeDemo {
 
@@ -42,7 +42,7 @@ public class SimpleExternalizeDemo {
 		ObjectOutputStream out = null;
 		ObjectInputStream in = null;
 		try {
-			/** ĞòÁĞ»¯ÕâÁ½¸ö¶ÔÏó */
+			/** åºåˆ—åŒ–è¿™ä¸¤ä¸ªå¯¹è±¡ */
 			out = new ObjectOutputStream(new FileOutputStream(
 					fileName));
 			System.out.println("Saving objects:");
@@ -50,19 +50,19 @@ public class SimpleExternalizeDemo {
 			out.writeObject(ob);
 			out.flush();
 			
-			/** ·´ĞòÁĞ»¯ÕâÁ½¸ö¶ÔÏó */
+			/** ååºåˆ—åŒ–è¿™ä¸¤ä¸ªå¯¹è±¡ */
 			in = new ObjectInputStream(new FileInputStream(fileName));
 			System.out.println("Recovering objects:");
 			System.out.println("ObjectA");
 			
 			/*
-			 * »Ö¸´oaºó£¬»áµ÷ÓÃObjectAÈ±Ê¡¹¹ÔìÆ÷£¬ÕâÓë»Ö¸´Ò»¸öSerializable¶ÔÏó²»Í¬£¬¶ÔÓÚºóÕß£¬¶ÔÏóÍêÈ«ÒÔËü´æ´¢µÄ¶ş½øÖÆÎ»Îª»ù´¡À´¹¹Ôì£¬¶ø²»µ÷ÓÃ¹¹ÔìÆ÷¡£
-			 * ¶ø¶ÔÒ»¸öExternalizable¶ÔÏó£¬ËùÓĞÆÕÍ¨µÄÈ±Ê¡¹¹ÔìÆ÷¶¼»á±»µ÷ÓÃ£¨°üÀ¨ÔÚÓò¶¨ÒåÊ±µÄ³õÊ¼»¯£©È»ºóµ÷ÓÃreadExternal()
-			 * ËùÓĞÈ±Ê¡µÄ¹¹ÔìÆ÷¶¼»á±»µ÷ÓÃ£¬²ÅÄÜÊ¹Externalizable¶ÔÏó²úÉúÕıÈ·µØĞĞÎª¡£
+			 * æ¢å¤oaåï¼Œä¼šè°ƒç”¨ObjectAç¼ºçœæ„é€ å™¨ï¼Œè¿™ä¸æ¢å¤ä¸€ä¸ªSerializableå¯¹è±¡ä¸åŒï¼Œå¯¹äºåè€…ï¼Œå¯¹è±¡å®Œå…¨ä»¥å®ƒå­˜å‚¨çš„äºŒè¿›åˆ¶ä½ä¸ºåŸºç¡€æ¥æ„é€ ï¼Œè€Œä¸è°ƒç”¨æ„é€ å™¨ã€‚
+			 * è€Œå¯¹ä¸€ä¸ªExternalizableå¯¹è±¡ï¼Œæ‰€æœ‰æ™®é€šçš„ç¼ºçœæ„é€ å™¨éƒ½ä¼šè¢«è°ƒç”¨ï¼ˆåŒ…æ‹¬åœ¨åŸŸå®šä¹‰æ—¶çš„åˆå§‹åŒ–ï¼‰ç„¶åè°ƒç”¨readExternal()
+			 * æ‰€æœ‰ç¼ºçœçš„æ„é€ å™¨éƒ½ä¼šè¢«è°ƒç”¨ï¼Œæ‰èƒ½ä½¿Externalizableå¯¹è±¡äº§ç”Ÿæ­£ç¡®åœ°è¡Œä¸ºã€‚
 			 */
 			oa = (ObjectA) in.readObject();
 			System.out.println("ObjectB");
-			// ÏÂÃæÕâ¾ä»áÅ×³öÒì³££¬ÒòÎªËüµÄ¹¹ÔìÆ÷ÊÇ·ÇpublicµÄ
+			// ä¸‹é¢è¿™å¥ä¼šæŠ›å‡ºå¼‚å¸¸ï¼Œå› ä¸ºå®ƒçš„æ„é€ å™¨æ˜¯épublicçš„
 			ob = (ObjectB)in.readObject(); 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +82,7 @@ public class SimpleExternalizeDemo {
 }
 
 /**
- * ±¾ÀàµÄ¹¹ÔìÆ÷ÊÇ¹«ÓĞµÄ
+ * æœ¬ç±»çš„æ„é€ å™¨æ˜¯å…¬æœ‰çš„
  */
 class ObjectA implements Externalizable {
 	
@@ -91,14 +91,14 @@ class ObjectA implements Externalizable {
 	}
 
 	/**
-	 * ±¾·½·¨¶ÔÏóĞòÁĞ»¯Ê±»á±»×Ô¶¯µ÷ÓÃ
+	 * æœ¬æ–¹æ³•å¯¹è±¡åºåˆ—åŒ–æ—¶ä¼šè¢«è‡ªåŠ¨è°ƒç”¨
 	 */
 	public void writeExternal(ObjectOutput out) throws IOException {
 		System.out.println("ObjectA.writeExternal");
 	}
 
 	/**
-	 * ±¾·½·¨¶ÔÏó·´ĞòÁĞ»¯Ê±»á±»×Ô¶¯µ÷ÓÃ
+	 * æœ¬æ–¹æ³•å¯¹è±¡ååºåˆ—åŒ–æ—¶ä¼šè¢«è‡ªåŠ¨è°ƒç”¨
 	 */
 	public void readExternal(ObjectInput in) throws IOException,
 			ClassNotFoundException {
@@ -107,7 +107,7 @@ class ObjectA implements Externalizable {
 }
 
 /**
- * ±¾ÀàµÄ¹¹ÔìÆ÷ÊÇ°ü¼¶Ë½ÓĞµÄ
+ * æœ¬ç±»çš„æ„é€ å™¨æ˜¯åŒ…çº§ç§æœ‰çš„
  */
 class ObjectB implements Externalizable {
 	

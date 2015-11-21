@@ -6,13 +6,13 @@ package generic.wildcard;
 import generic.Pair;
 
 /**
- * Í¨Åä·û×ÓÀàĞÍÏŞ¶¨ÑİÊ¾Àà
+ * é€šé…ç¬¦å­ç±»å‹é™å®šæ¼”ç¤ºç±»
  * <p>
- * ·ÃÎÊÆ÷°²È«(¿ÉÓÃ)£¬ĞŞ¸ÄÆ÷²»°²È«(²»¿ÉÓÃ)¡£
+ * è®¿é—®å™¨å®‰å…¨(å¯ç”¨)ï¼Œä¿®æ”¹å™¨ä¸å®‰å…¨(ä¸å¯ç”¨)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-8-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-3
  */
 public class ExtendsWildcardDemo {
 
@@ -30,7 +30,7 @@ public class ExtendsWildcardDemo {
 		Pair<Son> p2 = new Pair<Son>(s1, s2);
 
 		printFather(p1);
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 //		printFather(p2);
 //		printSon(p1);
 		printSon(p2);
@@ -38,21 +38,21 @@ public class ExtendsWildcardDemo {
 		printAll(p2);
 		
 		/* 
-		 * Ê¹ÓÃPair<? extends Father>ÀàĞÍ½«²»¿ÉÒÔµ÷ÓÃset·½·¨
-		 * ±àÒëÆ÷Ö»ÖªµÀËüĞèÒªÄ³¸öFatherµÄ×ÓÀàĞÍ£¬µ«ÊÇ²»ÖªµÀ¾ßÌåÊÇÊ²Ã´ÀàĞÍ
-		 * Ëü¾Ü¾ø´«µİÈÎºÎÌØ¶¨µÄÀàĞÍ£»µ«get·½·¨ÊÇ°²È«¿ÉÓÃµÄ
+		 * ä½¿ç”¨Pair<? extends Father>ç±»å‹å°†ä¸å¯ä»¥è°ƒç”¨setæ–¹æ³•
+		 * ç¼–è¯‘å™¨åªçŸ¥é“å®ƒéœ€è¦æŸä¸ªFatherçš„å­ç±»å‹ï¼Œä½†æ˜¯ä¸çŸ¥é“å…·ä½“æ˜¯ä»€ä¹ˆç±»å‹
+		 * å®ƒæ‹’ç»ä¼ é€’ä»»ä½•ç‰¹å®šçš„ç±»å‹ï¼›ä½†getæ–¹æ³•æ˜¯å®‰å…¨å¯ç”¨çš„
 		 */
 		Pair<? extends Father> pair = p2;
-		// ÏÂÃæµÄÓï¾ä»áÓĞ±àÒë´í
+		// ä¸‹é¢çš„è¯­å¥ä¼šæœ‰ç¼–è¯‘é”™
 //		pair.setFirst(s1);
 		Father f3 = pair.getFirst();
 		System.out.println(f3.getName());
 	}
 
 	/**
-	 * Í¨Åä·ûÀàĞÍPair<? extends Father>±íÊ¾ÈÎºÎ·ºĞÍPairÀàĞÍ¡£
-	 * ËüµÄÀàĞÍ²ÎÊıÊÇFatherµÄ×ÓÀà£¬ÈçPair<Son>£¬µ«²»ÊÇPair<String>¡£
-	 * Pair<Father>¡¢Pair<Son>¶¼ÊÇPair<? extends Father>µÄ×ÓÀàĞÍ¡£
+	 * é€šé…ç¬¦ç±»å‹Pair<? extends Father>è¡¨ç¤ºä»»ä½•æ³›å‹Pairç±»å‹ã€‚
+	 * å®ƒçš„ç±»å‹å‚æ•°æ˜¯Fatherçš„å­ç±»ï¼Œå¦‚Pair<Son>ï¼Œä½†ä¸æ˜¯Pair<String>ã€‚
+	 * Pair<Father>ã€Pair<Son>éƒ½æ˜¯Pair<? extends Father>çš„å­ç±»å‹ã€‚
 	 */
 	private static void printAll(Pair<? extends Father> pair) {
 		System.out.println("first=" + pair.getFirst().getName());
@@ -61,8 +61,8 @@ public class ExtendsWildcardDemo {
 	}
 	
 	/**
-	 * ±¾·½·¨¾Í°Ñ²ÎÊıÏŞÖÆµÄÌ«ËÀÁË£¬Ö»¿ÉÒÔ´«ÈëPair<Father>£¬¶øPair<Son>¾Í²»ĞĞ¡£
-	 * ÒòÎªPair<Son>²¢²»ÊÇPair<Father>µÄ×ÓÀà¡£
+	 * æœ¬æ–¹æ³•å°±æŠŠå‚æ•°é™åˆ¶çš„å¤ªæ­»äº†ï¼Œåªå¯ä»¥ä¼ å…¥Pair<Father>ï¼Œè€ŒPair<Son>å°±ä¸è¡Œã€‚
+	 * å› ä¸ºPair<Son>å¹¶ä¸æ˜¯Pair<Father>çš„å­ç±»ã€‚
 	 */
 	private static void printFather(Pair<Father> pair) {
 		System.out.println("first=" + pair.getFirst().getName());
@@ -71,7 +71,7 @@ public class ExtendsWildcardDemo {
 	}
 
 	/**
-	 * Í¬ÉÏ·½·¨
+	 * åŒä¸Šæ–¹æ³•
 	 */
 	private static void printSon(Pair<Son> pair) {
 		System.out.println("first=" + pair.getFirst().getName());

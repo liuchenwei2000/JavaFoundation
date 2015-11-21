@@ -21,11 +21,11 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 
 /**
- * IO streamÑİÊ¾
+ * IO streamæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-19
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-19
  */
 public class IOStreamDemo {
 	
@@ -34,7 +34,7 @@ public class IOStreamDemo {
 	private static final String FILE_PATH_DATA = "files/io.stream/data.txt";
 
 	/**
-	 * 1£¬»º³å¶ÁÈ¡ÎÄ¼ş
+	 * 1ï¼Œç¼“å†²è¯»å–æ–‡ä»¶
 	 */
 	private static String readFromFile(String filePath) throws IOException {
 		StringBuilder sb = new StringBuilder();
@@ -42,10 +42,10 @@ public class IOStreamDemo {
 		try {
 			fReader = new BufferedReader(new FileReader(filePath));
 			String s = null;
-			// Ò»µ©µÖ´ïÎÄ¼şÄ©Î²£¬readLine()½«·µ»Ønull£¬ËùÒÔÓÃËüÀ´ÖÕÖ¹Ñ­»·
+			// ä¸€æ—¦æŠµè¾¾æ–‡ä»¶æœ«å°¾ï¼ŒreadLine()å°†è¿”å›nullï¼Œæ‰€ä»¥ç”¨å®ƒæ¥ç»ˆæ­¢å¾ªç¯
 			while ((s = fReader.readLine()) != null) {
 				sb.append(s);
-				// ±ØĞëÌí¼Ó»»ĞĞ·û£¬ÒòÎªreadLine()ÒÑ¾­½«ËüÃÇÉ¾³ı
+				// å¿…é¡»æ·»åŠ æ¢è¡Œç¬¦ï¼Œå› ä¸ºreadLine()å·²ç»å°†å®ƒä»¬åˆ é™¤
 				sb.append("\n");
 			}
 			return sb.toString();
@@ -60,23 +60,23 @@ public class IOStreamDemo {
 	}
 	
 	/**
-	 * 2£¬»º³å¶ÁÈ¡¿ØÖÆÌ¨ÊäÈë
+	 * 2ï¼Œç¼“å†²è¯»å–æ§åˆ¶å°è¾“å…¥
 	 */
 	private static void readFromConsole() throws IOException{
 		BufferedReader cReader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Enter a line:");
-		System.out.println("Echo£º" + cReader.readLine());
+		System.out.println("Echoï¼š" + cReader.readLine());
 	}
 	
 	/**
-	 * 3£¬¶ÁÈ¡ÄÚ´æ×Ö·ûÊäÈë
+	 * 3ï¼Œè¯»å–å†…å­˜å­—ç¬¦è¾“å…¥
 	 */
 	private static void readFromMemoryByChar(String content) throws IOException {
 		StringReader sReader = null;
 		try {
 			sReader = new StringReader(content);
 			int c;
-			// read()Ã¿´Î¶ÁÈ¡Ò»¸ö×Ö·û£¬ÒÔintĞÎÊ½·µ»Ø£¬Ò»µ©µ½´ïÄ©Î²½«·µ»Ø-1
+			// read()æ¯æ¬¡è¯»å–ä¸€ä¸ªå­—ç¬¦ï¼Œä»¥intå½¢å¼è¿”å›ï¼Œä¸€æ—¦åˆ°è¾¾æœ«å°¾å°†è¿”å›-1
 			while ((c = sReader.read()) != -1) {
 				System.out.print((char) c);
 			}
@@ -88,15 +88,15 @@ public class IOStreamDemo {
 	}
 	
 	/**
-	 * 4£¬¶ÁÈ¡ÄÚ´æ×Ö½ÚÊäÈë
+	 * 4ï¼Œè¯»å–å†…å­˜å­—èŠ‚è¾“å…¥
 	 */
 	private static void readFromMemoryByByte(String content) throws IOException{
 		DataInputStream din = null;
 		try {
 			din = new DataInputStream(new ByteArrayInputStream(content.getBytes()));
 			while (true) {
-				// Ã¿´Î¶¼Ö»¶ÁÈ¡Ò»¸ö×Ö½Ú£¬Ê¹ÓÃÒì³£À´¼ì²âÊäÈëµÄÄ©Î²
-				// µ«ÊÇÊ¹ÓÃÒì³£½øĞĞÁ÷¿ØÖÆ±»ÈÏÎªÊÇ¶ÔÒì³£ÌØĞÔµÄ´íÎóÊ¹ÓÃ
+				// æ¯æ¬¡éƒ½åªè¯»å–ä¸€ä¸ªå­—èŠ‚ï¼Œä½¿ç”¨å¼‚å¸¸æ¥æ£€æµ‹è¾“å…¥çš„æœ«å°¾
+				// ä½†æ˜¯ä½¿ç”¨å¼‚å¸¸è¿›è¡Œæµæ§åˆ¶è¢«è®¤ä¸ºæ˜¯å¯¹å¼‚å¸¸ç‰¹æ€§çš„é”™è¯¯ä½¿ç”¨
 				System.out.print((char) din.readByte());
 			}
 		} catch (EOFException e) {
@@ -107,42 +107,42 @@ public class IOStreamDemo {
 	}
 	
 	/**
-	 * 5£¬»º³åÊä³öµ½ÎÄ¼ş
+	 * 5ï¼Œç¼“å†²è¾“å‡ºåˆ°æ–‡ä»¶
 	 */
 	private static void writeToFile(String content, String filePath) throws IOException {
 		PrintWriter writer = null;
 		try {
-			// Ê×ÏÈ´´½¨Ò»¸öÓëÖ¸¶¨ÎÄ¼şÁ¬½ÓµÄFileWriter£¬²¢Ê¹ÓÃBufferedWriter½«Æä°ü×°ÆğÀ´ÓÃÒÔ»º³åÊäÈë¡£
-			// »º³åÍùÍùÄÜÏÔÖøµØÔö¼ÓIO²Ù×÷µÄĞÔÄÜ£¬È»ºóÎªÁË¸ñÊ½»¯°ÑËü×ª»»³ÉPrintWriter¡£
+			// é¦–å…ˆåˆ›å»ºä¸€ä¸ªä¸æŒ‡å®šæ–‡ä»¶è¿æ¥çš„FileWriterï¼Œå¹¶ä½¿ç”¨BufferedWriterå°†å…¶åŒ…è£…èµ·æ¥ç”¨ä»¥ç¼“å†²è¾“å…¥ã€‚
+			// ç¼“å†²å¾€å¾€èƒ½æ˜¾è‘—åœ°å¢åŠ IOæ“ä½œçš„æ€§èƒ½ï¼Œç„¶åä¸ºäº†æ ¼å¼åŒ–æŠŠå®ƒè½¬æ¢æˆPrintWriterã€‚
 			writer = new PrintWriter(new BufferedWriter(new FileWriter(filePath)));
 			writer.println(content);
 		} catch (EOFException e) {
 			System.err.println("End of stream");
 		} finally {
 			if(writer != null) {
-				// Èç¹û²»ÎªËùÓĞµÄÊä³öÎÄ¼şµ÷ÓÃclose()£¬Ôò»º³åÇøÄÚÈİ²»»á±»Ë¢ĞÂÇå¿Õ£¬ÄÇÃ´ÎÄ¼şÒ²¾Í²»ÍêÕû¡£
-				// Êµ¼ÊÉÏÊÇ×îºóµÄÄÚÈİ»¹±»ÔÚ»º³åÇøÖĞ£¬Ã»ÓĞ±»ÕæÕıÖ´ĞĞĞ´Èë²Ù×÷Ğ´ÈëÎÄ¼ş£¬ËùÒÔĞèÒªÊÖ¹¤È¥Ë¢ĞÂ»º³åÇø¡£
+				// å¦‚æœä¸ä¸ºæ‰€æœ‰çš„è¾“å‡ºæ–‡ä»¶è°ƒç”¨close()ï¼Œåˆ™ç¼“å†²åŒºå†…å®¹ä¸ä¼šè¢«åˆ·æ–°æ¸…ç©ºï¼Œé‚£ä¹ˆæ–‡ä»¶ä¹Ÿå°±ä¸å®Œæ•´ã€‚
+				// å®é™…ä¸Šæ˜¯æœ€åçš„å†…å®¹è¿˜è¢«åœ¨ç¼“å†²åŒºä¸­ï¼Œæ²¡æœ‰è¢«çœŸæ­£æ‰§è¡Œå†™å…¥æ“ä½œå†™å…¥æ–‡ä»¶ï¼Œæ‰€ä»¥éœ€è¦æ‰‹å·¥å»åˆ·æ–°ç¼“å†²åŒºã€‚
 				writer.close();
 			}
 		}
 	}
 	
 	/**
-	 * 6£¬´æ´¢ºÍ»Ö¸´Êı¾İ
+	 * 6ï¼Œå­˜å‚¨å’Œæ¢å¤æ•°æ®
 	 */
 	private static void storeAndRetrieve(String content, String filePath) throws IOException {
 		/*
-		 * Êä³öÁ÷¿ÉÒÔ°´Ğ´ÈëÊı¾İµÄ·½Ê½»®·ÖÎªÁ½Àà£º
-		 * Ò»ÖÖĞ´ÊÇÎªÁËÈÃÈËÃÇÊ¹ÓÃĞ´ÈëµÄÊı¾İ£¬ÁíÒ»ÖÖÊÇÎªÁËDataInputStream¿ÉÒÔÔÙ´Î¶ÁÈ¡ËüÃÇ¡£
-		 * PrintStream¿ÉÒÔ¶ÔÊı¾İ½øĞĞ¸ñÊ½»¯£¬ÒÔ±ãÈËÃÇµÄÔÄ¶Á¡£
-		 * µ«ÊÇÎªÁËÊä³ö¿É¹©ÁíÒ»¸öÁ÷»Ö¸´µÄÊı¾İ£¬ĞèÒªÊ¹ÓÃDataOutputStreamĞ´ÈëÊı¾İ£¬²¢ÓÃDataInputStream»Ö¸´Êı¾İ¡£
+		 * è¾“å‡ºæµå¯ä»¥æŒ‰å†™å…¥æ•°æ®çš„æ–¹å¼åˆ’åˆ†ä¸ºä¸¤ç±»ï¼š
+		 * ä¸€ç§å†™æ˜¯ä¸ºäº†è®©äººä»¬ä½¿ç”¨å†™å…¥çš„æ•°æ®ï¼Œå¦ä¸€ç§æ˜¯ä¸ºäº†DataInputStreamå¯ä»¥å†æ¬¡è¯»å–å®ƒä»¬ã€‚
+		 * PrintStreamå¯ä»¥å¯¹æ•°æ®è¿›è¡Œæ ¼å¼åŒ–ï¼Œä»¥ä¾¿äººä»¬çš„é˜…è¯»ã€‚
+		 * ä½†æ˜¯ä¸ºäº†è¾“å‡ºå¯ä¾›å¦ä¸€ä¸ªæµæ¢å¤çš„æ•°æ®ï¼Œéœ€è¦ä½¿ç”¨DataOutputStreamå†™å…¥æ•°æ®ï¼Œå¹¶ç”¨DataInputStreamæ¢å¤æ•°æ®ã€‚
 		 */
 		DataOutputStream out = null;
 		try {
 			out = new DataOutputStream(
 					new BufferedOutputStream(new FileOutputStream(filePath)));
 			out.writeDouble(3.14159);
-			// Ğ´×Ö·û´®µÄ·½Ê½
+			// å†™å­—ç¬¦ä¸²çš„æ–¹å¼
 			out.writeUTF("That was pi");
 			out.writeDouble(2.71828);
 			out.writeUTF("That was e");
@@ -156,11 +156,11 @@ public class IOStreamDemo {
 		}
 		
 		/*
-		 * ÎªÁË±£Ö¤ËùÓĞµÄ¶Á·½·¨¶¼ÄÜ¹»Õı³£¹¤×÷£¬±ØĞëÖªµÀÁ÷ÖĞÊı¾İÏîËùÔÚµÄÈ·ÇĞÎ»ÖÃ¡£
-		 * ÒòÎª¼«ÓĞ¿ÉÄÜ½«±£´æµÄdoubleÊı¾İ×÷ÎªÒ»¸ö¼òµ¥µÄ×Ö½ÚĞòÁĞ¡¢char »òÆäËûÀàĞÍ¶ÁÈë£¬Òò´Ë±ØĞë£º
-		 * ÒªÃ´ÎªÎÄ¼şÖĞµÄÊı¾İ²ÉÓÃ¹Ì¶¨µÄ¸ñÊ½£»
-		 * ÒªÃ´½«¶îÍâµÄĞÅÏ¢±£´æµ½ÎÄ¼şÖĞ£¬ÒÔ±ãÄÜ¹»¶ÔÆä½øĞĞ½âÎö´Ó¶øÈ·¶¨Êı¾İµÄ´æ·ÅÎ»ÖÃ¡£
-		 * (¶ÔÏóĞòÁĞ»¯¿ÉÄÜÊÇ¸üÈİÒ×µÄ´æ´¢ºÍ¶ÁÈ¡¸´ÔÓÊı¾İ½á¹¹µÄ·½Ê½) 
+		 * ä¸ºäº†ä¿è¯æ‰€æœ‰çš„è¯»æ–¹æ³•éƒ½èƒ½å¤Ÿæ­£å¸¸å·¥ä½œï¼Œå¿…é¡»çŸ¥é“æµä¸­æ•°æ®é¡¹æ‰€åœ¨çš„ç¡®åˆ‡ä½ç½®ã€‚
+		 * å› ä¸ºææœ‰å¯èƒ½å°†ä¿å­˜çš„doubleæ•°æ®ä½œä¸ºä¸€ä¸ªç®€å•çš„å­—èŠ‚åºåˆ—ã€char æˆ–å…¶ä»–ç±»å‹è¯»å…¥ï¼Œå› æ­¤å¿…é¡»ï¼š
+		 * è¦ä¹ˆä¸ºæ–‡ä»¶ä¸­çš„æ•°æ®é‡‡ç”¨å›ºå®šçš„æ ¼å¼ï¼›
+		 * è¦ä¹ˆå°†é¢å¤–çš„ä¿¡æ¯ä¿å­˜åˆ°æ–‡ä»¶ä¸­ï¼Œä»¥ä¾¿èƒ½å¤Ÿå¯¹å…¶è¿›è¡Œè§£æä»è€Œç¡®å®šæ•°æ®çš„å­˜æ”¾ä½ç½®ã€‚
+		 * (å¯¹è±¡åºåˆ—åŒ–å¯èƒ½æ˜¯æ›´å®¹æ˜“çš„å­˜å‚¨å’Œè¯»å–å¤æ‚æ•°æ®ç»“æ„çš„æ–¹å¼) 
 		 */
 		DataInputStream in = null;
 		try {

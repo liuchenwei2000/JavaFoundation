@@ -4,15 +4,15 @@
 package inherit.difference;
 
 /**
- * ½Î³µÀà
+ * è½¿è½¦ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Car extends Vehicle implements IShowInfo, IRunnable {
 	
-	private int capacity;// ÔØÈËÁ¿
+	private int capacity;// è½½äººé‡
 
 	public Car() {
 		this.name = "";

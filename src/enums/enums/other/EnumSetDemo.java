@@ -7,15 +7,15 @@ import java.util.EnumSet;
 import static enums.other.SignalNumber.*;
 
 /**
- * EnumSetÑİÊ¾
+ * EnumSetæ¼”ç¤º
  * <p>
- * EnumSetÊÇÓëÃ¶¾ÙÀàĞÍÒ»ÆğÊ¹ÓÃµÄ×¨ÓÃSetÊµÏÖ£¬Ã¶¾ÙsetÖĞËùÓĞ¼ü¶¼±ØĞëÀ´×Ôµ¥¸öÃ¶¾ÙÀàĞÍ£¬
- * ¸ÃÃ¶¾ÙÀàĞÍÔÚ´´½¨setÊ±ÏÔÊ½»òÒşÊ½µØÖ¸¶¨¡£</br>
- * ËüµÄÓÅµãÊÇ£ºËÙ¶È¿ì£¬ĞÔÄÜºÃ¡£
+ * EnumSetæ˜¯ä¸æšä¸¾ç±»å‹ä¸€èµ·ä½¿ç”¨çš„ä¸“ç”¨Setå®ç°ï¼Œæšä¸¾setä¸­æ‰€æœ‰é”®éƒ½å¿…é¡»æ¥è‡ªå•ä¸ªæšä¸¾ç±»å‹ï¼Œ
+ * è¯¥æšä¸¾ç±»å‹åœ¨åˆ›å»ºsetæ—¶æ˜¾å¼æˆ–éšå¼åœ°æŒ‡å®šã€‚</br>
+ * å®ƒçš„ä¼˜ç‚¹æ˜¯ï¼šé€Ÿåº¦å¿«ï¼Œæ€§èƒ½å¥½ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public class EnumSetDemo {
 
@@ -23,26 +23,26 @@ public class EnumSetDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ´´½¨Ò»¸ö¾ßÓĞÖ¸¶¨ÔªËØÀàĞÍµÄ¿ÕÃ¶¾Ùset
+		// åˆ›å»ºä¸€ä¸ªå…·æœ‰æŒ‡å®šå…ƒç´ ç±»å‹çš„ç©ºæšä¸¾set
 		EnumSet<SignalNumber> set = EnumSet.noneOf(SignalNumber.class);
 		set.add(ONE);
 		System.out.println(set);
-		// ´´½¨Ò»¸ö×î³õ°üº¬Ö¸¶¨ÔªËØµÄÃ¶¾Ùset
+		// åˆ›å»ºä¸€ä¸ªæœ€åˆåŒ…å«æŒ‡å®šå…ƒç´ çš„æšä¸¾set
 		set.addAll(EnumSet.of(ONE, ZERO));
 		System.out.println(set);
-		// ´´½¨Ò»¸ö°üº¬Ö¸¶¨ÔªËØÀàĞÍµÄËùÓĞÔªËØµÄÃ¶¾Ùset
+		// åˆ›å»ºä¸€ä¸ªåŒ…å«æŒ‡å®šå…ƒç´ ç±»å‹çš„æ‰€æœ‰å…ƒç´ çš„æšä¸¾set
 		set = EnumSet.allOf(SignalNumber.class);
 		System.out.println(set);
 		set.removeAll(EnumSet.of(ONE, ZERO));
 		System.out.println(set);
-		// ´´½¨Ò»¸öÆäÔªËØÀàĞÍÓëÖ¸¶¨Ã¶¾ÙsetÏàÍ¬µÄÃ¶¾Ùset£¬×î³õ°üº¬Ö¸¶¨ set ÖĞËù²»°üº¬µÄ´ËÀàĞÍµÄËùÓĞÔªËØ(²¹¼¯)
+		// åˆ›å»ºä¸€ä¸ªå…¶å…ƒç´ ç±»å‹ä¸æŒ‡å®šæšä¸¾setç›¸åŒçš„æšä¸¾setï¼Œæœ€åˆåŒ…å«æŒ‡å®š set ä¸­æ‰€ä¸åŒ…å«çš„æ­¤ç±»å‹çš„æ‰€æœ‰å…ƒç´ (è¡¥é›†)
 		set = EnumSet.complementOf(set);
 		System.out.println(set);
 	}
 }
 
 /**
- * ·ûºÅÊıÃ¶¾Ù
+ * ç¬¦å·æ•°æšä¸¾
  */
 enum SignalNumber {
 	ONE, ZERO, NEGATIVEONE

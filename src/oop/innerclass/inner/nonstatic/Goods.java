@@ -7,30 +7,30 @@ import inner.IContents;
 import inner.IDestination;
 
 /**
- * ÄÚ²¿Àà¸ÅÀÀ 
+ * å†…éƒ¨ç±»æ¦‚è§ˆ 
  * <p>
- * ÄÚ²¿Àà¶ÔÏóÊÇºÍ´´½¨ËüµÄÍâ²¿Àà¶ÔÏó¹ØÁªµÄ£¨¼´±£´æÁË¶ÔÍâ²¿Àà¶ÔÏóµÄÒýÓÃ£©£¬
- * ²¢ÇÒÖ»¿ÉÒÔºÍÒ»¸öÍâ²¿Àà¶ÔÏó¹ØÁª£¬µ«ÊÇÒ»¸öÍâ²¿Àà¶ÔÏó¿ÉÒÔºÍºÜ¶àÄÚ²¿Àà¶ÔÏó¹ØÁª£¨´´½¨ºÜ¶àÄÚ²¿Àà¶ÔÏó£©¡£
- * ÄÚ²¿Àà¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄÈÎÒâ³ÉÔ±(°üÀ¨Ë½ÓÐµÄ)¡£Íâ²¿ÀàÒ²¿ÉÒÔÍ¨¹ýÒ»¸öÄÚ²¿ÀàµÄ¶ÔÏóÀ´·ÃÎÊÄÚ²¿Àà³ÉÔ±(°üÀ¨Ë½ÓÐµÄ)¡£
- * ÄÚ²¿ÀàÖÐ»¹¿ÉÒÔÓÐËü×Ô¼ºµÄÄÚ²¿Àà£¬µ«ÊÇ²»ÔÞ³ÉÕâÑùµÄÓÃ·¨¡£
+ * å†…éƒ¨ç±»å¯¹è±¡æ˜¯å’Œåˆ›å»ºå®ƒçš„å¤–éƒ¨ç±»å¯¹è±¡å…³è”çš„ï¼ˆå³ä¿å­˜äº†å¯¹å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨ï¼‰ï¼Œ
+ * å¹¶ä¸”åªå¯ä»¥å’Œä¸€ä¸ªå¤–éƒ¨ç±»å¯¹è±¡å…³è”ï¼Œä½†æ˜¯ä¸€ä¸ªå¤–éƒ¨ç±»å¯¹è±¡å¯ä»¥å’Œå¾ˆå¤šå†…éƒ¨ç±»å¯¹è±¡å…³è”ï¼ˆåˆ›å»ºå¾ˆå¤šå†…éƒ¨ç±»å¯¹è±¡ï¼‰ã€‚
+ * å†…éƒ¨ç±»å¯ä»¥è®¿é—®å¤–éƒ¨ç±»çš„ä»»æ„æˆå‘˜(åŒ…æ‹¬ç§æœ‰çš„)ã€‚å¤–éƒ¨ç±»ä¹Ÿå¯ä»¥é€šè¿‡ä¸€ä¸ªå†…éƒ¨ç±»çš„å¯¹è±¡æ¥è®¿é—®å†…éƒ¨ç±»æˆå‘˜(åŒ…æ‹¬ç§æœ‰çš„)ã€‚
+ * å†…éƒ¨ç±»ä¸­è¿˜å¯ä»¥æœ‰å®ƒè‡ªå·±çš„å†…éƒ¨ç±»ï¼Œä½†æ˜¯ä¸èµžæˆè¿™æ ·çš„ç”¨æ³•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-2
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-2
  */
 public class Goods {
 	
-	private int valueRate = 2;// ¼ÛÖµÏµÊý
+	private int valueRate = 2;// ä»·å€¼ç³»æ•°
 
 	/**
-	 * ÄÚ²¿ÀàContents
+	 * å†…éƒ¨ç±»Contents
 	 */
 	private class Content implements IContents {
 		/*
-		 * Java±àÒëÆ÷ÔÚ´´½¨ÄÚ²¿Àà¶ÔÏóÊ±ÒþÊ½µÄ°ÑÆäÍâ²¿Àà¶ÔÏóµÄÒýÓÃÒ²´«ÁË½øÈ¥²¢Ò»Ö±±£´æ×Å £¬
-		 * ÕâÑù¾ÍÊ¹µÃÄÚ²¿Àà¶ÔÏóÊ¼ÖÕ¿ÉÒÔ·ÃÎÊÆäÍâ²¿Àà¶ÔÏó£¬ÕâÒ²ÊÇÎªÊ²Ã´ÔÚÍâ²¿Àà×÷ÓÃ·¶Î§Ö®ÍâÒª´´½¨ÄÚ²¿Àà¶ÔÏó±ØÐëÏÈ´´½¨ÆäÍâ²¿Àà¶ÔÏóµÄÔ­Òò¡£
+		 * Javaç¼–è¯‘å™¨åœ¨åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡æ—¶éšå¼çš„æŠŠå…¶å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨ä¹Ÿä¼ äº†è¿›åŽ»å¹¶ä¸€ç›´ä¿å­˜ç€ ï¼Œ
+		 * è¿™æ ·å°±ä½¿å¾—å†…éƒ¨ç±»å¯¹è±¡å§‹ç»ˆå¯ä»¥è®¿é—®å…¶å¤–éƒ¨ç±»å¯¹è±¡ï¼Œè¿™ä¹Ÿæ˜¯ä¸ºä»€ä¹ˆåœ¨å¤–éƒ¨ç±»ä½œç”¨èŒƒå›´ä¹‹å¤–è¦åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡å¿…é¡»å…ˆåˆ›å»ºå…¶å¤–éƒ¨ç±»å¯¹è±¡çš„åŽŸå› ã€‚
 		 * 
-		 * JavaÀïÓÃÈçÏÂ¸ñÊ½±í´ïÍâ²¿ÀàµÄÒýÓÃ£ºouterClass.this
+		 * Javaé‡Œç”¨å¦‚ä¸‹æ ¼å¼è¡¨è¾¾å¤–éƒ¨ç±»çš„å¼•ç”¨ï¼šouterClass.this
 		 */
 		private int i = 10 * valueRate;
 
@@ -40,7 +40,7 @@ public class Goods {
 	}
 
 	/**
-	 * ÄÚ²¿ÀàGDestination
+	 * å†…éƒ¨ç±»GDestination
 	 */
 	protected class GDestination implements IDestination {
 		
@@ -74,8 +74,8 @@ public class Goods {
 	public static void main(String[] args) {
 		Goods g1 = new Goods();
 		/*
-		 * Ö±½ÓÓÃ IContents c ºÍ IDestination d ½øÐÐ²Ù×÷£¬ÉõÖÁÁ¬ÕâÁ½¸öÄÚ²¿ÀàµÄÃû×Ö¶¼Ã»ÓÐ¿´¼û¡£
-		 * ÄÚ²¿ÀàµÄµÚÒ»¸öºÃ´¦:Òþ²Ø²»ÏëÈÃ±ðÈËÖªµÀµÄ²Ù×÷£¬Ò²¼´·â×°ÐÔ
+		 * ç›´æŽ¥ç”¨ IContents c å’Œ IDestination d è¿›è¡Œæ“ä½œï¼Œç”šè‡³è¿žè¿™ä¸¤ä¸ªå†…éƒ¨ç±»çš„åå­—éƒ½æ²¡æœ‰çœ‹è§ã€‚
+		 * å†…éƒ¨ç±»çš„ç¬¬ä¸€ä¸ªå¥½å¤„:éšè—ä¸æƒ³è®©åˆ«äººçŸ¥é“çš„æ“ä½œï¼Œä¹Ÿå³å°è£…æ€§
 		 */
 		@SuppressWarnings("unused")
 		IContents c = g1.cont();
@@ -83,9 +83,9 @@ public class Goods {
 		IDestination d = g1.to("Beijing");
 		g1.ship("Beijing");
 		/*
-		 * Èç¹ûÏë´ÓÍâ²¿ÀàµÄÈÎÒâÎ»ÖÃ´´½¨Ä³¸öÄÚ²¿ÀàµÄ¶ÔÏó 
-		 * 1£¬ÀûÓÃÆäÍâ²¿ÀàµÄ·½·¨´´½¨²¢·µ»Ø£¬ÈçÉÏÃæµÄ×ö·¨
-		 * 2£¬±ØÐëÕâÃ´µ÷ÓÃ£º 
+		 * å¦‚æžœæƒ³ä»Žå¤–éƒ¨ç±»çš„ä»»æ„ä½ç½®åˆ›å»ºæŸä¸ªå†…éƒ¨ç±»çš„å¯¹è±¡ 
+		 * 1ï¼Œåˆ©ç”¨å…¶å¤–éƒ¨ç±»çš„æ–¹æ³•åˆ›å»ºå¹¶è¿”å›žï¼Œå¦‚ä¸Šé¢çš„åšæ³•
+		 * 2ï¼Œå¿…é¡»è¿™ä¹ˆè°ƒç”¨ï¼š 
 		 * OuterClass outerObject= new OuterClass(Constructor Parameters);
 		 * OuterClass.InnerClass innerObject= OuterObject.new InnerClass(Constructor Parameters);
 		 */

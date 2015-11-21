@@ -4,11 +4,11 @@
 package enums;
 
 /**
- * Ã¶¾ÙÀàÊ¾Àı
+ * æšä¸¾ç±»ç¤ºä¾‹
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-6
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-6
  */
 public class EnumDemo {
 	
@@ -16,12 +16,12 @@ public class EnumDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// values()·µ»ØÕâ¸öÃ¶¾ÙËùµÈÍ¬µÄÊı×é£¬²¢ÇÒÊı×éÖĞµÄÔªËØÑÏ¸ñ±£³ÖÆäÔÚenumÖĞÉùÃ÷µÄË³Ğò
-		// values()·½·¨ÊÇÓÉ±àÒëÆ÷Ìí¼ÓµÄstatic·½·¨£¬²¢²»ÊÇ Enum ÀàÔ´ÂëÖĞ¶¨ÒåµÄ·½·¨¡£
+		// values()è¿”å›è¿™ä¸ªæšä¸¾æ‰€ç­‰åŒçš„æ•°ç»„ï¼Œå¹¶ä¸”æ•°ç»„ä¸­çš„å…ƒç´ ä¸¥æ ¼ä¿æŒå…¶åœ¨enumä¸­å£°æ˜çš„é¡ºåº
+		// values()æ–¹æ³•æ˜¯ç”±ç¼–è¯‘å™¨æ·»åŠ çš„staticæ–¹æ³•ï¼Œå¹¶ä¸æ˜¯ Enum ç±»æºç ä¸­å®šä¹‰çš„æ–¹æ³•ã€‚
 		for (Day day : Day.values()) {
-			// ·µ»ØÒ»¸öintÖµ£¬ÕâÊÇÃ¿¸öenumÊµÀıÔÚÉùÃ÷Ê±µÄ´ÎĞò¡£
+			// è¿”å›ä¸€ä¸ªintå€¼ï¼Œè¿™æ˜¯æ¯ä¸ªenumå®ä¾‹åœ¨å£°æ˜æ—¶çš„æ¬¡åºã€‚
 			println(day + " ordinal: " + day.ordinal());
-			// Ã¶¾ÙÊµÏÖÁËComparable½Ó¿Ú£¬¿ÉÒÔ½øĞĞ±È½Ï
+			// æšä¸¾å®ç°äº†Comparableæ¥å£ï¼Œå¯ä»¥è¿›è¡Œæ¯”è¾ƒ
 			println(day + ".compareTo(Day.THURSDAY) = " + day.compareTo(Day.THURSDAY));
 			println(day + ".equals(Day.THURSDAY) = " + day.equals(Day.THURSDAY));
 			println(day + " == equals(Day.THURSDAY) = " + (day == Day.THURSDAY));
@@ -29,10 +29,10 @@ public class EnumDemo {
 			println(day + ".name() = " + day.name());
 			println("-----------------------------------------------");
 		}
-		// ¾²Ì¬·½·¨valueOf(Class<T> enumType, String name)·µ»Ø´øÖ¸¶¨Ãû³ÆºÍÖ¸¶¨Ã¶¾ÙÀàĞÍµÄÃ¶¾Ù³£Á¿
-		// Ãû³Æ±ØĞëÓëÔÚ´ËÀàĞÍÖĞÉùÃ÷Ã¶¾Ù³£Á¿ËùÓÃµÄ±êÊ¶·ûÍêÈ«Æ¥Åä
+		// é™æ€æ–¹æ³•valueOf(Class<T> enumType, String name)è¿”å›å¸¦æŒ‡å®šåç§°å’ŒæŒ‡å®šæšä¸¾ç±»å‹çš„æšä¸¾å¸¸é‡
+		// åç§°å¿…é¡»ä¸åœ¨æ­¤ç±»å‹ä¸­å£°æ˜æšä¸¾å¸¸é‡æ‰€ç”¨çš„æ ‡è¯†ç¬¦å®Œå…¨åŒ¹é…
 		println(Enum.valueOf(Day.class, "TUESDAY"));
-		// ¸Ã·½·¨µÄÄæ·½·¨toString()ÄÜ¹»·µ»ØÃ¶¾Ù¶ÔÏóµÄ³£Á¿Ãû
+		// è¯¥æ–¹æ³•çš„é€†æ–¹æ³•toString()èƒ½å¤Ÿè¿”å›æšä¸¾å¯¹è±¡çš„å¸¸é‡å
 		println(Day.FRIDAY.toString());
 	}
 

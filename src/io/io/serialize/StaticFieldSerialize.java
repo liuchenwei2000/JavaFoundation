@@ -13,15 +13,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * static×Ö¶ÎµÄĞòÁĞ»¯
+ * staticå­—æ®µçš„åºåˆ—åŒ–
  * <p>
- * ±¾ÀıÔÚÄ³´ÎÔËĞĞÊ±Ö»ÄÜÖ´ĞĞ ĞòÁĞ»¯»òÕß·´ĞòÁĞ»¯´úÂë¶ÎÖĞµÄÒ»¸ö£¬Î´±»Ö´ĞĞµÄÒª×¢ÊÍµô£¬·ñÔò³ÌĞòÔËĞĞµÄĞ§¹û»áÓĞÎÊÌâ¡£
+ * æœ¬ä¾‹åœ¨æŸæ¬¡è¿è¡Œæ—¶åªèƒ½æ‰§è¡Œ åºåˆ—åŒ–æˆ–è€…ååºåˆ—åŒ–ä»£ç æ®µä¸­çš„ä¸€ä¸ªï¼Œæœªè¢«æ‰§è¡Œçš„è¦æ³¨é‡Šæ‰ï¼Œå¦åˆ™ç¨‹åºè¿è¡Œçš„æ•ˆæœä¼šæœ‰é—®é¢˜ã€‚
  * <p>
- * ½áÂÛ£ºstatic×Ö¶Î²»»á±»×Ô¶¯ĞòÁĞ»¯£¬³ı·ÇÊÖ¶¯µÄµ÷ÓÃ·½·¨½«ÆäĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯¡£
+ * ç»“è®ºï¼šstaticå­—æ®µä¸ä¼šè¢«è‡ªåŠ¨åºåˆ—åŒ–ï¼Œé™¤éæ‰‹åŠ¨çš„è°ƒç”¨æ–¹æ³•å°†å…¶åºåˆ—åŒ–å’Œååºåˆ—åŒ–ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-27
  */
 public class StaticFieldSerialize {
 
@@ -31,35 +31,35 @@ public class StaticFieldSerialize {
 	public static void main(String[] args) throws Exception {
 		String fileName = "files/io.serialize/shape.out";
 		/*
-		 * ĞòÁĞ»¯´úÂë¶Î
+		 * åºåˆ—åŒ–ä»£ç æ®µ
 		 * 
-		 * Êä³ö½á¹û£º
+		 * è¾“å‡ºç»“æœï¼š
 		 * [class io.serialize.Circle(color=3)
 		 * , class io.serialize.Square(color=3)
 		 * , class io.serialize.Line(color=3)
 		 * ]
-		 * ¿É¼ûÃ¿¸ö¶ÔÏóµÄcolor×Ö¶ÎµÄÖµ¶¼ÊÇ3
+		 * å¯è§æ¯ä¸ªå¯¹è±¡çš„colorå­—æ®µçš„å€¼éƒ½æ˜¯3
 		 */
-		// ´æ´¢ShapeËùÊôÀàµÄClass¶ÔÏó£¬ÒòÎªClassÀàÊµÏÖÁËSerializable
+		// å­˜å‚¨Shapeæ‰€å±ç±»çš„Classå¯¹è±¡ï¼Œå› ä¸ºClassç±»å®ç°äº†Serializable
 		List<Class<?>> shapeTypes = new ArrayList<Class<?>>();
-		// ¶ÔÃ¿¸öÀàClass¶ÔÏóµÄ·ÃÎÊ»á´¥·¢ÀàÄÚµÄstatic×Ö¶Î³õÊ¼»¯
+		// å¯¹æ¯ä¸ªç±»Classå¯¹è±¡çš„è®¿é—®ä¼šè§¦å‘ç±»å†…çš„staticå­—æ®µåˆå§‹åŒ–
 		shapeTypes.add(Circle.class);
 		shapeTypes.add(Square.class);
 		shapeTypes.add(Line.class);
 		
-		// ´æ´¢Shape¶ÔÏó
+		// å­˜å‚¨Shapeå¯¹è±¡
 		List<Shape> shapes = new ArrayList<Shape>();
 		shapes.add(new Circle());
 		shapes.add(new Square());
 		shapes.add(new Line());
 		
-		// ½«Ã¿¸ö¶ÔÏóµÄ static ×Ö¶Î color ¶¼ÉèÎª Shape.GREEN
+		// å°†æ¯ä¸ªå¯¹è±¡çš„ static å­—æ®µ color éƒ½è®¾ä¸º Shape.GREEN
 		for (Shape shape : shapes) {
 			shape.setColor(Shape.GREEN);
 		}
 		System.out.println(shapes);
 		
-		// ĞòÁĞ»¯List
+		// åºåˆ—åŒ–List
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(
 				fileName));
 		oos.writeObject(shapeTypes);
@@ -68,25 +68,25 @@ public class StaticFieldSerialize {
 		oos.close();
 		
 		/*
-		 * ·´ĞòÁĞ»¯´úÂë¶Î
+		 * ååºåˆ—åŒ–ä»£ç æ®µ
 		 * 
-		 * Êä³ö½á¹û£º
+		 * è¾“å‡ºç»“æœï¼š
 		 * [class io.serialize.Circle(color=1)
 		 * , class io.serialize.Square(color=0)
 		 * , class io.serialize.Line(color=3)
 		 * ]
-		 * ¿É¼ûCircleºÍSquareµÄcolor×Ö¶ÎµÄÖµ¶¼²»ÊÇ3
+		 * å¯è§Circleå’ŒSquareçš„colorå­—æ®µçš„å€¼éƒ½ä¸æ˜¯3
 		 * 
-		 * ¶Ôstatic×Ö¶ÎĞÅÏ¢µÄ¶ÁÈ¡³öÏÖÁËÎÊÌâ£¬Ô¤ÆÚËùÓĞ¶Á»ØµÄÑÕÉ«¶¼Ó¦ÊÇ3£¬µ«ÊÇÕæÊµÇé¿öÈ´²¢·ÇÈç´Ë£º
-		 * CircleµÄÖµÎª 1(¶¨ÒåÎªRED)£¬¶øSquareµÄÖµÎª0(ËüµÄcolor×Ö¶ÎÊÇÔÚ¹¹ÔìÆ÷ÖĞ±»³õÊ¼»¯µÄ)
-		 * ¿´ÉÏÈ¥ËÆºõstatic×Ö¶Î¸ù±¾Ã»ÓĞ±»ĞòÁĞ»¯£¬Êµ¼ÊÉÏÈ·ÊµÈç´Ë¡£
+		 * å¯¹staticå­—æ®µä¿¡æ¯çš„è¯»å–å‡ºç°äº†é—®é¢˜ï¼Œé¢„æœŸæ‰€æœ‰è¯»å›çš„é¢œè‰²éƒ½åº”æ˜¯3ï¼Œä½†æ˜¯çœŸå®æƒ…å†µå´å¹¶éå¦‚æ­¤ï¼š
+		 * Circleçš„å€¼ä¸º 1(å®šä¹‰ä¸ºRED)ï¼Œè€ŒSquareçš„å€¼ä¸º0(å®ƒçš„colorå­—æ®µæ˜¯åœ¨æ„é€ å™¨ä¸­è¢«åˆå§‹åŒ–çš„)
+		 * çœ‹ä¸Šå»ä¼¼ä¹staticå­—æ®µæ ¹æœ¬æ²¡æœ‰è¢«åºåˆ—åŒ–ï¼Œå®é™…ä¸Šç¡®å®å¦‚æ­¤ã€‚
 		 * 
-		 * ËùÒÔ¼ÙÈçÏëĞòÁĞ»¯static×Ö¶ÎÖµ£¬¾Í±ØĞëÊÖ¹¤È¥ÊµÏÖ¡£
-		 * ÕâÕıÊÇLineÖĞµÄserializeStatic()ºÍdeserializeStatic()Á½¸östatic·½·¨µÄÓÃÍ¾¡£
-		 * ¿ÉÒÔ¿´µ½£¬ËüÃÇÊÇ×÷Îª´æ´¢ºÍ¶ÁÈ¡¹ı³ÌµÄÒ»²¿·Ö±»ÏÔÊ½µØµ÷ÓÃµÄ¡£
+		 * æ‰€ä»¥å‡å¦‚æƒ³åºåˆ—åŒ–staticå­—æ®µå€¼ï¼Œå°±å¿…é¡»æ‰‹å·¥å»å®ç°ã€‚
+		 * è¿™æ­£æ˜¯Lineä¸­çš„serializeStatic()å’ŒdeserializeStatic()ä¸¤ä¸ªstaticæ–¹æ³•çš„ç”¨é€”ã€‚
+		 * å¯ä»¥çœ‹åˆ°ï¼Œå®ƒä»¬æ˜¯ä½œä¸ºå­˜å‚¨å’Œè¯»å–è¿‡ç¨‹çš„ä¸€éƒ¨åˆ†è¢«æ˜¾å¼åœ°è°ƒç”¨çš„ã€‚
 		 */
 		
-		// ·´ĞòÁĞ»¯List
+		// ååºåˆ—åŒ–List
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
 		ois.readObject();
 		Line.deserializeStatic(ois);
@@ -116,7 +116,7 @@ abstract class Shape implements Serializable {
 class Circle extends Shape {
 
 	private static final long serialVersionUID = -3866854209268897193L;
-	// Àà±»¼ÓÔØÊ±¾Í»á³õÊ¼»¯color×Ö¶Î
+	// ç±»è¢«åŠ è½½æ—¶å°±ä¼šåˆå§‹åŒ–colorå­—æ®µ
 	private static int color = RED;
 
 	public Circle() {
@@ -139,7 +139,7 @@ class Square extends Shape {
 	private static int color;
 
 	public Square() {
-		// ¶ÔÏó±»´´½¨Ê±²Å»áÕæÕı³õÊ¼»¯color×Ö¶Î£¬·ñÔòÎªÄ¬ÈÏÖµ0
+		// å¯¹è±¡è¢«åˆ›å»ºæ—¶æ‰ä¼šçœŸæ­£åˆå§‹åŒ–colorå­—æ®µï¼Œå¦åˆ™ä¸ºé»˜è®¤å€¼0
 		color = RED;
 	}
 
@@ -171,7 +171,7 @@ class Line extends Shape {
 	}
 	
 	/**
-	 * ĞòÁĞ»¯static×Ö¶ÎÖµµÄ¾ßÌå·½·¨
+	 * åºåˆ—åŒ–staticå­—æ®µå€¼çš„å…·ä½“æ–¹æ³•
 	 */
 	public static void serializeStatic(ObjectOutputStream os)
 			throws IOException {
@@ -179,7 +179,7 @@ class Line extends Shape {
 	}
 
 	/**
-	 * ·´ĞòÁĞ»¯static×Ö¶ÎÖµµÄ¾ßÌå·½·¨
+	 * ååºåˆ—åŒ–staticå­—æ®µå€¼çš„å…·ä½“æ–¹æ³•
 	 */
 	public static void deserializeStatic(ObjectInputStream os)
 			throws IOException {

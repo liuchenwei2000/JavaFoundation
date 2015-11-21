@@ -4,11 +4,11 @@
 package inner;
 
 /**
- * ÄÚ²¿ÀàµÄ.thisºÍ.newÓï·¨
+ * å†…éƒ¨ç±»çš„.thiså’Œ.newè¯­æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2008-4-13
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-13
  */
 public class InnerClassSyntax {
 
@@ -22,9 +22,9 @@ public class InnerClassSyntax {
 		
 		DotNew dn = new DotNew();
 		@SuppressWarnings("unused")
-		// ÈôÏë´´½¨Ä³¸öÄÚ²¿ÀàµÄ¶ÔÏó£¬±ØÐëÔÚnew±í´ïÊ½ÖÐÌá¹©¶ÔÆäÍâ²¿Àà¶ÔÏóµÄÒýÓÃ£¬Ò²¾ÍÊÇouter.new¡£
-		// ÔÚÓµÓÐÍâ²¿Àà¶ÔÏóÖ®Ç°ÊÇ²»ÄÜ´´½¨ÄÚ²¿Àà¶ÔÏóµÄ£¬ÒòÎªÄÚ²¿Àà¶ÔÏó»á°µ°µµØÁ¬½Óµ½´´½¨ËüµÄÍâ²¿Àà¶ÔÏóÉÏ¡£
-		// µ«ÊÇÈç¹û´´½¨µÄÊÇÇ¶Ì×Àà£¨¾²Ì¬ÄÚ²¿Àà£©¾Í²»ÐèÒª¶ÔÍâ²¿Àà¶ÔÏóµÄÒýÓÃ¡£
+		// è‹¥æƒ³åˆ›å»ºæŸä¸ªå†…éƒ¨ç±»çš„å¯¹è±¡ï¼Œå¿…é¡»åœ¨newè¡¨è¾¾å¼ä¸­æä¾›å¯¹å…¶å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨ï¼Œä¹Ÿå°±æ˜¯outer.newã€‚
+		// åœ¨æ‹¥æœ‰å¤–éƒ¨ç±»å¯¹è±¡ä¹‹å‰æ˜¯ä¸èƒ½åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡çš„ï¼Œå› ä¸ºå†…éƒ¨ç±»å¯¹è±¡ä¼šæš—æš—åœ°è¿žæŽ¥åˆ°åˆ›å»ºå®ƒçš„å¤–éƒ¨ç±»å¯¹è±¡ä¸Šã€‚
+		// ä½†æ˜¯å¦‚æžœåˆ›å»ºçš„æ˜¯åµŒå¥—ç±»ï¼ˆé™æ€å†…éƒ¨ç±»ï¼‰å°±ä¸éœ€è¦å¯¹å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨ã€‚
 		DotNew.Inner dni = dn.new Inner();
 	}
 }
@@ -37,12 +37,12 @@ class DotThis {
 
 	public class Inner {
 		/**
-		 * Èç¹ûÐèÒªÉú³É¶ÔÍâ²¿Àà¶ÔÏóµÄÒýÓÃ£¬¿ÉÒÔÊ¹ÓÃÍâ²¿Àà.thisÀ´Íê³É ¡£
-		 * ÕâÑù²úÉúµÄÒýÓÃ×Ô¶¯µØ¾ßÓÐÕýÈ·µÄÀàÐÍ¡£Õâ¸öÊÇÔÚ±àÒëÆÚ¾Í±»¼ì²éµÄ£¬Ã»ÓÐÈÎºÎÔËÐÐ¿ªÏú¡£
+		 * å¦‚æžœéœ€è¦ç”Ÿæˆå¯¹å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨ï¼Œå¯ä»¥ä½¿ç”¨å¤–éƒ¨ç±».thisæ¥å®Œæˆ ã€‚
+		 * è¿™æ ·äº§ç”Ÿçš„å¼•ç”¨è‡ªåŠ¨åœ°å…·æœ‰æ­£ç¡®çš„ç±»åž‹ã€‚è¿™ä¸ªæ˜¯åœ¨ç¼–è¯‘æœŸå°±è¢«æ£€æŸ¥çš„ï¼Œæ²¡æœ‰ä»»ä½•è¿è¡Œå¼€é”€ã€‚
 		 */
 		public DotThis getOuter() {
 			return DotThis.this;
-			// Èç¹ûÖ»ÊÇthis½«»á·µ»ØInnerµÄ¶ÔÏó
+			// å¦‚æžœåªæ˜¯thiså°†ä¼šè¿”å›žInnerçš„å¯¹è±¡
 		}
 	}
 

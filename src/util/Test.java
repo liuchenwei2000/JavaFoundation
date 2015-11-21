@@ -34,9 +34,9 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 /**
  * 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-1-3
+ * åˆ›å»ºæ—¥æœŸï¼š2014-1-3
  */
 public class Test {
 
@@ -48,19 +48,19 @@ public class Test {
 	}
 
 	public static void test(){
-		// µÃµ½µ±Ç°·½·¨µÄÃû×Ö
+		// å¾—åˆ°å½“å‰æ–¹æ³•çš„åå­—
 		String methodName = Thread.currentThread().getStackTrace()[1].getMethodName(); 
 		System.out.println(methodName);
-		// µÃµ½µ±Ç°ÎÄ¼şµÄÃû×Ö
+		// å¾—åˆ°å½“å‰æ–‡ä»¶çš„åå­—
 		String fileName = Thread.currentThread().getStackTrace()[2].getFileName();
 		System.out.println(fileName);
-		// µÃµ½ĞĞºÅ
+		// å¾—åˆ°è¡Œå·
 		int lineNumber = Thread.currentThread().getStackTrace()[2].getLineNumber();
 		System.out.println(lineNumber);
 	}
 	
 	/**
-	 * Ê¹ÓÃNIO½øĞĞ¿ìËÙµÄÎÄ¼ş¿½±´
+	 * ä½¿ç”¨NIOè¿›è¡Œå¿«é€Ÿçš„æ–‡ä»¶æ‹·è´
 	 */
 	public static void fileCopy( File in, File out )  
             throws IOException  
@@ -93,7 +93,7 @@ public class Test {
 	
 	
 	/**
-	 * ×¥ÆÁ³ÌĞò
+	 * æŠ“å±ç¨‹åº
 	 */
 	public static void captureScreen(File file) throws Exception {  
 		   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();  
@@ -105,7 +105,7 @@ public class Test {
 		}  
 	
 	/**
-	 * ´´½¨Í¼Æ¬µÄËõÂÔÍ¼
+	 * åˆ›å»ºå›¾ç‰‡çš„ç¼©ç•¥å›¾
 	 */
 	public static void createThumbnail(String filename, int thumbWidth, int thumbHeight, int quality, String outFilename)  
 	        throws InterruptedException, FileNotFoundException, IOException  

@@ -4,15 +4,15 @@
 package syntax.keywords;
 
 /**
- * static³ÉÔ±ºÍ·½·¨µÄ·ÃÎÊ¿ØÖÆ
+ * staticæˆå‘˜å’Œæ–¹æ³•çš„è®¿é—®æ§åˆ¶
  * <p>
- * non-static·½·¨ÖĞ¿ÉÒÔµ÷ÓÃstatic³ÉÔ±ºÍ·½·¨£¬Ò²¿ÉÒÔµ÷ÓÃnon-static³ÉÔ±ºÍ·½·¨¡£
- * static·½·¨ÖĞÒ²¿ÉÒÔµ÷ÓÃstatic³ÉÔ±ºÍ·½·¨£¬µ«ÊÇ²»¿ÉÒÔµ÷ÓÃnon-static³ÉÔ±ºÍ·½·¨£¬
- * ³ı·ÇÔÚËüµÄ·½·¨ÌåÖĞ´´½¨Ò»¸ö¶ÔÏóºóÍ¨¹ı¶ÔÏó½øĞĞµ÷ÓÃ¡£
+ * non-staticæ–¹æ³•ä¸­å¯ä»¥è°ƒç”¨staticæˆå‘˜å’Œæ–¹æ³•ï¼Œä¹Ÿå¯ä»¥è°ƒç”¨non-staticæˆå‘˜å’Œæ–¹æ³•ã€‚
+ * staticæ–¹æ³•ä¸­ä¹Ÿå¯ä»¥è°ƒç”¨staticæˆå‘˜å’Œæ–¹æ³•ï¼Œä½†æ˜¯ä¸å¯ä»¥è°ƒç”¨non-staticæˆå‘˜å’Œæ–¹æ³•ï¼Œ
+ * é™¤éåœ¨å®ƒçš„æ–¹æ³•ä½“ä¸­åˆ›å»ºä¸€ä¸ªå¯¹è±¡åé€šè¿‡å¯¹è±¡è¿›è¡Œè°ƒç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-4-11
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-11
  */
 public class StaticDetailDemo {
 
@@ -30,8 +30,8 @@ public class StaticDetailDemo {
 }
 class Walkman{
 	
-	private static int counter = 0;// ¶ÔÏó×ÜÊı¼ÆÊıÆ÷
-	private int myid;// ¶ÔÏó±àºÅ
+	private static int counter = 0;// å¯¹è±¡æ€»æ•°è®¡æ•°å™¨
+	private int myid;// å¯¹è±¡ç¼–å·
 	
 	public Walkman(){
 		counter ++;
@@ -39,39 +39,39 @@ class Walkman{
 	}
 	
 	/**
-	 * ´òÓ¡±àºÅĞÅÏ¢
+	 * æ‰“å°ç¼–å·ä¿¡æ¯
 	 */
 	public static void showID(int id){
-		// static·½·¨²»¿ÉÖ±½Óµ÷ÓÃnon-static³ÉÔ±
-		// ÒòÎªstatic·½·¨ÊÇºÍ¶ÔÏóÎŞ¹ØµÄ
+		// staticæ–¹æ³•ä¸å¯ç›´æ¥è°ƒç”¨non-staticæˆå‘˜
+		// å› ä¸ºstaticæ–¹æ³•æ˜¯å’Œå¯¹è±¡æ— å…³çš„
 //		System.out.println("id = " + myid);
-		// ¿ÉÒÔ´´½¨Ò»¸ö¶ÔÏóºóÊ¹ÓÃ¶ÔÏóµ÷ÓÃnon-static³ÉÔ±
+		// å¯ä»¥åˆ›å»ºä¸€ä¸ªå¯¹è±¡åä½¿ç”¨å¯¹è±¡è°ƒç”¨non-staticæˆå‘˜
 //		System.out.println("id = " + new Walkman().myid);
 		System.out.println("id = " + id);
 	}
 	
 	/**
-	 * ´òÓ¡ËùÓĞ¶ÔÏó×ÜÊı
+	 * æ‰“å°æ‰€æœ‰å¯¹è±¡æ€»æ•°
 	 */
 	public static void showTotal() {
-		// ²»¿Éµ÷ÓÃnon-static·½·¨
+		// ä¸å¯è°ƒç”¨non-staticæ–¹æ³•
 //		System.out.println("total = " + getTotal());
 		System.out.println("total = " + counter);
 	}
 	
 	/**
-	 * ·µ»Ø¶ÔÏó×ÜÊı
+	 * è¿”å›å¯¹è±¡æ€»æ•°
 	 * <p>
-	 * non-static·½·¨¿ÉÒÔµ÷ÓÃstatic³ÉÔ±
+	 * non-staticæ–¹æ³•å¯ä»¥è°ƒç”¨staticæˆå‘˜
 	 */
 	public int getTotal() {
 		return counter;
 	}
 	
 	/**
-	 * ·µ»Ø¶ÔÏó±àºÅ
+	 * è¿”å›å¯¹è±¡ç¼–å·
 	 * <p>
-	 * non-static·½·¨¿ÉÒÔµ÷ÓÃnon-static³ÉÔ±
+	 * non-staticæ–¹æ³•å¯ä»¥è°ƒç”¨non-staticæˆå‘˜
 	 */
 	public int getID(){
 		return myid;

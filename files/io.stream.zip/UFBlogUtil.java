@@ -9,9 +9,9 @@ import java.io.FileWriter;
 /**
  * 
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-11-3
+ * åˆ›å»ºæ—¥æœŸï¼š2008-11-3
  */
 public class UFBlogUtil {
 	

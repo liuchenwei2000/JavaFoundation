@@ -14,27 +14,27 @@ import java.util.concurrent.TimeUnit;
 import nio.IConst;
 
 /**
- * Ó³ÉäÎÄ¼þ¼ÓËøÑÝÊ¾Àà
+ * æ˜ å°„æ–‡ä»¶åŠ é”æ¼”ç¤ºç±»
  * <p>
- * ÎÄ¼þÓ³ÉäÍ¨³£Ó¦ÓÃÓÚ¼«´óµÄÎÄ¼þ£¬Òò´Ë¿ÉÄÜÐèÒª¶ÔÈç´Ë¾Þ´óµÄÎÄ¼þ½øÐÐ²¿·Ö¼ÓËø£¬ÒÔ±ãÆäËû½ø³Ì¿ÉÒÔÐÞ¸ÄÎÄ¼þÖÐÎ´±»¼ÓËøµÄ²¿·Ö¡£
- * ÀýÈç£¬Êý¾Ý¿â¾ÍÊÇÕâÑù£¬Òò´Ë¶à¸öÓÃ»§¿ÉÒÔÍ¬Ê±·ÃÎÊµ½Ëü¡£
+ * æ–‡ä»¶æ˜ å°„é€šå¸¸åº”ç”¨äºŽæžå¤§çš„æ–‡ä»¶ï¼Œå› æ­¤å¯èƒ½éœ€è¦å¯¹å¦‚æ­¤å·¨å¤§çš„æ–‡ä»¶è¿›è¡Œéƒ¨åˆ†åŠ é”ï¼Œä»¥ä¾¿å…¶ä»–è¿›ç¨‹å¯ä»¥ä¿®æ”¹æ–‡ä»¶ä¸­æœªè¢«åŠ é”çš„éƒ¨åˆ†ã€‚
+ * ä¾‹å¦‚ï¼Œæ•°æ®åº“å°±æ˜¯è¿™æ ·ï¼Œå› æ­¤å¤šä¸ªç”¨æˆ·å¯ä»¥åŒæ—¶è®¿é—®åˆ°å®ƒã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class MappedFileLockDemo {
 	
 	private static final String FILE_NAME = "files/nio.lock/test.dat";
 	
-	/** ÎÄ¼þ´óÐ¡ 2M */
+	/** æ–‡ä»¶å¤§å° 2M */
 	private static final int FILE_SIZE = 2 * IConst.M;
 
 	private static FileChannel channel;
 
 	/**
-	 * ±¾ÀýÖÐÓÐÁ½¸öÏß³Ì£¬·Ö±ð¼ÓËøÎÄ¼þµÄ²»Í¬²¿·Ö£¬Ã¿¸öÏß³Ì¶¼»áÐÞ¸ÄÆäËù¼ÓËøµÄÄÇ²¿·ÖµÄÄÚÈÝ¡£
-	 * Ö¤Ã÷ÁËÆäËû½ø³Ì¿ÉÒÔÐÞ¸ÄÎÄ¼þÖÐÎ´±»¸ÃÏß³Ì¼ÓËøµÄ²¿·Ö¡£
+	 * æœ¬ä¾‹ä¸­æœ‰ä¸¤ä¸ªçº¿ç¨‹ï¼Œåˆ†åˆ«åŠ é”æ–‡ä»¶çš„ä¸åŒéƒ¨åˆ†ï¼Œæ¯ä¸ªçº¿ç¨‹éƒ½ä¼šä¿®æ”¹å…¶æ‰€åŠ é”çš„é‚£éƒ¨åˆ†çš„å†…å®¹ã€‚
+	 * è¯æ˜Žäº†å…¶ä»–è¿›ç¨‹å¯ä»¥ä¿®æ”¹æ–‡ä»¶ä¸­æœªè¢«è¯¥çº¿ç¨‹åŠ é”çš„éƒ¨åˆ†ã€‚
 	 */
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -45,10 +45,10 @@ public class MappedFileLockDemo {
 				mbb.put((byte) 'x');
 			}
 			
-			// ¼ÓËøÎÄ¼þµÄ 0 - 0 + FILE_SIZE / 4 ²¿·Ö
+			// åŠ é”æ–‡ä»¶çš„ 0 - 0 + FILE_SIZE / 4 éƒ¨åˆ†
 			new LockAndModify(mbb, 0, 0 + FILE_SIZE / 4).start();
 			
-			// ¼ÓËøÎÄ¼þµÄ FILE_SIZE / 2 µ½ FILE_SIZE / 2 + FILE_SIZE / 4 ²¿·Ö
+			// åŠ é”æ–‡ä»¶çš„ FILE_SIZE / 2 åˆ° FILE_SIZE / 2 + FILE_SIZE / 4 éƒ¨åˆ†
 			new LockAndModify(mbb, FILE_SIZE / 2, FILE_SIZE / 2 + FILE_SIZE / 4).start();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class MappedFileLockDemo {
 	}
 
 	/**
-	 * ±¾Ïß³Ì»á¼ÓËø»º³åÇøÖ¸¶¨µÄ²¿·Ö£¬È»ºóÔÙÐÞ¸ÄÕâ²¿·Ö¼ÓËøµÄÄÚÈÝ
+	 * æœ¬çº¿ç¨‹ä¼šåŠ é”ç¼“å†²åŒºæŒ‡å®šçš„éƒ¨åˆ†ï¼Œç„¶åŽå†ä¿®æ”¹è¿™éƒ¨åˆ†åŠ é”çš„å†…å®¹
 	 */
 	private static class LockAndModify extends Thread {
 
@@ -80,9 +80,9 @@ public class MappedFileLockDemo {
 			mbb.position(start);
 			
 			/*
-			 * slice()´´½¨ÐÂµÄ×Ö½Ú»º³åÇø£¬ÆäÄÚÈÝÊÇmbb»º³åÇøÄÚÈÝµÄ¹²Ïí×ÓÐòÁÐ¡£
-			 * ÐÂ»º³åÇøµÄÄÚÈÝ½«´Ómbb»º³åÇøµÄµ±Ç°Î»ÖÃ(position)¿ªÊ¼£¬mbb»º³åÇøÄÚÈÝµÄ¸ü¸ÄÔÚÐÂ»º³åÇøÖÐÊÇ¿É¼ûµÄ£¬·´Ö®ÒàÈ»¡£
-			 * ÕâÁ½¸ö»º³åÇøµÄÎ»ÖÃ¡¢½çÏÞºÍ±ê¼ÇÖµÊÇÏà»¥¶ÀÁ¢µÄ¡£
+			 * slice()åˆ›å»ºæ–°çš„å­—èŠ‚ç¼“å†²åŒºï¼Œå…¶å†…å®¹æ˜¯mbbç¼“å†²åŒºå†…å®¹çš„å…±äº«å­åºåˆ—ã€‚
+			 * æ–°ç¼“å†²åŒºçš„å†…å®¹å°†ä»Žmbbç¼“å†²åŒºçš„å½“å‰ä½ç½®(position)å¼€å§‹ï¼Œmbbç¼“å†²åŒºå†…å®¹çš„æ›´æ”¹åœ¨æ–°ç¼“å†²åŒºä¸­æ˜¯å¯è§çš„ï¼Œåä¹‹äº¦ç„¶ã€‚
+			 * è¿™ä¸¤ä¸ªç¼“å†²åŒºçš„ä½ç½®ã€ç•Œé™å’Œæ ‡è®°å€¼æ˜¯ç›¸äº’ç‹¬ç«‹çš„ã€‚
 			 */
 			buffer = mbb.slice();
 		}
@@ -91,7 +91,7 @@ public class MappedFileLockDemo {
 			try {
 				FileLock lock = channel.lock(start, end, false);
 				System.out.println("Locked: " + start + " to " + end);
-				// ÐÞ¸Ä¼ÓËøµÄ»º³åÇø
+				// ä¿®æ”¹åŠ é”çš„ç¼“å†²åŒº
 				while (buffer.position() < buffer.limit() - 1) {
 					buffer.put((byte) (buffer.get() + 1));
 				}

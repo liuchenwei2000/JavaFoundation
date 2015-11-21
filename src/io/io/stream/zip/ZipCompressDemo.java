@@ -20,14 +20,14 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 /**
- * ZipÑ¹ËõÑİÊ¾Àà
+ * Zipå‹ç¼©æ¼”ç¤ºç±»
  * <p>
- * ZipÊÊºÏÓÚ¶à¸öÎÄ¼şµÄÑ¹Ëõ¡£
- * ¾¡¹ÜZip¸ñÊ½Ìá¹©ÁËÉèÖÃÃÜÂëµÄ·½·¨£¬µ«JavaµÄZipÀà¿â²¢²»Ìá¹©Õâ·½ÃæµÄÖ§³Ö¡£
+ * Zipé€‚åˆäºå¤šä¸ªæ–‡ä»¶çš„å‹ç¼©ã€‚
+ * å°½ç®¡Zipæ ¼å¼æä¾›äº†è®¾ç½®å¯†ç çš„æ–¹æ³•ï¼Œä½†Javaçš„Zipç±»åº“å¹¶ä¸æä¾›è¿™æ–¹é¢çš„æ”¯æŒã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-7-26
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-26
  */
 public class ZipCompressDemo {
 	
@@ -37,19 +37,19 @@ public class ZipCompressDemo {
 	 */
 	public static void main(String[] args) {
 		String zipFileName = "files/io.stream.zip/test.zip";
-		// ´ıÑ¹ËõÎÄ¼şËùÔÚÎÄ¼ş¼Ğ
+		// å¾…å‹ç¼©æ–‡ä»¶æ‰€åœ¨æ–‡ä»¶å¤¹
 		String dirPath = "files/io.stream.zip";
-		// É¾³ıÉÏ´Î³ÌĞòÔËĞĞ´´½¨µÄzipÎÄ¼ş
+		// åˆ é™¤ä¸Šæ¬¡ç¨‹åºè¿è¡Œåˆ›å»ºçš„zipæ–‡ä»¶
 		File zip = new File(zipFileName);
 		if (zip.exists()) {
 			zip.delete();
 		}
 		
 		try {
-			/** Ñ¹ËõzipÎÄ¼ş */
+			/** å‹ç¼©zipæ–‡ä»¶ */
 			zipFiles(dirPath, zipFileName);
 			
-			/** ¶ÁÈ¡zipÎÄ¼ş */
+			/** è¯»å–zipæ–‡ä»¶ */
 			readZipFiles(zipFileName);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -57,12 +57,12 @@ public class ZipCompressDemo {
 	}
 	
 	/**
-	 * ½«ÎÄ¼ş¼ĞÄÚµÄÎÄ¼şÑ¹Ëõµ½Ö¸¶¨zipÎÄ¼şÖĞ
+	 * å°†æ–‡ä»¶å¤¹å†…çš„æ–‡ä»¶å‹ç¼©åˆ°æŒ‡å®šzipæ–‡ä»¶ä¸­
 	 */
 	private static void zipFiles(String dirPath, String zipFilePath) throws IOException{
 		BufferedOutputStream bout = null;
 		try {
-			// ¿ÉÒÔÓÃ CheckSum ÀàÀ´¼ÆËãºÍĞ£ÑéÎÄ¼şµÄĞ£ÑéºÍ£¬¹²ÓĞAdler32ºÍCRC32Á½ÖÖÀàĞÍ
+			// å¯ä»¥ç”¨ CheckSum ç±»æ¥è®¡ç®—å’Œæ ¡éªŒæ–‡ä»¶çš„æ ¡éªŒå’Œï¼Œå…±æœ‰Adler32å’ŒCRC32ä¸¤ç§ç±»å‹
 			CheckedOutputStream csum = new CheckedOutputStream(new FileOutputStream(zipFilePath), new Adler32());
 			
 			ZipOutputStream zos = new ZipOutputStream(csum);
@@ -84,7 +84,7 @@ public class ZipCompressDemo {
 				in.close();
 			}
 			
-			// ¼ÆËãzipÎÄ¼şĞ£ÑéºÍ
+			// è®¡ç®—zipæ–‡ä»¶æ ¡éªŒå’Œ
 			System.out.println("Checksum: " + csum.getChecksum().getValue());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -96,7 +96,7 @@ public class ZipCompressDemo {
 	}
 	
 	/**
-	 * ½«ÎÄ¼ş¼ĞÄÚµÄÎÄ¼şÑ¹Ëõµ½Ö¸¶¨zipÎÄ¼şÖĞ
+	 * å°†æ–‡ä»¶å¤¹å†…çš„æ–‡ä»¶å‹ç¼©åˆ°æŒ‡å®šzipæ–‡ä»¶ä¸­
 	 */
 	private static void readZipFiles(String zipFilePath) throws IOException{
 		BufferedInputStream bin = null;
@@ -128,7 +128,7 @@ public class ZipCompressDemo {
 	}
 	
 	/**
-	 * ·µ»ØÎÄ¼ş¼ĞÖĞ¿É±»Ñ¹ËõµÄÎÄ¼şÁĞ±í
+	 * è¿”å›æ–‡ä»¶å¤¹ä¸­å¯è¢«å‹ç¼©çš„æ–‡ä»¶åˆ—è¡¨
 	 */
 	private static String[] getFiles(String dirPath){
 		File dir = new File(dirPath);

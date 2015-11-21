@@ -7,11 +7,11 @@ import rtti.itf.Interface;
 import rtti.itf.impl.ClassicImpl;
 
 /**
- * ClassicImplÀàÑİÊ¾
+ * ClassicImplç±»æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class ClassicImplDemo {
 	
@@ -21,10 +21,10 @@ public class ClassicImplDemo {
 	public static void main(String[] args) {
 		Interface a = new ClassicImpl();
 		a.f();
-		// a.g(); // ±àÒëÆ÷±¨´í£ºg()·½·¨¶ÔÓÚa²»¿É¼û
+		// a.g(); // ç¼–è¯‘å™¨æŠ¥é”™ï¼šg()æ–¹æ³•å¯¹äºaä¸å¯è§
 		System.out.println(a.getClass().getSimpleName());
 		if (a instanceof ClassicImpl) {
-			// ±©Â¶ÁËaµÄÀàĞÍĞÅÏ¢£¬²úÉúÁËñîºÏ
+			// æš´éœ²äº†açš„ç±»å‹ä¿¡æ¯ï¼Œäº§ç”Ÿäº†è€¦åˆ
 			ClassicImpl b = (ClassicImpl) a;
 			b.g();
 		}

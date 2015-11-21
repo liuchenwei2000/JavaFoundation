@@ -4,69 +4,69 @@
 package lang;
 
 /**
- * RuntimeÑÝÊ¾Àà
+ * Runtimeæ¼”ç¤ºç±»
  * <p>
- * RuntimeÀà·â×°ÁËÔËÐÐÊ±µÄ»·¾³¡£
- * Ã¿¸öJavaÓ¦ÓÃ³ÌÐò¶¼ÓÐÒ»¸öRuntimeÀàÊµÀý£¬Ê¹Ó¦ÓÃ³ÌÐòÄÜ¹»ÓëÆäÔËÐÐµÄ»·¾³ÏàÁ¬½Ó¡£
+ * Runtimeç±»å°è£…äº†è¿è¡Œæ—¶çš„çŽ¯å¢ƒã€‚
+ * æ¯ä¸ªJavaåº”ç”¨ç¨‹åºéƒ½æœ‰ä¸€ä¸ªRuntimeç±»å®žä¾‹ï¼Œä½¿åº”ç”¨ç¨‹åºèƒ½å¤Ÿä¸Žå…¶è¿è¡Œçš„çŽ¯å¢ƒç›¸è¿žæŽ¥ã€‚
  * <p>
- * Ò»°ã²»ÄÜÊµÀý»¯Ò»¸öRuntime¶ÔÏó£¬Ó¦ÓÃ³ÌÐòÒ²²»ÄÜ´´½¨×Ô¼ºµÄRuntimeÀàÊµÀý¡£
- * µ«¿ÉÒÔÍ¨¹ýgetRuntime()·½·¨»ñÈ¡µ±Ç°RuntimeÔËÐÐÊ±¶ÔÏóµÄÒýÓÃ¡£
- * Ò»µ©µÃµ½ÁËÒ»¸öµ±Ç°µÄRuntime¶ÔÏóµÄÒýÓÃ£¬¾Í¿ÉÒÔµ÷ÓÃRuntime¶ÔÏóµÄ·½·¨È¥¿ØÖÆJavaÐéÄâ»úµÄ×´Ì¬ºÍÐÐÎª¡£
+ * ä¸€èˆ¬ä¸èƒ½å®žä¾‹åŒ–ä¸€ä¸ªRuntimeå¯¹è±¡ï¼Œåº”ç”¨ç¨‹åºä¹Ÿä¸èƒ½åˆ›å»ºè‡ªå·±çš„Runtimeç±»å®žä¾‹ã€‚
+ * ä½†å¯ä»¥é€šè¿‡getRuntime()æ–¹æ³•èŽ·å–å½“å‰Runtimeè¿è¡Œæ—¶å¯¹è±¡çš„å¼•ç”¨ã€‚
+ * ä¸€æ—¦å¾—åˆ°äº†ä¸€ä¸ªå½“å‰çš„Runtimeå¯¹è±¡çš„å¼•ç”¨ï¼Œå°±å¯ä»¥è°ƒç”¨Runtimeå¯¹è±¡çš„æ–¹æ³•åŽ»æŽ§åˆ¶Javaè™šæ‹Ÿæœºçš„çŠ¶æ€å’Œè¡Œä¸ºã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class RuntimeDemo {
 
 	/**
-	 * Runtime³£¼ûÓ¦ÓÃÖ÷ÒªÓÐÁ½¸ö£º
-	 * 1£¬ÄÚ´æ¹ÜÀí
-	 * 2£¬Ö´ÐÐÆäËû³ÌÐò
+	 * Runtimeå¸¸è§åº”ç”¨ä¸»è¦æœ‰ä¸¤ä¸ªï¼š
+	 * 1ï¼Œå†…å­˜ç®¡ç†
+	 * 2ï¼Œæ‰§è¡Œå…¶ä»–ç¨‹åº
 	 */
 	public static void main(String[] args) {
 		/*
-		 * JavaÌá¹©ÁËÎÞÓÃµ¥Ôª×Ô¶¯ÊÕ¼¯»úÖÆ¡£
-		 * Í¨¹ýtotalMemory()ºÍfreeMemory()·½·¨¿ÉÒÔÖªµÀ¶ÔÏóµÄ¶ÑÄÚ´æÓÐ¶à´ó£¬»¹Ê£¶àÉÙ
-		 * Java»áÖÜÆÚÐÔµÄ»ØÊÕÀ¬»ø¶ÔÏó(Î´Ê¹ÓÃµÄ¶ÔÏó)£¬ÒÔ±ãÊÍ·ÅÄÚ´æ¿Õ¼ä
-		 * µ«ÊÇÈç¹ûÏëÏÈÓÚÊÕ¼¯Æ÷µÄÏÂÒ»´ÎÖ¸¶¨ÖÜÆÚÀ´ÊÕ¼¯·ÏÆúµÄ¶ÔÏó£¬¿ÉÒÔÍ¨¹ýµ÷ÓÃgc()·½·¨À´¸ù¾ÝÐèÒªÔËÐÐÎÞÓÃµ¥ÔªÊÕ¼¯Æ÷
+		 * Javaæä¾›äº†æ— ç”¨å•å…ƒè‡ªåŠ¨æ”¶é›†æœºåˆ¶ã€‚
+		 * é€šè¿‡totalMemory()å’ŒfreeMemory()æ–¹æ³•å¯ä»¥çŸ¥é“å¯¹è±¡çš„å †å†…å­˜æœ‰å¤šå¤§ï¼Œè¿˜å‰©å¤šå°‘
+		 * Javaä¼šå‘¨æœŸæ€§çš„å›žæ”¶åžƒåœ¾å¯¹è±¡(æœªä½¿ç”¨çš„å¯¹è±¡)ï¼Œä»¥ä¾¿é‡Šæ”¾å†…å­˜ç©ºé—´
+		 * ä½†æ˜¯å¦‚æžœæƒ³å…ˆäºŽæ”¶é›†å™¨çš„ä¸‹ä¸€æ¬¡æŒ‡å®šå‘¨æœŸæ¥æ”¶é›†åºŸå¼ƒçš„å¯¹è±¡ï¼Œå¯ä»¥é€šè¿‡è°ƒç”¨gc()æ–¹æ³•æ¥æ ¹æ®éœ€è¦è¿è¡Œæ— ç”¨å•å…ƒæ”¶é›†å™¨
 		 */
 		Runtime runtime = Runtime.getRuntime();
-		long mem1, mem2;// ±£´æÄÚ´æ×Ö½ÚÊý
+		long mem1, mem2;// ä¿å­˜å†…å­˜å­—èŠ‚æ•°
 		Integer someints[] = new Integer[1000];
-		// ·µ»Ø Java ÐéÄâ»úÖÐµÄÄÚ´æ×ÜÁ¿(µ¥Î» ×Ö½Ú)
-		System.out.println("ÄÚ´æ×ÜÁ¿(B) £º" + runtime.totalMemory());
-		// ·µ»Ø Java ÐéÄâ»úÖÐµÄ¿ÕÏÐÄÚ´æÁ¿£¬µ÷ÓÃ gc ·½·¨¿ÉÄÜµ¼ÖÂ freeMemory ·µ»ØÖµµÄÔö¼Ó
+		// è¿”å›ž Java è™šæ‹Ÿæœºä¸­çš„å†…å­˜æ€»é‡(å•ä½ å­—èŠ‚)
+		System.out.println("å†…å­˜æ€»é‡(B) ï¼š" + runtime.totalMemory());
+		// è¿”å›ž Java è™šæ‹Ÿæœºä¸­çš„ç©ºé—²å†…å­˜é‡ï¼Œè°ƒç”¨ gc æ–¹æ³•å¯èƒ½å¯¼è‡´ freeMemory è¿”å›žå€¼çš„å¢žåŠ 
 		mem1 = runtime.freeMemory();
-		System.out.println("³õÊ¼¿ÕÏÐÄÚ´æ(B) : " + mem1);
+		System.out.println("åˆå§‹ç©ºé—²å†…å­˜(B) : " + mem1);
 		runtime.gc();
 		mem1 = runtime.freeMemory();
-		System.out.println("À¬»ø»ØÊÕºó¿ÕÏÐÄÚ´æ(B) : " + mem1);
+		System.out.println("åžƒåœ¾å›žæ”¶åŽç©ºé—²å†…å­˜(B) : " + mem1);
 		for (int i = 0; i < 1000; i++) {
 			someints[i] = new Integer(i);
 		}
 		mem2 = runtime.freeMemory();
-		System.out.println("ÄÚ´æ·ÖÅäºóµÄ¿ÕÏÐÄÚ´æ(B) : " + mem2);
-		System.out.println("ÄÚ´æ·ÖÅäÊ¹ÓÃµÄÄÚ´æ(B) : " + (mem1 - mem2));
+		System.out.println("å†…å­˜åˆ†é…åŽçš„ç©ºé—²å†…å­˜(B) : " + mem2);
+		System.out.println("å†…å­˜åˆ†é…ä½¿ç”¨çš„å†…å­˜(B) : " + (mem1 - mem2));
 		for (int i = 0; i < 1000; i++) {
 			someints[i] = null;
 		}
-		// ÔËÐÐÀ¬»ø»ØÊÕÆ÷£¬·½·¨ System.gc() ÊÇµ÷ÓÃ´Ë·½·¨µÄÒ»ÖÖ´«Í³¶ø±ã½ÝµÄ·½Ê½
+		// è¿è¡Œåžƒåœ¾å›žæ”¶å™¨ï¼Œæ–¹æ³• System.gc() æ˜¯è°ƒç”¨æ­¤æ–¹æ³•çš„ä¸€ç§ä¼ ç»Ÿè€Œä¾¿æ·çš„æ–¹å¼
 		runtime.gc();
 		mem2 = runtime.freeMemory();
-		System.out.println("ÄÚ´æÊÍ·Å²¢ÇÒÀ¬»ø»ØÊÕºóµÄ¿ÕÏÐÄÚ´æ(B) : " + mem2);
+		System.out.println("å†…å­˜é‡Šæ”¾å¹¶ä¸”åžƒåœ¾å›žæ”¶åŽçš„ç©ºé—²å†…å­˜(B) : " + mem2);
 		
 		
 		/*
-		 * ÔÚ°²È«µÄ»·¾³ÖÐ£¬¿ÉÒÔÔÚ¶àÈÎÎñ²Ù×÷ÏµÍ³ÖÐÊ¹ÓÃJavaÈ¥Ö´ÐÐÆäËûÌØ±ð´óµÄ½ø³Ì(Ò²¾ÍÊÇ³ÌÐò)
-		 * exec()·½·¨ÓÐ¼¸ÖÖÐÎÊ½ÃüÃûÏëÒªÔËÐÐµÄ³ÌÐòºÍËüµÄÊäÈë²ÎÊý
-		 * exec()·½·¨·µ»ØÒ»¸öProcess¶ÔÏó£¬¿ÉÒÔÊ¹ÓÃÕâ¸ö¶ÔÏó¿ØÖÆJava³ÌÐòÓëÐÂÔËÐÐµÄ½ø³Ì½øÐÐ½»»¥
+		 * åœ¨å®‰å…¨çš„çŽ¯å¢ƒä¸­ï¼Œå¯ä»¥åœ¨å¤šä»»åŠ¡æ“ä½œç³»ç»Ÿä¸­ä½¿ç”¨JavaåŽ»æ‰§è¡Œå…¶ä»–ç‰¹åˆ«å¤§çš„è¿›ç¨‹(ä¹Ÿå°±æ˜¯ç¨‹åº)
+		 * exec()æ–¹æ³•æœ‰å‡ ç§å½¢å¼å‘½åæƒ³è¦è¿è¡Œçš„ç¨‹åºå’Œå®ƒçš„è¾“å…¥å‚æ•°
+		 * exec()æ–¹æ³•è¿”å›žä¸€ä¸ªProcesså¯¹è±¡ï¼Œå¯ä»¥ä½¿ç”¨è¿™ä¸ªå¯¹è±¡æŽ§åˆ¶Javaç¨‹åºä¸Žæ–°è¿è¡Œçš„è¿›ç¨‹è¿›è¡Œäº¤äº’
 		 */
 		Process p = null;
 		try {
-			// ´ò¿ªWindows¼ÇÊÂ±¾³ÌÐò£¬µ±¼ÇÊÂ±¾±»¹Ø±ÕºóÏß³Ì²Å»áÏòÏÂÔËÐÐ
+			// æ‰“å¼€Windowsè®°äº‹æœ¬ç¨‹åºï¼Œå½“è®°äº‹æœ¬è¢«å…³é—­åŽçº¿ç¨‹æ‰ä¼šå‘ä¸‹è¿è¡Œ
 			p = runtime.exec("notepad");
-			// Ïß³ÌµÈ´ý£¬Ö±µ½¼ÇÊÂ±¾½ø³Ì½áÊø
+			// çº¿ç¨‹ç­‰å¾…ï¼Œç›´åˆ°è®°äº‹æœ¬è¿›ç¨‹ç»“æŸ
 			p.waitFor();
 		} catch (Exception e) {
 			System.out.println("Error executing notepad.");

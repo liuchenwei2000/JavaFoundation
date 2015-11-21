@@ -12,16 +12,16 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
 /**
- * FileVisitorÊ¾Àı
+ * FileVisitorç¤ºä¾‹
  * <p>
- * µ±ºÍÒ»¸öÄ¿Â¼ÎÄ¼şÏµÍ³´ò½»µÀµÄÊ±ºò£¬ºÜ¶àÇé¿öÏÂ¶¼Òª±éÀúÕû¸öÄ¿Â¼ÒÔ¼°Æä×ÓÄ¿Â¼¡£
- * Java7ÖĞ¶Ô´ËÌá¹©ÁËĞÂµÄAPI¡ª¡ª¡ª¡ªjava.nio.file.FileVisitor ½Ó¿Ú¼°Ä¬ÈÏÊµÏÖ java.nio.file.SimpleFileVisitor¡£
+ * å½“å’Œä¸€ä¸ªç›®å½•æ–‡ä»¶ç³»ç»Ÿæ‰“äº¤é“çš„æ—¶å€™ï¼Œå¾ˆå¤šæƒ…å†µä¸‹éƒ½è¦éå†æ•´ä¸ªç›®å½•ä»¥åŠå…¶å­ç›®å½•ã€‚
+ * Java7ä¸­å¯¹æ­¤æä¾›äº†æ–°çš„APIâ€”â€”â€”â€”java.nio.file.FileVisitor æ¥å£åŠé»˜è®¤å®ç° java.nio.file.SimpleFileVisitorã€‚
  * <p>
- * Files.walkFileTree·½·¨ÒÔ¸ø¶¨µÄÒ»¸öÄ¿Â¼×÷Îª¸ùÄ¿Â¼£¬¶ÔÃ¿Ò»¼¶ÎÄ¼ş¼Ğ¶¼×öÁË±éÀú¡£
+ * Files.walkFileTreeæ–¹æ³•ä»¥ç»™å®šçš„ä¸€ä¸ªç›®å½•ä½œä¸ºæ ¹ç›®å½•ï¼Œå¯¹æ¯ä¸€çº§æ–‡ä»¶å¤¹éƒ½åšäº†éå†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ24ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ24æ—¥
  */
 public class FileVisitorTest {
 
@@ -39,15 +39,15 @@ public class FileVisitorTest {
 	}
 	
 	/**
-	 * FileVisitorÊ¾Àı
+	 * FileVisitorç¤ºä¾‹
 	 * <p>
-	 * FileVisitorÉùÃ÷ÁËÔÚ·ÃÎÊÄ¿Â¼Ç°¡¢·ÃÎÊÎÄ¼şÒÔ¼°·ÃÎÊÄ¿Â¼ºóµÄ»Øµ÷º¯Êı¡£
-	 * Ã¿¸ö·½·¨¶¼·µ»ØÒ»¸öFileVisitResult£¬ÉÏ²ãAPIÓÉÕâ¸ö·µ»ØÖµÀ´¾ö¶¨ÊÇ·ñ¼ÌĞø·ÃÎÊºóÃæµÄÄ¿Â¼ÒÔ¼°ÎÄ¼ş¡£ 
+	 * FileVisitorå£°æ˜äº†åœ¨è®¿é—®ç›®å½•å‰ã€è®¿é—®æ–‡ä»¶ä»¥åŠè®¿é—®ç›®å½•åçš„å›è°ƒå‡½æ•°ã€‚
+	 * æ¯ä¸ªæ–¹æ³•éƒ½è¿”å›ä¸€ä¸ªFileVisitResultï¼Œä¸Šå±‚APIç”±è¿™ä¸ªè¿”å›å€¼æ¥å†³å®šæ˜¯å¦ç»§ç»­è®¿é—®åé¢çš„ç›®å½•ä»¥åŠæ–‡ä»¶ã€‚ 
 	 */
 	private static class ListFilesVisitor extends SimpleFileVisitor<Path> {
 
 		/**
-		 * ·ÃÎÊÄ¿Â¼Ç°
+		 * è®¿é—®ç›®å½•å‰
 		 * 
 		 * @see java.nio.file.SimpleFileVisitor#preVisitDirectory(java.lang.Object, java.nio.file.attribute.BasicFileAttributes)
 		 */
@@ -59,7 +59,7 @@ public class FileVisitorTest {
 		}
 
 		/**
-		 * ·ÃÎÊÎÄ¼şÊ±
+		 * è®¿é—®æ–‡ä»¶æ—¶
 		 * 
 		 * @see java.nio.file.SimpleFileVisitor#preVisitDirectory(java.lang.Object, java.nio.file.attribute.BasicFileAttributes)
 		 */
@@ -71,7 +71,7 @@ public class FileVisitorTest {
 		}
 		
 		/**
-		 * ·ÃÎÊÄ¿Â¼ºó
+		 * è®¿é—®ç›®å½•å
 		 * 
 		 * @see java.nio.file.SimpleFileVisitor#preVisitDirectory(java.lang.Object, java.nio.file.attribute.BasicFileAttributes)
 		 */
@@ -83,7 +83,7 @@ public class FileVisitorTest {
 		}
 
 		/**
-		 * ·ÃÎÊÎÄ¼şÊ§°ÜÊ±
+		 * è®¿é—®æ–‡ä»¶å¤±è´¥æ—¶
 		 * 
 		 * @see java.nio.file.SimpleFileVisitor#preVisitDirectory(java.lang.Object, java.nio.file.attribute.BasicFileAttributes)
 		 */
@@ -96,17 +96,17 @@ public class FileVisitorTest {
 	}
 	
 	/**
-	 * É¾³ıÕû¸öÎÄ¼ş¼ĞÊ¾Àı
+	 * åˆ é™¤æ•´ä¸ªæ–‡ä»¶å¤¹ç¤ºä¾‹
 	 * <p>
-	 * Èç¹ûÊ¹ÓÃFiles.deleteÉ¾³ıÒ»¸öÎÄ¼ş¼Ğ£¬ÎÄ¼ş¼Ğ±ØĞëÊÇ¿ÕµÄ£¬²»ÄÜÉ¾³ıÒ»¸ö°üº¬ÁËºÜ¶àÄ¿Â¼ºÍÎÄ¼şµÄÎÄ¼ş¼Ğ¡£
-	 * µ«ÊÇ¿ÉÒÔÍ¨¹ıSimpleFileVisitorÀ´ÊµÏÖÕâ¸ö¹¦ÄÜ£¨Í¬ÀíÒ²¿ÉÒÔÍê³É¸´ÖÆÕû¸öÎÄ¼ş¼ĞµÄ¹¦ÄÜ£©¡£
+	 * å¦‚æœä½¿ç”¨Files.deleteåˆ é™¤ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œæ–‡ä»¶å¤¹å¿…é¡»æ˜¯ç©ºçš„ï¼Œä¸èƒ½åˆ é™¤ä¸€ä¸ªåŒ…å«äº†å¾ˆå¤šç›®å½•å’Œæ–‡ä»¶çš„æ–‡ä»¶å¤¹ã€‚
+	 * ä½†æ˜¯å¯ä»¥é€šè¿‡SimpleFileVisitoræ¥å®ç°è¿™ä¸ªåŠŸèƒ½ï¼ˆåŒç†ä¹Ÿå¯ä»¥å®Œæˆå¤åˆ¶æ•´ä¸ªæ–‡ä»¶å¤¹çš„åŠŸèƒ½ï¼‰ã€‚
 	 */
 	private static class DeleteDirectory extends SimpleFileVisitor<Path> {
 
 		@Override
 		public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
 				throws IOException {
-			Files.delete(file);// Ö±½ÓÉ¾³ıÎÄ¼ş
+			Files.delete(file);// ç›´æ¥åˆ é™¤æ–‡ä»¶
 			return FileVisitResult.CONTINUE;
 		}
 
@@ -114,7 +114,7 @@ public class FileVisitorTest {
 		public FileVisitResult postVisitDirectory(Path dir, IOException exc)
 				throws IOException {
 			if (exc == null) {
-				Files.delete(dir);// ±éÀúÄ¿Â¼½áÊøÊ±É¾³ıÕû¸öÄ¿Â¼
+				Files.delete(dir);// éå†ç›®å½•ç»“æŸæ—¶åˆ é™¤æ•´ä¸ªç›®å½•
 				return FileVisitResult.CONTINUE;
 			} else {
 				throw exc;

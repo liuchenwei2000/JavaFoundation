@@ -6,13 +6,13 @@ package util;
 import java.util.Calendar;
 
 /**
- * ÈÕÀúÀàµÄ»ù±¾·½·¨ 
+ * æ—¥å†ç±»çš„åŸºæœ¬æ–¹æ³• 
  * <p>
- * ×¢£ºCalendarÀàÊÇÒ»¸ö³éÏóÀà ¡£
+ * æ³¨ï¼šCalendarç±»æ˜¯ä¸€ä¸ªæŠ½è±¡ç±» ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class CalendarDemo {
 	
@@ -22,23 +22,23 @@ public class CalendarDemo {
 	public static void main(String[] args) {
 		String months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
 				"Aug", "Sep", "Oct", "Nov", "Dec" };
-		Calendar calendar = Calendar.getInstance();// Ê¹ÓÃÄ¬ÈÏÊ±ÇøºÍÓïÑÔ»·¾³»ñµÃÒ»¸öÈÕÀú
-		// Êä³öÈÕÆÚ
+		Calendar calendar = Calendar.getInstance();// ä½¿ç”¨é»˜è®¤æ—¶åŒºå’Œè¯­è¨€ç¯å¢ƒè·å¾—ä¸€ä¸ªæ—¥å†
+		// è¾“å‡ºæ—¥æœŸ
 		System.out.print("Date : ");
-		int monthID = Calendar.MONTH;// Ö¸Ê¾ÔÂ·İµÄgetºÍsetµÄ×Ö¶ÎÊı×Ö(ÈçYEAR=1,MONTH=2)
-		int month = calendar.get(monthID);// ·µ»Ø¸ø¶¨ÈÕÀú×Ö¶ÎµÄÖµ(ÈçÒ»ÔÂ=0£¬¶şÔÂ=1)
+		int monthID = Calendar.MONTH;// æŒ‡ç¤ºæœˆä»½çš„getå’Œsetçš„å­—æ®µæ•°å­—(å¦‚YEAR=1,MONTH=2)
+		int month = calendar.get(monthID);// è¿”å›ç»™å®šæ—¥å†å­—æ®µçš„å€¼(å¦‚ä¸€æœˆ=0ï¼ŒäºŒæœˆ=1)
 		System.out.print(months[month]);
 		System.out.print("  " + calendar.get(Calendar.DATE));
 		System.out.print("  " + calendar.get(Calendar.YEAR));
 		System.out.println();
-		// Êä³öÊ±¼ä
+		// è¾“å‡ºæ—¶é—´
 		System.out.print("Time : ");
 		System.out.print(calendar.get(Calendar.HOUR) + ":");
 		System.out.print(calendar.get(Calendar.MINUTE) + ":");
 		System.out.print(calendar.get(Calendar.SECOND));
 		System.out.println();
-		// ×ÔÉèÊ±¼ä
-		calendar.set(Calendar.HOUR, 11);// ½«¸ø¶¨µÄÈÕÀú×Ö¶ÎÉèÖÃÎª¸ø¶¨Öµ
+		// è‡ªè®¾æ—¶é—´
+		calendar.set(Calendar.HOUR, 11);// å°†ç»™å®šçš„æ—¥å†å­—æ®µè®¾ç½®ä¸ºç»™å®šå€¼
 		calendar.set(Calendar.MINUTE, 11);
 		calendar.set(Calendar.SECOND, 11);
 		System.out.print("Updated time : ");

@@ -11,11 +11,11 @@ import java.nio.channels.FileChannel;
 import nio.IConst;
 
 /**
- * Í¨¹ıÍ¨µÀÖ´ĞĞÎÄ¼ş¿½±´
+ * é€šè¿‡é€šé“æ‰§è¡Œæ–‡ä»¶æ‹·è´
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-23
  */
 public class FileCopyByChannel {
 
@@ -27,22 +27,22 @@ public class FileCopyByChannel {
 		String source = "files/nio.channel/data.txt";
 		String dest = "files/nio.channel/data2.txt";
 		
-		// ÓÃÓÚ¶ÁµÄFileChannel
+		// ç”¨äºè¯»çš„FileChannel
 		FileChannel inchannel = new FileInputStream(source).getChannel();
-		// ÓÃÓÚĞ´µÄFileChannel
+		// ç”¨äºå†™çš„FileChannel
 		FileChannel outchannel = new FileOutputStream(dest).getChannel();
 		
-		// ByteBuffer ±»·ÖÅäÁË¿Õ¼ä
+		// ByteBuffer è¢«åˆ†é…äº†ç©ºé—´
 		ByteBuffer buffer = ByteBuffer.allocate(IConst.K);
 		
 		/*
-		 * Ò»µ©µ÷ÓÃÁËread()£¬¾Í»á¸æÖª FileChannel Ïò ByteBuffer ´æ´¢×Ö½Ú£¬±ØĞëµ÷ÓÃ»º³åÆ÷ÉÏµÄflip()£¬
-		 * ÈÃËü×öºÃÈÃ±ğÈË¶ÁÈ¡×Ö½ÚµÄ×¼±¸¡££¨ÊÇµÄ£¬ÕâËÆºõÓĞÒ»µã×¾ÁÓ£¬µ«ÊÇÊÊÓÃÓÚ»ñÈ¡×î´óËÙ¶È£©
-		 * Èç¹û´òËãÊ¹ÓÃ»º³åÆ÷Ö´ĞĞ½øÒ»²½µÄread()²Ù×÷£¬Ò²±ØĞëµÃµ÷ÓÃclear()À´ÎªÃ¿¸öread()×öºÃ×¼±¸¡£
+		 * ä¸€æ—¦è°ƒç”¨äº†read()ï¼Œå°±ä¼šå‘ŠçŸ¥ FileChannel å‘ ByteBuffer å­˜å‚¨å­—èŠ‚ï¼Œå¿…é¡»è°ƒç”¨ç¼“å†²å™¨ä¸Šçš„flip()ï¼Œ
+		 * è®©å®ƒåšå¥½è®©åˆ«äººè¯»å–å­—èŠ‚çš„å‡†å¤‡ã€‚ï¼ˆæ˜¯çš„ï¼Œè¿™ä¼¼ä¹æœ‰ä¸€ç‚¹æ‹™åŠ£ï¼Œä½†æ˜¯é€‚ç”¨äºè·å–æœ€å¤§é€Ÿåº¦ï¼‰
+		 * å¦‚æœæ‰“ç®—ä½¿ç”¨ç¼“å†²å™¨æ‰§è¡Œè¿›ä¸€æ­¥çš„read()æ“ä½œï¼Œä¹Ÿå¿…é¡»å¾—è°ƒç”¨clear()æ¥ä¸ºæ¯ä¸ªread()åšå¥½å‡†å¤‡ã€‚
 		 * 
-		 * µ±FileChannel.read()·µ»Ø -1 Ê±±íÊ¾ÒÑ¾­µ½´ïÁËÊäÈëµÄÄ©Î²£¬Ã¿´Îread()²Ù×÷Ö®ºó£¬¾Í»á½«Êı¾İÊäÈëµ½»º³åÆ÷ÖĞ¡£
-		 * flip()ÔòÊÇ×¼±¸»º³åÆ÷ÒÔ±ãËüµÄĞÅÏ¢¿ÉÒÔÓÉwrite()ÌáÈ¡£¬write()²Ù×÷Ö®ºó£¬ĞÅÏ¢ÈÔÔÚ»º³åÆ÷ÖĞ£¬½Ó×Åclear()²Ù×÷
-		 * Ôò¶ÔËùÓĞµÄÄÚ²¿Ö¸ÕëÖØĞÂ°²ÅÅ¡£ÒÔ±ã»º³åÆ÷ÔÚÁíÒ»¸öread()²Ù×÷ÆÚ¼ä£¬ÄÜ¹»×öºÃ½ÓÊÜÊı¾İµÄ×¼±¸
+		 * å½“FileChannel.read()è¿”å› -1 æ—¶è¡¨ç¤ºå·²ç»åˆ°è¾¾äº†è¾“å…¥çš„æœ«å°¾ï¼Œæ¯æ¬¡read()æ“ä½œä¹‹åï¼Œå°±ä¼šå°†æ•°æ®è¾“å…¥åˆ°ç¼“å†²å™¨ä¸­ã€‚
+		 * flip()åˆ™æ˜¯å‡†å¤‡ç¼“å†²å™¨ä»¥ä¾¿å®ƒçš„ä¿¡æ¯å¯ä»¥ç”±write()æå–ï¼Œwrite()æ“ä½œä¹‹åï¼Œä¿¡æ¯ä»åœ¨ç¼“å†²å™¨ä¸­ï¼Œæ¥ç€clear()æ“ä½œ
+		 * åˆ™å¯¹æ‰€æœ‰çš„å†…éƒ¨æŒ‡é’ˆé‡æ–°å®‰æ’ã€‚ä»¥ä¾¿ç¼“å†²å™¨åœ¨å¦ä¸€ä¸ªread()æ“ä½œæœŸé—´ï¼Œèƒ½å¤Ÿåšå¥½æ¥å—æ•°æ®çš„å‡†å¤‡
 		 */
 		while (inchannel.read(buffer) != -1) {
 			buffer.flip(); // Prepare for writing
@@ -51,8 +51,8 @@ public class FileCopyByChannel {
 		}
 		
 		/* 
-		 * ÉÏÃæ³ÌĞò²¢²»ÊÇ´¦Àí´ËÀà²Ù×÷µÄÀíÏë·½Ê½£¬ÌØÊâ·½·¨transferTo()ºÍtransferFrom()¿ÉÒÔ½«Ò»¸öÍ¨µÀºÍÁíÒ»¸öÍ¨µÀÖ±½ÓÏàÁ¬¡£
-		 * ÓÈÆäÊÇ¸´ÖÆ±È½Ï´óµÄÎÄ¼şµÄÊ±ºò£¬ÏÂÃæµÄ·½·¨¸üºÃ¡£
+		 * ä¸Šé¢ç¨‹åºå¹¶ä¸æ˜¯å¤„ç†æ­¤ç±»æ“ä½œçš„ç†æƒ³æ–¹å¼ï¼Œç‰¹æ®Šæ–¹æ³•transferTo()å’ŒtransferFrom()å¯ä»¥å°†ä¸€ä¸ªé€šé“å’Œå¦ä¸€ä¸ªé€šé“ç›´æ¥ç›¸è¿ã€‚
+		 * å°¤å…¶æ˜¯å¤åˆ¶æ¯”è¾ƒå¤§çš„æ–‡ä»¶çš„æ—¶å€™ï¼Œä¸‹é¢çš„æ–¹æ³•æ›´å¥½ã€‚
 		 */
 //		inchannel.transferTo(0, inchannel.size(), outchannel); 
 //		outchannel.transferFrom(inchannel, 0, inchannel.size()); 

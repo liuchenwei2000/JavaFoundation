@@ -4,13 +4,13 @@
 package object.dispatch;
 
 /**
- * ¶¯Ì¬·ÖÅÉÑİÊ¾
+ * åŠ¨æ€åˆ†æ´¾æ¼”ç¤º
  * <p>
- * JavaÍ¨¹ı·½·¨¸²¸Ç(override)Ö§³Ö¶¯Ì¬·ÖÅÉ¡£
+ * Javaé€šè¿‡æ–¹æ³•è¦†ç›–(override)æ”¯æŒåŠ¨æ€åˆ†æ´¾ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-6-11
+ * åˆ›å»ºæ—¥æœŸï¼š2010-6-11
  */
 public class DynamicDispatchDemo {
 
@@ -20,7 +20,7 @@ public class DynamicDispatchDemo {
 	public static void main(String[] args) {
 		String s = "abc";
 		Object o = "abc";
-		// ¾¡¹ÜoµÄ¾²Ì¬ÀàĞÍÊÇObject£¬µ«ÊÇµ÷ÓÃequals()·½·¨Ê±Ëü»¹ÊÇµ÷ÓÃÁËÆäÕæÊµÀàĞÍStringµÄequals()·½·¨
+		// å°½ç®¡oçš„é™æ€ç±»å‹æ˜¯Objectï¼Œä½†æ˜¯è°ƒç”¨equals()æ–¹æ³•æ—¶å®ƒè¿˜æ˜¯è°ƒç”¨äº†å…¶çœŸå®ç±»å‹Stringçš„equals()æ–¹æ³•
 		System.out.println("o.equals(s)? " + o.equals(s));
 	}
 }

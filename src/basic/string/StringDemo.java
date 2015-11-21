@@ -4,16 +4,16 @@
 package string;
 
 /**
- * StringÀàµÄ»ù±¾·½·¨
+ * Stringç±»çš„åŸºæœ¬æ–¹æ³•
  * <p>
- * StringÀàÊÇ·Ç¿É±äÀà(¶ÔÏóÒ»µ©´´½¨ÁË¾Í²»ÄÜ¹»¸Ä±äÆäÄÚÔÚ×´Ì¬ÁË)¡£
+ * Stringç±»æ˜¯éå¯å˜ç±»(å¯¹è±¡ä¸€æ—¦åˆ›å»ºäº†å°±ä¸èƒ½å¤Ÿæ”¹å˜å…¶å†…åœ¨çŠ¶æ€äº†)ã€‚
  * <p>
- * StringÀàÖĞµÄÃ¿Ò»¸ö¿´ÆğÀ´»áĞŞ¸ÄStringÖµµÄ·½·¨£¬ Êµ¼ÊÉÏ¶¼ÊÇ´´½¨ÁËÒ»¸öÈ«ĞÂµÄString¶ÔÏó
- * ÒÔ°üº¬ĞŞ¸ÄºóµÄ×Ö·û´®£¬ ¶ø×î³õµÄString¶ÔÏóÔòË¿ºÁÎ´¶¯¡£
+ * Stringç±»ä¸­çš„æ¯ä¸€ä¸ªçœ‹èµ·æ¥ä¼šä¿®æ”¹Stringå€¼çš„æ–¹æ³•ï¼Œ å®é™…ä¸Šéƒ½æ˜¯åˆ›å»ºäº†ä¸€ä¸ªå…¨æ–°çš„Stringå¯¹è±¡
+ * ä»¥åŒ…å«ä¿®æ”¹åçš„å­—ç¬¦ä¸²ï¼Œ è€Œæœ€åˆçš„Stringå¯¹è±¡åˆ™ä¸æ¯«æœªåŠ¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-8
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-8
  */
 public class StringDemo {
 	
@@ -22,25 +22,25 @@ public class StringDemo {
 	 */
 	public static void main(String[] args) {
         String s = "This is a string.";
-        // Í¨¹ı×Ö·ûÊı×é´´½¨×Ö·û´®
+        // é€šè¿‡å­—ç¬¦æ•°ç»„åˆ›å»ºå­—ç¬¦ä¸²
 		char[] ch = { 't', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's',
 				't', 'r', 'i', 'n', 'g' };
 		s = new String(ch);
 		System.out.println("s : " + s);
-		// ·µ»Ø´Ë×Ö·û´®µÄ¹şÏ£Âë
+		// è¿”å›æ­¤å­—ç¬¦ä¸²çš„å“ˆå¸Œç 
 		System.out.println("s.hashCode()=" + s.hashCode());
-		// ·µ»Ø´Ë×Ö·û´®µÄ³¤¶È
+		// è¿”å›æ­¤å­—ç¬¦ä¸²çš„é•¿åº¦
 		System.out.println("s.length()=" + s.length());
-		// ·µ»ØÖ¸¶¨Ë÷Òı´¦µÄcharÖµ
+		// è¿”å›æŒ‡å®šç´¢å¼•å¤„çš„charå€¼
 		System.out.println("s.charAt(0) : " + s.charAt(0));
 		String as = "Another string.";
 		System.out.println("as : " + as);
 		/*
-		 * compareTo(String str)°´×ÖµäË³Ğò±È½ÏÁ½¸ö×Ö·û´® 
-		 * Èç¹û°´×ÖµäË³Ğò´ËString¶ÔÏóÔÚ²ÎÊı×Ö·û´®Ö®Ç°¡¢Ö®ºó¡¢ÏàµÈ Ôò±È½Ï½á¹ûÎªÒ»¸ö¸ºÕûÊı¡¢ÕıÕûÊı¡¢0 
+		 * compareTo(String str)æŒ‰å­—å…¸é¡ºåºæ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸² 
+		 * å¦‚æœæŒ‰å­—å…¸é¡ºåºæ­¤Stringå¯¹è±¡åœ¨å‚æ•°å­—ç¬¦ä¸²ä¹‹å‰ã€ä¹‹åã€ç›¸ç­‰ åˆ™æ¯”è¾ƒç»“æœä¸ºä¸€ä¸ªè´Ÿæ•´æ•°ã€æ­£æ•´æ•°ã€0 
 		 * 
 		 * compareToIgnoreCase(String str)
-		 * ²»¿¼ÂÇ´óĞ¡Ğ´£¬°´×ÖµäË³Ğò±È½ÏÁ½¸ö×Ö·û´®
+		 * ä¸è€ƒè™‘å¤§å°å†™ï¼ŒæŒ‰å­—å…¸é¡ºåºæ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸²
 		 */
 		if (s.compareTo(as) < 0) {
 			System.out.println("s is before as.");
@@ -50,10 +50,10 @@ public class StringDemo {
 			System.out.println("s equals as.");
 		}
 		/*
-		 * equals(Object anObject)±È½Ï´Ë×Ö·û´®ÓëÖ¸¶¨µÄ¶ÔÏó 
+		 * equals(Object anObject)æ¯”è¾ƒæ­¤å­—ç¬¦ä¸²ä¸æŒ‡å®šçš„å¯¹è±¡ 
 		 * 
 		 * equalsIgnoreCase(String anotherString) 
-		 * ½«´Ë String ÓëÁíÒ»¸ö String ½øĞĞ±È½Ï£¬²»¿¼ÂÇ´óĞ¡Ğ´
+		 * å°†æ­¤ String ä¸å¦ä¸€ä¸ª String è¿›è¡Œæ¯”è¾ƒï¼Œä¸è€ƒè™‘å¤§å°å†™
 		 */
 		as = "this is a string.";
 		System.out.println("Now as : " + as);
@@ -66,7 +66,7 @@ public class StringDemo {
 		}
 		/*
 		 * contentEquals(StringBuffer sb) 
-		 * µ±ÇÒ½öµ±´ËString±íÊ¾ÓëÖ¸¶¨µÄStringBufferÏàÍ¬µÄ×Ö·ûĞòÁĞÊ±£¬²Å·µ»Ø true¡£
+		 * å½“ä¸”ä»…å½“æ­¤Stringè¡¨ç¤ºä¸æŒ‡å®šçš„StringBufferç›¸åŒçš„å­—ç¬¦åºåˆ—æ—¶ï¼Œæ‰è¿”å› trueã€‚
 		 */
 		StringBuffer sb = new StringBuffer();
 		sb.append("This is a string.");
@@ -77,30 +77,30 @@ public class StringDemo {
 			System.out.println("s content not equals sb.");
 		}
 		/*
-		 * indexOf(int ch)·µ»ØÖ¸¶¨×Ö·ûÔÚ´Ë×Ö·û´®ÖĞµÚÒ»´Î³öÏÖ´¦µÄË÷Òı 
-		 * indexOf(String str)·µ»ØµÚÒ»´Î³öÏÖµÄÖ¸¶¨×Ó×Ö·û´®ÔÚ´Ë×Ö·û´®ÖĞµÄË÷Òı 
-		 * lastIndexOf(int ch)·µ»Ø×îºóÒ»´Î³öÏÖµÄÖ¸¶¨×Ö·ûÔÚ´Ë×Ö·û´®ÖĞµÄË÷Òı
-		 * lastIndexOf(String str)·µ»ØÔÚ´Ë×Ö·û´®ÖĞ×îÓÒ±ß³öÏÖµÄÖ¸¶¨×Ó×Ö·û´®µÄË÷Òı
+		 * indexOf(int ch)è¿”å›æŒ‡å®šå­—ç¬¦åœ¨æ­¤å­—ç¬¦ä¸²ä¸­ç¬¬ä¸€æ¬¡å‡ºç°å¤„çš„ç´¢å¼• 
+		 * indexOf(String str)è¿”å›ç¬¬ä¸€æ¬¡å‡ºç°çš„æŒ‡å®šå­å­—ç¬¦ä¸²åœ¨æ­¤å­—ç¬¦ä¸²ä¸­çš„ç´¢å¼• 
+		 * lastIndexOf(int ch)è¿”å›æœ€åä¸€æ¬¡å‡ºç°çš„æŒ‡å®šå­—ç¬¦åœ¨æ­¤å­—ç¬¦ä¸²ä¸­çš„ç´¢å¼•
+		 * lastIndexOf(String str)è¿”å›åœ¨æ­¤å­—ç¬¦ä¸²ä¸­æœ€å³è¾¹å‡ºç°çš„æŒ‡å®šå­å­—ç¬¦ä¸²çš„ç´¢å¼•
 		 */
 		System.out.println("'s' is first found at " + s.indexOf('s'));
 		System.out.println("'s' is last found at " + s.lastIndexOf('s'));
 		/*
-		 * replace(char oldChar, char newChar)·µ»ØÒ»¸öĞÂµÄ×Ö·û´®
-		 * ËüÊÇÍ¨¹ıÓÃnewCharÌæ»»´Ë×Ö·û´®ÖĞ³öÏÖµÄËùÓĞoldChar¶øÉú³ÉµÄ 
+		 * replace(char oldChar, char newChar)è¿”å›ä¸€ä¸ªæ–°çš„å­—ç¬¦ä¸²
+		 * å®ƒæ˜¯é€šè¿‡ç”¨newCharæ›¿æ¢æ­¤å­—ç¬¦ä¸²ä¸­å‡ºç°çš„æ‰€æœ‰oldCharè€Œç”Ÿæˆçš„ 
 		 * 
 		 * replaceAll(String regex, String replacement) 
-		 * Ê¹ÓÃ¸ø¶¨µÄreplacement×Ö·û´®Ìæ»»´Ë×Ö·û´®Æ¥Åä¸ø¶¨µÄÕıÔò±í´ïÊ½µÄÃ¿¸ö×Ó×Ö·û´®
+		 * ä½¿ç”¨ç»™å®šçš„replacementå­—ç¬¦ä¸²æ›¿æ¢æ­¤å­—ç¬¦ä¸²åŒ¹é…ç»™å®šçš„æ­£åˆ™è¡¨è¾¾å¼çš„æ¯ä¸ªå­å­—ç¬¦ä¸²
 		 * 
 		 * replaceFirst(String regex, String replacement)
-		 * Ê¹ÓÃ¸ø¶¨µÄreplacement×Ö·û´®Ìæ»»´Ë×Ö·û´®Æ¥Åä¸ø¶¨µÄÕıÔò±í´ïÊ½µÄµÚÒ»¸ö×Ó×Ö·û´®
+		 * ä½¿ç”¨ç»™å®šçš„replacementå­—ç¬¦ä¸²æ›¿æ¢æ­¤å­—ç¬¦ä¸²åŒ¹é…ç»™å®šçš„æ­£åˆ™è¡¨è¾¾å¼çš„ç¬¬ä¸€ä¸ªå­å­—ç¬¦ä¸²
 		 */
 		System.out.println("After replacing s is : " + s.replace('s', 'S'));
 		/*
-		 * endsWith(String suffix)²âÊÔ´Ë×Ö·û´®ÊÇ·ñÒÔÖ¸¶¨µÄºó×º½áÊø
+		 * endsWith(String suffix)æµ‹è¯•æ­¤å­—ç¬¦ä¸²æ˜¯å¦ä»¥æŒ‡å®šçš„åç¼€ç»“æŸ
 		 * 
-		 * startsWith(String prefix)²âÊÔ´Ë×Ö·û´®ÊÇ·ñÒÔÖ¸¶¨µÄÇ°×º¿ªÊ¼
+		 * startsWith(String prefix)æµ‹è¯•æ­¤å­—ç¬¦ä¸²æ˜¯å¦ä»¥æŒ‡å®šçš„å‰ç¼€å¼€å§‹
 		 * 
-		 * startsWith(String prefix,int toffset)²âÊÔ´Ë×Ö·û´®ÊÇ·ñÒÔÖ¸¶¨Ç°×º¿ªÊ¼£¬¸ÃÇ°×ºÒÔÖ¸¶¨Ë÷Òı¿ªÊ¼
+		 * startsWith(String prefix,int toffset)æµ‹è¯•æ­¤å­—ç¬¦ä¸²æ˜¯å¦ä»¥æŒ‡å®šå‰ç¼€å¼€å§‹ï¼Œè¯¥å‰ç¼€ä»¥æŒ‡å®šç´¢å¼•å¼€å§‹
 		 */
 		if (s.startsWith("Th"))
 			System.out.println("s starts with 'Th'.");
@@ -114,9 +114,9 @@ public class StringDemo {
 			System.out.println("s ends with 'ing'.");
 		else
 			System.out.println("s not ends with 'ing'.");
-		// substring(int beginIndex)´ÓË÷ÒıÎ»ÖÃ·µ»ØÒ»¸öĞÂµÄ×Ö·û´®£¬ËüÊÇ´Ë×Ö·û´®µÄÒ»¸ö×Ó×Ö·û´®¡£
+		// substring(int beginIndex)ä»ç´¢å¼•ä½ç½®è¿”å›ä¸€ä¸ªæ–°çš„å­—ç¬¦ä¸²ï¼Œå®ƒæ˜¯æ­¤å­—ç¬¦ä¸²çš„ä¸€ä¸ªå­å­—ç¬¦ä¸²ã€‚
 		System.out.println("Sub string after 3 of s : " + s.substring(3));
-		// toCharArray()½«´Ë×Ö·û´®×ª»»ÎªÒ»¸öĞÂµÄ×Ö·ûÊı×é
+		// toCharArray()å°†æ­¤å­—ç¬¦ä¸²è½¬æ¢ä¸ºä¸€ä¸ªæ–°çš„å­—ç¬¦æ•°ç»„
 		char[] c = s.toCharArray();
 		System.out.print("s to char array : ");
 		for (int i = 0; i < c.length; i++) {
@@ -124,13 +124,13 @@ public class StringDemo {
 		}
 		System.out.println();
 		/*
-		 * toLowerCase()Ê¹ÓÃÄ¬ÈÏÓïÑÔ»·¾³µÄ¹æÔò½«´ËStringÖĞµÄËùÓĞ×Ö·û¶¼×ª»»ÎªĞ¡Ğ´
+		 * toLowerCase()ä½¿ç”¨é»˜è®¤è¯­è¨€ç¯å¢ƒçš„è§„åˆ™å°†æ­¤Stringä¸­çš„æ‰€æœ‰å­—ç¬¦éƒ½è½¬æ¢ä¸ºå°å†™
 		 * 
-		 * toUpperCase()Ê¹ÓÃÄ¬ÈÏÓïÑÔ»·¾³µÄ¹æÔò½«´ËStringÖĞµÄËùÓĞ×Ö·û¶¼×ª»»Îª´óĞ´
+		 * toUpperCase()ä½¿ç”¨é»˜è®¤è¯­è¨€ç¯å¢ƒçš„è§„åˆ™å°†æ­¤Stringä¸­çš„æ‰€æœ‰å­—ç¬¦éƒ½è½¬æ¢ä¸ºå¤§å†™
 		 */
 		System.out.println("s.toLowerCase() : " + s.toLowerCase());
 		System.out.println("s.toUpperCase() : " + s.toUpperCase());
-		// split(String regex)¸ù¾İ¸ø¶¨µÄÕıÔò±í´ïÊ½µÄÆ¥ÅäÀ´²ğ·Ö´Ë×Ö·û´®
+		// split(String regex)æ ¹æ®ç»™å®šçš„æ­£åˆ™è¡¨è¾¾å¼çš„åŒ¹é…æ¥æ‹†åˆ†æ­¤å­—ç¬¦ä¸²
 		String[] sArray = s.split(" ");
 		System.out.print("After s.split(\" \") s :");
 		for (int i = 0; i < sArray.length; i++) {
@@ -138,18 +138,18 @@ public class StringDemo {
 		}
 		System.out.println();
 		/*
-		 * intern()·½·¨·µ»ØÒ»¸ö×Ö·û´®£¬ÄÚÈİÓëµ÷ÓÃ¸Ã·½·¨µÄ×Ö·û´®ÏàÍ¬£¬µ«Ëü±£Ö¤À´×Ô×Ö·û´®³ØÖĞ
+		 * intern()æ–¹æ³•è¿”å›ä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œå†…å®¹ä¸è°ƒç”¨è¯¥æ–¹æ³•çš„å­—ç¬¦ä¸²ç›¸åŒï¼Œä½†å®ƒä¿è¯æ¥è‡ªå­—ç¬¦ä¸²æ± ä¸­
 		 * 
-		 * StringÀàÓĞÒ»¸ö³õÊ¼Ê±Îª¿ÕµÄ×Ö·û´®³Ø£¬ËüÓÉÀàStringË½ÓĞµØÎ¬»¤¡£
-		 * µ±µ÷ÓÃintern·½·¨Ê±£¬Èç¹û³ØÄÚÒÑ¾­°üº¬Ò»¸öµÈÓÚ´ËString¶ÔÏóµÄ×Ö·û´®(¸Ã¶ÔÏóÓÉequals(Object)·½·¨È·¶¨)£¬Ôò·µ»Ø³ØÖĞµÄ×Ö·û´®¡£
-		 * ·ñÔò£¬½«´Ë String ¶ÔÏóÌí¼Óµ½³ØÖĞ£¬²¢ÇÒ·µ»Ø´Ë String ¶ÔÏóµÄÒıÓÃ¡£
-		 * Ëü×ñÑ­¶ÔÓÚÈÎºÎÁ½¸ö×Ö·û´®sºÍt£¬µ±ÇÒ½öµ±s.equals(t)ÎªtrueÊ±£¬s.intern() == t.intern()²ÅÎªtrue
+		 * Stringç±»æœ‰ä¸€ä¸ªåˆå§‹æ—¶ä¸ºç©ºçš„å­—ç¬¦ä¸²æ± ï¼Œå®ƒç”±ç±»Stringç§æœ‰åœ°ç»´æŠ¤ã€‚
+		 * å½“è°ƒç”¨internæ–¹æ³•æ—¶ï¼Œå¦‚æœæ± å†…å·²ç»åŒ…å«ä¸€ä¸ªç­‰äºæ­¤Stringå¯¹è±¡çš„å­—ç¬¦ä¸²(è¯¥å¯¹è±¡ç”±equals(Object)æ–¹æ³•ç¡®å®š)ï¼Œåˆ™è¿”å›æ± ä¸­çš„å­—ç¬¦ä¸²ã€‚
+		 * å¦åˆ™ï¼Œå°†æ­¤ String å¯¹è±¡æ·»åŠ åˆ°æ± ä¸­ï¼Œå¹¶ä¸”è¿”å›æ­¤ String å¯¹è±¡çš„å¼•ç”¨ã€‚
+		 * å®ƒéµå¾ªå¯¹äºä»»ä½•ä¸¤ä¸ªå­—ç¬¦ä¸²så’Œtï¼Œå½“ä¸”ä»…å½“s.equals(t)ä¸ºtrueæ—¶ï¼Œs.intern() == t.intern()æ‰ä¸ºtrue
 		 */
 		s = "test intern";
 		String s1 = "test intern".intern();
 		String result = s == s1 ? "" : " not";
 		System.out.println("s and s1 " + result + "have the same string object");
-		// trim()Ê¹µÃ×Ö·û´®É¾³ı×îÇ°»ò×îºóµÄ¿Õ¸ñ
+		// trim()ä½¿å¾—å­—ç¬¦ä¸²åˆ é™¤æœ€å‰æˆ–æœ€åçš„ç©ºæ ¼
 		s = "  I see it  ";
 		System.out.println("s.trim() : " + s.trim());
 	}

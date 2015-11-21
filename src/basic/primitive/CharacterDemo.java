@@ -4,13 +4,13 @@
 package primitive;
 
 /**
- * char°ü×°ÀàµÄÑİÊ¾
+ * charåŒ…è£…ç±»çš„æ¼”ç¤º
  * <p>
- * CharacterÀàÌá¹©ÁË³£ÓÃµÄ×Ö·ûÌØĞÔÅĞ¶Ï·½·¨
+ * Characterç±»æä¾›äº†å¸¸ç”¨çš„å­—ç¬¦ç‰¹æ€§åˆ¤æ–­æ–¹æ³•
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-13
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-13
  */
 public class CharacterDemo {
 
@@ -19,11 +19,11 @@ public class CharacterDemo {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * Character.isDigit(char)ÓÃÀ´ÅĞ¶ÏÒ»¸ö×Ö·ûÊÇ·ñÊÇÊı×Ö
-		 * Character.isLetter(char)ÓÃÀ´ÅĞ¶ÏÒ»¸ö×Ö·ûÊÇ·ñÊÇ×ÖÄ¸
-		 * Character.isLetterOrDigit(char)ÓÃÀ´ÅĞ¶ÏÒ»¸ö×Ö·ûÊÇ·ñÎª×ÖÄ¸»òÊı×Ö
+		 * Character.isDigit(char)ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦æ˜¯å¦æ˜¯æ•°å­—
+		 * Character.isLetter(char)ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦æ˜¯å¦æ˜¯å­—æ¯
+		 * Character.isLetterOrDigit(char)ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦æ˜¯å¦ä¸ºå­—æ¯æˆ–æ•°å­—
 		 */
-		char ch = 'a';// ¿ÉÒÔÊÇ'1'¡¢'%'¡¢'Ã¨'¡¢','¡¢'¦Ğ'µÈ
+		char ch = 'a';// å¯ä»¥æ˜¯'1'ã€'%'ã€'çŒ«'ã€','ã€'Ï€'ç­‰
 		System.out.println(ch
 				+ (Character.isDigit(ch) ? " is digit" : " is not digit"));
 		System.out.println(ch
@@ -32,10 +32,10 @@ public class CharacterDemo {
 				+ (Character.isLetterOrDigit(ch) ? " is letter or digit"
 						: " is not letter or digit"));
 		/*
-		 * Character.isLowerCase(char)ÅĞ¶Ï²ÎÊı×Ö·ûÊÇ·ñÊÇ´óĞ´ĞÎÊ½
-		 * Character.isLowerCase(char)ÅĞ¶Ï²ÎÊı×Ö·ûÊÇ·ñÊÇĞ¡Ğ´ĞÎÊ½
-		 * Character.toUpperCase(char)·µ»Ø²ÎÊı×Ö·ûµÄ´óĞ´ĞÎÊ½µÄ×Ö·û
-		 * Character.toLowerCase(char)·µ»Ø²ÎÊı×Ö·ûµÄĞ¡Ğ´ĞÎÊ½µÄ×Ö·û
+		 * Character.isLowerCase(char)åˆ¤æ–­å‚æ•°å­—ç¬¦æ˜¯å¦æ˜¯å¤§å†™å½¢å¼
+		 * Character.isLowerCase(char)åˆ¤æ–­å‚æ•°å­—ç¬¦æ˜¯å¦æ˜¯å°å†™å½¢å¼
+		 * Character.toUpperCase(char)è¿”å›å‚æ•°å­—ç¬¦çš„å¤§å†™å½¢å¼çš„å­—ç¬¦
+		 * Character.toLowerCase(char)è¿”å›å‚æ•°å­—ç¬¦çš„å°å†™å½¢å¼çš„å­—ç¬¦
 		 */
 		if (Character.isLowerCase(ch))
 			System.out.println(ch + " is LowerCase");

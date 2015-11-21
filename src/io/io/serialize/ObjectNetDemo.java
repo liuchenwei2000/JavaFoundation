@@ -12,30 +12,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * ¶ÔÏóÍøÏ¸½ÚÑÝÊ¾
+ * å¯¹è±¡ç½‘ç»†èŠ‚æ¼”ç¤º
  * <p>
- * Èç¹û½«Á½¸ö¶¼¾ßÓÐÖ¸ÏòµÚÈý¸ö¶ÔÏóµÄÒýÓÃµÄ¶ÔÏó½øÐÐÐòÁÐ»¯£¬»á·¢ÉúÊ²Ã´Çé¿ö£¿
- * µ±´ÓËüÃÇµÄÐòÁÐ»¯×´Ì¬»Ö¸´ÕâÁ½¸ö¶ÔÏóÊ±£¬µÚÈý¸ö¶ÔÏó»áÖ»³öÏÖÒ»´ÎÂð£¿
- * Èç¹û½«ÕâÁ½¸ö¶ÔÏóÐòÁÐ»¯³É¶ÀÁ¢µÄÎÄ¼þ£¬È»ºóÔÚ´úÂëµÄ²»Í¬²¿·Ö¶ÔËüÃÇ½øÐÐ·´ÐòÁÐ»¯£¬ÓÖ»áÔõÑù£¿ 
+ * å¦‚æžœå°†ä¸¤ä¸ªéƒ½å…·æœ‰æŒ‡å‘ç¬¬ä¸‰ä¸ªå¯¹è±¡çš„å¼•ç”¨çš„å¯¹è±¡è¿›è¡Œåºåˆ—åŒ–ï¼Œä¼šå‘ç”Ÿä»€ä¹ˆæƒ…å†µï¼Ÿ
+ * å½“ä»Žå®ƒä»¬çš„åºåˆ—åŒ–çŠ¶æ€æ¢å¤è¿™ä¸¤ä¸ªå¯¹è±¡æ—¶ï¼Œç¬¬ä¸‰ä¸ªå¯¹è±¡ä¼šåªå‡ºçŽ°ä¸€æ¬¡å—ï¼Ÿ
+ * å¦‚æžœå°†è¿™ä¸¤ä¸ªå¯¹è±¡åºåˆ—åŒ–æˆç‹¬ç«‹çš„æ–‡ä»¶ï¼Œç„¶åŽåœ¨ä»£ç çš„ä¸åŒéƒ¨åˆ†å¯¹å®ƒä»¬è¿›è¡Œååºåˆ—åŒ–ï¼Œåˆä¼šæ€Žæ ·ï¼Ÿ 
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-27
  */
 public class ObjectNetDemo {
 
 	/**
-	 * ¿ÉÒÔÍ¨¹ý±¾ÀýµÄÊä³ö½á¹û²é¿´¶ÔÏóÍøÐ§¹û
+	 * å¯ä»¥é€šè¿‡æœ¬ä¾‹çš„è¾“å‡ºç»“æžœæŸ¥çœ‹å¯¹è±¡ç½‘æ•ˆæžœ
 	 * 
-	 * ÎÒÃÇÆÚÍûÕâÐ©±»·´ÐòÁÐ»¯»¹Ô­ºóµÄ¶ÔÏóµØÖ·ÓëÔ­À´µÄµØÖ·²»Í¬£¨·ñÔò¿ÉÄÜ»áÆÆ»µÄÚ´æ£©£¬µ«ÊÇ 
-	 * animals1 ºÍ animals2 ÖÐÈ´³öÏÖÁËÏàÍ¬µÄµØÖ·£¬°üÀ¨¶þÕß¹²ÏíµÄÄÇ¸öÖ¸ÏòhouseµÄÒýÓÃ¡£
-	 * ÁíÒ»·½Ãæ£¬µ±»Ö¸´ animals3 Ê±£¬ÏµÍ³ÎÞ·¨ÖªµÀÁíÒ»¸öÁ÷ÄÚµÄ¶ÔÏóÊÇµÚÒ»¸öÁ÷ÄÚ¶ÔÏóµÄ±ðÃû£¬Òò´ËËü»á²úÉú³öÍêÈ«²»Í¬µÄ¶ÔÏóÍø¡£
-	 * ½áÂÛ£ºÖ»Òª½«ÈÎºÎ¶ÔÏóÐòÁÐ»¯µ½µ¥Ò»Á÷ÖÐ£¬¾Í¿ÉÒÔ»Ö¸´³öÓëÐ´ÈëÊ±Ò»ÑùµÄ¶ÔÏóÍø£¬²¢²»»á²úÉúÈÎºÎÒâÍâÉú³ÉµÄ¶ÔÏó¡£
+	 * æˆ‘ä»¬æœŸæœ›è¿™äº›è¢«ååºåˆ—åŒ–è¿˜åŽŸåŽçš„å¯¹è±¡åœ°å€ä¸ŽåŽŸæ¥çš„åœ°å€ä¸åŒï¼ˆå¦åˆ™å¯èƒ½ä¼šç ´åå†…å­˜ï¼‰ï¼Œä½†æ˜¯ 
+	 * animals1 å’Œ animals2 ä¸­å´å‡ºçŽ°äº†ç›¸åŒçš„åœ°å€ï¼ŒåŒ…æ‹¬äºŒè€…å…±äº«çš„é‚£ä¸ªæŒ‡å‘houseçš„å¼•ç”¨ã€‚
+	 * å¦ä¸€æ–¹é¢ï¼Œå½“æ¢å¤ animals3 æ—¶ï¼Œç³»ç»Ÿæ— æ³•çŸ¥é“å¦ä¸€ä¸ªæµå†…çš„å¯¹è±¡æ˜¯ç¬¬ä¸€ä¸ªæµå†…å¯¹è±¡çš„åˆ«åï¼Œå› æ­¤å®ƒä¼šäº§ç”Ÿå‡ºå®Œå…¨ä¸åŒçš„å¯¹è±¡ç½‘ã€‚
+	 * ç»“è®ºï¼šåªè¦å°†ä»»ä½•å¯¹è±¡åºåˆ—åŒ–åˆ°å•ä¸€æµä¸­ï¼Œå°±å¯ä»¥æ¢å¤å‡ºä¸Žå†™å…¥æ—¶ä¸€æ ·çš„å¯¹è±¡ç½‘ï¼Œå¹¶ä¸ä¼šäº§ç”Ÿä»»ä½•æ„å¤–ç”Ÿæˆçš„å¯¹è±¡ã€‚
 	 * 
-	 * Èç¹ûÏë±£´æÏµÍ³×´Ì¬£¬×î°²È«µÄ×÷·¨ÊÇ½«Æä×÷Îª"Ô­×Ó"²Ù×÷½øÐÐÐòÁÐ»¯£º
-	 * Èç¹ûÐòÁÐ»¯ÁËÄ³Ð©¶«Î÷£¬ÔÙÈ¥×öÆäËûÒ»Ð©¹¤×÷£¬ÔÙÀ´ÐòÁÐ»¯¸ü¶àµÄ¶«Î÷¡£Èç´ËµÈµÈ£¬ÄÇÃ´½«ÎÞ·¨°²È«µØ±£´æÏµÍ³×´Ì¬¡£
-	 * È¡¶ø´úÖ®µÄÊÇ£¬½«¹¹³ÉÏµÍ³×´Ì¬µÄËùÓÐ¶ÔÏó¶¼ÖÃÈëÄ³¸öµ¥Ò»ÈÝÆ÷(ÈçList)ÄÚ£¬²¢ÔÚÒ»¸ö²Ù×÷ÖÐ½«¸ÃÈÝÆ÷Ö±½ÓÐ´³ö£»
-	 * È»ºóÍ¬ÑùÖ»ÐèÒ»´Î·½·¨µ÷ÓÃ¾Í¿ÉÒÔ½«Æä»Ö¸´£¬¼´Ö»µ÷ÓÃÒ»´Î writObject(Collection) ºÍ readObject()¼´¿É¡£
+	 * å¦‚æžœæƒ³ä¿å­˜ç³»ç»ŸçŠ¶æ€ï¼Œæœ€å®‰å…¨çš„ä½œæ³•æ˜¯å°†å…¶ä½œä¸º"åŽŸå­"æ“ä½œè¿›è¡Œåºåˆ—åŒ–ï¼š
+	 * å¦‚æžœåºåˆ—åŒ–äº†æŸäº›ä¸œè¥¿ï¼Œå†åŽ»åšå…¶ä»–ä¸€äº›å·¥ä½œï¼Œå†æ¥åºåˆ—åŒ–æ›´å¤šçš„ä¸œè¥¿ã€‚å¦‚æ­¤ç­‰ç­‰ï¼Œé‚£ä¹ˆå°†æ— æ³•å®‰å…¨åœ°ä¿å­˜ç³»ç»ŸçŠ¶æ€ã€‚
+	 * å–è€Œä»£ä¹‹çš„æ˜¯ï¼Œå°†æž„æˆç³»ç»ŸçŠ¶æ€çš„æ‰€æœ‰å¯¹è±¡éƒ½ç½®å…¥æŸä¸ªå•ä¸€å®¹å™¨(å¦‚List)å†…ï¼Œå¹¶åœ¨ä¸€ä¸ªæ“ä½œä¸­å°†è¯¥å®¹å™¨ç›´æŽ¥å†™å‡ºï¼›
+	 * ç„¶åŽåŒæ ·åªéœ€ä¸€æ¬¡æ–¹æ³•è°ƒç”¨å°±å¯ä»¥å°†å…¶æ¢å¤ï¼Œå³åªè°ƒç”¨ä¸€æ¬¡ writObject(Collection) å’Œ readObject()å³å¯ã€‚
 	 * 
 	 * @param args
 	 * @throws Exception
@@ -44,44 +44,44 @@ public class ObjectNetDemo {
 		House house = new House();
 		List<Animal> animals = new ArrayList<Animal>();
 		
-		// ÕâÁ½¸öAnimal¶ÔÏó¹²ÏíÁËÍ¬Ò»¸öhouse¶ÔÏó
+		// è¿™ä¸¤ä¸ªAnimalå¯¹è±¡å…±äº«äº†åŒä¸€ä¸ªhouseå¯¹è±¡
 		animals.add(new Animal("Dog", house));
 		animals.add(new Animal("Cat", house));
-		System.out.println("animals£º\n" + animals);
+		System.out.println("animalsï¼š\n" + animals);
 		
-		// ½«Õâ¸öListÐòÁÐ»¯µ½ÄÚ´æ¿é1
+		// å°†è¿™ä¸ªListåºåˆ—åŒ–åˆ°å†…å­˜å—1
 		ByteArrayOutputStream buffer1 = new ByteArrayOutputStream();
 		ObjectOutputStream oos = new ObjectOutputStream(buffer1);
-		// List±»Ð´ÈëÁËÁ½´Î
+		// Listè¢«å†™å…¥äº†ä¸¤æ¬¡
 		oos.writeObject(animals);
 		oos.writeObject(animals); 
 		oos.close();
 		
-		// ½«Õâ¸öListÐòÁÐ»¯µ½ÄÚ´æ¿é2
+		// å°†è¿™ä¸ªListåºåˆ—åŒ–åˆ°å†…å­˜å—2
 		ByteArrayOutputStream buffer2 = new ByteArrayOutputStream();
 		oos = new ObjectOutputStream(buffer2);
 		oos.writeObject(animals);
 		oos.close();
 		
-		// ·´ÐòÁÐ»¯¶Á»ØList
+		// ååºåˆ—åŒ–è¯»å›žList
 		ObjectInputStream ois1 = new ObjectInputStream(
 				new ByteArrayInputStream(buffer1.toByteArray()));
 		ObjectInputStream ois2 = new ObjectInputStream(
 				new ByteArrayInputStream(buffer2.toByteArray()));
 		
-		// ¶ÁÈ¡ÄÚ´æ¿é1µÄµÚÒ»¸ö¶ÔÏó
+		// è¯»å–å†…å­˜å—1çš„ç¬¬ä¸€ä¸ªå¯¹è±¡
 		List<?> animals1 = (List<?>) ois1.readObject();
-		// ¶ÁÈ¡ÄÚ´æ¿é1µÄµÚ¶þ¸ö¶ÔÏó
+		// è¯»å–å†…å­˜å—1çš„ç¬¬äºŒä¸ªå¯¹è±¡
 		List<?> animals2 = (List<?>) ois1.readObject();
-		// ¶ÁÈ¡ÄÚ´æ¿é2µÄList¶ÔÏó
+		// è¯»å–å†…å­˜å—2çš„Listå¯¹è±¡
 		List<?> animals3 = (List<?>) ois2.readObject();
 		
 		ois1.close();
 		ois2.close();
 		
-		System.out.println("animals1£º\n" + animals1);
-		System.out.println("animals2£º\n" + animals2);
-		System.out.println("animals3£º\n" + animals3);
+		System.out.println("animals1ï¼š\n" + animals1);
+		System.out.println("animals2ï¼š\n" + animals2);
+		System.out.println("animals3ï¼š\n" + animals3);
 	}
 
 }

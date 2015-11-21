@@ -4,11 +4,11 @@
 package exception;
 
 /**
- * �����׳��µ��쳣(��װ�쳣)��ʾ
+ * 重新抛出新的异常(包装异常)演示
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2008-4-21
+ * 创建日期：2008-4-21
  */
 public class RethrowNewException {
 
@@ -19,7 +19,7 @@ public class RethrowNewException {
 		try {
 			throwTwoExceptionUnknown();
 		} catch (TwoException e) {
-			// ���쳣��֪���Լ�����throwTwoException����֪��throwOneException
+			// 该异常仅知道自己来自throwTwoException而不知道throwOneException
 			System.out.println("catch TwoException in main()");
 			e.printStackTrace(System.out);
 		}
@@ -28,10 +28,10 @@ public class RethrowNewException {
 		try {
 			throwTwoExceptionKnown();
 		} catch (TwoException e) {
-			// ���쳣����֪���Լ�����throwTwoException���һ�֪��throwOneException
+			// 该异常不仅知道自己来自throwTwoException而且还知道throwOneException
 			System.out.println("catch TwoException in main()");
 			e.printStackTrace(System.out);
-			// �������쳣ʱ���Ϳ���ʹ��getCause()���ԭʼ�쳣
+			// 当捕获异常时，就可以使用getCause()获得原始异常
 			System.out.println("cause : " + e.getCause().getMessage());
 		}
 		throwExceptionNotAllowed();
@@ -48,7 +48,7 @@ public class RethrowNewException {
 		} catch (OneException e) {
 			System.out.println("catch OneException in throwTwoException()");
 			e.printStackTrace(System.out);
-			// ��һ��catch�Ӿ��У�Ҳ�����׳�һ�����쳣����������Ŀ����ϣ���ı��쳣������
+			// 在一个catch子句中，也可以抛出一个新异常，这样做的目的是希望改变异常的类型
 			throw new TwoException("thrown from throwTwoException()");
 		}
 	}
@@ -60,11 +60,11 @@ public class RethrowNewException {
 			System.out.println("catch OneException in throwTwoException()");
 			e.printStackTrace(System.out);
 			/*
-			 * �쳣������
+			 * 异常链机制
 			 * 
-			 * �����Ҫ�ڲ���һ���쳣���׳���һ���쳣������ϣ����ԭʼ�쳣����Ϣ��������������Ҫʹ���쳣����
-			 * ʹ��initCause(Throwable)�������԰�ԭʼ�쳣���ݸ��µ��쳣��ʹ�ü�ʹ�ڵ�ǰλ��
-			 * �������׳����µ��쳣��Ҳ��ͨ������쳣��׷�ٵ��쳣���������λ�á�
+			 * 如果想要在捕获一个异常后抛出另一个异常，并且希望把原始异常的信息保存下来，就需要使用异常链。
+			 * 使用initCause(Throwable)方法可以把原始异常传递给新的异常，使得即使在当前位置
+			 * 创建并抛出了新的异常，也能通过这个异常链追踪到异常最初发生的位置。
 			 */
 			TwoException te = new TwoException("thrown from throwTwoException()");
 			te.initCause(e);
@@ -73,8 +73,8 @@ public class RethrowNewException {
 	}
 	
 	/**
-	 * ���һ�������г���һ�� �Ѽ���쳣�����������׳�������ô��װ������ʮ�����ã�
-	 * ���Բ�������Ѽ���쳣����������װ������ʱ�쳣��
+	 * 如果一个方法中出现一个 已检查异常，而不允许抛出它，那么包装技术就十分有用：
+	 * 可以捕获这个已检查异常，并将它包装成运行时异常。
 	 */
 	private static void throwExceptionNotAllowed() {
 		try {

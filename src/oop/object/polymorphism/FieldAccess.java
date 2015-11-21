@@ -4,12 +4,12 @@
 package polymorphism;
 
 /**
- * Ö»ÓĞÆÕÍ¨µÄ·½·¨µ÷ÓÃ(²»°üÀ¨Óòµ÷ÓÃ)¿ÉÒÔÊÇ¶àÌ¬µÄ¡£
- * Èç¹ûÖ±½Ó·ÃÎÊÄ³¸öÓò£¬Õâ¸ö·ÃÎÊ½«ÔÚ±àÒëÆÚ½øĞĞ½âÎö£¬¶àÌ¬ÊÇ¶¯Ì¬°ó¶¨¡¢ºóÆÚ°ó¶¨¡¢ÔËĞĞÊ±°ó¶¨¡£
+ * åªæœ‰æ™®é€šçš„æ–¹æ³•è°ƒç”¨(ä¸åŒ…æ‹¬åŸŸè°ƒç”¨)å¯ä»¥æ˜¯å¤šæ€çš„ã€‚
+ * å¦‚æœç›´æ¥è®¿é—®æŸä¸ªåŸŸï¼Œè¿™ä¸ªè®¿é—®å°†åœ¨ç¼–è¯‘æœŸè¿›è¡Œè§£æï¼Œå¤šæ€æ˜¯åŠ¨æ€ç»‘å®šã€åæœŸç»‘å®šã€è¿è¡Œæ—¶ç»‘å®šã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2008-4-8
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-8
  */
 public class FieldAccess {
 
@@ -18,15 +18,15 @@ public class FieldAccess {
 	 */
 	public static void main(String[] args) {
 		Super sup = new Sub();
-		// µ±Sub¶ÔÏó×ªĞÍÎªSuperÒıÓÃÊ±£¬ÈÎºÎÓò·ÃÎÊ²Ù×÷¶¼ÓÉ±àÒëÆÚ½âÎö£¬Òò´Ë²»ÊÇ¶àÌ¬µÄ
+		// å½“Subå¯¹è±¡è½¬å‹ä¸ºSuperå¼•ç”¨æ—¶ï¼Œä»»ä½•åŸŸè®¿é—®æ“ä½œéƒ½ç”±ç¼–è¯‘æœŸè§£æï¼Œå› æ­¤ä¸æ˜¯å¤šæ€çš„
 		System.out.println("sup.field = " + sup.field + ", sup.getField() = "
 				+ sup.getField());
-		// Êä³ö£ºsup.field = super field, sup.getField() = sub field
+		// è¾“å‡ºï¼šsup.field = super field, sup.getField() = sub field
 		Sub sub = new Sub();
 		System.out.println("sub.field = " + sub.field + ", sub.getField() = "
 				+ sub.getField() + ", sub.getSuperFiled() = "
 				+ sub.getSuperFiled());
-		// Êä³ö£ºsub.field = sub field, sub.getField() = sub field, sub.getSuperFiled() = super field
+		// è¾“å‡ºï¼šsub.field = sub field, sub.getField() = sub field, sub.getSuperFiled() = super field
 	}
 }
 

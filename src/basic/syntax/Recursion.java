@@ -4,16 +4,16 @@
 package syntax;
 
 /**
- * µÝ¹éÑÝÊ¾Àà
+ * é€’å½’æ¼”ç¤ºç±»
  * <p>
- * µÝ¹éËã·¨µÄÒ»°ãÒªÇó£º
- * <li>1£¬¶¨ÒåµÄÖÐÐÄÊÇif-elseÓï¾ä»òÕßswitchÓï¾ä
- * <li>2£¬ÖÁÉÙÓÐÒ»¸ö·ÖÖ§Óï¾äÓÐµÝ¹éµ÷ÓÃ
- * <li>3£¬ÖÁÉÙÓÐÒ»¸ö·ÖÖ§Óï¾äÃ»ÓÐµÝ¹éµ÷ÓÃ(Í£Ö¹ÇéÐÎ)
+ * é€’å½’ç®—æ³•çš„ä¸€èˆ¬è¦æ±‚ï¼š
+ * <li>1ï¼Œå®šä¹‰çš„ä¸­å¿ƒæ˜¯if-elseè¯­å¥æˆ–è€…switchè¯­å¥
+ * <li>2ï¼Œè‡³å°‘æœ‰ä¸€ä¸ªåˆ†æ”¯è¯­å¥æœ‰é€’å½’è°ƒç”¨
+ * <li>3ï¼Œè‡³å°‘æœ‰ä¸€ä¸ªåˆ†æ”¯è¯­å¥æ²¡æœ‰é€’å½’è°ƒç”¨(åœæ­¢æƒ…å½¢)
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-3-21
+ * åˆ›å»ºæ—¥æœŸï¼š2008-3-21
  */
 public class Recursion {
 
@@ -26,7 +26,7 @@ public class Recursion {
 	}
 
 	/**
-	 * ½×³Ë·½·¨£¬µÝ¹éÊµÏÖ
+	 * é˜¶ä¹˜æ–¹æ³•ï¼Œé€’å½’å®žçŽ°
 	 */
 	public static int fatorial(int n) {
 		if (n == 0 || n == 1)

@@ -4,13 +4,13 @@
 package primitive;
 
 /**
- * double°ü×°ÀàÑİÊ¾
+ * doubleåŒ…è£…ç±»æ¼”ç¤º
  * <p>
- * ÆäËû¸¡µãÊıÀàĞÍÈçfloatµÄ°ü×°ÀàµÄ·½·¨¶¼ÏàËÆ
+ * å…¶ä»–æµ®ç‚¹æ•°ç±»å‹å¦‚floatçš„åŒ…è£…ç±»çš„æ–¹æ³•éƒ½ç›¸ä¼¼
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-13
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-13
  */
 public class DoubleDemo {
 
@@ -19,10 +19,10 @@ public class DoubleDemo {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * DoubleÀàÖĞµÄ³£Á¿NaN(Not a Number)±íÊ¾²»ÊÇÒ»¸öÊı
-		 * Õâ¸ö³£Á¿ÓÃÀ´»ñÈ¡Ò»¸öNaNÖµ£¬²»ÊÇÓÃÀ´²âÊÔÒ»¸öÖµÊÇ·ñÊÇNaN
-		 * ²¢ÇÒ NaN == NaN Ò»Ö±·µ»Øfalse£¬ÒòÎªNaN²»ÊÇÒ»¸öÊı
-		 * Èç¹ûÅĞ¶ÏÒ»¸öÊıÊÇ·ñÊÇNaNÓ¦¸ÃÊ¹ÓÃisNaN·½·¨
+		 * Doubleç±»ä¸­çš„å¸¸é‡NaN(Not a Number)è¡¨ç¤ºä¸æ˜¯ä¸€ä¸ªæ•°
+		 * è¿™ä¸ªå¸¸é‡ç”¨æ¥è·å–ä¸€ä¸ªNaNå€¼ï¼Œä¸æ˜¯ç”¨æ¥æµ‹è¯•ä¸€ä¸ªå€¼æ˜¯å¦æ˜¯NaN
+		 * å¹¶ä¸” NaN == NaN ä¸€ç›´è¿”å›falseï¼Œå› ä¸ºNaNä¸æ˜¯ä¸€ä¸ªæ•°
+		 * å¦‚æœåˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦æ˜¯NaNåº”è¯¥ä½¿ç”¨isNaNæ–¹æ³•
 		 */
 		Double d = 3.2;
 		if (!d.isNaN())
@@ -32,7 +32,7 @@ public class DoubleDemo {
 		if (Double.NaN != Double.NaN)
 			System.out.println("Double.NaN != Double.NaN");
 		/*
-		 * isInfinite·½·¨ÓÃÀ´ÅĞ¶ÏÒ»¸ödoubleÊÇ·ñÊÇÎŞÇî´ó
+		 * isInfiniteæ–¹æ³•ç”¨æ¥åˆ¤æ–­ä¸€ä¸ªdoubleæ˜¯å¦æ˜¯æ— ç©·å¤§
 		 */
 		d = 1.0 / 0.0;
 		if (d.isInfinite())
@@ -40,7 +40,7 @@ public class DoubleDemo {
 		if (Double.isInfinite(d))
 			System.out.println("1.0 / 0.0 is infinite");
 		/*
-		 * intValueÓÃÀ´·µ»Ø¸¡µãÊıµÄÕûÊıÖµ(Ïàµ±ÓÚÇ¿ĞĞ×ª»»³Éint)
+		 * intValueç”¨æ¥è¿”å›æµ®ç‚¹æ•°çš„æ•´æ•°å€¼(ç›¸å½“äºå¼ºè¡Œè½¬æ¢æˆint)
 		 */
 		d = 3.6;
 		System.out.println(d.intValue());

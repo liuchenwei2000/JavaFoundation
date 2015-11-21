@@ -4,13 +4,13 @@
 package puzzler;
 
 /**
- * intÐÍÕûÊý¼äµÄ³ý·¨(ºÍ³Ë·¨)
+ * intåž‹æ•´æ•°é—´çš„é™¤æ³•(å’Œä¹˜æ³•)
  * <p>
- * ÔÚ²Ù×÷¹ý³ÌÖÐ»áÔì³ÉÊý¾Ý¶ªÊ§¡£
+ * åœ¨æ“ä½œè¿‡ç¨‹ä¸­ä¼šé€ æˆæ•°æ®ä¸¢å¤±ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-6
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-6
  */
 public class DivisionBetweenInts {
 
@@ -22,31 +22,31 @@ public class DivisionBetweenInts {
 		int b = 5;
 		double result = a/b;
 		/*
-		 * Êä³ö£º8/5 = 1.0 
-		 * ÒòÎªÔÚÔËËãa/bÊ±ÊÇÁ½¸öintÐÍÕûÊý×ö³ý·¨£¬×îºóµÄ½á¹û»¹ÊÇintÐÍÕûÊý¡£
-		 * µ±Õâ¸öintÐÍÕûÊýÔÚ¸³Öµ¸øresultÊ±»á±»ÌáÉýµ½doubleÐÍ£¬µ«ÊÇÊý¾ÝÒÑ¾­²»×¼È·ÁË¡£
+		 * è¾“å‡ºï¼š8/5 = 1.0 
+		 * å› ä¸ºåœ¨è¿ç®—a/bæ—¶æ˜¯ä¸¤ä¸ªintåž‹æ•´æ•°åšé™¤æ³•ï¼Œæœ€åŽçš„ç»“æžœè¿˜æ˜¯intåž‹æ•´æ•°ã€‚
+		 * å½“è¿™ä¸ªintåž‹æ•´æ•°åœ¨èµ‹å€¼ç»™resultæ—¶ä¼šè¢«æå‡åˆ°doubleåž‹ï¼Œä½†æ˜¯æ•°æ®å·²ç»ä¸å‡†ç¡®äº†ã€‚
 		 */
 		System.out.println(a + "/" + b + " = " + result);
 		
-		/** ½â¾ö·½·¨ */
+		/** è§£å†³æ–¹æ³• */
 		/*
-		 * ÔÚ³ý·¨ÔËËãÖ®Ç°ÌáÉýintÐÍÕûÊýÎªdoubleÐÍ£¬ÕâÑù³ý·¨µÄ½á¹û¾ÍÊÇ×¼È·µÄdoubleÐÍÖµ¡£
+		 * åœ¨é™¤æ³•è¿ç®—ä¹‹å‰æå‡intåž‹æ•´æ•°ä¸ºdoubleåž‹ï¼Œè¿™æ ·é™¤æ³•çš„ç»“æžœå°±æ˜¯å‡†ç¡®çš„doubleåž‹å€¼ã€‚
 		 */
 		result = (double)a/b;
 		System.out.println(a + "/" + b + " = " + result);
 		
-		/*********Í¬Àí»¹ÓÐintÐÍÊý¾ÝÒç³öµÄÎÊÌâ************/
+		/*********åŒç†è¿˜æœ‰intåž‹æ•°æ®æº¢å‡ºçš„é—®é¢˜************/
 		long la = 24 * 60 * 60 * 1000 * 1000;
 		/*
-		 * Êä³ö£ºla = 500654080
-		 * Í¬ÑùÊÇÒòÎªÔÚ×ö³Ë·¨ÔËËãÊ±¶¼ÊÇintÐÍµÄÕûÊý£¬×îºóµÄ½á¹û86400000000ÒÑ¾­³¬¹ýintÐÍ±íÊ¾µÄÉÏÏÞ¡£
-		 * ËùÒÔÊý¾ÝÒç³öÁË£¬×îºóµÃµ½²»ÕýÈ·µÄ½á¹û¡£
+		 * è¾“å‡ºï¼šla = 500654080
+		 * åŒæ ·æ˜¯å› ä¸ºåœ¨åšä¹˜æ³•è¿ç®—æ—¶éƒ½æ˜¯intåž‹çš„æ•´æ•°ï¼Œæœ€åŽçš„ç»“æžœ86400000000å·²ç»è¶…è¿‡intåž‹è¡¨ç¤ºçš„ä¸Šé™ã€‚
+		 * æ‰€ä»¥æ•°æ®æº¢å‡ºäº†ï¼Œæœ€åŽå¾—åˆ°ä¸æ­£ç¡®çš„ç»“æžœã€‚
 		 */
 		System.out.println("la = " + la);
 		
-		/** ½â¾ö·½·¨ */
+		/** è§£å†³æ–¹æ³• */
 		/*
-		 *ÔÚ³Ë·¨ÔËËãÖ®Ç°½«intÐÍÕûÊýÌáÉýµ½longÐÍ
+		 *åœ¨ä¹˜æ³•è¿ç®—ä¹‹å‰å°†intåž‹æ•´æ•°æå‡åˆ°longåž‹
 		 */
 		la = 24L * 60 * 60 * 1000 * 1000;
 		System.out.println("la = " + la);

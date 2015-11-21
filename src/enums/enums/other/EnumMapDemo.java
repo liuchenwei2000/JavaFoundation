@@ -7,15 +7,15 @@ import java.util.EnumMap;
 import java.util.Map;
 
 /**
- * EnumMapÑİÊ¾
+ * EnumMapæ¼”ç¤º
  * <p>
- * EnumMapÊÇÒ»ÖÖÌØÊâµÄMap£¬ÒªÇóÆäÖĞµÄ¼ü(key)±ØĞëÀ´×ÔÒ»¸öenum¡£
- * ÓÉÓÚenum±¾ÉíµÄÏŞÖÆ£¬ËùÒÔEnumMapÔÚÄÚ²¿¿ÉÓÉÊı×éÊµÏÖ£¬Òò´ËËÙ¶È¸ü¿ì¡£
- * ÓëEnumSetÒ»Ñù£¬enumÊµÀı¶¨ÒåÊ±µÄ´ÎĞò¾ö¶¨ÁËÆäÔÚEnumMapÖĞµÄË³Ğò¡£
+ * EnumMapæ˜¯ä¸€ç§ç‰¹æ®Šçš„Mapï¼Œè¦æ±‚å…¶ä¸­çš„é”®(key)å¿…é¡»æ¥è‡ªä¸€ä¸ªenumã€‚
+ * ç”±äºenumæœ¬èº«çš„é™åˆ¶ï¼Œæ‰€ä»¥EnumMapåœ¨å†…éƒ¨å¯ç”±æ•°ç»„å®ç°ï¼Œå› æ­¤é€Ÿåº¦æ›´å¿«ã€‚
+ * ä¸EnumSetä¸€æ ·ï¼Œenumå®ä¾‹å®šä¹‰æ—¶çš„æ¬¡åºå†³å®šäº†å…¶åœ¨EnumMapä¸­çš„é¡ºåºã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨Ê±¼ä£º2008-8-7
+ * åˆ›å»ºæ—¶é—´ï¼š2008-8-7
  */
 public class EnumMapDemo {
 
@@ -47,7 +47,7 @@ public class EnumMapDemo {
 		}
 		
 		try {
-			// Èç¹û²»´æÔÚ¾Í»áÅ×¿ÕÖ¸ÕëÒì³£
+			// å¦‚æœä¸å­˜åœ¨å°±ä¼šæŠ›ç©ºæŒ‡é’ˆå¼‚å¸¸
 			map.get(SignalNumber.NEGATIVEONE).action();
 		} catch (Exception e) {
 			System.out.println(e);

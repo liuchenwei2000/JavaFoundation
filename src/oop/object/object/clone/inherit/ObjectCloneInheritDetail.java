@@ -4,18 +4,18 @@
 package object.clone.inherit;
 
 /**
- * Object.clone()¼Ì³ÐµÄÏ¸½Ú
+ * Object.clone()ç»§æ‰¿çš„ç»†èŠ‚
  * <p>
- * SonInt ¼Ì³Ð×Ô Int£¬²¢Ìí¼ÓÁËÐÂµÄ»ù±¾ÀàÐÍ³ÉÔ±£ºint j¡£
- * Ò²ÐíÐèÒª¸²¸Çclone()·½·¨£¬ÒÔÈ·±£ j Ò²±»¸´ÖÆ£¬µ«ÊÂÇé²¢·ÇÈç´Ë¡£
- * µ± Int µÄclone()Òò SonInt µÄ clone()¶ø±»µ÷ÓÃÊ±£¬ËüÓÖµ÷ÓÃÁËObject.clone()¡£
- * ºóÕß»áÅÐ¶ÏËü²Ù×÷µÄÊÇ SonInt£¬²¢ÇÒ¸´ÖÆ SonInt ¶ÔÏóµÄËùÓÐÎ»(bit)¡£
- * Ö»ÒªÃ»ÓÐÏò×ÓÀàÖÐÌí¼ÓÐèÒª¿ËÂ¡µÄ¶ÔÏó£¬ÄÇÃ´ÎÞÂÛclone()¶¨ÒåÓÚ¼Ì³Ð²ã´ÎÖÐ¶àÉîµÄÎ»ÖÃ¡£
- * Ö»Ðèµ÷ÓÃObject.clone()Ò»´Î£¬¾ÍÄÜÍê³ÉËùÓÐ±ØÒªµÄ¸´ÖÆ¡£
+ * SonInt ç»§æ‰¿è‡ª Intï¼Œå¹¶æ·»åŠ äº†æ–°çš„åŸºæœ¬ç±»åž‹æˆå‘˜ï¼šint jã€‚
+ * ä¹Ÿè®¸éœ€è¦è¦†ç›–clone()æ–¹æ³•ï¼Œä»¥ç¡®ä¿ j ä¹Ÿè¢«å¤åˆ¶ï¼Œä½†äº‹æƒ…å¹¶éžå¦‚æ­¤ã€‚
+ * å½“ Int çš„clone()å›  SonInt çš„ clone()è€Œè¢«è°ƒç”¨æ—¶ï¼Œå®ƒåˆè°ƒç”¨äº†Object.clone()ã€‚
+ * åŽè€…ä¼šåˆ¤æ–­å®ƒæ“ä½œçš„æ˜¯ SonIntï¼Œå¹¶ä¸”å¤åˆ¶ SonInt å¯¹è±¡çš„æ‰€æœ‰ä½(bit)ã€‚
+ * åªè¦æ²¡æœ‰å‘å­ç±»ä¸­æ·»åŠ éœ€è¦å…‹éš†çš„å¯¹è±¡ï¼Œé‚£ä¹ˆæ— è®ºclone()å®šä¹‰äºŽç»§æ‰¿å±‚æ¬¡ä¸­å¤šæ·±çš„ä½ç½®ã€‚
+ * åªéœ€è°ƒç”¨Object.clone()ä¸€æ¬¡ï¼Œå°±èƒ½å®Œæˆæ‰€æœ‰å¿…è¦çš„å¤åˆ¶ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-6
  */
 public class ObjectCloneInheritDetail {
 

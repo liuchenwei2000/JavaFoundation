@@ -4,15 +4,15 @@
 package inherit.difference;
 
 /**
- * ¶¯ÎïÀà
+ * åŠ¨ç‰©ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Animal extends Biology implements IShowInfo, IRunnable {
 	
-	private String type;// ÖÖÊô
+	private String type;// ç§å±
 
 	public Animal() {
 		this.name = "";
@@ -36,7 +36,7 @@ public class Animal extends Biology implements IShowInfo, IRunnable {
 
 	@Override
 	protected String getDeathInfo() {
-		return "ĞÂ³Â´úĞ»Í£Ö¹£¡";
+		return "æ–°é™ˆä»£è°¢åœæ­¢ï¼";
 	}
 
 	@Override

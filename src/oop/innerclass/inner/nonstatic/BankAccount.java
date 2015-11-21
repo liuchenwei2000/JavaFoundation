@@ -4,11 +4,11 @@
 package inner.nonstatic;
 
 /**
- * ÄÚ²¿Àà(·Ç¾²Ì¬Ç¶Ì×Àà)Ê¾Àı
+ * å†…éƒ¨ç±»(éé™æ€åµŒå¥—ç±»)ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-12
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-12
  */
 public class BankAccount {
 	
@@ -22,15 +22,15 @@ public class BankAccount {
 		private long amount;
 
 		private Action(String act, long amount) {
-			// ÕâÀïµÄthisÊÇÖ¸ÄÚ²¿ÀàAction×Ô¼º
+			// è¿™é‡Œçš„thisæ˜¯æŒ‡å†…éƒ¨ç±»Actionè‡ªå·±
 			this.act = act;
 			this.amount = amount;
 		}
 
 		public String toString() {
-			// ÄÚ²¿ÀàÖĞ¶ÔÍâ²¿Àà¶ÔÏóµÄÒıÓÃÊÇBankAccount.this
-			// Èç¹ûĞèÒªµ÷ÓÃÍâ²¿ÀàµÄ¸¸ÀàµÄÄ³¸ö·½·¨¿ÉÒÔÓÃ BankAccount.super.method()
-			return number + ": " + act + " " + amount; // Ïàµ±ÓÚBankAccount.this.number
+			// å†…éƒ¨ç±»ä¸­å¯¹å¤–éƒ¨ç±»å¯¹è±¡çš„å¼•ç”¨æ˜¯BankAccount.this
+			// å¦‚æœéœ€è¦è°ƒç”¨å¤–éƒ¨ç±»çš„çˆ¶ç±»çš„æŸä¸ªæ–¹æ³•å¯ä»¥ç”¨ BankAccount.super.method()
+			return number + ": " + act + " " + amount; // ç›¸å½“äºBankAccount.this.number
 		}
 	}
 

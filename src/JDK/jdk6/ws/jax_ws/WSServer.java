@@ -6,17 +6,17 @@ package jdk6.ws.jax_ws;
 import javax.xml.ws.Endpoint;
 
 /**
- * 2£¬ÓÃwsgenÉú³É·þÎñÀà±ØÒªµÄ°ïÖúÀà£¬È»ºóµ÷ÓÃÓÃEndPointÀàµÄ¾²Ì¬·½·¨publish·¢²¼·þÎñÀà¡£
+ * 2ï¼Œç”¨wsgenç”ŸæˆæœåŠ¡ç±»å¿…è¦çš„å¸®åŠ©ç±»ï¼Œç„¶åŽè°ƒç”¨ç”¨EndPointç±»çš„é™æ€æ–¹æ³•publishå‘å¸ƒæœåŠ¡ç±»ã€‚
  * wsgen -cp . jdk6.ws.jax_ws.BookService
  * 
- * 3£¬ÓÃwsimportÎª·þÎñÏû·ÑÕß(Ò²¾ÍÊÇ·þÎñµÄ¿Í»§¶Ë)Éú³É±ØÒªµÄ°ïÖúÀà£¬ÃüÁîÈçÏÂ:
+ * 3ï¼Œç”¨wsimportä¸ºæœåŠ¡æ¶ˆè´¹è€…(ä¹Ÿå°±æ˜¯æœåŠ¡çš„å®¢æˆ·ç«¯)ç”Ÿæˆå¿…è¦çš„å¸®åŠ©ç±»ï¼Œå‘½ä»¤å¦‚ä¸‹:
  * wsimport http://localhost:8888/ws/BookService?wsdl
- * Õâ»áÔÚ BookService ÀàÖ¸¶¨µÄ targetNamespace Ãû(Ã»ÓÐÖ¸¶¨Ôò·Åµ½°üÃûÎÄ¼þ¼ÐÖÐ)µ¹ÐòÎÄ¼þ¼ÐÉú³É¿Í»§¶ËµÄ°ïÖúÀà¡£
- * ±¾Àý»áÉú³ÉÔÚ com/liuchenwei2000/ ÎÄ¼þ¼ÐÏÂ£¬¿ÉÒÔ½«Éú³ÉµÄclassÎÄ¼þ´ò³Éjar°ü¸ø¿Í»§¶ËÊ¹ÓÃ¡£
+ * è¿™ä¼šåœ¨ BookService ç±»æŒ‡å®šçš„ targetNamespace å(æ²¡æœ‰æŒ‡å®šåˆ™æ”¾åˆ°åŒ…åæ–‡ä»¶å¤¹ä¸­)å€’åºæ–‡ä»¶å¤¹ç”Ÿæˆå®¢æˆ·ç«¯çš„å¸®åŠ©ç±»ã€‚
+ * æœ¬ä¾‹ä¼šç”Ÿæˆåœ¨ com/liuchenwei2000/ æ–‡ä»¶å¤¹ä¸‹ï¼Œå¯ä»¥å°†ç”Ÿæˆçš„classæ–‡ä»¶æ‰“æˆjaråŒ…ç»™å®¢æˆ·ç«¯ä½¿ç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-2
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-2
  */
 public class WSServer {
 

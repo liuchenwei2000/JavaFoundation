@@ -21,13 +21,13 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * FilesÊ¾Àı
+ * Filesç¤ºä¾‹
  * <p>
- * FilesÀàÌá¹©ÁËÒ»Ğ©¾²Ì¬·½·¨ÓÃÀ´²Ù×÷ÎÄ¼şºÍÄ¿Â¼¡£
+ * Filesç±»æä¾›äº†ä¸€äº›é™æ€æ–¹æ³•ç”¨æ¥æ“ä½œæ–‡ä»¶å’Œç›®å½•ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ22æ—¥
  */
 public class FilesTest {
 
@@ -48,59 +48,59 @@ public class FilesTest {
 	}
 
 	/**
-	 * ³£ÓÃ¾²Ì¬·½·¨API
+	 * å¸¸ç”¨é™æ€æ–¹æ³•API
 	 * <p>
-	 * ÎÄ¼şĞÅÏ¢Ö¸µÄÊÇÒ»¸öÎÄ¼şÊÇ·ñ¿ÉÒÔ±»Ö´ĞĞ¡¢ÎÄ¼şµÄ´óĞ¡¡¢ÎÄ¼şËùÊôÓÃ»§ÉõÖÁÊÇÎÄ¼şµÄÄÚÈİ¡£ 
+	 * æ–‡ä»¶ä¿¡æ¯æŒ‡çš„æ˜¯ä¸€ä¸ªæ–‡ä»¶æ˜¯å¦å¯ä»¥è¢«æ‰§è¡Œã€æ–‡ä»¶çš„å¤§å°ã€æ–‡ä»¶æ‰€å±ç”¨æˆ·ç”šè‡³æ˜¯æ–‡ä»¶çš„å†…å®¹ã€‚ 
 	 * <p>
-	 * Ê¹ÓÃjava.nio.file.FilesÀàÀ´»ñµÃÎÄ¼şĞÅÏ¢µÄ·½Ê½Ò»¹²ÓĞÎåÖÖ£º 
-	 * <li>Ê¹ÓÃFilesºÍÎÄ¼şĞÅÏ¢Ïà¹ØµÄ¾²Ì¬·½·¨£¨ÀıÈçisDirectory£©À´»ñµÃ¾ßÌåÄ³ÖÖÎÄ¼şĞÅÏ¢¡£
-	 * <li>Ê¹ÓÃFilesµÄgetAttribute¾²Ì¬·½·¨À´»ñµÃÄ³Ò»ÖÖÎÄ¼şĞÅÏ¢¡£
-	 * <li>Ê¹ÓÃreadAttributes·½·¨À´·µ»ØÒ»¸ö°üº¬ËùÓĞÎÄ¼şĞÅÏ¢µÄMap¶ÔÏó¡£
-	 * <li>Ê¹ÓÃÒ»¸öBasicFileAttributes½Ó¿Ú(Ä³¸ö¾ßÌåÊµÏÖÀà)×÷Îª²ÎÊı£¬µ÷ÓÃreadAttributes·½·¨À´»ñµÃÒ»¸ö°üº¬ÎÄ¼şĞÅÏ¢µÄBasicFileAttributes¶ÔÏó¡£
-	 * <li>Ê¹ÓÃgetFileAttributeView·½·¨£¬»ñµÃÒ»¸öÏê¾¡µÄÎÄ¼şĞÅÏ¢¼¯ºÏ¡£
+	 * ä½¿ç”¨java.nio.file.Filesç±»æ¥è·å¾—æ–‡ä»¶ä¿¡æ¯çš„æ–¹å¼ä¸€å…±æœ‰äº”ç§ï¼š 
+	 * <li>ä½¿ç”¨Fileså’Œæ–‡ä»¶ä¿¡æ¯ç›¸å…³çš„é™æ€æ–¹æ³•ï¼ˆä¾‹å¦‚isDirectoryï¼‰æ¥è·å¾—å…·ä½“æŸç§æ–‡ä»¶ä¿¡æ¯ã€‚
+	 * <li>ä½¿ç”¨Filesçš„getAttributeé™æ€æ–¹æ³•æ¥è·å¾—æŸä¸€ç§æ–‡ä»¶ä¿¡æ¯ã€‚
+	 * <li>ä½¿ç”¨readAttributesæ–¹æ³•æ¥è¿”å›ä¸€ä¸ªåŒ…å«æ‰€æœ‰æ–‡ä»¶ä¿¡æ¯çš„Mapå¯¹è±¡ã€‚
+	 * <li>ä½¿ç”¨ä¸€ä¸ªBasicFileAttributesæ¥å£(æŸä¸ªå…·ä½“å®ç°ç±»)ä½œä¸ºå‚æ•°ï¼Œè°ƒç”¨readAttributesæ–¹æ³•æ¥è·å¾—ä¸€ä¸ªåŒ…å«æ–‡ä»¶ä¿¡æ¯çš„BasicFileAttributeså¯¹è±¡ã€‚
+	 * <li>ä½¿ç”¨getFileAttributeViewæ–¹æ³•ï¼Œè·å¾—ä¸€ä¸ªè¯¦å°½çš„æ–‡ä»¶ä¿¡æ¯é›†åˆã€‚
 	 */
 	private static void testFilesAPI_Basic() throws IOException {
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 		System.out.println("exists?" + Files.exists(path));
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñÊÇÄ¿Â¼
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦æ˜¯ç›®å½•
 		System.out.println("isDirectory?" + Files.isDirectory(path));
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñ¿É¶Á
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å¯è¯»
 		System.out.println("isReadable?" + Files.isReadable(path));
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñ¿ÉĞ´
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å¯å†™
 		System.out.println("isWritable?" + Files.isWritable(path));
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñÒş²Ø
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦éšè—
 		System.out.println("isHidden?" + Files.isHidden(path));
-		// ÅĞ¶ÏÎÄ¼şÊÇ·ñÊÇ³£¹æÎÄ¼ş
+		// åˆ¤æ–­æ–‡ä»¶æ˜¯å¦æ˜¯å¸¸è§„æ–‡ä»¶
 		System.out.println("isRegularFile?" + Files.isRegularFile(path));
 		
 		
-		// ·µ»ØÎÄ¼şµÄFileStore
+		// è¿”å›æ–‡ä»¶çš„FileStore
 		System.out.println("getFileStore?" + Files.getFileStore(path));
-		// ·µ»ØÎÄ¼şµÄowner
+		// è¿”å›æ–‡ä»¶çš„owner
 		System.out.println("getOwner?" + Files.getOwner(path));
-		// ·µ»ØÎÄ¼şµÄ×îºóĞŞ¸ÄÊ±¼ä
+		// è¿”å›æ–‡ä»¶çš„æœ€åä¿®æ”¹æ—¶é—´
 		System.out.println("getLastModifiedTime?" + Files.getLastModifiedTime(path));
 
 		/*
-		 * ·µ»ØÎÄ¼şÄÚÈİµÄÀàĞÍ
+		 * è¿”å›æ–‡ä»¶å†…å®¹çš„ç±»å‹
 		 * 
-		 * Í¨³£Çé¿öÏÂÎÄ¼şÄÚÈİÀàĞÍ¿ÉÒÔÍ¨¹ıÀ©Õ¹ÃûÀ´»ñµÃ¡£ÀıÈçtxtÎÄ¼şÊÇÎÄ±¾ÎÄ¼ş£¬exeÎÄ¼şÔòÊÇWindowsÏÂµÄ¿ÉÖ´ĞĞÎÄ¼ş¡£
-		 * µ«¿ÉÒÔ½«Ò»¸ötxtÎÄ¼şÖØÃüÃû³ÉexeÎÄ¼ş£¬Õâ²¢²»ÄÜ¸Ä±äÎÄ¼şÄÚÈİµÄÀàĞÍ¡£Òò´ËÍ¨¹ıÎÄ¼şµÄÀ©Õ¹ÃûÀ´»ñµÃÆäÀàĞÍÓĞÒ»¶¨µÄÎóµ¼ĞÔ¡£
-		 * FilesÀàµÄprobeContentType¾ÍÊÇÓÃÀ´»ñµÃÎÄ¼şÄÚÈİÀàĞÍµÄ¡£
+		 * é€šå¸¸æƒ…å†µä¸‹æ–‡ä»¶å†…å®¹ç±»å‹å¯ä»¥é€šè¿‡æ‰©å±•åæ¥è·å¾—ã€‚ä¾‹å¦‚txtæ–‡ä»¶æ˜¯æ–‡æœ¬æ–‡ä»¶ï¼Œexeæ–‡ä»¶åˆ™æ˜¯Windowsä¸‹çš„å¯æ‰§è¡Œæ–‡ä»¶ã€‚
+		 * ä½†å¯ä»¥å°†ä¸€ä¸ªtxtæ–‡ä»¶é‡å‘½åæˆexeæ–‡ä»¶ï¼Œè¿™å¹¶ä¸èƒ½æ”¹å˜æ–‡ä»¶å†…å®¹çš„ç±»å‹ã€‚å› æ­¤é€šè¿‡æ–‡ä»¶çš„æ‰©å±•åæ¥è·å¾—å…¶ç±»å‹æœ‰ä¸€å®šçš„è¯¯å¯¼æ€§ã€‚
+		 * Filesç±»çš„probeContentTypeå°±æ˜¯ç”¨æ¥è·å¾—æ–‡ä»¶å†…å®¹ç±»å‹çš„ã€‚
 		 */
 		System.out.println(Files.probeContentType(path));
 	}
 	
 	/**
-	 * ÎÄ¼şÊôĞÔÏà¹ØµÄAPI
+	 * æ–‡ä»¶å±æ€§ç›¸å…³çš„API
 	 */
 	private static void testFilesAPI_Attribute() throws IOException {
 		/*
-		 * »ñµÃÖ¸¶¨µÄÄ³ÖÖÊôĞÔ£¬¼´µ÷ÓÃÒ»´Î·½·¨»ñµÃÒ»¸öÎÄ¼şÊôĞÔ
+		 * è·å¾—æŒ‡å®šçš„æŸç§å±æ€§ï¼Œå³è°ƒç”¨ä¸€æ¬¡æ–¹æ³•è·å¾—ä¸€ä¸ªæ–‡ä»¶å±æ€§
 		 * 
-		 * getAttribute·½·¨µÄµÚ¶ş²ÎÊıÖ¸¶¨ÁË¾ßÌåĞèÒª·µ»ØÄÄÖÖÎÄ¼şĞÅÏ¢¡£¿ÉÊ¹ÓÃµÄ²ÎÊıÖµÈçÏÂ£º
+		 * getAttributeæ–¹æ³•çš„ç¬¬äºŒå‚æ•°æŒ‡å®šäº†å…·ä½“éœ€è¦è¿”å›å“ªç§æ–‡ä»¶ä¿¡æ¯ã€‚å¯ä½¿ç”¨çš„å‚æ•°å€¼å¦‚ä¸‹ï¼š
 		 * 
-		 *    	²ÎÊıÖµ	     	·µ»ØÖµÀàĞÍ
+		 *    	å‚æ•°å€¼	     	è¿”å›å€¼ç±»å‹
 		 * lastModifiedTime		FileTime
 		 * lastAccessTime		FileTime
 		 * creationTime			FileTime
@@ -114,16 +114,16 @@ public class FilesTest {
 		String[] attributeNames = { "lastModifiedTime", "lastAccessTime",
 				"creationTime", "size", "isRegularFile", "isDirectory" };
 		for (String attributeName : attributeNames) {
-			System.out.println(attributeName + "£º"
+			System.out.println(attributeName + "ï¼š"
 					+ Files.getAttribute(path, attributeName));
 		}
 		System.out.println("*************************************************");
 		
 		/* 
-		 * Í¨¹ıµ÷ÓÃFiles.readAttributes·½·¨£¬·µ»Ø°üº¬ÎÄ¼şĞÅÏ¢µÄMap¶ÔÏó
+		 * é€šè¿‡è°ƒç”¨Files.readAttributesæ–¹æ³•ï¼Œè¿”å›åŒ…å«æ–‡ä»¶ä¿¡æ¯çš„Mapå¯¹è±¡
 		 * 
-		 * readAttributes·½·¨µÚ¶ş¸ö²ÎÊıÓÉÒ»¸öÊÓÍ¼ĞÅÏ¢µÄÃû³ÆºÍÒ»¸ö¾ßÌåÊôĞÔ×é³É£¬ÖĞ¼äÓÉÃ°ºÅ(:)¸ô¿ª¡£
-		 * ÀıÈç"posix:permissions,owner,size"¡£"*"Ôò´ú±íËùÓĞÊôĞÔ¡£
+		 * readAttributesæ–¹æ³•ç¬¬äºŒä¸ªå‚æ•°ç”±ä¸€ä¸ªè§†å›¾ä¿¡æ¯çš„åç§°å’Œä¸€ä¸ªå…·ä½“å±æ€§ç»„æˆï¼Œä¸­é—´ç”±å†’å·(:)éš”å¼€ã€‚
+		 * ä¾‹å¦‚"posix:permissions,owner,size"ã€‚"*"åˆ™ä»£è¡¨æ‰€æœ‰å±æ€§ã€‚
 		 */
 		Map<String, Object> attrsMap = Files.readAttributes(path, "*");
 		for (String attribute : attrsMap.keySet()) {
@@ -133,23 +133,23 @@ public class FilesTest {
 	}
 	
 	/**
-	 * ÎÄ¼şÊÓÍ¼Ïà¹ØµÄAPI
+	 * æ–‡ä»¶è§†å›¾ç›¸å…³çš„API
 	 * <p>
-	 * Java7ÒıÈëÁËÒ»ÏµÁĞ¹ØÓÚÎÄ¼şÊÓÍ¼µÄ½Ó¿Ú¡£Ò»¸öÎÄ¼şÊÓÍ¼(View)¼òµ¥À´Ëµ¾Í×éÖ¯ÎÄ¼ş(»òÕßÎÄ¼ş¼Ğ)ĞÅÏ¢µÄÒ»ÖÖ·½Ê½¡£
-	 * ÀıÈç£º
-	 * AclFileAttributeView£¬Ìá¹©ÁËºÍÎÄ¼şAccess Control List (ACL)Ïà¹ØµÄ·½·¨¡£
+	 * Java7å¼•å…¥äº†ä¸€ç³»åˆ—å…³äºæ–‡ä»¶è§†å›¾çš„æ¥å£ã€‚ä¸€ä¸ªæ–‡ä»¶è§†å›¾(View)ç®€å•æ¥è¯´å°±ç»„ç»‡æ–‡ä»¶(æˆ–è€…æ–‡ä»¶å¤¹)ä¿¡æ¯çš„ä¸€ç§æ–¹å¼ã€‚
+	 * ä¾‹å¦‚ï¼š
+	 * AclFileAttributeViewï¼Œæä¾›äº†å’Œæ–‡ä»¶Access Control List (ACL)ç›¸å…³çš„æ–¹æ³•ã€‚
 	 * 
-	 * java.nio.file.attribute°üÏÂ¹ØÓÚViewµÄ½Ó¿ÚÈçÏÂ: 
-	 * AclFileAttributeView: ÓÃÓÚÎ¬»¤ÎÄ¼şµÄ·ÃÎÊ¿ØÖÆÁĞ±í(ACL)ºÍÎÄ¼şËùÊôµÄÒ»Ğ©ĞÅÏ¢¡£
-	 * BasicFileAttributeView: ÓÃÓÚ·ÃÎÊÎÄ¼şµÄÒ»Ğ©»ù±¾ĞÅÏ¢£¬ÉèÖÃºÍÊ±¼äÏà¹ØµÄÒ»Ğ©ÊôĞÔ¡£
-	 * DosFileAttributeView: ÎªÒÅÁôµÄDOSÎÄ¼şÏµÍ³¶øÉè¼Æ¡£
-	 * FileOwnerAttributeView: ÓÃÓÚÎ¬»¤ÎÄ¼şµÄËùÊô(ÊôÓÚÄÄ¸öÓÃ»§)ĞÅÏ¢¡£
-	 * PosixFileAttributeView: ÓÃÀ´Ö§³Ö¿ÉÒÆÖ²ĞÔ²Ù×÷ÏµÍ³½Ó¿Ú(Portable Operating System Interface)¡£
-	 * UserDefinedFileAttributeView: ÓÃÀ´Ö§³ÖÓÃ»§¶¨ÒåµÄÎÄ¼şĞÅÏ¢¡£
+	 * java.nio.file.attributeåŒ…ä¸‹å…³äºViewçš„æ¥å£å¦‚ä¸‹: 
+	 * AclFileAttributeView: ç”¨äºç»´æŠ¤æ–‡ä»¶çš„è®¿é—®æ§åˆ¶åˆ—è¡¨(ACL)å’Œæ–‡ä»¶æ‰€å±çš„ä¸€äº›ä¿¡æ¯ã€‚
+	 * BasicFileAttributeView: ç”¨äºè®¿é—®æ–‡ä»¶çš„ä¸€äº›åŸºæœ¬ä¿¡æ¯ï¼Œè®¾ç½®å’Œæ—¶é—´ç›¸å…³çš„ä¸€äº›å±æ€§ã€‚
+	 * DosFileAttributeView: ä¸ºé—ç•™çš„DOSæ–‡ä»¶ç³»ç»Ÿè€Œè®¾è®¡ã€‚
+	 * FileOwnerAttributeView: ç”¨äºç»´æŠ¤æ–‡ä»¶çš„æ‰€å±(å±äºå“ªä¸ªç”¨æˆ·)ä¿¡æ¯ã€‚
+	 * PosixFileAttributeView: ç”¨æ¥æ”¯æŒå¯ç§»æ¤æ€§æ“ä½œç³»ç»Ÿæ¥å£(Portable Operating System Interface)ã€‚
+	 * UserDefinedFileAttributeView: ç”¨æ¥æ”¯æŒç”¨æˆ·å®šä¹‰çš„æ–‡ä»¶ä¿¡æ¯ã€‚
 	 */
 	private static void testFilesAPI_View() throws IOException {
 		/*
-		 * Ò»¸ö²Ù×÷ÏµÍ³¿ÉÄÜ²»Ö§³ÖJavaÖĞ¶¨ÒåµÄËùÓĞÎÄ¼şÊÓÍ¼ĞÅÏ¢£¬¿ÉÒÔÍ¨¹ıÏÂÃæµÄ´úÂëÀ´²é¿´ÆäËùÖ§³ÖµÄÊÓÍ¼ĞÅÏ¢¡£ 
+		 * ä¸€ä¸ªæ“ä½œç³»ç»Ÿå¯èƒ½ä¸æ”¯æŒJavaä¸­å®šä¹‰çš„æ‰€æœ‰æ–‡ä»¶è§†å›¾ä¿¡æ¯ï¼Œå¯ä»¥é€šè¿‡ä¸‹é¢çš„ä»£ç æ¥æŸ¥çœ‹å…¶æ‰€æ”¯æŒçš„è§†å›¾ä¿¡æ¯ã€‚ 
 		 */
 		FileSystem fileSystem = path.getFileSystem();  
 	    Set<String> supportedViews = fileSystem.supportedFileAttributeViews();  
@@ -173,7 +173,7 @@ public class FilesTest {
 	}
 	
 	/**
-	 * ²Ù×÷ÎÄ¼şAPI
+	 * æ“ä½œæ–‡ä»¶API
 	 */
 	private static void testFilesAPI_Operation() {
 		testFilesAPI_Operation_std();
@@ -181,45 +181,45 @@ public class FilesTest {
 	}
 	
 	/**
-	 * ´´½¨¡¢ÒÆ¶¯¡¢É¾³ıÎÄ¼ş/Ä¿Â¼API
+	 * åˆ›å»ºã€ç§»åŠ¨ã€åˆ é™¤æ–‡ä»¶/ç›®å½•API
 	 */
 	private static void testFilesAPI_Operation_std() {
 		try {
 			Path dirPath = FileSystems.getDefault().getPath("D:/files");
-			// ¸ù¾İÖ¸¶¨Â·¾¶´´½¨Ä¿Â¼£¬Èç¹ûÒÑ´æÔÚÔòÅ×³öÒì³£
+			// æ ¹æ®æŒ‡å®šè·¯å¾„åˆ›å»ºç›®å½•ï¼Œå¦‚æœå·²å­˜åœ¨åˆ™æŠ›å‡ºå¼‚å¸¸
 			Files.createDirectory(dirPath);
 			
 			Path dirPath2 = FileSystems.getDefault().getPath("D:/files/test/subtest");
-			// ¸ù¾İÖ¸¶¨Â·¾¶´´½¨Ä¿Â¼£¨°üÀ¨´´½¨Ä¿Â¼ÖĞËùÓĞÉĞ²»´æÔÚµÄ¸¸Ä¿Â¼£©£¬ÈôÄ³¸öÄ¿Â¼ÒÑ´æÔÚÔò²»»áÅ×³öÒì³£
+			// æ ¹æ®æŒ‡å®šè·¯å¾„åˆ›å»ºç›®å½•ï¼ˆåŒ…æ‹¬åˆ›å»ºç›®å½•ä¸­æ‰€æœ‰å°šä¸å­˜åœ¨çš„çˆ¶ç›®å½•ï¼‰ï¼Œè‹¥æŸä¸ªç›®å½•å·²å­˜åœ¨åˆ™ä¸ä¼šæŠ›å‡ºå¼‚å¸¸
 			Files.createDirectories(dirPath2);
 			
 			Path filePath = FileSystems.getDefault().getPath("D:/files/test.txt");
-			// ¸ù¾İÖ¸¶¨Â·¾¶´´½¨ĞÂµÄ¿ÕÎÄ¼ş£¬Èç¹ûÎÄ¼şÒÑ´æÔÚÔòÅ×³öÒì³£
+			// æ ¹æ®æŒ‡å®šè·¯å¾„åˆ›å»ºæ–°çš„ç©ºæ–‡ä»¶ï¼Œå¦‚æœæ–‡ä»¶å·²å­˜åœ¨åˆ™æŠ›å‡ºå¼‚å¸¸
 			Files.createFile(filePath);
 			
-			// createFileºÍcreateDirectoryÕâ¸öÁ½¸ö·½·¨¶¼ÊÇÔ­×ÓĞÔµÄ£¬¼´Òª²»Õû¸ö²Ù×÷¶¼ÄÜ³É¹¦»òÕßÕû¸ö²Ù×÷¶¼Ê§°Ü¡£
+			// createFileå’ŒcreateDirectoryè¿™ä¸ªä¸¤ä¸ªæ–¹æ³•éƒ½æ˜¯åŸå­æ€§çš„ï¼Œå³è¦ä¸æ•´ä¸ªæ“ä½œéƒ½èƒ½æˆåŠŸæˆ–è€…æ•´ä¸ªæ“ä½œéƒ½å¤±è´¥ã€‚
 			
-			// Ê¹ÓÃÖ¸¶¨ÎÄ¼şÃûÇ°×º¡¢ºó×º´´½¨ÁÙÊ±ÎÄ¼ş£¬´æ·ÅÓÚÄ¬ÈÏÁÙÊ±Ä¿Â¼ÏÂ£¨ System.getProperty("java.io.tmpdir")£©
+			// ä½¿ç”¨æŒ‡å®šæ–‡ä»¶åå‰ç¼€ã€åç¼€åˆ›å»ºä¸´æ—¶æ–‡ä»¶ï¼Œå­˜æ”¾äºé»˜è®¤ä¸´æ—¶ç›®å½•ä¸‹ï¼ˆ System.getProperty("java.io.tmpdir")ï¼‰
 			Path tempFile = Files.createTempFile("temp-", "-test");
-			// Ê¹ÓÃÖ¸¶¨ÎÄ¼şÃûÇ°×º¡¢ºó×º´´½¨ÁÙÊ±ÎÄ¼ş£¬´æ·ÅÓÚÖ¸¶¨Ä¿Â¼ÏÂ
+			// ä½¿ç”¨æŒ‡å®šæ–‡ä»¶åå‰ç¼€ã€åç¼€åˆ›å»ºä¸´æ—¶æ–‡ä»¶ï¼Œå­˜æ”¾äºæŒ‡å®šç›®å½•ä¸‹
 			Files.createTempFile(dirPath, "temp-", "-test");
-			// Ê¹ÓÃÖ¸¶¨Ç°×º´´½¨ÁÙÊ±Ä¿Â¼£¬´æ·ÅÓÚÄ¬ÈÏÁÙÊ±Ä¿Â¼ÏÂ£¨ System.getProperty("java.io.tmpdir")£©
+			// ä½¿ç”¨æŒ‡å®šå‰ç¼€åˆ›å»ºä¸´æ—¶ç›®å½•ï¼Œå­˜æ”¾äºé»˜è®¤ä¸´æ—¶ç›®å½•ä¸‹ï¼ˆ System.getProperty("java.io.tmpdir")ï¼‰
 			Files.createTempDirectory("dir-");
-			// Ê¹ÓÃÖ¸¶¨Ç°×º´´½¨ÁÙÊ±Ä¿Â¼£¬´æ·ÅÓÚÖ¸¶¨Ä¿Â¼ÏÂ
+			// ä½¿ç”¨æŒ‡å®šå‰ç¼€åˆ›å»ºä¸´æ—¶ç›®å½•ï¼Œå­˜æ”¾äºæŒ‡å®šç›®å½•ä¸‹
 			Files.createTempDirectory(dirPath, "dir-");
 			
-			// É¾³ıÎÄ¼ş£¬ÈôÉ¾³ıµÄÊÇÄ¿Â¼£¬Ôò±ØĞëÊÇ¿ÕÄ¿Â¼²Å¿ÉÒÔÉ¾³ı¡£ÎÄ¼ş²»´æÔÚ»òÄ¿Â¼·Ç¿Õ¶¼»áÅ×³öÒì³£¡£
+			// åˆ é™¤æ–‡ä»¶ï¼Œè‹¥åˆ é™¤çš„æ˜¯ç›®å½•ï¼Œåˆ™å¿…é¡»æ˜¯ç©ºç›®å½•æ‰å¯ä»¥åˆ é™¤ã€‚æ–‡ä»¶ä¸å­˜åœ¨æˆ–ç›®å½•éç©ºéƒ½ä¼šæŠ›å‡ºå¼‚å¸¸ã€‚
 			Files.delete(tempFile);
-			// Èç¹ûÎÄ¼ş´æÔÚÔòÉ¾³ı£¬ÈôÉ¾³ıµÄÊÇÄ¿Â¼£¬Ôò±ØĞëÊÇ¿ÕÄ¿Â¼²Å¿ÉÒÔÉ¾³ı¡£
-			// ÎÄ¼ş³É¹¦É¾³ıÔò·µ»Øtrue£¬ÎÄ¼ş²»´æÔÚÔò·µ»Øfalse¶ø²»Å×³öÒì³£¡£
+			// å¦‚æœæ–‡ä»¶å­˜åœ¨åˆ™åˆ é™¤ï¼Œè‹¥åˆ é™¤çš„æ˜¯ç›®å½•ï¼Œåˆ™å¿…é¡»æ˜¯ç©ºç›®å½•æ‰å¯ä»¥åˆ é™¤ã€‚
+			// æ–‡ä»¶æˆåŠŸåˆ é™¤åˆ™è¿”å›trueï¼Œæ–‡ä»¶ä¸å­˜åœ¨åˆ™è¿”å›falseè€Œä¸æŠ›å‡ºå¼‚å¸¸ã€‚
 			System.out.println("deleteIfExists?" + Files.deleteIfExists(tempFile));
 			
 			
-			// ÒÆ¶¯»òÖØÃüÃûÎÄ¼ş¿ÉÒÔÊ¹ÓÃFiles.move·½·¨
+			// ç§»åŠ¨æˆ–é‡å‘½åæ–‡ä»¶å¯ä»¥ä½¿ç”¨Files.moveæ–¹æ³•
 			
-			// ÖØÃüÃûÎÄ¼ş£¨ÔÚÍ¬Ò»¸öÄ¿Â¼ÏÂ£©
+			// é‡å‘½åæ–‡ä»¶ï¼ˆåœ¨åŒä¸€ä¸ªç›®å½•ä¸‹ï¼‰
 			Path source = Files.move(filePath, filePath.resolveSibling("newname"), StandardCopyOption.REPLACE_EXISTING);
-			// ÒÆ¶¯ÎÄ¼şµ½ÆäËûÄ¿Â¼
+			// ç§»åŠ¨æ–‡ä»¶åˆ°å…¶ä»–ç›®å½•
 			Path target = FileSystems.getDefault().getPath("E:/");
 			Files.move(source, target.resolve(source.getFileName()), StandardCopyOption.REPLACE_EXISTING);
 		} catch (Exception e) {
@@ -228,7 +228,7 @@ public class FilesTest {
 	}
 	
 	/**
-	 * ¶ÁĞ´ÎÄ¼şAPI
+	 * è¯»å†™æ–‡ä»¶API
 	 */
 	private static void testFilesAPI_Operation_io() {
 		try {
@@ -236,35 +236,35 @@ public class FilesTest {
 			Path target2 = FileSystems.getDefault().getPath("D:/files/readme_stream2.txt");
 			Path target3 = FileSystems.getDefault().getPath("D:/files/readme_copy.txt");
 			
-			// »ñÈ¡¶ÁÈ¡Ö¸¶¨ÎÄ¼şµÄInputStream¶ÔÏó
+			// è·å–è¯»å–æŒ‡å®šæ–‡ä»¶çš„InputStreamå¯¹è±¡
 			InputStream is = Files.newInputStream(path);
-			// »ñÈ¡Ğ´ÈëÖ¸¶¨ÎÄ¼şµÄOutputStream¶ÔÏó
+			// è·å–å†™å…¥æŒ‡å®šæ–‡ä»¶çš„OutputStreamå¯¹è±¡
 			OutputStream os = Files.newOutputStream(target1);
 			
-			// »ñÈ¡¶ÁÈ¡Ö¸¶¨ÎÄ¼şµÄBufferedReader¶ÔÏó
+			// è·å–è¯»å–æŒ‡å®šæ–‡ä»¶çš„BufferedReaderå¯¹è±¡
 			BufferedReader br = Files.newBufferedReader(path, StandardCharsets.UTF_8);
 			br.close();
-			// »ñÈ¡Ğ´ÈëÖ¸¶¨ÎÄ¼şµÄOutputStream¶ÔÏó
+			// è·å–å†™å…¥æŒ‡å®šæ–‡ä»¶çš„OutputStreamå¯¹è±¡
 			BufferedWriter bw = Files.newBufferedWriter(target1, StandardCharsets.UTF_8);
 			bw.close();
 			
-			// ¶ÁÈ¡ÎÄ¼ş½«ÆäËùÓĞ×Ö½Ú¿½±´µ½Êä³öÁ÷ÖĞ
+			// è¯»å–æ–‡ä»¶å°†å…¶æ‰€æœ‰å­—èŠ‚æ‹·è´åˆ°è¾“å‡ºæµä¸­
 			Files.copy(path, os);
 			os.flush();
 			os.close();
 			
-			// ´ÓÊäÈëÁ÷¶ÁÈ¡ËùÓĞ×Ö½Ú¿½±´µ½Ä¿±êÎÄ¼şÖĞ
+			// ä»è¾“å…¥æµè¯»å–æ‰€æœ‰å­—èŠ‚æ‹·è´åˆ°ç›®æ ‡æ–‡ä»¶ä¸­
 			Files.copy(is, target2);
 			is.close();
 			
-			// ´ÓÔ´ÎÄ¼ş¿½±´µ½Ä¿±êÎÄ¼ş
+			// ä»æºæ–‡ä»¶æ‹·è´åˆ°ç›®æ ‡æ–‡ä»¶
 			Files.copy(path, target3);
 			
-			// ´ÓÎÄ¼şÖĞ¶ÁÈ¡ËùÓĞµÄ×Ö½Ú
+			// ä»æ–‡ä»¶ä¸­è¯»å–æ‰€æœ‰çš„å­—èŠ‚
 			byte[] bytes = Files.readAllBytes(path);
 			System.out.println(new String(bytes));
 			
-			// ´ÓÎÄ¼şÖĞ¶ÁÈ¡ËùÓĞĞĞ
+			// ä»æ–‡ä»¶ä¸­è¯»å–æ‰€æœ‰è¡Œ
 			List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
 			System.out.println(lines);
 		} catch (Exception e) {

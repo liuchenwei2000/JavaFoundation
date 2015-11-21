@@ -6,14 +6,14 @@ package rtti.itf.impl;
 import rtti.itf.Interface;
 
 /**
- * ¹¹ÔìInterface¶ÔÏó£¨°ü¼¶ÀàÊµÏÖ£©µÄ¹¤³§Àà
+ * æ„é€ Interfaceå¯¹è±¡ï¼ˆåŒ…çº§ç±»å®ç°ï¼‰çš„å·¥å‚ç±»
  * <p>
- * Ê¹ÓÃÁËÊµÏÖ½Ó¿ÚInterfaceµÄPackageImplÀà£¬PackageImplÀàÊÇ°ü·ÃÎÊÈ¨ÏŞ£¬ÕâÑù°üÍâ²¿µÄ¿Í»§¶Ë¾Í²»ÄÜ¿´µ½Ëü¡£
+ * ä½¿ç”¨äº†å®ç°æ¥å£Interfaceçš„PackageImplç±»ï¼ŒPackageImplç±»æ˜¯åŒ…è®¿é—®æƒé™ï¼Œè¿™æ ·åŒ…å¤–éƒ¨çš„å®¢æˆ·ç«¯å°±ä¸èƒ½çœ‹åˆ°å®ƒã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * @see rtti.itf.demo.PackageImplDemo
  * 
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class PackageImplFactory {
 

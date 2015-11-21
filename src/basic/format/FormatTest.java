@@ -6,15 +6,15 @@ package format;
 import java.util.Formatter;
 
 /**
- * ¸ñÊ½»¯Ê¾Àı
+ * æ ¼å¼åŒ–ç¤ºä¾‹
  * <p>
- * Java5¿ªÊ¼Ö§³Ö¸ñÊ½»¯×Ö·û´®¹¦ÄÜ£¬Ã¿Ò»¸öÒÔ%×Ö·û¿ªÊ¼µÄ¡°¸ñÊ½ËµÃ÷·û¡±¶¼»áÓÃÏàÓ¦µÄ²ÎÊıÌæ»»£¬
- * ¸ñÊ½ËµÃ÷·ûÎ²²¿µÄ×ª»»·û½«Ö¸¶¨±»¸ñÊ½»¯µÄÖµÀàĞÍ£ºÈçf±íÊ¾¸¡µãÊı£¬s±íÊ¾×Ö·û´®¡£
- * ÒÔ %s ÎªÀı£¬%ÊÇ¸ñÊ½ËµÃ÷·û£¬sÊÇ×ª»»·û¡£
+ * Java5å¼€å§‹æ”¯æŒæ ¼å¼åŒ–å­—ç¬¦ä¸²åŠŸèƒ½ï¼Œæ¯ä¸€ä¸ªä»¥%å­—ç¬¦å¼€å§‹çš„â€œæ ¼å¼è¯´æ˜ç¬¦â€éƒ½ä¼šç”¨ç›¸åº”çš„å‚æ•°æ›¿æ¢ï¼Œ
+ * æ ¼å¼è¯´æ˜ç¬¦å°¾éƒ¨çš„è½¬æ¢ç¬¦å°†æŒ‡å®šè¢«æ ¼å¼åŒ–çš„å€¼ç±»å‹ï¼šå¦‚fè¡¨ç¤ºæµ®ç‚¹æ•°ï¼Œsè¡¨ç¤ºå­—ç¬¦ä¸²ã€‚
+ * ä»¥ %s ä¸ºä¾‹ï¼Œ%æ˜¯æ ¼å¼è¯´æ˜ç¬¦ï¼Œsæ˜¯è½¬æ¢ç¬¦ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ22ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ22æ—¥
  */
 public class FormatTest {
 
@@ -22,23 +22,23 @@ public class FormatTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// JavaSE5 Ö§³ÖµÄÁ½ÖÖ¸ñÊ½»¯Êä³ö·½Ê½
+		// JavaSE5 æ”¯æŒçš„ä¸¤ç§æ ¼å¼åŒ–è¾“å‡ºæ–¹å¼
 		System.out.printf("Name is %s%nAge is %d%nGrade is %c%nPassed? %b%n", "Tom Green", 14, 'A', true);
 		System.out.format("Name is %s%nAge is %d%nGrade is %c%nPassed? %b%n", "Tom Green", 14, 'A', true);
 		
-		// ¿ÉÒÔÊ¹ÓÃStringµÄ¾²Ì¬·½·¨´´½¨Ò»¸ö¸ñÊ½»¯µÄ×Ö·û´®¡£
+		// å¯ä»¥ä½¿ç”¨Stringçš„é™æ€æ–¹æ³•åˆ›å»ºä¸€ä¸ªæ ¼å¼åŒ–çš„å­—ç¬¦ä¸²ã€‚
 		String formatted = String.format("This is a %s", "book");
 		System.out.println(formatted);
 
-		// ×ó¶ÔÆë´òÓ¡±í¸ñµÄÊ¾Àı£¬%-12sÖĞ - ±íÊ¾×ó¶ÔÆë£¨Ä¬ÈÏÓÒ¶ÔÆë£©12±íÊ¾×Ö·û´®³¤¶È
+		// å·¦å¯¹é½æ‰“å°è¡¨æ ¼çš„ç¤ºä¾‹ï¼Œ%-12sä¸­ - è¡¨ç¤ºå·¦å¯¹é½ï¼ˆé»˜è®¤å³å¯¹é½ï¼‰12è¡¨ç¤ºå­—ç¬¦ä¸²é•¿åº¦
 		String formatStr = "%-12s %-8s %4s %12s%n";
 		System.out.printf(formatStr, "Code", "Name", "Age", "Meesage");
 		for (int i = 1; i < 10; i++) {
 			System.out.printf(formatStr, "Code" + i, "Name" + i, i + 20, "Meesage" + i);
 		}
 		
-		// ËùÓĞĞÂµÄ¸ñÊ½»¯¹¦ÄÜ¶¼ÓÉ Formatter Àà´¦Àí£¬Êµ¼ÊÉÏ String.format()·½·¨Ò²ÊÇÊ¹ÓÃ Formatter ÊµÏÖµÄ¡£
-		// ¿ÉÒÔ½«Êä³öÄ¿µÄµØ´«µİ½øÈ¥£¨±ÈÈç PrintStream¡¢OutputStream¡¢FileµÈ£©
+		// æ‰€æœ‰æ–°çš„æ ¼å¼åŒ–åŠŸèƒ½éƒ½ç”± Formatter ç±»å¤„ç†ï¼Œå®é™…ä¸Š String.format()æ–¹æ³•ä¹Ÿæ˜¯ä½¿ç”¨ Formatter å®ç°çš„ã€‚
+		// å¯ä»¥å°†è¾“å‡ºç›®çš„åœ°ä¼ é€’è¿›å»ï¼ˆæ¯”å¦‚ PrintStreamã€OutputStreamã€Fileç­‰ï¼‰
 		Formatter formatter = new Formatter(System.out);
 		formatter.format("Formatted by %s", "Formatter");
 		formatter.close();

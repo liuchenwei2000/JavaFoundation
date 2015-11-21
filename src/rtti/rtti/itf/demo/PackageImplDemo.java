@@ -8,11 +8,11 @@ import rtti.itf.impl.PackageImplFactory;
 import rtti.reflect.MethodInvokingUtil;
 
 /**
- * PackageImplÀàÑİÊ¾
+ * PackageImplç±»æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class PackageImplDemo {
 
@@ -23,13 +23,13 @@ public class PackageImplDemo {
 		Interface a = PackageImplFactory.makeInterface();
 		a.f();
 		System.out.println(a.getClass().getSimpleName());
-//		ÒÔÏÂ´úÂë±àÒëÆ÷»á±¨´í£¬ÒòÎªPackageCÊÇ°ü¼¶·ÃÎÊÈ¨ÏŞ
+//		ä»¥ä¸‹ä»£ç ç¼–è¯‘å™¨ä¼šæŠ¥é”™ï¼Œå› ä¸ºPackageCæ˜¯åŒ…çº§è®¿é—®æƒé™
 //		if(a instanceof PackageC){
 //			PackageC c = (PackageC)a;
 //			c.g();
 //		}
 		try {
-			// Í¨¹ı·´ÉäÈÔÈ»¿ÉÒÔµ÷ÓÃg()£¬ÉõÖÁË½ÓĞ·½·¨
+			// é€šè¿‡åå°„ä»ç„¶å¯ä»¥è°ƒç”¨g()ï¼Œç”šè‡³ç§æœ‰æ–¹æ³•
 			MethodInvokingUtil.callHiddenMethod(a, "g");
 			MethodInvokingUtil.callHiddenMethod(a, "u");
 			MethodInvokingUtil.callHiddenMethod(a, "v");

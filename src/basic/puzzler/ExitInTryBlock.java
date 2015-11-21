@@ -4,11 +4,11 @@
 package puzzler;
 
 /**
- * ÔÚtry¿éÖĞÓĞSystem.exit(0)Óï¾äÊ±µÄ¿ØÖÆÁ÷³ÌÊ¾Àı
+ * åœ¨tryå—ä¸­æœ‰System.exit(0)è¯­å¥æ—¶çš„æ§åˆ¶æµç¨‹ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-7
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-7
  */
 public class ExitInTryBlock {
 
@@ -17,8 +17,8 @@ public class ExitInTryBlock {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * System.exit(0)²Ù×÷½«»áÍ£Ö¹Ò»ÇĞÏß³ÌÈ»ºóÍÆ³öĞéÄâ»ú 
-		 * ËùÒÔËü²»»áÔÙÈ¥Ö´ĞĞfinallyÖĞµÄÈÎºÎ²Ù×÷
+		 * System.exit(0)æ“ä½œå°†ä¼šåœæ­¢ä¸€åˆ‡çº¿ç¨‹ç„¶åæ¨å‡ºè™šæ‹Ÿæœº 
+		 * æ‰€ä»¥å®ƒä¸ä¼šå†å»æ‰§è¡Œfinallyä¸­çš„ä»»ä½•æ“ä½œ
 		 */
 		try {
 			System.out.println("Goodbye!");

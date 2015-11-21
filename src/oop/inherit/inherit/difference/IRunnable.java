@@ -4,21 +4,21 @@
 package inherit.difference;
 
 /**
- * ±¼ÅÜ½Ó¿Ú
+ * å¥”è·‘æ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public interface IRunnable {
 	
 	/**
-	 * Ç°½ø¶¯×÷
+	 * å‰è¿›åŠ¨ä½œ
 	 */
 	public void goAhead();
 
 	/**
-	 * ºóÍË¶¯×÷
+	 * åé€€åŠ¨ä½œ
 	 */
 	public void backOff();
 }

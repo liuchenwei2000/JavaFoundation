@@ -4,34 +4,34 @@
 package generic;
 
 /**
- * ·ºÐÍÀà¾ÍÊÇ¾ßÓÐÒ»¸ö»ò¶à¸öÀàÐÍ±äÁ¿µÄÀà
+ * æ³›åž‹ç±»å°±æ˜¯å…·æœ‰ä¸€ä¸ªæˆ–å¤šä¸ªç±»åž‹å˜é‡çš„ç±»
  * <p>
- * PairÀàÒýÈëÁËÒ»¸öÀàÐÍ±äÁ¿T£¬ÓÃ¼âÀ¨ºÅ(<>)À¨Æð£¬²¢·ÅÔÚÀàÃûµÄºóÃæ¡£
+ * Pairç±»å¼•å…¥äº†ä¸€ä¸ªç±»åž‹å˜é‡Tï¼Œç”¨å°–æ‹¬å·(<>)æ‹¬èµ·ï¼Œå¹¶æ”¾åœ¨ç±»åçš„åŽé¢ã€‚
  * <p>
- * ·ºÐÍÀà¿ÉÒÔÓÐ¶à¸öÀàÐÍ±äÁ¿¡£
- * ÀýÈç£¬¿ÉÒÔ¶¨ÒåPairÀà£¬ÆäÖÐµÚÒ»¸öÓòºÍµÚ¶þ¸öÓòÊ¹ÓÃ²»Í¬µÄÀàÐÍ£º</br>
+ * æ³›åž‹ç±»å¯ä»¥æœ‰å¤šä¸ªç±»åž‹å˜é‡ã€‚
+ * ä¾‹å¦‚ï¼Œå¯ä»¥å®šä¹‰Pairç±»ï¼Œå…¶ä¸­ç¬¬ä¸€ä¸ªåŸŸå’Œç¬¬äºŒä¸ªåŸŸä½¿ç”¨ä¸åŒçš„ç±»åž‹ï¼š</br>
  * public class Pair<T,U>{...}
  * <p>
- * ÀàÐÍ±äÁ¿Ê¹ÓÃ´óÐ´ÐÎÊ½£¬ÇÒ±È½Ï¶Ì£¬ÕâÊÇºÜ³£¼ûµÄ¡£°´ÕÕJava¹æ·¶£º</br>
- * <li>Ò»°ãÊ¹ÓÃ±äÁ¿E±íÊ¾¼¯ºÏµÄÔªËØÀàÐÍ
- * <li>KºÍV·Ö±ð±íÊ¾±íµÄ¹Ø¼ü×ÖÓëÖµµÄÀàÐÍ
- * <li>T(ÐèÒªÊ±»¹¿ÉÒÔÊ¹ÓÃUºÍS)±íÊ¾ÈÎÒâÀàÐÍ
+ * ç±»åž‹å˜é‡ä½¿ç”¨å¤§å†™å½¢å¼ï¼Œä¸”æ¯”è¾ƒçŸ­ï¼Œè¿™æ˜¯å¾ˆå¸¸è§çš„ã€‚æŒ‰ç…§Javaè§„èŒƒï¼š</br>
+ * <li>ä¸€èˆ¬ä½¿ç”¨å˜é‡Eè¡¨ç¤ºé›†åˆçš„å…ƒç´ ç±»åž‹
+ * <li>Kå’ŒVåˆ†åˆ«è¡¨ç¤ºè¡¨çš„å…³é”®å­—ä¸Žå€¼çš„ç±»åž‹
+ * <li>T(éœ€è¦æ—¶è¿˜å¯ä»¥ä½¿ç”¨Uå’ŒS)è¡¨ç¤ºä»»æ„ç±»åž‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-8-3
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-3
  */
 public class Pair<T> {
 
-	// Àà¶¨ÒåÖÐµÄÀàÐÍ±äÁ¿Ö¸¶¨·½·¨µÄ·µ»ØÀàÐÍÒÔ¼°×Ö¶ÎºÍ¾Ö²¿±äÁ¿µÄÀàÐÍ
-	private T first;// Ê¹ÓÃÁËÀàÐÍ±äÁ¿T
+	// ç±»å®šä¹‰ä¸­çš„ç±»åž‹å˜é‡æŒ‡å®šæ–¹æ³•çš„è¿”å›žç±»åž‹ä»¥åŠå­—æ®µå’Œå±€éƒ¨å˜é‡çš„ç±»åž‹
+	private T first;// ä½¿ç”¨äº†ç±»åž‹å˜é‡T
 	private T second;
 
 	public Pair() {
 	}
 
 	/**
-	 * Ê¹ÓÃÁËÀàÐÍ±äÁ¿T
+	 * ä½¿ç”¨äº†ç±»åž‹å˜é‡T
 	 */
 	public Pair(T first, T second) {
 		this.first = first;
@@ -79,9 +79,9 @@ public class Pair<T> {
 				max = s;
 		}
 		/*
-		 * ÓÃ¾ßÌåµÄÀàÐÍÌæ»»ÀàÐÍ±äÁ¿¾Í¿ÉÒÔÊµÀý»¯·ºÐÍÀàÐÍ
-		 * ÀýÈç£ºPair<String>
-		 * »»¾ä»°Ëµ£¬·ºÐÍÀà¿É¿´×÷ÆÕÍ¨ÀàµÄ¹¤³§¡£
+		 * ç”¨å…·ä½“çš„ç±»åž‹æ›¿æ¢ç±»åž‹å˜é‡å°±å¯ä»¥å®žä¾‹åŒ–æ³›åž‹ç±»åž‹
+		 * ä¾‹å¦‚ï¼šPair<String>
+		 * æ¢å¥è¯è¯´ï¼Œæ³›åž‹ç±»å¯çœ‹ä½œæ™®é€šç±»çš„å·¥åŽ‚ã€‚
 		 */
 		return new Pair<String>(min,max);
 	}

@@ -4,15 +4,15 @@
 package inherit.difference;
 
 /**
- * Ö²ÎïÀà
+ * æ¤ç‰©ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Plant extends Biology implements IShowInfo {
 	
-	private String type;// ÖÖÊô
+	private String type;// ç§å±
 
 	public Plant() {
 		this.name = "";
@@ -36,7 +36,7 @@ public class Plant extends Biology implements IShowInfo {
 
 	@Override
 	protected String getDeathInfo() {
-		return "¹âºÏ×÷ÓÃÍ£Ö¹£¡";
+		return "å…‰åˆä½œç”¨åœæ­¢ï¼";
 	}
 
 	@Override

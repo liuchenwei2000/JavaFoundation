@@ -4,39 +4,39 @@
 package generic;
 
 /**
- * ÄÚ²¿ÀàµÄ·ºÐÍ
+ * å†…éƒ¨ç±»çš„æ³›åž‹
  * <p>
- * Ò»¸ö¾²Ì¬ÄÚ²¿Àà¿ÉÒÔÓÃËü×Ô¼ºµÄÀàÐÍ±äÁ¿ÉùÃ÷Îª·ºÐÍ ¡£</br>
- * ËäÈ»¾²Ì¬³ÉÔ±²»ÄÜÉæ¼°ËüËùÔÚÀàµÄÀàÐÍ±äÁ¿(·ºÐÍ)£¬µ«ÊÇ¾²Ì¬ÄÚ²¿ÀàµÄÀàÐÍ±äÁ¿
- * ºÍËüµÄÍâÎ§ÀàµÄÀàÐÍ±äÁ¿ÊÇ²»Í¬µÄ£¬¼´Ê¹ÕâÁ½¸öÀàÐÍ±äÁ¿µÄÃû³ÆÊÇÒ»ÑùµÄ¡£
+ * ä¸€ä¸ªé™æ€å†…éƒ¨ç±»å¯ä»¥ç”¨å®ƒè‡ªå·±çš„ç±»åž‹å˜é‡å£°æ˜Žä¸ºæ³›åž‹ ã€‚</br>
+ * è™½ç„¶é™æ€æˆå‘˜ä¸èƒ½æ¶‰åŠå®ƒæ‰€åœ¨ç±»çš„ç±»åž‹å˜é‡(æ³›åž‹)ï¼Œä½†æ˜¯é™æ€å†…éƒ¨ç±»çš„ç±»åž‹å˜é‡
+ * å’Œå®ƒçš„å¤–å›´ç±»çš„ç±»åž‹å˜é‡æ˜¯ä¸åŒçš„ï¼Œå³ä½¿è¿™ä¸¤ä¸ªç±»åž‹å˜é‡çš„åç§°æ˜¯ä¸€æ ·çš„ã€‚
  * 
  * <strong>
- * ÕâÖÖÉè¼Æ»áÊ¹µÃ³ÌÐò½á¹¹±äµÃ¸´ÔÓ²¢ÇÒ²»Ò×¶®£¬¾¡Á¿²»Ê¹ÓÃ¡£
+ * è¿™ç§è®¾è®¡ä¼šä½¿å¾—ç¨‹åºç»“æž„å˜å¾—å¤æ‚å¹¶ä¸”ä¸æ˜“æ‡‚ï¼Œå°½é‡ä¸ä½¿ç”¨ã€‚
  * </strong>
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-9-15
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-15
  */
 public class NestedGenericType<E> {
 	
-	// private static Cell<E> invalid;// static±äÁ¿²»ÄÜºÍ·ºÐÍÍ¬Ê±Ê¹ÓÃ
-	protected Cell<E> head;// ÕâÀïµÄEÊÇÍâ²¿ÀàµÄ·ºÐÍ
+	// private static Cell<E> invalid;// staticå˜é‡ä¸èƒ½å’Œæ³›åž‹åŒæ—¶ä½¿ç”¨
+	protected Cell<E> head;// è¿™é‡Œçš„Eæ˜¯å¤–éƒ¨ç±»çš„æ³›åž‹
 	protected Cell<E> tail;
 
 	/* ... rest of NestedGenericType ... */
 	
 	/**
-	 * ¾²Ì¬ÄÚ²¿ÀàºÍÍâ²¿ÀàµÄ·ºÐÍÃû×ÖÒ»Ñù£¬ÕâËäÈ»»áµ¼ÖÂ¿É¶ÁÐÔÏÂ½µ £¬
-	 * µ«ÊÇÕâÔÚÓïÒåÉÏ±íÊ¾ËüÃÇËù´ú±íµÄÀàÐÍÓ¦¸ÃÊÇÒ»ÑùµÄ¡£
-	 * ÄÚ²¿ÀàµÄ·ºÐÍ»áÒþ²ØÍâ²¿ÀàµÄÈÎºÎ·ºÐÍ£¬ËùÒÔÒþ²ØÓ¦¸Ã±»±ÜÃâ¡£
+	 * é™æ€å†…éƒ¨ç±»å’Œå¤–éƒ¨ç±»çš„æ³›åž‹åå­—ä¸€æ ·ï¼Œè¿™è™½ç„¶ä¼šå¯¼è‡´å¯è¯»æ€§ä¸‹é™ ï¼Œ
+	 * ä½†æ˜¯è¿™åœ¨è¯­ä¹‰ä¸Šè¡¨ç¤ºå®ƒä»¬æ‰€ä»£è¡¨çš„ç±»åž‹åº”è¯¥æ˜¯ä¸€æ ·çš„ã€‚
+	 * å†…éƒ¨ç±»çš„æ³›åž‹ä¼šéšè—å¤–éƒ¨ç±»çš„ä»»ä½•æ³›åž‹ï¼Œæ‰€ä»¥éšè—åº”è¯¥è¢«é¿å…ã€‚
 	 */
 	static class Cell<E> {
 		
 		private Cell<E> next;
-		private E element;// ±äÁ¿»òÕß×Ö¶Î¿ÉÒÔÕâÑùÉùÃ÷Îª·ºÐÍ
+		private E element;// å˜é‡æˆ–è€…å­—æ®µå¯ä»¥è¿™æ ·å£°æ˜Žä¸ºæ³›åž‹
 
-		public Cell(E element) {// ÐÎÊ½²ÎÊýÒ²¿ÉÒÔÉùÃ÷Îª·ºÐÍ
+		public Cell(E element) {// å½¢å¼å‚æ•°ä¹Ÿå¯ä»¥å£°æ˜Žä¸ºæ³›åž‹
 			this.element = element;
 		}
 
@@ -45,7 +45,7 @@ public class NestedGenericType<E> {
 			this.next = next;
 		}
 
-		public E getElement() {// ·µ»ØÀàÐÍÒ²¿ÉÒÔÉùÃ÷Îª·ºÐÍ
+		public E getElement() {// è¿”å›žç±»åž‹ä¹Ÿå¯ä»¥å£°æ˜Žä¸ºæ³›åž‹
 			return element;
 		}
 
@@ -55,7 +55,7 @@ public class NestedGenericType<E> {
 	}
 
 	/**
-	 * ·Ç¾²Ì¬ÄÚ²¿Àà¿ÉÒÔÖ±½ÓÊ¹ÓÃÍâ²¿ÀàµÄ·ºÐÍ
+	 * éžé™æ€å†…éƒ¨ç±»å¯ä»¥ç›´æŽ¥ä½¿ç”¨å¤–éƒ¨ç±»çš„æ³›åž‹
 	 */
 	class Cell2 {
 		

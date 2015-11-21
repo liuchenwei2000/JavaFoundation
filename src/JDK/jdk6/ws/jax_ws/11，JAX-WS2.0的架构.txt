@@ -1,20 +1,20 @@
-JAX-WS²»ÊÇÒ»¸ö¹ÂÁ¢µÄ¿ò¼Ü£¬ËüÒÀÀµÓÚÖÚ¶àÆäËûµÄ¹æ·¶£¬±¾ÖÊÉÏËüÓÉÒÔÏÂ¼¸²¿·Ö×é³É£º
+JAX-WSä¸æ˜¯ä¸€ä¸ªå­¤ç«‹çš„æ¡†æž¶ï¼Œå®ƒä¾èµ–äºŽä¼—å¤šå…¶ä»–çš„è§„èŒƒï¼Œæœ¬è´¨ä¸Šå®ƒç”±ä»¥ä¸‹å‡ éƒ¨åˆ†ç»„æˆï¼š
 
-1.ÓÃÀ´¿ª·¢Web ServicesµÄJava API¡£
+1.ç”¨æ¥å¼€å‘Web Servicesçš„Java APIã€‚
 
-2.ÓÃÀ´´¦ÀíMarshal/UnmarshalµÄXML Binding»úÖÆ¡£
-JAX-WS2.0ÓÃJAXB2À´´¦ÀíJava ObjectÓëXMLÖ®¼äµÄÓ³Éä£¬Marshalling¾ÍÊÇ°ÑJava ObjectÓ³Éäµ½XML£¬UnmarshallingÔòÊÇ°ÑXMLÓ³Éäµ½Java Object¡£
-Ö®ËùÒÔÒª×öJava ObjectÓëXMLµÄÓ³Éä£¬ÊÇÒòÎª×îÖÕ×÷Îª·½·¨²ÎÊýºÍ·µ»ØÖµµÄJava ObjectÒªÍ¨¹ýÍøÂç´«ÊäÐ­Òé(Ò»°ãÊÇSOAP)´«ËÍ£¬
-Õâ¾ÍÒªÇó±ØÐë¶ÔJava Object×öÀàËÆÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯µÄ¹¤×÷£¬ÔÚSOAPÖÐ¾ÍÊÇÒªÓÃXMLÀ´±íÊ¾Java objectµÄÄÚ²¿×´Ì¬¡£
+2.ç”¨æ¥å¤„ç†Marshal/Unmarshalçš„XML Bindingæœºåˆ¶ã€‚
+JAX-WS2.0ç”¨JAXB2æ¥å¤„ç†Java Objectä¸ŽXMLä¹‹é—´çš„æ˜ å°„ï¼ŒMarshallingå°±æ˜¯æŠŠJava Objectæ˜ å°„åˆ°XMLï¼ŒUnmarshallingåˆ™æ˜¯æŠŠXMLæ˜ å°„åˆ°Java Objectã€‚
+ä¹‹æ‰€ä»¥è¦åšJava Objectä¸ŽXMLçš„æ˜ å°„ï¼Œæ˜¯å› ä¸ºæœ€ç»ˆä½œä¸ºæ–¹æ³•å‚æ•°å’Œè¿”å›žå€¼çš„Java Objectè¦é€šè¿‡ç½‘ç»œä¼ è¾“åè®®(ä¸€èˆ¬æ˜¯SOAP)ä¼ é€ï¼Œ
+è¿™å°±è¦æ±‚å¿…é¡»å¯¹Java Objectåšç±»ä¼¼åºåˆ—åŒ–å’Œååºåˆ—åŒ–çš„å·¥ä½œï¼Œåœ¨SOAPä¸­å°±æ˜¯è¦ç”¨XMLæ¥è¡¨ç¤ºJava objectçš„å†…éƒ¨çŠ¶æ€ã€‚
 
-3.ÖÚ¶àÔªÊý¾Ý(Annotations)»á±»JAX-WSÓÃÀ´ÃèÊöWeb ServicesµÄÏà¹ØÀà¡£
-°üÀ¨Common Annotations£¬ Web Services Metadata£¬ JAXB2µÄÔªÊý¾ÝºÍJAX-WS2.0¹æ·¶×Ô¼ºµÄÔªÊý¾Ý¡£
+3.ä¼—å¤šå…ƒæ•°æ®(Annotations)ä¼šè¢«JAX-WSç”¨æ¥æè¿°Web Servicesçš„ç›¸å…³ç±»ã€‚
+åŒ…æ‹¬Common Annotationsï¼Œ Web Services Metadataï¼Œ JAXB2çš„å…ƒæ•°æ®å’ŒJAX-WS2.0è§„èŒƒè‡ªå·±çš„å…ƒæ•°æ®ã€‚
 
-4.Annotation Processing Tool(APT)ÊÇJAX-WSÖØÒªµÄ×é³É²¿·Ö¡£ÓÉÓÚJAX-WS2.0¹æ·¶ÓÃµ½ºÜ¶àÔªÊý¾Ý£¬ËùÒÔÐèÒªAPTÀ´´¦ÀíÖÚ¶àµÄAnnotations¡£
-ÔÚ<JDK_HOME>/binÏÂÓÐÁ½¸öÃüÁîwsgenºÍwsimport£¬¾ÍÊÇÓÃµ½APTºÍCompiler APIÀ´´¦ÀíÅöµ½µÄAnnotations£º
-wsgen¿ÉÒÔÎªWeb Services Provider²úÉú²¢±àÒë±ØÒªµÄ°ïÖúÀàºÍÏà¹ØÖ§³ÖÎÄ¼þ£¬
-wsimportÒÔWSDL×÷ÎªÊäÈëÎªWeb Service Consumer(webserviceµ÷ÓÃ¶Ë)²úÉú²¢±àÒë±ØÒªµÄ°ïÖúÀàºÍÏà¹ØÖ§³ÖÎÄ¼þ¡£
+4.Annotation Processing Tool(APT)æ˜¯JAX-WSé‡è¦çš„ç»„æˆéƒ¨åˆ†ã€‚ç”±äºŽJAX-WS2.0è§„èŒƒç”¨åˆ°å¾ˆå¤šå…ƒæ•°æ®ï¼Œæ‰€ä»¥éœ€è¦APTæ¥å¤„ç†ä¼—å¤šçš„Annotationsã€‚
+åœ¨<JDK_HOME>/binä¸‹æœ‰ä¸¤ä¸ªå‘½ä»¤wsgenå’Œwsimportï¼Œå°±æ˜¯ç”¨åˆ°APTå’ŒCompiler APIæ¥å¤„ç†ç¢°åˆ°çš„Annotationsï¼š
+wsgenå¯ä»¥ä¸ºWeb Services Provideräº§ç”Ÿå¹¶ç¼–è¯‘å¿…è¦çš„å¸®åŠ©ç±»å’Œç›¸å…³æ”¯æŒæ–‡ä»¶ï¼Œ
+wsimportä»¥WSDLä½œä¸ºè¾“å…¥ä¸ºWeb Service Consumer(webserviceè°ƒç”¨ç«¯)äº§ç”Ÿå¹¶ç¼–è¯‘å¿…è¦çš„å¸®åŠ©ç±»å’Œç›¸å…³æ”¯æŒæ–‡ä»¶ã€‚
 
-5.JAX-WS»¹°üÀ¨JAX-WS RuntimeÓëÓ¦ÓÃ·þÎñÆ÷ºÍ¹¤¾ßÖ®¼äµÄÆõÔ¼¹ØÏµ¡£
+5.JAX-WSè¿˜åŒ…æ‹¬JAX-WS Runtimeä¸Žåº”ç”¨æœåŠ¡å™¨å’Œå·¥å…·ä¹‹é—´çš„å¥‘çº¦å…³ç³»ã€‚
 
-±¾°üÄÚµÄ´úÂë½éÉÜÔÚJDK6»·¾³ÏÂÓÃJAX-WS2.0¿ª·¢ºÍ²âÊÔWeb ServicesµÄ²½Öè¡£
+æœ¬åŒ…å†…çš„ä»£ç ä»‹ç»åœ¨JDK6çŽ¯å¢ƒä¸‹ç”¨JAX-WS2.0å¼€å‘å’Œæµ‹è¯•Web Servicesçš„æ­¥éª¤ã€‚

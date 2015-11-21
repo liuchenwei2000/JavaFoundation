@@ -5,37 +5,37 @@ package generic.app;
 
 
 /**
- * ¶ÔÏóÉú³ÉÆ÷»ùÀà
+ * å¯¹è±¡ç”Ÿæˆå™¨åŸºç±»
  * <p>
- * ¸ÃÀà¿ÉÒÔÎªÈÎºÎÀà¹¹ÔìÒ»¸öÉú³ÉÆ÷£¬Ö»Òª¸ÃÀà¾ßÓĞÄ¬ÈÏµÄ¹¹ÔìÆ÷¡£
+ * è¯¥ç±»å¯ä»¥ä¸ºä»»ä½•ç±»æ„é€ ä¸€ä¸ªç”Ÿæˆå™¨ï¼Œåªè¦è¯¥ç±»å…·æœ‰é»˜è®¤çš„æ„é€ å™¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-15
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-15
  */
 public class BasicGenerator<T> implements Generator<T> {
 	
-	private Class<T> type;// Éú³É¶ÔÏóµÄÀàĞÍ
+	private Class<T> type;// ç”Ÿæˆå¯¹è±¡çš„ç±»å‹
 	
 	/**
-	 * typeÀàĞÍµÄÉú³ÉÆ÷
+	 * typeç±»å‹çš„ç”Ÿæˆå™¨
 	 */
 	public BasicGenerator(Class<T> type) {
 		this.type = type;
 	}
 	
 	/**
-	 * ÎªtypeÀàĞÍ´´½¨Ä¬ÈÏµÄÉú³ÉÆ÷
+	 * ä¸ºtypeç±»å‹åˆ›å»ºé»˜è®¤çš„ç”Ÿæˆå™¨
 	 * <p>
-	 * ¸Ã·½·¨¿ÉÒÔÖ±½ÓÓÃĞÎÈçBasicGenerator.create(Integer.class)£¬
-	 * ¶ø²»±ØÖ´ĞĞÂé·³µÄnew BasicGenerator<Integer>(Integer.class)¡£
+	 * è¯¥æ–¹æ³•å¯ä»¥ç›´æ¥ç”¨å½¢å¦‚BasicGenerator.create(Integer.class)ï¼Œ
+	 * è€Œä¸å¿…æ‰§è¡Œéº»çƒ¦çš„new BasicGenerator<Integer>(Integer.class)ã€‚
 	 */
 	public static <T> Generator<T> create(Class<T> type){
 		return new BasicGenerator<T>(type);
 	}
 	
 	/**
-	 * Éú³ÉÖ¸¶¨ÀàĞÍµÄ¶ÔÏó
+	 * ç”ŸæˆæŒ‡å®šç±»å‹çš„å¯¹è±¡
 	 * 
 	 * @see generic.app.Generator#generate()
 	 */

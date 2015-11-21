@@ -4,11 +4,11 @@
 package syntax;
 
 /**
- * if-elseÓï¾ä±æÎö
+ * if-elseè¯­å¥è¾¨æ
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-9-10
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-10
  */
 public class IfElseDemo {
 
@@ -18,7 +18,7 @@ public class IfElseDemo {
 	public static void main(String[] args) {
 		int score = 76;
 		char grade = ' ';
-		// if-elseÓï¾ä(µ±ifºóµÄÓï¾äÎªtrueÊ±ÔòÖ´ĞĞÍê¸ÃifÓï¾ä¿éºóÖ±½ÓÌø³öif-else¿é)
+		// if-elseè¯­å¥(å½“ifåçš„è¯­å¥ä¸ºtrueæ—¶åˆ™æ‰§è¡Œå®Œè¯¥ifè¯­å¥å—åç›´æ¥è·³å‡ºif-elseå—)
 		if (score >= 90) {
 			grade = 'A';
 		} else if (score >= 80) {
@@ -32,7 +32,7 @@ public class IfElseDemo {
 		}
 		System.out.println("Grade " + grade);
 
-		// ´¿ifÓï¾ä(Ë³ĞòÖ´ĞĞÏÂÈ¥)
+		// çº¯ifè¯­å¥(é¡ºåºæ‰§è¡Œä¸‹å»)
 		if (score >= 90) {
 			grade = 'A';
 		}

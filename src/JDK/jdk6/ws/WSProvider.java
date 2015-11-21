@@ -12,30 +12,30 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 
 /**
- * webservice Ê¾Àı
+ * webservice ç¤ºä¾‹
  * <p>
- * ×Ô´ÓJDK5Ìí¼ÓÁËÔªÊı¾İ¹¦ÄÜ(Annotation)Ö®ºó£¬SUN¼¸ºõÖØ¹¹ÁËÕû¸öJ2EEÌåÏµ¡£
- * ÓÉÓÚ±ä»¯ºÜ´ó£¬¸É´à½«Ãû×ÖÒ²ÖØ¹¹ÎªJava EE£¬JavaEE5½«ÔªÊı¾İÄÉÈëºÜ¶à¹æ·¶µ±ÖĞ£¬ÕâÆäÖĞ¾Í°üÀ¨Web ServicesµÄÏà¹Ø¹æ·¶¡£
- * ¼ÓÈëÔªÊı¾İÖ®ºóµÄWeb Services·şÎñÆ÷¶Ë±à³ÌÄ£ĞÍÏÔÈ»±ÈÒÔÇ°µÄJAX-RPC±à³ÌÄ£ĞÍ¼òµ¥(µ±È», AxisµÄ±à³ÌÄ£ĞÍÒ²ºÜ¼òµ¥)¡£
- * ÕâÀïÒªÌ¸µÄWeb·şÎñÔªÊı¾İ(JSR 181)Ö»ÊÇJava Webservice¹æ·¶ÖĞµÄÒ»¸ö£¬
- * Ëü¸úCommon Annotations, JAXB2, StAX, SAAJºÍJAX-WSµÈ¹²Í¬¹¹³ÉJavaEE5µÄWeb Services¼¼Êõ¶ÑÕ»¡£
+ * è‡ªä»JDK5æ·»åŠ äº†å…ƒæ•°æ®åŠŸèƒ½(Annotation)ä¹‹åï¼ŒSUNå‡ ä¹é‡æ„äº†æ•´ä¸ªJ2EEä½“ç³»ã€‚
+ * ç”±äºå˜åŒ–å¾ˆå¤§ï¼Œå¹²è„†å°†åå­—ä¹Ÿé‡æ„ä¸ºJava EEï¼ŒJavaEE5å°†å…ƒæ•°æ®çº³å…¥å¾ˆå¤šè§„èŒƒå½“ä¸­ï¼Œè¿™å…¶ä¸­å°±åŒ…æ‹¬Web Servicesçš„ç›¸å…³è§„èŒƒã€‚
+ * åŠ å…¥å…ƒæ•°æ®ä¹‹åçš„Web ServicesæœåŠ¡å™¨ç«¯ç¼–ç¨‹æ¨¡å‹æ˜¾ç„¶æ¯”ä»¥å‰çš„JAX-RPCç¼–ç¨‹æ¨¡å‹ç®€å•(å½“ç„¶, Axisçš„ç¼–ç¨‹æ¨¡å‹ä¹Ÿå¾ˆç®€å•)ã€‚
+ * è¿™é‡Œè¦è°ˆçš„WebæœåŠ¡å…ƒæ•°æ®(JSR 181)åªæ˜¯Java Webserviceè§„èŒƒä¸­çš„ä¸€ä¸ªï¼Œ
+ * å®ƒè·ŸCommon Annotations, JAXB2, StAX, SAAJå’ŒJAX-WSç­‰å…±åŒæ„æˆJavaEE5çš„Web ServicesæŠ€æœ¯å †æ ˆã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-2
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-2
  */
 @WebService(targetNamespace = "http://www.liuchenwei2000.com", serviceName = "HelloService")
 public class WSProvider {
 	
-	@WebResult(name = "Greetings")// ×Ô¶¨Òå¸Ã·½·¨·µ»ØÖµÔÚWSDLÖĞÏà¹ØµÄÃèÊö
+	@WebResult(name = "Greetings")// è‡ªå®šä¹‰è¯¥æ–¹æ³•è¿”å›å€¼åœ¨WSDLä¸­ç›¸å…³çš„æè¿°
 	@WebMethod
-	// @WebParamÊÇ×Ô¶¨Òå ²ÎÊıname ÔÚWSDLÖĞÏà¹ØµÄÃèÊö
+	// @WebParamæ˜¯è‡ªå®šä¹‰ å‚æ•°name åœ¨WSDLä¸­ç›¸å…³çš„æè¿°
 	public String sayHello(@WebParam(name = "MyName") String name) {
 		return "Hello," + name + "!!!"; 
 	}
 
-	@Oneway // ±íÃ÷¸Ã·şÎñ·½·¨ÊÇµ¥ÏòµÄ£¬¼ÈÃ»ÓĞ·µ»ØÖµ£¬Ò²²»Ó¦¸ÃÉùÃ÷¼ì²éÒì³£
-	@WebMethod(action = "printSystemDate", operationName = "printSystemDate")// ×Ô¶¨Òå¸Ã·½·¨ÔÚWSDLÖĞÏà¹ØµÄÃèÊö
+	@Oneway // è¡¨æ˜è¯¥æœåŠ¡æ–¹æ³•æ˜¯å•å‘çš„ï¼Œæ—¢æ²¡æœ‰è¿”å›å€¼ï¼Œä¹Ÿä¸åº”è¯¥å£°æ˜æ£€æŸ¥å¼‚å¸¸
+	@WebMethod(action = "printSystemDate", operationName = "printSystemDate")// è‡ªå®šä¹‰è¯¥æ–¹æ³•åœ¨WSDLä¸­ç›¸å…³çš„æè¿°
 	public void printDate() {
 		System.out.println(new Date());
 	}

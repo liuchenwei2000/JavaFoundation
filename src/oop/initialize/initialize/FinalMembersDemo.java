@@ -4,11 +4,11 @@
 package initialize;
 
 /**
- * final �����ֶεĳ�ʼ��ʾ��
+ * final 修饰字段的初始化示例
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2007-11-8
+ * 创建日期：2007-11-8
  */
 public class FinalMembersDemo {
 
@@ -22,18 +22,18 @@ public class FinalMembersDemo {
 }
 
 /**
- * Բ��
+ * 圆类
  * <p>
- * һ���ֶα�final������Ҫ���㣺</br>
- * <li>1���ֶ�����������������ǲ��ɱ�ģ�
- * <li>2�������󱻴�����ʱ����ֶε�ֵ�ǿɵõģ�
- * <li>3�������󱻴�����ʱ����ֶξͿ��Ա���ֵ��ʼ����
+ * 一个字段被final修饰需要满足：</br>
+ * <li>1，字段所代表对象的属性是不可变的；
+ * <li>2，当对象被创建的时候该字段的值是可得的；
+ * <li>3，当对象被创建的时候该字段就可以被赋值初始化。
  */
 class Circle {
 
-	/** final static ���ε��ֶ������ʼ����ʱ���Ӧ�ñ���ʼ�� */
+	/** final static 修饰的字段在类初始化的时候就应该被初始化 */
 	private static final double PI = getPI();
-	/** final �������ε��ֶ��ڶ��󱻴�����ʱ���Ӧ�ñ���ʼ�� */
+	/** final 单独修饰的字段在对象被创建的时候就应该被初始化 */
 	private final double r;
 
 	public Circle(int r) {
@@ -49,7 +49,7 @@ class Circle {
 	}
 
 	/**
-	 * ���
+	 * 面积
 	 */
 	public double getArea() {
 		return PI * r * r;

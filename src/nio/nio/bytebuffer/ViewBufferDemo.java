@@ -9,14 +9,14 @@ import java.nio.IntBuffer;
 import nio.IConst;
 
 /**
- * 3£¬ÊÓÍ¼»º³åÆ÷ÑİÊ¾Àà
+ * 3ï¼Œè§†å›¾ç¼“å†²å™¨æ¼”ç¤ºç±»
  * <p>
- * ÊÓÍ¼»º³åÆ÷(view buffer)¿ÉÒÔÍ¨¹ıÄ³¸öÌØ¶¨µÄ»ù±¾Êı¾İÀàĞÍµÄÊÓ´°²é¿´Æäµ×²ãµÄByteBuffer¡£
- * ByteBufferÒÀÈ»ÊÇÊµ¼Ê´æ´¢Êı¾İµÄµØ·½£¬"Ö§³Ö"×ÅÇ°ÃæµÄÊÓÍ¼£¬Òò´Ë¶ÔÊÓÍ¼µÄÈÎºÎĞŞ¸Ä¶¼»áÓ³Éä³ÉÎª¶ÔByteBufferÖĞÊı¾İµÄĞŞ¸Ä¡£
+ * è§†å›¾ç¼“å†²å™¨(view buffer)å¯ä»¥é€šè¿‡æŸä¸ªç‰¹å®šçš„åŸºæœ¬æ•°æ®ç±»å‹çš„è§†çª—æŸ¥çœ‹å…¶åº•å±‚çš„ByteBufferã€‚
+ * ByteBufferä¾ç„¶æ˜¯å®é™…å­˜å‚¨æ•°æ®çš„åœ°æ–¹ï¼Œ"æ”¯æŒ"ç€å‰é¢çš„è§†å›¾ï¼Œå› æ­¤å¯¹è§†å›¾çš„ä»»ä½•ä¿®æ”¹éƒ½ä¼šæ˜ å°„æˆä¸ºå¯¹ByteBufferä¸­æ•°æ®çš„ä¿®æ”¹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-23
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-23
  */
 public class ViewBufferDemo {
 
@@ -26,16 +26,16 @@ public class ViewBufferDemo {
 	public static void main(String[] args) {
 		ByteBuffer byteBuffer = ByteBuffer.allocate(IConst.K);
 		IntBuffer intBuffer = byteBuffer.asIntBuffer();
-		// Í¨¹ıIntBuffer´æ´¢Ò»×éÕûÊı
+		// é€šè¿‡IntBufferå­˜å‚¨ä¸€ç»„æ•´æ•°
 		intBuffer.put(new int[] { 11, 42, 47, 99, 143, 811, 1016 });
-		// Í¨¹ıIntBuffer½øĞĞgetºÍput²Ù×÷£¬²Ù×÷½á¹ûÖ±½ÓÓ°ÏìByteBuffer
+		// é€šè¿‡IntBufferè¿›è¡Œgetå’Œputæ“ä½œï¼Œæ“ä½œç»“æœç›´æ¥å½±å“ByteBuffer
 		System.out.println(intBuffer.get(3));
 		intBuffer.put(3, 1811);
-		// ÖØÈÆ´Ë»º³åÇø£¬½«Î»ÖÃÉèÖÃÎª 0 ²¢¶ªÆú±ê¼Ç¡£ 
+		// é‡ç»•æ­¤ç¼“å†²åŒºï¼Œå°†ä½ç½®è®¾ç½®ä¸º 0 å¹¶ä¸¢å¼ƒæ ‡è®°ã€‚ 
 		intBuffer.rewind();
 		while (intBuffer.hasRemaining()) {
 			int i = intBuffer.get();
-			// Èç¹ûÃ»ÓĞÏÂ¾ä½«»á·µ»ØÕû¸öbuffer£¬ÀïÃæÃ»´æ´¢Êı¾İµÄÎ»ÖÃ¶¼ÊÇ\0
+			// å¦‚æœæ²¡æœ‰ä¸‹å¥å°†ä¼šè¿”å›æ•´ä¸ªbufferï¼Œé‡Œé¢æ²¡å­˜å‚¨æ•°æ®çš„ä½ç½®éƒ½æ˜¯\0
 			if (i == 0) break; 
 			System.out.print(i + " ");
 		}

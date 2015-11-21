@@ -15,26 +15,26 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 /**
- * 3£¬StAXÊ¾Àı
+ * 3ï¼ŒStAXç¤ºä¾‹
  * <p>
- * StAX(JSR 173)ÊÇJDK6ÖĞ³ıÁËDOMºÍSAXÖ®ÍâµÄÓÖÒ»ÖÖ´¦ÀíXMLÎÄµµµÄAPI.
+ * StAX(JSR 173)æ˜¯JDK6ä¸­é™¤äº†DOMå’ŒSAXä¹‹å¤–çš„åˆä¸€ç§å¤„ç†XMLæ–‡æ¡£çš„API.
  * <p>
- * ÔÚJAXP1.3(JSR 206)ÓĞÁ½ÖÖ´¦ÀíXMLÎÄµµµÄ·½·¨£ºDOM(Document Object Model)ºÍSAX(Simple API for XML)¡£
- * ÓÉÓÚJDK6ÖĞµÄJAXB2ºÍJAX-WS¶¼»áÓÃµ½StAX£¬ËùÒÔStAX±»¼ÓÈëµ½JAXP¼Ò×åµ±ÖĞÀ´£¬²¢½«JAXPµÄ°æ±¾Éı¼¶µ½1.4¡£
+ * åœ¨JAXP1.3(JSR 206)æœ‰ä¸¤ç§å¤„ç†XMLæ–‡æ¡£çš„æ–¹æ³•ï¼šDOM(Document Object Model)å’ŒSAX(Simple API for XML)ã€‚
+ * ç”±äºJDK6ä¸­çš„JAXB2å’ŒJAX-WSéƒ½ä¼šç”¨åˆ°StAXï¼Œæ‰€ä»¥StAXè¢«åŠ å…¥åˆ°JAXPå®¶æ—å½“ä¸­æ¥ï¼Œå¹¶å°†JAXPçš„ç‰ˆæœ¬å‡çº§åˆ°1.4ã€‚
  * <p>
- * StAXÊÇThe Streaming API for XMLµÄËõĞ´£¬Ò»ÖÖÀûÓÃÀ­Ê½½âÎö(pull-parsing)XMLÎÄµµµÄAPI¡£
+ * StAXæ˜¯The Streaming API for XMLçš„ç¼©å†™ï¼Œä¸€ç§åˆ©ç”¨æ‹‰å¼è§£æ(pull-parsing)XMLæ–‡æ¡£çš„APIã€‚
  * 
- * StAXÍ¨¹ıÌá¹©Ò»ÖÖ»ùÓÚÊÂ¼şµü´úÆ÷(Iterator)µÄAPIÈÃ³ÌĞòÔ±È¥¿ØÖÆxmlÎÄµµ½âÎö¹ı³Ì£¬
- * ³ÌĞò±éÀúÕâ¸öÊÂ¼şµü´úÆ÷È¥´¦ÀíÃ¿Ò»¸ö½âÎöÊÂ¼ş£¬½âÎöÊÂ¼ş¿ÉÒÔ¿´×öÊÇ³ÌĞòÀ­³öÀ´µÄ£¬
- * Ò²¾ÍÊÇ³ÌĞò´ÙÊ¹½âÎöÆ÷²úÉúÒ»¸ö½âÎöÊÂ¼şÈ»ºó´¦Àí¸ÃÊÂ¼ş£¬Ö®ºóÓÖ´ÙÊ¹½âÎöÆ÷²úÉúÏÂÒ»¸ö½âÎöÊÂ¼ş£¬Èç´ËÑ­»·Ö±µ½Åöµ½ÎÄµµ½áÊø·û¡£
+ * StAXé€šè¿‡æä¾›ä¸€ç§åŸºäºäº‹ä»¶è¿­ä»£å™¨(Iterator)çš„APIè®©ç¨‹åºå‘˜å»æ§åˆ¶xmlæ–‡æ¡£è§£æè¿‡ç¨‹ï¼Œ
+ * ç¨‹åºéå†è¿™ä¸ªäº‹ä»¶è¿­ä»£å™¨å»å¤„ç†æ¯ä¸€ä¸ªè§£æäº‹ä»¶ï¼Œè§£æäº‹ä»¶å¯ä»¥çœ‹åšæ˜¯ç¨‹åºæ‹‰å‡ºæ¥çš„ï¼Œ
+ * ä¹Ÿå°±æ˜¯ç¨‹åºä¿ƒä½¿è§£æå™¨äº§ç”Ÿä¸€ä¸ªè§£æäº‹ä»¶ç„¶åå¤„ç†è¯¥äº‹ä»¶ï¼Œä¹‹ååˆä¿ƒä½¿è§£æå™¨äº§ç”Ÿä¸‹ä¸€ä¸ªè§£æäº‹ä»¶ï¼Œå¦‚æ­¤å¾ªç¯ç›´åˆ°ç¢°åˆ°æ–‡æ¡£ç»“æŸç¬¦ã€‚
  * <p>
- * SAXÒ²ÊÇ»ùÓÚÊÂ¼ş´¦ÀíxmlÎÄµµ£¬µ«È´ÊÇÓÃÍÆÊ½½âÎö£¬½âÎöÆ÷½âÎöÍêÕû¸öxmlÎÄµµºó£¬²Å²úÉú½âÎöÊÂ¼ş£¬È»ºóÍÆ¸ø³ÌĞòÈ¥´¦ÀíÕâĞ©ÊÂ¼ş¡£
+ * SAXä¹Ÿæ˜¯åŸºäºäº‹ä»¶å¤„ç†xmlæ–‡æ¡£ï¼Œä½†å´æ˜¯ç”¨æ¨å¼è§£æï¼Œè§£æå™¨è§£æå®Œæ•´ä¸ªxmlæ–‡æ¡£åï¼Œæ‰äº§ç”Ÿè§£æäº‹ä»¶ï¼Œç„¶åæ¨ç»™ç¨‹åºå»å¤„ç†è¿™äº›äº‹ä»¶ã€‚
  * <p>
- * DOM²ÉÓÃµÄ·½Ê½ÊÇ½«Õû¸öxmlÎÄµµÓ³Éäµ½Ò»¿ÅÄÚ´æÊ÷£¬ÕâÑù¾Í¿ÉÒÔºÜÈİÒ×µØµÃµ½¸¸½ÚµãºÍ×Ó½áµãÒÔ¼°ĞÖµÜ½ÚµãµÄÊı¾İ£¬µ«Èç¹ûÎÄµµºÜ´ó£¬½«»áÑÏÖØÓ°ÏìĞÔÄÜ¡£
+ * DOMé‡‡ç”¨çš„æ–¹å¼æ˜¯å°†æ•´ä¸ªxmlæ–‡æ¡£æ˜ å°„åˆ°ä¸€é¢—å†…å­˜æ ‘ï¼Œè¿™æ ·å°±å¯ä»¥å¾ˆå®¹æ˜“åœ°å¾—åˆ°çˆ¶èŠ‚ç‚¹å’Œå­ç»“ç‚¹ä»¥åŠå…„å¼ŸèŠ‚ç‚¹çš„æ•°æ®ï¼Œä½†å¦‚æœæ–‡æ¡£å¾ˆå¤§ï¼Œå°†ä¼šä¸¥é‡å½±å“æ€§èƒ½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-28
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-28
  */
 public class StAX {
 
@@ -53,31 +53,31 @@ public class StAX {
 	}
 
 	/**
-	 * ÓÃStAXµÄ·½Ê½£¨XMLEventReader£©½âÎöxmlÎÄµµ
+	 * ç”¨StAXçš„æ–¹å¼ï¼ˆXMLEventReaderï¼‰è§£æxmlæ–‡æ¡£
 	 */
 	private static void readXMLByStAX(String inFilePath) throws Exception {
 		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 		XMLEventReader eventReader = inputFactory.createXMLEventReader(new FileInputStream(inFilePath));
 		
 		StringBuffer result = new StringBuffer();
-		XMLEvent event;// Ò»¸öÒ»¸öµÄXML½âÎöÊÂ¼ş
-		// ±éÀúXML½âÎöÊÂ¼ş
+		XMLEvent event;// ä¸€ä¸ªä¸€ä¸ªçš„XMLè§£æäº‹ä»¶
+		// éå†XMLè§£æäº‹ä»¶
 		while (eventReader.hasNext()) {
 			event = eventReader.nextEvent();
-			if (event.isStartElement()) { // Èç¹û½âÎöµÄÊÇÆğÊ¼±ê¼Ç£¬¼´ <name>
+			if (event.isStartElement()) { // å¦‚æœè§£æçš„æ˜¯èµ·å§‹æ ‡è®°ï¼Œå³ <name>
 				StartElement startElement = event.asStartElement();
 				result.append("<");
 				result.append(startElement.getName());
 				if (startElement.getName().getLocalPart().equals("catalog")) {
 					result.append(" id=\"");
-					// »ñÈ¡ÔªËØÖĞµÄÊôĞÔÖµ
+					// è·å–å…ƒç´ ä¸­çš„å±æ€§å€¼
 					result.append(startElement.getAttributeByName(new QName("id")).getValue());
 					result.append("\"");
 				}
 				result.append(">");
-			} else if (event.isCharacters()) { // Èç¹û½âÎöµÄÊÇÎÄ±¾ÄÚÈİ 
+			} else if (event.isCharacters()) { // å¦‚æœè§£æçš„æ˜¯æ–‡æœ¬å†…å®¹ 
 				result.append(event.asCharacters().getData());
-			} else if (event.isEndElement()) { // Èç¹û½âÎöµÄÊÇ½áÊø±ê¼Ç£¬¼´ </name>
+			} else if (event.isEndElement()) { // å¦‚æœè§£æçš„æ˜¯ç»“æŸæ ‡è®°ï¼Œå³ </name>
 				result.append("</");
 				result.append(event.asEndElement().getName());
 				result.append(">");
@@ -88,41 +88,41 @@ public class StAX {
 	}
 
 	/**
-	 * ÓÃStAXµÄ·½Ê½£¨XMLStreamWriter£©Êä³öxmlÎÄµµ
+	 * ç”¨StAXçš„æ–¹å¼ï¼ˆXMLStreamWriterï¼‰è¾“å‡ºxmlæ–‡æ¡£
 	 */
 	private static void writeXMLByStAX(String outFilePath) throws Exception  {
 		XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
 		XMLStreamWriter streamWriter = outputFactory.createXMLStreamWriter(new FileOutputStream(outFilePath));
 
 		String lineSeparator = System.getProperty("line.separator");
-		// Ğ´ÈëÄ¬ÈÏµÄ XMLÉùÃ÷µ½XMLÎÄµµ
+		// å†™å…¥é»˜è®¤çš„ XMLå£°æ˜åˆ°XMLæ–‡æ¡£
 		streamWriter.writeStartDocument();
 		streamWriter.writeCharacters(lineSeparator);
-		// Ğ´Èë×¢ÊÍµ½XMLÎÄµµ
+		// å†™å…¥æ³¨é‡Šåˆ°XMLæ–‡æ¡£
 		streamWriter.writeComment("testing comment");
 		streamWriter.writeCharacters(lineSeparator);
-		// Ğ´ÈëÒ»¸ö¸ùÔªËØ
+		// å†™å…¥ä¸€ä¸ªæ ¹å…ƒç´ 
 		streamWriter.writeStartElement("catalogs");
 		streamWriter.writeNamespace("mine", "http://www.oracle.com.cn");
 		streamWriter.writeAttribute("owner", "oracle");
 		streamWriter.writeCharacters(lineSeparator);
-		// Ğ´Èë×ÓÔªËØ
+		// å†™å…¥å­å…ƒç´ 
 		streamWriter.writeStartElement("http://www.oracle.com.cn", "catalog");
 		streamWriter.writeAttribute("id", "001");
 		streamWriter.writeCharacters("Book");
-		// Ğ´Èë×ÓÔªËØµÄ½áÊø±êÇ©
+		// å†™å…¥å­å…ƒç´ çš„ç»“æŸæ ‡ç­¾
 		streamWriter.writeEndElement();
 		streamWriter.writeCharacters(lineSeparator);
-		// ÔÙĞ´ÈëÒ»¸ö×ÓÔªËØ
+		// å†å†™å…¥ä¸€ä¸ªå­å…ƒç´ 
 		streamWriter.writeStartElement("http://www.oracle.com.cn", "catalog");
 		streamWriter.writeAttribute("id", "002");
 		streamWriter.writeCharacters("Video");
 		streamWriter.writeEndElement();
 		streamWriter.writeCharacters(lineSeparator);
-		// Ğ´Èë¸úÔªËØµÄ½áÊø±êÇ©
+		// å†™å…¥è·Ÿå…ƒç´ çš„ç»“æŸæ ‡ç­¾
 		streamWriter.writeEndElement();
 		streamWriter.writeCharacters(lineSeparator);
-		// ½áÊø XMLÎÄµµ
+		// ç»“æŸ XMLæ–‡æ¡£
 		streamWriter.writeEndDocument();
 		streamWriter.close();
 	}

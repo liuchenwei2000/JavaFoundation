@@ -4,32 +4,32 @@
 package syntax;
 
 /**
- * htmlÓï·¨ÔÚ×¢ÊÍÖĞµÄÊ¹ÓÃ
+ * htmlè¯­æ³•åœ¨æ³¨é‡Šä¸­çš„ä½¿ç”¨
  * <p>
- * Ê¹ÓÃhtmlÓï·¨Ö®ºóÔÚÉú³Éjavadocºó¿ÉÒÔ¿´µ½Ğ§¹û
+ * ä½¿ç”¨htmlè¯­æ³•ä¹‹ååœ¨ç”Ÿæˆjavadocåå¯ä»¥çœ‹åˆ°æ•ˆæœ
  * <p>
- * ³£ÓÃµÄhtmlÔªËØºÍÊ¾Àı£º
- * <p>   ÔªËØ                         º¬Òå                                 Ê¾Àı
- * <p>   big             Ö¸¶¨Ëùº¬ÎÄ±¾ÒªÒÔ±Èµ±Ç°×ÖÌåÉÔ´óµÄ×ÖÌåÏÔÊ¾            <big>big</big>big¡¡¡¡
- * <p>   blockquote      ±íÊ¾ÎÄ±¾ÖĞµÄÒ»¶ÎÒıÓÃÓï                           <blockquote>blockquote</blockquote>¡¡
- * <p>   pre             ÒÔ¹Ì¶¨¿í¶È×ÖÌåÏÔÊ¾ÎÄ±¾                           <pre>pre</pre>pre
- * <p>blockquoteºÍpreÒ»°ãÁªºÏÊ¹ÓÃ <blockquote>blockquote</blockquote><pre>pre</pre><blockquote><pre>blockquotepre<pre></blockquote>¡¡
- * <p>   code            ±íÊ¾´úÂë·¶Àı                                   <code>String s = "s"</code>String s = "s"
- * <p>   em              Ç¿µ÷ÎÄ±¾£¬Í¨³£ÒÔĞ±ºÚÌåÏÔÊ¾                        <em>important</em>  important
- * <p>   strong          Ç¿µ÷ÎÄ±¾£¬Í¨³£ÒÔ´ÖºÚÌåÏÔÊ¾                        <strong>important</strong>  important
- * <p>   b               ´´½¨ºÚÌå×Ö                                     <b>word</b>  word
- * <p>   i               ´´½¨Ğ±Ìå×Ö                                     <i>word</i>  word
- * <p>   tt              ´´½¨´ò×Ö»ú·ç¸ñµÄ×ÖÌå                             <tt>word</tt>  word
- * <p>   p               ´´½¨Ò»¸öĞÂµÄ¶ÎÂä                               
- * <p>   br              ²åÈëÒ»¸ö»»ĞĞ·û                                  <br>line
- * <p>   li              ÔÚÃ¿¸öÁĞ±íÏîÖ®Ç°¼ÓÉÏÒ»¸öÔ²µã                       <li>item</li>
- * <p>   ol              ÓĞĞòºÅµÄÁĞ±í                                    <ol><li>item1<li>item2</ol>
- * <p>   ul              ÎŞĞòºÅµÄÁĞ±í                                    <ul><li>item1<li>item2</ul>
- * <p>   sup             Ö¸ÊıĞÎÊ½ÏÔÊ¾                                    2<sup>31</sup>
+ * å¸¸ç”¨çš„htmlå…ƒç´ å’Œç¤ºä¾‹ï¼š
+ * <p>   å…ƒç´                          å«ä¹‰                                 ç¤ºä¾‹
+ * <p>   big             æŒ‡å®šæ‰€å«æ–‡æœ¬è¦ä»¥æ¯”å½“å‰å­—ä½“ç¨å¤§çš„å­—ä½“æ˜¾ç¤º            <big>big</big>bigã€€ã€€
+ * <p>   blockquote      è¡¨ç¤ºæ–‡æœ¬ä¸­çš„ä¸€æ®µå¼•ç”¨è¯­                           <blockquote>blockquote</blockquote>ã€€
+ * <p>   pre             ä»¥å›ºå®šå®½åº¦å­—ä½“æ˜¾ç¤ºæ–‡æœ¬                           <pre>pre</pre>pre
+ * <p>blockquoteå’Œpreä¸€èˆ¬è”åˆä½¿ç”¨ <blockquote>blockquote</blockquote><pre>pre</pre><blockquote><pre>blockquotepre<pre></blockquote>ã€€
+ * <p>   code            è¡¨ç¤ºä»£ç èŒƒä¾‹                                   <code>String s = "s"</code>String s = "s"
+ * <p>   em              å¼ºè°ƒæ–‡æœ¬ï¼Œé€šå¸¸ä»¥æ–œé»‘ä½“æ˜¾ç¤º                        <em>important</em>  important
+ * <p>   strong          å¼ºè°ƒæ–‡æœ¬ï¼Œé€šå¸¸ä»¥ç²—é»‘ä½“æ˜¾ç¤º                        <strong>important</strong>  important
+ * <p>   b               åˆ›å»ºé»‘ä½“å­—                                     <b>word</b>  word
+ * <p>   i               åˆ›å»ºæ–œä½“å­—                                     <i>word</i>  word
+ * <p>   tt              åˆ›å»ºæ‰“å­—æœºé£æ ¼çš„å­—ä½“                             <tt>word</tt>  word
+ * <p>   p               åˆ›å»ºä¸€ä¸ªæ–°çš„æ®µè½                               
+ * <p>   br              æ’å…¥ä¸€ä¸ªæ¢è¡Œç¬¦                                  <br>line
+ * <p>   li              åœ¨æ¯ä¸ªåˆ—è¡¨é¡¹ä¹‹å‰åŠ ä¸Šä¸€ä¸ªåœ†ç‚¹                       <li>item</li>
+ * <p>   ol              æœ‰åºå·çš„åˆ—è¡¨                                    <ol><li>item1<li>item2</ol>
+ * <p>   ul              æ— åºå·çš„åˆ—è¡¨                                    <ul><li>item1<li>item2</ul>
+ * <p>   sup             æŒ‡æ•°å½¢å¼æ˜¾ç¤º                                    2<sup>31</sup>
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-8-7
+ * åˆ›å»ºæ—¥æœŸï¼š2009-8-7
  */
 public class HTMLComments {
 }

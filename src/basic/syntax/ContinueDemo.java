@@ -4,18 +4,18 @@
 package syntax;
 
 /**
- * continueÑİÊ¾Àà
+ * continueæ¼”ç¤ºç±»
  * <p>
- * ÎŞ±êÇ©µÄcontinue£º
- * Ìø¹ı×îÄÚ²ãÑ­»·ÔÚcontinueÖ®ºóµÄÓï¾ä£¬Ö±½ÓÅĞ¶ÏbooleanÖµ¾ö¶¨ÊÇ·ñ¼ÌĞøÑ­»·¡£</br>
- * ÓĞ±êÇ©µÄcontinue£º
- * Ö±½ÓÌøµ½±êÇ©´ú±íµÄÑ­»·µÄÆğÊ¼Î»ÖÃ
+ * æ— æ ‡ç­¾çš„continueï¼š
+ * è·³è¿‡æœ€å†…å±‚å¾ªç¯åœ¨continueä¹‹åçš„è¯­å¥ï¼Œç›´æ¥åˆ¤æ–­booleanå€¼å†³å®šæ˜¯å¦ç»§ç»­å¾ªç¯ã€‚</br>
+ * æœ‰æ ‡ç­¾çš„continueï¼š
+ * ç›´æ¥è·³åˆ°æ ‡ç­¾ä»£è¡¨çš„å¾ªç¯çš„èµ·å§‹ä½ç½®
  * <p>
- * continueÒ²¿ÉÒÔºÍ×Ü»á±»Ö´ĞĞµÄfinallyÓï¾äÒ»ÆğÅäºÏÊ¹ÓÃ£¬ÕâÑùJavaÀï¾ÍÃ»ÓĞ±ØÒªÊ¹ÓÃgotoÓï¾äÁË
+ * continueä¹Ÿå¯ä»¥å’Œæ€»ä¼šè¢«æ‰§è¡Œçš„finallyè¯­å¥ä¸€èµ·é…åˆä½¿ç”¨ï¼Œè¿™æ ·Javaé‡Œå°±æ²¡æœ‰å¿…è¦ä½¿ç”¨gotoè¯­å¥äº†
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-9-11
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-11
  */
 public class ContinueDemo {
 
@@ -35,7 +35,7 @@ public class ContinueDemo {
 			int k = 0;
 			while (n-- != 0) {
 				if (searchMe.charAt(j++) != substring.charAt(k++)) {
-					// ÈôÊÇcontinue;ÔòÌøµ½whileÑ­»·¿ªÊ¼´¦
+					// è‹¥æ˜¯continue;åˆ™è·³åˆ°whileå¾ªç¯å¼€å§‹å¤„
 					continue test;
 				}
 			}

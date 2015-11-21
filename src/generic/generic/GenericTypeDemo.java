@@ -4,11 +4,11 @@
 package generic;
 
 /**
- * ·ºĞÍÑİÊ¾Àà
+ * æ³›å‹æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-9-14
+ * åˆ›å»ºæ—¥æœŸï¼š2007-9-14
  */
 public class GenericTypeDemo {
 	
@@ -18,7 +18,7 @@ public class GenericTypeDemo {
 	public static void main(String[] args) {
 		int i = 5;
 		Integer[] ia = { 1, 2, 3, 4, 5, 6, 7 };
-		// ¹¹ÔìÊµÀıÊ±ĞèÒªÖ¸Ã÷·ºĞÍµÄ¾ßÌåÀàĞÍÒÔ±ãÓÚ±àÒë¼ì²é
+		// æ„é€ å®ä¾‹æ—¶éœ€è¦æŒ‡æ˜æ³›å‹çš„å…·ä½“ç±»å‹ä»¥ä¾¿äºç¼–è¯‘æ£€æŸ¥
 		GenericType<Integer> gt1 = new GenericType<Integer>();
 		gt1.set(i);
 		System.out.println(gt1.get());
@@ -38,7 +38,7 @@ public class GenericTypeDemo {
 }
 
 /**
- * GenericType<T,T>ÕâÖÖ±í´ï·½Ê½ÊÇ²»¶ÔµÄ£¬ÈôÊÇĞèÒªÁ½¸ö·ºĞÍÊı¾İĞèÒªÕâÑùGenericType<T,U>¡£
+ * GenericType<T,T>è¿™ç§è¡¨è¾¾æ–¹å¼æ˜¯ä¸å¯¹çš„ï¼Œè‹¥æ˜¯éœ€è¦ä¸¤ä¸ªæ³›å‹æ•°æ®éœ€è¦è¿™æ ·GenericType<T,U>ã€‚
  */
 class GenericType<T> {
 	
@@ -54,12 +54,12 @@ class GenericType<T> {
 
 	/*
 	 * public static void print(T[] t){
-	 * 	// T ²»ÄÜºÍ·Ç·ºĞÍ¾²Ì¬·½·¨Ò»ÆğÊ¹ÓÃ(ÒòÎªËüÊÇºÍÊµÀıÏà¹ØµÄ)
+	 * 	// T ä¸èƒ½å’Œéæ³›å‹é™æ€æ–¹æ³•ä¸€èµ·ä½¿ç”¨(å› ä¸ºå®ƒæ˜¯å’Œå®ä¾‹ç›¸å…³çš„)
 	 * 	}
 	 */
 	
 	/**
-	 * ·ºĞÍÊı×é(²»Ö§³Ö»ù±¾ÀàĞÍ)
+	 * æ³›å‹æ•°ç»„(ä¸æ”¯æŒåŸºæœ¬ç±»å‹)
 	 */
 	public static <T> void print(T[] t) {
 		for (T item : t) {
@@ -69,9 +69,9 @@ class GenericType<T> {
 	}
 	
 	/**
-	 * ·½·¨Ò²¿ÉÒÔ¶¨Òå²¢Ê¹ÓÃ·ºĞÍ
+	 * æ–¹æ³•ä¹Ÿå¯ä»¥å®šä¹‰å¹¶ä½¿ç”¨æ³›å‹
 	 * <p>
-	 * UÊÇ×Ô¶¨ÒåµÄÁíÒ»¸ö·ºĞÍ£¬Çø±ğÓÚT
+	 * Uæ˜¯è‡ªå®šä¹‰çš„å¦ä¸€ä¸ªæ³›å‹ï¼ŒåŒºåˆ«äºT
 	 */
 	public <U> void test(U u) {
 		System.out.println("T : " + t.getClass().getName());
@@ -79,8 +79,8 @@ class GenericType<T> {
 	}
 	
 	/**
-	 * ¿ÉÒÔÉè¶¨·ºĞÍ°ó¶¨Ä³Ò»ÀàĞÍ(½Ó¿Ú)Ê¹µÃÆäÖ»½ÓÊÜ¸ÃÀàĞÍ»òÕßÆä×ÓÀà¡£</br>
-	 * Ò²¿ÉÒÔÔÚÀàÉùÃ÷µÄÊ±ºò½øĞĞÀàĞÍ°ó¶¨Èç£º</br>
+	 * å¯ä»¥è®¾å®šæ³›å‹ç»‘å®šæŸä¸€ç±»å‹(æ¥å£)ä½¿å¾—å…¶åªæ¥å—è¯¥ç±»å‹æˆ–è€…å…¶å­ç±»ã€‚</br>
+	 * ä¹Ÿå¯ä»¥åœ¨ç±»å£°æ˜çš„æ—¶å€™è¿›è¡Œç±»å‹ç»‘å®šå¦‚ï¼š</br>
 	 * public class GenericsType<T extends Date>
 	 */
 	public <U extends Number> void testNumber(U u) {
@@ -88,14 +88,14 @@ class GenericType<T> {
 	}
 	
 	/**
-	 * ÊµÏÖÄ³¸ö½Ó¿ÚÒ²ÒªÓÃ¹Ø¼ü×Öextends¶ø²»ÊÇimplements£¬Í¬ÑùÒ²¿ÉÒÔÔÚÀàÉùÃ÷µÄÊ±ºò½øĞĞÀàĞÍ°ó¶¨µ½½Ó¿Ú¡£
+	 * å®ç°æŸä¸ªæ¥å£ä¹Ÿè¦ç”¨å…³é”®å­—extendsè€Œä¸æ˜¯implementsï¼ŒåŒæ ·ä¹Ÿå¯ä»¥åœ¨ç±»å£°æ˜çš„æ—¶å€™è¿›è¡Œç±»å‹ç»‘å®šåˆ°æ¥å£ã€‚
 	 */
 	public <U extends Comparable<?>> void testComparable(U u) {
 		System.out.println("U extends Comparable : " + u.getClass().getSimpleName());
 	}
 	
 	/**
-	 * Ò²¿ÉÒÔÍ¬Ê±¼Ì³ĞÒ»¸öÀàºÍÒ»¸ö½Ó¿Ú£¬ÓÃ'&'½øĞĞÁ¬½Ó¡£
+	 * ä¹Ÿå¯ä»¥åŒæ—¶ç»§æ‰¿ä¸€ä¸ªç±»å’Œä¸€ä¸ªæ¥å£ï¼Œç”¨'&'è¿›è¡Œè¿æ¥ã€‚
 	 */
 	public <U extends Number & Comparable<?>> void testNumberAndComparable(U u) {
 		System.out.println("U extends Number & Comparable : " + u.getClass().getSimpleName());

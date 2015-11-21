@@ -4,18 +4,18 @@
 package object.readonly;
 
 /**
- * ���ɱ������ʾ��2
+ * 不可变对象演示类2
  * <p>
- * ����һ�����Ա��޸ĵİ����࣬�Ա������Ч�ʡ�
+ * 含有一个可以被修改的伴随类，以便于提高效率。
  * <p>
- * �������������ʱ���˷���ʮ�����ã�</br>
- * <li>1.��Ҫ���ɱ�Ķ��󣬶���
- * <li>2.������Ҫ���������޸ģ�����
- * <li>3.�����µĲ��ɱ������۰���
+ * 当下列情况发生时，此方法十分有用：</br>
+ * <li>1.需要不可变的对象，而且
+ * <li>2.经常需要做大量的修改，或者
+ * <li>3.创建新的不可变对象代价昂贵。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2009-6-8
+ * 创建日期：2009-6-8
  */
 public class ImmutableObjectDemo2 {
 
@@ -32,7 +32,7 @@ public class ImmutableObjectDemo2 {
 	}
 	
 	/**
-	 * �ڶ��ѭ����ʹ��ImmutableObject2���в������������������������ʹ����������ѹ������
+	 * 在多次循环中使用ImmutableObject2进行操作，会产生大量的垃圾对象，使得垃圾回收压力过大。
 	 */
 	public static ImmutableObject2 modify1(ImmutableObject2 o) {
 		ImmutableObject2 aio = o.add(12);
@@ -43,7 +43,7 @@ public class ImmutableObjectDemo2 {
 	}
 
 	/**
-	 * �ڶ��ѭ����ʹ��Mutable���в����Ͳ��������ϵ����⣬��Ϊ���в�����ʼ�ն���һ������Mutable��
+	 * 在多次循环中使用Mutable进行操作就不会有以上的问题，因为进行操作的始终都是一个对象Mutable。
 	 */
 	public static ImmutableObject2 modify2(ImmutableObject2 o) {
 		Mutable m = o.makeMutable();
@@ -53,7 +53,7 @@ public class ImmutableObjectDemo2 {
 }
 
 /**
- * ���ɱ���� 
+ * 不可变对象 
  */
 class ImmutableObject2 {
 	
@@ -85,12 +85,12 @@ class ImmutableObject2 {
 }
 
 /**
- * ���ɱ����ImmutableObject2�Ŀɱ������
+ * 不可变对象ImmutableObject2的可变伴随类
  * <p>
- * ���ۺ�ʱ����Ҫһ�����޸Ĺ��Ĳ��ɱ�������ʱ�򣬱���Ҫ���ܴ����¶���Ŀ�����Ҳ���Ƶ���������������ա�
- * ��ĳЩ����ԣ��ⲻ�����⣬������һЩ��(����String��)������ۿ��ܰ�������˲��ò���ֹ��ô����
- * ���֮���Ǵ���һ�����Ա��޸ĵİ�����(companion class)��
- * ������Ҫ�������޸Ķ���ʱ������תΪʹ�ÿ��޸ĵİ����࣬�޸Ĳ�����Ϻ���ת�غ㳣�ࡣ
+ * 无论何时当需要一个被修改过的不可变类对象的时候，必须要承受创建新对象的开销，也会更频繁地引发垃圾回收。
+ * 对某些类而言，这不成问题，但对另一些类(例如String类)，其代价可能昂贵得让人不得不禁止这么做。
+ * 解决之道是创建一个可以被修改的伴随类(companion class)。
+ * 当你需要做大量修改动作时，可以转为使用可修改的伴随类，修改操作完毕后，再转回恒常类。
  */
 class Mutable {
 

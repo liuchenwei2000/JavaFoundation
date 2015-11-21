@@ -4,11 +4,11 @@
 package object.clone;
 
 /**
- * ³É¹¦¿ËÂ¡µÄµäĞÍÊµÏÖÑİÊ¾
+ * æˆåŠŸå…‹éš†çš„å…¸å‹å®ç°æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-6
  */
 public class SuccessfulClone {
 	
@@ -28,7 +28,7 @@ public class SuccessfulClone {
 	}
 
 	/**
-	 * ·µ»Ø²ÎÊı¶ÔÏóÖ´ĞĞincrement()µÄÒıÓÃ
+	 * è¿”å›å‚æ•°å¯¹è±¡æ‰§è¡Œincrement()çš„å¼•ç”¨
 	 */
 	public static MyObject incrementPara(MyObject v) {
 		v.increment();
@@ -36,7 +36,7 @@ public class SuccessfulClone {
 	}
 
 	/**
-	 * ·µ»Ø²ÎÊı¶ÔÏó±»¿ËÂ¡ºóµÄ¶ÔÏóÖ´ĞĞincrement()µÄÒıÓÃ
+	 * è¿”å›å‚æ•°å¯¹è±¡è¢«å…‹éš†åçš„å¯¹è±¡æ‰§è¡Œincrement()çš„å¼•ç”¨
 	 */
 	public static MyObject incrementClonedPara(MyObject v) {
 		v = (MyObject) v.clone();
@@ -47,7 +47,7 @@ public class SuccessfulClone {
 }
 
 /**
- * ÊµÏÖÁËCloneable½Ó¿Ú
+ * å®ç°äº†Cloneableæ¥å£
  */
 class MyObject implements Cloneable {
 
@@ -58,13 +58,13 @@ class MyObject implements Cloneable {
 	}
 
 	/**
-	 * <li>1£¬ÎªÁËÏëclone()·½·¨¿ÉÒÔ±»·ÃÎÊ£¬±ØĞë½«ÆäÉùÃ÷Îªpublic¡£
-	 * <li>2£¬×÷Îª×ÓÀàclone()²Ù×÷µÄ³õÊ¼»¯²¿·Ö£¬Ó¦¸Ãµ÷ÓÃ»ùÀàµÄclone()¡£
+	 * <li>1ï¼Œä¸ºäº†æƒ³clone()æ–¹æ³•å¯ä»¥è¢«è®¿é—®ï¼Œå¿…é¡»å°†å…¶å£°æ˜ä¸ºpublicã€‚
+	 * <li>2ï¼Œä½œä¸ºå­ç±»clone()æ“ä½œçš„åˆå§‹åŒ–éƒ¨åˆ†ï¼Œåº”è¯¥è°ƒç”¨åŸºç±»çš„clone()ã€‚
 	 */
 	public Object clone() {
 		Object o = null;
 		/*
-		 * ±ØĞë½«super.clone()ÖÃÓÚ try¿éÄÚ£¬ÒÔ²¶»ñ²»Ó¦¸Ã·¢ÉúµÄÒì³£(ÒòÎªÒÑ¾­ÊµÏÖÁË Cloneable½Ó¿Ú)¡£
+		 * å¿…é¡»å°†super.clone()ç½®äº tryå—å†…ï¼Œä»¥æ•è·ä¸åº”è¯¥å‘ç”Ÿçš„å¼‚å¸¸(å› ä¸ºå·²ç»å®ç°äº† Cloneableæ¥å£)ã€‚
 		 */
 		try {
 			o = super.clone();

@@ -4,11 +4,11 @@
 package access.inherit.a;
 
 /**
- * ×æ¸¸Àà
+ * ç¥–çˆ¶ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-9
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-9
  */
 public class GrandFather {
 

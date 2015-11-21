@@ -4,11 +4,11 @@
 package exception;
 
 /**
- * ×Ô¶¨ÒåÒì³£ÑÝÊ¾Àà
+ * è‡ªå®šä¹‰å¼‚å¸¸æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class CustomExceptionDemo {
 	
@@ -24,27 +24,27 @@ public class CustomExceptionDemo {
 			int c = a / b;
 			System.out.println(c);
 		} catch (DivisorIsZeroException e) {
-			// ±ê×¼´íÎóÁ÷´òÓ¡¸ÃÒì³£µÄÃèÊöÐÅÏ¢
-			System.err.println("Òì³£ : " + e.getMessage());
-			// ¶ÑÕ»¸ú×Ù(stack trace)ÊÇÒ»¸ö·½·¨µ÷ÓÃ¹ý³ÌµÄÁÐ±í£¬Ëü°üº¬ÁË³ÌÐòÖ´ÐÐÖÐ·½·¨µÄµ÷ÓÃ´ÎÐò
+			// æ ‡å‡†é”™è¯¯æµæ‰“å°è¯¥å¼‚å¸¸çš„æè¿°ä¿¡æ¯
+			System.err.println("å¼‚å¸¸ : " + e.getMessage());
+			// å †æ ˆè·Ÿè¸ª(stack trace)æ˜¯ä¸€ä¸ªæ–¹æ³•è°ƒç”¨è¿‡ç¨‹çš„åˆ—è¡¨ï¼Œå®ƒåŒ…å«äº†ç¨‹åºæ‰§è¡Œä¸­æ–¹æ³•çš„è°ƒç”¨æ¬¡åº
 			e.printStackTrace();
 		} 
 	}
 }
 
 /**
- * ³ýÊýÎª0Òì³£(×Ô¶¨ÒåÒì³£)
+ * é™¤æ•°ä¸º0å¼‚å¸¸(è‡ªå®šä¹‰å¼‚å¸¸)
  * <p>
- * Èç¹ûÓöµ½±ê×¼Òì³£Àà¶¼²»ÄÜ¹»³ä·ÖµØÃèÊöÇå³þµÄÎÊÌâ£¬ÄÇÃ´¾ÍÐèÒª´´½¨×Ô¼ºµÄÒì³£ÀàÁË¡£
- * ÐèÒª×öµÄÖ»ÊÇ¶¨ÒåÒ»¸öÅÉÉúÓÚExceptionµÄÀà£¬»òÕßÅÉÉúÓÚException×ÓÀàµÄÀà¡£
- * Ï°¹ßÉÏ£¬¶¨ÒåµÄÀàÓ¦¸Ã°üº¬Á½¸ö¹¹ÔìÆ÷£¬Ò»¸öÊÇÄ¬ÈÏ¹¹ÔìÆ÷£¬ÁíÒ»¸öÊÇ´øÓÐÏêÏ¸ÃèÊöÐÅÏ¢µÄ¹¹ÔìÆ÷¡£
+ * å¦‚æžœé‡åˆ°æ ‡å‡†å¼‚å¸¸ç±»éƒ½ä¸èƒ½å¤Ÿå……åˆ†åœ°æè¿°æ¸…æ¥šçš„é—®é¢˜ï¼Œé‚£ä¹ˆå°±éœ€è¦åˆ›å»ºè‡ªå·±çš„å¼‚å¸¸ç±»äº†ã€‚
+ * éœ€è¦åšçš„åªæ˜¯å®šä¹‰ä¸€ä¸ªæ´¾ç”ŸäºŽExceptionçš„ç±»ï¼Œæˆ–è€…æ´¾ç”ŸäºŽExceptionå­ç±»çš„ç±»ã€‚
+ * ä¹ æƒ¯ä¸Šï¼Œå®šä¹‰çš„ç±»åº”è¯¥åŒ…å«ä¸¤ä¸ªæž„é€ å™¨ï¼Œä¸€ä¸ªæ˜¯é»˜è®¤æž„é€ å™¨ï¼Œå¦ä¸€ä¸ªæ˜¯å¸¦æœ‰è¯¦ç»†æè¿°ä¿¡æ¯çš„æž„é€ å™¨ã€‚
  */
 class DivisorIsZeroException extends RuntimeException {
 	
 	private static final long serialVersionUID = 1947531179165400147L;
 	
-	/** Òì³£ÌáÊ¾ÐÅÏ¢ */
-	private static final String message = "³ýÊý²»¿ÉÎª0!";
+	/** å¼‚å¸¸æç¤ºä¿¡æ¯ */
+	private static final String message = "é™¤æ•°ä¸å¯ä¸º0!";
 
 	public DivisorIsZeroException() {
 		super();

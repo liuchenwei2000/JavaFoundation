@@ -4,11 +4,11 @@
 package inherit;
 
 /**
- * ÑİÊ¾Àà
+ * æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class Demo {
 	
@@ -31,7 +31,7 @@ public class Demo {
 		p.testInstanceMethod();
 		p.walk();
 		p.showInfo();
-		// ¶ÔÓÚÒıÓÃ±äÁ¿p£¬study·½·¨²»¿É¼û
+		// å¯¹äºå¼•ç”¨å˜é‡pï¼Œstudyæ–¹æ³•ä¸å¯è§
 		// p.study();
 	}
 }

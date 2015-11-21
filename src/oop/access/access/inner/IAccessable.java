@@ -4,11 +4,11 @@
 package access.inner;
 
 /**
- * ¿É·ÃÎÊ½Ó¿Ú
+ * å¯è®¿é—®æ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public interface IAccessable {
 

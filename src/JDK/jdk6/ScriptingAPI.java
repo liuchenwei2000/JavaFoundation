@@ -11,32 +11,32 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 /**
- * 12£¬½Å±¾ÓïÑÔÖ§³Ö(Scripting)Ê¾Àı
+ * 12ï¼Œè„šæœ¬è¯­è¨€æ”¯æŒ(Scripting)ç¤ºä¾‹
  * <p>
- * JDK6Ôö¼ÓÁË¶Ô½Å±¾ÓïÑÔµÄÖ§³Ö(JSR 223)£¬Ô­ÀíÉÏÊÇ½«½Å±¾ÓïÑÔ±àÒë³É bytecode¡£
- * ÕâÑù½Å±¾ÓïÑÔÒ²ÄÜÏíÓÃJavaÆ½Ì¨µÄÖî¶àÓÅÊÆ£¬°üÀ¨¿ÉÒÆÖ²ĞÔ£¬°²È«µÈ¡£
- * ÁíÍâ£¬ÓÉÓÚÏÖÔÚÊÇ±àÒë³É bytecode ºóÔÙÖ´ĞĞ£¬ËùÒÔ±ÈÔ­À´±ß½âÊÍ±ßÖ´ĞĞĞ§ÂÊÒª¸ßºÜ¶à¡£
+ * JDK6å¢åŠ äº†å¯¹è„šæœ¬è¯­è¨€çš„æ”¯æŒ(JSR 223)ï¼ŒåŸç†ä¸Šæ˜¯å°†è„šæœ¬è¯­è¨€ç¼–è¯‘æˆ bytecodeã€‚
+ * è¿™æ ·è„šæœ¬è¯­è¨€ä¹Ÿèƒ½äº«ç”¨Javaå¹³å°çš„è¯¸å¤šä¼˜åŠ¿ï¼ŒåŒ…æ‹¬å¯ç§»æ¤æ€§ï¼Œå®‰å…¨ç­‰ã€‚
+ * å¦å¤–ï¼Œç”±äºç°åœ¨æ˜¯ç¼–è¯‘æˆ bytecode åå†æ‰§è¡Œï¼Œæ‰€ä»¥æ¯”åŸæ¥è¾¹è§£é‡Šè¾¹æ‰§è¡Œæ•ˆç‡è¦é«˜å¾ˆå¤šã€‚
  * <p>
- * ¼ÓÈë¶Ô½Å±¾ÓïÑÔµÄÖ§³Öºó£¬¶ÔJavaÓïÑÔÒ²Ìá¹©ÁËÒÔÏÂºÃ´¦£º
- * 1¡¢Ğí¶à½Å±¾ÓïÑÔ¶¼ÓĞ¶¯Ì¬ÌØĞÔ¡£
- * ±ÈÈç£¬Äã²»ĞèÒªÓÃÒ»¸ö±äÁ¿Ö®Ç°ÏÈÉùÃ÷Ëü£¬Äã¿ÉÒÔÓÃÒ»¸ö±äÁ¿´æ·ÅÍêÈ«²»Í¬ÀàĞÍµÄ¶ÔÏó£¬Äã²»ĞèÒª×öÇ¿ÖÆÀàĞÍ×ª»»£¬ÒòÎª×ª»»¶¼ÊÇ×Ô¶¯µÄ¡£
- * ÏÖÔÚJavaÓïÑÔÒ²¿ÉÒÔÍ¨¹ı¶Ô½Å±¾ÓïÑÔµÄÖ§³Ö¼ä½Ó»ñµÃÕâÖÖÁé»îĞÔ¡£
- * 2¡¢ ¿ÉÒÔÓÃ½Å±¾ÓïÑÔ¿ìËÙ¿ª·¢²úÆ·Ô­ĞÍ£¬ÒòÎªÏÖÔÚ¿ÉÒÔEdit-Run£¬¶øÎŞĞèEdit-Compile-Run¡£
- * 3¡¢Í¨¹ıÒıÈë½Å±¾ÓïÑÔ¿ÉÒÔÇáËÉÊµÏÖJavaÓ¦ÓÃ³ÌĞòµÄÀ©Õ¹ºÍ×Ô¶¨Òå.
- * ¿ÉÒÔ°ÑÔ­À´·Ö²¼ÔÚÔÚJavaÓ¦ÓÃ³ÌĞòÖĞµÄÅäÖÃÂß¼­£¬ÊıÑ§±í´ïÊ½ºÍÒµÎñ¹æÔòÌáÈ¡³öÀ´£¬×ªÓÃJavaScriptÀ´´¦Àí¡£
+ * åŠ å…¥å¯¹è„šæœ¬è¯­è¨€çš„æ”¯æŒåï¼Œå¯¹Javaè¯­è¨€ä¹Ÿæä¾›äº†ä»¥ä¸‹å¥½å¤„ï¼š
+ * 1ã€è®¸å¤šè„šæœ¬è¯­è¨€éƒ½æœ‰åŠ¨æ€ç‰¹æ€§ã€‚
+ * æ¯”å¦‚ï¼Œä½ ä¸éœ€è¦ç”¨ä¸€ä¸ªå˜é‡ä¹‹å‰å…ˆå£°æ˜å®ƒï¼Œä½ å¯ä»¥ç”¨ä¸€ä¸ªå˜é‡å­˜æ”¾å®Œå…¨ä¸åŒç±»å‹çš„å¯¹è±¡ï¼Œä½ ä¸éœ€è¦åšå¼ºåˆ¶ç±»å‹è½¬æ¢ï¼Œå› ä¸ºè½¬æ¢éƒ½æ˜¯è‡ªåŠ¨çš„ã€‚
+ * ç°åœ¨Javaè¯­è¨€ä¹Ÿå¯ä»¥é€šè¿‡å¯¹è„šæœ¬è¯­è¨€çš„æ”¯æŒé—´æ¥è·å¾—è¿™ç§çµæ´»æ€§ã€‚
+ * 2ã€ å¯ä»¥ç”¨è„šæœ¬è¯­è¨€å¿«é€Ÿå¼€å‘äº§å“åŸå‹ï¼Œå› ä¸ºç°åœ¨å¯ä»¥Edit-Runï¼Œè€Œæ— éœ€Edit-Compile-Runã€‚
+ * 3ã€é€šè¿‡å¼•å…¥è„šæœ¬è¯­è¨€å¯ä»¥è½»æ¾å®ç°Javaåº”ç”¨ç¨‹åºçš„æ‰©å±•å’Œè‡ªå®šä¹‰.
+ * å¯ä»¥æŠŠåŸæ¥åˆ†å¸ƒåœ¨åœ¨Javaåº”ç”¨ç¨‹åºä¸­çš„é…ç½®é€»è¾‘ï¼Œæ•°å­¦è¡¨è¾¾å¼å’Œä¸šåŠ¡è§„åˆ™æå–å‡ºæ¥ï¼Œè½¬ç”¨JavaScriptæ¥å¤„ç†ã€‚
  * <p>
- * SunµÄJDK6ÊµÏÖ°üº¬ÁËÒ»¸ö»ùÓÚMozilla RhinoµÄ ½Å±¾ÓïÑÔÒıÇæ£¬Ö§³ÖJavaScript¡£
- * Õâ²¢²»ÊÇËµÃ÷JDK6Ö»Ö§³ÖJavaScript£¬ÈÎºÎµÚÈı·½¶¼¿ÉÒÔ×Ô¼ºÊµÏÖÒ»¸öJSR-223¼æÈİµÄ½Å±¾ÒıÇæÊ¹µÃJDK6Ö§³Ö±ğµÄ½Å±¾ÓïÑÔ¡£
+ * Sunçš„JDK6å®ç°åŒ…å«äº†ä¸€ä¸ªåŸºäºMozilla Rhinoçš„ è„šæœ¬è¯­è¨€å¼•æ“ï¼Œæ”¯æŒJavaScriptã€‚
+ * è¿™å¹¶ä¸æ˜¯è¯´æ˜JDK6åªæ”¯æŒJavaScriptï¼Œä»»ä½•ç¬¬ä¸‰æ–¹éƒ½å¯ä»¥è‡ªå·±å®ç°ä¸€ä¸ªJSR-223å…¼å®¹çš„è„šæœ¬å¼•æ“ä½¿å¾—JDK6æ”¯æŒåˆ«çš„è„šæœ¬è¯­è¨€ã€‚
  * <p>
  * Scripting Tool
  * <p>
- * SUNÌá¹©µÄJDK6ÖĞÓĞÒ»¸öÃüÁîĞĞ¹¤¾ß ¡ª¡ª¡ª¡ª jrunscript£¬¿ÉÒÔÔÚ<JDK6_Home>/binÏÂÃæÕÒµ½Õâ¸ö¹¤¾ß¡£
- * jrunscriptÊÇÒ»¸ö½Å±¾ÓïÑÔµÄ½âÊÍ³ÌĞò£¬Ëü¶ÀÁ¢ÓÚ½Å±¾ÓïÑÔ£¬µ«Ä¬ÈÏÊÇÓÃJavaScript¡£
- * ¿ÉÒÔÓÃjrunscriptÀ´²âÊÔ×Ô¼ºĞ´µÄ½Å±¾ÓïÑÔÊÇ·ñÕıÈ·¡£
+ * SUNæä¾›çš„JDK6ä¸­æœ‰ä¸€ä¸ªå‘½ä»¤è¡Œå·¥å…· â€”â€”â€”â€” jrunscriptï¼Œå¯ä»¥åœ¨<JDK6_Home>/binä¸‹é¢æ‰¾åˆ°è¿™ä¸ªå·¥å…·ã€‚
+ * jrunscriptæ˜¯ä¸€ä¸ªè„šæœ¬è¯­è¨€çš„è§£é‡Šç¨‹åºï¼Œå®ƒç‹¬ç«‹äºè„šæœ¬è¯­è¨€ï¼Œä½†é»˜è®¤æ˜¯ç”¨JavaScriptã€‚
+ * å¯ä»¥ç”¨jrunscriptæ¥æµ‹è¯•è‡ªå·±å†™çš„è„šæœ¬è¯­è¨€æ˜¯å¦æ­£ç¡®ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-3
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-3
  */
 public class ScriptingAPI {
 
@@ -45,13 +45,13 @@ public class ScriptingAPI {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * Scripting APIÊÇÓÃÓÚÔÚJavaÀïÃæ±àĞ´½Å±¾ÓïÑÔ³ÌĞòµÄAPI£¬¾ÍÊÇÓÃÕâ¸öAPIÀ´±àĞ´JavaScript³ÌĞò¡£
-		 * ÕâÀïÃæÓĞÒ»¸öScriptEngineManagerÀà£¬ËüÊÇÊ¹ÓÃScripting APIµÄÈë¿Ú¡£
-		 * ScriptEngineManager¿ÉÒÔÍ¨¹ıjar·şÎñ·¢ÏÖ(service discovery)»úÖÆÑ°ÕÒºÏÊÊµÄ½Å±¾ÒıÇæÀà(ScriptEngine)¡£
+		 * Scripting APIæ˜¯ç”¨äºåœ¨Javaé‡Œé¢ç¼–å†™è„šæœ¬è¯­è¨€ç¨‹åºçš„APIï¼Œå°±æ˜¯ç”¨è¿™ä¸ªAPIæ¥ç¼–å†™JavaScriptç¨‹åºã€‚
+		 * è¿™é‡Œé¢æœ‰ä¸€ä¸ªScriptEngineManagerç±»ï¼Œå®ƒæ˜¯ä½¿ç”¨Scripting APIçš„å…¥å£ã€‚
+		 * ScriptEngineManagerå¯ä»¥é€šè¿‡jaræœåŠ¡å‘ç°(service discovery)æœºåˆ¶å¯»æ‰¾åˆé€‚çš„è„šæœ¬å¼•æ“ç±»(ScriptEngine)ã€‚
 		 */
-		// ´´½¨Ò»¸öScriptEngineManager¶ÔÏó
+		// åˆ›å»ºä¸€ä¸ªScriptEngineManagerå¯¹è±¡
 		ScriptEngineManager manager = new ScriptEngineManager();
-		// Í¨¹ıScriptEngineManager»ñµÃScriptEngine¶ÔÏó
+		// é€šè¿‡ScriptEngineManagerè·å¾—ScriptEngineå¯¹è±¡
 		ScriptEngine engine = manager.getEngineByName("javascript");
 		try {
 			testEvalScript(engine);
@@ -65,55 +65,55 @@ public class ScriptingAPI {
 	}
 
 	/**
-	 * ÑİÊ¾ÈçºÎÔÚJavaÀïÃæÔËĞĞ½Å±¾ÓïÑÔ
+	 * æ¼”ç¤ºå¦‚ä½•åœ¨Javaé‡Œé¢è¿è¡Œè„šæœ¬è¯­è¨€
 	 */
 	private static void testEvalScript(ScriptEngine engine) throws ScriptException {
 		String script = "println('Hello Scripting')";
-		engine.eval(script);// ÓÃScriptEngineµÄeval·½·¨Ö´ĞĞ½Å±¾
+		engine.eval(script);// ç”¨ScriptEngineçš„evalæ–¹æ³•æ‰§è¡Œè„šæœ¬
 	}
 
 	/**
-	 * ÑİÊ¾ÈçºÎ±©Â¶Java¶ÔÏóÎª½Å±¾ÓïÑÔµÄÈ«¾Ö±äÁ¿
+	 * æ¼”ç¤ºå¦‚ä½•æš´éœ²Javaå¯¹è±¡ä¸ºè„šæœ¬è¯­è¨€çš„å…¨å±€å˜é‡
 	 */
 	public static void testScriptVariables(ScriptEngine engine) throws ScriptException {
 		Date date = new Date();
-		engine.put("d", date);// ½«±äÁ¿ÃûºÍ¶ÔÏó°ó¶¨
-		engine.eval("println('Today:'+ d.toString())");// ½Å±¾ÖĞÖ±½ÓÊ¹ÓÃ±äÁ¿Ãûd¼´¿É
+		engine.put("d", date);// å°†å˜é‡åå’Œå¯¹è±¡ç»‘å®š
+		engine.eval("println('Today:'+ d.toString())");// è„šæœ¬ä¸­ç›´æ¥ä½¿ç”¨å˜é‡ådå³å¯
 	}
 
 	/**
-	 * ÑİÊ¾ÈçºÎÔÚJavaÖĞµ÷ÓÃ½Å±¾ÓïÑÔµÄ·½·¨
+	 * æ¼”ç¤ºå¦‚ä½•åœ¨Javaä¸­è°ƒç”¨è„šæœ¬è¯­è¨€çš„æ–¹æ³•
 	 */
 	public static void testInvokeScriptMethod(ScriptEngine engine) throws Exception {
 		String script = "function hello(name) { return 'Hello,' + name;}";
 		engine.eval(script);
-		// Invocable ÊÇÓÉ ScriptEngines ÊµÏÖµÄ¿ÉÑ¡½Ó¿Ú£¬ÔÊĞíµ÷ÓÃÒÔÇ°Ö´ĞĞ¹ıµÄ½Å±¾ÖĞµÄº¯Êı
+		// Invocable æ˜¯ç”± ScriptEngines å®ç°çš„å¯é€‰æ¥å£ï¼Œå…è®¸è°ƒç”¨ä»¥å‰æ‰§è¡Œè¿‡çš„è„šæœ¬ä¸­çš„å‡½æ•°
 		Invocable invocable = (Invocable) engine;
-		// µ÷ÓÃ½Å±¾ÖĞ¶¨ÒåµÄ¶¥²ã³ÌĞòºÍº¯Êı
+		// è°ƒç”¨è„šæœ¬ä¸­å®šä¹‰çš„é¡¶å±‚ç¨‹åºå’Œå‡½æ•°
 		String res = (String) invocable.invokeFunction("hello", "Scripting");
 		System.out.println("res:" + res);
 	}
 
 	/**
-	 * ÑİÊ¾½Å±¾ÓïÑÔÈçºÎÊµÏÖJavaµÄ½Ó¿Ú
+	 * æ¼”ç¤ºè„šæœ¬è¯­è¨€å¦‚ä½•å®ç°Javaçš„æ¥å£
 	 */
 	public static void testScriptInterface(ScriptEngine engine) throws ScriptException {
 		String script = "var obj = new Object(); obj.run = function() { println('run method called'); }";
 		engine.eval(script);
-		// »ñÈ¡½Å±¾ÖĞµÄ±äÁ¿Öµ
+		// è·å–è„šæœ¬ä¸­çš„å˜é‡å€¼
 		Object obj = engine.get("obj");
 		Invocable inv = (Invocable) engine;
-		// ·µ»ØÒ»¸ö½Ó¿ÚµÄÊµÏÖ£¬¸Ã½Ó¿ÚÊ¹ÓÃ½âÊÍÆ÷ÖĞÒÑ±àÒë½Å±¾¶ÔÏóµÄ³ÉÔ±º¯Êı¡£
+		// è¿”å›ä¸€ä¸ªæ¥å£çš„å®ç°ï¼Œè¯¥æ¥å£ä½¿ç”¨è§£é‡Šå™¨ä¸­å·²ç¼–è¯‘è„šæœ¬å¯¹è±¡çš„æˆå‘˜å‡½æ•°ã€‚
 		Runnable r = inv.getInterface(obj, Runnable.class);
 		Thread th = new Thread(r);
 		th.start();
 	}
 
 	/**
-	 * ÑİÊ¾½Å±¾ÓïÑÔÈçºÎÊ¹ÓÃJDKÆ½Ì¨ÏÂµÄÀà
+	 * æ¼”ç¤ºè„šæœ¬è¯­è¨€å¦‚ä½•ä½¿ç”¨JDKå¹³å°ä¸‹çš„ç±»
 	 */
 	public static void testUsingJDKClasses(ScriptEngine engine) throws Exception {
-		// PackagesÊÇ½Å±¾ÓïÑÔÀïµÄÒ»¸öÈ«¾Ö±äÁ¿,×¨ÓÃÓÚ·ÃÎÊJDKµÄpackage
+		// Packagesæ˜¯è„šæœ¬è¯­è¨€é‡Œçš„ä¸€ä¸ªå…¨å±€å˜é‡,ä¸“ç”¨äºè®¿é—®JDKçš„package
 		String js = "function calculate(a,b) {var result = Packages.java.lang.Math.pow(a,b); return result;}";
 		engine.eval(js);
 		Invocable inv = (Invocable) engine;

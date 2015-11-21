@@ -4,11 +4,11 @@
 package inner;
 
 /**
- * Destination½Ó¿Ú
+ * Destinationæ¥å£
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-2 
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-2 
  */
 public interface IDestination {
     

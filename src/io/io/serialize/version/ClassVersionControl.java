@@ -6,15 +6,15 @@ package io.serialize.version;
 import java.io.*;
 
 /**
- * ÀàÎÄ¼ş°æ±¾¿ØÖÆ
+ * ç±»æ–‡ä»¶ç‰ˆæœ¬æ§åˆ¶
  * <p>
- * ±¾ÀıÏÈ½«×î³õ°æ±¾µÄ¶ÔÏó(±»×¢ÊÍµôµÄÁ½¸öÀà)ĞòÁĞ»¯µ½´ÅÅÌÎÄ¼ş£¬È»ºó½«ÕâÁ½¸öÀà½øĞĞ¸Ä½ø£¬È»ºó×¢ÊÍµôÔ­À´µÄÀà¶¨Òå¡£
- * Ê¹ÓÃĞÂ°æ±¾µÄÀà£¬È»ºóÔÙÊÔÍ¼È¥´ÅÅÌÎÄ¼şÖĞ·´ĞòÁĞ»¯¶ÔÏó£¬»á·¢ÏÖÃ»ÓĞ¶¨Òå¡£
- * serialVersionUID³£Á¿µÄÀà¶ÔÏóÔÙ»Ö¸´Ê±Å×³öÒì³££¬¶ø¶¨ÒåÁËserialVersionUID³£Á¿µÄÀà¶ÔÏó»á°²È«µÄ»Ö¸´¡£
+ * æœ¬ä¾‹å…ˆå°†æœ€åˆç‰ˆæœ¬çš„å¯¹è±¡(è¢«æ³¨é‡Šæ‰çš„ä¸¤ä¸ªç±»)åºåˆ—åŒ–åˆ°ç£ç›˜æ–‡ä»¶ï¼Œç„¶åå°†è¿™ä¸¤ä¸ªç±»è¿›è¡Œæ”¹è¿›ï¼Œç„¶åæ³¨é‡Šæ‰åŸæ¥çš„ç±»å®šä¹‰ã€‚
+ * ä½¿ç”¨æ–°ç‰ˆæœ¬çš„ç±»ï¼Œç„¶åå†è¯•å›¾å»ç£ç›˜æ–‡ä»¶ä¸­ååºåˆ—åŒ–å¯¹è±¡ï¼Œä¼šå‘ç°æ²¡æœ‰å®šä¹‰ã€‚
+ * serialVersionUIDå¸¸é‡çš„ç±»å¯¹è±¡å†æ¢å¤æ—¶æŠ›å‡ºå¼‚å¸¸ï¼Œè€Œå®šä¹‰äº†serialVersionUIDå¸¸é‡çš„ç±»å¯¹è±¡ä¼šå®‰å…¨çš„æ¢å¤ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-27
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-27
  */
 public class ClassVersionControl {
 
@@ -40,11 +40,11 @@ public class ClassVersionControl {
 }
 
 /************
- * ĞÂ°æ±¾µÄ¶ÔÏó
+ * æ–°ç‰ˆæœ¬çš„å¯¹è±¡
  ************/
 
 /**
- * Ã»ÓĞserialVersionUID³£Á¿µÄÀà
+ * æ²¡æœ‰serialVersionUIDå¸¸é‡çš„ç±»
  */
 @SuppressWarnings("serial")
 class ObjectWithoutSerialVersionUID implements Serializable {
@@ -58,7 +58,7 @@ class ObjectWithoutSerialVersionUID implements Serializable {
 }
 
 /**
- * º¬ÓĞserialVersionUID³£Á¿µÄÀà
+ * å«æœ‰serialVersionUIDå¸¸é‡çš„ç±»
  */
 class ObjectWithSerialVersionUID implements Serializable {
 
@@ -73,7 +73,7 @@ class ObjectWithSerialVersionUID implements Serializable {
 }
 
 /************
- * ¾É°æ±¾µÄ¶ÔÏó
+ * æ—§ç‰ˆæœ¬çš„å¯¹è±¡
  ************/
 
 //@SuppressWarnings("serial")

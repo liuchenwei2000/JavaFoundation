@@ -6,13 +6,13 @@ package rtti.reflect;
 import java.lang.reflect.Field;
 
 /**
- * Ë½ÓĞÓòĞŞ¸ÄÑİÊ¾
+ * ç§æœ‰åŸŸä¿®æ”¹æ¼”ç¤º
  * <p>
- * Ã»ÓĞÈÎºÎ·½Ê½¿ÉÒÔ×èÖ¹·´Éä´ïµ½²¢µ÷ÓÃÄÇĞ©·Ç¹«¹²·ÃÎÊÈ¨ÏŞµÄÓò¡£
+ * æ²¡æœ‰ä»»ä½•æ–¹å¼å¯ä»¥é˜»æ­¢åå°„è¾¾åˆ°å¹¶è°ƒç”¨é‚£äº›éå…¬å…±è®¿é—®æƒé™çš„åŸŸã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-14
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-14
  */
 public class PrivateFieldModifyingDemo {
 
@@ -23,24 +23,24 @@ public class PrivateFieldModifyingDemo {
 		WithPrivateFieldClass wpfc = new WithPrivateFieldClass();
 		System.out.println(wpfc);
 		try {
-			// ¸ù¾İÓòÃû³Æ·µ»Ø¶ÔÓ¦µÄÓò¶ÔÏó
+			// æ ¹æ®åŸŸåç§°è¿”å›å¯¹åº”çš„åŸŸå¯¹è±¡
 			Field field = wpfc.getClass().getDeclaredField("i");
-			field.setAccessible(true);// ÕâÑù¾Í¿ÉÒÔ·ÃÎÊ privateÓòÁË
-			System.out.println("f.getInt(wpfc)£º" + field.getInt(wpfc));
+			field.setAccessible(true);// è¿™æ ·å°±å¯ä»¥è®¿é—® privateåŸŸäº†
+			System.out.println("f.getInt(wpfc)ï¼š" + field.getInt(wpfc));
 			field.setInt(wpfc, 47);
 			System.out.println(wpfc);
 			System.out.println();
 			
 			field = wpfc.getClass().getDeclaredField("s");
-			field.setAccessible(true);// final Óò»¹ÊÇ²»¿ÉÒÔÔÙ±»¸³ÖµµÄ
-			System.out.println("f.get(wpfc)£º" + field.get(wpfc));
+			field.setAccessible(true);// final åŸŸè¿˜æ˜¯ä¸å¯ä»¥å†è¢«èµ‹å€¼çš„
+			System.out.println("f.get(wpfc)ï¼š" + field.get(wpfc));
 			field.set(wpfc, "No,you're not!");
 			System.out.println(wpfc);
 			System.out.println();
 
 			field = wpfc.getClass().getDeclaredField("s2");
 			field.setAccessible(true);
-			System.out.println("f.get(wpfc)£º" + field.get(wpfc));
+			System.out.println("f.get(wpfc)ï¼š" + field.get(wpfc));
 			field.set(wpfc, "No,you're not!");
 			System.out.println(wpfc);
 		} catch (Exception e) {

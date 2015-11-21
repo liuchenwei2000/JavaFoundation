@@ -4,11 +4,11 @@
 package object;
 
 /**
- * ObjectÀà·½·¨Ê¾Àı
+ * Objectç±»æ–¹æ³•ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-9
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-9
  */
 public class ObjectClass {
 
@@ -17,12 +17,12 @@ public class ObjectClass {
 	 */
 	public static void main(String[] args) {
 		Object obj = new Object();
-		// ·µ»Ø¶ÔÏóµÄÔËĞĞÊ±Àà
+		// è¿”å›å¯¹è±¡çš„è¿è¡Œæ—¶ç±»
 		System.out.println(obj.getClass());
-		// ·µ»Ø¸Ã¶ÔÏóµÄ×Ö·û´®±íÊ¾(ÎªÀàÈ«Â·¾¶+@+16½øÖÆhashCode)
+		// è¿”å›è¯¥å¯¹è±¡çš„å­—ç¬¦ä¸²è¡¨ç¤º(ä¸ºç±»å…¨è·¯å¾„+@+16è¿›åˆ¶hashCode)
 		System.out.println(obj.toString());
-		// toString()¸ñÊ½¹æ·¶£º
-		// ÀàµÄÃû×Ö£¬ËæºóÊÇÒ»¶Ô·½À¨ºÅÀ¨ÆğÀ´µÄÓòÖµ¡£
-		// Èç£ºgetClass().getName() + "[name=" + name + ",age=" + age + "]";
+		// toString()æ ¼å¼è§„èŒƒï¼š
+		// ç±»çš„åå­—ï¼Œéšåæ˜¯ä¸€å¯¹æ–¹æ‹¬å·æ‹¬èµ·æ¥çš„åŸŸå€¼ã€‚
+		// å¦‚ï¼šgetClass().getName() + "[name=" + name + ",age=" + age + "]";
 	}
 }

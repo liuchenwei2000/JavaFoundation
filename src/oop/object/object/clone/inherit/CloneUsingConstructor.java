@@ -6,13 +6,13 @@ package object.clone.inherit;
 import java.lang.reflect.Constructor;
 
 /**
- * Í¨¹ı¹¹ÔìÆ÷ÊµÏÖ¿ËÂ¡ÑİÊ¾
+ * é€šè¿‡æ„é€ å™¨å®ç°å…‹éš†æ¼”ç¤º
  * <p>
- * ½áÂÛ£ºÔÚJavaÖĞÊ¹ÓÃ¿½±´¹¹ÔìÆ÷´´½¨¶ÔÏóµÄ¾Ö²¿¿½±´ÊÇ²»¿ÉĞĞµÄ¡£
+ * ç»“è®ºï¼šåœ¨Javaä¸­ä½¿ç”¨æ‹·è´æ„é€ å™¨åˆ›å»ºå¯¹è±¡çš„å±€éƒ¨æ‹·è´æ˜¯ä¸å¯è¡Œçš„ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2009-6-8
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-8
  */
 public class CloneUsingConstructor {
 
@@ -35,14 +35,14 @@ public class CloneUsingConstructor {
 	}
 
 	private static void cloneByTomatoConstructor(Tomato t) {
-		// ÕâÀïÕâÑù¿ËÂ¡ÊÇÎä¶ÏµÄ£¬Èç¹ûtÊÇTomatoµÄ×ÓÀà¾Í»á³ö´í
+		// è¿™é‡Œè¿™æ ·å…‹éš†æ˜¯æ­¦æ–­çš„ï¼Œå¦‚æœtæ˜¯Tomatoçš„å­ç±»å°±ä¼šå‡ºé”™
 		t = new Tomato(t);
 		System.out.println("In cloneByTomatoConstructor, t is a "
 				+ t.getClass().getSimpleName());
 	}
 
 	private static void cloneByFruitConstructor(Fruit f) {
-		// ÕâÀïÕâÑù¿ËÂ¡ÊÇÎä¶ÏµÄ£¬Èç¹ûtÊÇFruitµÄ×ÓÀà¾Í»á³ö´í
+		// è¿™é‡Œè¿™æ ·å…‹éš†æ˜¯æ­¦æ–­çš„ï¼Œå¦‚æœtæ˜¯Fruitçš„å­ç±»å°±ä¼šå‡ºé”™
 		f = new Fruit(f);
 		System.out.println("In cloneByFruitConstructor, f is a "
 				+ f.getClass().getSimpleName());
@@ -50,8 +50,8 @@ public class CloneUsingConstructor {
 
 	private static void cloneByReflectionTomato(Tomato t) {
 		try {
-			// Í¨¹ı·´ÉäÄÜ¹»ÔÚÔËĞĞÊ±»ñÈ¡tµÄ¾ßÌåÀàĞÍ£¬È»ºóµ÷ÓÃËüµÄ¹¹ÔìÆ÷
-			// µ«ÊÇ²¢²»ÄÜ±£Ö¤Ã¿Ò»¸öTomato×ÓÀà¶¼ÓĞ¿½±´¹¹ÔìÆ÷
+			// é€šè¿‡åå°„èƒ½å¤Ÿåœ¨è¿è¡Œæ—¶è·å–tçš„å…·ä½“ç±»å‹ï¼Œç„¶åè°ƒç”¨å®ƒçš„æ„é€ å™¨
+			// ä½†æ˜¯å¹¶ä¸èƒ½ä¿è¯æ¯ä¸€ä¸ªTomatoå­ç±»éƒ½æœ‰æ‹·è´æ„é€ å™¨
 			Class<?> c = t.getClass();
 			Constructor<?> ct = c.getConstructor(new Class[] { c });
 			Object obj = ct.newInstance(new Object[] { t });
@@ -87,7 +87,7 @@ class FruitQualities {
 	}
 
 	/**
-	 * ÌØÊâµÄ¹¹ÔìÆ÷(¿½±´¹¹ÔìÆ÷)£¬ËüµÄ¹¤×÷¾ÍÊÇ¸´ÖÆ¶ÔÏó
+	 * ç‰¹æ®Šçš„æ„é€ å™¨(æ‹·è´æ„é€ å™¨)ï¼Œå®ƒçš„å·¥ä½œå°±æ˜¯å¤åˆ¶å¯¹è±¡
 	 */
 	public FruitQualities(FruitQualities f) {
 		weight = f.weight;
@@ -104,7 +104,7 @@ class Seed {
 	}
 
 	/**
-	 * ¿½±´¹¹ÔìÆ÷
+	 * æ‹·è´æ„é€ å™¨
 	 */
 	public Seed(Seed s) {
 	}
@@ -126,7 +126,7 @@ class Fruit {
 	}
 
 	/**
-	 * ×¢ÒâÃ¿¸öÀà¶¼ÓĞ¿½±´¹¹ÔìÆ÷£¬ËüÃÇ±ØĞë¸ºÔğµ÷ÓÃ»ùÀàºÍ³ÉÔ±¶ÔÏóµÄ¿½±´¹¹ÔìÆ÷£¬ÒÔ´ïµ½Éî²ã¿½±´µÄĞ§¹û¡£
+	 * æ³¨æ„æ¯ä¸ªç±»éƒ½æœ‰æ‹·è´æ„é€ å™¨ï¼Œå®ƒä»¬å¿…é¡»è´Ÿè´£è°ƒç”¨åŸºç±»å’Œæˆå‘˜å¯¹è±¡çš„æ‹·è´æ„é€ å™¨ï¼Œä»¥è¾¾åˆ°æ·±å±‚æ‹·è´çš„æ•ˆæœã€‚
 	 */
 	public Fruit(Fruit f) {
 		fq = new FruitQualities(f.fq);

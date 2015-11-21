@@ -4,18 +4,18 @@
 package access;
 
 /**
- * ¹¹ÔìÆ÷·ÃÎÊÑİÊ¾
+ * æ„é€ å™¨è®¿é—®æ¼”ç¤º
  * <p>
- * ÀàÃûµÄ·ÃÎÊ¿ØÖÆ·ûĞŞÊÎ±íÊ¾¸ÃÀàµÄ¿É¼ûĞÔ£¬Àà¹¹ÔìÆ÷µÄ·ÃÎÊ¿ØÖÆ·û±íÊ¾¸Ã¹¹ÔìÆ÷µÄ¿É¼ûĞÔ¡£
+ * ç±»åçš„è®¿é—®æ§åˆ¶ç¬¦ä¿®é¥°è¡¨ç¤ºè¯¥ç±»çš„å¯è§æ€§ï¼Œç±»æ„é€ å™¨çš„è®¿é—®æ§åˆ¶ç¬¦è¡¨ç¤ºè¯¥æ„é€ å™¨çš„å¯è§æ€§ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-13
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-13
  */
 public class ConstructorAccessDemo {
 
 	/**
-	 * ´òÓ¡ÈçÏÂ£º 
+	 * æ‰“å°å¦‚ä¸‹ï¼š 
 	 * Class PrivateClass is : private 
 	 * Constructor PrivateClass() is : public
 	 * 
@@ -36,8 +36,8 @@ public class ConstructorAccessDemo {
 	}
 
 	/**
-	 * Ö»ÓĞ±¾Àà(ConstructorAccessDemo)¿ÉÒÔÊ¹ÓÃPrivateClass¡£
-	 * ËùÒÔ¾¡¹ÜPrivateClass¹¹ÔìÆ÷ĞŞÊÎ·ûÊÇpublic£¬µ«¶ÔÓÚ·Ç±¾Ààµ÷ÓÃÒ²ÊÇ²»¿É¼ûµÄ¡£
+	 * åªæœ‰æœ¬ç±»(ConstructorAccessDemo)å¯ä»¥ä½¿ç”¨PrivateClassã€‚
+	 * æ‰€ä»¥å°½ç®¡PrivateClassæ„é€ å™¨ä¿®é¥°ç¬¦æ˜¯publicï¼Œä½†å¯¹äºéæœ¬ç±»è°ƒç”¨ä¹Ÿæ˜¯ä¸å¯è§çš„ã€‚
 	 */
 	private class PrivateClass {
 		@SuppressWarnings("unused")
@@ -45,25 +45,25 @@ public class ConstructorAccessDemo {
 	}
 
 	/**
-	 * Í¬°üÀà»òÕß·ÇÍ¬°ü±¾Àà(ConstructorAccessDemo)×ÓÀà¿ÉÒÔÊ¹ÓÃProtectedClass¡£
-	 * ËùÒÔ½«Æä¹¹ÔìÆ÷ĞŞÊÎÎªpublic£¬ÕâÑù¶ÔÓÚÍ¬°üÀàµÄÊ¹ÓÃÃ»ÓĞÊ²Ã´Ó°Ïì£¬¿ÉÒÔnew ProtectedClass()¡£
-	 * µ«ÊÇ¶ÔÓÚ·ÇÍ¬°ü×ÓÀàÀ´Ëµ£¬Õâ¾ÍÒâÎ¶×ÅÆä¿ÉÒÔÊ¹ÓÃnew ProtectedClass()À´´´½¨ÊµÀı¡£
-	 * Èç¹û²»ÊÇpublicĞŞÊÎ£¬¶øÊ¹ÓÃÄ¬ÈÏµÄĞŞÊÎ·û(¼´°ü¼¶ĞŞÊÎ·û)À´ĞŞÊÎ¹¹ÔìÆ÷¡£
-	 * ÄÇÃ´·ÇÍ¬°ü×ÓÀà¾Í²»ÄÜµ÷ÓÃnew ProtectedClass()À´´´½¨ÊµÀıÁË¡£
+	 * åŒåŒ…ç±»æˆ–è€…éåŒåŒ…æœ¬ç±»(ConstructorAccessDemo)å­ç±»å¯ä»¥ä½¿ç”¨ProtectedClassã€‚
+	 * æ‰€ä»¥å°†å…¶æ„é€ å™¨ä¿®é¥°ä¸ºpublicï¼Œè¿™æ ·å¯¹äºåŒåŒ…ç±»çš„ä½¿ç”¨æ²¡æœ‰ä»€ä¹ˆå½±å“ï¼Œå¯ä»¥new ProtectedClass()ã€‚
+	 * ä½†æ˜¯å¯¹äºéåŒåŒ…å­ç±»æ¥è¯´ï¼Œè¿™å°±æ„å‘³ç€å…¶å¯ä»¥ä½¿ç”¨new ProtectedClass()æ¥åˆ›å»ºå®ä¾‹ã€‚
+	 * å¦‚æœä¸æ˜¯publicä¿®é¥°ï¼Œè€Œä½¿ç”¨é»˜è®¤çš„ä¿®é¥°ç¬¦(å³åŒ…çº§ä¿®é¥°ç¬¦)æ¥ä¿®é¥°æ„é€ å™¨ã€‚
+	 * é‚£ä¹ˆéåŒåŒ…å­ç±»å°±ä¸èƒ½è°ƒç”¨new ProtectedClass()æ¥åˆ›å»ºå®ä¾‹äº†ã€‚
 	 */
 	protected class ProtectedClass {
 		public ProtectedClass(){}
 	}
 
 	/**
-	 * Ö»ÓĞÍ¬°üÀà¿ÉÒÔÊ¹ÓÃDefaultClass£¬ËùÒÔ½«Æä¹¹ÔìÆ÷ĞŞÊÎÎªpublicºÍÄ¬ÈÏµÄdefaultÊÇÒ»ÑùµÄĞ§¹û¡£
+	 * åªæœ‰åŒåŒ…ç±»å¯ä»¥ä½¿ç”¨DefaultClassï¼Œæ‰€ä»¥å°†å…¶æ„é€ å™¨ä¿®é¥°ä¸ºpublicå’Œé»˜è®¤çš„defaultæ˜¯ä¸€æ ·çš„æ•ˆæœã€‚
 	 */
 	class DefaultClass {
 		public DefaultClass(){}
 	}
 	
 	/**
-	 * ËùÓĞµÄÀà¶¼¿ÉÒÔÊ¹ÓÃPublicClass£¬ËùÒÔ½«ÆäÆä¹¹ÔìÆ÷ĞŞÊÎÎªprivate£¬ÒâÎ¶×Å·Ç±¾Àà²»¿ÉÒÔÊ¹ÓÃnewÀ´´´½¨PublicClassÊµÀı¡£
+	 * æ‰€æœ‰çš„ç±»éƒ½å¯ä»¥ä½¿ç”¨PublicClassï¼Œæ‰€ä»¥å°†å…¶å…¶æ„é€ å™¨ä¿®é¥°ä¸ºprivateï¼Œæ„å‘³ç€éæœ¬ç±»ä¸å¯ä»¥ä½¿ç”¨newæ¥åˆ›å»ºPublicClasså®ä¾‹ã€‚
 	 */
 	public class PublicClass {
 		private PublicClass(){}

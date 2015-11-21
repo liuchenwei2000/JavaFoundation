@@ -1,4 +1,4 @@
-System.getProperty()参数大全   
+System.getProperty()鍙傛暟澶у叏   
    
 java.version                            Java Runtime Environment version   
 java.vendor                             Java Runtime Environment vendor   

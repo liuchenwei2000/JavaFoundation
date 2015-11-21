@@ -3,18 +3,18 @@ package lang;
 import java.math.BigInteger;
 
 /**
- * BigIntegerÑÝÊ¾Àà
+ * BigIntegeræ¼”ç¤ºç±»
  * <p>
- * ¸¡µãÊýÖµ²»ÊÊÓÃÓÚ½ûÖ¹³öÏÖÉáÈëÎó²îµÄ½ðÈÚ¼ÆËãÖÐ£¬ÒòÎª¸¡µãÊýÖµ²ÉÓÃ¶þ½øÖÆÏµÍ³±íÊ¾£¬
- * ¶øÔÚ¶þ½øÖÆÏµÍ³ÖÐÎÞ·¨¾«È·µÄ±íÊ¾·ÖÊý1/10£¬¾ÍÏñÊ®½øÖÆÎÞ·¨¾«È·±íÊ¾1/3Ò»Ñù¡£
- * Èç¹ûÊ¹ÓÃ»ù±¾µÄintºÍdouble²»ÄÜ¹»Âú×ãÐèÒªµÄ»°£¬¿ÉÒÔÊ¹ÓÃBigIntegerºÍBigDecimalÀà´¦Àí³¬´óÊý¾Ý£¬
- * ËüÃÇ¿ÉÒÔ´¦ÀíÈÎÒâ³¤¶ÈµÄÊýÖµÊµÏÖÈÎÒâ¾«¶ÈµÄÔËËã¡£
+ * æµ®ç‚¹æ•°å€¼ä¸é€‚ç”¨äºŽç¦æ­¢å‡ºçŽ°èˆå…¥è¯¯å·®çš„é‡‘èžè®¡ç®—ä¸­ï¼Œå› ä¸ºæµ®ç‚¹æ•°å€¼é‡‡ç”¨äºŒè¿›åˆ¶ç³»ç»Ÿè¡¨ç¤ºï¼Œ
+ * è€Œåœ¨äºŒè¿›åˆ¶ç³»ç»Ÿä¸­æ— æ³•ç²¾ç¡®çš„è¡¨ç¤ºåˆ†æ•°1/10ï¼Œå°±åƒåè¿›åˆ¶æ— æ³•ç²¾ç¡®è¡¨ç¤º1/3ä¸€æ ·ã€‚
+ * å¦‚æžœä½¿ç”¨åŸºæœ¬çš„intå’Œdoubleä¸èƒ½å¤Ÿæ»¡è¶³éœ€è¦çš„è¯ï¼Œå¯ä»¥ä½¿ç”¨BigIntegerå’ŒBigDecimalç±»å¤„ç†è¶…å¤§æ•°æ®ï¼Œ
+ * å®ƒä»¬å¯ä»¥å¤„ç†ä»»æ„é•¿åº¦çš„æ•°å€¼å®žçŽ°ä»»æ„ç²¾åº¦çš„è¿ç®—ã€‚
  * <p>
- * BigDecimalÀàºÍBigIntegerÀàÓÃ·¨»ù±¾ÏàÍ¬
+ * BigDecimalç±»å’ŒBigIntegerç±»ç”¨æ³•åŸºæœ¬ç›¸åŒ
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-5
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-5
  */
 public class BigIntegerDemo {
 	
@@ -22,19 +22,19 @@ public class BigIntegerDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ÔËËã(12345678987654321 + 1) * 2
+		// è¿ç®—(12345678987654321 + 1) * 2
 		BigInteger a = new BigInteger("12345678987654321");
 		BigInteger result = a.add(BigInteger.valueOf(1)).multiply(
 				BigInteger.valueOf(2));
 		System.out.println("(12345678987654321 + 1) * 2 = " + result);
-		// ÔËËã(12345678987654321 - 1 ) / 2
+		// è¿ç®—(12345678987654321 - 1 ) / 2
 		result = a.subtract(BigInteger.valueOf(1))
 				.divide(BigInteger.valueOf(2));
 		System.out.println("(12345678987654321 - 1) / 2 = " + result);
-		// ÔËËã12345678987654321 mod 11
+		// è¿ç®—12345678987654321 mod 11
 		result = a.mod(BigInteger.valueOf(11));
 		System.out.println("12345678987654321 mod 11 = " + result);
-		// ±È½ÏÁ½¸öBigIntegerµÄ´óÐ¡
+		// æ¯”è¾ƒä¸¤ä¸ªBigIntegerçš„å¤§å°
 		BigInteger b = new BigInteger("123456789876543210");
 		if (a.compareTo(b) >= 0) {
 			System.out.println(a + " >= " + b);

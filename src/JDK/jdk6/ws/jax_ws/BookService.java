@@ -9,13 +9,13 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 
 /**
- * 1£¬±àĞ´·şÎñÀà,²¢ÓÃWeb Services Metadata(JSR-181)±ê×¢Õâ¸ö·şÎñÀà¡£
+ * 1ï¼Œç¼–å†™æœåŠ¡ç±»,å¹¶ç”¨Web Services Metadata(JSR-181)æ ‡æ³¨è¿™ä¸ªæœåŠ¡ç±»ã€‚
  * <p>
- * JAX-WS¿ÉÒÔ°ÑÈÎÒâPOJO±©Â¶ÎªWeb Services£¬·şÎñÀà²»ĞèÒªÊµÏÖ½Ó¿Ú£¬·şÎñ·½·¨Ò²Ã»ÓĞ±ØÒªÅ×³öRMIÒì³£¡£
+ * JAX-WSå¯ä»¥æŠŠä»»æ„POJOæš´éœ²ä¸ºWeb Servicesï¼ŒæœåŠ¡ç±»ä¸éœ€è¦å®ç°æ¥å£ï¼ŒæœåŠ¡æ–¹æ³•ä¹Ÿæ²¡æœ‰å¿…è¦æŠ›å‡ºRMIå¼‚å¸¸ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-2
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-2
  */
 @WebService(targetNamespace = "http://www.liuchenwei2000.com", serviceName = "fetchbook")
 public class BookService {

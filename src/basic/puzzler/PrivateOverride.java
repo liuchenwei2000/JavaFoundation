@@ -4,11 +4,11 @@
 package puzzler;
 
 /**
- * Ë½ÓÐ·½·¨¸²¸Ç
+ * ç§æœ‰æ–¹æ³•è¦†ç›–
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-4-8
+ * åˆ›å»ºæ—¥æœŸï¼š2008-4-8
  */
 public class PrivateOverride {
 
@@ -19,11 +19,11 @@ public class PrivateOverride {
 		PrivateOverride p = new Derived();
 		p.f();
 		/*
-		 * Êµ¼ÊÊä³öÊÇ"private f() in PrivateOverride"
-		 * ÕâÊÇÒòÎªprivate·½·¨ÊÇfinal·½·¨£¬¶Ô×ÓÀàÊÇÆÁ±ÎµÄ¡£
-		 * DerivedÀàÖÐµÄf()·½·¨ÊÇÒ»¸öÈ«ÐÂµÄ·½·¨£¬¼ÈÈ»»ùÀàµÄf()·½·¨×ÓÀà²»¿É¼û£¬Ò²¾Í²»´æÔÚ¸²¸Ç¡£
-		 * Ö»ÓÐ·Çprivate·½·¨²Å¿ÉÒÔ±»¸²¸Ç£¬µ«ÊÇ»¹ÊÇÒª×¢ÒâÒþ²Øprivate·½·¨µÄÏÖÏó¡£
-		 * ËäÈ»±àÒëÆ÷²»»á±¨´í£¬µ«ÊÇÒ²²»»á°´ÕÕÆÚÍûÀ´Ö´ÐÐ£¬¶ÔÓÚ»ùÀàÖÐµÄprivate·½·¨£¬ÔÚ×ÓÀàÖÐ×îºÃ²ÉÓÃ²»Í¬µÄÃû×Ö
+		 * å®žé™…è¾“å‡ºæ˜¯"private f() in PrivateOverride"
+		 * è¿™æ˜¯å› ä¸ºprivateæ–¹æ³•æ˜¯finalæ–¹æ³•ï¼Œå¯¹å­ç±»æ˜¯å±è”½çš„ã€‚
+		 * Derivedç±»ä¸­çš„f()æ–¹æ³•æ˜¯ä¸€ä¸ªå…¨æ–°çš„æ–¹æ³•ï¼Œæ—¢ç„¶åŸºç±»çš„f()æ–¹æ³•å­ç±»ä¸å¯è§ï¼Œä¹Ÿå°±ä¸å­˜åœ¨è¦†ç›–ã€‚
+		 * åªæœ‰éžprivateæ–¹æ³•æ‰å¯ä»¥è¢«è¦†ç›–ï¼Œä½†æ˜¯è¿˜æ˜¯è¦æ³¨æ„éšè—privateæ–¹æ³•çš„çŽ°è±¡ã€‚
+		 * è™½ç„¶ç¼–è¯‘å™¨ä¸ä¼šæŠ¥é”™ï¼Œä½†æ˜¯ä¹Ÿä¸ä¼šæŒ‰ç…§æœŸæœ›æ¥æ‰§è¡Œï¼Œå¯¹äºŽåŸºç±»ä¸­çš„privateæ–¹æ³•ï¼Œåœ¨å­ç±»ä¸­æœ€å¥½é‡‡ç”¨ä¸åŒçš„åå­—
 		 */
 	}
 

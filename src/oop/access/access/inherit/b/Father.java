@@ -7,17 +7,17 @@ import access.inherit.a.GrandFather;
 import access.inherit.c.Son;
 
 /**
- * ¸¸Àà
+ * çˆ¶ç±»
  * <p>
- * ÑİÊ¾protectedÕæÕıµÄ·ÃÎÊ¿ØÖÆº¬Òå£º</br>
- * µ±×æ¸¸Àà¡¢¸¸Àà¡¢×ÓÀàºÍ×ÓËïÀà²»Í¬°üÊ±£¬
- * <li>ÈôÔÚ¸¸ÀàÖĞÓĞ×æ¸¸ÀàµÄ¶ÔÏó£¬Ôò¸Ã¶ÔÏó²»¿É·ÃÎÊËüµÄprotected³ÉÔ±¡£
- * <li>ÈôÔÚ¸¸ÀàÖĞÓĞ×ÓËïÀàµÄ¶ÔÏó£¬Ôò¸Ã¶ÔÏó¿ÉÒÔ·ÃÎÊËüµÄprotected³ÉÔ±¡£
- * <li>Èç¹ûÊÇprotected static³ÉÔ±Ôò¶¼¿ÉÒÔ·ÃÎÊ¡£
+ * æ¼”ç¤ºprotectedçœŸæ­£çš„è®¿é—®æ§åˆ¶å«ä¹‰ï¼š</br>
+ * å½“ç¥–çˆ¶ç±»ã€çˆ¶ç±»ã€å­ç±»å’Œå­å­™ç±»ä¸åŒåŒ…æ—¶ï¼Œ
+ * <li>è‹¥åœ¨çˆ¶ç±»ä¸­æœ‰ç¥–çˆ¶ç±»çš„å¯¹è±¡ï¼Œåˆ™è¯¥å¯¹è±¡ä¸å¯è®¿é—®å®ƒçš„protectedæˆå‘˜ã€‚
+ * <li>è‹¥åœ¨çˆ¶ç±»ä¸­æœ‰å­å­™ç±»çš„å¯¹è±¡ï¼Œåˆ™è¯¥å¯¹è±¡å¯ä»¥è®¿é—®å®ƒçš„protectedæˆå‘˜ã€‚
+ * <li>å¦‚æœæ˜¯protected staticæˆå‘˜åˆ™éƒ½å¯ä»¥è®¿é—®ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2007-11-9
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-9
  */
 public class Father extends GrandFather {
 
@@ -25,56 +25,56 @@ public class Father extends GrandFather {
 	}
 
 	/**
-	 * ·µ»Ø×Ô¼ºµÄage
+	 * è¿”å›è‡ªå·±çš„age
 	 */
 	public int getAge() {
 		return this.age;
 	}
 
 //	/**
-//	 * ·µ»Ø×æ¸¸µÄage
+//	 * è¿”å›ç¥–çˆ¶çš„age
 //	 */
 //	public int getGrandFatherAge(GrandFather gf) {
 //		return gf.age;
 //	}
 
 	/**
-	 * ·µ»Ø¶ù×ÓµÄage
+	 * è¿”å›å„¿å­çš„age
 	 */
 	public int getSonAge(Son son) {
 		return son.age;
 	}
 
 	/**
-	 * ·µ»Ø×ÓËïµÄage
+	 * è¿”å›å­å­™çš„age
 	 */
 	public <T extends Father> int getChildAge(T t) {
 		return t.age;
 	}
 	
 	/**
-	 * ·µ»Ø×Ô¼ºµÄname
+	 * è¿”å›è‡ªå·±çš„name
 	 */
 	public String getName() {
 		return Father.name;
 	}
 	
 	/**
-	 * ·µ»Ø×æ¸¸µÄname
+	 * è¿”å›ç¥–çˆ¶çš„name
 	 */
 	public String getGrandFatherName() {
 		return GrandFather.name;
 	}
 	
 	/**
-	 * ·µ»Ø¶ù×ÓµÄname
+	 * è¿”å›å„¿å­çš„name
 	 */
 	public String getSonName() {
 		return Son.name;
 	}
 	
 	/**
-	 * ·µ»Ø×ÓËïµÄname
+	 * è¿”å›å­å­™çš„name
 	 */
 	public <T extends Father> String getChildName() {
 		return T.name;

@@ -4,17 +4,17 @@
 package object.clone;
 
 /**
- * Éî¿ËÂ¡ÑİÊ¾
+ * æ·±å…‹éš†æ¼”ç¤º
  * <p>
- * Éî¿ËÂ¡£º¶ÔÏóµÄÍêÈ«¸´ÖÆ£¬Èç¹û¶ÔÏóÓĞ¶ÔÆäËü¶ÔÏóµÄÒıÓÃ£¬ÄÇĞ©¶ÔÏóÒ²±»ÍêÈ«¸´ÖÆ¡£
+ * æ·±å…‹éš†ï¼šå¯¹è±¡çš„å®Œå…¨å¤åˆ¶ï¼Œå¦‚æœå¯¹è±¡æœ‰å¯¹å…¶å®ƒå¯¹è±¡çš„å¼•ç”¨ï¼Œé‚£äº›å¯¹è±¡ä¹Ÿè¢«å®Œå…¨å¤åˆ¶ã€‚
  * <p>
- * ÔÚ¶Ô×éºÏ¶ÔÏó×öÉî¿ËÂ¡Ê±£¬±ØĞë¼ÙÉè³ÉÔ±¶ÔÏóµÄclone()·½·¨»áÔÚÆäÒıÓÃÉÏÒÀ´ÎÖ´ĞĞÉî¿ËÂ¡£¬²¢ÒÀ´ËÀàÍÆ¡£
- * ËüÊµ¼ÊÉÏ±íÊ¾£¬ÒªÏëÈÃÉî¿ËÂ¡Æğ×÷ÓÃ£¬¾Í±ØĞë¿ØÖÆËùÓĞÀàµÄ´úÂë£¬»òÕßÖÁÉÙ
- * ¶ÔÉî¿ËÂ¡Éæ¼°µÄÀàÒª×ã¹»ÁË½â£¬²ÅÄÜÖªµÀËüÃÇÊÇ·ñÕıÈ·Ö´ĞĞÁË¸÷×ÔµÄÉî¿ËÂ¡¡£
+ * åœ¨å¯¹ç»„åˆå¯¹è±¡åšæ·±å…‹éš†æ—¶ï¼Œå¿…é¡»å‡è®¾æˆå‘˜å¯¹è±¡çš„clone()æ–¹æ³•ä¼šåœ¨å…¶å¼•ç”¨ä¸Šä¾æ¬¡æ‰§è¡Œæ·±å…‹éš†ï¼Œå¹¶ä¾æ­¤ç±»æ¨ã€‚
+ * å®ƒå®é™…ä¸Šè¡¨ç¤ºï¼Œè¦æƒ³è®©æ·±å…‹éš†èµ·ä½œç”¨ï¼Œå°±å¿…é¡»æ§åˆ¶æ‰€æœ‰ç±»çš„ä»£ç ï¼Œæˆ–è€…è‡³å°‘
+ * å¯¹æ·±å…‹éš†æ¶‰åŠçš„ç±»è¦è¶³å¤Ÿäº†è§£ï¼Œæ‰èƒ½çŸ¥é“å®ƒä»¬æ˜¯å¦æ­£ç¡®æ‰§è¡Œäº†å„è‡ªçš„æ·±å…‹éš†ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-6-6
+ * åˆ›å»ºæ—¥æœŸï¼š2009-6-6
  */
 public class DeepClone {
 
@@ -37,7 +37,7 @@ public class DeepClone {
 	}
 }
 
-/** Éî¶ÈÀà */
+/** æ·±åº¦ç±» */
 class Depth implements Cloneable {
 	
 	private double depth;
@@ -47,7 +47,7 @@ class Depth implements Cloneable {
 	}
 
 	/**
-	 * ÊµÏÖ×ÔÉíclone·½·¨
+	 * å®ç°è‡ªèº«cloneæ–¹æ³•
 	 * 
 	 * @see java.lang.Object#clone()
 	 */
@@ -74,7 +74,7 @@ class Depth implements Cloneable {
 	}
 }
 
-/** ÎÂ¶ÈÀà */
+/** æ¸©åº¦ç±» */
 class Temperature implements Cloneable {
 	
 	private double temperature;
@@ -84,7 +84,7 @@ class Temperature implements Cloneable {
 	}
 
 	/**
-	 * ÊµÏÖ×ÔÉíclone·½·¨
+	 * å®ç°è‡ªèº«cloneæ–¹æ³•
 	 * 
 	 * @see java.lang.Object#clone()
 	 */
@@ -111,7 +111,7 @@ class Temperature implements Cloneable {
 	}
 }
 
-/** º£ÑóÀà */
+/** æµ·æ´‹ç±» */
 class Ocean implements Cloneable {
 	
 	private Depth depth;
@@ -123,8 +123,8 @@ class Ocean implements Cloneable {
 	}
 
 	/**
-	 * Ocean ¶ÔÏóÊµÏÖÉî¿ËÂ¡µÄÊ±ºò±ØĞë¶ÔÆä³ÉÔ±¶ÔÏóÒ²½øĞĞ¿ËÂ¡²Ù×÷£¬
-	 * È»ºó½«¿ËÂ¡ºóµÄ³ÉÔ±¶ÔÏó¸±±¾Éè¸øOceanµÄ¿ËÂ¡¶ÔÏó¡£
+	 * Ocean å¯¹è±¡å®ç°æ·±å…‹éš†çš„æ—¶å€™å¿…é¡»å¯¹å…¶æˆå‘˜å¯¹è±¡ä¹Ÿè¿›è¡Œå…‹éš†æ“ä½œï¼Œ
+	 * ç„¶åå°†å…‹éš†åçš„æˆå‘˜å¯¹è±¡å‰¯æœ¬è®¾ç»™Oceançš„å…‹éš†å¯¹è±¡ã€‚
 	 */
 	public Object clone() {
 		Ocean o = null;
@@ -133,7 +133,7 @@ class Ocean implements Cloneable {
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
-		// ³ÉÔ±¶ÔÏóµÄ¿ËÂ¡£¬²¢Éè¸øOcean¿ËÂ¡ºóµÄ¶ÔÏó
+		// æˆå‘˜å¯¹è±¡çš„å…‹éš†ï¼Œå¹¶è®¾ç»™Oceanå…‹éš†åçš„å¯¹è±¡
 		o.depth = (Depth) o.depth.clone();
 		o.temperature = (Temperature) o.temperature.clone();
 		return o;

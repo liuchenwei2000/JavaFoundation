@@ -12,14 +12,14 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Ğ´ÈëzipÎÄ¼şÑİÊ¾Àà
+ * å†™å…¥zipæ–‡ä»¶æ¼”ç¤ºç±»
  * <p>
- * ¼´½«¶à¸öÎÄ¼şÑ¹ËõÎªzipÎÄ¼ş¡£
- * zipÎÄ¼şÒÔÑ¹Ëõ¸ñÊ½´æ´¢Ò»¸ö»ò¸ü¶àÎÄ¼ş£¬Ã¿¸özipÎÄ¼ş¶¼ÓĞÎÄ¼şÍ·£¬ÆäÖĞ°üº¬ÁËÖîÈçÎÄ¼şÃûºÍÊ¹ÓÃµÄÑ¹Ëõ·½·¨µÈĞÅÏ¢¡£
+ * å³å°†å¤šä¸ªæ–‡ä»¶å‹ç¼©ä¸ºzipæ–‡ä»¶ã€‚
+ * zipæ–‡ä»¶ä»¥å‹ç¼©æ ¼å¼å­˜å‚¨ä¸€ä¸ªæˆ–æ›´å¤šæ–‡ä»¶ï¼Œæ¯ä¸ªzipæ–‡ä»¶éƒ½æœ‰æ–‡ä»¶å¤´ï¼Œå…¶ä¸­åŒ…å«äº†è¯¸å¦‚æ–‡ä»¶åå’Œä½¿ç”¨çš„å‹ç¼©æ–¹æ³•ç­‰ä¿¡æ¯ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2009-7-20
+ * åˆ›å»ºæ—¥æœŸï¼š2009-7-20
  */
 public class ZipOutputDemo {
 
@@ -27,11 +27,11 @@ public class ZipOutputDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ´ıÑ¹ËõÎÄ¼şËùÔÚÎÄ¼ş¼Ğ
+		// å¾…å‹ç¼©æ–‡ä»¶æ‰€åœ¨æ–‡ä»¶å¤¹
 		String dirPath = "files/io.stream.zip";
-		// Ñ¹ËõºóµÄzipÎÄ¼şÃû
+		// å‹ç¼©åçš„zipæ–‡ä»¶å
 		String zipFilePath = dirPath + "/out.zip";
-		// É¾³ıÉÏ´Î³ÌĞòÔËĞĞ´´½¨µÄzipÎÄ¼ş
+		// åˆ é™¤ä¸Šæ¬¡ç¨‹åºè¿è¡Œåˆ›å»ºçš„zipæ–‡ä»¶
 		File zipFile = new File(zipFilePath);
 		if (zipFile.exists()) {
 			zipFile.delete();
@@ -49,25 +49,25 @@ public class ZipOutputDemo {
 			}
 
 		});
-		// Ö´ĞĞÑ¹Ëõ²Ù×÷
+		// æ‰§è¡Œå‹ç¼©æ“ä½œ
 		ZipOutputStream out = null;
 		try {
-			// µ±ÏòÒ»¸özipÎÄ¼şÄÚĞ´ÈëÊ±£¬ĞèÒª´ò¿ªÒ»¸ö¹¹ÔìÆ÷ÖĞ°üº¬FileOutputStreamµÄZipOutputStreamÎÄ¼şÁ÷
+			// å½“å‘ä¸€ä¸ªzipæ–‡ä»¶å†…å†™å…¥æ—¶ï¼Œéœ€è¦æ‰“å¼€ä¸€ä¸ªæ„é€ å™¨ä¸­åŒ…å«FileOutputStreamçš„ZipOutputStreamæ–‡ä»¶æµ
 			out = new ZipOutputStream(new FileOutputStream(zipFilePath));
 			for (String file : files) {
-				// ¶ÔÓÚÃ¿Ò»ÌõÏ£ÍûÖÃÈëzipÎÄ¼şµÄÌõÄ¿£¬¶¼Òª´´½¨Ò»¸öZipEntry¶ÔÏó
-				// Ö»Òª°ÑÎÄ¼şÃû´«¸øZipEntry¹¹ÔìÆ÷£¬Ëü½«»á×Ô¶¯ÉèÖÃÆäËû²ÎÊı£¬ÖîÈçÎÄ¼şÈÕÆÚºÍ½âÑ¹·½·¨µÈ
+				// å¯¹äºæ¯ä¸€æ¡å¸Œæœ›ç½®å…¥zipæ–‡ä»¶çš„æ¡ç›®ï¼Œéƒ½è¦åˆ›å»ºä¸€ä¸ªZipEntryå¯¹è±¡
+				// åªè¦æŠŠæ–‡ä»¶åä¼ ç»™ZipEntryæ„é€ å™¨ï¼Œå®ƒå°†ä¼šè‡ªåŠ¨è®¾ç½®å…¶ä»–å‚æ•°ï¼Œè¯¸å¦‚æ–‡ä»¶æ—¥æœŸå’Œè§£å‹æ–¹æ³•ç­‰
 				ZipEntry entry = new ZipEntry(file);
-				// ¿ÉÒÔµ÷ÓÃputNextEntry·½·¨À´¿ªÊ¼Ğ´ÈëÒ»¸öĞÂÎÄ¼ş
+				// å¯ä»¥è°ƒç”¨putNextEntryæ–¹æ³•æ¥å¼€å§‹å†™å…¥ä¸€ä¸ªæ–°æ–‡ä»¶
 				out.putNextEntry(entry);
-				// ½«ÎÄ¼şÊı¾İ´«µİ¸øzipÁ÷£¬ÕæÕıÖ´ĞĞÏòzipÎÄ¼şµÄĞ´Èë²Ù×÷
+				// å°†æ–‡ä»¶æ•°æ®ä¼ é€’ç»™zipæµï¼ŒçœŸæ­£æ‰§è¡Œå‘zipæ–‡ä»¶çš„å†™å…¥æ“ä½œ
 				FileInputStream in = new FileInputStream(dirPath + File.separator + file);
 				int b;
 				while ((b = in.read()) != -1) {
 					out.write(b);
 				}
 				in.close();
-				// Íê³Éºóµ÷ÓÃcloseEntry
+				// å®Œæˆåè°ƒç”¨closeEntry
 				out.closeEntry();
 			}
 		} catch (IOException e) {

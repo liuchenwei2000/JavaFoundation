@@ -19,11 +19,11 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * 1£¬DesktopºÍSystemTrayÀàÊ¾Àı
+ * 1ï¼ŒDesktopå’ŒSystemTrayç±»ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-6-26
+ * åˆ›å»ºæ—¥æœŸï¼š2014-6-26
  */
 public class DesktopAndSystemTray {
 
@@ -35,33 +35,33 @@ public class DesktopAndSystemTray {
 	}
 	
 	/**
-	 * ¹¤×÷Ì¨
+	 * å·¥ä½œå°
 	 */
 	private static class Workbentch {
 		
-		/** ä¯ÀÀÆ÷Ö÷Ò³ */
+		/** æµè§ˆå™¨ä¸»é¡µ */
 		private static final String HOME_PAGE = "http://www.baidu.com";
-		/** ÓÊ¼ş·¢ËÍµØÖ· */
+		/** é‚®ä»¶å‘é€åœ°å€ */
 		private static final String MAIL_ADDRESS = "liuchenwei2000@163.com";
 		
 		/**
-		 * Desktop ÀàÔÊĞí Java Ó¦ÓÃ³ÌĞòÆô¶¯ÒÑÔÚ±¾»ú×ÀÃæÉÏ×¢²áµÄ¹ØÁªÓ¦ÓÃ³ÌĞò£¬ÒÔ´¦Àí URI »òÎÄ¼ş¡£ 
+		 * Desktop ç±»å…è®¸ Java åº”ç”¨ç¨‹åºå¯åŠ¨å·²åœ¨æœ¬æœºæ¡Œé¢ä¸Šæ³¨å†Œçš„å…³è”åº”ç”¨ç¨‹åºï¼Œä»¥å¤„ç† URI æˆ–æ–‡ä»¶ã€‚ 
 		 * <p>
-		 * Ö§³ÖµÄ²Ù×÷°üÀ¨£º 
-		 * <li>Æô¶¯ÓÃ»§Ä¬ÈÏä¯ÀÀÆ÷À´ÏÔÊ¾Ö¸¶¨µÄ URI£» 
-		 * <li>Æô¶¯´øÓĞ¿ÉÑ¡ mailto URI µÄÓÃ»§Ä¬ÈÏÓÊ¼ş¿Í»§¶Ë£» 
-		 * <li>Æô¶¯ÒÑ×¢²áµÄÓ¦ÓÃ³ÌĞò£¬ÒÔ´ò¿ª¡¢±à¼­»ò´òÓ¡Ö¸¶¨µÄÎÄ¼ş¡£ 
+		 * æ”¯æŒçš„æ“ä½œåŒ…æ‹¬ï¼š 
+		 * <li>å¯åŠ¨ç”¨æˆ·é»˜è®¤æµè§ˆå™¨æ¥æ˜¾ç¤ºæŒ‡å®šçš„ URIï¼› 
+		 * <li>å¯åŠ¨å¸¦æœ‰å¯é€‰ mailto URI çš„ç”¨æˆ·é»˜è®¤é‚®ä»¶å®¢æˆ·ç«¯ï¼› 
+		 * <li>å¯åŠ¨å·²æ³¨å†Œçš„åº”ç”¨ç¨‹åºï¼Œä»¥æ‰“å¼€ã€ç¼–è¾‘æˆ–æ‰“å°æŒ‡å®šçš„æ–‡ä»¶ã€‚ 
 		 * <p>
-		 * ´ËÀàÌá¹©ÓëÕâĞ©²Ù×÷¶ÔÓ¦µÄ·½·¨¡£ÕâĞ©·½·¨²éÕÒÔÚµ±Ç°Æ½Ì¨ÉÏ×¢²áµÄ¹ØÁªÓ¦ÓÃ³ÌĞò£¬²¢Æô¶¯¸ÃÓ¦ÓÃ³ÌĞòÀ´´¦Àí URI »òÎÄ¼ş¡£
-		 * Èç¹ûÃ»ÓĞ¹ØÁªÓ¦ÓÃ³ÌĞò»ò¹ØÁªÓ¦ÓÃ³ÌĞòÎŞ·¨Æô¶¯£¬ÔòÅ×³öÒì³£¡£ 
+		 * æ­¤ç±»æä¾›ä¸è¿™äº›æ“ä½œå¯¹åº”çš„æ–¹æ³•ã€‚è¿™äº›æ–¹æ³•æŸ¥æ‰¾åœ¨å½“å‰å¹³å°ä¸Šæ³¨å†Œçš„å…³è”åº”ç”¨ç¨‹åºï¼Œå¹¶å¯åŠ¨è¯¥åº”ç”¨ç¨‹åºæ¥å¤„ç† URI æˆ–æ–‡ä»¶ã€‚
+		 * å¦‚æœæ²¡æœ‰å…³è”åº”ç”¨ç¨‹åºæˆ–å…³è”åº”ç”¨ç¨‹åºæ— æ³•å¯åŠ¨ï¼Œåˆ™æŠ›å‡ºå¼‚å¸¸ã€‚ 
 		 */
 		private Desktop desktop;
 		
 		/**
-		 * SystemTray Àà±íÊ¾×ÀÃæµÄÏµÍ³ÍĞÅÌ¡£
+		 * SystemTray ç±»è¡¨ç¤ºæ¡Œé¢çš„ç³»ç»Ÿæ‰˜ç›˜ã€‚
 		 * <p>
-		 * ÔÚ Microsoft Windows ÉÏ£¬Ëü±»³ÆÎª ÈÎÎñÀ¸×´Ì¬ÇøÓò (Taskbar Status Area)¡£
-		 * ÔÚÄ³Ğ©Æ½Ì¨ÉÏ£¬¿ÉÄÜ²»´æÔÚ»ò²»Ö§³ÖÏµÍ³ÍĞÅÌ£¬ÔÚÕâÖÖÇé¿öÏÂ getSystemTray() ½«Å×³ö UnsupportedOperationException¡£
+		 * åœ¨ Microsoft Windows ä¸Šï¼Œå®ƒè¢«ç§°ä¸º ä»»åŠ¡æ çŠ¶æ€åŒºåŸŸ (Taskbar Status Area)ã€‚
+		 * åœ¨æŸäº›å¹³å°ä¸Šï¼Œå¯èƒ½ä¸å­˜åœ¨æˆ–ä¸æ”¯æŒç³»ç»Ÿæ‰˜ç›˜ï¼Œåœ¨è¿™ç§æƒ…å†µä¸‹ getSystemTray() å°†æŠ›å‡º UnsupportedOperationExceptionã€‚
 		 */
 		private SystemTray tray;
 		
@@ -71,15 +71,15 @@ public class DesktopAndSystemTray {
 		}
 		
 		private void init() {
-			// ÅĞ¶Ïµ±Ç°Æ½Ì¨ÊÇ·ñÖ§³ÖDesktopÀà
+			// åˆ¤æ–­å½“å‰å¹³å°æ˜¯å¦æ”¯æŒDesktopç±»
 			if (Desktop.isDesktopSupported()) {
 				this.desktop = Desktop.getDesktop();
 			}
-			// ÅĞ¶Ïµ±Ç°Æ½Ì¨ÊÇ·ñÖ§³ÖÏµÍ³ÍĞÅÌ
+			// åˆ¤æ–­å½“å‰å¹³å°æ˜¯å¦æ”¯æŒç³»ç»Ÿæ‰˜ç›˜
 			if (SystemTray.isSupported()) {
 				/*
-				 * Ã¿¸ö Java Ó¦ÓÃ³ÌĞò¶¼ÓĞÒ»¸ö SystemTray ÊµÀı£¬ÔÚÓ¦ÓÃ³ÌĞòÔËĞĞÊ±£¬ËüÔÊĞíÓ¦ÓÃ³ÌĞòÓë×ÀÃæÏµÍ³ÍĞÅÌ½¨Á¢Á¬½Ó¡£
-				 * SystemTray ÊµÀı¿ÉÒÔÍ¨¹ı getSystemTray() ·½·¨»ñµÃ£¬Ó¦ÓÃ³ÌĞò²»ÄÜ´´½¨×Ô¼ºµÄ SystemTray ÊµÀı¡£ 
+				 * æ¯ä¸ª Java åº”ç”¨ç¨‹åºéƒ½æœ‰ä¸€ä¸ª SystemTray å®ä¾‹ï¼Œåœ¨åº”ç”¨ç¨‹åºè¿è¡Œæ—¶ï¼Œå®ƒå…è®¸åº”ç”¨ç¨‹åºä¸æ¡Œé¢ç³»ç»Ÿæ‰˜ç›˜å»ºç«‹è¿æ¥ã€‚
+				 * SystemTray å®ä¾‹å¯ä»¥é€šè¿‡ getSystemTray() æ–¹æ³•è·å¾—ï¼Œåº”ç”¨ç¨‹åºä¸èƒ½åˆ›å»ºè‡ªå·±çš„ SystemTray å®ä¾‹ã€‚ 
 				 */
 				this.tray = SystemTray.getSystemTray();
 			}
@@ -87,9 +87,9 @@ public class DesktopAndSystemTray {
 
 		public void starts() {
 			/*
-			 * SystemTray ¿ÉÒÔ°üº¬Ò»¸ö»ò¶à¸ö TrayIcon£¬¿ÉÒÔÊ¹ÓÃ add(java.awt.TrayIcon) ·½·¨½«ËüÃÇÌí¼Óµ½ÍĞÅÌ¡£
-			 * µ±²»ÔÙĞèÒªÍĞÅÌÊ±£¬Ê¹ÓÃ remove(java.awt.TrayIcon) ÒÆ³ıËü¡£
-			 * TrayIcon ÓÉÍ¼Ïñ¡¢µ¯³ö²Ëµ¥ºÍÒ»×éÏà¹Ø¼àÌıÆ÷×é³É¡£
+			 * SystemTray å¯ä»¥åŒ…å«ä¸€ä¸ªæˆ–å¤šä¸ª TrayIconï¼Œå¯ä»¥ä½¿ç”¨ add(java.awt.TrayIcon) æ–¹æ³•å°†å®ƒä»¬æ·»åŠ åˆ°æ‰˜ç›˜ã€‚
+			 * å½“ä¸å†éœ€è¦æ‰˜ç›˜æ—¶ï¼Œä½¿ç”¨ remove(java.awt.TrayIcon) ç§»é™¤å®ƒã€‚
+			 * TrayIcon ç”±å›¾åƒã€å¼¹å‡ºèœå•å’Œä¸€ç»„ç›¸å…³ç›‘å¬å™¨ç»„æˆã€‚
 			 */
 			Image image = Toolkit.getDefaultToolkit().getImage("files/jdk6/mywork.png");
 			TrayIcon trayIcon = new TrayIcon(image, "Workbentch", createPopupMenu());
@@ -104,7 +104,7 @@ public class DesktopAndSystemTray {
 			PopupMenu popupMenu = new PopupMenu();
 			
 			MenuItem openBrowser = new MenuItem("Home Page");
-			// Ïà¹Ø¼àÌıÆ÷
+			// ç›¸å…³ç›‘å¬å™¨
 			openBrowser.addActionListener(new BrowserAction());
 
 			MenuItem sendMail = new MenuItem("Send Mail");
@@ -129,11 +129,11 @@ public class DesktopAndSystemTray {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// DesktopÖ§³ÖÃ¿¸ö²Ù×÷¶¼ÊÇÓÉ Desktop.Action Àà±íÊ¾µÄÒ»ÖÖ¶¯×÷ÀàĞÍ¡£
-				// ÅĞ¶Ïµ±Ç°Æ½Ì¨ÊÇ·ñÖ§³ÖÖ¸¶¨²Ù×÷
+				// Desktopæ”¯æŒæ¯ä¸ªæ“ä½œéƒ½æ˜¯ç”± Desktop.Action ç±»è¡¨ç¤ºçš„ä¸€ç§åŠ¨ä½œç±»å‹ã€‚
+				// åˆ¤æ–­å½“å‰å¹³å°æ˜¯å¦æ”¯æŒæŒ‡å®šæ“ä½œ
 				if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
 					try {
-						// Æô¶¯Ä¬ÈÏä¯ÀÀÆ÷À´ÏÔÊ¾ URI
+						// å¯åŠ¨é»˜è®¤æµè§ˆå™¨æ¥æ˜¾ç¤º URI
 						desktop.browse(new URI(HOME_PAGE));
 					} catch (IOException ex) {
 						ex.printStackTrace();
@@ -150,7 +150,7 @@ public class DesktopAndSystemTray {
 			public void actionPerformed(ActionEvent e) {
 				if (desktop != null && desktop.isSupported(Desktop.Action.MAIL)) {
 					try {
-						// Æô¶¯ÓÃ»§Ä¬ÈÏÓÊ¼ş¿Í»§¶ËµÄÓÊ¼ş×éºÏ´°¿Ú
+						// å¯åŠ¨ç”¨æˆ·é»˜è®¤é‚®ä»¶å®¢æˆ·ç«¯çš„é‚®ä»¶ç»„åˆçª—å£
 						desktop.mail(new URI("mailto:" + MAIL_ADDRESS));
 					} catch (IOException ex) {
 						ex.printStackTrace();
@@ -172,7 +172,7 @@ public class DesktopAndSystemTray {
 						if (!txtFile.exists()) {
 							txtFile.createNewFile();
 						}
-						// Æô¶¯¹ØÁª±à¼­Æ÷Ó¦ÓÃ³ÌĞò²¢´ò¿ªÓÃÓÚ±à¼­µÄÎÄ¼ş
+						// å¯åŠ¨å…³è”ç¼–è¾‘å™¨åº”ç”¨ç¨‹åºå¹¶æ‰“å¼€ç”¨äºç¼–è¾‘çš„æ–‡ä»¶
 						desktop.edit(txtFile);
 					} catch (IOException ex) {
 						ex.printStackTrace();

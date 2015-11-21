@@ -4,11 +4,11 @@
 package inherit.difference;
 
 /**
- * �ӿ�ʵ��ʾ��
+ * 接口实现示例
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2007-8-28
+ * 创建日期：2007-8-28
  */
 public class InterfaceImplDemo {
 	
@@ -25,36 +25,36 @@ public class InterfaceImplDemo {
 	}
 
 	/**
-	 * �������ֻ���������ݿ⣬����������ݿ��ɴ���Ĳ�������ȷ��
+	 * 这个方法只管连接数据库，具体何种数据库由传入的参数类型确定
 	 */
 	private static void connect2DB(IDatabaseConnection idc) {
-		// ��SQLServer�Ķ����������SQLServer��connect()����
-		// ��Oracle�Ķ����������Oracle��connect()����
+		// 传SQLServer的对象进来就用SQLServer的connect()方法
+		// 传Oracle的对象进来就用Oracle的connect()方法
 		idc.connect();
 	}
 }
 
 /**
- * ���ݿ����ӽӿ�
+ * 数据库连接接口
  * <p>
- * �ӿڣ�</br>
- * ��һЩ���������ļ��϶�û�з�����ʵ�֣���Щ�����ڲ�ͬ������ᱻʵ�ֳɲ�ͬ����Ϊ��
+ * 接口：</br>
+ * 是一些方法特征的集合而没有方法的实现，这些方法在不同的类里会被实现成不同的行为。
  * <p>
- * ע��</br>
- * �ӿ��еı���Ĭ����final static�ģ����ǵ�ֵ����ͨ��ʵ����ı��ұ����Գ�����ʼ����
- * ʵ�������ʵ�ֽӿ��е����еķ����������������Ϊabstract�ࡣ
+ * 注：</br>
+ * 接口中的变量默认是final static的，它们的值不可通过实现类改变且必须以常量初始化。
+ * 实现类必须实现接口中的所有的方法，否则必须声明为abstract类。
  * <p>
- * ����˵����
- * ���ڲ�ͬ�����ݿ⣬����Ҫ���������ӣ����ӷ����ǲ�һ���ġ�
- * ��ĳ�������£�����ֻ֪���и����ݿ⣬����֪������ô���ӵģ�ֻ֪�������ӡ�
+ * 场景说明：
+ * 对于不同的数据库，都需要被程序连接，连接方法是不一样的。
+ * 在某个环境下，我们只知道有个数据库，但不知道是怎么连接的，只知道能连接。
  */
 interface IDatabaseConnection {
 	
-	public void connect();// �������ݿ�ķ���
+	public void connect();// 连接数据库的方法
 }
 
 /**
- * Oracle���ݿ�ʵ�����ݿ����ӽӿ�
+ * Oracle数据库实现数据库连接接口
  */
 class OracleConnection implements IDatabaseConnection {
 	
@@ -66,7 +66,7 @@ class OracleConnection implements IDatabaseConnection {
 }
 
 /**
- * SQLServer���ݿ�ʵ�����ݿ����ӽӿ�
+ * SQLServer数据库实现数据库连接接口
  */
 class SQLServerConnection implements IDatabaseConnection {
 	

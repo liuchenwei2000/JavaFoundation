@@ -4,16 +4,16 @@
 package inner;
 
 /**
- * �ڲ�����ʾ3
+ * 内部类演示3
  * <p>
- * ��;3��</br>
- * �����ڲ�������ת��Ϊ����࣬������һ���ӿڵ�ʱ���ڲ�������������;�ˡ�
- * ������Ϊ�ڲ���(ĳ���ӿڵ�ʵ��)�ܹ���ȫ���ɼ������Ҳ����ã�
- * ���õ���ֻ��ָ���������߽ӿڵ����ã������ܹ����������ʵ��ϸ�ڡ�
+ * 用途3：</br>
+ * 当将内部类向上转型为其基类，尤其是一个接口的时候，内部类就有特殊的用途了。
+ * 这是因为内部类(某个接口的实现)能够完全不可见，并且不可用，
+ * 所得到的只是指向其基类或者接口的引用，所以能够方便地隐藏实现细节。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  *
- * �������ڣ�2008-4-13
+ * 创建日期：2008-4-13
  */
 public class InnerClass3 {
 
@@ -32,10 +32,10 @@ public class InnerClass3 {
 class NewGoods {
 
 	/**
-	 * �ڲ���Contents
+	 * 内部类Contents
 	 * <p>
-	 * private�ڲ��������ȫ��ֹ�κ����������͵ı��룬������ȫ����ʵ��ϸ�ڡ�
-	 * �ӿͻ��˳���Ա�ĽǶ����������ڲ��ܷ����κ������ӵ�ԭ�������ڹ����ӿڵķ�����������չ�ӿ���û�м�ֵ�ġ�
+	 * private内部类可以完全阻止任何依赖于类型的编码，并且完全隐藏实现细节。
+	 * 从客户端程序员的角度来看，由于不能访问任何新增加的原本不属于公共接口的方法，所以扩展接口是没有价值的。
 	 */
 	private class Contents implements IContents {
 
@@ -47,7 +47,7 @@ class NewGoods {
 	}
 
 	/**
-	 * �ڲ���GDestination
+	 * 内部类GDestination
 	 */
 	protected class GDestination implements IDestination {
 		

@@ -4,13 +4,13 @@
 package syntax;
 
 /**
- * ÌØÊâ²Ù×÷·ûÊ¾Àı
+ * ç‰¹æ®Šæ“ä½œç¬¦ç¤ºä¾‹
  * <p>
- * °üÀ¨ ++ ºÍÈıÔª²Ù×÷·û ?:
+ * åŒ…æ‹¬ ++ å’Œä¸‰å…ƒæ“ä½œç¬¦ ?:
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-11-5
+ * åˆ›å»ºæ—¥æœŸï¼š2007-11-5
  */
 public class SpecialOperatorDemo {
 
@@ -20,23 +20,23 @@ public class SpecialOperatorDemo {
 	public static void main(String[] args) {
 		int a = 1;
 		System.out.println("now a is " + a);
-		int b = (++a) * 3;// ÏÈÖ´ĞĞ ++ ²Ù×÷ÔÙÖ´ĞĞÆäËû
+		int b = (++a) * 3;// å…ˆæ‰§è¡Œ ++ æ“ä½œå†æ‰§è¡Œå…¶ä»–
 		System.out.println("a after ++a is " + a);
 		System.out.println("b = (++a) * 3 is " + b);
 		System.out.println();
 		
 		a = 1;
 		System.out.println("now a is " + a);
-		b = (a++) * 3;// ÏÈÖ´ĞĞÆäËû×îºóÖ´ĞĞ ++
+		b = (a++) * 3;// å…ˆæ‰§è¡Œå…¶ä»–æœ€åæ‰§è¡Œ ++
 		System.out.println("a after a++ is " + a);
 		System.out.println("b = (a++) * 3 is " + b);
 		
 		/*
-		 * ÈıÔªÔËËã·û?:µÄÊ¹ÓÃ¸ñÊ½£ºbooleanExpression ? value1 : value2
-		 * ÈôbooleanExpressionÎªtrue·µ»Øvalue1£¬·ñÔò·µ»Øvalue2¡£
-		 * µ«ÊÇÈıÔªÔËËã·ûµÄ·µ»ØÖµ±ØĞë±»¶ÁÈ¡»ò±»±£´æ¡£
+		 * ä¸‰å…ƒè¿ç®—ç¬¦?:çš„ä½¿ç”¨æ ¼å¼ï¼šbooleanExpression ? value1 : value2
+		 * è‹¥booleanExpressionä¸ºtrueè¿”å›value1ï¼Œå¦åˆ™è¿”å›value2ã€‚
+		 * ä½†æ˜¯ä¸‰å…ƒè¿ç®—ç¬¦çš„è¿”å›å€¼å¿…é¡»è¢«è¯»å–æˆ–è¢«ä¿å­˜ã€‚
 		 * 
 		 */
-		System.out.println(a + "," + b + "ÖĞ½Ï´óµÄÊÇ " + (a > b ? a : b));
+		System.out.println(a + "," + b + "ä¸­è¾ƒå¤§çš„æ˜¯ " + (a > b ? a : b));
 	}
 }

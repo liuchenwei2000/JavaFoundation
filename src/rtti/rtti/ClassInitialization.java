@@ -6,47 +6,47 @@ package rtti;
 import java.util.Random;
 
 /**
- * Àà³õÊ¼»¯
+ * ç±»åˆå§‹åŒ–
  * <p>
- * µ±Ê¹ÓÃ".class"À´´´½¨¶ÔClass¶ÔÏóµÄÒýÓÃÊ±£¬²»»á×Ô¶¯µØ³õÊ¼»¯¸ÃClass¶ÔÏó¡£
+ * å½“ä½¿ç”¨".class"æ¥åˆ›å»ºå¯¹Classå¯¹è±¡çš„å¼•ç”¨æ—¶ï¼Œä¸ä¼šè‡ªåŠ¨åœ°åˆå§‹åŒ–è¯¥Classå¯¹è±¡ã€‚
  * <p>
- * ÎªÁËÊ¹ÓÃÀà¶ø×öµÄ×¼±¸¹¤×÷Êµ¼Ê°üº¬Èý¸ö²½Öè£º
- * <li>1£¬¼ÓÔØ 
- * ÕâÊÇÊ¹ÓÃÀà¼ÓÔØÆ÷Ö´ÐÐµÄ£¬¸Ã²½Öè½«²éÕÒclassÎÄ¼þ²¢´´½¨Ò»¸öClass¶ÔÏó¡£
- * <li>2£¬Á´½Ó 
- * ÔÚÁ´½Ó½×¶Î½«ÑéÖ¤ÀàÖÐµÄ×Ö½ÚÂë£¬Îª¾²Ì¬Óò·ÖÅä´æ´¢¿Õ¼ä£¬ ²¢ÇÒÈç¹û±ØÐèµÄ»°£¬½«½âÎöÕâ¸öÀà´´½¨µÄ¶ÔÆäËûÀàµÄËùÓÐÒýÓÃ¡£
- * <li>3£¬³õÊ¼»¯ 
- * Èç¹û¸ÃÀà¾ßÓÐ³¬Àà£¬Ôò¶ÔÆä³õÊ¼»¯£¬Ö´ÐÐ¾²Ì¬³õÊ¼»¯Æ÷ºÍ¾²Ì¬³õÊ¼»¯¿é¡£
+ * ä¸ºäº†ä½¿ç”¨ç±»è€Œåšçš„å‡†å¤‡å·¥ä½œå®žé™…åŒ…å«ä¸‰ä¸ªæ­¥éª¤ï¼š
+ * <li>1ï¼ŒåŠ è½½ 
+ * è¿™æ˜¯ä½¿ç”¨ç±»åŠ è½½å™¨æ‰§è¡Œçš„ï¼Œè¯¥æ­¥éª¤å°†æŸ¥æ‰¾classæ–‡ä»¶å¹¶åˆ›å»ºä¸€ä¸ªClasså¯¹è±¡ã€‚
+ * <li>2ï¼Œé“¾æŽ¥ 
+ * åœ¨é“¾æŽ¥é˜¶æ®µå°†éªŒè¯ç±»ä¸­çš„å­—èŠ‚ç ï¼Œä¸ºé™æ€åŸŸåˆ†é…å­˜å‚¨ç©ºé—´ï¼Œ å¹¶ä¸”å¦‚æžœå¿…éœ€çš„è¯ï¼Œå°†è§£æžè¿™ä¸ªç±»åˆ›å»ºçš„å¯¹å…¶ä»–ç±»çš„æ‰€æœ‰å¼•ç”¨ã€‚
+ * <li>3ï¼Œåˆå§‹åŒ– 
+ * å¦‚æžœè¯¥ç±»å…·æœ‰è¶…ç±»ï¼Œåˆ™å¯¹å…¶åˆå§‹åŒ–ï¼Œæ‰§è¡Œé™æ€åˆå§‹åŒ–å™¨å’Œé™æ€åˆå§‹åŒ–å—ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  *
- * ´´½¨ÈÕÆÚ£º2008-5-9
+ * åˆ›å»ºæ—¥æœŸï¼š2008-5-9
  */
 public class ClassInitialization {
 
 	/**
-	 * ³õÊ¼»¯ÓÐÐ§µØÊµÏÖÁË¾¡¿ÉÄÜµØ"¶èÐÔ"£º
-	 * Ê¹ÓÃ .class Óï·¨À´»ñÈ¡¶ÔÀàµÄÒýÓÃ²»»áÒý·¢³õÊ¼»¯£¬¶ø  Class.forName() Á¢¼´¾Í½øÐÐÁË³õÊ¼»¯¡£
+	 * åˆå§‹åŒ–æœ‰æ•ˆåœ°å®žçŽ°äº†å°½å¯èƒ½åœ°"æƒ°æ€§"ï¼š
+	 * ä½¿ç”¨ .class è¯­æ³•æ¥èŽ·å–å¯¹ç±»çš„å¼•ç”¨ä¸ä¼šå¼•å‘åˆå§‹åŒ–ï¼Œè€Œ  Class.forName() ç«‹å³å°±è¿›è¡Œäº†åˆå§‹åŒ–ã€‚
 	 */
 	@SuppressWarnings( { "unused" })
 	public static void main(String[] args) throws Exception {
 		Class<?> initable = Initable.class;
 		System.out.println("After creating Initable ref");
 		/*
-		 * Èç¹ûÒ»¸östatic finalÖµÊÇ"±àÒëÆÚ³£Á¿"£¬¾ÍÏñÊÇInitable.staticFinal£¬
-		 * ÄÇÃ´Õâ¸öÖµ²»ÐèÒª¶ÔInitableÀà½øÐÐ³õÊ¼»¯¾Í¿ÉÒÔ±»¶ÁÈ¡¡£
+		 * å¦‚æžœä¸€ä¸ªstatic finalå€¼æ˜¯"ç¼–è¯‘æœŸå¸¸é‡"ï¼Œå°±åƒæ˜¯Initable.staticFinalï¼Œ
+		 * é‚£ä¹ˆè¿™ä¸ªå€¼ä¸éœ€è¦å¯¹Initableç±»è¿›è¡Œåˆå§‹åŒ–å°±å¯ä»¥è¢«è¯»å–ã€‚
 		 * 
-		 * Èç¹ûÖ»ÊÇ½«Ò»¸öÓòÉèÖÃÎªstatic finalµÄ£¬»¹²»×ãÒÔÈ·±£ÕâÖÖÐÐÎª£¬
-		 * ÀýÈçInitable.staticFinal2µÄ·ÃÎÊ½«Ç¿ÖÆ½øÐÐÀàµÄ³õÊ¼»¯£¬ÒòÎªËü²»ÊÇ±àÒëÆÚ³£Á¿¡£
+		 * å¦‚æžœåªæ˜¯å°†ä¸€ä¸ªåŸŸè®¾ç½®ä¸ºstatic finalçš„ï¼Œè¿˜ä¸è¶³ä»¥ç¡®ä¿è¿™ç§è¡Œä¸ºï¼Œ
+		 * ä¾‹å¦‚Initable.staticFinal2çš„è®¿é—®å°†å¼ºåˆ¶è¿›è¡Œç±»çš„åˆå§‹åŒ–ï¼Œå› ä¸ºå®ƒä¸æ˜¯ç¼–è¯‘æœŸå¸¸é‡ã€‚
 		 * 
-		 * Èç¹ûÒ»¸östaticÓò²»ÊÇfinalµÄ£¬ÄÇÃ´¶ÔËü·ÃÎÊÊ±×ÜÊÇÒªÇóÔÚËü±»¶ÁÈ¡Ö®Ç°£¬
-		 * ÒªÏÈ½øÐÐÁ´½Ó(ÎªÕâ¸öÓò·ÖÅä´æ´¢¿Õ¼ä)ºÍ³õÊ¼»¯(³õÊ¼»¯¸Ã´æ´¢¿Õ¼ä)£¬¾ÍÏñÔÚ¶ÔInitable2.staticNonFinalµÄ·ÃÎÊÒ»Ñù¡£
+		 * å¦‚æžœä¸€ä¸ªstaticåŸŸä¸æ˜¯finalçš„ï¼Œé‚£ä¹ˆå¯¹å®ƒè®¿é—®æ—¶æ€»æ˜¯è¦æ±‚åœ¨å®ƒè¢«è¯»å–ä¹‹å‰ï¼Œ
+		 * è¦å…ˆè¿›è¡Œé“¾æŽ¥(ä¸ºè¿™ä¸ªåŸŸåˆ†é…å­˜å‚¨ç©ºé—´)å’Œåˆå§‹åŒ–(åˆå§‹åŒ–è¯¥å­˜å‚¨ç©ºé—´)ï¼Œå°±åƒåœ¨å¯¹Initable2.staticNonFinalçš„è®¿é—®ä¸€æ ·ã€‚
 		 */
-		// ²»»á´¥·¢³õÊ¼»¯
+		// ä¸ä¼šè§¦å‘åˆå§‹åŒ–
 		System.out.println(Initable.staticFinal);
-		// »á´¥·¢³õÊ¼»¯
+		// ä¼šè§¦å‘åˆå§‹åŒ–
 		System.out.println(Initable.staticFinal2);
-		// »á´¥·¢³õÊ¼»¯
+		// ä¼šè§¦å‘åˆå§‹åŒ–
 		System.out.println(Initable2.staticNonFinal);
 		Class<?> initable3 = Class.forName("rtti.Initable3");
 		System.out.println("After creating Initable3 ref");

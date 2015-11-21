@@ -5,14 +5,14 @@ import com.liuchenwei2000.BookService;
 import com.liuchenwei2000.Fetchbook;
 
 /**
- * 4£¬ÔÚ¿Í»§¶ËÓÃÏÂÃæ´úÂë¼´¿Éµ÷ÓÃ²½Öè1¶¨ÒåµÄWeb Service¡£
+ * 4ï¼Œåœ¨å®¢æˆ·ç«¯ç”¨ä¸‹é¢ä»£ç å³å¯è°ƒç”¨æ­¥éª¤1å®šä¹‰çš„Web Serviceã€‚
  * <p>
- * JavaÓïÑÔ¿Í»§¶Ë¿ÉÒÔ²ÉÓÃÕâÖÖ·½Ê½½øĞĞÔ¶³Ìµ÷ÓÃ£¬¶ø²»ÔÙÊÇRMI¡£
- * ĞèÒªµ¼Èëbookws.jar(¼´wsimportÃüÁîÉú³ÉµÄclassÎÄ¼ş)µ½classpathÖĞ¡£
+ * Javaè¯­è¨€å®¢æˆ·ç«¯å¯ä»¥é‡‡ç”¨è¿™ç§æ–¹å¼è¿›è¡Œè¿œç¨‹è°ƒç”¨ï¼Œè€Œä¸å†æ˜¯RMIã€‚
+ * éœ€è¦å¯¼å…¥bookws.jar(å³wsimportå‘½ä»¤ç”Ÿæˆçš„classæ–‡ä»¶)åˆ°classpathä¸­ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014-7-2
+ * åˆ›å»ºæ—¥æœŸï¼š2014-7-2
  */
 public class WSClient {
 
@@ -20,7 +20,7 @@ public class WSClient {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ÓÃÓÚ¹¹ÔìµÄ·şÎñÀàÃû¶ÔÓ¦ÓÚBookServiceÀàÅäÖÃµÄserviceName
+		// ç”¨äºæ„é€ çš„æœåŠ¡ç±»åå¯¹åº”äºBookServiceç±»é…ç½®çš„serviceName
 		Fetchbook bs = new Fetchbook();
 		BookService bookServicePort = bs.getBookServicePort();
 		Book book = bookServicePort.getABook("what?");

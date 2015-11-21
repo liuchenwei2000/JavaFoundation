@@ -10,15 +10,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * 5£¬try-with-resourcesÓï¾ä
+ * 5ï¼Œtry-with-resourcesè¯­å¥
  * <p>
- * Java SE 7ÖĞĞÂÔöÁËtry-with-resourcesÓï¾ä¡£try-with-resourcesÓï¾äÊÇÒ»¸öÉùÃ÷ÁËÒ»¸ö»ò¶à¸ö×ÊÔ´µÄtryÓï¾ä¡£
- * ÕâÀïµÄÒ»¸ö×ÊÔ´Ö¸µÄÊÇÔÚÊ¹ÓÃÍê³Éºó±ØĞë¹Ø±ÕÊÍ·ÅµÄ¶ÔÏó¡£try-with-resourcesÓï¾ä¿ÉÒÔÈ·±£ÔÚ¸ÃÓï¾äÖ´ĞĞÖ®ºó¹Ø±ÕÃ¿¸ö×ÊÔ´¡£
- * ËùÓĞÊµÏÖÁËjava.lang.AutoCloseable½Ó¿ÚµÄ¶ÔÏó¾ù¿ÉÒÔ×÷Îª×ÊÔ´ÔÚtry-with-resourcesÓï¾äÖĞÊ¹ÓÃ(java.io.CloseableÊÇÆä×Ó½Ó¿Ú£¬Òò´ËÒ²Ö§³Ö)¡£
+ * Java SE 7ä¸­æ–°å¢äº†try-with-resourcesè¯­å¥ã€‚try-with-resourcesè¯­å¥æ˜¯ä¸€ä¸ªå£°æ˜äº†ä¸€ä¸ªæˆ–å¤šä¸ªèµ„æºçš„tryè¯­å¥ã€‚
+ * è¿™é‡Œçš„ä¸€ä¸ªèµ„æºæŒ‡çš„æ˜¯åœ¨ä½¿ç”¨å®Œæˆåå¿…é¡»å…³é—­é‡Šæ”¾çš„å¯¹è±¡ã€‚try-with-resourcesè¯­å¥å¯ä»¥ç¡®ä¿åœ¨è¯¥è¯­å¥æ‰§è¡Œä¹‹åå…³é—­æ¯ä¸ªèµ„æºã€‚
+ * æ‰€æœ‰å®ç°äº†java.lang.AutoCloseableæ¥å£çš„å¯¹è±¡å‡å¯ä»¥ä½œä¸ºèµ„æºåœ¨try-with-resourcesè¯­å¥ä¸­ä½¿ç”¨(java.io.Closeableæ˜¯å…¶å­æ¥å£ï¼Œå› æ­¤ä¹Ÿæ”¯æŒ)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ19ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ19æ—¥
  */
 public class TryWithResourcesStatement {
 
@@ -33,7 +33,7 @@ public class TryWithResourcesStatement {
 	}
 
 	/**
-	 * ÔÚJava SE 7Ö®Ç°£¬ÎªÁËÈ·±£×ÊÔ´±»¹Ø±Õ£¬¿ÉÄÜ»á±àĞ´ÈçÏÂ´úÂë£º
+	 * åœ¨Java SE 7ä¹‹å‰ï¼Œä¸ºäº†ç¡®ä¿èµ„æºè¢«å…³é—­ï¼Œå¯èƒ½ä¼šç¼–å†™å¦‚ä¸‹ä»£ç ï¼š
 	 */
 	private static String doBeforeJDK1_7(String path) throws IOException {
 		BufferedReader br = null;
@@ -48,7 +48,7 @@ public class TryWithResourcesStatement {
 	}
 
 	/**
-	 * ÔÚJava SE 7ÖĞ£¬¿ÉÒÔÓÃÏÂÃæµÄ´úÂëÀ´Ìæ»»ÉÏÃæµÄ´úÂëÁË£º
+	 * åœ¨Java SE 7ä¸­ï¼Œå¯ä»¥ç”¨ä¸‹é¢çš„ä»£ç æ¥æ›¿æ¢ä¸Šé¢çš„ä»£ç äº†ï¼š
 	 */
 	private static String doAfterJDK1_7(String path) throws IOException {
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
@@ -57,10 +57,10 @@ public class TryWithResourcesStatement {
 	}
 	
 	/**
-	 * tryÖĞ¿ÉÒÔÍ¬Ê±ÉùÃ÷¶à¸ö×ÊÔ´£º
+	 * tryä¸­å¯ä»¥åŒæ—¶å£°æ˜å¤šä¸ªèµ„æºï¼š
 	 * <p>
-	 * try-with-resourcesÓï¾äÖ´ĞĞÍê±Ïºó£¬ÏµÍ³ÏÈ¹Ø±ÕÊÍ·Åbw£¬ÔÙ¹Ø±ÕÊÍ·Åbr¡£
-	 * Ò²¾ÍÊÇËµ£¬try-with-resourcesÓï¾äÖĞ×ÊÔ´µÄ¹Ø±ÕÊÍ·ÅË³ĞòºÍËüÃÇ´´½¨µÄË³ĞòÏà·´¡£
+	 * try-with-resourcesè¯­å¥æ‰§è¡Œå®Œæ¯•åï¼Œç³»ç»Ÿå…ˆå…³é—­é‡Šæ”¾bwï¼Œå†å…³é—­é‡Šæ”¾brã€‚
+	 * ä¹Ÿå°±æ˜¯è¯´ï¼Œtry-with-resourcesè¯­å¥ä¸­èµ„æºçš„å…³é—­é‡Šæ”¾é¡ºåºå’Œå®ƒä»¬åˆ›å»ºçš„é¡ºåºç›¸åã€‚
 	 */
 	private static void doAfterJDK1_7_2() throws IOException {
 		try (

@@ -4,13 +4,13 @@
 package jdk7;
 
 /**
- * 4£¬switch-caseÓï¾äÖ§³Ö×Ö·û´®ÀàĞÍ
+ * 4ï¼Œswitch-caseè¯­å¥æ”¯æŒå­—ç¬¦ä¸²ç±»å‹
  * <p>
- * ÔÚJava SE 7ÖĞ£¬switch-caseÓï¾ä¿ÉÒÔÖ§³Ö×Ö·û´®ÀàĞÍµÄÊı¾İ±äÁ¿¡£
+ * åœ¨Java SE 7ä¸­ï¼Œswitch-caseè¯­å¥å¯ä»¥æ”¯æŒå­—ç¬¦ä¸²ç±»å‹çš„æ•°æ®å˜é‡ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2014Äê12ÔÂ19ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2014å¹´12æœˆ19æ—¥
  */
 public class StringsInSwitchStatements {
 
@@ -22,29 +22,29 @@ public class StringsInSwitchStatements {
 		String output = null;
 		switch(input){
 		case "Monday":
-		    output = "ĞÇÆÚÒ»";
+		    output = "æ˜ŸæœŸä¸€";
 		    break;
 		case "Tuesday":
-		    output = "ĞÇÆÚ¶ş";
+		    output = "æ˜ŸæœŸäºŒ";
 		    break;
 		case "Wednesday":
-		    output = "ĞÇÆÚÈı";
+		    output = "æ˜ŸæœŸä¸‰";
 		    break;
 		case "Thursday":
-		    output = "ĞÇÆÚËÄ";
+		    output = "æ˜ŸæœŸå››";
 		    break;
 		case "Friday":
-		    output = "ĞÇÆÚÎå";
+		    output = "æ˜ŸæœŸäº”";
 		    break;
 		case "Saturday":
-		    output = "ĞÇÆÚÁù";
+		    output = "æ˜ŸæœŸå…­";
 		    break;
 		case "Sunday":
-		    output = "ĞÇÆÚÈÕ";
+		    output = "æ˜ŸæœŸæ—¥";
 		    break;
 		default:
-		    throw new IllegalArgumentException("ÎŞĞ§µÄÊäÈë²ÎÊı£º" + input);
+		    throw new IllegalArgumentException("æ— æ•ˆçš„è¾“å…¥å‚æ•°ï¼š" + input);
 		}
-		System.out.println(output); //Êä³ö£ºĞÇÆÚÒ»
+		System.out.println(output); //è¾“å‡ºï¼šæ˜ŸæœŸä¸€
 	}
 }

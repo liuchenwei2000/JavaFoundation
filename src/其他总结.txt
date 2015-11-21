@@ -1,11 +1,11 @@
-﻿
+锘�
 
-常量就是常量，在编译器就必须确定其值，而不应该在运行期改变。
+甯搁噺灏辨槸甯搁噺锛屽湪缂栬瘧鍣ㄥ氨蹇呴』纭畾鍏跺�锛岃�涓嶅簲璇ュ湪杩愯鏈熸敼鍙樸�
 
-除了类文件、图像和其他资源外，每个JAR文件还包括一个用于描述归档特征的清单文件（MANIFEST）。清单文件被命名为MANIFEST.MF，它位于JAR文件的一个特殊META-INF子目录中。
+闄や簡绫绘枃浠躲�鍥惧儚鍜屽叾浠栬祫婧愬锛屾瘡涓狫AR鏂囦欢杩樺寘鎷竴涓敤浜庢弿杩板綊妗ｇ壒寰佺殑娓呭崟鏂囦欢锛圡ANIFEST锛夈�娓呭崟鏂囦欢琚懡鍚嶄负MANIFEST.MF锛屽畠浣嶄簬JAR鏂囦欢鐨勪竴涓壒娈奙ETA-INF瀛愮洰褰曚腑銆�
 
 Main-Class:com.test.MainUI
-用来指定应用程序的入口类，可以通过双击JAR文件图标来启动应用程序。比如在Windows平台中，Java运行时安装器将建立一个扩展名为.jar的文件与javaw -jar命令相关联来启动文件（与java，命令不同，javaw命令不打开shell窗口）。
+鐢ㄦ潵鎸囧畾搴旂敤绋嬪簭鐨勫叆鍙ｇ被锛屽彲浠ラ�杩囧弻鍑籎AR鏂囦欢鍥炬爣鏉ュ惎鍔ㄥ簲鐢ㄧ▼搴忋�姣斿鍦╓indows骞冲彴涓紝Java杩愯鏃跺畨瑁呭櫒灏嗗缓绔嬩竴涓墿灞曞悕涓�jar鐨勬枃浠朵笌javaw -jar鍛戒护鐩稿叧鑱旀潵鍚姩鏂囦欢锛堜笌java锛屽懡浠や笉鍚岋紝javaw鍛戒护涓嶆墦寮�hell绐楀彛锛夈�
 
 
 If you launch it from command line, then you can use redirect stdout and stderr into file as follows:

@@ -7,13 +7,13 @@ import java.util.*;
 import java.text.*;
 
 /**
- * DateFormatÀàµÄ»ù±¾·½·¨ 
+ * DateFormatç±»çš„åŸºæœ¬æ–¹æ³• 
  * <p>
- * Ìá¹©ÁË¸ñÊ½»¯ºÍ½âÎöÈÕÆÚºÍÊ±¼ä¹¦ÄÜµÄ³éÏóÀà¡£
+ * æä¾›äº†æ ¼å¼åŒ–å’Œè§£ææ—¥æœŸå’Œæ—¶é—´åŠŸèƒ½çš„æŠ½è±¡ç±»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2007-8-28
+ * åˆ›å»ºæ—¥æœŸï¼š2007-8-28
  */
 public class DateFormatDemo {
 	
@@ -24,11 +24,11 @@ public class DateFormatDemo {
 		Date date = new Date();
 		DateFormat df;
 		/*
-		 * getDateInstance()·½·¨ 
-		 * ·µ»ØÒ»¸öDateFormatÀàµÄÊµÀı £¬Õâ¸ö¶ÔÏó¿ÉÒÔ¸ñÊ½»¯ÈÕÆÚĞÅÏ¢¡£
+		 * getDateInstance()æ–¹æ³• 
+		 * è¿”å›ä¸€ä¸ªDateFormatç±»çš„å®ä¾‹ ï¼Œè¿™ä¸ªå¯¹è±¡å¯ä»¥æ ¼å¼åŒ–æ—¥æœŸä¿¡æ¯ã€‚
 		 * 
 		 * getDateInstance(int Style,Locale locale) 
-		 * Style´ú±íÈÕÆÚÏÔÊ¾µÄ²»Í¬·½Ê½£¬locale´ú±íÏÔÊ¾ÈÕÆÚËùÓÃµÄ¹ú¼ÒÓïÑÔ
+		 * Styleä»£è¡¨æ—¥æœŸæ˜¾ç¤ºçš„ä¸åŒæ–¹å¼ï¼Œlocaleä»£è¡¨æ˜¾ç¤ºæ—¥æœŸæ‰€ç”¨çš„å›½å®¶è¯­è¨€
 		 */
 		df = DateFormat.getDateInstance(DateFormat.SHORT, Locale.FRANCE);
 		System.out.println("FRANCE : " + df.format(date));

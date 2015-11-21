@@ -8,20 +8,20 @@ import java.nio.channels.FileChannel;
 import java.util.zip.CRC32;
 
 /**
- * MappedByteBuffer �߼���ʾ��
+ * MappedByteBuffer 高级演示类
  * <p>
- * ���������ϵͳ�������������ڴ潫�ļ����ļ���һ������"ӳ��"���ڴ��У�
- * �����Ϳ������ļ����ڴ���һ�������ˣ���ȴ�ͳ���ļ�ϵͳҪ��öࡣ
- * ����"��"��I/O������nioʵ�ֺ�����������ߣ� ����ӳ���ļ������������Ը��������ؼӿ��ٶȡ�
+ * 大多数操作系统可以利用虚拟内存将文件或文件的一段区域"映射"到内存中，
+ * 这样就可以像文件在内存中一样访问了，这比传统的文件系统要快得多。
+ * 尽管"旧"的I/O流在用nio实现后性能有所提高， 但是映射文件访问往往可以更加显著地加快速度。
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2009-7-21
+ * 创建日期：2009-7-21
  */
 public class AdvMappedByteBufferDemo {
 
 	/**
-	 * ����ͨ������ѹ���ļ�CRC32У�����֤�����ڴ�ӳ���ļ��ȴ�ͳ��������������������Ҫ�졣
+	 * 本例通过计算压缩文件CRC32校验和来证明：内存映射文件比传统输入流、缓冲输入流都要快。
 	 */
 	public static void main(String[] args) throws Exception {
 		String JAVA_HOME = System.getProperty("java.home");
@@ -53,9 +53,9 @@ interface ICRCSumChecker {
 }
 
 /**
- * �ڴ�ӳ�����CRC��
+ * 内存映射计算CRC和
  * <p>
- * ��ʹ����ӳ���ļ��Ļ��Ѻܴ󣬵��������������I/O����˵���Ǻ������ġ�
+ * 即使建立映射文件的花费很大，但是整体受益比起I/O流来说还是很显著的。
  */
 class MappedFileCRCSumChecker implements ICRCSumChecker {
 
@@ -69,34 +69,34 @@ class MappedFileCRCSumChecker implements ICRCSumChecker {
 			CRC32 crc = new CRC32();
 			
 			/*
-			 * map�������ļ���һ����ӳ�䵽�ڴ���
+			 * map方法将文件的一部分映射到内存中
 			 * <p>
-			 * ͨ������FileChannel���map�������Ի��MappedByteBuffer������ָ����Ҫ����ӳ����ļ������ӳ��ģʽ��
-			 * ������ģʽ��
-			 * 1��FileChannel.MapMode.READ_ONLY
-			 * �����������ֻ���ģ��κ���ͼд�뻺�����ľٶ����������׳�ReadOnlyBufferException��
-			 * 2��FileChannel.MapMode.READ_WRITE
-			 * �����������д����Щ�ı�ἰʱд���ļ��С�
-			 * 3��FileChannel.MapMode.PRIVATE��
-			 * �����������д�������κθı䶼��˽�еģ������Ըû�������Ч��������д���ļ��С�
+			 * 通过调用FileChannel类的map方法可以获得MappedByteBuffer，可以指定需要进行映射的文件区域和映射模式。
+			 * 有三种模式：
+			 * 1，FileChannel.MapMode.READ_ONLY
+			 * 结果缓冲区是只读的，任何试图写入缓冲区的举动都将依法抛出ReadOnlyBufferException。
+			 * 2，FileChannel.MapMode.READ_WRITE
+			 * 结果缓冲区可写，这些改变会及时写回文件中。
+			 * 3，FileChannel.MapMode.PRIVATE：
+			 * 结果缓冲区可写，但是任何改变都是私有的，仅仅对该缓冲区有效，并不会写入文件中。
 			 */
 			MappedByteBuffer buffer = channel.map(FileChannel.MapMode.READ_ONLY, 0, (int) channel.size());
 			
 			/* 
-			 * һ����ȡ�˻������������� ByteBuffer ��� Buffer �����д���ݡ�
-			 * ������֧��˳���������ݷ��ʣ���������һ����get��put����ʹ�õ�λ�á�
+			 * 一旦获取了缓冲区，可以用 ByteBuffer 类和 Buffer 超类读写数据。
+			 * 缓冲区支持顺序和随机数据访问，缓冲区有一个被get和put操作使用的位置。
 			 */
 			
-		    // ˳������������е�ȫ���ֽڣ�
-			// hasRemaining�жϵ�ǰ������λ���Ƿ�ﵽ�����������λ�ã����û���򷵻�true
+		    // 顺序遍历缓冲区中的全部字节：
+			// hasRemaining判断当前缓冲区位置是否达到缓冲区的最后位置，如果没有则返回true
 			while (buffer.hasRemaining()) {
-				// get��ȡ��ǰλ�õ��ֽڲ��ƶ�����ǰλ�õ���һ���ֽ�λ��
+				// get获取当前位置的字节并移动到当前位置的下一个字节位置
 				crc.update(buffer.get());
 			}
-			// �������
-			// limit���ػ�����������(�����λ��)
+			// 随机访问
+			// limit返回缓冲区的限制(即最后位置)
 //			for (int i = 0; i < buffer.limit(); i++) {
-			    // ��ȡָ��λ�õ��ֽ�
+			    // 获取指定位置的字节
 //				byte b = buffer.get(i);
 //			}
 			return crc.getValue();
@@ -115,7 +115,7 @@ class MappedFileCRCSumChecker implements ICRCSumChecker {
 }
 
 /**
- * ��ͳ����������CRC��
+ * 传统输入流计算CRC和
  */
 class InputStreamCRCSumChecker implements ICRCSumChecker {
 
@@ -141,7 +141,7 @@ class InputStreamCRCSumChecker implements ICRCSumChecker {
 }
 
 /**
- * ��������������CRC��
+ * 缓冲输入流计算CRC和
  */
 class BufferedInputStreamCRCSumChecker implements ICRCSumChecker {
 
