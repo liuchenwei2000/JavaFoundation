@@ -1,0 +1,10 @@
+﻿常量就是常量，在编译器就必须确定其值，而不应该在运行期改变。
+
+除了类文件、图像和其他资源外，每个JAR文件还包括一个用于描述归档特征的清单文件（MANIFEST）。清单文件被命名为MANIFEST.MF，它位于JAR文件的一个特殊META-INF子目录中。
+
+Main-Class:com.test.MainUI
+用来指定应用程序的入口类，可以通过双击JAR文件图标来启动应用程序。比如在Windows平台中，Java运行时安装器将建立一个扩展名为.jar的文件与javaw -jar命令相关联来启动文件（与java，命令不同，javaw命令不打开shell窗口）。
+
+
+If you launch it from command line, then you can use redirect stdout and stderr into file as follows:
+java -jar application.jar >file.txt  2>&1
