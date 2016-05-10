@@ -20,6 +20,7 @@ public class PrivateOverride {
 		p.f();
 		/*
 		 * 实际输出是"private f() in PrivateOverride"
+		 *
 		 * 这是因为private方法是final方法，对子类是屏蔽的。
 		 * Derived类中的f()方法是一个全新的方法，既然基类的f()方法子类不可见，也就不存在覆盖。
 		 * 只有非private方法才可以被覆盖，但是还是要注意隐藏private方法的现象。

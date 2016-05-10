@@ -1,6 +1,7 @@
-                             Java 小细节
+## Java 小细节 ##
 
 path是告诉操作系统Java命令的存放位置(即执行路径：指操作系统搜寻本地可执行文件的目录列表)，值为%JAVA_HOME%\bin。
+
 classpath是告诉Java编译器去哪里查找第三方类库和自定义类库。
 
 若把int型强制转换成char型，将得到int值对应的ASCII码所代表的数字字母和符号。

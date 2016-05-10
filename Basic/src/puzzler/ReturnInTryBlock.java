@@ -31,11 +31,11 @@ public class ReturnInTryBlock {
 	 * 而整个try-finally语句意外结束的原因将与finally语句块意外结束的原因相同。
 	 * 
 	 * 总之，每一个finally语句块都应该正常结束，除非抛出的是不受查的异常。
-	 * 也就是不要用return、break、continue或throw来退出一个finally语句块，也不要将一个受查异常传到finally语句块之外去。 
+	 * 也就是不要用return、break、continue或throw来退出一个finally语句块，
+	 * 也不要将一个受查异常传到finally语句块之外去。
 	 * 
-	 * 可以这样理解： 程序尝试着(try)返回(return)true 但是最终(finally)返回(return)false
+	 * 可以这样理解：程序尝试着(try)返回(return)true 但是最终(finally)返回(return)false
 	 */
-	@SuppressWarnings("finally")
 	private static boolean decision() {
 		try {
 			return true;
@@ -45,7 +45,8 @@ public class ReturnInTryBlock {
 	}
 
 	/**
-	 * 在try语句块中有return作为结束该方法的标志时，在控制流到达return时将会先执行finally语句块，然后在执行return语句结束方法。
+	 * 在try语句块中有return作为结束该方法的标志时，在控制流到达return时
+	 * 将会先执行finally语句块，然后在执行return语句结束方法。
 	 */
 	private static void testReturn() {
 		try {

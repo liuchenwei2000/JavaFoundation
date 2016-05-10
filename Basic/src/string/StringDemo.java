@@ -8,8 +8,8 @@ package string;
  * <p>
  * String类是非可变类(对象一旦创建了就不能够改变其内在状态了)。
  * <p>
- * String类中的每一个看起来会修改String值的方法， 实际上都是创建了一个全新的String对象
- * 以包含修改后的字符串， 而最初的String对象则丝毫未动。
+ * String类中的每一个看起来会修改String值的方法，实际上都是创建了一个
+ * 全新的String对象以包含修改后的字符串，而最初的String对象则丝毫未动。
  * 
  * @author 刘晨伟
  * 

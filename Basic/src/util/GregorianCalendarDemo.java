@@ -38,9 +38,10 @@ public class GregorianCalendarDemo {
 		System.out.print(gcalendar.get(Calendar.SECOND));
 		System.out.println();
 		// 判断是否是闰年
-		if (gcalendar.isLeapYear(year))
+		if (gcalendar.isLeapYear(year)) {
 			System.out.println(year + " is a leap year.");
-		else
+		} else {
 			System.out.println(year + " is not a leap year.");
+		}
 	}
 }

@@ -17,8 +17,8 @@ public class ExitInTryBlock {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * System.exit(0)操作将会停止一切线程然后推出虚拟机 
-		 * 所以它不会再去执行finally中的任何操作
+		 * System.exit(0)操作将会停止一切线程然后推出虚拟机，
+		 * 所以它不会再去执行finally中的任何操作。
 		 */
 		try {
 			System.out.println("Goodbye!");

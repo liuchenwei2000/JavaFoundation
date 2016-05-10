@@ -6,7 +6,7 @@ package syntax;
 /**
  * switch语句的控制流程
  * <p>
- * switch后的参数只能是byte,short,char,int和相关包装类(Integer等)以及枚举类型。
+ * switch后的参数只能是byte、short、char、int和相关包装类(Integer等)以及枚举类型。
  * 
  * @author 刘晨伟
  * 
