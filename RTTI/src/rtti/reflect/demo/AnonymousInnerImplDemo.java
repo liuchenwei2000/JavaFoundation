@@ -1,26 +1,25 @@
 /**
  * 
  */
-package rtti.itf.demo;
+package rtti.reflect.demo;
 
-import rtti.itf.Interface;
-import rtti.itf.impl.PrivateInnerImplFactory;
 import rtti.reflect.MethodInvokingUtil;
+import rtti.reflect.impl.AnonymousInnerImplFactory;
 
 /**
- * PrivateInnerImpl类演示
+ * AnonymousInnerImplFactory类演示
  * 
  * @author 刘晨伟
  *
  * 创建日期：2008-5-14
  */
-public class PrivateInnerImplDemo {
+public class AnonymousInnerImplDemo {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Interface a = PrivateInnerImplFactory.makeInterface();
+		Product a = AnonymousInnerImplFactory.makeProduct();
 		a.f();
 		System.out.println(a.getClass().getSimpleName());
 		try {

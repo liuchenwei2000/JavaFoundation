@@ -3,33 +3,15 @@
  */
 package util;
 
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
-import java.util.zip.CRC32;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-import javax.imageio.ImageIO;
-
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.nio.channels.FileChannel;
 
 /**
  * 
@@ -40,25 +22,6 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
  */
 public class Test {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		 test();
-	}
-
-	public static void test(){
-		// 得到当前方法的名字
-		String methodName = Thread.currentThread().getStackTrace()[1].getMethodName(); 
-		System.out.println(methodName);
-		// 得到当前文件的名字
-		String fileName = Thread.currentThread().getStackTrace()[2].getFileName();
-		System.out.println(fileName);
-		// 得到行号
-		int lineNumber = Thread.currentThread().getStackTrace()[2].getLineNumber();
-		System.out.println(lineNumber);
-	}
-	
 	/**
 	 * 使用NIO进行快速的文件拷贝
 	 */

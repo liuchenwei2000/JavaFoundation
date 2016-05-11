@@ -1,28 +1,32 @@
 /**
  * 
  */
-package rtti.itf.demo;
+package rtti.reflect.demo;
 
-import rtti.itf.Interface;
-import rtti.itf.impl.AnonymousInnerImplFactory;
+import rtti.reflect.impl.PackageImplFactory;
 import rtti.reflect.MethodInvokingUtil;
 
 /**
- * AnonymousInnerImplFactory类演示
+ * PackageImpl类演示
  * 
  * @author 刘晨伟
  *
  * 创建日期：2008-5-14
  */
-public class AnonymousInnerImplDemo {
+public class PackageImplDemo {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Interface a = AnonymousInnerImplFactory.makeInterface();
+		Product a = PackageImplFactory.makeProduct();
 		a.f();
 		System.out.println(a.getClass().getSimpleName());
+//		以下代码编译器会报错，因为PackageC是包级访问权限
+//		if(a instanceof PackageC){
+//			PackageC c = (PackageC)a;
+//			c.g();
+//		}
 		try {
 			// 通过反射仍然可以调用g()，甚至私有方法
 			MethodInvokingUtil.callHiddenMethod(a, "g");

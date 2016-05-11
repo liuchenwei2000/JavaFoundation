@@ -9,7 +9,8 @@ import inherit.difference.IRunnable;
 /**
  * Class类演示
  * <p>
- * Class引用总是指向某个Class对象，它可以制造类的实例，并包含可作用于这些实例的所有方法代码，还包含该类的静态成员。
+ * Class引用总是指向某个Class对象，它可以制造类的实例，
+ * 并包含可作用于这些实例的所有方法代码，还包含该类的静态成员。
  * Class类最常用方法是getClass()和newInstance()。
  * 
  * @author 刘晨伟

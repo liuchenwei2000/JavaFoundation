@@ -1,28 +1,29 @@
 /**
  * 
  */
-package rtti.itf.impl;
+package rtti.reflect.impl;
 
-import rtti.itf.Interface;
+import rtti.reflect.demo.Product;
+import rtti.reflect.demo.PackageImplDemo;
 
 /**
- * 构造Interface对象（包级类实现）的工厂类
+ * 构造 Product 对象（包级类实现）的工厂类
  * <p>
- * 使用了实现接口Interface的PackageImpl类，PackageImpl类是包访问权限，这样包外部的客户端就不能看到它。
+ * 使用了实现接口 Product 的PackageImpl类，PackageImpl类是包访问权限，这样包外部的客户端就不能看到它。
  * 
  * @author 刘晨伟
- * @see rtti.itf.demo.PackageImplDemo
+ * @see PackageImplDemo
  * 
  * 创建日期：2008-5-14
  */
 public class PackageImplFactory {
 
-	public static Interface makeInterface() {
+	public static Product makeProduct() {
 		return new PackageImpl();
 	}
 }
 
-class PackageImpl implements Interface {
+class PackageImpl implements Product {
 
 	public void f() {
 		System.out.println("public PackageImpl.f()");
@@ -40,7 +41,6 @@ class PackageImpl implements Interface {
 		System.out.println("protected PackageImpl.v()");
 	}
 
-	@SuppressWarnings("unused")
 	private void w() {
 		System.out.println("private PackageImpl.w()");
 	}

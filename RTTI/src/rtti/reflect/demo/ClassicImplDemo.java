@@ -1,10 +1,9 @@
 /**
  * 
  */
-package rtti.itf.demo;
+package rtti.reflect.demo;
 
-import rtti.itf.Interface;
-import rtti.itf.impl.ClassicImpl;
+import rtti.reflect.impl.ClassicImpl;
 
 /**
  * ClassicImpl类演示
@@ -19,7 +18,7 @@ public class ClassicImplDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Interface a = new ClassicImpl();
+		Product a = new ClassicImpl();
 		a.f();
 		// a.g(); // 编译器报错：g()方法对于a不可见
 		System.out.println(a.getClass().getSimpleName());
