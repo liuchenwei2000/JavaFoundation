@@ -42,7 +42,7 @@ public class CloneUsingConstructor {
 	}
 
 	private static void cloneByFruitConstructor(Fruit f) {
-		// 这里这样克隆是武断的，如果t是Fruit的子类就会出错
+		// 这里这样克隆是武断的，如果f是Fruit的子类就会出错
 		f = new Fruit(f);
 		System.out.println("In cloneByFruitConstructor, f is a "
 				+ f.getClass().getSimpleName());

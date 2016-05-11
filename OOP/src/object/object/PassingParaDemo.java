@@ -112,7 +112,7 @@ public class PassingParaDemo {
 	}
 
 	/**
-	 * 如果传递的参数是数组,可以改变数组中元素的值
+	 * 如果传递的参数是数组，可以改变数组中元素的值
 	 */
 	private static void changeArrayElement(int[] array) {
 		for (int i = 0; i < array.length; i++) {

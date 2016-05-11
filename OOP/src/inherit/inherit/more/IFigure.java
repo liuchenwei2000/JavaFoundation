@@ -17,5 +17,5 @@ package inherit.more;
  */
 public interface IFigure extends IArea, IGirth {
 	
-	public void draw();
+	void draw();
 }

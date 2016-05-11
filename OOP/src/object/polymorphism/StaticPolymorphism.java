@@ -15,7 +15,6 @@ public class StaticPolymorphism {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Father f = new Son();
 		System.out.println(f.staticGet());

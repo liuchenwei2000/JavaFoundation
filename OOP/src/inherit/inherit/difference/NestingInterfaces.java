@@ -18,17 +18,18 @@ class A {
 	interface B {
 		void f();
 	}
+
 	// 实现该接口的类可以有不同的访问权限
 	public class BImp implements B {
 		public void f() {
 		}
 	}
 
-	@SuppressWarnings("unused")
 	private class BImp2 implements B {
 		public void f() {
 		}
 	}
+
 	// 类内定义的接口也可以有不同的访问权限
 	public interface C {
 		void f();
@@ -39,7 +40,6 @@ class A {
 		}
 	}
 
-	@SuppressWarnings("unused")
 	private class CImp2 implements C {
 		public void f() {
 		}
@@ -50,7 +50,6 @@ class A {
 		void f();
 	}
 
-	@SuppressWarnings("unused")
 	private class DImp implements D {
 		public void f() {
 		}
@@ -72,6 +71,7 @@ class A {
 		dRef.f();
 	}
 }
+
 // 在接口中定义接口(可见性默认public)
 // 实现某个接口时并不需要实现嵌套在其内部的任何接口
 interface E {
@@ -150,7 +150,6 @@ public class NestingInterfaces {
          * the definition of the methods in that interface without adding any type information 
          * (that is, without allowing any upcasting).  
          * */
-		@SuppressWarnings("unused")
 		A.DImp2 di2 = (A.DImp2)a.getD();
 		// 只有如下方式是正确的调用
 		A a2 = new A();

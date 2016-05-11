@@ -54,7 +54,6 @@ class Stage {
 	// 第一种初始化方式
 	private Actor actor1 = new HappyActor();
 	
-	@SuppressWarnings("unused")
 	private Actor actor2;
 	private Actor actor3;
 
