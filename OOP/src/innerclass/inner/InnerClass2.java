@@ -33,7 +33,7 @@ public class InnerClass2 {
 
 interface Printable {
 	
-	public String getPrintMessage();
+	String getPrintMessage();
 }
 
 class Outer {

@@ -12,7 +12,7 @@ package initialize.staticmbers;
  */
 public class CupsDemo {
 	
-	// static Cups x=new Cups();
+	// static Cups x = new Cups();
 	
 	/**
 	 * @param args

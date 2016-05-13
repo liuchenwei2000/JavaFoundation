@@ -34,9 +34,11 @@ public class Callbacks {
 /**
  * 进一步揭示了外部类实现一个接口与内部类实现此接口之间的区别。
  * <p>
- * 就代码而言，Callee1是简单的解决方式，Callee2继承自MyIncrement，
- * 后者已经有了一个不同的increment方法，并且与Incrementable接口期望的increment方法完全不相关。
- * 所以如果Callee2继承了MyIncrement就不能为了Incrementable的用途而覆盖了increment方法，只能使用内部类独立的实现Incrementable。
+ * 就代码而言，Callee1是简单的解决方式，
+ * Callee2继承自MyIncrement，后者已经有了一个不同的increment方法，
+ * 并且与Incrementable接口期望的increment方法完全不相关。
+ * 所以如果Callee2继承了MyIncrement就不能为了Incrementable的用途而覆盖了increment方法，
+ * 只能使用内部类独立的实现Incrementable。
  * 当创建一个内部类时，并没有在外部类的接口中添加东西，也没有修改外部类的接口。
  */
 interface Incremnetable {
@@ -75,8 +77,8 @@ class Callee2 extends MyIncrement {
 	}
 
 	/**
-	 * 内部类 Closure 实现了Incremnetable 以提供一个返回 Incremnetable 的钩子。
-	 * 这是一个安全的钩子，无论谁获得了此Incrementable的引用，都只能调用increment，除此之外没有其他功能。
+	 * 内部类 Closure 实现了 Incremnetable 以提供一个返回 Incremnetable 的钩子。
+	 * 这是一个安全的钩子，无论谁获得了此 Incrementable 的引用，都只能调用increment，除此之外没有其他功能。
 	 * 回调的价值在于它的灵活性：可以在运行时动态地决定需要调用什么方法。
 	 */
 	private class Closure implements Incremnetable {

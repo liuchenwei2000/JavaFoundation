@@ -27,9 +27,9 @@ public class AnonymousInnerClass {
 	
 	public Song getSong(){
 		/*
-		 * 该类是匿名的，它没有名字，这看起来似乎是正要创建一个Game对象。
+		 * 该类是匿名的，它没有名字，这看起来似乎是正要创建一个 Song 对象。
 		 * 但是在到达语句结束的分号之前却有：等一等，要在这里插入一个类的定义。
-		 * 它是指：创建一个继承自Game的匿名类的对象。
+		 * 它是指：创建一个继承自 Song 的匿名类的对象。
 		 */
 		return new Song(){
 			@Override
@@ -53,7 +53,7 @@ public class AnonymousInnerClass {
 	
 	public static Base getBase(int i) {
 		/*
-		 * 因为在匿名内部类中没有命名构造器，如果想做一些类似构造器的行为可以通过 实例初始化：
+		 * 因为在匿名内部类中没有命名构造器，如果想做一些类似构造器的行为可以通过实例初始化：
 		 * (不要求i一定是final的，因为i是被传递给匿名类的基类的构造器并不会在匿名类内部被直接使用)
 		 */
 		return new Base(i) {

@@ -77,17 +77,6 @@ public class Sequence {
 	}
 
 	/**
-	 * 根据遍历器打印元素
-	 */
-	private static void print(Iterator it) {
-		while (!it.end()) {
-			System.out.print(it.current() + "  ");
-			it.next();
-		}
-		System.out.println();
-	}
-
-	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -100,6 +89,18 @@ public class Sequence {
 		print(s.iterator());
 		print(s.reverseIterator());
 	}
+
+	/**
+	 * 根据遍历器打印元素
+	 */
+	private static void print(Iterator it) {
+		while (!it.end()) {
+			System.out.print(it.current() + "  ");
+			it.next();
+		}
+		System.out.println();
+	}
+
 }
 
 /**

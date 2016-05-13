@@ -1,7 +1,7 @@
 /**
  * 
  */
-package inner.use;
+package inner.nonstatic.inherit;
 
 /**
  * 内部类解决多重继承(接口)演示

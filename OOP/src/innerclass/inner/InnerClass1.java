@@ -24,10 +24,9 @@ public class InnerClass1 {
 		goods1.ship("China");
 		Goods goods2 = new Goods();
 		// 定义对内部类的引用
-		// 如果想在外部类的非static方法之外的地方创建内部类对象，就必须具体的指明这个对象的类型：OutClass.InnerClass
-		@SuppressWarnings("unused")
+		// 如果想在外部类的非static方法之外的地方创建内部类对象，
+		// 就必须具体的指明这个对象的类型：OutClass.InnerClass
 		Goods.Contents c = goods2.getContents();
-		@SuppressWarnings("unused")
 		Goods.Destination d = goods2.to("Home");
 	}
 }
@@ -65,7 +64,6 @@ class Goods {
 	}
 
 	public void ship(String dest) {
-		@SuppressWarnings("unused")
 		Contents c = getContents();
 		Destination d = to(dest);
 		System.out.println(d.readLabel());
