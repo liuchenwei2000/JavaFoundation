@@ -13,10 +13,10 @@ import java.io.Serializable;
 /**
  * 序列化控制
  * <p>
- * 提供了Externalizable(它并不够自动化)的替代解决方案 。
+ * 提供了 Externalizable(它并不够自动化)的替代解决方案 。
  * <p>
- * 如果不是特别想要实现Externalizable接口，那么还有另一种方法可以实现Serializable接口，
- * 并添加(注意是"添加"，而非"重载"或者"实现")名为writeObject()和 readObject()的方法。
+ * 如果不是特别想要实现 Externalizable 接口，那么还有另一种方法可以实现 Serializable 接口，
+ * 并添加(注意是"添加"，而非"重载"或者"实现")名为 writeObject() 和 readObject() 的方法。
  * 这样一旦对象被序列化或者被反序列化，就会自动地分别调用这两个方法。
  * 也就是说，只要提供了这两个方法，就会使用它们而不是缺省的序列化机制 。
  * 
@@ -38,7 +38,7 @@ public class SerializeControl {
 		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		ObjectOutputStream oos = new ObjectOutputStream(buffer);
 		/*
-		 * 当ObjectOutputStream调用writeObject()时必须检查参数对象，判断它是否拥有自己的writeObject()方法
+		 * 当 ObjectOutputStream 调用writeObject()时必须检查参数对象，判断它是否拥有自己的 writeObject() 方法
 		 * (不是检查接口，这里根本就没有接口，也不是检查类的类型，而是利用反射来真正地搜索方法)。
 		 * 如果有，那么就会使用它。对readObject()也采用了类似的方法。
 		 * 或许这是解决这个问题唯一切实可行的方法，但它确实有点古怪。
@@ -54,8 +54,8 @@ public class SerializeControl {
 }
 
 /**
- * 在本例中，有一个String字段是普通字段，而另一个是transient字段，用来证明：
- * 非transient字段由defaultWriteObject()方法保存，而transient字段必须在程序中明确保存和恢复。
+ * 在本例中，有一个 String 字段是普通字段，而另一个是 transient 字段，用来证明：
+ * 非 transient 字段由 defaultWriteObject() 方法保存，而 transient 字段必须在程序中明确保存和恢复。
  * 字段是在构造器内部而不是在定义处进行初始化的，以此可以证实它们在反序列化还原期间没有被一些自动机制初始化
  */
 class ObjectX implements Serializable {

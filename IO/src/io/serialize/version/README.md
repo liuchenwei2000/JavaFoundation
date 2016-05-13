@@ -1,4 +1,4 @@
-                                                                             序 列 化 与 版 本
+## 序列化与版本 ##
 
 Java可以使用检查类指纹（使用SHA算法计算）的方法来避免下述情况：
 一个对象被保存在一个磁盘文件。后来，类的设计者做了一些改变，比如删除了一个字段。
@@ -17,8 +17,9 @@ Java可以使用检查类指纹（使用SHA算法计算）的方法来避免下�
 可以使用一个独立的程序 serialver（它是JDK的一部分）来获得这个数值（一般的IDE可以自动的获取这个值）。
 
 如：
-private static final long serialVersionUID = -4354200758987066819L;
-
+    
+    private static final long serialVersionUID = -4354200758987066819L;
+    
 所有的后续版本的类都必须把serialVersionUID常量和原来的指纹定义成一样的。
 当一个类具有一个名为serialVersionUID的静态数据成员时，它将不会再次计算指纹，而只是使用这个值。
 一旦serialVersionUID这个静态数据成员被放入类中，通过序列化系统就可以读取那个类的不同版本的对象。
