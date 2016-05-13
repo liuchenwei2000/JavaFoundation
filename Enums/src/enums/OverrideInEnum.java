@@ -16,6 +16,7 @@ public class OverrideInEnum {
 	 * 覆盖普通方法
 	 */
 	enum Sex {
+
 		MALE, FEMALE;
 
 		/**
@@ -30,7 +31,7 @@ public class OverrideInEnum {
 	}
 	
 	/**
-	 * 可以为 enum 实例编写方法，从而为每个enum 实例赋予各自不同的行为，要实现常量相关的方法，
+	 * 可以为 enum 实例编写方法，从而为每个 enum 实例赋予各自不同的行为，要实现常量相关的方法，
 	 * 需要为 enum 定义一个或多个 abstract 方法，然后每个 enum 实例实现该抽象方法。
 	 */
 	enum Signal {

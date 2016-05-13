@@ -20,7 +20,7 @@ public enum Direction {
 
 	/**
 	 * 这个构造器规定了enum实例的构造形式(必须提供一个String参数)。
-	 * 即使它不是private的，一旦enum实例的定义结束，编译器就不允许再使用其构造器来创建任何实例了。
+	 * 即使它不是 private 的，一旦 enum 实例的定义结束，编译器就不允许再使用其构造器来创建任何实例。
 	 */
 	private Direction(String description) {
 		this.description = description;

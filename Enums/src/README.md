@@ -1,28 +1,31 @@
-                                                                                                                  枚举类型
-
+## 枚举 ##
 
 新关键字enum，可以这样来定义一个枚举类型：
-public　enum　Color
-{
-　　　RED，
-　　　WHITE，
-　　　BLUE
-}
+    
+    public　enum　Color
+    {
+    　　　RED，
+    　　　WHITE，
+    　　　BLUE
+    }
 
-它里面的每一个元素都是static常量，都应该大写。然后可以这样来使用：
+它里面的每一个元素都是 static 常量，都应该大写。然后可以这样来使用：
+    
+    Color　myColor　=　Color.RED;
+    
 
-Color　myColor　=　Color.RED;
-
-因为enum继承自java.lang.Enum所以不可再继承其他类。编译器会自动提供equals()和hashCode()方法，并且实现了Complarable和Serializable接口。
+因为 enum 继承自java.lang.Enum 所以不可再继承其他类。编译器会自动提供equals()和hashCode()方法，并且实现了Complarable和Serializable接口。
 
 一个enum是定义一组值的对象，它可以包括零个或多个值成员。它是属于enum类型的，一个enum对象中不可有两个或多个相同的属性或值。
 enum对象的值都会自动获得一个数字值，从0开始，依次递增。
 
 枚举类型还提供了有用的静态方法values()可以很方便地使用它们，例如
-for　(Color　c　:　Color.values())
-{
-	System.out.println(c);
-}
+    
+    for　(Color　c　:　Color.values())
+    {
+        System.out.println(c);
+    }
+
 
 静态方法values()返回这个枚举所等同的数组，并且数组中的元素严格保持其在enum中声明的顺序。
 
