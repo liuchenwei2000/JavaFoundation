@@ -3,16 +3,17 @@
  */
 package nio.bytebuffer;
 
+import nio.IConst;
+
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
-
-import nio.IConst;
 
 /**
  * 3，视图缓冲器演示类
  * <p>
  * 视图缓冲器(view buffer)可以通过某个特定的基本数据类型的视窗查看其底层的ByteBuffer。
- * ByteBuffer依然是实际存储数据的地方，"支持"着前面的视图，因此对视图的任何修改都会映射成为对ByteBuffer中数据的修改。
+ * ByteBuffer依然是实际存储数据的地方，"支持"着前面的视图，
+ * 因此对视图的任何修改都会映射成为对ByteBuffer中数据的修改。
  * 
  * @author 刘晨伟
  *

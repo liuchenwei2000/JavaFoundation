@@ -17,7 +17,8 @@ import java.nio.ShortBuffer;
  * 一旦底层的 ByteBuffer 通过视图缓冲器被填满数据时，就可以直接被写到通道中，正像从通道中读取那样容易。
  * 然后使用视图缓冲器可以把任何数据都转换成某一特定的基本类型。
  * <p>
- * 在本例中，通过在同一个ByteBuffer上建立不同的视图缓冲器，将同一字节序列转换成了short,int,float,long,和double类型的数据。
+ * 在本例中，通过在同一个ByteBuffer上建立不同的视图缓冲器，
+ * 将同一字节序列转换成了short、int、float、long 和 double 类型的数据。
  * 
  * @author 刘晨伟
  *

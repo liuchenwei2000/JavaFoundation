@@ -28,7 +28,6 @@ public class CollectionFactory {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// 赋值时编译器会自动进行类型推断，所以返回和变量类型一样的map
 		Map<String, String> map = CollectionFactory.map();
@@ -42,7 +41,6 @@ public class CollectionFactory {
 //		method(CollectionFactory.map());
 	}
 	
-    @SuppressWarnings("unused")
 	private static void method(Map<String, String> map) {
 		// do nothing
 	}

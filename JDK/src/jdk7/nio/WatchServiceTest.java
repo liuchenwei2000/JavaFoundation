@@ -14,7 +14,7 @@ import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 
 /**
- * WatchService示例
+ * WatchService 示例
  * <p>
  * 用IDE（例如Eclipse）编程时，外部修改了代码文件，IDE会马上提示"文件有更改"。
  * Java7的NIO2.0也提供了这个功能（Watch Service API），用于监听文件系统的更改。

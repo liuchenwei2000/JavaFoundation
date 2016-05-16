@@ -25,9 +25,9 @@ public class Varargs {
 	/**
 	 * 格式：method(type... param)
 	 * <p>
-	 * 可变参数必须是函数声明中的最后一个参数，该方法可以接受任意数目(含0)的type类型参数，并且也可以接受type类型的数组作为参数。
+	 * 可变参数必须是函数声明中的最后一个参数，该方法可以接受任意数目
+	 * (含0)的type类型参数，并且也可以接受type类型的数组作为参数。
 	 */
-	@SuppressWarnings("unchecked")
 	private static <T> void print(T... objects) {
 		// 实际上形参objects代表的是一个数组
 		for (int i = 0; i < objects.length; i++) {

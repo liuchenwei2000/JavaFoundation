@@ -40,7 +40,7 @@ public class DesktopAndSystemTray {
 	private static class Workbentch {
 		
 		/** 浏览器主页 */
-		private static final String HOME_PAGE = "http://www.baidu.com";
+		private static final String HOME_PAGE = "http://www.qq.com";
 		/** 邮件发送地址 */
 		private static final String MAIL_ADDRESS = "liuchenwei2000@163.com";
 		
@@ -61,7 +61,8 @@ public class DesktopAndSystemTray {
 		 * SystemTray 类表示桌面的系统托盘。
 		 * <p>
 		 * 在 Microsoft Windows 上，它被称为 任务栏状态区域 (Taskbar Status Area)。
-		 * 在某些平台上，可能不存在或不支持系统托盘，在这种情况下 getSystemTray() 将抛出 UnsupportedOperationException。
+		 * 在某些平台上，可能不存在或不支持系统托盘，在这种情况下 getSystemTray()
+		 * 将抛出 UnsupportedOperationException。
 		 */
 		private SystemTray tray;
 		
