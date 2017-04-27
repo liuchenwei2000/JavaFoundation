@@ -44,8 +44,49 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		 test();
-	}
+//		 test();
+        TimeCounter tc = new TimeCounter();
+        tc.start();
+        String filePath = "E://flv";
+        batchRename(filePath,".flv");
+        tc.stop();
+        System.out.println(tc.consumeBySecond() + " s");
+    }
+
+    public static void batchRename(String dirPath,String suffix){
+        File dir = new File(dirPath);
+        if (dir.exists()) {
+            File[] files = dir.listFiles();
+            for (File file : files) {
+                if (file.isFile()) {
+                    rename(file, suffix);
+                }
+            }
+        }
+    }
+
+    public static void rename(File file, String suffix) {
+        String absolutePath = file.getAbsolutePath();
+        System.out.println(absolutePath);
+
+        int i = absolutePath.indexOf("-Chinese");
+        if (i > 0) {
+            String newFilePath = absolutePath.substring(0, i).trim() + suffix;
+            File newFile = new File(newFilePath);
+            file.renameTo(newFile);
+            System.out.println(newFilePath);
+        } else {
+            int j = absolutePath.indexOf(".vdat");
+            if (j > 0) {
+                String newFilePath = absolutePath.substring(0, j).trim() + suffix;
+                File newFile = new File(newFilePath);
+                file.renameTo(newFile);
+                System.out.println(newFilePath);
+            } else {
+                System.out.println(absolutePath);
+            }
+        }
+    }
 
 	public static void test(){
 		// 得到当前方法的名字
