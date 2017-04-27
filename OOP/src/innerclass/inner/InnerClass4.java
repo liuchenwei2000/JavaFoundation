@@ -9,7 +9,7 @@ package inner;
  * 用途4：</br>
  * 可以在一个方法里面或者任意的作用域内定义内部类，这样做的理由是：
  * <li>1，实现了某类型的接口，可以创建并返回对其的引用。
- * <li>2，当要解决一个复杂的问题想要创建一个类来辅助解决方案， 但是又不希望这个类是公共可用的。
+ * <li>2，当要解决一个复杂的问题想要创建一个类来辅助解决方案，但是又不希望这个类是公共可用的。
  * 
  * @author 刘晨伟
  *
@@ -47,7 +47,7 @@ public class InnerClass4 {
 			TrackingSlip ts = new TrackingSlip("slip");
 			ts.getSlip();
 		}
-		// 超出了作用域TrackingSlip就不可用了
+		// 超出了作用域 TrackingSlip 就不可用了
 		// TrackingSlip ts = new TrackingSlip("cannot use");
 	}
 

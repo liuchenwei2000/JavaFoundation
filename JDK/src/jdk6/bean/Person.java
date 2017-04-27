@@ -3,14 +3,8 @@
  */
 package jdk6.bean;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * 人，JavaBean
@@ -33,8 +27,10 @@ public class Person {
 	/*
 	 * @XmlAttribute 
 	 * 
-	 * 用于标注 Javabean 属性，用它标注的属性在映射后的 schema 中以元素属性形式(<person name="tom" />)表现。
-	 * 可以通过 @XmlAttribute 注解的 name 属性来定制映射后的名称，用 required 属性来指定是否映射后的属性为必须出现的。
+	 * 用于标注 Javabean 属性，用它标注的属性在映射后的 schema
+	 * 中以元素属性形式(<person name="tom" />)表现。
+	 * 可以通过 @XmlAttribute 注解的 name 属性来定制映射后的名称，
+	 * 用 required 属性来指定是否映射后的属性为必须出现的。
 	 */
 	@XmlAttribute // name将作为Person的的一个属性
 	private String name;
@@ -42,8 +38,10 @@ public class Person {
 	/*
 	 * @XmlElement 
 	 * 
-	 * 用于标注 Javabean 的属性，用它标注的属性在映射后的 schema 中以元素形式(<person><sex>MALE</sex></person>)出现。
-	 * 可以通过 @XmlElement 注解的 name 属性定制映射后的 XML 元素的名称，用 required 属性来指定该元素是否必须出现，
+	 * 用于标注 Javabean 的属性，用它标注的属性在映射后的 schema
+	 * 中以元素形式(<person><sex>MALE</sex></person>)出现。
+	 * 可以通过 @XmlElement 注解的 name 属性定制映射后的 XML 元素的名称，
+	 * 用 required 属性来指定该元素是否必须出现，
 	 * 用 nullable 属性来指明该元素是否允许空值。
 	 */
 	@XmlElement // sex将作为Person的的一个元素

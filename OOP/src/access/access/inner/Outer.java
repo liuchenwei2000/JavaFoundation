@@ -16,7 +16,6 @@ package access.inner;
  * 
  * 创建日期：2009-7-13
  */
-@SuppressWarnings("unused")
 public class Outer {
 
 	/**

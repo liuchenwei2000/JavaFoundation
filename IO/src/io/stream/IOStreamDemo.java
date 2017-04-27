@@ -41,7 +41,7 @@ public class IOStreamDemo {
 		BufferedReader fReader = null;
 		try {
 			fReader = new BufferedReader(new FileReader(filePath));
-			String s = null;
+			String s;
 			// 一旦抵达文件末尾，readLine()将返回null，所以用它来终止循环
 			while ((s = fReader.readLine()) != null) {
 				sb.append(s);
@@ -76,7 +76,7 @@ public class IOStreamDemo {
 		try {
 			sReader = new StringReader(content);
 			int c;
-			// read()每次读取一个字符，以int形式返回，一旦到达末尾将返回-1
+			// read() 每次读取一个字符，以 int 形式返回，一旦到达末尾将返回-1
 			while ((c = sReader.read()) != -1) {
 				System.out.print((char) c);
 			}
@@ -112,15 +112,15 @@ public class IOStreamDemo {
 	private static void writeToFile(String content, String filePath) throws IOException {
 		PrintWriter writer = null;
 		try {
-			// 首先创建一个与指定文件连接的FileWriter，并使用BufferedWriter将其包装起来用以缓冲输入。
-			// 缓冲往往能显著地增加IO操作的性能，然后为了格式化把它转换成PrintWriter。
+			// 首先创建一个与指定文件连接的 FileWriter，并使用 BufferedWriter 将其包装起来用以缓冲输入。
+			// 缓冲往往能显著地增加 IO 操作的性能，然后为了格式化把它转换成 PrintWriter。
 			writer = new PrintWriter(new BufferedWriter(new FileWriter(filePath)));
 			writer.println(content);
 		} catch (EOFException e) {
 			System.err.println("End of stream");
 		} finally {
 			if(writer != null) {
-				// 如果不为所有的输出文件调用close()，则缓冲区内容不会被刷新清空，那么文件也就不完整。
+				// 如果不为所有的输出文件调用 close()，则缓冲区内容不会被刷新清空，那么文件也就不完整。
 				// 实际上是最后的内容还被在缓冲区中，没有被真正执行写入操作写入文件，所以需要手工去刷新缓冲区。
 				writer.close();
 			}
@@ -134,8 +134,8 @@ public class IOStreamDemo {
 		/*
 		 * 输出流可以按写入数据的方式划分为两类：
 		 * 一种写是为了让人们使用写入的数据，另一种是为了DataInputStream可以再次读取它们。
-		 * PrintStream可以对数据进行格式化，以便人们的阅读。
-		 * 但是为了输出可供另一个流恢复的数据，需要使用DataOutputStream写入数据，并用DataInputStream恢复数据。
+		 * PrintStream 可以对数据进行格式化，以便人们的阅读。
+		 * 但是为了输出可供另一个流恢复的数据，需要使用 DataOutputStream 写入数据，并用 DataInputStream 恢复数据。
 		 */
 		DataOutputStream out = null;
 		try {
@@ -157,10 +157,9 @@ public class IOStreamDemo {
 		
 		/*
 		 * 为了保证所有的读方法都能够正常工作，必须知道流中数据项所在的确切位置。
-		 * 因为极有可能将保存的double数据作为一个简单的字节序列、char 或其他类型读入，因此必须：
-		 * 要么为文件中的数据采用固定的格式；
-		 * 要么将额外的信息保存到文件中，以便能够对其进行解析从而确定数据的存放位置。
-		 * (对象序列化可能是更容易的存储和读取复杂数据结构的方式) 
+		 * 因为极有可能将保存的 double 数据作为一个简单的字节序列、char 或其他类型读入，因此必须：
+		 * 要么为文件中的数据采用固定的格式；要么将额外的信息保存到文件中，
+		 * 以便能够对其进行解析从而确定数据的存放位置。(对象序列化可能是更容易的存储和读取复杂数据结构的方式)
 		 */
 		DataInputStream in = null;
 		try {

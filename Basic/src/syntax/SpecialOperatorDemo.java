@@ -35,7 +35,6 @@ public class SpecialOperatorDemo {
 		 * 三元运算符?:的使用格式：booleanExpression ? value1 : value2
 		 * 若booleanExpression为true返回value1，否则返回value2。
 		 * 但是三元运算符的返回值必须被读取或被保存。
-		 * 
 		 */
 		System.out.println(a + "," + b + "中较大的是 " + (a > b ? a : b));
 	}

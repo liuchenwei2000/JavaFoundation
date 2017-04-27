@@ -30,6 +30,8 @@ public class SystemDemo {
 		// 返回当前的系统属性
 		String properties = System.getProperties().toString();
 		System.out.println(properties.replaceAll(",", "\n"));
+
+		printCommonProperties();
 		
 		long start, end;
 		// 返回以毫秒为单位的当前时间
@@ -48,5 +50,25 @@ public class SystemDemo {
 		 * 该方法除了在main方法中可以被调用外，其他的地方都不应该调用。
 		 */
 		System.exit(0);
+	}
+
+	/**
+	 * 打印一些常用的属性
+	 */
+	private static void printCommonProperties() {
+		System.out.println("************************************");
+		String[] properties = {"java.version", "java.home", "java.io.tmpdir",
+				"os.name", "file.separator", "line.separator", "user.name", "user.home"};
+		String[] descriptions = {"Java Runtime Environment version",
+				"Java installation directory", "Default temp file path", "Operating system name",
+				"File separator (\"/\" on UNIX)", "Line separator (\"\\n\" on UNIX)",
+				"User's account name", "User's home directory"
+		};
+
+		for (int i = 0; i < properties.length; i++) {
+			System.out.printf(properties[i] + "(" + descriptions[i] + ")：%s %n",
+					System.getProperty(properties[i]));
+		}
+		System.out.println("************************************");
 	}
 }

@@ -14,7 +14,7 @@ import java.util.Random;
  * <li>1，加载 
  * 这是使用类加载器执行的，该步骤将查找class文件并创建一个Class对象。
  * <li>2，链接 
- * 在链接阶段将验证类中的字节码，为静态域分配存储空间， 并且如果必需的话，将解析这个类创建的对其他类的所有引用。
+ * 在链接阶段将验证类中的字节码，为静态域分配存储空间，并且如果必需的话，将解析这个类创建的对其他类的所有引用。
  * <li>3，初始化 
  * 如果该类具有超类，则对其初始化，执行静态初始化器和静态初始化块。
  * 
@@ -26,9 +26,8 @@ public class ClassInitialization {
 
 	/**
 	 * 初始化有效地实现了尽可能地"惰性"：
-	 * 使用 .class 语法来获取对类的引用不会引发初始化，而  Class.forName() 立即就进行了初始化。
+	 * 使用 .class 语法来获取对类的引用不会引发初始化，而 Class.forName() 立即就进行了初始化。
 	 */
-	@SuppressWarnings( { "unused" })
 	public static void main(String[] args) throws Exception {
 		Class<?> initable = Initable.class;
 		System.out.println("After creating Initable ref");

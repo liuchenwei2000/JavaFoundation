@@ -12,5 +12,5 @@ package inner;
  */
 public interface IDestination {
     
-	public String readLabel();
+	String readLabel();
 }

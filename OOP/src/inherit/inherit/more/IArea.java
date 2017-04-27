@@ -12,5 +12,5 @@ package inherit.more;
  */
 public interface IArea {
 	
-	public double getArea();
+	double getArea();
 }

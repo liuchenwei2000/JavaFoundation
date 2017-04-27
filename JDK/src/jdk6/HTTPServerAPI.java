@@ -3,19 +3,20 @@
  */
 package jdk6;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetSocketAddress;
-
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+
 /**
  * 5，Http Server API示例
  * <p>
- * JDK6提供了一个简单的Http Server API，据此可以构建自己的嵌入式Http Server。
- * 它支持Http和Https协议，提供了HTTP1.1的部分实现，没有被实现的那部分可以通过扩展已有的Http Server API来实现。
+ * JDK6提供了一个简单的 Http Server API，据此可以构建自己的嵌入式 Http Server。
+ * 它支持 Http 和 Https 协议，提供了 HTTP1.1 的部分实现，
+ * 没有被实现的那部分可以通过扩展已有的 Http Server API 来实现。
  * 
  * @author 刘晨伟
  * 

@@ -82,8 +82,8 @@ class Moon implements Serializable {
 	}
 
 	/**
-	 * 如果readResolve方法被定义了，它将在对象反序列化后被调用。
-	 * 它必须返回一个对象，也就是readObject方法返回的类型。
+	 * 如果 readResolve 方法被定义了，它将在对象反序列化后被调用。
+	 * 它必须返回一个对象，也就是 readObject 方法返回的类型。
 	 */
 	protected Object readResolve() throws ObjectStreamException {
 		// 这里返回本类的单例对象。

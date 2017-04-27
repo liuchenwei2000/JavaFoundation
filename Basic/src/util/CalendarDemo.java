@@ -8,7 +8,7 @@ import java.util.Calendar;
 /**
  * 日历类的基本方法 
  * <p>
- * 注：Calendar类是一个抽象类 。
+ * 注：Calendar类是一个抽象类。
  * 
  * @author 刘晨伟
  * 

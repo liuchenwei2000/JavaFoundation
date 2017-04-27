@@ -56,5 +56,6 @@ public class EnumMapDemo {
 }
 
 interface Command {
-	public void action();
+
+	void action();
 }

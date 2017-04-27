@@ -29,4 +29,23 @@ public class MethodInvokingUtil {
 		method.setAccessible(true);
 		method.invoke(obj);
 	}
+
+	/**
+	 * 显示当前调用方法的信息
+	 */
+	public static void showMethodInfo(){
+		// 得到当前方法的名字
+		String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
+		System.out.println(methodName);
+		// 得到当前文件的名字
+		String fileName = Thread.currentThread().getStackTrace()[2].getFileName();
+		System.out.println(fileName);
+		// 得到行号
+		int lineNumber = Thread.currentThread().getStackTrace()[2].getLineNumber();
+		System.out.println(lineNumber);
+	}
+
+	public static void main(String[] args) {
+		showMethodInfo();
+	}
 }

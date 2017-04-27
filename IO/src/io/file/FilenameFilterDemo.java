@@ -25,7 +25,7 @@ public class FilenameFilterDemo {
 		String[] list = path.list();
 		System.out.println(Arrays.toString(list));
 		/*
-		 * list()方法会为此目录对象下的每个文件名调用accept()来判断该文件是否包含在内，判断结果由accept()返回的值表示。
+		 * list()方法会为此目录对象下的每个文件名调用 accept() 来判断该文件是否包含在内，判断结果由accept()返回的值表示。
 		 * 创建这个匿名内部类的目的在于把accept()方法提供给list()使用，使list()可以回调accept()，这种结构称为"回调"。
 		 * 回调的目的就是提供了代码行为的灵活性，使用匿名内部类使得代码隔离、聚拢于一点(高内聚)，但是却不易阅读和维护。
 		 */

@@ -22,8 +22,7 @@ public class SimpleDateFormatDemo {
 	 */
 	public static void main(String[] args) {
 		Date date = new Date();
-		SimpleDateFormat sdf;
-		sdf = new SimpleDateFormat("hh:mm:ss");// 自定义显示时间模式
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");// 自定义显示时间模式
 		System.out.println(sdf.format(date));
 		sdf = new SimpleDateFormat("dd MM yyyy hh:mm:ss zzz");// 自定义显示模式
 		System.out.println(sdf.format(date));

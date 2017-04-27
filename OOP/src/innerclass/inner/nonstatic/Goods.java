@@ -27,12 +27,14 @@ public class Goods {
 	 */
 	private class Content implements IContents {
 		/*
-		 * Java编译器在创建内部类对象时隐式的把其外部类对象的引用也传了进去并一直保存着 ，
-		 * 这样就使得内部类对象始终可以访问其外部类对象，这也是为什么在外部类作用范围之外要创建内部类对象必须先创建其外部类对象的原因。
-		 * 
-		 * Java里用如下格式表达外部类的引用：outerClass.this
+		 * Java编译器在创建内部类对象时隐式的把其外部类对象的引用也传了进去并一直保存着，
+		 * 这样就使得内部类对象始终可以访问其外部类对象，
+		 * 这也是为什么在外部类作用范围之外要创建内部类对象必须先创建其外部类对象的原因。
 		 */
 		private int i = 10 * valueRate;
+
+		// Java 里用如下格式表达外部类的引用：OuterClass.this
+		private int j = Goods.this.valueRate;
 
 		public int value() {
 			return i;
@@ -75,11 +77,8 @@ public class Goods {
 		Goods g1 = new Goods();
 		/*
 		 * 直接用 IContents c 和 IDestination d 进行操作，甚至连这两个内部类的名字都没有看见。
-		 * 内部类的第一个好处:隐藏不想让别人知道的操作，也即封装性
 		 */
-		@SuppressWarnings("unused")
 		IContents c = g1.cont();
-		@SuppressWarnings("unused")
 		IDestination d = g1.to("Beijing");
 		g1.ship("Beijing");
 		/*
@@ -87,7 +86,7 @@ public class Goods {
 		 * 1，利用其外部类的方法创建并返回，如上面的做法
 		 * 2，必须这么调用： 
 		 * OuterClass outerObject= new OuterClass(Constructor Parameters);
-		 * OuterClass.InnerClass innerObject= OuterObject.new InnerClass(Constructor Parameters);
+		 * OuterClass.InnerClass innerObject= outerObject.new InnerClass(Constructor Parameters);
 		 */
 		Goods g2 = new Goods();
 		Goods.GDestination gd = g2.new GDestination("Shanghai");

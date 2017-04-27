@@ -14,9 +14,10 @@ import java.io.PrintStream;
 import java.util.Date;
 
 /**
- * 标准IO重定向
+ * 标准 IO 重定向
  * <p>
- * Java的System类提供一些简单的静态方法调用，允许对标准输入、输出和错误I/O流进行重定向： 
+ * Java 的 System 类提供一些简单的静态方法调用，允许对标准输入、输出和错误I/O流进行重定向： ‘
+ *
  * <li>setIn(InputStream)  
  * <li>setOut(PrintStream) 
  * <li>setErr(PrintStream) 
@@ -46,12 +47,12 @@ public class Redirecting {
 		System.setIn(in);
 		System.setOut(out);
 		System.setErr(out);
-		// 此时System.in将从infile.txt文件中进行读取
+		// 此时 System.in 将从 infile.txt 文件中进行读取
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				System.in));
 		String s;
 		while ((s = reader.readLine()) != null) {
-			// 此时System.out将把string输入到outfile.txt中
+			// 此时 System.out 将把 string 输入到 outfile.txt 中
 			System.out.println(s);
 		}
 		System.out.println("\n" + new Date());

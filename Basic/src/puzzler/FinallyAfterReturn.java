@@ -22,8 +22,8 @@ public class FinallyAfterReturn {
 	}
 
 	/**
-	 * 因为finally子句总会被执行，所以在一个方法中
-	 * 可以从多个点返回，并且可以保证重要的清理工作仍旧会执行
+	 * 因为finally子句总会被执行，所以在一个方法中可以从多个点返回，
+	 * 并且可以保证重要的清理工作仍旧会执行。
 	 */
 	private static void test(int i) {
 		try {

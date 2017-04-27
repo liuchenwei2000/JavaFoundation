@@ -50,7 +50,7 @@ public class InterfaceImplDemo {
  */
 interface IDatabaseConnection {
 	
-	public void connect();// 连接数据库的方法
+	void connect();// 连接数据库的方法
 }
 
 /**

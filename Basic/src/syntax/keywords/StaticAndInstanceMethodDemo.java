@@ -42,7 +42,7 @@ public class StaticAndInstanceMethodDemo {
 		 */
 		InfoUtil.printInfo("Tom", 19, 'M', "other info", "more info");
 		/*
-		 * 使用对象和实例方法可以使得调用过程清晰，并且调用者之需要清楚一个类即可
+		 * 使用对象和实例方法可以使得调用过程清晰，并且调用者只需要清楚一个类即可
 		 */
 		Info info = new Info();
 		info.setName("Tom");

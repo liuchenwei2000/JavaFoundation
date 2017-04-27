@@ -78,7 +78,7 @@ public class SerializeDemo {
      * 需要将一个 InputStream 封装在 ObjectInputStream 内，然后调用 readObject()，
      * 最后获得的是一个向上转型为 Object 的引用，所以必须向下转型为具体类型。
      * <p>
-     * 注意在对一个Serializable对象进行还原的过程中，没有调用任何构造器，包括缺省的构造器。
+     * 注意在对一个 Serializable 对象进行还原的过程中，没有调用任何构造器，包括缺省的构造器。
      * 对象序列化是面向字节的，因此采用 InputStream 和 OutputStream 层次结构。
 	 */
 	private static void readObjectFromDisk(String filePath) throws Exception{
@@ -86,7 +86,7 @@ public class SerializeDemo {
 		try {
 			in = new ObjectInputStream(new FileInputStream(filePath));
 			// 读取对象时，必须要小心的跟踪存储对象的数量、顺序以及类型
-			// 对于readObject的每一次调用都会读取类型为Object的下一个对象
+			// 对于 readObject 的每一次调用都会读取类型为 Object 的下一个对象
 			String s = (String) in.readObject();// 反序列化对象并向下转型
 			Car car = (Car) in.readObject();
 			System.out.println(s + "object from file \n" + car);

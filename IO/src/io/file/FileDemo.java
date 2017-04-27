@@ -28,15 +28,15 @@ public class FileDemo {
 		 * 通过将给定路径名字符串转换成抽象路径名来创建一个新File实例 
 		 * 
 		 * 绝对路径：
-		 * File path=new File("D:\\NewProject\\MyPro"); 
-		 * File对象中包含这个文件夹下的所有文件，包括子目录
+		 * File path = new File("D:\\NewProject\\MyPro");
+		 * File对象中包含这个文件夹下的所有文件，包括子目录。
 		 * 
 		 * 相对路径：
-		 * "."表示当前project所在文件夹(如下的写法默认是"./files")
-		 * 所有在java.io中的类都是将相对路径名解释为起始于用户的当前工作目录
-		 * 可以通过调用System.getProperty("user.dir")来获得
+		 * "."表示当前project所在文件夹(如下的写法默认是"./files")，
+		 * 所有在java.io中的类都是将相对路径名解释为起始于用户的当前工作目录，
+		 * 可以通过调用System.getProperty("user.dir")来获得。
 		 *
-		 * 与系统有关的默认名称分隔符File.separator，它的char形式为File.separatorChar。
+		 * 与系统有关的默认名称分隔符 File.separator，它的 char 形式为File.separatorChar。
 		 * 比如在UNIX下为 '/' 而在Windows下为 '\'
 		 */
 		String path = "files" + File.separator + "io.file/file.txt";
@@ -57,9 +57,9 @@ public class FileDemo {
 			if (!file.canWrite())
 				System.out.println("now file cannot write");
 			/*
-			 * 在指定目录中创建一个新的空文件，使用给定的前缀和后缀字符串生成其名称 。
-			 * 如果此方法成功返回，则可以保证：
-			 * 由返回的抽象路径名表示的文件在此方法被调用之前不存在，并且此方法及其所有变体都不会在再次当前调用虚拟机时返回相同的抽象路径名。
+			 * 在指定目录中创建一个新的空文件，使用给定的前缀和后缀字符串生成其名称。
+			 * 如果此方法成功返回，则可以保证：由返回的抽象路径名表示的文件在此方法被调用之前不存在，
+			 * 并且此方法及其所有变体都不会在再次当前调用虚拟机时返回相同的抽象路径名。
 			 * 参数：前缀、后缀、文件所在目录
 			 */
 			temp = File.createTempFile("temp", ".txt", new File("."));
@@ -76,8 +76,8 @@ public class FileDemo {
 				child2.createNewFile();
 				System.out.println("dir is directory ：");
 				/*
-				 * 返回由此抽象路径名所表示的目录中的文件和目录的名称所组成字符串数组
-				 * 还有listFiles()方法来列举所有的子文件数组、listFiles(FileFilter)方法来列举符合过滤器的子文件数组。
+				 * 返回由此抽象路径名所表示的目录中的文件和目录的名称所组成字符串数组。
+				 * 还有 listFiles() 方法来列举所有的子文件数组、listFiles(FileFilter) 方法来列举符合过滤器的子文件数组。
 				 */
 				for (String fileName : dir.list()) {
 					System.out.println(fileName);
@@ -85,7 +85,7 @@ public class FileDemo {
 			}
 			// 将一个文件移动到另一个完全不同的新路径下，相当于剪切+粘贴
 			// temp.renameTo(new File(dir, "temp.tmp"));
-			// 在虚拟机终止时，请求删除此抽象路径名表示的文件或目录
+			// 在虚拟机终止时，请求删除此抽象路径名表示的文件或目录。
 			file.deleteOnExit();
 			temp.deleteOnExit();
 			child1.deleteOnExit();

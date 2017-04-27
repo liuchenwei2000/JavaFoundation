@@ -6,7 +6,7 @@ package jdk7;
 /**
  * 4，switch-case语句支持字符串类型
  * <p>
- * 在Java SE 7中，switch-case语句可以支持字符串类型的数据变量。
+ * 在Java7中，switch-case语句可以支持字符串类型的数据变量。
  * 
  * @author 刘晨伟
  * 

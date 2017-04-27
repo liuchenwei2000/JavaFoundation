@@ -71,7 +71,6 @@ class Bulldog extends Dog {
 	/**
 	 * 其实这个方法没有Override父类该方法，因为子类根本就继承不到父类的私有成员。
 	 */
-	@SuppressWarnings("unused")
 	private String bark() {
 		return "WOO-WOO";
 	}

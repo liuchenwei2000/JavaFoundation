@@ -8,7 +8,7 @@ import java.io.Console;
 /**
  * 7，Console类示例
  * <p>
- * JDK6中提供了java.io.Console类专用来访问基于字符的控制台设备。
+ * JDK6 中提供了 java.io.Console 类专用来访问基于字符的控制台设备。
  * <p>
  * 你的程序如果要与 Windows 下的 cmd 或者 Linux 下的 Terminal 交互，就可以用 Console 类代劳。
  * 但不总是能得到可用的Console, 一个JVM是否有可用的Console依赖于底层平台和JVM如何被调用。
@@ -24,7 +24,7 @@ public class ConsoleTest {
 	 * <p>
 	 * 如果在IDE里面运行下面程序,会输出 Console is unavailable.
 	 * 表示Console不可获得，那是因为JVM不是在命令行中被调用的或者输入输出被重定向了。
-	 * 在命令行模式里运行程序就可用Console实例了。
+	 * 在命令行模式里运行程序就可用 Console 实例了。
 	 * 
 	 * @param args
 	 */

@@ -24,9 +24,7 @@ public class InheritInner extends Outer.Inner{
 //	}
 	
 	/**
-	 * 不能只是传递一个指向外部类对象的引用
-	 * <p>
-	 * 还必须在构造器中第一行使用如下语法：
+	 * 不能只是传递一个指向外部类对象的引用,还必须在构造器中第一行使用如下语法：
 	 * 
 	 * outerClassReference.super();
 	 */
@@ -39,7 +37,6 @@ public class InheritInner extends Outer.Inner{
 	 */
 	public static void main(String[] args) {
 		Outer outer = new Outer();
-		@SuppressWarnings("unused")
 		InheritInner ii = new InheritInner(outer);
 	}
 }

@@ -13,7 +13,7 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 /**
- * Externalizable简单演示类
+ * Externalizable 简单演示类
  * <p>
  * 对象序列化时有特殊的需要该怎么办呢？
  * 例如，要考虑特殊的安全问题，而且不希望对象的某一部分被序列化；

@@ -12,7 +12,7 @@ import java.util.zip.CRC32;
  * <p>
  * 大多数操作系统可以利用虚拟内存将文件或文件的一段区域"映射"到内存中，
  * 这样就可以像文件在内存中一样访问了，这比传统的文件系统要快得多。
- * 尽管"旧"的I/O流在用nio实现后性能有所提高， 但是映射文件访问往往可以更加显著地加快速度。
+ * 尽管"旧"的I/O流在用nio实现后性能有所提高，但是映射文件访问往往可以更加显著地加快速度。
  * 
  * @author 刘晨伟
  * 
@@ -49,7 +49,7 @@ public class AdvMappedByteBufferDemo {
 
 interface ICRCSumChecker {
 	
-	public long checkCRCSum(String filePath) throws Exception;
+	long checkCRCSum(String filePath) throws Exception;
 }
 
 /**

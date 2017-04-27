@@ -3,33 +3,15 @@
  */
 package util;
 
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
-import java.util.zip.CRC32;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-
-import javax.imageio.ImageIO;
-
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.nio.channels.FileChannel;
 
 /**
  * 
@@ -41,6 +23,7 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 public class Test {
 
 	/**
+<<<<<<< HEAD
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -101,6 +84,8 @@ public class Test {
 	}
 	
 	/**
+=======
+>>>>>>> edffa3c33c870ddf48a37e2216b69fa2212e976a
 	 * 使用NIO进行快速的文件拷贝
 	 */
 	public static void fileCopy( File in, File out )  

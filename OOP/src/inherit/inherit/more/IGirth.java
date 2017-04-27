@@ -12,5 +12,5 @@ package inherit.more;
  */
 public interface IGirth {
 	
-	public double getGirth();
+	double getGirth();
 }

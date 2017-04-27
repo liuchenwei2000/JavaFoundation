@@ -15,5 +15,5 @@ public interface IShowInfo {
 	/**
 	 * 输出信息
 	 */
-	public void showInfo();
+	void showInfo();
 }

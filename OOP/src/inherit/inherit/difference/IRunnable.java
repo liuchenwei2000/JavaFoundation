@@ -15,10 +15,10 @@ public interface IRunnable {
 	/**
 	 * 前进动作
 	 */
-	public void goAhead();
+	void goAhead();
 
 	/**
 	 * 后退动作
 	 */
-	public void backOff();
+	void backOff();
 }

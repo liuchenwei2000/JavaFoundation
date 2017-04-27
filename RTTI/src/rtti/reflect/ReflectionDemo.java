@@ -27,14 +27,11 @@ public class ReflectionDemo {
 	public static void main(String[] args) {
 		try {
 			// 返回与带有给定字符串名的类或接口相关联的Class对象
-			Class<?> c = Class.forName("inherit.differ.Human");
-			System.out.println("Package : ");
-			System.out.println("  " + c.getPackage());// 返回类的包名
-			System.out.println("Class name : ");
-			System.out.print("  " + c.getName());// 返回类的类名
-			System.out.println("  " + c.getSimpleName());// 返回类的简单类名(没有包名)
-			System.out.println("Superclass name : ");
-			System.out.println("  " + c.getSuperclass().getName());// 返回类的直接超类名
+			Class<?> c = Class.forName("rtti.Human");
+			System.out.println("Package :   " + c.getPackage());// 返回类的包名
+			System.out.println("Class name :   " + c.getName());// 返回类的类名
+			System.out.println("Class Simple name :  " + c.getSimpleName());// 返回类的简单类名(不含包名)
+			System.out.println("Superclass name :   " + c.getSuperclass().getName());// 返回类的直接超类名
 			System.out.println("Interfaces name : ");
 			// 返回表示某些接口的Type，这些接口由此对象所表示的类或接口直接实现(不包括其父类实现的接口)
 			showAll(c.getInterfaces());
@@ -67,8 +64,7 @@ public class ReflectionDemo {
 				int modifier = method.getModifiers();
 				// 通过Modifier类的静态方法可以判断方法的修饰属性
 				if (Modifier.isPublic(modifier) && Modifier.isStatic(modifier))
-					System.out.println(p.matcher(method.toString())
-							.replaceAll(""));
+					System.out.println(p.matcher(method.toString()).replaceAll(""));
 			}
 		} catch (Exception e) {
 			System.out.println("Exception : " + e.getMessage());

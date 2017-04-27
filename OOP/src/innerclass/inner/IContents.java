@@ -12,5 +12,5 @@ package inner;
  */
 public interface IContents {
 	
-    public int value();
+    int value();
 }

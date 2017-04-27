@@ -3,13 +3,13 @@
  */
 package nio.bytebuffer;
 
+import nio.IConst;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
-
-import nio.IConst;
 
 /**
  * 2，CharBuffer的字节/字符转换的编码/解码演示
@@ -18,7 +18,8 @@ import nio.IConst;
  * <li>1，要么在输入它们的时候对其进行编码（这样它们输出时才具有意义）
  * <li>2，要么在将其从缓冲器输出时对它们进行解码。
  * <p>
- * 可以使用java.nio.charset.Charset类实现这些功能，该类提供了把数据编码成多种不同类型的字符集的工具。
+ * 可以使用java.nio.charset.Charset类实现这些功能，
+ * 该类提供了把数据编码成多种不同类型的字符集的工具。
  * 
  * @author 刘晨伟
  * 
@@ -29,7 +30,6 @@ public class CharBufferEnDecodeDemo {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		String fileName = "files/nio.bytebuffer/data1.txt";
 		

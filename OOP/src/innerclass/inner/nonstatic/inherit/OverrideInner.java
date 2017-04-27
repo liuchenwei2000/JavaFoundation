@@ -6,7 +6,6 @@ package inner.nonstatic.inherit;
 /**
  * 内部类的覆盖演示
  * <p>
- * 创建一个内部类，然后继承其外部类并重新定义此内部类时。
  * 覆盖内部类并不像覆盖外部类方法那样，覆盖是无用的。
  * 
  * @author 刘晨伟
@@ -25,10 +24,10 @@ public class OverrideInner {
 
 class Egg {
 	
-	@SuppressWarnings("unused")
 	private Yolk yolk;
 
 	protected class Yolk {
+
 		public Yolk() {
 			System.out.println("Egg.Yolk()");
 		}

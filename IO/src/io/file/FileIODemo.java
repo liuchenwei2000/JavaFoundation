@@ -25,7 +25,7 @@ public class FileIODemo {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(filePath));
-			String s = null;
+			String s;
 			while ((s = br.readLine()) != null) {
 				System.out.println(s);
 			}

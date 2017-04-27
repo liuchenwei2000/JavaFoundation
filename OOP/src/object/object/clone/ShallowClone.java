@@ -9,7 +9,8 @@ import java.util.Iterator;
 /**
  * 浅克隆演示
  * <p>
- * 浅克隆：按比特的对象克隆，新创建的对象精确的复制了原来对象的值，如果对象的某个属性是其他对象的引用，那么只复制这个引用。
+ * 浅克隆：按比特的对象克隆，新创建的对象精确的复制了原来对象的值，
+ * 如果对象的某个属性是其他对象的引用，那么只复制这个引用。
  * <p>
  * 使用Java标准库的ArrayList作为例子。
  * 
@@ -30,7 +31,8 @@ public class ShallowClone {
 		System.out.println("oldList: " + oldList);
 		
 		/*
-		 * ArrayList的clone()方法并不自动克隆它包含的每个对象，克隆的ArrayList只是将原ArrayList中的对象别名化。
+		 * ArrayList的clone()方法并不自动克隆它包含的每个对象，
+		 * 克隆的ArrayList只是将原ArrayList中的对象别名化。
 		 */
 		ArrayList<?> newList = (ArrayList<?>) oldList.clone();
 		Iterator<?> e = newList.iterator();

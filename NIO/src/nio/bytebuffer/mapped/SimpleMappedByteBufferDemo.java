@@ -3,14 +3,14 @@
  */
 package nio.bytebuffer.mapped;
 
+import nio.IConst;
+
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-import nio.IConst;
-
 /**
- * MappedByteBuffer简单演示类
+ * MappedByteBuffer 简单演示类
  * <p>
  * 存储器映射文件允许创建和修改那些因为太大而不能放入内存的文件，有了存储器映射文件，
  * 就可以假定整个文件都在内存中(虚拟内存)，而且可以完全把它当作非常大的数组来访问。
@@ -30,10 +30,9 @@ public class SimpleMappedByteBufferDemo {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("resource")
 	public static void main(String[] args) throws Exception {
 		/*
-		 * 通过FileChannel调用map方法产生一个MappedByteBuffer，这是特殊的直接缓冲器，
+		 * 通过 FileChannel 调用 map 方法产生一个 MappedByteBuffer，这是特殊的直接缓冲器，
 		 * 必须指定映射文件的初始位置和映射区域的长度。这意味着可以映射某个大文件的一个较小的部分。
 		 * 
 		 * MappedByteBuffer 继承自 ByteBuffer，因此它具有 ByteBuffer 的所有方法。

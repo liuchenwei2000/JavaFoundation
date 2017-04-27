@@ -17,7 +17,6 @@ public class WildcardDemo {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) {
 		Pair<?> pair = new Pair<String>("first", "second");
 		System.out.println("has null:" + hasNull(pair));

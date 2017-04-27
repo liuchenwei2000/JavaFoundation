@@ -40,7 +40,6 @@ public class ConstructorAccessDemo {
 	 * 所以尽管PrivateClass构造器修饰符是public，但对于非本类调用也是不可见的。
 	 */
 	private class PrivateClass {
-		@SuppressWarnings("unused")
 		public PrivateClass(){}
 	}
 
@@ -63,7 +62,8 @@ public class ConstructorAccessDemo {
 	}
 	
 	/**
-	 * 所有的类都可以使用PublicClass，所以将其其构造器修饰为private，意味着非本类不可以使用new来创建PublicClass实例。
+	 * 所有的类都可以使用PublicClass，所以将其其构造器修饰为private，
+	 * 意味着非本类不可以使用new来创建PublicClass实例。
 	 */
 	public class PublicClass {
 		private PublicClass(){}

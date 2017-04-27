@@ -12,5 +12,5 @@ package access.inner;
  */
 public interface IAccessable {
 
-	public void publicMethod();
+	void publicMethod();
 }

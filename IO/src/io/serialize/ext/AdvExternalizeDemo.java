@@ -10,9 +10,9 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 /**
- * Externalizable高级演示类
+ * Externalizable 高级演示类
  * <p>
- * Externalizable对象的缺省行为不会序列化和反序列化任何成员信息。
+ * Externalizable 对象的缺省行为不会序列化和反序列化任何成员信息。
  * 
  * @author 刘晨伟
  * 
@@ -69,7 +69,8 @@ public class AdvExternalizeDemo {
  * 这意味着假如不在readExternal()中初始化 s 和 i，s 就会为 null，而 i 就会为零。
  * 因为在创建对象的第一步中将对象的存储空间清除为0。
  * <p>
- * 如果类继承自某个Externalizable类，通常需要调用其基类的writeExternal()和readExternal()来为基类字段提供恰当的存储和恢复功能。
+ * 如果类继承自某个Externalizable类，通常需要调用其基类的writeExternal()
+ * 和 readExternal() 来为基类字段提供恰当的存储和恢复功能。
  */
 class ObjectC implements Externalizable {
 

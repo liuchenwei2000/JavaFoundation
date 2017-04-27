@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * 5，try-with-resources语句
  * <p>
- * Java SE 7中新增了try-with-resources语句。try-with-resources语句是一个声明了一个或多个资源的try语句。
+ * Java7中新增了try-with-resources语句。try-with-resources语句是一个声明了一个或多个资源的try语句。
  * 这里的一个资源指的是在使用完成后必须关闭释放的对象。try-with-resources语句可以确保在该语句执行之后关闭每个资源。
  * 所有实现了java.lang.AutoCloseable接口的对象均可以作为资源在try-with-resources语句中使用(java.io.Closeable是其子接口，因此也支持)。
  * 

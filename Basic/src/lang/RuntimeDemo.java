@@ -56,7 +56,6 @@ public class RuntimeDemo {
 		mem2 = runtime.freeMemory();
 		System.out.println("内存释放并且垃圾回收后的空闲内存(B) : " + mem2);
 		
-		
 		/*
 		 * 在安全的环境中，可以在多任务操作系统中使用Java去执行其他特别大的进程(也就是程序)
 		 * exec()方法有几种形式命名想要运行的程序和它的输入参数

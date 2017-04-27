@@ -7,7 +7,7 @@ package string;
  * StringBuilder表示一个可变的字符序列(默认增幅16)
  * <p>
  * 此类提供一个与StringBuffer兼容的API，但不保证同步。
- * 该类被设计用作StringBuffer的一个简易替换， 用在字符串缓冲区被单个线程使用的时候。
+ * 该类被设计用作StringBuffer的一个简易替换，用在字符串缓冲区被单个线程使用的时候。
  * 建议优先采用该类，因为在大多数实现中，它比StringBuffer要快。
  * 
  * @author 刘晨伟
@@ -31,8 +31,8 @@ public class StringBuilderDemo {
 		System.out.println(sb);
 		/*
 		 * delete(int start,int end)移除此序列的子字符串中的字符，
-		 * 该子字符串从指定的 start 处开始，一直到索引 end - 1处的字符，如果不存在这种字符，则一直到序列尾部。
-		 * 如果start等于end，则不发生任何更改。
+		 * 该子字符串从指定的 start 处开始，一直到索引 end - 1 处的字符，
+		 * 如果不存在这种字符，则一直到序列尾部。如果start等于end，则不发生任何更改。
 		 * 
 		 * deleteCharAt(int index)移除此序列指定位置上的char。
 		 */

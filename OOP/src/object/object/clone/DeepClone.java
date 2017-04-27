@@ -28,6 +28,7 @@ public class DeepClone {
 		Temperature tr = clone.getTemperature();
 		tr.setTemperature(tr.getTemperature() + 1);
 		clone.setTemperature(tr);
+
 		Depth dr = clone.getDepth();
 		dr.setDepth(dr.getDepth() + 1);
 		clone.setDepth(dr);
