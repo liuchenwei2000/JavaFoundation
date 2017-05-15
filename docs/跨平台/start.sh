@@ -2,11 +2,11 @@
 #
 ###############################################
 # Purpose: sample
-# Author:  UFIDA£¬liucw1@ufida.com.cn  
+# Author:  UFIDAï¼Œliucw1@ufida.com.cn
 #
 ###############################################
 
-# ÅĞ¶ÏJAVA_HOMEÊÇ·ñÓĞÖµ£¬Èç¹ûÃ»ÉèÖµÔòÌáÊ¾´íÎó
+# åˆ¤æ–­JAVA_HOMEæ˜¯å¦æœ‰å€¼ï¼Œå¦‚æœæ²¡è®¾å€¼åˆ™æç¤ºé”™è¯¯
 if [ "${JAVA_HOME}" = "" ] ; then
 	echo "Please set JAVA_HOME environment variable first ."
 	echo "example: export JAVA_HOME=/opt/jdk1508"
@@ -17,8 +17,8 @@ if [ ! -f ${JAVA_HOME}/bin/java ] ; then
         exit
 fi
 
-# ÉèÖÃCLASSPATH£¬ÆäÖĞ.±íÊ¾×ÔÉíËùÔÚµÄÎÄ¼ş¼Ğ£¬²»Í¬µÄjar°üÓÃ:¸ôÀë
+# è®¾ç½®CLASSPATHï¼Œå…¶ä¸­.è¡¨ç¤ºè‡ªèº«æ‰€åœ¨çš„æ–‡ä»¶å¤¹ï¼Œä¸åŒçš„jaråŒ…ç”¨:éš”ç¦»
 _CLASSPATH=./lib/fileutil.jar:./lib/test.jar
 
-# Ö´ĞĞjavaÃüÁîÆô¶¯Ö÷³ÌĞò
+# æ‰§è¡Œjavaå‘½ä»¤å¯åŠ¨ä¸»ç¨‹åº
 ${JAVA_HOME}/bin/java -cp ${_CLASSPATH} test.Test
