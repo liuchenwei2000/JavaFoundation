@@ -1,15 +1,15 @@
-@echo ???????Java????
+@echo 批处理文件启动Java程序示例
 @echo off
 REM
 REM ###############################################
 REM # Purpose: sample
-REM # Author:  UFIDA?liucw1@ufida.com.cn
+REM # Author:  UFIDA，liucw1@ufida.com.cn
 REM #
 REM ##############################################
 
 if "%OS%"=="Windows_NT" setlocal
 
-REM ??JAVA_HOME???????????????
+REM 判断JAVA_HOME是否有值，如果没设值则提示错误
 if "%JAVA_HOME%" == "" (
 	echo Please set JAVA_HOME environment variable first .
 	echo. & pause
@@ -21,19 +21,19 @@ if not exist "%JAVA_HOME%\bin\java.exe" (
 	goto QUIT
 )
 
-REM ??JAVA_HOME????
+REM 显示JAVA_HOME的当前值
 echo set JAVA_HOME = %JAVA_HOME%
 
-REM ??PATh???JAVA_HOME\bin
+REM 设置PATh的值为JAVA_HOME\bin
 set PATH=%JAVA_HOME%\bin
 
-REM ??CLASSPATH???.??????????????jar??;?????CLASSPATH???????
+REM 设置CLASSPATH，其中.表示自身所在的文件夹，不同的jar包用;隔离，整个CLASSPATH值用双引号包括
 set _CLASSPATH=".\lib\fileutil.jar;.\lib\test.jar"
 
-REM ??java???????
+REM 执行java命令启动主程序
 java -cp %_CLASSPATH% test.Test
 
-echo. & pause 
+echo. & pause
 
 :QUIT
-if "%OS%"=="Windows_NT" endlocal 
+if "%OS%"=="Windows_NT" endlocal
