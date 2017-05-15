@@ -1,6 +1,5 @@
 @echo ???????Java????
 @echo off
-
 REM
 REM ###############################################
 REM # Purpose: sample
