@@ -22,70 +22,11 @@ import java.nio.channels.FileChannel;
  */
 public class Test {
 
-	/**
-<<<<<<< HEAD
-	 * @param args
-	 */
 	public static void main(String[] args) {
-//		 test();
-        TimeCounter tc = new TimeCounter();
-        tc.start();
-        String filePath = "E://flv";
-        batchRename(filePath,".flv");
-        tc.stop();
-        System.out.println(tc.consumeBySecond() + " s");
+
     }
 
-    public static void batchRename(String dirPath,String suffix){
-        File dir = new File(dirPath);
-        if (dir.exists()) {
-            File[] files = dir.listFiles();
-            for (File file : files) {
-                if (file.isFile()) {
-                    rename(file, suffix);
-                }
-            }
-        }
-    }
-
-    public static void rename(File file, String suffix) {
-        String absolutePath = file.getAbsolutePath();
-        System.out.println(absolutePath);
-
-        int i = absolutePath.indexOf("-Chinese");
-        if (i > 0) {
-            String newFilePath = absolutePath.substring(0, i).trim() + suffix;
-            File newFile = new File(newFilePath);
-            file.renameTo(newFile);
-            System.out.println(newFilePath);
-        } else {
-            int j = absolutePath.indexOf(".vdat");
-            if (j > 0) {
-                String newFilePath = absolutePath.substring(0, j).trim() + suffix;
-                File newFile = new File(newFilePath);
-                file.renameTo(newFile);
-                System.out.println(newFilePath);
-            } else {
-                System.out.println(absolutePath);
-            }
-        }
-    }
-
-	public static void test(){
-		// 得到当前方法的名字
-		String methodName = Thread.currentThread().getStackTrace()[1].getMethodName(); 
-		System.out.println(methodName);
-		// 得到当前文件的名字
-		String fileName = Thread.currentThread().getStackTrace()[2].getFileName();
-		System.out.println(fileName);
-		// 得到行号
-		int lineNumber = Thread.currentThread().getStackTrace()[2].getLineNumber();
-		System.out.println(lineNumber);
-	}
-	
 	/**
-=======
->>>>>>> edffa3c33c870ddf48a37e2216b69fa2212e976a
 	 * 使用NIO进行快速的文件拷贝
 	 */
 	public static void fileCopy( File in, File out )  
